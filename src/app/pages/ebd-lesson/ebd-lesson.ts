@@ -13,6 +13,7 @@ import { parseReferences } from '../../core/reference-parser';
 import { BibleMapView } from '../../shared/bible-map';
 import { PassageView } from '../../shared/passage-view';
 import { LessonSupport } from '../../shared/lesson-support';
+import { quarterKey } from '../../core/teaching';
 import { Sheets } from '../../shared/sheets';
 
 @Component({
@@ -45,6 +46,11 @@ export class EbdLessonPage {
         .flatMap((r) => mapsFor(r.bookId, r.chapter).map((m) => m.id)),
     );
     return BIBLE_MAPS.filter((m) => ids.has(m.id));
+  });
+  /** Trimestre da revista ("2026-4"), para achar a aula de apoio da mesma lição. */
+  protected readonly quarterKey = computed(() => {
+    const q = this.ebd.quarter();
+    return q ? quarterKey(q.year, q.quarter) : '';
   });
   protected readonly dailyDone = computed(() => this.lesson()?.dailyDone.filter(Boolean).length ?? 0);
 

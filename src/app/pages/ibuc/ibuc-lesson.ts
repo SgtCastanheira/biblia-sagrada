@@ -2,7 +2,7 @@ import { Component, computed, effect, inject, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { ACTIVITY_ICONS, findProgram, IbucActivity } from '../../core/teaching';
+import { ACTIVITY_ICONS, findProgram, IbucActivity, quarterLabel } from '../../core/teaching';
 import { BackButton } from '../../shared/back-button';
 import { PassageView } from '../../shared/passage-view';
 import { RichText } from '../../shared/rich-text';
@@ -17,7 +17,7 @@ import { SourcesBox } from '../../shared/sources-box';
     @if (lesson(); as l) {
       <div class="article">
         <div class="top"><app-back [fallback]="backLink()" label="Voltar à turma" /></div>
-        <span class="overline">{{ p().name }} · {{ classNames() }}</span>
+        <span class="overline">{{ p().name }} · {{ classNames() }}@if (l.number) { · Lição {{ l.number }}@if (l.quarter) { do {{ quarterLabel(l.quarter) }} } }</span>
         <h1 class="title">{{ l.title }}</h1>
         <p class="lead">{{ l.theme }}</p>
         @if (l.example) {
@@ -111,6 +111,7 @@ export class IbucLessonPage {
   readonly program = input<string>();
   protected readonly p = computed(() => findProgram(this.program()));
   protected readonly icons = ACTIVITY_ICONS;
+  protected readonly quarterLabel = quarterLabel;
 
   protected readonly lesson = computed(() => this.p().lessons.find((l) => l.id === this.id()));
   protected readonly classNames = computed(() => this.names(this.lesson()?.classes ?? []));

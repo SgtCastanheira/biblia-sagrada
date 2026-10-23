@@ -7,7 +7,7 @@ import { findBook } from '../core/books';
 import { ContentService } from '../core/content.service';
 import { articlesFor } from '../core/library';
 import { parseReferences } from '../core/reference-parser';
-import { PROGRAMS } from '../core/teaching';
+import { PROGRAMS, supportLesson } from '../core/teaching';
 import { TRIBE_CHAPTERS } from '../core/tribes';
 import { fold } from '../core/dictionary';
 
@@ -70,6 +70,9 @@ export class LessonSupport {
   readonly refs = input.required<string[]>();
   /** Classe da revista ("Jovens", "Adultos"…), para abrir a turma certa do apoio. */
   readonly className = input<string>('');
+  /** Trimestre ("2026-4") e número da lição: liga direto à aula de apoio da mesma lição. */
+  readonly quarter = input<string>('');
+  readonly lessonNumber = input<number>(0);
 
   private readonly content = inject(ContentService);
   private readonly people = toSignal(this.content.memorial, { initialValue: [] });
@@ -84,8 +87,10 @@ export class LessonSupport {
     const turma = program.classes.find((c) => fold(c.name) === fold(this.className()))?.id;
     const out: SupportLink[] = [];
 
-    // Aulas de apoio da EBD sobre os mesmos textos
-    for (const l of program.lessons.filter((x) => touches([x.refs, x.memoryVerse]))) {
+    // A aula de apoio desta mesma lição (turma, trimestre e número) e as que tratam dos mesmos textos
+    const same = turma && this.quarter() && this.lessonNumber() ? supportLesson(program, turma, this.quarter(), this.lessonNumber()) : undefined;
+    if (same) out.push({ icon: 'school', kind: `Aula de apoio da Lição ${same.number}`, title: same.title, link: [program.path, 'aula', same.id], queryParams: { turma: turma! } });
+    for (const l of program.lessons.filter((x) => x !== same && touches([x.refs, x.memoryVerse]))) {
       out.push({ icon: 'school', kind: l.example ? 'Aula de apoio (modelo)' : 'Aula de apoio', title: l.title, link: [program.path, 'aula', l.id], queryParams: turma ? { turma } : undefined });
     }
     if (!chapters.size) {

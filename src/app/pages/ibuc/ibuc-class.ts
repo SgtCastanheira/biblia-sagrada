@@ -1,9 +1,9 @@
-import { Component, computed, effect, inject, input } from '@angular/core';
+import { Component, computed, effect, inject, input, signal } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { findProgram, lessonsOfClass } from '../../core/teaching';
+import { findProgram, lessonsOfClass, quartersOf } from '../../core/teaching';
 import { BackButton } from '../../shared/back-button';
 
 /** Uma turma (IBUC ou EBD): como ensinar nessa idade e as aulas. */
@@ -25,8 +25,36 @@ import { BackButton } from '../../shared/back-button';
         </ul>
       </aside>
 
-      <h2 class="section-title">Aulas</h2>
+      <h2 class="section-title">Lições do trimestre</h2>
+      @if (quarters().length > 1) {
+        <nav class="quarters" aria-label="Trimestre">
+          @for (q of quarters(); track q.key) {
+            <button [class.on]="q.key === quarter().key" [attr.aria-pressed]="q.key === quarter().key" (click)="picked.set(q.key)">{{ q.label }}</button>
+          }
+        </nav>
+      }
+      <p class="quarter-label">{{ quarter().label }}@if (quarter().current) { · trimestre atual }</p>
+      <ol class="lessons">
+        @for (item of quarter().lessons; track item.number) {
+          <li [class.ready]="!!item.lesson">
+            @if (item.lesson; as l) {
+              <a class="card lesson ready" matRipple [routerLink]="[p().path, 'aula', l.id]" [queryParams]="{ turma: c.id }">
+                <span class="num">{{ item.number }}</span>
+                <span class="texts"><span class="meta">Lição {{ item.number }} · {{ l.refs }}</span><span class="name">{{ l.title }}</span></span>
+                <mat-icon class="go">chevron_right</mat-icon>
+              </a>
+            } @else {
+              <div class="lesson pending" [attr.aria-label]="'Lição ' + item.number + ': em preparação'">
+                <span class="num">{{ item.number }}</span>
+                <span class="soon">Em preparação</span>
+              </div>
+            }
+          </li>
+        }
+      </ol>
+
       @if (real().length) {
+        <h2 class="section-title">Outras aulas</h2>
         <div class="list">
           @for (l of real(); track l.id) {
             <a class="card row" matRipple [routerLink]="[p().path, 'aula', l.id]" [queryParams]="{ turma: c.id }">
@@ -36,8 +64,6 @@ import { BackButton } from '../../shared/back-button';
             </a>
           }
         </div>
-      } @else {
-        <p class="empty"><mat-icon>hourglass_top</mat-icon> As aulas desta turma estão em preparação e vão aparecer aqui, tema por tema.</p>
       }
 
       @if (examples().length) {
@@ -63,6 +89,29 @@ import { BackButton } from '../../shared/back-button';
     .tips li { margin-bottom: 6px; }
     .empty { display: flex; align-items: center; gap: 10px; padding: 16px; border-radius: 16px; background: var(--mat-sys-surface-container); color: var(--mat-sys-on-surface-variant); }
     .example { background: var(--mat-sys-surface-container-high) !important; }
+    .quarters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+    .quarters button {
+      min-height: 40px; padding: 0 14px; border-radius: 20px; cursor: pointer; background: none;
+      border: 1px solid var(--mat-sys-outline-variant); color: var(--mat-sys-on-surface); font: 500 14px Inter, sans-serif;
+    }
+    .quarters button.on { background: var(--mat-sys-secondary-container); color: var(--mat-sys-on-secondary-container); border-color: transparent; }
+    .quarter-label { margin: 0 4px 10px; font: 600 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: .8px; color: var(--accent-gold); }
+    .lessons { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    /* A lição com aula ocupa a linha toda; as que ainda não têm ficam compactas, lado a lado */
+    .lessons li.ready { grid-column: 1 / -1; }
+    .lesson { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 16px; min-height: 44px; box-sizing: border-box; }
+    .lesson .texts { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .lesson .meta { font: 500 13px Inter, sans-serif; color: var(--accent-gold); }
+    .lesson .name { font: 600 16px/1.3 var(--heading-font); }
+    .lesson .go { color: var(--mat-sys-on-surface-variant); }
+    .soon { font: 500 13px Inter, sans-serif; }
+    .lesson .num {
+      width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font: 600 15px var(--heading-font);
+      background: var(--mat-sys-primary-container); color: var(--mat-sys-on-primary-container);
+    }
+    .lesson.pending { border: 1px dashed var(--mat-sys-outline-variant); color: var(--mat-sys-on-surface-variant); }
+    .lesson.pending .num { background: var(--mat-sys-surface-container-high); color: var(--mat-sys-on-surface-variant); }
+
   `,
 })
 export class IbucClassPage {
@@ -70,7 +119,11 @@ export class IbucClassPage {
   readonly program = input<string>();
   protected readonly p = computed(() => findProgram(this.program()));
   protected readonly group = computed(() => this.p().classes.find((c) => c.id === this.turma()));
-  protected readonly real = computed(() => lessonsOfClass(this.p(), this.turma()).filter((l) => !l.example));
+  /** Aulas sem número de lição (temas avulsos). */
+  protected readonly real = computed(() => lessonsOfClass(this.p(), this.turma()).filter((l) => !l.example && !l.number));
+  protected readonly quarters = computed(() => quartersOf(this.p(), this.turma()));
+  protected readonly picked = signal<string | null>(null);
+  protected readonly quarter = computed(() => this.quarters().find((q) => q.key === this.picked()) ?? this.quarters().find((q) => q.current)!);
   protected readonly examples = computed(() => lessonsOfClass(this.p(), this.turma()).filter((l) => l.example));
 
   constructor() {

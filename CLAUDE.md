@@ -75,7 +75,7 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 - `DictionaryMatcher` (`dictionary.ts`) marks dictionary `forms` in the reader. Each entry is marked once per chapter, and the longest form wins.
 - `bible-order.ts` and `study-index.ts` order and group everything in canonical order (Genesis to Revelation) per book and chapter. Lists shown to users should follow Bible order.
 
-**IBUC module** (`core/ibuc.ts`, `pages/ibuc/`) supports teachers by age group (`IBUC_CLASSES`). Lessons (`IBUC_LESSONS`) hold curiosities, historical context, activities and questions; `example: true` marks the model lesson. Never reproduce the IBUC magazines or PDFs.
+**IBUC module** (`core/ibuc.ts`, `pages/ibuc/`) supports teachers by age group (`IBUC_CLASSES`). Lessons (`IBUC_LESSONS`) hold curiosities, historical context, activities and questions; `example: true` marks the model lesson. A lesson with `quarter` ("2026-4") and `number` fills that slot in the class's list of lessons 1–13 and is linked from the user's EBD lesson with the same number. Never reproduce the IBUC magazines or PDFs.
 
 **What's new** (`core/whats-new.ts`): when publishing user-visible features, add a new entry at the top of `RELEASES` with a new `id`. Every device sees it once (first visits included), in a bottom sheet (`WhatsNewService`, checked at startup before the daily reminders). It is also listed at `/novidades`, which has a share button.
 

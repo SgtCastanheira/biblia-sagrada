@@ -38,6 +38,9 @@ export interface IbucLesson {
   memoryVerse: string;
   /** Aula-modelo, para mostrar como as aulas aparecem. */
   example?: boolean;
+  /** Trimestre da revista ("2026-4" = 4º trimestre de 2026) e número da lição nele. */
+  quarter?: string;
+  number?: number;
   /** Como abrir a aula e prender a atenção nos primeiros minutos. */
   opening: string;
   curiosities: { title: string; text: string }[];
@@ -75,6 +78,8 @@ export interface TeachingProgram {
   disclaimer: string;
   activitiesTitle: string;
   sources: SourceTopic;
+  /** Lições por trimestre na revista. */
+  lessonsPerQuarter: number;
   classes: IbucClass[];
   lessons: IbucLesson[];
 }
@@ -90,6 +95,7 @@ export const PROGRAMS: Record<ProgramId, TeachingProgram> = {
     disclaimer: 'O app não reproduz a revista nem os PDFs do IBUC: use-os normalmente na sala. Aqui fica o apoio para aprofundar o tema.',
     activitiesTitle: 'Brincadeiras e dinâmicas',
     sources: 'ibuc',
+    lessonsPerQuarter: 13,
     classes: IBUC_CLASSES,
     lessons: IBUC_LESSONS,
   },
@@ -103,10 +109,43 @@ export const PROGRAMS: Record<ProgramId, TeachingProgram> = {
     disclaimer: 'A revista é só a inspiração: o app não reproduz o texto das lições. Use a revista normalmente na sala; aqui fica o apoio para aprofundar o tema.',
     activitiesTitle: 'Dinâmicas e atividades',
     sources: 'ebd',
+    lessonsPerQuarter: 13,
     classes: EBD_SUPPORT_CLASSES,
     lessons: EBD_SUPPORT_LESSONS,
   },
 };
+
+/** "2026-4" → 4º trimestre de 2026. */
+export const quarterKey = (year: number, quarter: number) => `${year}-${quarter}`;
+export const currentQuarterKey = () => {
+  const now = new Date();
+  return quarterKey(now.getFullYear(), Math.floor(now.getMonth() / 3) + 1);
+};
+export const quarterLabel = (key: string) => {
+  const [year, quarter] = key.split('-');
+  return `${quarter}º trimestre de ${year}`;
+};
+
+/** Aula de apoio de uma lição da revista (turma, trimestre e número). */
+export const supportLesson = (program: TeachingProgram, classId: string, quarter: string, number: number) =>
+  program.lessons.find((l) => !l.example && l.quarter === quarter && l.number === number && l.classes.includes(classId));
+
+/**
+ * Trimestres de uma turma, cada um com as lições 1 a N (a aula, quando já existe).
+ * O trimestre atual aparece sempre; os outros, quando têm aulas.
+ */
+export function quartersOf(program: TeachingProgram, classId: string) {
+  const current = currentQuarterKey();
+  const keys = new Set([current, ...program.lessons.filter((l) => !l.example && l.quarter && l.classes.includes(classId)).map((l) => l.quarter!)]);
+  return [...keys]
+    .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
+    .map((key) => ({
+      key,
+      label: quarterLabel(key),
+      current: key === current,
+      lessons: Array.from({ length: program.lessonsPerQuarter }, (_, i) => ({ number: i + 1, lesson: supportLesson(program, classId, key, i + 1) })),
+    }));
+}
 
 export const findProgram = (id: string | undefined) => PROGRAMS[(id as ProgramId) ?? 'ibuc'] ?? PROGRAMS.ibuc;
 export const lessonsOfClass = (program: TeachingProgram, classId: string) => program.lessons.filter((l) => l.classes.includes(classId));

@@ -55,3 +55,11 @@ test('apoio ao professor: turmas da EBD, aula-modelo e o material do app na liç
   await expect(apoio.getByRole('link', { name: /Neemias reconstrói os muros/ })).toBeVisible();
   await expect(apoio.getByRole('link', { name: /Quem escreveu Neemias/ })).toBeVisible();
 });
+
+test('apoio ao professor: a turma mostra as lições 1 a 13 do trimestre', async ({ page }) => {
+  await page.goto('/ebd/apoio/adultos');
+  await expect(page.getByRole('heading', { name: 'Lições do trimestre' })).toBeVisible();
+  await expect(page.locator('ol.lessons > li')).toHaveCount(13);
+  await expect(page.locator('ol.lessons > li .lesson').first()).toHaveAttribute('aria-label', 'Lição 1: em preparação');
+  await expect(page.locator('ol.lessons > li .lesson').last()).toHaveAttribute('aria-label', 'Lição 13: em preparação');
+});
