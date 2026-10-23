@@ -269,3 +269,18 @@ test('mapa das tribos: o templo aparece e a tribo escolhida mostra a distância 
   await page.locator('ol.steps li').first().click();
   await expect(page.locator('.measure-label')).toHaveText(/≈ \d+ km/);
 });
+
+test('memorial: os dois reinos lado a lado, com os fatos que os ligam', async ({ page }) => {
+  await page.goto('/memorial?grupo=reis-juda');
+  await page.getByRole('navigation', { name: 'Grupos' }).getByRole('link', { name: 'Os dois reinos' }).click();
+  await expect(page.getByRole('heading', { name: 'Os dois reinos', level: 1 })).toBeVisible();
+  // Jeroboão I (Israel) e Roboão (Judá) começam juntos, na mesma linha, depois da divisão
+  const primeira = page.locator('.realms li.pair').first();
+  await expect(primeira.locator('.realm-king').first()).toContainText('Jeroboão I');
+  await expect(primeira.locator('.realm-king.right')).toContainText('Roboão');
+  await expect(page.locator('.realms li.event')).toHaveCount(5);
+  await expect(page.locator('.realm-king')).toHaveCount(39);
+  await expect(page.locator('.realm-king.right')).toHaveCount(20);
+  await page.locator('.realm-king', { hasText: 'Ezequias' }).click();
+  await expect(page).toHaveURL(/\/memorial\/ezequias/);
+});

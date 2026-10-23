@@ -142,3 +142,15 @@ export const VERDICTS: Record<KingVerdict, string> = {
   mau: 'Fez o que era mau',
   misto: 'Altos e baixos',
 };
+
+/** Linha do tempo dos dois reinos: os fatos que marcam Israel (Norte) e Judá (Sul) juntos. */
+export const TWO_KINGDOMS_EVENTS: { year: number; label: string; text: string; ref: string; end?: boolean }[] = [
+  { year: 931, label: '931 a.C.', text: 'O reino se divide: as dez tribos do Norte fazem Jeroboão rei; Judá e Benjamim ficam com Roboão, filho de Salomão.', ref: '1Rs 12.16-20' },
+  { year: 853, label: '853 a.C.', text: 'Acabe, de Israel, e Josafá, de Judá, lutam juntos em Ramote-Gileade.', ref: '1Rs 22.29-35' },
+  { year: 841, label: '841 a.C.', text: 'No mesmo dia, Jeú mata os reis dos dois reinos: Jorão, de Israel, e Acazias, de Judá.', ref: '2Rs 9.24-27' },
+  { year: 722, label: '722 a.C.', text: 'Samaria cai: a Assíria leva Israel cativo. É o fim do Reino do Norte.', ref: '2Rs 17.5-6', end: true },
+  { year: 586, label: '586 a.C.', text: 'Jerusalém e o templo são destruídos pela Babilônia: Judá vai para o exílio.', ref: '2Rs 25.8-11', end: true },
+];
+
+/** Ano em que o reinado começou ("931–913 a.C." → 931; "c. 1050–1010 a.C." → 1050). */
+export const reignStart = (years: string) => Number(years.match(/\d+/)?.[0] ?? 0);

@@ -143,6 +143,14 @@ h1.title {
   margin: 0 -16px 16px;
   padding: 2px 16px;
 
+  // No computador, as opções quebram em linhas (nada fica escondido)
+  @media (min-width: 840px) {
+    flex-wrap: wrap;
+    overflow: visible;
+    margin: 0 0 16px;
+    padding: 2px 0;
+  }
+
   button,
   a {
     flex: none;
