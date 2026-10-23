@@ -1,0 +1,91 @@
+@if (sermon(); as s) {
+  <div class="top">
+    <app-back fallback="/sermoes" />
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="share()" aria-label="Compartilhar"><mat-icon>ios_share</mat-icon></button>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Mais opções"><mat-icon>more_vert</mat-icon></button>
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item (click)="duplicate()"><mat-icon>content_copy</mat-icon><span>Duplicar</span></button>
+      <button mat-menu-item (click)="remove()"><mat-icon>delete</mat-icon><span>Excluir sermão</span></button>
+    </mat-menu>
+  </div>
+
+  <span class="overline">Sermão {{ kind()?.name?.toLowerCase() }} · ~{{ minutes() }} min</span>
+  <textarea class="title" cdkTextareaAutosize rows="1" placeholder="Título do sermão" [value]="s.title"
+            (input)="update({ title: value($event) })" aria-label="Título do sermão"></textarea>
+
+  <div class="actions">
+    <a mat-flat-button [routerLink]="['/sermoes', s.id, 'pregar']"><mat-icon>co_present</mat-icon> Pregar</a>
+    <button mat-stroked-button (click)="update({ ready: !s.ready })" [class.ready]="s.ready">
+      <mat-icon>{{ s.ready ? 'check_circle' : 'radio_button_unchecked' }}</mat-icon> {{ s.ready ? 'Pronto' : 'Marcar como pronto' }}
+    </button>
+  </div>
+
+  <!-- Base -->
+  <section class="card">
+    <h2><mat-icon>menu_book</mat-icon> Texto base</h2>
+    <input class="field" placeholder="Ex.: Fp 4.4-9" [value]="s.baseText" (input)="update({ baseText: value($event) })" aria-label="Texto base" />
+    @if (s.baseText) { <app-passage-view [refs]="s.baseText" /> }
+
+    <h3>Tema central</h3>
+    <textarea class="field area" cdkTextareaAutosize cdkAutosizeMinRows="2"
+              placeholder="A ideia principal em uma frase. Ex.: A alegria do cristão vem de Cristo, não das circunstâncias."
+              [value]="s.theme" (input)="update({ theme: value($event) })" aria-label="Tema central"></textarea>
+
+    <h3>Ocasião</h3>
+    <div class="chips">
+      @for (t of notes.types(); track t) {
+        <button [class.active]="s.occasion === t" [style.--c]="color(t)" (click)="update({ occasion: t })"><i></i>{{ t }}</button>
+      }
+    </div>
+    <label class="date"><mat-icon>event</mat-icon>
+      <input type="date" [value]="s.date" (change)="update({ date: value($event) || s.date })" aria-label="Data da pregação" />
+    </label>
+  </section>
+
+  <!-- Introdução -->
+  <section class="card">
+    <h2><mat-icon>start</mat-icon> Introdução</h2>
+    <textarea class="field area" cdkTextareaAutosize cdkAutosizeMinRows="3"
+              placeholder="Desperte o interesse: uma pergunta, uma história ou o contexto do texto."
+              [value]="s.introduction" (input)="update({ introduction: value($event) })" aria-label="Introdução"></textarea>
+  </section>
+
+  <!-- Tópicos -->
+  @for (p of s.points; track p.id; let i = $index; let first = $first; let last = $last) {
+    <section class="card point">
+      <div class="point-head">
+        <span class="num">{{ i + 1 }}</span>
+        <input class="point-title" [placeholder]="hint(i)" [value]="p.title" (input)="updatePoint(p, { title: value($event) })"
+               [attr.aria-label]="'Título do tópico ' + (i + 1)" />
+        <button mat-icon-button (click)="service.movePoint(s.id, p.id, -1)" [disabled]="first" aria-label="Mover para cima"><mat-icon>arrow_upward</mat-icon></button>
+        <button mat-icon-button (click)="service.movePoint(s.id, p.id, 1)" [disabled]="last" aria-label="Mover para baixo"><mat-icon>arrow_downward</mat-icon></button>
+        <button mat-icon-button (click)="removePoint(p)" aria-label="Remover tópico"><mat-icon>close</mat-icon></button>
+      </div>
+      <input class="field" placeholder="Versículos deste tópico (ex.: Fp 4.4)" [value]="p.refs"
+             (input)="updatePoint(p, { refs: value($event) })" [attr.aria-label]="'Versículos do tópico ' + (i + 1)" />
+      @if (p.refs) { <app-passage-view [refs]="p.refs" /> }
+      <textarea class="field area" cdkTextareaAutosize cdkAutosizeMinRows="3" placeholder="Explicação: o que o texto ensina"
+                [value]="p.content" (input)="updatePoint(p, { content: value($event) })" [attr.aria-label]="'Explicação do tópico ' + (i + 1)"></textarea>
+      <textarea class="field area soft" cdkTextareaAutosize cdkAutosizeMinRows="2" placeholder="Ilustração: uma história ou exemplo"
+                [value]="p.illustration" (input)="updatePoint(p, { illustration: value($event) })" [attr.aria-label]="'Ilustração do tópico ' + (i + 1)"></textarea>
+      <textarea class="field area soft" cdkTextareaAutosize cdkAutosizeMinRows="2" placeholder="Aplicação: o que fazer com isso hoje"
+                [value]="p.application" (input)="updatePoint(p, { application: value($event) })" [attr.aria-label]="'Aplicação do tópico ' + (i + 1)"></textarea>
+    </section>
+  }
+  <button class="add" (click)="service.addPoint(s.id)"><mat-icon>add</mat-icon> Adicionar tópico</button>
+
+  <!-- Conclusão -->
+  <section class="card">
+    <h2><mat-icon>flag</mat-icon> Conclusão</h2>
+    <textarea class="field area" cdkTextareaAutosize cdkAutosizeMinRows="3" placeholder="Retome a ideia central e os tópicos em poucas frases."
+              [value]="s.conclusion" (input)="update({ conclusion: value($event) })" aria-label="Conclusão"></textarea>
+    <h3>Apelo / oração final</h3>
+    <textarea class="field area soft" cdkTextareaAutosize cdkAutosizeMinRows="2" placeholder="Um convite à decisão e uma oração."
+              [value]="s.appeal" (input)="update({ appeal: value($event) })" aria-label="Apelo"></textarea>
+  </section>
+
+  <p class="saved"><mat-icon>cloud_done</mat-icon> Salvo automaticamente neste aparelho</p>
+} @else {
+  <p>Sermão não encontrado. <a routerLink="/sermoes">Voltar aos sermões</a></p>
+}

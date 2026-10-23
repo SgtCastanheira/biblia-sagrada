@@ -1,0 +1,67 @@
+<div class="search-box">
+  <mat-icon>search</mat-icon>
+  <input #input type="search" placeholder="Buscar palavra ou ir para (ex.: Jo 3.16)" [value]="query()"
+         (input)="setQuery($any($event.target).value)" aria-label="Buscar na Bíblia" enterkeyhint="search" />
+  @if (query()) {
+    <button (click)="setQuery(''); input.focus()" aria-label="Limpar"><mat-icon>close</mat-icon></button>
+  }
+</div>
+
+<div class="filters">
+  <button [class.active]="!testament()" (click)="setTestament(null)">Toda a Bíblia</button>
+  <button [class.active]="testament() === 'AT'" (click)="setTestament('AT')">Antigo Testamento</button>
+  <button [class.active]="testament() === 'NT'" (click)="setTestament('NT')">Novo Testamento</button>
+</div>
+
+@if (reference(); as ref) {
+  <a class="goto" matRipple [routerLink]="['/ler', ref.bookId, ref.chapter]" [fragment]="ref.from ? 'v' + ref.from : undefined">
+    <mat-icon>arrow_forward</mat-icon>
+    <span><small>Ir para</small>{{ ref.label }}</span>
+  </a>
+}
+
+@if (failed()) {
+  <p class="state">Não foi possível preparar a busca. Verifique a conexão e tente de novo.</p>
+} @else if (!service.ready()) {
+  <div class="state">
+    <p>Preparando a busca… {{ service.progress() }}%</p>
+    <div class="bar"><span [style.width.%]="service.progress()"></span></div>
+    <small>Só na primeira vez. Depois a busca funciona até sem internet.</small>
+  </div>
+} @else if (results(); as r) {
+  <p class="count">
+    @if (r.total) {
+      <strong>{{ r.total }}</strong> versículo{{ r.total === 1 ? '' : 's' }} com “{{ query().trim() }}”
+    } @else if (!reference()) {
+      Nenhum versículo encontrado. Tente outra palavra ou use aspas para frase exata: “pão da vida”.
+    }
+  </p>
+  <div class="results">
+    @for (hit of visible(); track hit.bookId + hit.chapter + '-' + hit.verse) {
+      <a class="hit" matRipple [routerLink]="['/ler', hit.bookId, hit.chapter]" [fragment]="'v' + hit.verse">
+        <span class="ref">{{ bookName(hit.bookId) }} {{ hit.chapter }}:{{ hit.verse }}</span>
+        <span class="text reading-font">
+          @for (part of hit.parts; track $index) {
+            @if (part.match) { <mark>{{ part.text }}</mark> } @else { {{ part.text }} }
+          }
+        </span>
+      </a>
+    }
+  </div>
+  @if (r.hits.length > limit()) {
+    <button mat-stroked-button class="more" (click)="limit.set(limit() + 50)">Mostrar mais</button>
+  } @else if (r.total > r.hits.length) {
+    <p class="note">Mostrando os primeiros {{ r.hits.length }} resultados. Refine a busca com mais palavras.</p>
+  }
+} @else {
+  <div class="tips">
+    <h2>Dicas de busca</h2>
+    <ul>
+      <li>Várias palavras encontram versículos que tenham <strong>todas</strong> elas: <em>amor próximo</em></li>
+      <li>Use aspas para uma <strong>frase exata</strong>: <em>"o Senhor é o meu pastor"</em></li>
+      <li>Digite uma referência para ir direto: <em>Fp 4.13</em>, <em>Salmo 23</em></li>
+      <li>Acentos são opcionais: <em>misericordia</em> encontra <em>misericórdia</em></li>
+    </ul>
+    <p class="note">A busca usa o texto da Almeida e funciona sem internet. <a routerLink="/livros">Ver todos os livros</a></p>
+  </div>
+}

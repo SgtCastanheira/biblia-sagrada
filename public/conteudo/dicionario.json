@@ -1,0 +1,6648 @@
+[
+{
+"id": "deus",
+"term": "Deus",
+"kind": "nome",
+"forms": [
+"Deus"
+],
+"original": [
+{
+"lang": "he",
+"word": "אֱלֹהִים",
+"translit": "Elohim",
+"strong": "H430",
+"meaning": "Deus; plural de majestade, usado com verbo no singular"
+},
+{
+"lang": "gr",
+"word": "θεός",
+"translit": "theós",
+"strong": "G2316",
+"meaning": "Deus"
+}
+],
+"definition": "Elohim é o primeiro nome de Deus na Bíblia (Gn 1.1) e destaca o Criador poderoso. A forma é plural, mas vem com verbo no singular: muitos estudiosos veem nisso a plenitude e a majestade de Deus. No Novo Testamento, theós é a palavra usada para Deus Pai, e também para Cristo (Jo 1.1; 20.28).",
+"refs": [
+"Gn 1.1",
+"Dt 6.4",
+"Jo 1.1",
+"Jo 20.28"
+],
+"see": [
+"senhor",
+"altissimo",
+"todo-poderoso"
+],
+"domain": "deus"
+},
+{
+"id": "senhor",
+"term": "Senhor (o nome de Deus)",
+"kind": "nome",
+"forms": [
+"Senhor",
+"SENHOR"
+],
+"original": [
+{
+"lang": "he",
+"word": "יְהוָה",
+"translit": "YHWH (Javé, Jeová)",
+"strong": "H3068",
+"meaning": "o nome próprio de Deus, ligado ao verbo “ser”: “Eu Sou”"
+},
+{
+"lang": "he",
+"word": "אֲדֹנָי",
+"translit": "Adonai",
+"strong": "H136",
+"meaning": "meu Senhor"
+},
+{
+"lang": "gr",
+"word": "κύριος",
+"translit": "kýrios",
+"strong": "G2962",
+"meaning": "senhor, dono; o título de Deus e de Jesus"
+}
+],
+"definition": "No Antigo Testamento, quase sempre que se lê “Senhor” o hebraico tem YHWH, o nome que Deus revelou a Moisés (Êx 3.14-15), que aparece cerca de 6.800 vezes. Por reverência, os judeus deixaram de pronunciá-lo e liam “Adonai” no lugar; por isso a pronúncia exata se perdeu (Javé é a mais provável; Jeová junta as consoantes de YHWH com as vogais de Adonai). No Novo Testamento, chamar Jesus de Kýrios era confessar que Ele é o Senhor do Antigo Testamento (Fp 2.11).",
+"refs": [
+"Êx 3.14-15",
+"Êx 6.3",
+"Sl 23.1",
+"Fp 2.9-11",
+"Rm 10.9"
+],
+"see": [
+"eu-sou",
+"jeova-jire",
+"deus"
+],
+"domain": "deus"
+},
+{
+"id": "eu-sou",
+"term": "Eu Sou",
+"kind": "expressao",
+"forms": [
+"EU SOU O QUE SOU",
+"EU SOU"
+],
+"original": [
+{
+"lang": "he",
+"word": "אֶהְיֶה אֲשֶׁר אֶהְיֶה",
+"translit": "Ehyeh asher ehyeh",
+"strong": "H1961",
+"meaning": "Eu sou o que sou; Eu serei o que serei"
+},
+{
+"lang": "gr",
+"word": "ἐγώ εἰμι",
+"translit": "egṓ eimí",
+"meaning": "eu sou"
+}
+],
+"definition": "Resposta de Deus quando Moisés perguntou o seu nome, na sarça ardente. Mostra um Deus que existe por si mesmo, eterno e sempre presente. Jesus usou a mesma expressão (“antes que Abraão existisse, Eu Sou”), e os ouvintes entenderam que Ele se fazia igual a Deus.",
+"refs": [
+"Êx 3.14",
+"Jo 8.58",
+"Jo 18.5-6"
+],
+"see": [
+"senhor"
+],
+"domain": "deus"
+},
+{
+"id": "altissimo",
+"term": "Altíssimo",
+"kind": "nome",
+"forms": [
+"Altíssimo"
+],
+"original": [
+{
+"lang": "he",
+"word": "עֶלְיוֹן",
+"translit": "Elyon",
+"strong": "H5945",
+"meaning": "o mais alto, o supremo"
+},
+{
+"lang": "gr",
+"word": "ὕψιστος",
+"translit": "hýpsistos",
+"strong": "G5310",
+"meaning": "altíssimo"
+}
+],
+"definition": "Título que apresenta Deus acima de todos os deuses e reis. Aparece pela primeira vez com Melquisedeque, “sacerdote do Deus Altíssimo”, e é frequente nos Salmos e em Daniel.",
+"refs": [
+"Gn 14.18-20",
+"Sl 91.1",
+"Dn 4.34",
+"Lc 1.32"
+],
+"see": [
+"deus",
+"todo-poderoso"
+],
+"domain": "deus"
+},
+{
+"id": "todo-poderoso",
+"term": "Todo-Poderoso",
+"kind": "nome",
+"forms": [
+"Todo-Poderoso"
+],
+"original": [
+{
+"lang": "he",
+"word": "שַׁדַּי",
+"translit": "Shaddai (El Shaddai)",
+"strong": "H7706",
+"meaning": "o Todo-Poderoso; talvez “o da montanha” ou “o suficiente”"
+},
+{
+"lang": "gr",
+"word": "παντοκράτωρ",
+"translit": "pantokrátōr",
+"strong": "G3841",
+"meaning": "o que governa tudo"
+}
+],
+"definition": "El Shaddai é o nome com que Deus se apresentou a Abraão ao confirmar a promessa de um filho impossível. É o Deus que basta e cumpre o que promete. Em Apocalipse, pantokrátōr aparece nove vezes.",
+"refs": [
+"Gn 17.1",
+"Êx 6.3",
+"Rt 1.20",
+"Ap 1.8",
+"Ap 19.6"
+],
+"see": [
+"altissimo",
+"senhor-dos-exercitos"
+],
+"domain": "deus"
+},
+{
+"id": "senhor-dos-exercitos",
+"term": "Senhor dos Exércitos",
+"kind": "nome",
+"forms": [
+"Senhor dos exércitos",
+"Senhor dos Exércitos"
+],
+"original": [
+{
+"lang": "he",
+"word": "יְהוָה צְבָאוֹת",
+"translit": "YHWH Tsevaot",
+"strong": "H6635",
+"meaning": "o Senhor das hostes (exércitos celestiais, astros e o povo de Israel)"
+},
+{
+"lang": "gr",
+"word": "Σαβαώθ",
+"translit": "Sabaṓth",
+"strong": "G4519",
+"meaning": "transliteração do hebraico"
+}
+],
+"definition": "Título que mostra Deus no comando de todas as forças do céu e da terra. Aparece pela primeira vez com Ana, em Siló, e é o favorito dos profetas (mais de 60 vezes em Isaías). Os serafins cantam: “Santo, santo, santo é o Senhor dos Exércitos”.",
+"refs": [
+"1Sm 1.3",
+"1Sm 17.45",
+"Is 6.3",
+"Tg 5.4"
+],
+"see": [
+"senhor",
+"todo-poderoso"
+],
+"domain": "deus"
+},
+{
+"id": "jeova-jire",
+"term": "Jeová-Jiré",
+"kind": "nome",
+"forms": [
+"Jeová-Jiré"
+],
+"original": [
+{
+"lang": "he",
+"word": "יְהוָה יִרְאֶה",
+"translit": "YHWH Yir'eh",
+"strong": "H3070",
+"meaning": "o Senhor proverá (literalmente: o Senhor verá)"
+}
+],
+"definition": "Nome que Abraão deu ao monte Moriá depois que Deus providenciou um carneiro no lugar de Isaque. Ver, em hebraico, também é “prover”: Deus vê a necessidade e a supre. Séculos depois, o templo foi construído no monte Moriá (2Cr 3.1).",
+"refs": [
+"Gn 22.8",
+"Gn 22.13-14",
+"2Cr 3.1"
+],
+"see": [
+"jeova-nissi",
+"jeova-salom",
+"senhor"
+],
+"domain": "deus"
+},
+{
+"id": "jeova-nissi",
+"term": "Jeová-Níssi",
+"kind": "nome",
+"forms": [
+"Jeová-Níssi"
+],
+"original": [
+{
+"lang": "he",
+"word": "יְהוָה נִסִּי",
+"translit": "YHWH Nissi",
+"strong": "H3071",
+"meaning": "o Senhor é a minha bandeira"
+}
+],
+"definition": "Nome do altar que Moisés levantou depois da vitória sobre os amalequitas, enquanto ele orava com as mãos erguidas. A bandeira era o ponto de reunião do exército: o Senhor é quem reúne e dá a vitória ao seu povo.",
+"refs": [
+"Êx 17.11-15"
+],
+"see": [
+"jeova-jire",
+"jeova-salom"
+],
+"domain": "deus"
+},
+{
+"id": "jeova-salom",
+"term": "Jeová-Salom",
+"kind": "nome",
+"forms": [
+"Jeová-Salom"
+],
+"original": [
+{
+"lang": "he",
+"word": "יְהוָה שָׁלוֹם",
+"translit": "YHWH Shalom",
+"strong": "H3073",
+"meaning": "o Senhor é paz"
+}
+],
+"definition": "Nome do altar que Gideão construiu em Ofra, depois de ver o Anjo do Senhor e ter medo de morrer. Deus lhe disse: “Paz seja contigo; não temas”.",
+"refs": [
+"Jz 6.22-24"
+],
+"see": [
+"paz",
+"jeova-jire"
+],
+"domain": "deus"
+},
+{
+"id": "jeova",
+"term": "Jeová",
+"kind": "nome",
+"forms": [
+"Jeová"
+],
+"original": [
+{
+"lang": "he",
+"word": "יְהוָה",
+"translit": "YHWH",
+"strong": "H3068",
+"meaning": "o nome próprio de Deus"
+}
+],
+"definition": "Forma do nome de Deus criada na Idade Média, juntando as consoantes de YHWH com as vogais de Adonai (“meu Senhor”), que os judeus liam no lugar do nome. Na Almeida aparece sobretudo nos nomes compostos, como Jeová-Jiré e Jeová-Níssi.",
+"refs": [
+"Êx 6.3",
+"Sl 83.18"
+],
+"see": [
+"senhor"
+],
+"domain": "deus"
+},
+{
+"id": "emanuel",
+"term": "Emanuel",
+"kind": "nome",
+"forms": [
+"Emanuel",
+"EMANUEL"
+],
+"original": [
+{
+"lang": "he",
+"word": "עִמָּנוּ אֵל",
+"translit": "Immanu El",
+"strong": "H6005",
+"meaning": "Deus conosco"
+},
+{
+"lang": "gr",
+"word": "Ἐμμανουήλ",
+"translit": "Emmanouḗl",
+"strong": "G1694",
+"meaning": "Deus conosco"
+}
+],
+"definition": "Nome do menino anunciado por Isaías como sinal ao rei Acaz. Mateus mostra o cumprimento pleno em Jesus, nascido da virgem: em Cristo, Deus veio morar conosco.",
+"refs": [
+"Is 7.14",
+"Is 8.8",
+"Mt 1.23"
+],
+"see": [
+"messias"
+],
+"domain": "cristo"
+},
+{
+"id": "messias",
+"term": "Messias / Cristo",
+"kind": "termo",
+"forms": [
+"Messias",
+"Cristo"
+],
+"original": [
+{
+"lang": "he",
+"word": "מָשִׁיחַ",
+"translit": "mashíach",
+"strong": "H4899",
+"meaning": "ungido"
+},
+{
+"lang": "gr",
+"word": "Χριστός",
+"translit": "Christós",
+"strong": "G5547",
+"meaning": "ungido"
+},
+{
+"lang": "la",
+"word": "Christus",
+"translit": "Christus",
+"meaning": "forma latina de Cristo"
+}
+],
+"definition": "“Cristo” não é sobrenome: é a tradução grega de “Messias”, o Ungido. Em Israel eram ungidos com óleo os reis, os sacerdotes e às vezes os profetas. Os profetas anunciaram um Ungido descendente de Davi que traria o reino de Deus. Dizer “Jesus Cristo” é confessar “Jesus é o Messias”.",
+"refs": [
+"1Sm 16.13",
+"Sl 2.2",
+"Is 61.1",
+"Jo 1.41",
+"Mt 16.16"
+],
+"see": [
+"ungido",
+"filho-do-homem"
+],
+"domain": "cristo"
+},
+{
+"id": "ungido",
+"term": "Ungido / unção",
+"kind": "termo",
+"forms": [
+"ungido",
+"unção"
+],
+"original": [
+{
+"lang": "he",
+"word": "מָשַׁח",
+"translit": "mashach",
+"strong": "H4886",
+"meaning": "ungir, derramar óleo"
+},
+{
+"lang": "gr",
+"word": "χρῖσμα",
+"translit": "chrísma",
+"strong": "G5545",
+"meaning": "unção"
+}
+],
+"definition": "Ungir era derramar óleo sobre alguém para separá-lo para uma função dada por Deus. O óleo passou a simbolizar o Espírito Santo, que vinha sobre os ungidos (1Sm 16.13). João escreve aos cristãos: “vós tendes a unção do Santo”.",
+"refs": [
+"Êx 30.30",
+"1Sm 16.13",
+"Is 61.1",
+"1Jo 2.20,27"
+],
+"see": [
+"messias",
+"espirito-santo"
+],
+"domain": "cristo"
+},
+{
+"id": "filho-do-homem",
+"term": "Filho do homem",
+"kind": "expressao",
+"forms": [
+"Filho do homem"
+],
+"original": [
+{
+"lang": "ar",
+"word": "כְּבַר אֱנָשׁ",
+"translit": "kevar enash",
+"strong": "H1247",
+"meaning": "como um filho de homem (Dn 7.13)"
+},
+{
+"lang": "gr",
+"word": "ὁ υἱὸς τοῦ ἀνθρώπου",
+"translit": "ho huiós tou anthrṓpou",
+"meaning": "o Filho do homem"
+}
+],
+"definition": "O título que Jesus mais usou para si mesmo (cerca de 80 vezes nos Evangelhos). Fala da sua humanidade, mas sobretudo remete à visão de Daniel: um “como filho de homem” que vem com as nuvens e recebe um reino eterno. Diante do sumo sacerdote, Jesus aplicou essa profecia a si.",
+"refs": [
+"Dn 7.13-14",
+"Mc 10.45",
+"Mc 14.61-62",
+"Jo 3.14"
+],
+"see": [
+"messias"
+],
+"domain": "cristo"
+},
+{
+"id": "verbo",
+"term": "Verbo (Palavra)",
+"kind": "termo",
+"forms": [
+"Verbo"
+],
+"original": [
+{
+"lang": "gr",
+"word": "λόγος",
+"translit": "lógos",
+"strong": "G3056",
+"meaning": "palavra, razão, mensagem"
+},
+{
+"lang": "la",
+"word": "Verbum",
+"translit": "Verbum",
+"meaning": "palavra — daí “Verbo” em português"
+}
+],
+"definition": "João chama Jesus de Lógos: para os judeus, lembrava a Palavra criadora de Deus (“Haja luz”); para os gregos, a razão que dá ordem ao universo. João afirma que essa Palavra eterna é Deus e “se fez carne”. A tradução “Verbo” vem do latim Verbum, da Vulgata.",
+"refs": [
+"Jo 1.1-3",
+"Jo 1.14",
+"Gn 1.3",
+"Ap 19.13"
+],
+"see": [
+"deus",
+"carne"
+],
+"domain": "cristo"
+},
+{
+"id": "cordeiro",
+"term": "Cordeiro de Deus",
+"kind": "termo",
+"forms": [
+"Cordeiro de Deus",
+"Cordeiro"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἀμνός",
+"translit": "amnós",
+"strong": "G286",
+"meaning": "cordeiro (Jo 1.29)"
+},
+{
+"lang": "gr",
+"word": "ἀρνίον",
+"translit": "arníon",
+"strong": "G721",
+"meaning": "cordeirinho (29 vezes em Apocalipse)"
+},
+{
+"lang": "la",
+"word": "Agnus Dei",
+"translit": "Agnus Dei",
+"meaning": "Cordeiro de Deus"
+}
+],
+"definition": "João Batista apresentou Jesus como “o Cordeiro de Deus, que tira o pecado do mundo”, lembrando o cordeiro da Páscoa e os sacrifícios do templo. Em Apocalipse, o Cordeiro que foi morto está de pé no trono e é adorado por todo o céu.",
+"refs": [
+"Êx 12.3-7",
+"Is 53.7",
+"Jo 1.29",
+"1Pe 1.19",
+"Ap 5.6-12"
+],
+"see": [
+"pascoa",
+"expiacao"
+],
+"domain": "cristo"
+},
+{
+"id": "unigenito",
+"term": "Unigênito",
+"kind": "termo",
+"forms": [
+"unigênito"
+],
+"original": [
+{
+"lang": "gr",
+"word": "μονογενής",
+"translit": "monogenḗs",
+"strong": "G3439",
+"meaning": "único, único no seu gênero"
+}
+],
+"definition": "Mais do que “nascido uma só vez”, monogenḗs quer dizer único, sem igual. Jesus é o Filho único de Deus em sentido exclusivo; nós somos filhos por adoção. A mesma palavra é usada para Isaque, “o único filho” da promessa (Hb 11.17).",
+"refs": [
+"Jo 1.14",
+"Jo 3.16",
+"Hb 11.17",
+"1Jo 4.9"
+],
+"see": [
+"adocao"
+],
+"domain": "cristo"
+},
+{
+"id": "espirito-santo",
+"term": "Espírito Santo",
+"kind": "nome",
+"forms": [
+"Espírito Santo"
+],
+"original": [
+{
+"lang": "he",
+"word": "רוּחַ הַקֹּדֶשׁ",
+"translit": "ruach haqodesh",
+"strong": "H7307",
+"meaning": "espírito (sopro, vento) de santidade"
+},
+{
+"lang": "gr",
+"word": "πνεῦμα ἅγιον",
+"translit": "pneûma hágion",
+"strong": "G4151",
+"meaning": "Espírito Santo"
+},
+{
+"lang": "la",
+"word": "Spiritus Sanctus",
+"translit": "Spiritus Sanctus",
+"meaning": "Espírito Santo"
+}
+],
+"definition": "A terceira Pessoa da Trindade. No Antigo Testamento, vinha sobre pessoas para tarefas especiais; os profetas anunciaram que seria derramado sobre todos (Jl 2.28). Jesus prometeu enviá-lo como Ajudador, e no Pentecostes os discípulos foram “cheios do Espírito Santo” e falaram em outras línguas. Ele convence do pecado, regenera, santifica, dá dons e capacita para o testemunho.",
+"refs": [
+"Jl 2.28-29",
+"Jo 14.16-17",
+"At 1.8",
+"At 2.1-4",
+"Gl 5.22-23"
+],
+"see": [
+"espirito",
+"consolador",
+"pentecostes",
+"linguas"
+],
+"domain": "cristo"
+},
+{
+"id": "espirito",
+"term": "Espírito",
+"kind": "termo",
+"forms": [
+"espírito",
+"Espírito"
+],
+"original": [
+{
+"lang": "he",
+"word": "רוּחַ",
+"translit": "ruach",
+"strong": "H7307",
+"meaning": "vento, sopro, fôlego, espírito"
+},
+{
+"lang": "gr",
+"word": "πνεῦμα",
+"translit": "pneûma",
+"strong": "G4151",
+"meaning": "vento, sopro, espírito"
+}
+],
+"definition": "Em hebraico e em grego, a mesma palavra quer dizer vento, sopro e espírito. Por isso Jesus pôde dizer a Nicodemos: “o vento sopra onde quer… assim é todo aquele que é nascido do Espírito”. Com minúscula, pode ser o espírito humano; com maiúscula, o Espírito de Deus.",
+"refs": [
+"Gn 1.2",
+"Ez 37.9-10",
+"Jo 3.8",
+"Rm 8.16"
+],
+"see": [
+"espirito-santo",
+"alma"
+],
+"senses": [
+{
+"sense": "Vento",
+"refs": [
+"Jo 3.8",
+"Gn 8.1"
+]
+},
+{
+"sense": "Fôlego, sopro de vida",
+"refs": [
+"Gn 6.17",
+"Ez 37.9-10"
+]
+},
+{
+"sense": "O espírito humano, o interior da pessoa",
+"refs": [
+"1Co 2.11",
+"Sl 51.10"
+]
+},
+{
+"sense": "O Espírito Santo",
+"refs": [
+"At 2.4",
+"Rm 8.16"
+]
+},
+{
+"sense": "Espíritos maus",
+"refs": [
+"Mc 5.8"
+]
+}
+],
+"domain": "humano"
+},
+{
+"id": "consolador",
+"term": "Ajudador (Consolador)",
+"kind": "termo",
+"forms": [
+"Ajudador"
+],
+"original": [
+{
+"lang": "gr",
+"word": "παράκλητος",
+"translit": "paráklētos",
+"strong": "G3875",
+"meaning": "chamado para o lado; defensor, conselheiro, consolador"
+}
+],
+"definition": "Nome que Jesus deu ao Espírito Santo na última ceia. Paráklētos era quem ficava ao lado de alguém num tribunal para ajudá-lo. Jesus diz “outro” Ajudador: alguém como Ele mesmo, que estaria com os discípulos para sempre. João usa a mesma palavra para Jesus, nosso “Advogado” junto ao Pai.",
+"refs": [
+"Jo 14.16-17",
+"Jo 14.26",
+"Jo 16.7-8",
+"1Jo 2.1"
+],
+"see": [
+"espirito-santo"
+],
+"domain": "cristo"
+},
+{
+"id": "graca",
+"term": "Graça",
+"kind": "termo",
+"forms": [
+"graça"
+],
+"original": [
+{
+"lang": "gr",
+"word": "χάρις",
+"translit": "cháris",
+"strong": "G5485",
+"meaning": "favor imerecido, bondade, presente"
+},
+{
+"lang": "he",
+"word": "חֵן",
+"translit": "chen",
+"strong": "H2580",
+"meaning": "favor, graça (“Noé achou graça”)"
+},
+{
+"lang": "la",
+"word": "gratia",
+"translit": "gratia",
+"meaning": "graça; daí “grátis” e “gratidão”"
+}
+],
+"definition": "O favor de Deus dado a quem não merece. É o centro do evangelho: “pela graça sois salvos, por meio da fé; e isto não vem de vós, é dom de Deus”. A graça não só perdoa: também ensina a viver e dá força na fraqueza (Tt 2.11-12; 2Co 12.9).",
+"refs": [
+"Gn 6.8",
+"Jo 1.14-17",
+"Rm 3.24",
+"Ef 2.8-9",
+"2Co 12.9"
+],
+"see": [
+"fe",
+"misericordia",
+"benignidade"
+],
+"domain": "salvacao"
+},
+{
+"id": "fe",
+"term": "Fé",
+"kind": "termo",
+"forms": [
+"fé"
+],
+"original": [
+{
+"lang": "gr",
+"word": "πίστις",
+"translit": "pístis",
+"strong": "G4102",
+"meaning": "confiança, fidelidade, convicção"
+},
+{
+"lang": "he",
+"word": "אֱמוּנָה",
+"translit": "emunah",
+"strong": "H530",
+"meaning": "firmeza, fidelidade"
+},
+{
+"lang": "la",
+"word": "fides",
+"translit": "fides",
+"meaning": "fé, confiança — daí “fiel” e “fidelidade”"
+}
+],
+"definition": "Confiar em Deus e na sua palavra a ponto de agir de acordo com ela. A raiz hebraica de emunah é a mesma de “amém”: algo firme, em que se pode apoiar. Hebreus 11 define a fé como “o firme fundamento das coisas que se esperam” e mostra a fé dos heróis em ação.",
+"refs": [
+"Gn 15.6",
+"Hc 2.4",
+"Rm 10.17",
+"Ef 2.8",
+"Hb 11.1-6"
+],
+"see": [
+"graca",
+"amem",
+"justificacao"
+],
+"senses": [
+{
+"sense": "Confiança em Deus",
+"refs": [
+"Rm 4.3",
+"Hb 11.6"
+]
+},
+{
+"sense": "Fidelidade, ser digno de confiança",
+"refs": [
+"Gl 5.22",
+"Rm 3.3"
+],
+"note": "No fruto do Espírito, pístis é traduzida por “fidelidade”."
+},
+{
+"sense": "O conteúdo da fé cristã",
+"refs": [
+"Jd 1.3"
+],
+"note": "“A fé que uma vez foi entregue aos santos”."
+}
+],
+"domain": "virtudes"
+},
+{
+"id": "amor",
+"term": "Amor",
+"kind": "termo",
+"forms": [
+"amor"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἀγάπη",
+"translit": "agápē",
+"strong": "G26",
+"meaning": "amor que se doa, que busca o bem do outro"
+},
+{
+"lang": "gr",
+"word": "φιλέω",
+"translit": "philéō",
+"strong": "G5368",
+"meaning": "amar como amigo, ter afeição"
+},
+{
+"lang": "he",
+"word": "אַהֲבָה",
+"translit": "ahavah",
+"strong": "H160",
+"meaning": "amor"
+},
+{
+"lang": "la",
+"word": "caritas",
+"translit": "caritas",
+"meaning": "amor — daí “caridade” nas traduções antigas de 1Co 13"
+}
+],
+"definition": "Agápē é o amor que escolhe o bem do outro mesmo sem receber nada, como o amor de Deus que deu o Filho. Em João 21, Jesus pergunta a Pedro duas vezes “tu me amas (agapáō)?” e, na terceira, usa philéō. Em 1 Coríntios 13, as Bíblias antigas traduziam “caridade”, do latim caritas.",
+"refs": [
+"Jo 3.16",
+"Jo 21.15-17",
+"1Co 13.4-8",
+"1Jo 4.8-10"
+],
+"see": [
+"benignidade",
+"misericordia"
+],
+"domain": "virtudes"
+},
+{
+"id": "benignidade",
+"term": "Benignidade (amor leal)",
+"kind": "termo",
+"forms": [
+"benignidade"
+],
+"original": [
+{
+"lang": "he",
+"word": "חֶסֶד",
+"translit": "chesed",
+"strong": "H2617",
+"meaning": "amor leal, bondade fiel à aliança, misericórdia"
+},
+{
+"lang": "gr",
+"word": "χρηστότης",
+"translit": "chrēstótēs",
+"strong": "G5544",
+"meaning": "bondade, gentileza (fruto do Espírito)"
+}
+],
+"definition": "Chesed é uma das palavras mais ricas do Antigo Testamento: o amor fiel de Deus que não desiste da aliança, mesmo quando o povo falha. Aparece 26 vezes no Salmo 136 (“a sua benignidade dura para sempre”). Rute é exemplo humano de chesed com Noemi.",
+"refs": [
+"Êx 34.6",
+"Rt 1.8",
+"Sl 136.1",
+"Lm 3.22-23",
+"Gl 5.22"
+],
+"see": [
+"misericordia",
+"amor",
+"alianca"
+],
+"domain": "virtudes"
+},
+{
+"id": "misericordia",
+"term": "Misericórdia",
+"kind": "termo",
+"forms": [
+"misericórdia"
+],
+"original": [
+{
+"lang": "he",
+"word": "רַחֲמִים",
+"translit": "rachamim",
+"strong": "H7356",
+"meaning": "compaixão; da palavra “ventre, útero”"
+},
+{
+"lang": "gr",
+"word": "ἔλεος",
+"translit": "éleos",
+"strong": "G1656",
+"meaning": "misericórdia, compaixão ativa"
+}
+],
+"definition": "Rachamim vem de rechem, o útero: é o amor de mãe que se comove por dentro. Misericórdia é não receber o castigo que merecemos; graça é receber o bem que não merecemos. Jesus disse: “Bem-aventurados os misericordiosos”.",
+"refs": [
+"Sl 103.8-13",
+"Is 49.15",
+"Mt 5.7",
+"Lc 18.13",
+"Ef 2.4-5"
+],
+"see": [
+"graca",
+"benignidade"
+],
+"domain": "virtudes"
+},
+{
+"id": "esperanca",
+"term": "Esperança",
+"kind": "termo",
+"forms": [
+"esperança"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἐλπίς",
+"translit": "elpís",
+"strong": "G1680",
+"meaning": "expectativa confiante"
+},
+{
+"lang": "he",
+"word": "תִּקְוָה",
+"translit": "tiqvah",
+"strong": "H8615",
+"meaning": "esperança; também “cordão” (o fio escarlate de Raabe, Js 2.18)"
+}
+],
+"definition": "Na Bíblia, esperança não é “talvez”: é a certeza do que Deus prometeu, ainda não visto. Tiqvah é também o nome do cordão escarlate que salvou Raabe. Paulo chama a esperança cristã de “âncora da alma” (Hb 6.19).",
+"refs": [
+"Js 2.18",
+"Jr 29.11",
+"Rm 5.5",
+"Rm 8.24-25",
+"Hb 6.19"
+],
+"see": [
+"fe"
+],
+"domain": "virtudes"
+},
+{
+"id": "paz",
+"term": "Paz",
+"kind": "termo",
+"forms": [
+"paz"
+],
+"original": [
+{
+"lang": "he",
+"word": "שָׁלוֹם",
+"translit": "shalom",
+"strong": "H7965",
+"meaning": "inteireza, bem-estar completo, harmonia"
+},
+{
+"lang": "gr",
+"word": "εἰρήνη",
+"translit": "eirḗnē",
+"strong": "G1515",
+"meaning": "paz, tranquilidade, reconciliação"
+},
+{
+"lang": "la",
+"word": "pax",
+"translit": "pax",
+"meaning": "paz"
+}
+],
+"definition": "Shalom é mais do que ausência de guerra: é a vida inteira em ordem — com Deus, com o próximo e consigo mesmo. Até hoje é a saudação judaica. Jesus deixou aos discípulos a sua paz, “não como o mundo a dá”, e, ressuscitado, saudou-os: “Paz seja convosco”.",
+"refs": [
+"Nm 6.24-26",
+"Is 9.6",
+"Jo 14.27",
+"Jo 20.19",
+"Rm 5.1",
+"Fp 4.7"
+],
+"see": [
+"jeova-salom"
+],
+"domain": "virtudes"
+},
+{
+"id": "gloria",
+"term": "Glória",
+"kind": "termo",
+"forms": [
+"glória"
+],
+"original": [
+{
+"lang": "he",
+"word": "כָּבוֹד",
+"translit": "kavod",
+"strong": "H3519",
+"meaning": "peso, importância, esplendor"
+},
+{
+"lang": "gr",
+"word": "δόξα",
+"translit": "dóxa",
+"strong": "G1391",
+"meaning": "esplendor, honra, reputação"
+}
+],
+"definition": "Kavod vem de “ser pesado”: a glória de Deus é o “peso” da sua presença, a sua importância e esplendor. Ela encheu o tabernáculo e o templo (Êx 40.34; 1Rs 8.11). João diz que, em Jesus, “vimos a sua glória”. A palavra “doxologia” vem do grego dóxa.",
+"refs": [
+"Êx 33.18-23",
+"Êx 40.34",
+"Is 6.3",
+"Jo 1.14",
+"2Co 4.6"
+],
+"see": [
+"tabernaculo"
+],
+"domain": "virtudes"
+},
+{
+"id": "santo",
+"term": "Santo / santidade",
+"kind": "termo",
+"forms": [
+"santo",
+"santidade"
+],
+"original": [
+{
+"lang": "he",
+"word": "קָדוֹשׁ",
+"translit": "qadosh",
+"strong": "H6918",
+"meaning": "santo, separado, consagrado"
+},
+{
+"lang": "gr",
+"word": "ἅγιος",
+"translit": "hágios",
+"strong": "G40",
+"meaning": "santo, consagrado a Deus"
+}
+],
+"definition": "Santo é o que é separado, diferente, posto à parte para Deus. Deus é santo por natureza; pessoas e objetos são santos por pertencerem a Ele. Por isso Paulo chama de “santos” todos os crentes das igrejas. Os serafins proclamam: “Santo, santo, santo”.",
+"refs": [
+"Lv 19.2",
+"Is 6.3",
+"1Pe 1.15-16",
+"1Co 1.2"
+],
+"see": [
+"santificacao"
+],
+"domain": "virtudes"
+},
+{
+"id": "santificacao",
+"term": "Santificação",
+"kind": "termo",
+"forms": [
+"santificação"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἁγιασμός",
+"translit": "hagiasmós",
+"strong": "G38",
+"meaning": "consagração, processo de tornar-se santo"
+}
+],
+"definition": "A obra de Deus que separa o crente para si (no momento da salvação) e o transforma, dia a dia, à imagem de Cristo. Para a tradição wesleyana, de onde nasceu o movimento pentecostal, é também uma busca de “perfeito amor” a Deus e ao próximo.",
+"refs": [
+"1Ts 4.3",
+"1Ts 5.23",
+"Hb 12.14",
+"2Co 3.18"
+],
+"see": [
+"santo",
+"justificacao"
+],
+"domain": "salvacao"
+},
+{
+"id": "justica",
+"term": "Justiça",
+"kind": "termo",
+"forms": [
+"justiça"
+],
+"original": [
+{
+"lang": "he",
+"word": "צְדָקָה",
+"translit": "tsedaqah",
+"strong": "H6666",
+"meaning": "retidão, justiça, fidelidade ao que é certo"
+},
+{
+"lang": "gr",
+"word": "δικαιοσύνη",
+"translit": "dikaiosýnē",
+"strong": "G1343",
+"meaning": "justiça, retidão"
+}
+],
+"definition": "Na Bíblia, justiça é estar de acordo com o caráter de Deus e com a sua aliança. Abraão “creu no Senhor, e isso lhe foi imputado como justiça”. Paulo mostra que a justiça de Deus é dada pela fé em Cristo. Em hebraico moderno, tsedaqah também quer dizer “esmola”.",
+"refs": [
+"Gn 15.6",
+"Am 5.24",
+"Mt 6.33",
+"Rm 1.17",
+"Rm 3.21-22"
+],
+"see": [
+"justificacao",
+"fe"
+],
+"domain": "salvacao"
+},
+{
+"id": "justificacao",
+"term": "Justificação",
+"kind": "termo",
+"forms": [
+"justificação",
+"justificados"
+],
+"original": [
+{
+"lang": "gr",
+"word": "δικαίωσις",
+"translit": "dikaíōsis",
+"strong": "G1347",
+"meaning": "declaração de justo, absolvição"
+},
+{
+"lang": "la",
+"word": "iustificatio",
+"translit": "iustificatio",
+"meaning": "justificação"
+}
+],
+"definition": "Termo de tribunal: Deus declara justo o pecador que crê em Cristo, porque a culpa foi paga na cruz. Foi a redescoberta desta verdade em Romanos que deu início à Reforma Protestante: “o justo viverá pela fé”.",
+"refs": [
+"Rm 3.24-26",
+"Rm 4.25",
+"Rm 5.1",
+"Gl 2.16"
+],
+"see": [
+"justica",
+"fe",
+"graca"
+],
+"domain": "salvacao"
+},
+{
+"id": "redencao",
+"term": "Redenção",
+"kind": "termo",
+"forms": [
+"redenção"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἀπολύτρωσις",
+"translit": "apolýtrōsis",
+"strong": "G629",
+"meaning": "libertação mediante pagamento de resgate"
+},
+{
+"lang": "he",
+"word": "גָּאַל",
+"translit": "ga'al",
+"strong": "H1350",
+"meaning": "resgatar como parente próximo"
+}
+],
+"definition": "Comprar de volta a liberdade de um escravo ou prisioneiro pagando um preço. Jesus disse que veio “dar a sua vida em resgate de muitos”. Paulo: “nele temos a redenção pelo seu sangue, a remissão dos pecados”.",
+"refs": [
+"Êx 6.6",
+"Mc 10.45",
+"Rm 3.24",
+"Ef 1.7",
+"1Pe 1.18-19"
+],
+"see": [
+"remidor",
+"remissao"
+],
+"domain": "salvacao"
+},
+{
+"id": "remidor",
+"term": "Remidor (Goel)",
+"kind": "termo",
+"forms": [
+"remidor",
+"Redentor"
+],
+"original": [
+{
+"lang": "he",
+"word": "גֹּאֵל",
+"translit": "go'el",
+"strong": "H1350",
+"meaning": "parente resgatador"
+}
+],
+"definition": "O go'el era o parente mais próximo, com o dever de resgatar a terra ou a pessoa de um familiar empobrecido, e até de dar descendência ao parente que morreu sem filhos. Boaz é o remidor de Rute. Jó proclama: “eu sei que o meu Redentor vive”. Cristo se fez nosso parente (homem) para nos resgatar.",
+"refs": [
+"Lv 25.25",
+"Rt 3.9",
+"Rt 4.14",
+"Jó 19.25",
+"Is 59.20"
+],
+"see": [
+"redencao"
+],
+"domain": "salvacao"
+},
+{
+"id": "remissao",
+"term": "Remissão (perdão)",
+"kind": "termo",
+"forms": [
+"remissão"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἄφεσις",
+"translit": "áphesis",
+"strong": "G859",
+"meaning": "soltura, cancelamento de dívida, perdão"
+}
+],
+"definition": "Áphesis era o cancelamento de uma dívida ou a soltura de um preso. Jesus leu em Nazaré que veio “apregoar liberdade aos cativos”, com a mesma palavra. Ser perdoado é ter a dívida do pecado apagada para sempre.",
+"refs": [
+"Lc 4.18",
+"Mt 26.28",
+"At 2.38",
+"Ef 1.7",
+"Hb 9.22"
+],
+"see": [
+"redencao",
+"jubileu"
+],
+"domain": "salvacao"
+},
+{
+"id": "expiacao",
+"term": "Expiação",
+"kind": "termo",
+"forms": [
+"expiação"
+],
+"original": [
+{
+"lang": "he",
+"word": "כָּפַר",
+"translit": "kafar",
+"strong": "H3722",
+"meaning": "cobrir, fazer expiação, apagar a culpa"
+}
+],
+"definition": "Kafar significa cobrir: o sangue do sacrifício “cobria” o pecado diante de Deus. A palavra deu nome ao Dia da Expiação (Yom Kippur), o dia mais santo do ano, quando o sumo sacerdote entrava no Santo dos Santos. Hebreus mostra Jesus como o sacrifício que remove o pecado de uma vez por todas.",
+"refs": [
+"Lv 16.29-34",
+"Lv 17.11",
+"Hb 9.11-14",
+"Hb 10.10-14"
+],
+"see": [
+"propiciacao",
+"propiciatorio",
+"dia-da-expiacao"
+],
+"domain": "salvacao"
+},
+{
+"id": "propiciacao",
+"term": "Propiciação",
+"kind": "termo",
+"forms": [
+"propiciação"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἱλαστήριον",
+"translit": "hilastḗrion",
+"strong": "G2435",
+"meaning": "lugar ou meio de propiciação; o propiciatório"
+},
+{
+"lang": "gr",
+"word": "ἱλασμός",
+"translit": "hilasmós",
+"strong": "G2434",
+"meaning": "sacrifício que satisfaz a justiça"
+}
+],
+"definition": "O sacrifício que satisfaz a justiça de Deus e afasta a sua ira contra o pecado. Em Romanos 3.25, Paulo usa a mesma palavra grega que a Septuaginta usa para a tampa da arca: Jesus é o nosso propiciatório, o lugar onde Deus e o pecador se encontram em paz.",
+"refs": [
+"Rm 3.25",
+"1Jo 2.2",
+"1Jo 4.10",
+"Hb 9.5"
+],
+"see": [
+"propiciatorio",
+"expiacao"
+],
+"domain": "salvacao"
+},
+{
+"id": "propiciatorio",
+"term": "Propiciatório",
+"kind": "termo",
+"forms": [
+"propiciatório"
+],
+"original": [
+{
+"lang": "he",
+"word": "כַּפֹּרֶת",
+"translit": "kapporet",
+"strong": "H3727",
+"meaning": "tampa da arca; lugar da expiação"
+}
+],
+"definition": "A tampa de ouro puro da arca da aliança, com dois querubins. Uma vez por ano, no Dia da Expiação, o sumo sacerdote aspergia sangue sobre ela. Dentro da arca estavam as tábuas da Lei: o sangue “cobria” a lei quebrada. Ali Deus prometeu encontrar-se com Moisés.",
+"refs": [
+"Êx 25.17-22",
+"Lv 16.14-15",
+"Hb 9.5"
+],
+"see": [
+"arca",
+"propiciacao",
+"querubim"
+],
+"domain": "culto"
+},
+{
+"id": "arrependimento",
+"term": "Arrependimento",
+"kind": "termo",
+"forms": [
+"arrependimento",
+"arrependei-vos"
+],
+"original": [
+{
+"lang": "gr",
+"word": "μετάνοια",
+"translit": "metánoia",
+"strong": "G3341",
+"meaning": "mudança de mente, de direção"
+},
+{
+"lang": "he",
+"word": "שׁוּב",
+"translit": "shuv",
+"strong": "H7725",
+"meaning": "voltar, retornar"
+}
+],
+"definition": "Mais do que sentir remorso, é mudar de mente e de direção: dar meia-volta do pecado para Deus. Os profetas chamavam: “Voltai (shuv) para mim”. Foi a primeira palavra da pregação de João Batista, de Jesus e de Pedro no Pentecostes.",
+"refs": [
+"Ez 18.30-32",
+"Mt 3.2",
+"Mc 1.15",
+"At 2.38",
+"2Co 7.10"
+],
+"see": [
+"fe",
+"remissao"
+],
+"inflections": [
+{
+"lang": "gr",
+"word": "μετανοεῖτε",
+"translit": "metanoeîte",
+"parsing": "Presente, imperativo, ativo, 2ª pessoa do plural",
+"gloss": "Arrependei-vos",
+"ref": "Mt 3.2",
+"note": "O presente sugere uma atitude contínua: vivei arrependidos."
+},
+{
+"lang": "gr",
+"word": "μετανοήσατε",
+"translit": "metanoḗsate",
+"parsing": "Aoristo, imperativo, ativo, 2ª pessoa do plural",
+"gloss": "Arrependei-vos",
+"ref": "At 2.38",
+"note": "O aoristo pede uma decisão: mudai de direção agora."
+},
+{
+"lang": "he",
+"word": "שׁוּבוּ",
+"translit": "shuvu",
+"parsing": "Qal, imperativo, 2ª pessoa masculino plural",
+"gloss": "Convertei-vos",
+"ref": "Ez 33.11",
+"note": "Qal: voltai vós mesmos."
+},
+{
+"lang": "he",
+"word": "הֲשִׁיבֵנוּ",
+"translit": "hashivenu",
+"parsing": "Hifil, imperativo, 2ª pessoa masculino singular, com sufixo “nos”",
+"gloss": "Converte-nos",
+"ref": "Lm 5.21",
+"note": "Hifil é causativo: “faze-nos voltar”. O versículo une os dois: “Converte-nos, Senhor, e seremos convertidos”."
+}
+],
+"domain": "salvacao"
+},
+{
+"id": "regeneracao",
+"term": "Regeneração / novo nascimento",
+"kind": "termo",
+"forms": [
+"regeneração",
+"nascer de novo"
+],
+"original": [
+{
+"lang": "gr",
+"word": "παλιγγενεσία",
+"translit": "palingenesía",
+"strong": "G3824",
+"meaning": "novo nascimento, renovação"
+},
+{
+"lang": "gr",
+"word": "ἄνωθεν",
+"translit": "ánōthen",
+"strong": "G509",
+"meaning": "de novo; também “do alto”"
+}
+],
+"definition": "A obra do Espírito Santo que dá vida nova a quem crê. Em João 3, ánōthen tem duplo sentido — “de novo” e “do alto” —, e Nicodemos entende só o primeiro. Não é melhorar a vida antiga, mas receber uma nova: “se alguém está em Cristo, nova criatura é”.",
+"refs": [
+"Jo 3.3-8",
+"Tt 3.5",
+"2Co 5.17",
+"1Pe 1.23"
+],
+"see": [
+"espirito-santo"
+],
+"domain": "salvacao"
+},
+{
+"id": "pecado",
+"term": "Pecado",
+"kind": "termo",
+"forms": [
+"pecado"
+],
+"original": [
+{
+"lang": "he",
+"word": "חַטָּאת",
+"translit": "chatta't",
+"strong": "H2403",
+"meaning": "pecado; errar o alvo; também “oferta pelo pecado”"
+},
+{
+"lang": "gr",
+"word": "ἁμαρτία",
+"translit": "hamartía",
+"strong": "G266",
+"meaning": "errar o alvo, falhar"
+}
+],
+"definition": "As duas palavras principais vêm da ideia de “errar o alvo”, como um arqueiro (Jz 20.16 usa o mesmo verbo para fundeiros que “não erravam”). Pecar é não alcançar o propósito para o qual Deus nos criou. Em hebraico, a mesma palavra nomeia a oferta pelo pecado: o remédio vem junto do problema.",
+"refs": [
+"Jz 20.16",
+"Sl 51.2-4",
+"Rm 3.23",
+"Rm 6.23",
+"1Jo 1.9"
+],
+"see": [
+"iniquidade",
+"transgressao"
+],
+"domain": "pecado"
+},
+{
+"id": "iniquidade",
+"term": "Iniquidade",
+"kind": "termo",
+"forms": [
+"iniquidade"
+],
+"original": [
+{
+"lang": "he",
+"word": "עָוֹן",
+"translit": "avon",
+"strong": "H5771",
+"meaning": "torcer; perversidade; culpa"
+},
+{
+"lang": "gr",
+"word": "ἀνομία",
+"translit": "anomía",
+"strong": "G458",
+"meaning": "desprezo pela lei"
+}
+],
+"definition": "Avon vem de “torcer, entortar”: é a distorção interior que leva ao pecado e a culpa que fica. No Salmo 32 e no 51, Davi usa as três palavras — pecado, iniquidade e transgressão — para confessar tudo diante de Deus.",
+"refs": [
+"Sl 32.5",
+"Sl 51.1-5",
+"Is 53.5-6",
+"1Jo 3.4"
+],
+"see": [
+"pecado",
+"transgressao"
+],
+"domain": "pecado"
+},
+{
+"id": "transgressao",
+"term": "Transgressão",
+"kind": "termo",
+"forms": [
+"transgressão"
+],
+"original": [
+{
+"lang": "he",
+"word": "פֶּשַׁע",
+"translit": "pesha'",
+"strong": "H6588",
+"meaning": "rebelião, revolta contra uma autoridade"
+},
+{
+"lang": "gr",
+"word": "παράβασις",
+"translit": "parábasis",
+"strong": "G3847",
+"meaning": "passar por cima de um limite"
+}
+],
+"definition": "Pesha' é rebeldia: a palavra era usada para revoltas contra um rei. Transgredir é atravessar conscientemente o limite que Deus estabeleceu. “Ele foi ferido pelas nossas transgressões” (Is 53.5).",
+"refs": [
+"Sl 32.1",
+"Sl 51.1",
+"Is 53.5",
+"Rm 4.15"
+],
+"see": [
+"pecado",
+"iniquidade"
+],
+"domain": "pecado"
+},
+{
+"id": "lei",
+"term": "Lei (Torá)",
+"kind": "termo",
+"forms": [
+"lei"
+],
+"original": [
+{
+"lang": "he",
+"word": "תּוֹרָה",
+"translit": "Torah",
+"strong": "H8451",
+"meaning": "instrução, ensino, lei"
+},
+{
+"lang": "gr",
+"word": "νόμος",
+"translit": "nómos",
+"strong": "G3551",
+"meaning": "lei, norma"
+}
+],
+"definition": "Torah vem de “apontar, ensinar”: é a instrução de Deus para a vida, não só um código de regras. Designa também os cinco livros de Moisés (o Pentateuco). O Salmo 119 é um longo poema de amor à Torá. Jesus disse que não veio abolir a Lei, mas cumpri-la.",
+"refs": [
+"Dt 6.6-9",
+"Sl 1.2",
+"Sl 119.97",
+"Mt 5.17",
+"Rm 7.12",
+"Gl 3.24"
+],
+"see": [
+"alianca"
+],
+"senses": [
+{
+"sense": "A Lei de Moisés, os mandamentos do Sinai",
+"refs": [
+"Gl 3.24",
+"Rm 7.12"
+]
+},
+{
+"sense": "Os cinco livros de Moisés",
+"refs": [
+"Lc 24.44"
+],
+"note": "“A Lei de Moisés, os Profetas e os Salmos.”"
+},
+{
+"sense": "Todo o Antigo Testamento",
+"refs": [
+"Jo 10.34"
+],
+"note": "Jesus cita um salmo como “a vossa lei”."
+},
+{
+"sense": "Um princípio que age em nós",
+"refs": [
+"Rm 7.23",
+"Rm 8.2"
+],
+"note": "“A lei do pecado”; “a lei do Espírito de vida”."
+}
+],
+"domain": "culto"
+},
+{
+"id": "alianca",
+"term": "Aliança (concerto)",
+"kind": "termo",
+"forms": [
+"aliança",
+"concerto"
+],
+"original": [
+{
+"lang": "he",
+"word": "בְּרִית",
+"translit": "berit",
+"strong": "H1285",
+"meaning": "aliança, pacto solene"
+},
+{
+"lang": "gr",
+"word": "διαθήκη",
+"translit": "diathḗkē",
+"strong": "G1242",
+"meaning": "aliança; também testamento"
+},
+{
+"lang": "la",
+"word": "testamentum",
+"translit": "testamentum",
+"meaning": "testamento — daí “Antigo” e “Novo Testamento”"
+}
+],
+"definition": "O compromisso solene que Deus faz com o seu povo: com Noé, Abraão, Moisés (no Sinai) e Davi. Jeremias anunciou uma nova aliança, escrita no coração, que Jesus inaugurou na ceia: “este cálice é a nova aliança no meu sangue”. As palavras “Antigo” e “Novo Testamento” vêm do latim testamentum, que traduz diathḗkē.",
+"refs": [
+"Gn 9.11-13",
+"Gn 15.18",
+"Êx 24.7-8",
+"Jr 31.31-34",
+"Lc 22.20",
+"Hb 8.6-13"
+],
+"see": [
+"lei",
+"arca"
+],
+"domain": "culto"
+},
+{
+"id": "alma",
+"term": "Alma",
+"kind": "termo",
+"forms": [
+"alma"
+],
+"original": [
+{
+"lang": "he",
+"word": "נֶפֶשׁ",
+"translit": "nefesh",
+"strong": "H5315",
+"meaning": "vida, ser vivo, pessoa; também “garganta”"
+},
+{
+"lang": "gr",
+"word": "ψυχή",
+"translit": "psychḗ",
+"strong": "G5590",
+"meaning": "vida, alma, a pessoa interior"
+}
+],
+"definition": "Nefesh é a pessoa inteira enquanto ser vivo — Adão “passou a ser alma vivente”. Às vezes quer dizer simplesmente “vida” ou “eu”. “Bendize, ó minha alma, ao Senhor” é o mesmo que “bendiga eu, com todo o meu ser”. A palavra “psicologia” vem de psychḗ.",
+"refs": [
+"Gn 2.7",
+"Sl 42.1-2",
+"Sl 103.1",
+"Mt 16.26",
+"Mc 12.30"
+],
+"see": [
+"espirito",
+"coracao"
+],
+"senses": [
+{
+"sense": "A vida física",
+"refs": [
+"Mt 2.20"
+],
+"note": "Os que procuravam a “alma” (vida) do menino — a Almeida traduz “morte do menino”."
+},
+{
+"sense": "A pessoa inteira",
+"refs": [
+"At 2.41"
+],
+"note": "“Quase três mil almas”: três mil pessoas."
+},
+{
+"sense": "O interior: sentimentos e vontade",
+"refs": [
+"Mt 26.38",
+"Sl 42.5"
+]
+}
+],
+"domain": "humano"
+},
+{
+"id": "coracao",
+"term": "Coração",
+"kind": "termo",
+"forms": [
+"coração"
+],
+"original": [
+{
+"lang": "he",
+"word": "לֵב",
+"translit": "lev",
+"strong": "H3820",
+"meaning": "centro da pessoa: mente, vontade e emoções"
+},
+{
+"lang": "gr",
+"word": "καρδία",
+"translit": "kardía",
+"strong": "G2588",
+"meaning": "coração; o íntimo"
+}
+],
+"definition": "Na Bíblia, o coração não é só sede das emoções: é onde se pensa, se decide e se crê. Por isso “do coração procedem as fontes da vida” e Deus promete um coração novo. Quando o texto diz “disse no seu coração”, quer dizer “pensou”.",
+"refs": [
+"Dt 6.5",
+"Pv 4.23",
+"Jr 17.9",
+"Ez 36.26",
+"Rm 10.9-10"
+],
+"see": [
+"alma"
+],
+"domain": "humano"
+},
+{
+"id": "carne",
+"term": "Carne",
+"kind": "termo",
+"forms": [
+"carne"
+],
+"original": [
+{
+"lang": "gr",
+"word": "σάρξ",
+"translit": "sárx",
+"strong": "G4561",
+"meaning": "carne, corpo; a natureza humana fraca e inclinada ao pecado"
+},
+{
+"lang": "he",
+"word": "בָּשָׂר",
+"translit": "basar",
+"strong": "H1320",
+"meaning": "carne, corpo, ser humano"
+}
+],
+"definition": "Pode ser o corpo físico (“o Verbo se fez carne”), a humanidade frágil (“toda carne é erva”) ou, nas cartas de Paulo, a natureza humana sem Deus, que luta contra o Espírito. As “obras da carne” se opõem ao “fruto do Espírito”.",
+"refs": [
+"Is 40.6",
+"Jo 1.14",
+"Rm 8.5-9",
+"Gl 5.16-24"
+],
+"see": [
+"espirito",
+"verbo"
+],
+"senses": [
+{
+"sense": "O corpo físico",
+"refs": [
+"Jo 1.14",
+"Gl 2.20"
+]
+},
+{
+"sense": "A humanidade inteira, “toda carne”",
+"refs": [
+"Gn 6.17",
+"At 2.17"
+]
+},
+{
+"sense": "Parentesco, origem natural",
+"refs": [
+"Rm 9.3",
+"Rm 1.3"
+]
+},
+{
+"sense": "A natureza humana inclinada ao pecado",
+"refs": [
+"Gl 5.17",
+"Rm 8.5-8"
+],
+"note": "O sentido típico de Paulo, oposto ao Espírito."
+}
+],
+"domain": "humano"
+},
+{
+"id": "verdade",
+"term": "Verdade",
+"kind": "termo",
+"forms": [
+"verdade"
+],
+"original": [
+{
+"lang": "he",
+"word": "אֱמֶת",
+"translit": "emet",
+"strong": "H571",
+"meaning": "firmeza, fidelidade, verdade"
+},
+{
+"lang": "gr",
+"word": "ἀλήθεια",
+"translit": "alḗtheia",
+"strong": "G225",
+"meaning": "o que não está escondido; realidade"
+}
+],
+"definition": "Emet, da mesma raiz de “amém”, é aquilo em que se pode confiar. Alḗtheia é literalmente “o que não está encoberto”. Jesus não disse apenas que fala a verdade, mas: “Eu sou o caminho, e a verdade, e a vida”.",
+"refs": [
+"Sl 25.5",
+"Jo 1.14",
+"Jo 8.32",
+"Jo 14.6",
+"Jo 17.17"
+],
+"see": [
+"amem",
+"fe"
+],
+"domain": "virtudes"
+},
+{
+"id": "amem",
+"term": "Amém",
+"kind": "expressao",
+"forms": [
+"Amém",
+"amém"
+],
+"original": [
+{
+"lang": "he",
+"word": "אָמֵן",
+"translit": "amen",
+"strong": "H543",
+"meaning": "firme, certo; assim seja"
+},
+{
+"lang": "gr",
+"word": "ἀμήν",
+"translit": "amḗn",
+"strong": "G281",
+"meaning": "em verdade; assim seja"
+}
+],
+"definition": "Palavra hebraica que passou sem tradução para o grego, o latim e o português. No fim de uma oração, quer dizer “é firme, assim seja”. Jesus a usava no começo das frases — “Em verdade (amén), em verdade vos digo” —, algo que nenhum rabino fazia. Em Apocalipse, Jesus é chamado “o Amém”.",
+"refs": [
+"Dt 27.15",
+"Ne 8.6",
+"Jo 3.3",
+"2Co 1.20",
+"Ap 3.14"
+],
+"see": [
+"fe",
+"verdade"
+],
+"domain": "virtudes"
+},
+{
+"id": "aleluia",
+"term": "Aleluia",
+"kind": "expressao",
+"forms": [
+"Aleluia",
+"aleluia"
+],
+"original": [
+{
+"lang": "he",
+"word": "הַלְלוּ־יָהּ",
+"translit": "hallelu-Yah",
+"strong": "H1984",
+"meaning": "louvai a Yah (forma curta do nome YHWH)"
+},
+{
+"lang": "gr",
+"word": "ἀλληλουϊά",
+"translit": "allēlouiá",
+"strong": "G239",
+"meaning": "transliteração do hebraico"
+}
+],
+"definition": "Um convite: “Louvem o Senhor!”. Abre e fecha vários salmos (os Salmos 113–118, o “Hallel”, eram cantados na Páscoa — provavelmente o hino que Jesus cantou depois da ceia). No Novo Testamento aparece só em Apocalipse 19, no grande coro do céu.",
+"refs": [
+"Sl 113.1",
+"Sl 150.1-6",
+"Mt 26.30",
+"Ap 19.1-6"
+],
+"see": [
+"hosana",
+"louvor"
+],
+"inflections": [
+{
+"lang": "he",
+"word": "הַלְלוּ־יָהּ",
+"translit": "hallelu-Yah",
+"parsing": "Piel, imperativo, 2ª pessoa masculino plural + Yah",
+"gloss": "Aleluia",
+"ref": "Sl 150.1",
+"note": "Um convite plural: louvai (todos vós) ao Senhor."
+}
+],
+"domain": "culto"
+},
+{
+"id": "hosana",
+"term": "Hosana",
+"kind": "expressao",
+"forms": [
+"Hosana",
+"hosana"
+],
+"original": [
+{
+"lang": "he",
+"word": "הוֹשִׁיעָה נָּא",
+"translit": "hoshi'ah na",
+"strong": "H3467",
+"meaning": "salva, por favor! / salva agora!"
+},
+{
+"lang": "gr",
+"word": "ὡσαννά",
+"translit": "hōsanná",
+"strong": "G5614",
+"meaning": "transliteração do hebraico/aramaico"
+}
+],
+"definition": "Era um pedido — “Salva-nos agora!” (Sl 118.25) — que virou grito de louvor e boas-vindas. A multidão o gritou quando Jesus entrou em Jerusalém montado num jumentinho, reconhecendo-o como o Filho de Davi.",
+"refs": [
+"Sl 118.25-26",
+"Mt 21.9",
+"Jo 12.13"
+],
+"see": [
+"aleluia",
+"salvacao"
+],
+"domain": "culto"
+},
+{
+"id": "sela",
+"term": "Selá",
+"kind": "expressao",
+"forms": [
+"Selá"
+],
+"original": [
+{
+"lang": "he",
+"word": "סֶלָה",
+"translit": "selah",
+"strong": "H5542",
+"meaning": "sentido incerto; provavelmente pausa ou elevação"
+}
+],
+"definition": "Aparece 71 vezes nos Salmos e 3 em Habacuque (nem todas as traduções a mantêm). Ninguém sabe ao certo o que significa: pode ser uma pausa musical, um momento para levantar a voz ou os instrumentos, ou um convite a parar e meditar. Muitos a leem como “pense nisso”.",
+"refs": [
+"Sl 46.3",
+"Sl 46.7",
+"Sl 46.11",
+"Hc 3.3"
+],
+"see": [
+"salmo"
+],
+"domain": "culto"
+},
+{
+"id": "salmo",
+"term": "Salmo",
+"kind": "termo",
+"original": [
+{
+"lang": "he",
+"word": "מִזְמוֹר",
+"translit": "mizmor",
+"strong": "H4210",
+"meaning": "canção acompanhada de instrumento"
+},
+{
+"lang": "gr",
+"word": "ψαλμός",
+"translit": "psalmós",
+"strong": "G5568",
+"meaning": "canto ao som de instrumento de cordas"
+}
+],
+"definition": "O nome hebraico do livro é Tehillim, “louvores”. Psalmós vem do verbo “tocar as cordas”: os salmos eram cantados com harpa e saltério. Eram o hinário do templo e das sinagogas — e da igreja primitiva (Ef 5.19).",
+"refs": [
+"Sl 33.2-3",
+"Ef 5.19",
+"Cl 3.16"
+],
+"see": [
+"sela",
+"aleluia"
+],
+"domain": "culto"
+},
+{
+"id": "louvor",
+"term": "Louvor",
+"kind": "termo",
+"forms": [
+"louvor"
+],
+"original": [
+{
+"lang": "he",
+"word": "תְּהִלָּה",
+"translit": "tehillah",
+"strong": "H8416",
+"meaning": "canto de louvor; o nome hebraico do livro dos Salmos é Tehillim"
+},
+{
+"lang": "he",
+"word": "יָדָה",
+"translit": "yadah",
+"strong": "H3034",
+"meaning": "louvar, agradecer (de “mão”: estender as mãos)"
+}
+],
+"definition": "O hebraico tem várias palavras para louvor: halal (celebrar, de onde vem “aleluia”), yadah (louvar com as mãos estendidas — dela vem o nome Judá), zamar (cantar com instrumentos) e tehillah (o canto de louvor). Deus “habita entre os louvores de Israel” (Sl 22.3).",
+"refs": [
+"Gn 29.35",
+"Sl 22.3",
+"Sl 34.1",
+"Hb 13.15"
+],
+"see": [
+"aleluia",
+"salmo"
+],
+"domain": "culto"
+},
+{
+"id": "salvacao",
+"term": "Salvação",
+"kind": "termo",
+"forms": [
+"salvação"
+],
+"original": [
+{
+"lang": "he",
+"word": "יְשׁוּעָה",
+"translit": "yeshu'ah",
+"strong": "H3444",
+"meaning": "livramento, socorro, vitória"
+},
+{
+"lang": "gr",
+"word": "σωτηρία",
+"translit": "sōtēría",
+"strong": "G4991",
+"meaning": "salvação, livramento, saúde"
+}
+],
+"definition": "Yeshu'ah é da mesma raiz do nome Yeshua (Jesus, Josué): “o Senhor salva”. No Antigo Testamento, é livramento dos inimigos e do perigo; no Novo, é sobretudo a libertação do pecado e da morte, recebida pela fé. Sōtēría inclui também a ideia de cura e inteireza.",
+"refs": [
+"Êx 14.13",
+"Sl 27.1",
+"Mt 1.21",
+"At 4.12",
+"Rm 1.16"
+],
+"see": [
+"salvador",
+"hosana"
+],
+"domain": "salvacao"
+},
+{
+"id": "salvador",
+"term": "Salvador",
+"kind": "termo",
+"forms": [
+"Salvador"
+],
+"original": [
+{
+"lang": "gr",
+"word": "σωτήρ",
+"translit": "sōtḗr",
+"strong": "G4990",
+"meaning": "salvador, libertador"
+},
+{
+"lang": "la",
+"word": "Salvator",
+"translit": "Salvator",
+"meaning": "Salvador"
+}
+],
+"definition": "Título dado a Deus no Antigo Testamento (Is 43.11) e a Jesus no Novo. No Império Romano, “salvador” era título do imperador; os cristãos o reservavam para Cristo. Os samaritanos de Sicar disseram: “este é verdadeiramente o Salvador do mundo”.",
+"refs": [
+"Is 43.11",
+"Lc 2.11",
+"Jo 4.42",
+"Tt 2.13"
+],
+"see": [
+"salvacao"
+],
+"domain": "cristo"
+},
+{
+"id": "evangelho",
+"term": "Evangelho",
+"kind": "termo",
+"forms": [
+"evangelho"
+],
+"original": [
+{
+"lang": "gr",
+"word": "εὐαγγέλιον",
+"translit": "euangélion",
+"strong": "G2098",
+"meaning": "boa notícia, boas-novas"
+},
+{
+"lang": "la",
+"word": "evangelium",
+"translit": "evangelium",
+"meaning": "evangelho"
+}
+],
+"definition": "Euangélion era a notícia de uma vitória ou do nascimento de um imperador, levada por mensageiros. Os cristãos usaram a palavra para a melhor notícia de todas: Jesus morreu pelos nossos pecados e ressuscitou. Depois passou a nomear os quatro livros sobre a vida de Jesus.",
+"refs": [
+"Is 52.7",
+"Mc 1.1",
+"Mc 1.15",
+"Rm 1.16",
+"1Co 15.1-4"
+],
+"see": [
+"apostolo"
+],
+"domain": "salvacao"
+},
+{
+"id": "igreja",
+"term": "Igreja",
+"kind": "termo",
+"forms": [
+"igreja"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἐκκλησία",
+"translit": "ekklēsía",
+"strong": "G1577",
+"meaning": "assembleia dos convocados"
+},
+{
+"lang": "la",
+"word": "ecclesia",
+"translit": "ecclesia",
+"meaning": "igreja — daí “eclesiástico”"
+}
+],
+"definition": "Ekklēsía era a assembleia dos cidadãos convocados de uma cidade grega. Na Septuaginta, traduz a “congregação” de Israel. No Novo Testamento é o povo chamado por Deus para fora do mundo e reunido em Cristo — nunca um prédio. Jesus disse: “edificarei a minha igreja”.",
+"refs": [
+"Mt 16.18",
+"At 2.47",
+"Ef 1.22-23",
+"1Pe 2.9"
+],
+"see": [
+"apostolo",
+"anciao"
+],
+"domain": "pessoas"
+},
+{
+"id": "apostolo",
+"term": "Apóstolo",
+"kind": "termo",
+"forms": [
+"apóstolo",
+"apóstolos"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἀπόστολος",
+"translit": "apóstolos",
+"strong": "G652",
+"meaning": "enviado, mensageiro com autoridade"
+}
+],
+"definition": "Do verbo apostéllō, “enviar”. Era o embaixador que representava quem o enviou. Os doze foram escolhidos por Jesus e testemunharam a ressurreição; Paulo foi chamado depois, no caminho de Damasco. Jesus mesmo é chamado “o Apóstolo… da nossa confissão” (Hb 3.1).",
+"refs": [
+"Mc 3.13-19",
+"At 1.21-26",
+"Gl 1.1",
+"Hb 3.1"
+],
+"see": [
+"igreja",
+"evangelho"
+],
+"domain": "pessoas"
+},
+{
+"id": "anciao",
+"term": "Ancião / presbítero / bispo",
+"kind": "termo",
+"forms": [
+"anciãos",
+"episcopado"
+],
+"original": [
+{
+"lang": "gr",
+"word": "πρεσβύτερος",
+"translit": "presbýteros",
+"strong": "G4245",
+"meaning": "mais velho, ancião — daí “presbítero”"
+},
+{
+"lang": "gr",
+"word": "ἐπίσκοπος",
+"translit": "epískopos",
+"strong": "G1985",
+"meaning": "supervisor — daí “bispo”"
+}
+],
+"definition": "No Novo Testamento, ancião (presbítero) e bispo (supervisor) são nomes da mesma função: os líderes que pastoreiam a igreja local (At 20.17,28; Tt 1.5-7). Os anciãos de Israel já eram os líderes do povo desde Moisés.",
+"refs": [
+"Êx 3.16",
+"At 20.17",
+"At 20.28",
+"1Tm 3.1-7",
+"Tt 1.5-9",
+"1Pe 5.1-4"
+],
+"see": [
+"diacono",
+"igreja"
+],
+"domain": "pessoas"
+},
+{
+"id": "diacono",
+"term": "Diácono",
+"kind": "termo",
+"forms": [
+"diáconos"
+],
+"original": [
+{
+"lang": "gr",
+"word": "διάκονος",
+"translit": "diákonos",
+"strong": "G1249",
+"meaning": "servo, servidor, garçom"
+}
+],
+"definition": "Diákonos era quem servia às mesas. A igreja de Jerusalém escolheu sete homens “cheios do Espírito Santo e de sabedoria” para cuidar da distribuição às viúvas — entre eles Estêvão e Filipe. Jesus disse de si mesmo que veio para servir (diakonéō).",
+"refs": [
+"Mc 10.45",
+"At 6.1-6",
+"Fp 1.1",
+"1Tm 3.8-13"
+],
+"see": [
+"anciao"
+],
+"domain": "pessoas"
+},
+{
+"id": "batismo",
+"term": "Batismo",
+"kind": "termo",
+"forms": [
+"batismo"
+],
+"original": [
+{
+"lang": "gr",
+"word": "βάπτισμα",
+"translit": "báptisma",
+"strong": "G908",
+"meaning": "imersão, mergulho"
+},
+{
+"lang": "gr",
+"word": "βαπτίζω",
+"translit": "baptízō",
+"strong": "G907",
+"meaning": "mergulhar, imergir"
+}
+],
+"definition": "Baptízō era usado para mergulhar um tecido no tingimento. O batismo nas águas é o sinal público de quem se arrependeu e creu: morre para a vida antiga e ressurge com Cristo (Rm 6.4). João anunciou também outro batismo: Jesus “vos batizará no Espírito Santo, e em fogo”.",
+"refs": [
+"Mt 3.11",
+"Mt 28.19",
+"At 2.38",
+"At 8.36-38",
+"Rm 6.3-4"
+],
+"see": [
+"espirito-santo",
+"arrependimento"
+],
+"inflections": [
+{
+"lang": "gr",
+"word": "βαπτισθήτω",
+"translit": "baptisthḗtō",
+"parsing": "Aoristo, imperativo, passivo, 3ª pessoa do singular",
+"gloss": "seja batizado",
+"ref": "At 2.38",
+"note": "Uma ordem para cada pessoa: “cada um de vós”."
+},
+{
+"lang": "gr",
+"word": "βαπτίσει",
+"translit": "baptísei",
+"parsing": "Futuro, indicativo, ativo, 3ª pessoa do singular",
+"gloss": "vos batizará",
+"ref": "Mt 3.11",
+"note": "João anuncia que Jesus batizaria no Espírito Santo e em fogo."
+}
+],
+"domain": "culto"
+},
+{
+"id": "linguas",
+"term": "Línguas (dom de línguas)",
+"kind": "termo",
+"forms": [
+"outras línguas",
+"novas línguas"
+],
+"original": [
+{
+"lang": "gr",
+"word": "γλῶσσα",
+"translit": "glṓssa",
+"strong": "G1100",
+"meaning": "língua (o órgão e o idioma)"
+}
+],
+"definition": "No Pentecostes, os discípulos “começaram a falar noutras línguas, conforme o Espírito lhes concedia que falassem”, e estrangeiros de muitas nações os ouviram em seu próprio idioma. Para a tradição pentecostal, falar em línguas é a evidência inicial do batismo no Espírito Santo (At 2.4; 10.46; 19.6). Paulo orienta o uso do dom no culto em 1 Coríntios 14.",
+"refs": [
+"Mc 16.17",
+"At 2.4-11",
+"At 10.44-46",
+"At 19.6",
+"1Co 14.2-5"
+],
+"see": [
+"espirito-santo",
+"pentecostes",
+"dom"
+],
+"domain": "culto"
+},
+{
+"id": "dom",
+"term": "Dom (carisma)",
+"kind": "termo",
+"forms": [
+"dons"
+],
+"original": [
+{
+"lang": "gr",
+"word": "χάρισμα",
+"translit": "chárisma",
+"strong": "G5486",
+"meaning": "presente da graça"
+}
+],
+"definition": "Chárisma vem de cháris (graça): é um presente que Deus dá, não um talento conquistado. Paulo lista dons do Espírito como palavra de sabedoria, fé, curas, milagres, profecia, discernimento, línguas e interpretação (1Co 12.8-10), dados “para o que for útil” à igreja.",
+"refs": [
+"Rm 12.6-8",
+"1Co 12.4-11",
+"1Co 14.1",
+"1Pe 4.10"
+],
+"see": [
+"graca",
+"linguas"
+],
+"domain": "culto"
+},
+{
+"id": "profeta",
+"term": "Profeta",
+"kind": "termo",
+"forms": [
+"profeta"
+],
+"original": [
+{
+"lang": "he",
+"word": "נָבִיא",
+"translit": "navi",
+"strong": "H5030",
+"meaning": "porta-voz, chamado (por Deus)"
+},
+{
+"lang": "gr",
+"word": "προφήτης",
+"translit": "prophḗtēs",
+"strong": "G4396",
+"meaning": "quem fala em nome de outro"
+}
+],
+"definition": "Profeta é o porta-voz de Deus: Arão era “profeta” de Moisés, falando por ele (Êx 7.1). Mais do que prever o futuro, o profeta chamava o povo de volta à aliança. Antes, também se chamava “vidente” (1Sm 9.9).",
+"refs": [
+"Êx 7.1",
+"Dt 18.18-22",
+"1Sm 9.9",
+"Am 3.7",
+"Ef 4.11"
+],
+"see": [
+"dom"
+],
+"domain": "pessoas"
+},
+{
+"id": "sacerdote",
+"term": "Sacerdote / sumo sacerdote",
+"kind": "termo",
+"forms": [
+"sumo sacerdote",
+"sacerdote"
+],
+"original": [
+{
+"lang": "he",
+"word": "כֹּהֵן",
+"translit": "kohen",
+"strong": "H3548",
+"meaning": "sacerdote"
+},
+{
+"lang": "gr",
+"word": "ἀρχιερεύς",
+"translit": "archiereús",
+"strong": "G749",
+"meaning": "sumo sacerdote"
+}
+],
+"definition": "Os sacerdotes, descendentes de Arão, ofereciam os sacrifícios e intercediam pelo povo. Só o sumo sacerdote entrava no Santo dos Santos, uma vez por ano. Hebreus apresenta Jesus como o sumo sacerdote perfeito, e Pedro chama a igreja de “sacerdócio real”.",
+"refs": [
+"Êx 28.1",
+"Lv 16.32-34",
+"Hb 4.14-16",
+"Hb 7.23-27",
+"1Pe 2.9"
+],
+"see": [
+"levita",
+"efode",
+"altar"
+],
+"domain": "culto"
+},
+{
+"id": "levita",
+"term": "Levitas",
+"kind": "termo",
+"forms": [
+"levitas",
+"levita"
+],
+"original": [
+{
+"lang": "he",
+"word": "לֵוִי",
+"translit": "Levi",
+"strong": "H3881",
+"meaning": "levita, descendente de Levi; “unido”"
+}
+],
+"definition": "A tribo de Levi foi separada para o serviço do tabernáculo e, depois, do templo: transportar, guardar, cantar e ensinar. Não recebeu território na partilha de Canaã — “o Senhor é a sua herança” —, mas 48 cidades e os dízimos. Os sacerdotes eram os levitas da família de Arão.",
+"refs": [
+"Nm 3.5-10",
+"Nm 18.20-24",
+"Dt 10.8-9",
+"1Cr 15.16"
+],
+"see": [
+"sacerdote",
+"dizimo"
+],
+"domain": "culto"
+},
+{
+"id": "altar",
+"term": "Altar",
+"kind": "termo",
+"forms": [
+"altar"
+],
+"original": [
+{
+"lang": "he",
+"word": "מִזְבֵּחַ",
+"translit": "mizbeach",
+"strong": "H4196",
+"meaning": "lugar do sacrifício (de zavach, sacrificar)"
+}
+],
+"definition": "Lugar onde se ofereciam sacrifícios. Os patriarcas erguiam altares de pedras por onde passavam, marcando encontros com Deus. No tabernáculo havia o altar de bronze (dos holocaustos), no pátio, e o altar de ouro (do incenso), diante do véu.",
+"refs": [
+"Gn 8.20",
+"Gn 12.7-8",
+"Êx 27.1-8",
+"Êx 30.1-10",
+"1Rs 18.30-38"
+],
+"see": [
+"holocausto",
+"sacerdote"
+],
+"domain": "culto"
+},
+{
+"id": "holocausto",
+"term": "Holocausto",
+"kind": "termo",
+"forms": [
+"holocausto",
+"holocaustos"
+],
+"original": [
+{
+"lang": "he",
+"word": "עֹלָה",
+"translit": "olah",
+"strong": "H5930",
+"meaning": "o que sobe (a fumaça ao céu)"
+},
+{
+"lang": "gr",
+"word": "ὁλοκαύτωμα",
+"translit": "holokaútōma",
+"strong": "G3646",
+"meaning": "queimado por inteiro"
+}
+],
+"definition": "O sacrifício em que o animal era queimado por inteiro no altar, simbolizando entrega total a Deus. Era oferecido toda manhã e toda tarde. A palavra grega deu origem ao termo usado hoje para o genocídio dos judeus na Segunda Guerra (em hebraico, Shoah).",
+"refs": [
+"Gn 22.2",
+"Lv 1.3-9",
+"Nm 28.3-4",
+"Rm 12.1"
+],
+"see": [
+"altar",
+"expiacao"
+],
+"domain": "culto"
+},
+{
+"id": "primicias",
+"term": "Primícias",
+"kind": "termo",
+"forms": [
+"primícias"
+],
+"original": [
+{
+"lang": "he",
+"word": "בִּכּוּרִים",
+"translit": "bikkurim",
+"strong": "H1061",
+"meaning": "os primeiros frutos"
+},
+{
+"lang": "gr",
+"word": "ἀπαρχή",
+"translit": "aparchḗ",
+"strong": "G536",
+"meaning": "primeira parte, primícias"
+}
+],
+"definition": "Os primeiros frutos da colheita, trazidos a Deus em gratidão, como reconhecimento de que toda a colheita vinha dele. Paulo chama Cristo ressuscitado de “primícias dos que dormem”: a garantia de que a grande colheita da ressurreição virá.",
+"refs": [
+"Êx 23.19",
+"Dt 26.1-11",
+"Pv 3.9",
+"1Co 15.20-23"
+],
+"see": [
+"pentecostes",
+"dizimo"
+],
+"domain": "culto"
+},
+{
+"id": "dizimo",
+"term": "Dízimo",
+"kind": "termo",
+"forms": [
+"dízimo",
+"dízimos"
+],
+"original": [
+{
+"lang": "he",
+"word": "מַעֲשֵׂר",
+"translit": "ma'aser",
+"strong": "H4643",
+"meaning": "a décima parte"
+}
+],
+"definition": "A décima parte da renda, entregue a Deus. Abraão deu o dízimo a Melquisedeque, e Jacó prometeu dar o dízimo em Betel, antes da Lei. Na Lei de Moisés, sustentava os levitas, as festas e os pobres. Malaquias chama o povo a trazer “todos os dízimos à casa do tesouro”.",
+"refs": [
+"Gn 14.20",
+"Gn 28.22",
+"Nm 18.21",
+"Ml 3.8-10",
+"Mt 23.23"
+],
+"see": [
+"levita",
+"primicias"
+],
+"domain": "culto"
+},
+{
+"id": "tabernaculo",
+"term": "Tabernáculo",
+"kind": "termo",
+"forms": [
+"tabernáculo"
+],
+"original": [
+{
+"lang": "he",
+"word": "מִשְׁכָּן",
+"translit": "mishkan",
+"strong": "H4908",
+"meaning": "habitação, morada"
+},
+{
+"lang": "gr",
+"word": "σκηνή",
+"translit": "skēnḗ",
+"strong": "G4633",
+"meaning": "tenda"
+}
+],
+"definition": "A tenda portátil que Israel montava no centro do acampamento, onde Deus habitava no meio do povo. Tinha o pátio (altar e pia), o Lugar Santo (candelabro, mesa dos pães e altar do incenso) e o Santo dos Santos (a arca). João diz que o Verbo “habitou” (literalmente, armou a sua tenda) entre nós.",
+"refs": [
+"Êx 25.8-9",
+"Êx 40.34-38",
+"Jo 1.14",
+"Hb 9.1-12"
+],
+"see": [
+"arca",
+"gloria",
+"festa-dos-tabernaculos"
+],
+"domain": "culto"
+},
+{
+"id": "arca",
+"term": "Arca",
+"kind": "termo",
+"forms": [
+"arca"
+],
+"original": [
+{
+"lang": "he",
+"word": "אֲרוֹן",
+"translit": "aron",
+"strong": "H727",
+"meaning": "caixa, cofre — a arca da aliança"
+},
+{
+"lang": "he",
+"word": "תֵּבָה",
+"translit": "tevah",
+"strong": "H8392",
+"meaning": "caixa, embarcação — a arca de Noé e o cestinho de Moisés"
+}
+],
+"definition": "O hebraico tem duas palavras: tevah, a arca de Noé (e o cesto em que Moisés foi posto no Nilo — a mesma palavra!), e aron, a arca da aliança, um cofre de madeira revestido de ouro que guardava as tábuas da Lei, um vaso de maná e a vara de Arão. A arca da aliança desapareceu na destruição de Jerusalém, em 586 a.C.",
+"refs": [
+"Gn 6.14",
+"Êx 2.3",
+"Êx 25.10-22",
+"Hb 9.4",
+"1Pe 3.20"
+],
+"see": [
+"propiciatorio",
+"tabernaculo",
+"alianca"
+],
+"domain": "culto"
+},
+{
+"id": "querubim",
+"term": "Querubim",
+"kind": "termo",
+"forms": [
+"querubins",
+"querubim"
+],
+"original": [
+{
+"lang": "he",
+"word": "כְּרוּב",
+"translit": "kerub (plural kerubim)",
+"strong": "H3742",
+"meaning": "querubim"
+}
+],
+"definition": "Seres celestiais ligados à presença e à santidade de Deus. Guardaram o caminho da árvore da vida, estavam esculpidos sobre a arca e bordados no véu, e Ezequiel os viu com quatro rostos e quatro asas. Nada a ver com os bebês alados da arte renascentista.",
+"refs": [
+"Gn 3.24",
+"Êx 25.18-22",
+"Ez 10.1-22",
+"Sl 80.1"
+],
+"see": [
+"serafim",
+"propiciatorio"
+],
+"domain": "espirituais"
+},
+{
+"id": "serafim",
+"term": "Serafim",
+"kind": "termo",
+"forms": [
+"serafins"
+],
+"original": [
+{
+"lang": "he",
+"word": "שָׂרָף",
+"translit": "saraf (plural serafim)",
+"strong": "H8314",
+"meaning": "os ardentes, os flamejantes"
+}
+],
+"definition": "Seres que Isaías viu ao redor do trono de Deus, com seis asas, clamando “Santo, santo, santo”. O nome vem de “queimar”. Um deles tocou os lábios do profeta com uma brasa do altar para purificá-lo. É a única menção a serafins na Bíblia.",
+"refs": [
+"Is 6.1-7"
+],
+"see": [
+"querubim",
+"santo"
+],
+"domain": "espirituais"
+},
+{
+"id": "anjo",
+"term": "Anjo",
+"kind": "termo",
+"forms": [
+"anjo",
+"anjos"
+],
+"original": [
+{
+"lang": "he",
+"word": "מַלְאָךְ",
+"translit": "mal'akh",
+"strong": "H4397",
+"meaning": "mensageiro"
+},
+{
+"lang": "gr",
+"word": "ἄγγελος",
+"translit": "ángelos",
+"strong": "G32",
+"meaning": "mensageiro"
+}
+],
+"definition": "As duas palavras querem dizer “mensageiro” e podem ser usadas para pessoas (o nome Malaquias vem de mal'akh). Os anjos são servos de Deus enviados para servir os que herdarão a salvação. O “Anjo do Senhor” do Antigo Testamento às vezes fala como o próprio Deus.",
+"refs": [
+"Gn 22.11-12",
+"Sl 91.11",
+"Lc 1.26",
+"Hb 1.14"
+],
+"see": [
+"querubim",
+"serafim"
+],
+"domain": "espirituais"
+},
+{
+"id": "satanas",
+"term": "Satanás",
+"kind": "nome",
+"forms": [
+"Satanás"
+],
+"original": [
+{
+"lang": "he",
+"word": "שָׂטָן",
+"translit": "satan",
+"strong": "H7854",
+"meaning": "adversário, acusador"
+},
+{
+"lang": "gr",
+"word": "διάβολος",
+"translit": "diábolos",
+"strong": "G1228",
+"meaning": "caluniador, acusador — daí “diabo”"
+}
+],
+"definition": "Satan é “o adversário”, aquele que acusa (Jó 1; Zc 3). Diábolos, “o que lança acusações”, deu “diabo” em português. Jesus o venceu no deserto com a Palavra e, na cruz, despojou os poderes das trevas. Apocalipse o chama de “acusador de nossos irmãos”.",
+"refs": [
+"Jó 1.6-12",
+"Zc 3.1",
+"Mt 4.1-11",
+"Cl 2.15",
+"Ap 12.9-11"
+],
+"see": [
+"belzebu",
+"belial"
+],
+"domain": "espirituais"
+},
+{
+"id": "belzebu",
+"term": "Belzebu",
+"kind": "nome",
+"forms": [
+"Belzebu"
+],
+"original": [
+{
+"lang": "he",
+"word": "בַּעַל זְבוּב",
+"translit": "Ba'al Zevuv",
+"strong": "H1176",
+"meaning": "senhor das moscas — deus de Ecrom"
+},
+{
+"lang": "gr",
+"word": "Βεελζεβούλ",
+"translit": "Beelzeboúl",
+"strong": "G954",
+"meaning": "senhor da habitação (ou do esterco)"
+}
+],
+"definition": "Nome de um deus filisteu de Ecrom, consultado pelo rei Acazias. Os judeus transformaram “Baal-Zebul” (príncipe Baal) em “Baal-Zebube” (senhor das moscas), por zombaria. No tempo de Jesus, era nome do príncipe dos demônios — e os fariseus acusaram Jesus de expulsar demônios por ele.",
+"refs": [
+"2Rs 1.2-3",
+"Mt 12.24-28",
+"Mc 3.22"
+],
+"see": [
+"satanas",
+"baal"
+],
+"domain": "espirituais"
+},
+{
+"id": "belial",
+"term": "Belial",
+"kind": "nome",
+"forms": [
+"Belial"
+],
+"original": [
+{
+"lang": "he",
+"word": "בְּלִיַּעַל",
+"translit": "beliya'al",
+"strong": "H1100",
+"meaning": "sem valor, imprestável, perverso"
+}
+],
+"definition": "No Antigo Testamento, “filhos de Belial” quer dizer homens perversos, sem valor (como os filhos de Eli). Com o tempo, Belial virou um nome do diabo: “que concórdia há entre Cristo e Belial?”.",
+"refs": [
+"Dt 13.13",
+"1Sm 2.12",
+"2Co 6.15"
+],
+"see": [
+"satanas"
+],
+"domain": "espirituais"
+},
+{
+"id": "inferno",
+"term": "Inferno / Seol / Hades / Geena",
+"kind": "termo",
+"forms": [
+"inferno",
+"Seol",
+"hades"
+],
+"original": [
+{
+"lang": "he",
+"word": "שְׁאוֹל",
+"translit": "Sheol",
+"strong": "H7585",
+"meaning": "mundo dos mortos, sepultura"
+},
+{
+"lang": "gr",
+"word": "ᾅδης",
+"translit": "Hádēs",
+"strong": "G86",
+"meaning": "mundo dos mortos"
+},
+{
+"lang": "gr",
+"word": "γέεννα",
+"translit": "géenna",
+"strong": "G1067",
+"meaning": "vale de Hinom: o lugar do castigo final"
+}
+],
+"definition": "Seol (hebraico) e Hades (grego) são o lugar dos mortos; na história do rico e Lázaro, o Hades tem um lado de tormento e outro de consolo. Geena — o “inferno de fogo” das palavras de Jesus — vem do vale de Hinom, ao sul de Jerusalém, onde se haviam sacrificado crianças a Moloque e que virou depósito de lixo em chamas: imagem do castigo final.",
+"refs": [
+"Sl 16.10",
+"Lc 16.22-26",
+"Mt 5.22",
+"Mt 10.28",
+"Ap 20.13-14"
+],
+"see": [
+"hinom",
+"abadom"
+],
+"domain": "pecado"
+},
+{
+"id": "hinom",
+"term": "Vale de Hinom / Tofete",
+"kind": "lugar",
+"forms": [
+"Hinom",
+"Tofete"
+],
+"original": [
+{
+"lang": "he",
+"word": "גֵּיא בֶן־הִנֹּם",
+"translit": "Gei Ben-Hinnom",
+"strong": "H2011",
+"meaning": "vale do filho de Hinom"
+},
+{
+"lang": "he",
+"word": "תֹּפֶת",
+"translit": "Tofet",
+"strong": "H8612",
+"meaning": "lugar de queima"
+}
+],
+"definition": "Vale ao sul de Jerusalém onde os reis Acaz e Manassés queimaram os próprios filhos a Moloque, no altar chamado Tofete. O rei Josias o profanou para acabar com esse culto. Jeremias o chamou de “vale da Matança”. Em grego, Gei-Hinnom virou Geena.",
+"refs": [
+"2Rs 23.10",
+"2Cr 28.3",
+"Jr 7.31-32"
+],
+"see": [
+"inferno",
+"moloque"
+],
+"domain": "pecado"
+},
+{
+"id": "abadom",
+"term": "Abadom / Apoliom",
+"kind": "nome",
+"forms": [
+"Abadom",
+"Apoliom"
+],
+"original": [
+{
+"lang": "he",
+"word": "אֲבַדּוֹן",
+"translit": "Abaddon",
+"strong": "H11",
+"meaning": "destruição, lugar de perdição"
+},
+{
+"lang": "gr",
+"word": "Ἀπολλύων",
+"translit": "Apollýōn",
+"strong": "G623",
+"meaning": "destruidor"
+}
+],
+"definition": "No Antigo Testamento, Abadom é o lugar da destruição, ao lado do Seol (Jó 26.6; Pv 15.11). Em Apocalipse, é o nome do anjo do abismo, rei dos gafanhotos — dado em hebraico (Abadom) e em grego (Apoliom).",
+"refs": [
+"Jó 26.6",
+"Pv 15.11",
+"Ap 9.11"
+],
+"see": [
+"inferno"
+],
+"domain": "pecado"
+},
+{
+"id": "armagedom",
+"term": "Armagedom",
+"kind": "lugar",
+"forms": [
+"Armagedom"
+],
+"original": [
+{
+"lang": "gr",
+"word": "Ἁρμαγεδών",
+"translit": "Harmagedṓn",
+"strong": "G717",
+"meaning": "provavelmente do hebraico Har Megiddo, “monte de Megido”"
+}
+],
+"definition": "Lugar onde os reis da terra se reúnem para a batalha do grande dia de Deus. Megido guardava a passagem do vale de Jezreel e foi palco de batalhas decisivas: ali morreu o rei Josias. Por isso virou símbolo do confronto final entre Deus e os poderes do mal.",
+"refs": [
+"Jz 5.19",
+"2Rs 23.29",
+"Ap 16.14-16"
+],
+"see": [
+"gogue"
+],
+"domain": "pecado"
+},
+{
+"id": "gogue",
+"term": "Gogue e Magogue",
+"kind": "nome",
+"forms": [
+"Gogue",
+"Magogue"
+],
+"original": [
+{
+"lang": "he",
+"word": "גּוֹג וּמָגוֹג",
+"translit": "Gog u-Magog",
+"strong": "H1463",
+"meaning": "Gogue, príncipe da terra de Magogue"
+}
+],
+"definition": "Em Ezequiel 38–39, Gogue é o líder de uma coalizão de povos do norte que ataca Israel nos últimos dias e é derrotado por Deus. Magogue aparece como descendente de Jafé (Gn 10.2). Em Apocalipse 20, “Gogue e Magogue” representam as nações reunidas contra Deus no fim.",
+"refs": [
+"Gn 10.2",
+"Ez 38.1-4",
+"Ez 39.6",
+"Ap 20.7-9"
+],
+"see": [
+"armagedom"
+],
+"domain": "pecado"
+},
+{
+"id": "siao",
+"term": "Sião",
+"kind": "lugar",
+"forms": [
+"Sião"
+],
+"original": [
+{
+"lang": "he",
+"word": "צִיּוֹן",
+"translit": "Tsiyyon",
+"strong": "H6726",
+"meaning": "fortaleza, lugar seco"
+}
+],
+"definition": "Era a fortaleza dos jebuseus que Davi conquistou e transformou na “cidade de Davi”. O nome passou a designar o monte do templo, Jerusalém inteira e o povo de Deus. Hebreus fala do “monte Sião… a Jerusalém celestial”.",
+"refs": [
+"2Sm 5.6-7",
+"Sl 48.1-2",
+"Is 2.3",
+"Hb 12.22"
+],
+"see": [
+"jerusalem"
+],
+"domain": "lugares"
+},
+{
+"id": "jerusalem",
+"term": "Jerusalém",
+"kind": "lugar",
+"forms": [
+"Jerusalém"
+],
+"original": [
+{
+"lang": "he",
+"word": "יְרוּשָׁלַיִם",
+"translit": "Yerushalayim",
+"strong": "H3389",
+"meaning": "provavelmente “fundação de paz”"
+}
+],
+"definition": "Cidade cananeia (Salém, de Melquisedeque) conquistada por Davi por volta de 1000 a.C., capital do reino e lugar do templo. Destruída pelos babilônios em 586 a.C. e pelos romanos em 70 d.C. Ali Jesus morreu e ressuscitou, e ali a igreja nasceu no Pentecostes. Apocalipse termina com a Nova Jerusalém.",
+"refs": [
+"Gn 14.18",
+"2Sm 5.6-9",
+"Sl 122.6",
+"Lc 19.41-44",
+"Ap 21.2"
+],
+"see": [
+"siao"
+],
+"domain": "lugares"
+},
+{
+"id": "babilonia",
+"term": "Babilônia / Babel",
+"kind": "lugar",
+"forms": [
+"Babilônia",
+"Babel"
+],
+"original": [
+{
+"lang": "he",
+"word": "בָּבֶל",
+"translit": "Bavel",
+"strong": "H894",
+"meaning": "para os babilônios, “porta de deus”; em hebraico soa como “confusão”"
+}
+],
+"definition": "Cidade às margens do Eufrates, no atual Iraque. Lá foi a torre de Babel. Sob Nabucodonosor, tornou-se o império que destruiu Jerusalém e levou Judá para o exílio (586 a.C.); caiu diante dos persas em 539 a.C. Em Apocalipse, “Babilônia, a grande” simboliza o sistema mundial que se opõe a Deus.",
+"refs": [
+"Gn 11.9",
+"2Rs 25.8-11",
+"Sl 137.1",
+"Dn 5.30-31",
+"Ap 18.2"
+],
+"see": [
+"mene-tequel"
+],
+"domain": "lugares"
+},
+{
+"id": "golgota",
+"term": "Gólgota (Calvário)",
+"kind": "lugar",
+"forms": [
+"Gólgota"
+],
+"original": [
+{
+"lang": "ar",
+"word": "גֻּלְגָּלְתָּא",
+"translit": "gulgulta",
+"strong": "G1115",
+"meaning": "caveira, crânio"
+},
+{
+"lang": "la",
+"word": "Calvaria",
+"translit": "Calvaria",
+"meaning": "caveira — daí “Calvário”"
+}
+],
+"definition": "O lugar, fora dos muros de Jerusalém, onde Jesus foi crucificado. O nome aramaico quer dizer “caveira” — talvez pelo formato do monte ou por ser lugar de execuções. “Calvário” vem da tradução latina, calvaria.",
+"refs": [
+"Mt 27.33",
+"Jo 19.17-18",
+"Hb 13.12"
+],
+"see": [
+"gabata"
+],
+"domain": "lugares"
+},
+{
+"id": "gabata",
+"term": "Gabatá (Pavimento)",
+"kind": "lugar",
+"forms": [
+"Gabatá"
+],
+"original": [
+{
+"lang": "ar",
+"word": "גַּבְּתָא",
+"translit": "gabbeta",
+"strong": "G1042",
+"meaning": "elevação, lugar alto"
+}
+],
+"definition": "O pátio pavimentado diante do pretório, em Jerusalém, onde Pilatos se sentou no tribunal para julgar Jesus. Em grego chamava-se Lithóstrōtos, “o Pavimento de pedras”.",
+"refs": [
+"Jo 19.13-16"
+],
+"see": [
+"golgota"
+],
+"domain": "lugares"
+},
+{
+"id": "aceldama",
+"term": "Acéldama (Campo de Sangue)",
+"kind": "lugar",
+"forms": [
+"Acéldama"
+],
+"original": [
+{
+"lang": "ar",
+"word": "חֲקֵל דְּמָא",
+"translit": "chaqel dema",
+"strong": "G184",
+"meaning": "campo de sangue"
+}
+],
+"definition": "O campo comprado com as trinta moedas de prata que Judas devolveu, usado como cemitério de estrangeiros. A tradição o situa no vale de Hinom, ao sul de Jerusalém.",
+"refs": [
+"Mt 27.6-8",
+"At 1.18-19",
+"Zc 11.12-13"
+],
+"see": [
+"hinom"
+],
+"domain": "lugares"
+},
+{
+"id": "aba",
+"term": "Aba",
+"kind": "expressao",
+"forms": [
+"Aba"
+],
+"original": [
+{
+"lang": "ar",
+"word": "אַבָּא",
+"translit": "abba",
+"strong": "G5",
+"meaning": "pai, papai — forma íntima, usada pelos filhos"
+}
+],
+"definition": "Palavra aramaica com que as crianças chamavam o pai. Jesus orou assim no Getsêmani — “Aba, Pai, tudo te é possível” —, algo inédito nas orações judaicas da época. Pelo Espírito, os crentes também podem chamar Deus de Aba.",
+"refs": [
+"Mc 14.36",
+"Rm 8.15",
+"Gl 4.6"
+],
+"see": [
+"adocao"
+],
+"domain": "expressoes"
+},
+{
+"id": "talita-cumi",
+"term": "Talita cumi",
+"kind": "expressao",
+"forms": [
+"Talita cumi"
+],
+"original": [
+{
+"lang": "ar",
+"word": "טַלְיְתָא קוּמִי",
+"translit": "talyeta qumi",
+"strong": "G5008",
+"meaning": "menina, levanta-te"
+}
+],
+"definition": "As palavras exatas, em aramaico, que Jesus disse ao ressuscitar a filha de Jairo, de 12 anos. Marcos as guardou na língua original, como fazia quem estava lá e nunca as esqueceu (provavelmente Pedro).",
+"refs": [
+"Mc 5.35-43"
+],
+"see": [
+"efata"
+],
+"domain": "expressoes"
+},
+{
+"id": "efata",
+"term": "Efatá",
+"kind": "expressao",
+"forms": [
+"Efatá"
+],
+"original": [
+{
+"lang": "ar",
+"word": "אֶתְפְּתַח",
+"translit": "etpetach",
+"strong": "G2188",
+"meaning": "abre-te"
+}
+],
+"definition": "Palavra aramaica que Jesus disse, suspirando e olhando para o céu, ao curar um surdo-mudo na região de Decápolis. Marcos a conserva na língua de Jesus.",
+"refs": [
+"Mc 7.31-37"
+],
+"see": [
+"talita-cumi"
+],
+"domain": "expressoes"
+},
+{
+"id": "eloi",
+"term": "Eloí, Eloí, lamá sabactani",
+"kind": "expressao",
+"forms": [
+"Eloí",
+"lamá sabactani",
+"lamá, sabactani"
+],
+"original": [
+{
+"lang": "ar",
+"word": "אֱלָהִי אֱלָהִי לְמָה שְׁבַקְתַּנִי",
+"translit": "Elahi, Elahi, lemah shevaqtani",
+"strong": "G4518",
+"meaning": "Deus meu, Deus meu, por que me desamparaste?"
+}
+],
+"definition": "O clamor de Jesus na cruz, em aramaico: são as primeiras palavras do Salmo 22, que descreve um justo sofrendo e termina em vitória e louvor. Mateus traz “Eli” (forma hebraica) e Marcos “Eloí” (aramaica); por isso alguns pensaram que Ele chamava Elias.",
+"refs": [
+"Sl 22.1",
+"Mt 27.46-47",
+"Mc 15.34-35"
+],
+"see": [
+"golgota"
+],
+"domain": "expressoes"
+},
+{
+"id": "maranata",
+"term": "Maranata",
+"kind": "expressao",
+"forms": [
+"Maranata"
+],
+"original": [
+{
+"lang": "ar",
+"word": "מָרַנָא תָא",
+"translit": "marana tha",
+"strong": "G3134",
+"meaning": "Senhor nosso, vem! (ou maran atha: “o Senhor vem”)"
+}
+],
+"definition": "Oração aramaica dos primeiros cristãos, tão conhecida que Paulo a escreveu sem traduzir numa carta a gregos. A Bíblia termina com a mesma oração, em grego: “Amém. Vem, Senhor Jesus!”.",
+"refs": [
+"1Co 16.22",
+"Ap 22.20"
+],
+"see": [
+"aba"
+],
+"domain": "expressoes"
+},
+{
+"id": "rabi",
+"term": "Rabi / Raboni",
+"kind": "expressao",
+"forms": [
+"Rabi",
+"Raboni"
+],
+"original": [
+{
+"lang": "he",
+"word": "רַבִּי",
+"translit": "rabbi",
+"strong": "G4461",
+"meaning": "meu mestre (literalmente “meu grande”)"
+},
+{
+"lang": "ar",
+"word": "רַבּוּנִי",
+"translit": "rabbuni",
+"strong": "G4462",
+"meaning": "meu mestre (forma mais afetuosa e respeitosa)"
+}
+],
+"definition": "Tratamento respeitoso dado aos mestres da Lei. Os discípulos chamavam Jesus de Rabi. Maria Madalena, ao reconhecer Jesus ressuscitado, exclamou “Raboni!”, forma ainda mais íntima e reverente.",
+"refs": [
+"Jo 1.38",
+"Jo 3.2",
+"Jo 20.16",
+"Mt 23.7-8"
+],
+"see": [
+"escribas"
+],
+"domain": "pessoas"
+},
+{
+"id": "corba",
+"term": "Corbã",
+"kind": "expressao",
+"forms": [
+"Corbã"
+],
+"original": [
+{
+"lang": "he",
+"word": "קָרְבָּן",
+"translit": "qorban",
+"strong": "G2878",
+"meaning": "oferta, o que se aproxima (do altar)"
+}
+],
+"definition": "Bens declarados “oferta a Deus”. Alguns usavam a palavra como desculpa para não sustentar os pais idosos: diziam que o dinheiro era corbã. Jesus denunciou essa tradição que anulava o mandamento “honra teu pai e tua mãe”.",
+"refs": [
+"Mc 7.9-13",
+"Lv 1.2"
+],
+"see": [
+"fariseus"
+],
+"domain": "expressoes"
+},
+{
+"id": "raca",
+"term": "Raca",
+"kind": "expressao",
+"forms": [
+"Raca"
+],
+"original": [
+{
+"lang": "ar",
+"word": "רֵיקָא",
+"translit": "reqa",
+"strong": "G4469",
+"meaning": "cabeça-oca, imprestável"
+}
+],
+"definition": "Insulto aramaico de desprezo. Jesus ensinou que a raiva e o desprezo pelo irmão já são graves diante de Deus, não só o homicídio.",
+"refs": [
+"Mt 5.21-22"
+],
+"domain": "expressoes"
+},
+{
+"id": "mene-tequel",
+"term": "Mene, Mene, Tequel, Parsim",
+"kind": "expressao",
+"forms": [
+"MENE, MENE, TEQUEL"
+],
+"original": [
+{
+"lang": "ar",
+"word": "מְנֵא מְנֵא תְּקֵל וּפַרְסִין",
+"translit": "mene mene teqel u-farsin",
+"strong": "H4484",
+"meaning": "contado, contado, pesado e dividido"
+}
+],
+"definition": "As palavras que uma mão escreveu na parede durante o banquete de Belsazar. Eram nomes de pesos (mina, siclo e meia-mina), e Daniel os interpretou como verbos: Deus contou os dias do teu reino, foste pesado e achado em falta, o reino foi dividido entre medos e persas. Naquela noite, Babilônia caiu.",
+"refs": [
+"Dn 5.25-31"
+],
+"see": [
+"babilonia"
+],
+"domain": "expressoes"
+},
+{
+"id": "fariseus",
+"term": "Fariseus",
+"kind": "termo",
+"forms": [
+"fariseus",
+"fariseu"
+],
+"original": [
+{
+"lang": "gr",
+"word": "Φαρισαῖος",
+"translit": "Pharisaîos",
+"strong": "G5330",
+"meaning": "separado (do hebraico perushim)"
+}
+],
+"definition": "Grupo religioso judeu, muito respeitado pelo povo, que buscava cumprir a Lei com rigor e seguia as tradições orais dos anciãos. Acreditavam na ressurreição e nos anjos. Jesus denunciou a hipocrisia de muitos deles, mas houve fariseus que o seguiram, como Nicodemos — e Paulo era fariseu.",
+"refs": [
+"Mt 23.1-28",
+"Lc 18.9-14",
+"Jo 3.1",
+"At 23.6-8",
+"Fp 3.5"
+],
+"see": [
+"saduceus",
+"escribas",
+"sinedrio"
+],
+"domain": "pessoas"
+},
+{
+"id": "saduceus",
+"term": "Saduceus",
+"kind": "termo",
+"forms": [
+"saduceus"
+],
+"original": [
+{
+"lang": "gr",
+"word": "Σαδδουκαῖος",
+"translit": "Saddoukaîos",
+"strong": "G4523",
+"meaning": "provavelmente de Zadoque, o sumo sacerdote de Salomão"
+}
+],
+"definition": "A elite sacerdotal e aristocrática de Jerusalém, que controlava o templo. Aceitavam só a Torá (os livros de Moisés) e negavam a ressurreição, os anjos e os espíritos. Por isso tentaram confundir Jesus com a pergunta da mulher de sete maridos. Desapareceram com a destruição do templo, em 70 d.C.",
+"refs": [
+"Mt 22.23-33",
+"At 4.1-2",
+"At 23.8"
+],
+"see": [
+"fariseus",
+"sinedrio"
+],
+"domain": "pessoas"
+},
+{
+"id": "escribas",
+"term": "Escribas",
+"kind": "termo",
+"forms": [
+"escribas"
+],
+"original": [
+{
+"lang": "gr",
+"word": "γραμματεύς",
+"translit": "grammateús",
+"strong": "G1122",
+"meaning": "escritor, especialista nas Escrituras"
+},
+{
+"lang": "he",
+"word": "סוֹפֵר",
+"translit": "sofer",
+"strong": "H5608",
+"meaning": "escriba, o que conta e escreve"
+}
+],
+"definition": "Os copistas e intérpretes profissionais da Lei. Esdras é o grande escriba do Antigo Testamento. No tempo de Jesus, os escribas (em geral fariseus) eram os “doutores da Lei”: ensinavam, julgavam e copiavam as Escrituras letra por letra — o cuidado deles preservou o texto bíblico.",
+"refs": [
+"Ed 7.6",
+"Ne 8.1-8",
+"Mt 7.28-29",
+"Mc 12.28-34"
+],
+"see": [
+"fariseus",
+"lei"
+],
+"domain": "pessoas"
+},
+{
+"id": "sinedrio",
+"term": "Sinédrio",
+"kind": "termo",
+"forms": [
+"sinédrio"
+],
+"original": [
+{
+"lang": "gr",
+"word": "συνέδριον",
+"translit": "synédrion",
+"strong": "G4892",
+"meaning": "conselho, assembleia sentada junto"
+}
+],
+"definition": "O supremo tribunal judeu, em Jerusalém, com 71 membros: sacerdotes, anciãos e escribas, presidido pelo sumo sacerdote. Julgou Jesus, depois Pedro e João, Estêvão e Paulo. Nicodemos e José de Arimateia eram membros.",
+"refs": [
+"Mt 26.59",
+"Jo 11.47-53",
+"At 4.15",
+"At 5.27-34",
+"At 6.12"
+],
+"see": [
+"fariseus",
+"saduceus",
+"sacerdote"
+],
+"domain": "pessoas"
+},
+{
+"id": "publicanos",
+"term": "Publicanos",
+"kind": "termo",
+"forms": [
+"publicanos",
+"publicano"
+],
+"original": [
+{
+"lang": "gr",
+"word": "τελώνης",
+"translit": "telṓnēs",
+"strong": "G5057",
+"meaning": "cobrador de impostos"
+}
+],
+"definition": "Judeus que cobravam impostos para Roma, muitas vezes cobrando a mais e ficando com a diferença. Eram vistos como traidores e ladrões. Jesus chamou o publicano Mateus para ser apóstolo e se hospedou na casa de Zaqueu, chefe dos publicanos de Jericó.",
+"refs": [
+"Mt 9.9-13",
+"Lc 18.9-14",
+"Lc 19.1-10"
+],
+"see": [
+"fariseus"
+],
+"domain": "pessoas"
+},
+{
+"id": "samaritanos",
+"term": "Samaritanos",
+"kind": "termo",
+"forms": [
+"samaritanos",
+"samaritano",
+"samaritana"
+],
+"original": [
+{
+"lang": "gr",
+"word": "Σαμαρείτης",
+"translit": "Samareítēs",
+"strong": "G4541",
+"meaning": "habitante de Samaria"
+}
+],
+"definition": "Descendentes dos israelitas do Norte misturados com os povos que a Assíria trouxe depois de 722 a.C. Tinham o seu próprio templo no monte Gerizim e só aceitavam os livros de Moisés. Judeus e samaritanos se evitavam — por isso o bom samaritano e a mulher do poço de Sicar foram tão surpreendentes.",
+"refs": [
+"2Rs 17.24-33",
+"Lc 10.30-37",
+"Jo 4.9",
+"Jo 4.39-42",
+"At 8.5-8"
+],
+"see": [
+"gentios"
+],
+"domain": "pessoas"
+},
+{
+"id": "gentios",
+"term": "Gentios",
+"kind": "termo",
+"forms": [
+"gentios"
+],
+"original": [
+{
+"lang": "he",
+"word": "גּוֹיִם",
+"translit": "goyim",
+"strong": "H1471",
+"meaning": "nações, povos"
+},
+{
+"lang": "gr",
+"word": "ἔθνη",
+"translit": "éthnē",
+"strong": "G1484",
+"meaning": "nações — daí “étnico”"
+}
+],
+"definition": "Os povos que não eram judeus. Desde Abraão, Deus prometeu abençoar “todas as famílias da terra”. No livro de Atos, o Espírito é derramado sobre os gentios na casa de Cornélio, e Paulo se torna o “apóstolo dos gentios”: em Cristo, judeus e gentios formam um só povo.",
+"refs": [
+"Gn 12.3",
+"Is 49.6",
+"At 10.44-48",
+"Rm 11.13",
+"Ef 2.11-14"
+],
+"see": [
+"proselito"
+],
+"domain": "pessoas"
+},
+{
+"id": "proselito",
+"term": "Prosélito",
+"kind": "termo",
+"forms": [
+"prosélito",
+"prosélitos"
+],
+"original": [
+{
+"lang": "gr",
+"word": "προσήλυτος",
+"translit": "prosḗlytos",
+"strong": "G4339",
+"meaning": "o que chegou; estrangeiro convertido"
+}
+],
+"definition": "Gentio convertido ao judaísmo, que aceitava a circuncisão e a Lei. No Pentecostes havia “judeus e prosélitos” de muitas nações em Jerusalém; Nicolau, um dos sete diáconos, era prosélito de Antioquia.",
+"refs": [
+"Mt 23.15",
+"At 2.10",
+"At 6.5",
+"At 13.43"
+],
+"see": [
+"gentios"
+],
+"domain": "pessoas"
+},
+{
+"id": "sinagoga",
+"term": "Sinagoga",
+"kind": "termo",
+"forms": [
+"sinagoga"
+],
+"original": [
+{
+"lang": "gr",
+"word": "συναγωγή",
+"translit": "synagōgḗ",
+"strong": "G4864",
+"meaning": "reunião, lugar de reunião"
+}
+],
+"definition": "Lugar de reunião dos judeus para oração, leitura e ensino da Lei aos sábados. Provavelmente surgiu no exílio babilônico, sem o templo. Jesus ensinava nas sinagogas da Galileia, e Paulo começava a pregação nelas em cada cidade.",
+"refs": [
+"Lc 4.16-21",
+"Mc 1.21",
+"At 13.14-16",
+"At 17.1-2"
+],
+"see": [
+"sabado",
+"templo"
+],
+"domain": "culto"
+},
+{
+"id": "templo",
+"term": "Templo",
+"kind": "termo",
+"forms": [
+"templo"
+],
+"original": [
+{
+"lang": "he",
+"word": "הֵיכָל",
+"translit": "heikhal",
+"strong": "H1964",
+"meaning": "palácio, templo"
+},
+{
+"lang": "gr",
+"word": "ναός",
+"translit": "naós",
+"strong": "G3485",
+"meaning": "santuário, a morada da divindade"
+},
+{
+"lang": "gr",
+"word": "ἱερόν",
+"translit": "hierón",
+"strong": "G2411",
+"meaning": "o conjunto do templo, com os pátios"
+}
+],
+"definition": "Houve dois templos em Jerusalém: o de Salomão (destruído em 586 a.C.) e o reconstruído por Zorobabel (516 a.C.), ampliado por Herodes e destruído pelos romanos em 70 d.C. Jesus falou do seu corpo como templo, e Paulo diz que a igreja e o corpo do crente são templo do Espírito Santo.",
+"refs": [
+"1Rs 8.10-13",
+"Ed 6.15",
+"Jo 2.19-21",
+"1Co 3.16",
+"1Co 6.19"
+],
+"see": [
+"tabernaculo",
+"sinagoga"
+],
+"domain": "culto"
+},
+{
+"id": "sabado",
+"term": "Sábado",
+"kind": "festa",
+"forms": [
+"sábado"
+],
+"original": [
+{
+"lang": "he",
+"word": "שַׁבָּת",
+"translit": "shabbat",
+"strong": "H7676",
+"meaning": "descanso, cessação"
+},
+{
+"lang": "gr",
+"word": "σάββατον",
+"translit": "sábbaton",
+"strong": "G4521",
+"meaning": "sábado; também “semana”"
+}
+],
+"definition": "O sétimo dia, separado para descanso e culto, em memória da criação e da libertação do Egito. Ia do pôr do sol de sexta ao pôr do sol de sábado. Jesus ensinou que “o sábado foi feito por causa do homem”. A igreja passou a se reunir no primeiro dia da semana, o dia da ressurreição.",
+"refs": [
+"Gn 2.2-3",
+"Êx 20.8-11",
+"Dt 5.15",
+"Mc 2.27-28",
+"At 20.7"
+],
+"see": [
+"jubileu"
+],
+"domain": "festas"
+},
+{
+"id": "pascoa",
+"term": "Páscoa",
+"kind": "festa",
+"forms": [
+"páscoa"
+],
+"original": [
+{
+"lang": "he",
+"word": "פֶּסַח",
+"translit": "Pessach",
+"strong": "H6453",
+"meaning": "passagem; passar por cima"
+},
+{
+"lang": "gr",
+"word": "πάσχα",
+"translit": "páscha",
+"strong": "G3957",
+"meaning": "Páscoa"
+}
+],
+"definition": "A festa que lembra a noite em que o anjo da morte “passou por cima” das casas marcadas com o sangue do cordeiro, no Egito. Começava no dia 14 do mês de nisã (março/abril) e emendava com a festa dos pães ázimos. Jesus morreu na Páscoa: Paulo diz que “Cristo, nossa páscoa, foi sacrificado por nós”.",
+"refs": [
+"Êx 12.1-14",
+"Êx 12.21-27",
+"Lc 22.7-20",
+"1Co 5.7"
+],
+"see": [
+"cordeiro",
+"azimos",
+"pentecostes"
+],
+"domain": "festas"
+},
+{
+"id": "azimos",
+"term": "Pães ázimos",
+"kind": "festa",
+"forms": [
+"ázimos"
+],
+"original": [
+{
+"lang": "he",
+"word": "מַצּוֹת",
+"translit": "matsot",
+"strong": "H4682",
+"meaning": "pães sem fermento"
+}
+],
+"definition": "Pão sem fermento, comido às pressas na saída do Egito, sem tempo de a massa crescer. A festa dos pães ázimos durava sete dias depois da Páscoa, e todo fermento era retirado das casas. Paulo usa o fermento como imagem do pecado que se espalha.",
+"refs": [
+"Êx 12.15-20",
+"Êx 12.39",
+"1Co 5.6-8"
+],
+"see": [
+"pascoa"
+],
+"domain": "festas"
+},
+{
+"id": "pentecostes",
+"term": "Pentecostes",
+"kind": "festa",
+"forms": [
+"Pentecostes"
+],
+"original": [
+{
+"lang": "gr",
+"word": "πεντηκοστή",
+"translit": "pentēkostḗ",
+"strong": "G4005",
+"meaning": "quinquagésimo (dia)"
+},
+{
+"lang": "he",
+"word": "שָׁבֻעוֹת",
+"translit": "Shavuot",
+"strong": "H7620",
+"meaning": "semanas — a festa das semanas"
+}
+],
+"definition": "A festa das Semanas (Shavuot), 50 dias depois da Páscoa, em que se ofereciam as primícias da colheita do trigo. A tradição judaica a associava à entrega da Lei no Sinai. Nesse dia, em Jerusalém, o Espírito Santo foi derramado sobre os discípulos e cerca de 3 mil pessoas se converteram: as primícias da igreja.",
+"refs": [
+"Lv 23.15-21",
+"Dt 16.9-12",
+"At 2.1-4",
+"At 2.41"
+],
+"see": [
+"espirito-santo",
+"linguas",
+"primicias"
+],
+"domain": "festas"
+},
+{
+"id": "festa-dos-tabernaculos",
+"term": "Festa dos Tabernáculos",
+"kind": "festa",
+"forms": [
+"festa dos tabernáculos"
+],
+"original": [
+{
+"lang": "he",
+"word": "סֻכּוֹת",
+"translit": "Sukkot",
+"strong": "H5521",
+"meaning": "cabanas, tendas"
+}
+],
+"definition": "Festa da colheita, no outono, em que o povo morava sete dias em cabanas de ramos, lembrando os 40 anos no deserto. Era a festa mais alegre do ano. No último dia, Jesus clamou: “Se alguém tem sede, venha a mim e beba”.",
+"refs": [
+"Lv 23.33-43",
+"Ne 8.13-18",
+"Jo 7.2",
+"Jo 7.37-39"
+],
+"see": [
+"tabernaculo"
+],
+"domain": "festas"
+},
+{
+"id": "dia-da-expiacao",
+"term": "Dia da Expiação",
+"kind": "festa",
+"forms": [
+"dia da expiação"
+],
+"original": [
+{
+"lang": "he",
+"word": "יוֹם הַכִּפֻּרִים",
+"translit": "Yom Kippur",
+"strong": "H3725",
+"meaning": "dia das expiações"
+}
+],
+"definition": "O dia mais solene do calendário judaico (10 de tishri, setembro/outubro): dia de jejum em que o sumo sacerdote entrava no Santo dos Santos com sangue para fazer expiação por todo o povo, e um bode era enviado ao deserto levando simbolicamente os pecados.",
+"refs": [
+"Lv 16.1-34",
+"Lv 23.26-32",
+"Hb 9.7",
+"Hb 9.11-12"
+],
+"see": [
+"expiacao",
+"propiciatorio"
+],
+"domain": "festas"
+},
+{
+"id": "purim",
+"term": "Purim",
+"kind": "festa",
+"forms": [
+"Purim"
+],
+"original": [
+{
+"lang": "he",
+"word": "פּוּרִים",
+"translit": "Purim",
+"strong": "H6332",
+"meaning": "sortes (pur = sorte)"
+}
+],
+"definition": "Festa que celebra o livramento dos judeus no Império Persa, no tempo da rainha Ester. O nome vem das “sortes” que Hamã lançou para escolher o dia de exterminá-los. Até hoje o livro de Ester é lido em voz alta nessa festa.",
+"refs": [
+"Et 3.7",
+"Et 9.20-28"
+],
+"see": [
+"hama"
+],
+"domain": "festas"
+},
+{
+"id": "jubileu",
+"term": "Jubileu",
+"kind": "festa",
+"forms": [
+"jubileu"
+],
+"original": [
+{
+"lang": "he",
+"word": "יוֹבֵל",
+"translit": "yovel",
+"strong": "H3104",
+"meaning": "chifre de carneiro (a trombeta que anunciava o ano)"
+}
+],
+"definition": "A cada 50 anos, o ano do jubileu era anunciado com o toque do chifre de carneiro: as terras voltavam às famílias originais, os escravos hebreus eram libertados e a terra descansava. Jesus anunciou em Nazaré “o ano aceitável do Senhor”, a libertação plena.",
+"refs": [
+"Lv 25.8-17",
+"Is 61.1-2",
+"Lc 4.18-21"
+],
+"see": [
+"sabado",
+"remissao"
+],
+"domain": "festas"
+},
+{
+"id": "nazireu",
+"term": "Nazireu",
+"kind": "termo",
+"forms": [
+"nazireu",
+"nazireado",
+"nazireus"
+],
+"original": [
+{
+"lang": "he",
+"word": "נָזִיר",
+"translit": "nazir",
+"strong": "H5139",
+"meaning": "separado, consagrado"
+}
+],
+"definition": "Pessoa — homem ou mulher — que fazia um voto especial de consagração a Deus: não tomava vinho nem nada da uva, não cortava o cabelo e não tocava em mortos. Em geral o voto era por um tempo; Sansão e Samuel foram consagrados desde o ventre. Não confunda com “nazareno”, de Nazaré.",
+"refs": [
+"Nm 6.1-21",
+"Jz 13.5",
+"1Sm 1.11",
+"Am 2.11-12",
+"At 21.23-26"
+],
+"see": [
+"santo"
+],
+"domain": "culto"
+},
+{
+"id": "efode",
+"term": "Éfode",
+"kind": "termo",
+"forms": [
+"éfode"
+],
+"original": [
+{
+"lang": "he",
+"word": "אֵפוֹד",
+"translit": "efod",
+"strong": "H646",
+"meaning": "veste sacerdotal"
+}
+],
+"definition": "Veste sacerdotal em forma de colete, de linho fino bordado a ouro, com duas pedras de ônix nos ombros, gravadas com os nomes das tribos. Sobre ele ia o peitoral do juízo, com doze pedras preciosas. Havia também um éfode simples de linho, como o que o menino Samuel e o rei Davi usaram.",
+"refs": [
+"Êx 28.6-14",
+"1Sm 2.18",
+"2Sm 6.14"
+],
+"see": [
+"urim",
+"sacerdote"
+],
+"domain": "culto"
+},
+{
+"id": "urim",
+"term": "Urim e Tumim",
+"kind": "termo",
+"forms": [
+"Urim",
+"Tumim"
+],
+"original": [
+{
+"lang": "he",
+"word": "אוּרִים וְתֻמִּים",
+"translit": "Urim ve-Tummim",
+"strong": "H224",
+"meaning": "luzes e perfeições"
+}
+],
+"definition": "Objetos guardados no peitoral do sumo sacerdote e usados para consultar a vontade de Deus em decisões importantes. Não se sabe como eram nem como funcionavam — talvez como sortes de “sim” e “não”. Depois do exílio, já não havia sacerdote com Urim e Tumim.",
+"refs": [
+"Êx 28.30",
+"Nm 27.21",
+"1Sm 28.6",
+"Ed 2.63"
+],
+"see": [
+"efode"
+],
+"domain": "culto"
+},
+{
+"id": "mana",
+"term": "Maná",
+"kind": "termo",
+"forms": [
+"maná"
+],
+"original": [
+{
+"lang": "he",
+"word": "מָן",
+"translit": "man",
+"strong": "H4478",
+"meaning": "“que é isto?” (man hu)"
+}
+],
+"definition": "O alimento que Deus enviou do céu a Israel durante os 40 anos no deserto: pequeno, branco como semente de coentro, com gosto de bolo de mel. O nome vem da pergunta do povo: “Que é isto?”. Jesus se apresentou como “o pão vivo que desceu do céu”.",
+"refs": [
+"Êx 16.14-31",
+"Dt 8.3",
+"Js 5.12",
+"Jo 6.31-35"
+],
+"see": [
+"arca"
+],
+"domain": "culto"
+},
+{
+"id": "shilo",
+"term": "Siló",
+"kind": "lugar",
+"forms": [
+"Siló"
+],
+"original": [
+{
+"lang": "he",
+"word": "שִׁילֹה",
+"translit": "Shiloh",
+"strong": "H7887",
+"meaning": "lugar de descanso"
+}
+],
+"definition": "Cidade de Efraim onde o tabernáculo ficou por mais de três séculos, depois da conquista de Canaã. Ali Ana orou por um filho e Samuel cresceu servindo a Deus. Foi destruída depois que os filisteus tomaram a arca, e Jeremias a usou como alerta para Jerusalém.",
+"refs": [
+"Js 18.1",
+"1Sm 1.3",
+"1Sm 3.21",
+"Jr 7.12-14"
+],
+"see": [
+"tabernaculo"
+],
+"domain": "lugares"
+},
+{
+"id": "baal",
+"term": "Baal",
+"kind": "nome",
+"forms": [
+"Baal",
+"baalins"
+],
+"original": [
+{
+"lang": "he",
+"word": "בַּעַל",
+"translit": "Ba'al",
+"strong": "H1168",
+"meaning": "senhor, dono, marido"
+}
+],
+"definition": "Principal deus dos cananeus, senhor da chuva e da fertilidade. O culto a Baal, com prostituição ritual e às vezes sacrifício de crianças, foi a maior tentação de Israel. Acabe e Jezabel o tornaram religião oficial do Norte, até que Elias desafiou os 450 profetas de Baal no monte Carmelo.",
+"refs": [
+"Jz 2.11-13",
+"1Rs 16.31-32",
+"1Rs 18.20-40",
+"Os 2.16-17"
+],
+"see": [
+"asera",
+"belzebu"
+],
+"domain": "espirituais"
+},
+{
+"id": "asera",
+"term": "Aserá / Astarote",
+"kind": "nome",
+"forms": [
+"Asera",
+"Astarote"
+],
+"original": [
+{
+"lang": "he",
+"word": "אֲשֵׁרָה",
+"translit": "Asherah",
+"strong": "H842",
+"meaning": "deusa cananeia; também o poste de madeira do seu culto"
+},
+{
+"lang": "he",
+"word": "עַשְׁתֹּרֶת",
+"translit": "Ashtoret",
+"strong": "H6253",
+"meaning": "deusa da fertilidade e da guerra"
+}
+],
+"definition": "Deusas cananeias ligadas a Baal. Aserá era cultuada em postes ou árvores sagradas, que Deus mandou derrubar. Astarote (Astarte, Ishtar) era deusa da fertilidade; até Salomão, na velhice, seguiu Astarote, deusa dos sidônios.",
+"refs": [
+"Dt 16.21",
+"Jz 2.13",
+"1Rs 11.5",
+"2Rs 23.4-7"
+],
+"see": [
+"baal"
+],
+"domain": "espirituais"
+},
+{
+"id": "moloque",
+"term": "Moloque / Milcom",
+"kind": "nome",
+"forms": [
+"Moloque",
+"Milcom"
+],
+"original": [
+{
+"lang": "he",
+"word": "מֹלֶךְ",
+"translit": "Molekh",
+"strong": "H4432",
+"meaning": "provavelmente de melekh, “rei”"
+}
+],
+"definition": "Deus dos amonitas a quem se sacrificavam crianças no fogo. A Lei proibia isso com pena de morte, mas Salomão construiu um altar para ele, e os reis Acaz e Manassés queimaram os próprios filhos no vale de Hinom.",
+"refs": [
+"Lv 18.21",
+"Lv 20.2-5",
+"1Rs 11.5-7",
+"2Rs 23.10",
+"Jr 32.35"
+],
+"see": [
+"hinom"
+],
+"domain": "espirituais"
+},
+{
+"id": "dagom",
+"term": "Dagom",
+"kind": "nome",
+"forms": [
+"Dagom"
+],
+"original": [
+{
+"lang": "he",
+"word": "דָּגוֹן",
+"translit": "Dagon",
+"strong": "H1712",
+"meaning": "provavelmente de dagan, “cereal”"
+}
+],
+"definition": "Principal deus dos filisteus, deus dos cereais. Sansão derrubou o templo de Dagom em Gaza. Quando os filisteus puseram a arca da aliança no templo de Asdode, a estátua de Dagom amanheceu caída diante dela, de cabeça e mãos quebradas.",
+"refs": [
+"Jz 16.23-30",
+"1Sm 5.1-5"
+],
+"see": [
+"arca"
+],
+"domain": "espirituais"
+},
+{
+"id": "leviata",
+"term": "Leviatã",
+"kind": "nome",
+"forms": [
+"leviatã"
+],
+"original": [
+{
+"lang": "he",
+"word": "לִוְיָתָן",
+"translit": "livyatan",
+"strong": "H3882",
+"meaning": "o que se enrosca"
+}
+],
+"definition": "Monstro marinho poderoso, descrito em Jó 41 (talvez o crocodilo). Na poesia bíblica, também simboliza o caos e os poderes inimigos que só Deus pode vencer: “Naquele dia o Senhor castigará… o leviatã, a serpente veloz”.",
+"refs": [
+"Jó 41.1-34",
+"Sl 74.14",
+"Sl 104.26",
+"Is 27.1"
+],
+"domain": "espirituais"
+},
+{
+"id": "anatema",
+"term": "Anátema",
+"kind": "termo",
+"forms": [
+"anátema"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἀνάθεμα",
+"translit": "anáthema",
+"strong": "G331",
+"meaning": "o que é separado para destruição; maldito"
+},
+{
+"lang": "he",
+"word": "חֵרֶם",
+"translit": "cherem",
+"strong": "H2764",
+"meaning": "coisa consagrada à destruição"
+}
+],
+"definition": "No Antigo Testamento, cherem era o que ficava “consagrado” a Deus para ser destruído, como Jericó; Acã pecou ao pegar o anátema. No Novo Testamento, anáthema é maldição: Paulo diz que quem pregar outro evangelho “seja anátema”.",
+"refs": [
+"Js 6.17-18",
+"Js 7.1",
+"Gl 1.8-9",
+"1Co 16.22"
+],
+"domain": "pecado"
+},
+{
+"id": "adocao",
+"term": "Adoção",
+"kind": "termo",
+"forms": [
+"adoção"
+],
+"original": [
+{
+"lang": "gr",
+"word": "υἱοθεσία",
+"translit": "huiothesía",
+"strong": "G5206",
+"meaning": "colocação como filho"
+}
+],
+"definition": "Paulo usa uma imagem do direito romano: o adotado recebia um novo nome, todos os direitos de filho e herdeiro, e suas dívidas antigas eram canceladas. Pelo Espírito de adoção, clamamos “Aba, Pai”.",
+"refs": [
+"Rm 8.15-17",
+"Gl 4.4-7",
+"Ef 1.5"
+],
+"see": [
+"aba",
+"unigenito"
+],
+"domain": "salvacao"
+},
+{
+"id": "primogenito",
+"term": "Primogênito",
+"kind": "termo",
+"forms": [
+"primogênito"
+],
+"original": [
+{
+"lang": "he",
+"word": "בְּכוֹר",
+"translit": "bekhor",
+"strong": "H1060",
+"meaning": "primeiro filho"
+},
+{
+"lang": "gr",
+"word": "πρωτότοκος",
+"translit": "prōtótokos",
+"strong": "G4416",
+"meaning": "primogênito; o de primeira posição"
+}
+],
+"definition": "O primeiro filho tinha porção dobrada da herança e a liderança da família — por isso Jacó quis o direito de Esaú. Todos os primogênitos pertenciam a Deus desde a Páscoa no Egito. Jesus é chamado “primogênito de toda a criação”, não por ter sido criado, mas por ter a primazia sobre tudo.",
+"refs": [
+"Gn 25.31-34",
+"Êx 13.1-2",
+"Dt 21.17",
+"Cl 1.15-18"
+],
+"see": [
+"unigenito"
+],
+"domain": "pessoas"
+},
+{
+"id": "eleicao",
+"term": "Eleição e predestinação",
+"kind": "termo",
+"forms": [
+"eleição",
+"predestinou"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἐκλογή",
+"translit": "eklogḗ",
+"strong": "G1589",
+"meaning": "escolha"
+},
+{
+"lang": "gr",
+"word": "προορίζω",
+"translit": "proorízō",
+"strong": "G4309",
+"meaning": "determinar de antemão, demarcar antes"
+}
+],
+"definition": "A escolha soberana de Deus de salvar e chamar um povo para si. Como conciliar a eleição com a responsabilidade humana é uma das grandes discussões da teologia: calvinistas enfatizam a soberania de Deus; arminianos e wesleyanos (tradição de onde vêm metodistas e pentecostais) enfatizam que Deus elege em Cristo os que creem, conforme a sua presciência.",
+"refs": [
+"Rm 8.29-30",
+"Ef 1.4-5",
+"1Pe 1.1-2",
+"2Pe 1.10"
+],
+"see": [
+"graca"
+],
+"domain": "salvacao"
+},
+{
+"id": "magos",
+"term": "Magos",
+"kind": "termo",
+"forms": [
+"magos"
+],
+"original": [
+{
+"lang": "gr",
+"word": "μάγος",
+"translit": "mágos",
+"strong": "G3097",
+"meaning": "sábio, astrólogo da Pérsia ou da Babilônia"
+}
+],
+"definition": "Sábios do Oriente, estudiosos dos astros (talvez da Pérsia ou da Babilônia, onde Daniel havia sido chefe dos sábios). Mateus não diz que eram reis nem que eram três: a tradição contou três por causa dos presentes — ouro, incenso e mirra.",
+"refs": [
+"Dn 2.48",
+"Mt 2.1-12",
+"At 13.6-8"
+],
+"domain": "pessoas"
+},
+{
+"id": "centuriao",
+"term": "Centurião",
+"kind": "termo",
+"forms": [
+"centurião"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἑκατοντάρχης",
+"translit": "hekatontárchēs",
+"strong": "G1543",
+"meaning": "comandante de cem soldados"
+},
+{
+"lang": "la",
+"word": "centurio",
+"translit": "centurio",
+"meaning": "comandante de uma centúria (cem homens)"
+}
+],
+"definition": "Oficial do exército romano que comandava cerca de cem soldados. Os centuriões do Novo Testamento aparecem sob boa luz: o de Cafarnaum, de fé admirável; o do Calvário, que disse “verdadeiramente este era Filho de Deus”; Cornélio, o primeiro gentio a receber o Espírito; e Júlio, que protegeu Paulo.",
+"refs": [
+"Mt 8.5-13",
+"Mc 15.39",
+"At 10.1-2",
+"At 27.1-3,43"
+],
+"see": [
+"gentios"
+],
+"domain": "pessoas"
+},
+{
+"id": "tetrarca",
+"term": "Tetrarca",
+"kind": "termo",
+"forms": [
+"tetrarca"
+],
+"original": [
+{
+"lang": "gr",
+"word": "τετραάρχης",
+"translit": "tetraárchēs",
+"strong": "G5076",
+"meaning": "governante de uma quarta parte"
+}
+],
+"definition": "Governante de uma parte de um reino, abaixo de um rei. Quando Herodes, o Grande, morreu, Roma dividiu o seu reino entre os filhos: Herodes Antipas foi tetrarca da Galileia — o que mandou matar João Batista e a quem Jesus chamou de “raposa”.",
+"refs": [
+"Mt 14.1-12",
+"Lc 3.1",
+"Lc 13.31-32",
+"Lc 23.7-12"
+],
+"domain": "pessoas"
+},
+{
+"id": "denario",
+"term": "Denário",
+"kind": "medida",
+"forms": [
+"denário",
+"denários"
+],
+"original": [
+{
+"lang": "gr",
+"word": "δηνάριον",
+"translit": "dēnárion",
+"strong": "G1220",
+"meaning": "moeda romana de prata"
+},
+{
+"lang": "la",
+"word": "denarius",
+"translit": "denarius",
+"meaning": "moeda de dez (asses) — daí “dinheiro”"
+}
+],
+"definition": "Moeda romana de prata, o salário de um dia de trabalho de um diarista (Mt 20.2). Tinha a imagem do imperador: por isso Jesus pediu um denário e disse “dai a César o que é de César”. A palavra “dinheiro” vem de denarius.",
+"refs": [
+"Mt 20.2",
+"Mt 22.19-21",
+"Lc 10.35",
+"Jo 12.5"
+],
+"see": [
+"talento",
+"dracma"
+],
+"domain": "medidas"
+},
+{
+"id": "talento",
+"term": "Talento",
+"kind": "medida",
+"forms": [
+"talento",
+"talentos"
+],
+"original": [
+{
+"lang": "he",
+"word": "כִּכָּר",
+"translit": "kikkar",
+"strong": "H3603",
+"meaning": "peso redondo; cerca de 34 kg"
+},
+{
+"lang": "gr",
+"word": "τάλαντον",
+"translit": "tálanton",
+"strong": "G5007",
+"meaning": "talento: peso ou soma de dinheiro"
+}
+],
+"definition": "A maior unidade de peso: cerca de 34 kg. Como soma de dinheiro, um talento de prata valia uns 6 mil denários — perto de 20 anos de salário. Na parábola, o servo perdoado devia 10 mil talentos, uma dívida impagável. Da parábola dos talentos veio o sentido de “talento” como habilidade.",
+"refs": [
+"Êx 38.24-27",
+"Mt 18.23-27",
+"Mt 25.14-30"
+],
+"see": [
+"denario",
+"siclo"
+],
+"domain": "medidas"
+},
+{
+"id": "siclo",
+"term": "Siclo",
+"kind": "medida",
+"forms": [
+"siclo",
+"siclos"
+],
+"original": [
+{
+"lang": "he",
+"word": "שֶׁקֶל",
+"translit": "sheqel",
+"strong": "H8255",
+"meaning": "peso; cerca de 11,4 gramas"
+}
+],
+"definition": "Unidade de peso (cerca de 11,4 g) usada para pesar prata e ouro, antes das moedas. Abraão pagou 400 siclos de prata pela caverna de Macpela, e José foi vendido por 20. Até hoje a moeda de Israel se chama shekel.",
+"refs": [
+"Gn 23.15-16",
+"Gn 37.28",
+"Êx 30.13",
+"Jr 32.9"
+],
+"see": [
+"talento",
+"mina"
+],
+"domain": "medidas"
+},
+{
+"id": "mina",
+"term": "Mina",
+"kind": "medida",
+"forms": [
+"mina",
+"minas"
+],
+"original": [
+{
+"lang": "gr",
+"word": "μνᾶ",
+"translit": "mná",
+"strong": "G3414",
+"meaning": "mina: 100 dracmas"
+},
+{
+"lang": "he",
+"word": "מָנֶה",
+"translit": "maneh",
+"strong": "H4488",
+"meaning": "mina: cerca de 50 siclos"
+}
+],
+"definition": "Peso ou soma de dinheiro equivalente a cerca de 100 denários — uns três meses de salário. Na parábola das minas, cada servo recebeu uma mina para negociar até a volta do senhor. “Mene”, na escrita na parede de Babilônia, também vem de mina.",
+"refs": [
+"Lc 19.12-26",
+"Ed 2.69"
+],
+"see": [
+"talento",
+"mene-tequel"
+],
+"domain": "medidas"
+},
+{
+"id": "dracma",
+"term": "Dracma",
+"kind": "medida",
+"forms": [
+"dracma",
+"dracmas"
+],
+"original": [
+{
+"lang": "gr",
+"word": "δραχμή",
+"translit": "drachmḗ",
+"strong": "G1406",
+"meaning": "moeda grega de prata"
+}
+],
+"definition": "Moeda grega de prata, de valor parecido com o denário (um dia de trabalho). Na parábola, a mulher tinha dez dracmas — talvez as moedas do seu dote — e varreu a casa inteira até achar a que se perdeu. O imposto do templo era de duas dracmas.",
+"refs": [
+"Lc 15.8-10",
+"Mt 17.24-27"
+],
+"see": [
+"denario"
+],
+"domain": "medidas"
+},
+{
+"id": "covado",
+"term": "Côvado",
+"kind": "medida",
+"forms": [
+"côvado",
+"côvados"
+],
+"original": [
+{
+"lang": "he",
+"word": "אַמָּה",
+"translit": "ammah",
+"strong": "H520",
+"meaning": "antebraço; do cotovelo à ponta dos dedos"
+}
+],
+"definition": "Medida de comprimento do cotovelo à ponta do dedo médio: cerca de 45 cm. A arca de Noé tinha 300 × 50 × 30 côvados (uns 135 × 22 × 13 m), e Golias, “seis côvados e um palmo” (quase 3 m).",
+"refs": [
+"Gn 6.15",
+"Êx 25.10",
+"1Sm 17.4",
+"Mt 6.27"
+],
+"see": [
+"estadio"
+],
+"domain": "medidas"
+},
+{
+"id": "estadio",
+"term": "Estádio",
+"kind": "medida",
+"forms": [
+"estádios"
+],
+"original": [
+{
+"lang": "gr",
+"word": "στάδιον",
+"translit": "stádion",
+"strong": "G4712",
+"meaning": "cerca de 185 metros; também a pista de corrida"
+}
+],
+"definition": "Medida de distância de cerca de 185 metros — o comprimento da pista de corrida grega, de onde vem a palavra “estádio”. Emaús ficava a 60 estádios (uns 11 km) de Jerusalém, e Betânia a 15 (menos de 3 km).",
+"refs": [
+"Lc 24.13",
+"Jo 11.18",
+"Jo 6.19",
+"1Co 9.24"
+],
+"see": [
+"covado"
+],
+"domain": "medidas"
+},
+{
+"id": "efa",
+"term": "Efa",
+"kind": "medida",
+"forms": [
+"efa"
+],
+"original": [
+{
+"lang": "he",
+"word": "אֵיפָה",
+"translit": "efah",
+"strong": "H374",
+"meaning": "medida de cereais, cerca de 22 litros"
+}
+],
+"definition": "Medida para grãos, de cerca de 22 litros. Rute recolheu “quase um efa de cevada” num só dia — uma colheita farta. Os profetas condenavam o “efa diminuído”, a balança falsa dos comerciantes desonestos.",
+"refs": [
+"Rt 2.17",
+"Am 8.5",
+"Mq 6.10-11"
+],
+"see": [
+"siclo"
+],
+"domain": "medidas"
+},
+{
+"id": "hama",
+"term": "Hamã",
+"kind": "nome",
+"forms": [
+"Hamã"
+],
+"original": [
+{
+"lang": "he",
+"word": "הָמָן",
+"translit": "Haman",
+"strong": "H2001",
+"meaning": "nome persa"
+}
+],
+"definition": "Primeiro-ministro do rei Assuero (Xerxes I), o “agagita” — talvez descendente de Agague, rei dos amalequitas. Furioso porque Mardoqueu não se curvava diante dele, planejou exterminar todos os judeus do império. Foi enforcado na forca que preparou para Mardoqueu.",
+"refs": [
+"Et 3.1-6",
+"Et 7.6-10",
+"1Sm 15.8"
+],
+"see": [
+"purim"
+],
+"domain": "pessoas"
+},
+{
+"id": "jesurum",
+"term": "Jesurum",
+"kind": "nome",
+"forms": [
+"Jesurum"
+],
+"original": [
+{
+"lang": "he",
+"word": "יְשֻׁרוּן",
+"translit": "Yeshurun",
+"strong": "H3484",
+"meaning": "o reto, o justo — nome carinhoso de Israel"
+}
+],
+"definition": "Nome poético e carinhoso para Israel, que aparece quatro vezes. Vem de yashar, “reto”: é como Deus via o povo que deveria ser. Em Isaías: “Não temas, ó Jacó, servo meu, e tu, Jesurum, a quem escolhi”.",
+"refs": [
+"Dt 32.15",
+"Dt 33.5",
+"Dt 33.26",
+"Is 44.2"
+],
+"domain": "pessoas"
+},
+{
+"id": "cefas",
+"term": "Cefas (Pedro)",
+"kind": "nome",
+"forms": [
+"Cefas"
+],
+"original": [
+{
+"lang": "ar",
+"word": "כֵּיפָא",
+"translit": "Kefa",
+"strong": "G2786",
+"meaning": "pedra, rocha"
+},
+{
+"lang": "gr",
+"word": "Πέτρος",
+"translit": "Pétros",
+"strong": "G4074",
+"meaning": "pedra"
+}
+],
+"definition": "O nome que Jesus deu a Simão, filho de Jonas: em aramaico Kefa, em grego Pétros — “pedra”. Paulo o chama quase sempre de Cefas.",
+"refs": [
+"Jo 1.42",
+"Mt 16.18",
+"1Co 15.5",
+"Gl 2.9"
+],
+"domain": "pessoas"
+},
+{
+"id": "didimo",
+"term": "Dídimo (Tomé)",
+"kind": "nome",
+"forms": [
+"Dídimo"
+],
+"original": [
+{
+"lang": "gr",
+"word": "Δίδυμος",
+"translit": "Dídymos",
+"strong": "G1324",
+"meaning": "gêmeo"
+},
+{
+"lang": "ar",
+"word": "תְּאוֹמָא",
+"translit": "Te'oma",
+"meaning": "gêmeo — daí “Tomé”"
+}
+],
+"definition": "Tomé e Dídimo querem dizer a mesma coisa — “gêmeo” — em aramaico e em grego. Lembrado pela dúvida, Tomé fez a confissão mais alta dos Evangelhos: “Senhor meu, e Deus meu!”. A tradição diz que levou o Evangelho até a Índia.",
+"refs": [
+"Jo 11.16",
+"Jo 20.24-29",
+"Jo 21.2"
+],
+"domain": "pessoas"
+},
+{
+"id": "alfa-omega",
+"term": "Alfa e Ômega",
+"kind": "expressao",
+"forms": [
+"Alfa e o Ômega",
+"Alfa"
+],
+"original": [
+{
+"lang": "gr",
+"word": "Α · Ω",
+"translit": "álpha · ō méga",
+"strong": "G1",
+"meaning": "a primeira e a última letra do alfabeto grego"
+}
+],
+"definition": "Título de Deus e de Cristo em Apocalipse: o princípio e o fim, aquele que está antes de tudo e conduz a história à sua conclusão. Equivale a dizer “de A a Z”.",
+"refs": [
+"Is 44.6",
+"Ap 1.8",
+"Ap 21.6",
+"Ap 22.13"
+],
+"see": [
+"eu-sou"
+],
+"domain": "deus"
+},
+{
+"id": "besta",
+"term": "Besta",
+"kind": "termo",
+"forms": [
+"besta"
+],
+"original": [
+{
+"lang": "gr",
+"word": "θηρίον",
+"translit": "thēríon",
+"strong": "G2342",
+"meaning": "fera, animal selvagem"
+}
+],
+"definition": "Em Daniel 7 e Apocalipse 13, as feras representam reinos e poderes humanos que se levantam contra Deus e perseguem o seu povo. A besta do mar recebe poder do dragão; a da terra faz todos receberem uma marca. O Cordeiro as vence no fim.",
+"refs": [
+"Dn 7.2-8",
+"Dn 7.17",
+"Ap 13.1-8",
+"Ap 19.19-20"
+],
+"see": [
+"cordeiro"
+],
+"domain": "pecado"
+},
+{
+"id": "bem-aventurado",
+"term": "Bem-aventurado",
+"kind": "termo",
+"forms": [
+"bem-aventurados",
+"bem-aventurado"
+],
+"original": [
+{
+"lang": "gr",
+"word": "μακάριος",
+"translit": "makários",
+"strong": "G3107",
+"meaning": "feliz, abençoado, afortunado"
+},
+{
+"lang": "he",
+"word": "אַשְׁרֵי",
+"translit": "ashrei",
+"strong": "H835",
+"meaning": "feliz! — exclamação"
+}
+],
+"definition": "Mais do que “feliz” no sentido de alegre: é quem está numa condição abençoada diante de Deus. O livro dos Salmos começa com ashrei — “Bem-aventurado o homem que não anda segundo o conselho dos ímpios” — e o Sermão do Monte começa com nove “bem-aventuranças”.",
+"refs": [
+"Sl 1.1-3",
+"Sl 32.1-2",
+"Mt 5.3-12",
+"Ap 1.3"
+],
+"domain": "virtudes"
+},
+{
+"id": "oracao",
+"term": "Oração",
+"kind": "termo",
+"forms": [
+"oração"
+],
+"original": [
+{
+"lang": "he",
+"word": "תְּפִלָּה",
+"translit": "tefilah",
+"strong": "H8605",
+"meaning": "oração, súplica, intercessão"
+},
+{
+"lang": "gr",
+"word": "προσευχή",
+"translit": "proseuchḗ",
+"strong": "G4335",
+"meaning": "oração dirigida a Deus"
+}
+],
+"definition": "Falar com Deus. A Bíblia usa muitas formas: louvor, agradecimento, confissão, pedido e intercessão. Jesus ensinou a orar ao Pai em secreto e deixou o Pai Nosso como modelo. A igreja primitiva “perseverava na oração”, e a casa de Deus é chamada “casa de oração para todos os povos”.",
+"refs": [
+"1Sm 1.10-13",
+"Is 56.7",
+"Mt 6.5-13",
+"At 2.42",
+"Fp 4.6-7"
+],
+"see": [
+"jejum"
+],
+"domain": "culto"
+},
+{
+"id": "jejum",
+"term": "Jejum",
+"kind": "termo",
+"forms": [
+"jejum"
+],
+"original": [
+{
+"lang": "he",
+"word": "צוֹם",
+"translit": "tsom",
+"strong": "H6685",
+"meaning": "jejum"
+},
+{
+"lang": "gr",
+"word": "νηστεία",
+"translit": "nēsteía",
+"strong": "G3521",
+"meaning": "abstenção de alimento"
+}
+],
+"definition": "Abster-se de comida por um tempo para buscar a Deus em humilhação, arrependimento ou necessidade. A Lei só ordenava o jejum do Dia da Expiação, mas Moisés, Ester, Daniel, Neemias, Jesus e a igreja de Antioquia jejuaram. Isaías ensina o jejum que agrada a Deus: soltar as ligaduras da impiedade.",
+"refs": [
+"Et 4.16",
+"Is 58.6-7",
+"Jl 2.12",
+"Mt 6.16-18",
+"At 13.2-3"
+],
+"see": [
+"oracao"
+],
+"domain": "culto"
+},
+{
+"id": "reino-de-deus",
+"term": "Reino de Deus / Reino dos céus",
+"kind": "expressao",
+"forms": [
+"reino de Deus",
+"reino dos céus"
+],
+"original": [
+{
+"lang": "gr",
+"word": "βασιλεία τοῦ θεοῦ",
+"translit": "basileía tou theoû",
+"strong": "G932",
+"meaning": "o reinado, o governo de Deus"
+}
+],
+"definition": "O tema central da pregação de Jesus. Não é um território, mas o reinado de Deus em ação: já presente em Jesus (curas, perdão, libertação) e que virá em plenitude na sua volta. Mateus, escrevendo a judeus, prefere “reino dos céus”, evitando pronunciar o nome de Deus.",
+"refs": [
+"Mc 1.15",
+"Mt 6.10",
+"Mt 13.31-33",
+"Lc 17.20-21",
+"Rm 14.17"
+],
+"see": [
+"evangelho"
+],
+"domain": "salvacao"
+},
+{
+"id": "vida-eterna",
+"term": "Vida eterna",
+"kind": "expressao",
+"forms": [
+"vida eterna"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ζωὴ αἰώνιος",
+"translit": "zōḗ aiṓnios",
+"strong": "G2222",
+"meaning": "vida da era que há de vir; vida plena, sem fim"
+}
+],
+"definition": "Não é só uma vida que dura para sempre: é a vida de Deus, que começa já agora para quem crê. Jesus a define assim: “a vida eterna é esta: que te conheçam a ti, o único Deus verdadeiro, e a Jesus Cristo”.",
+"refs": [
+"Jo 3.16",
+"Jo 5.24",
+"Jo 17.3",
+"Rm 6.23",
+"1Jo 5.11-13"
+],
+"see": [
+"salvacao"
+],
+"domain": "salvacao"
+},
+{
+"id": "vulgata",
+"term": "Vulgata",
+"kind": "termo",
+"original": [
+{
+"lang": "la",
+"word": "Vulgata",
+"translit": "Vulgata (editio vulgata)",
+"meaning": "edição comum, popular"
+}
+],
+"definition": "A tradução da Bíblia para o latim feita por Jerônimo, a pedido do papa Dâmaso, entre 382 e 405 d.C. Foi a Bíblia da igreja do Ocidente por mais de mil anos e a primeira grande obra impressa por Gutenberg (c. 1455). Muitas palavras teológicas do português vêm dela: graça, justificação, testamento, sacramento.",
+"refs": [
+"Ne 8.8"
+],
+"see": [
+"septuaginta",
+"alianca"
+],
+"domain": "latim"
+},
+{
+"id": "septuaginta",
+"term": "Septuaginta (LXX)",
+"kind": "termo",
+"original": [
+{
+"lang": "gr",
+"word": "Ἑβδομήκοντα",
+"translit": "Hebdomḗkonta",
+"meaning": "setenta"
+},
+{
+"lang": "la",
+"word": "Septuaginta",
+"translit": "Septuaginta",
+"meaning": "setenta"
+}
+],
+"definition": "A tradução do Antigo Testamento hebraico para o grego, feita em Alexandria (Egito) a partir do século III a.C. O nome vem da tradição de que 70 (ou 72) sábios a traduziram. Era a Bíblia dos judeus que falavam grego e a mais citada pelos apóstolos no Novo Testamento.",
+"see": [
+"vulgata"
+],
+"domain": "latim"
+},
+{
+"id": "sola-scriptura",
+"term": "Sola Scriptura (e os cinco “solas”)",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Sola Scriptura",
+"translit": "Sola Scriptura",
+"meaning": "somente a Escritura"
+},
+{
+"lang": "la",
+"word": "Sola fide · Sola gratia",
+"translit": "Sola fide · Sola gratia",
+"meaning": "somente a fé · somente a graça"
+},
+{
+"lang": "la",
+"word": "Solus Christus · Soli Deo gloria",
+"translit": "Solus Christus · Soli Deo gloria",
+"meaning": "somente Cristo · glória somente a Deus"
+}
+],
+"definition": "Os cinco lemas que resumem a Reforma Protestante: a Escritura é a autoridade final; a salvação é pela graça, por meio da fé, somente por causa de Cristo; e toda a glória é de Deus. Johann Sebastian Bach assinava as suas partituras com as iniciais S.D.G. (Soli Deo Gloria).",
+"refs": [
+"2Tm 3.16-17",
+"Ef 2.8-9",
+"At 4.12",
+"1Co 10.31"
+],
+"see": [
+"justificacao",
+"graca",
+"fe"
+],
+"domain": "latim"
+},
+{
+"id": "semper-reformanda",
+"term": "Ecclesia reformata, semper reformanda",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Ecclesia reformata, semper reformanda",
+"translit": "Ecclesia reformata, semper reformanda",
+"meaning": "igreja reformada, sempre se reformando"
+}
+],
+"definition": "Lema ligado à Reforma, popularizado no século XVII na Holanda: a igreja nunca chega a um ponto final, mas deve continuamente voltar à Palavra de Deus e ser corrigida por ela.",
+"refs": [
+"Rm 12.2",
+"2Tm 3.16"
+],
+"see": [
+"sola-scriptura"
+],
+"domain": "latim"
+},
+{
+"id": "post-tenebras-lux",
+"term": "Post tenebras lux",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Post tenebras lux",
+"translit": "Post tenebras lux",
+"meaning": "depois das trevas, a luz"
+}
+],
+"definition": "Lema de Genebra, a cidade de Calvino, inspirado na Vulgata (Jó 17.12: “post tenebras spero lucem”, depois das trevas espero a luz). Os reformadores o usavam para dizer que a Bíblia, aberta ao povo, trouxe luz depois de séculos de escuridão. Está gravado no Muro dos Reformadores, em Genebra.",
+"refs": [
+"Jó 17.12",
+"Jo 1.5",
+"2Co 4.6"
+],
+"see": [
+"sola-scriptura"
+],
+"domain": "latim"
+},
+{
+"id": "ecce-homo",
+"term": "Ecce Homo",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Ecce homo",
+"translit": "Ecce homo",
+"meaning": "Eis o homem"
+}
+],
+"definition": "Palavras de Pilatos ao apresentar Jesus açoitado, com a coroa de espinhos e o manto de púrpura, diante da multidão, segundo a Vulgata. Tornou-se tema de inúmeras pinturas.",
+"refs": [
+"Jo 19.5"
+],
+"see": [
+"inri",
+"gabata"
+],
+"domain": "latim"
+},
+{
+"id": "inri",
+"term": "INRI",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Iesus Nazarenus Rex Iudaeorum",
+"translit": "I.N.R.I.",
+"meaning": "Jesus Nazareno, Rei dos Judeus"
+}
+],
+"definition": "Iniciais da inscrição em latim que Pilatos mandou pôr na cruz. João conta que estava escrita em hebraico, latim e grego — as línguas da religião, do poder e da cultura —, e que Pilatos se recusou a mudá-la: “O que escrevi, escrevi”.",
+"refs": [
+"Jo 19.19-22",
+"Mt 27.37"
+],
+"see": [
+"golgota",
+"ecce-homo"
+],
+"domain": "latim"
+},
+{
+"id": "agnus-dei",
+"term": "Agnus Dei",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Agnus Dei, qui tollis peccata mundi",
+"translit": "Agnus Dei",
+"meaning": "Cordeiro de Deus, que tiras o pecado do mundo"
+}
+],
+"definition": "As palavras de João Batista na Vulgata, que se tornaram um dos hinos mais antigos da liturgia cristã e tema de muitas composições musicais.",
+"refs": [
+"Jo 1.29",
+"Jo 1.36"
+],
+"see": [
+"cordeiro"
+],
+"domain": "cristo"
+},
+{
+"id": "magnificat",
+"term": "Magnificat",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Magnificat anima mea Dominum",
+"translit": "Magnificat",
+"meaning": "A minha alma engrandece ao Senhor"
+}
+],
+"definition": "O cântico de Maria na casa de Isabel, chamado pela primeira palavra na Vulgata. Junto com o Benedictus (de Zacarias), o Gloria in excelsis (dos anjos) e o Nunc dimittis (de Simeão), forma os quatro cânticos de Lucas 1–2, cantados pela igreja há séculos.",
+"refs": [
+"Lc 1.46-55",
+"Lc 1.68-79",
+"Lc 2.14",
+"Lc 2.29-32"
+],
+"see": [
+"gloria-in-excelsis"
+],
+"domain": "latim"
+},
+{
+"id": "gloria-in-excelsis",
+"term": "Gloria in excelsis Deo",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Gloria in excelsis Deo",
+"translit": "Gloria in excelsis Deo",
+"meaning": "Glória a Deus nas alturas"
+}
+],
+"definition": "O canto dos anjos aos pastores de Belém, na Vulgata. Deu origem a um dos hinos mais antigos da igreja (o “Glória”), já cantado no século IV.",
+"refs": [
+"Lc 2.13-14"
+],
+"see": [
+"magnificat",
+"gloria"
+],
+"domain": "latim"
+},
+{
+"id": "pater-noster",
+"term": "Pater Noster",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Pater noster, qui es in caelis",
+"translit": "Pater noster",
+"meaning": "Pai nosso, que estás nos céus"
+}
+],
+"definition": "O Pai Nosso em latim, a oração que Jesus ensinou aos discípulos. Por mil anos foi rezado em latim em toda a Europa ocidental; os reformadores insistiram que fosse ensinado na língua do povo.",
+"refs": [
+"Mt 6.9-13",
+"Lc 11.1-4"
+],
+"see": [
+"oracao",
+"aba"
+],
+"domain": "latim"
+},
+{
+"id": "fiat-lux",
+"term": "Fiat lux",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Fiat lux",
+"translit": "Fiat lux",
+"meaning": "Haja luz (faça-se a luz)"
+}
+],
+"definition": "As primeiras palavras de Deus na criação, segundo a Vulgata (Gn 1.3: “Dixitque Deus: Fiat lux. Et facta est lux”). Tornou-se lema de muitas universidades e instituições.",
+"refs": [
+"Gn 1.3",
+"2Co 4.6"
+],
+"see": [
+"verbo"
+],
+"domain": "latim"
+},
+{
+"id": "imago-dei",
+"term": "Imago Dei",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "imago Dei",
+"translit": "imago Dei",
+"meaning": "imagem de Deus"
+},
+{
+"lang": "he",
+"word": "צֶלֶם",
+"translit": "tselem",
+"strong": "H6754",
+"meaning": "imagem"
+}
+],
+"definition": "O ser humano foi criado “à imagem e semelhança de Deus”: capaz de se relacionar com Ele, de amar, de criar e de governar a criação. Por isso toda vida humana tem dignidade. Cristo é a imagem perfeita do Deus invisível, e a salvação restaura em nós essa imagem.",
+"refs": [
+"Gn 1.26-27",
+"Gn 9.6",
+"Cl 1.15",
+"Cl 3.10"
+],
+"domain": "humano"
+},
+{
+"id": "anno-domini",
+"term": "Anno Domini (a.C. e d.C.)",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Anno Domini",
+"translit": "A.D.",
+"meaning": "no ano do Senhor"
+}
+],
+"definition": "A contagem dos anos a partir do nascimento de Cristo foi proposta pelo monge Dionísio, o Exíguo, em 525 d.C. Ele errou por alguns anos: Herodes morreu em 4 a.C., e Jesus nasceu antes disso, provavelmente entre 6 e 4 a.C.",
+"refs": [
+"Mt 2.1",
+"Lc 2.1-2"
+],
+"domain": "festas"
+},
+{
+"id": "coram-deo",
+"term": "Coram Deo",
+"kind": "expressao",
+"original": [
+{
+"lang": "la",
+"word": "Coram Deo",
+"translit": "Coram Deo",
+"meaning": "diante da face de Deus"
+}
+],
+"definition": "Expressão cara a Lutero e Calvino: viver toda a vida — o trabalho, a família, o culto — na presença de Deus, sabendo que Ele vê. Não há separação entre o “sagrado” e o “comum”.",
+"refs": [
+"Gn 17.1",
+"Sl 139.1-12",
+"Cl 3.23"
+],
+"domain": "latim"
+},
+{
+"id": "lucifer",
+"term": "Lúcifer",
+"kind": "nome",
+"original": [
+{
+"lang": "la",
+"word": "lucifer",
+"translit": "lucifer",
+"meaning": "portador da luz; a estrela da manhã (o planeta Vênus)"
+},
+{
+"lang": "he",
+"word": "הֵילֵל",
+"translit": "helel",
+"strong": "H1966",
+"meaning": "o que brilha"
+}
+],
+"definition": "Em Isaías 14.12, o profeta zomba do rei da Babilônia chamando-o de “estrela da manhã, filha da alva”; a Vulgata traduziu por lucifer. Muitos intérpretes viram no texto também a queda de Satanás, e o nome passou a ser usado para o diabo. Curiosamente, em 2 Pedro 1.19 a Vulgata usa a mesma palavra para Cristo.",
+"refs": [
+"Is 14.12-15",
+"Lc 10.18",
+"Ap 22.16"
+],
+"see": [
+"satanas"
+],
+"domain": "espirituais"
+},
+{
+"id": "amar",
+"term": "Amar",
+"kind": "verbo",
+"forms": [
+"amarás",
+"amou"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἀγαπάω",
+"translit": "agapáō",
+"strong": "G25",
+"meaning": "amar com amor que se doa"
+},
+{
+"lang": "gr",
+"word": "φιλέω",
+"translit": "philéō",
+"strong": "G5368",
+"meaning": "amar como amigo, ter afeição"
+},
+{
+"lang": "he",
+"word": "אָהַב",
+"translit": "ahav",
+"strong": "H157",
+"meaning": "amar"
+}
+],
+"definition": "O Novo Testamento usa sobretudo dois verbos: agapáō, o amor que escolhe o bem do outro, e philéō, a afeição de amigo. Em João 21, Jesus pergunta duas vezes a Pedro com agapáō e, na terceira, desce ao verbo que Pedro vinha usando, philéō — muitos veem nisso Jesus indo ao encontro de Pedro. Em hebraico, ahav serve para todo tipo de amor, de Deus e humano.",
+"refs": [
+"Dt 6.5",
+"Jo 3.16",
+"Jo 21.15-17",
+"1Jo 4.19"
+],
+"see": [
+"amor",
+"benignidade"
+],
+"inflections": [
+{
+"lang": "he",
+"word": "וְאָהַבְתָּ",
+"translit": "ve'ahavta",
+"parsing": "Qal, perfeito com waw consecutivo, 2ª pessoa masculino singular",
+"gloss": "Amarás",
+"ref": "Dt 6.5",
+"note": "Em hebraico, o perfeito com “e” (waw consecutivo) passa a ter valor de futuro e, aqui, de mandamento: “e amarás”."
+},
+{
+"lang": "gr",
+"word": "ἠγάπησεν",
+"translit": "ēgápēsen",
+"parsing": "Aoristo, indicativo, ativo, 3ª pessoa do singular",
+"gloss": "amou",
+"ref": "Jo 3.16",
+"note": "O aoristo apresenta a ação como um fato completo: Deus amou — e o deu."
+},
+{
+"lang": "gr",
+"word": "ἀγαπήσεις",
+"translit": "agapḗseis",
+"parsing": "Futuro, indicativo, ativo, 2ª pessoa do singular",
+"gloss": "Amarás",
+"ref": "Mt 22.37",
+"note": "Jesus cita o Shemá; o futuro tem força de ordem."
+},
+{
+"lang": "gr",
+"word": "ἀγαπᾶτε",
+"translit": "agapâte",
+"parsing": "Presente, subjuntivo, ativo, 2ª pessoa do plural",
+"gloss": "que vos ameis",
+"ref": "Jo 15.12",
+"note": "O presente indica ação contínua: que vos ameis sempre, como hábito de vida."
+},
+{
+"lang": "gr",
+"word": "ἀγαπᾷς",
+"translit": "agapâs",
+"parsing": "Presente, indicativo, ativo, 2ª pessoa do singular",
+"gloss": "amas-me",
+"ref": "Jo 21.15"
+},
+{
+"lang": "gr",
+"word": "φιλεῖς",
+"translit": "phileîs",
+"parsing": "Presente, indicativo, ativo, 2ª pessoa do singular (de philéō)",
+"gloss": "amas-me",
+"ref": "Jo 21.17",
+"note": "Na terceira pergunta, Jesus usa o verbo da amizade."
+}
+],
+"domain": "virtudes"
+},
+{
+"id": "crer",
+"term": "Crer",
+"kind": "verbo",
+"forms": [
+"crê",
+"crede",
+"creu"
+],
+"original": [
+{
+"lang": "gr",
+"word": "πιστεύω",
+"translit": "pisteúō",
+"strong": "G4100",
+"meaning": "crer, confiar, entregar-se a"
+},
+{
+"lang": "he",
+"word": "אָמַן",
+"translit": "aman",
+"strong": "H539",
+"meaning": "ser firme; no Hifil (he'emin): apoiar-se, crer"
+}
+],
+"definition": "Crer, na Bíblia, não é só concordar com uma informação: é apoiar-se em alguém. O verbo grego vem da mesma família de pístis (fé). João usa muito a construção “crer em” (pisteúō eis), literalmente “crer para dentro de”: uma confiança que se entrega a Jesus. O hebraico he'emin, de onde vem “amém”, é “apoiar-se firmemente”.",
+"refs": [
+"Gn 15.6",
+"Jo 3.16",
+"At 16.31",
+"Rm 10.9-10"
+],
+"see": [
+"fe",
+"amem"
+],
+"inflections": [
+{
+"lang": "gr",
+"word": "πιστεύων",
+"translit": "pisteúōn",
+"parsing": "Particípio, presente, ativo, masculino singular",
+"gloss": "o que crê",
+"ref": "Jo 3.16",
+"note": "O particípio presente descreve uma pessoa marcada pela fé contínua: “todo o que vai crendo”."
+},
+{
+"lang": "gr",
+"word": "ἐπίστευσεν",
+"translit": "epísteusen",
+"parsing": "Aoristo, indicativo, ativo, 3ª pessoa do singular",
+"gloss": "Creu",
+"ref": "Rm 4.3",
+"note": "Um ato decisivo de confiança: Abraão creu."
+},
+{
+"lang": "gr",
+"word": "πίστευε",
+"translit": "písteue",
+"parsing": "Presente, imperativo, ativo, 2ª pessoa do singular",
+"gloss": "crê somente",
+"ref": "Mc 5.36",
+"note": "A Jairo, que acabava de saber da morte da filha: “continua crendo”."
+},
+{
+"lang": "gr",
+"word": "πίστευσον",
+"translit": "písteuson",
+"parsing": "Aoristo, imperativo, ativo, 2ª pessoa do singular",
+"gloss": "Crê",
+"ref": "At 16.31",
+"note": "Ao carcereiro, um chamado a uma decisão: “põe a tua confiança no Senhor Jesus”."
+}
+],
+"domain": "virtudes"
+},
+{
+"id": "salvar",
+"term": "Salvar",
+"kind": "verbo",
+"forms": [
+"salvou",
+"salva-nos",
+"salvos"
+],
+"original": [
+{
+"lang": "gr",
+"word": "σῴζω",
+"translit": "sṓzō",
+"strong": "G4982",
+"meaning": "salvar, livrar, curar, preservar"
+},
+{
+"lang": "he",
+"word": "יָשַׁע",
+"translit": "yasha'",
+"strong": "H3467",
+"meaning": "livrar, salvar, dar vitória (no Hifil)"
+}
+],
+"definition": "Um só verbo grego cobre salvar de um perigo, curar uma doença e salvar do pecado — o contexto decide. Os tempos verbais mostram que a salvação tem passado, presente e futuro: fomos salvos, estamos sendo salvos e seremos salvos. O hebraico yasha' dá origem a Yeshua (Jesus) e a “hosana”.",
+"refs": [
+"Mt 1.21",
+"Mc 5.34",
+"Ef 2.8",
+"At 16.31"
+],
+"see": [
+"salvacao",
+"salvador",
+"hosana"
+],
+"senses": [
+{
+"sense": "Livrar de um perigo físico",
+"refs": [
+"Mt 8.25",
+"Mt 14.30"
+],
+"note": "“Salva-nos, Senhor, que estamos perecendo”: os discípulos no barco."
+},
+{
+"sense": "Curar uma doença",
+"refs": [
+"Mc 5.34",
+"Tg 5.15"
+],
+"note": "“A tua fé te salvou” (sésōken): a mulher do fluxo de sangue foi curada — e mais do que isso."
+},
+{
+"sense": "Salvar do pecado e da condenação",
+"refs": [
+"Mt 1.21",
+"Ef 2.8",
+"1Tm 1.15"
+],
+"note": "O sentido mais importante no Novo Testamento."
+},
+{
+"sense": "Salvação final, no fim dos tempos",
+"refs": [
+"Rm 5.9",
+"Rm 13.11",
+"Mt 24.13"
+],
+"note": "A plenitude da salvação, na volta de Cristo."
+}
+],
+"inflections": [
+{
+"lang": "gr",
+"word": "σεσῳσμένοι",
+"translit": "sesōsménoi",
+"parsing": "Particípio, perfeito, passivo, masculino plural",
+"gloss": "sois salvos",
+"ref": "Ef 2.8",
+"note": "O perfeito indica uma ação passada com efeito permanente: fostes salvos e assim permaneceis."
+},
+{
+"lang": "gr",
+"word": "σῴζεσθε",
+"translit": "sṓzesthe",
+"parsing": "Presente, indicativo, passivo, 2ª pessoa do plural",
+"gloss": "sois salvos",
+"ref": "1Co 15.2",
+"note": "O presente mostra um processo: “estais sendo salvos”."
+},
+{
+"lang": "gr",
+"word": "ἐσώθημεν",
+"translit": "esṓthēmen",
+"parsing": "Aoristo, indicativo, passivo, 1ª pessoa do plural",
+"gloss": "fomos salvos",
+"ref": "Rm 8.24",
+"note": "Fato completo no passado, “em esperança”."
+},
+{
+"lang": "gr",
+"word": "σωθήσῃ",
+"translit": "sōthḗsē",
+"parsing": "Futuro, indicativo, passivo, 2ª pessoa do singular",
+"gloss": "serás salvo",
+"ref": "At 16.31"
+},
+{
+"lang": "gr",
+"word": "σέσωκεν",
+"translit": "sésōken",
+"parsing": "Perfeito, indicativo, ativo, 3ª pessoa do singular",
+"gloss": "te salvou",
+"ref": "Mc 5.34",
+"note": "Usado para uma cura física completa."
+},
+{
+"lang": "gr",
+"word": "σῶσον",
+"translit": "sôson",
+"parsing": "Aoristo, imperativo, ativo, 2ª pessoa do singular",
+"gloss": "Salva-nos",
+"ref": "Mt 8.25",
+"note": "Um pedido urgente."
+},
+{
+"lang": "he",
+"word": "הוֹשִׁיעָה נָּא",
+"translit": "hoshi'ah na",
+"parsing": "Hifil, imperativo, 2ª pessoa masculino singular, com partícula de pedido",
+"gloss": "salva, nós te pedimos",
+"ref": "Sl 118.25",
+"note": "Daqui vem “hosana”, o grito da entrada triunfal."
+}
+],
+"domain": "salvacao"
+},
+{
+"id": "consumado",
+"term": "Está consumado",
+"kind": "verbo",
+"forms": [
+"está consumado"
+],
+"original": [
+{
+"lang": "gr",
+"word": "τετέλεσται",
+"translit": "tetélestai",
+"strong": "G5055",
+"meaning": "está terminado, completado, pago"
+}
+],
+"definition": "A última palavra de Jesus na cruz em João é um só verbo grego, teléō (completar, levar ao fim), no tempo perfeito. Papiros comerciais da época usam o verbo com o sentido de “pago por completo”. A obra que o Pai lhe deu está acabada (Jo 17.4).",
+"refs": [
+"Jo 19.28-30",
+"Jo 17.4",
+"Hb 10.12-14"
+],
+"see": [
+"redencao",
+"propiciacao"
+],
+"inflections": [
+{
+"lang": "gr",
+"word": "τετέλεσται",
+"translit": "tetélestai",
+"parsing": "Perfeito, indicativo, passivo, 3ª pessoa do singular",
+"gloss": "está consumado",
+"ref": "Jo 19.30",
+"note": "O perfeito: a obra foi completada e permanece completa para sempre. Nada precisa ser acrescentado."
+}
+],
+"domain": "salvacao"
+},
+{
+"id": "ressuscitar",
+"term": "Ressuscitar",
+"kind": "verbo",
+"forms": [
+"ressuscitou",
+"ressurgiu",
+"foi ressuscitado"
+],
+"original": [
+{
+"lang": "gr",
+"word": "ἐγείρω",
+"translit": "egeírō",
+"strong": "G1453",
+"meaning": "levantar, despertar, ressuscitar"
+},
+{
+"lang": "gr",
+"word": "ἀνίστημι",
+"translit": "anístēmi",
+"strong": "G450",
+"meaning": "levantar-se; daí anástasis, ressurreição"
+}
+],
+"definition": "Os dois verbos querem dizer “levantar”. O Novo Testamento diz às vezes que Jesus ressuscitou (ação dele) e muitas vezes que “foi ressuscitado” (voz passiva), destacando a ação do Pai — os estudiosos chamam isso de “passivo divino”.",
+"refs": [
+"Mt 28.6",
+"At 2.24",
+"1Co 15.3-4",
+"Rm 6.4"
+],
+"see": [
+"vida-eterna"
+],
+"inflections": [
+{
+"lang": "gr",
+"word": "ἠγέρθη",
+"translit": "ēgérthē",
+"parsing": "Aoristo, indicativo, passivo, 3ª pessoa do singular",
+"gloss": "ressurgiu",
+"ref": "Mt 28.6",
+"note": "Literalmente “foi levantado”: o anúncio do anjo destaca a ação de Deus."
+},
+{
+"lang": "gr",
+"word": "ἐγήγερται",
+"translit": "egḗgertai",
+"parsing": "Perfeito, indicativo, passivo, 3ª pessoa do singular",
+"gloss": "foi ressuscitado",
+"ref": "1Co 15.4",
+"note": "Entre aoristos (morreu, foi sepultado), Paulo usa o perfeito para a ressurreição: Cristo ressuscitou e continua vivo."
+}
+],
+"domain": "salvacao"
+},
+{
+"id": "encher",
+"term": "Encher / cumprir",
+"kind": "verbo",
+"forms": [
+"enchei-vos",
+"cumprisse"
+],
+"original": [
+{
+"lang": "gr",
+"word": "πληρόω",
+"translit": "plēróō",
+"strong": "G4137",
+"meaning": "encher, completar, cumprir"
+},
+{
+"lang": "gr",
+"word": "πίμπλημι",
+"translit": "pímplēmi",
+"strong": "G4130",
+"meaning": "encher (de uma vez)"
+}
+],
+"definition": "O mesmo verbo serve para encher um recipiente e para cumprir uma profecia: a profecia é “cheia”, completada, quando acontece. Em Atos, os discípulos “ficaram cheios” (pímplēmi) do Espírito em momentos específicos; em Efésios, Paulo manda “enchei-vos” (plēróō) como estado contínuo.",
+"refs": [
+"Mt 1.22",
+"At 2.4",
+"At 4.31",
+"Ef 5.18"
+],
+"see": [
+"espirito-santo"
+],
+"senses": [
+{
+"sense": "Cumprir uma profecia ou a Escritura",
+"refs": [
+"Mt 1.22",
+"Lc 24.44"
+]
+},
+{
+"sense": "Encher de pessoas ou coisas; completar",
+"refs": [
+"Jo 12.3",
+"Fp 4.19"
+]
+},
+{
+"sense": "Ser cheio do Espírito Santo",
+"refs": [
+"At 2.4",
+"At 4.31",
+"Ef 5.18"
+]
+}
+],
+"inflections": [
+{
+"lang": "gr",
+"word": "πληροῦσθε",
+"translit": "plēroûsthe",
+"parsing": "Presente, imperativo, passivo, 2ª pessoa do plural",
+"gloss": "enchei-vos",
+"ref": "Ef 5.18",
+"note": "Presente: ação contínua. Passivo: quem enche é o Espírito. Literalmente, “deixai-vos encher continuamente”."
+},
+{
+"lang": "gr",
+"word": "πληρωθῇ",
+"translit": "plērōthê",
+"parsing": "Aoristo, subjuntivo, passivo, 3ª pessoa do singular",
+"gloss": "para que se cumprisse",
+"ref": "Mt 1.22",
+"note": "A fórmula que Mateus usa para mostrar o cumprimento das Escrituras."
+},
+{
+"lang": "gr",
+"word": "ἐπλήσθησαν",
+"translit": "eplḗsthēsan",
+"parsing": "Aoristo, indicativo, passivo, 3ª pessoa do plural (de pímplēmi)",
+"gloss": "foram cheios",
+"ref": "At 2.4",
+"note": "Um enchimento num momento definido, no Pentecostes."
+}
+],
+"domain": "culto"
+},
+{
+"id": "permanecer",
+"term": "Permanecer",
+"kind": "verbo",
+"forms": [
+"permanecei"
+],
+"original": [
+{
+"lang": "gr",
+"word": "μένω",
+"translit": "ménō",
+"strong": "G3306",
+"meaning": "ficar, morar, permanecer"
+}
+],
+"definition": "Palavra preferida de João (mais de 40 vezes no Evangelho). É o verbo de morar numa casa: os primeiros discípulos perguntaram a Jesus “onde moras (méneis)?” (Jo 1.38). Permanecer em Cristo é habitar nele como o ramo na videira.",
+"refs": [
+"Jo 1.38-39",
+"Jo 15.4-7",
+"1Jo 2.28"
+],
+"see": [
+"vida-eterna"
+],
+"inflections": [
+{
+"lang": "gr",
+"word": "μείνατε",
+"translit": "meínate",
+"parsing": "Aoristo, imperativo, ativo, 2ª pessoa do plural",
+"gloss": "Permanecei",
+"ref": "Jo 15.4",
+"note": "Uma ordem decisiva: fixai morada em mim."
+}
+],
+"domain": "virtudes"
+},
+{
+"id": "adorar",
+"term": "Adorar",
+"kind": "verbo",
+"forms": [
+"adorarás",
+"adoradores"
+],
+"original": [
+{
+"lang": "gr",
+"word": "προσκυνέω",
+"translit": "proskynéō",
+"strong": "G4352",
+"meaning": "prostrar-se, inclinar-se em reverência"
+},
+{
+"lang": "he",
+"word": "שָׁחָה",
+"translit": "shachah",
+"strong": "H7812",
+"meaning": "curvar-se, prostrar-se"
+}
+],
+"definition": "As duas palavras descrevem um gesto: curvar-se até o chão diante de alguém maior. Adorar é reconhecer com o corpo e o coração que Deus é Deus. Jesus ensinou à samaritana que o Pai procura adoradores “em espírito e em verdade”, e não presos a um lugar.",
+"refs": [
+"Gn 22.5",
+"Mt 2.11",
+"Mt 4.10",
+"Jo 4.23-24",
+"Ap 4.10"
+],
+"see": [
+"louvor"
+],
+"inflections": [
+{
+"lang": "gr",
+"word": "προσκυνήσεις",
+"translit": "proskynḗseis",
+"parsing": "Futuro, indicativo, ativo, 2ª pessoa do singular",
+"gloss": "adorarás",
+"ref": "Mt 4.10",
+"note": "Jesus responde ao diabo, que pedira que Ele se prostrasse."
+},
+{
+"lang": "gr",
+"word": "προσκυνηταί",
+"translit": "proskynētaí",
+"parsing": "Substantivo, nominativo plural",
+"gloss": "adoradores",
+"ref": "Jo 4.23"
+}
+],
+"domain": "culto"
+},
+{
+"id": "abencoar",
+"term": "Abençoar / bendizer",
+"kind": "verbo",
+"forms": [
+"abençoe",
+"abençoarei",
+"bendize"
+],
+"original": [
+{
+"lang": "he",
+"word": "בָּרַךְ",
+"translit": "barakh",
+"strong": "H1288",
+"meaning": "abençoar; bendizer"
+},
+{
+"lang": "gr",
+"word": "εὐλογέω",
+"translit": "eulogéō",
+"strong": "G2127",
+"meaning": "falar bem; abençoar"
+}
+],
+"definition": "Quando Deus abençoa, Ele dá vida, prosperidade e favor; quando o ser humano “bendiz” a Deus, reconhece e louva quem Ele é. É o mesmo verbo nos dois sentidos. Alguns ligam a raiz à palavra “joelho” (berekh), mas a relação é discutida. O grego eulogéō é literalmente “falar bem” — daí “elogio”.",
+"refs": [
+"Gn 12.2-3",
+"Nm 6.24-26",
+"Sl 103.1-2",
+"Ef 1.3"
+],
+"see": [
+"bem-aventurado"
+],
+"senses": [
+{
+"sense": "Deus abençoando pessoas",
+"refs": [
+"Gn 12.2",
+"Nm 6.24"
+]
+},
+{
+"sense": "Pessoas bendizendo (louvando) a Deus",
+"refs": [
+"Sl 103.1",
+"Lc 1.64"
+]
+},
+{
+"sense": "Abençoar o alimento, dar graças",
+"refs": [
+"Mt 14.19",
+"Mt 26.26"
+]
+}
+],
+"inflections": [
+{
+"lang": "he",
+"word": "יְבָרֶכְךָ",
+"translit": "yevarekhekha",
+"parsing": "Piel, imperfeito, 3ª pessoa masculino singular, com sufixo “te”",
+"gloss": "te abençoe",
+"ref": "Nm 6.24",
+"note": "O imperfeito aqui tem valor de desejo (jussivo): “que o Senhor te abençoe”."
+},
+{
+"lang": "he",
+"word": "וְנִבְרְכוּ",
+"translit": "venivrekhu",
+"parsing": "Nifal, perfeito com waw consecutivo, 3ª pessoa do plural",
+"gloss": "serão benditas",
+"ref": "Gn 12.3",
+"note": "O Nifal é passivo ou reflexivo: “serão abençoadas” (ou “se abençoarão”) em ti."
+},
+{
+"lang": "he",
+"word": "בָּרְכִי",
+"translit": "barekhi",
+"parsing": "Piel, imperativo, 2ª pessoa feminino singular",
+"gloss": "Bendize",
+"ref": "Sl 103.1",
+"note": "Feminino porque “alma” (nefesh) é feminino em hebraico: o salmista dá uma ordem à própria alma."
+}
+],
+"domain": "culto"
+},
+{
+"id": "ouvir",
+"term": "Ouvir / obedecer",
+"kind": "verbo",
+"forms": [
+"Ouve, ó Israel",
+"obedecer"
+],
+"original": [
+{
+"lang": "he",
+"word": "שָׁמַע",
+"translit": "shama'",
+"strong": "H8085",
+"meaning": "ouvir, escutar com atenção, obedecer"
+},
+{
+"lang": "gr",
+"word": "ἀκούω",
+"translit": "akoúō",
+"strong": "G191",
+"meaning": "ouvir; daí hypakoúō, obedecer"
+}
+],
+"definition": "Em hebraico não existe uma palavra separada para “obedecer”: shama' é ouvir de verdade, a ponto de fazer. Por isso o Shemá (“Ouve, ó Israel”) é um chamado à obediência. Em grego, “obedecer” (hypakoúō) é literalmente “ouvir debaixo” de alguém.",
+"refs": [
+"Dt 6.4",
+"1Sm 3.10",
+"1Sm 15.22",
+"Tg 1.22"
+],
+"see": [
+"lei"
+],
+"inflections": [
+{
+"lang": "he",
+"word": "שְׁמַע",
+"translit": "shema'",
+"parsing": "Qal, imperativo, 2ª pessoa masculino singular",
+"gloss": "Ouve",
+"ref": "Dt 6.4",
+"note": "A primeira palavra do Shemá, que deu nome à oração."
+},
+{
+"lang": "he",
+"word": "שְׁמֹעַ",
+"translit": "shemoa'",
+"parsing": "Qal, infinitivo construto",
+"gloss": "o obedecer",
+"ref": "1Sm 15.22",
+"note": "“O obedecer é melhor do que o sacrificar” — literalmente “o ouvir”."
+}
+],
+"domain": "culto"
+},
+{
+"id": "criar",
+"term": "Criar",
+"kind": "verbo",
+"forms": [
+"criou"
+],
+"original": [
+{
+"lang": "he",
+"word": "בָּרָא",
+"translit": "bara'",
+"strong": "H1254",
+"meaning": "criar (só com Deus como sujeito)"
+}
+],
+"definition": "Na Bíblia hebraica, bara' nunca tem um ser humano como sujeito: só Deus cria nesse sentido. Aparece três vezes no relato da criação para marcar os grandes começos: o universo (Gn 1.1), os seres vivos (1.21) e o ser humano (1.27). Os profetas o usam para a nova criação que Deus fará (Is 65.17).",
+"refs": [
+"Gn 1.1",
+"Gn 1.21",
+"Gn 1.27",
+"Is 65.17",
+"Sl 51.10"
+],
+"see": [
+"imago-dei"
+],
+"inflections": [
+{
+"lang": "he",
+"word": "בָּרָא",
+"translit": "bara'",
+"parsing": "Qal, perfeito, 3ª pessoa masculino singular",
+"gloss": "criou",
+"ref": "Gn 1.1",
+"note": "O sujeito é Elohim (forma plural), mas o verbo está no singular: um só Deus criou."
+}
+],
+"domain": "deus"
+},
+{
+"id": "conhecer",
+"term": "Conhecer",
+"kind": "verbo",
+"forms": [
+"conheceu",
+"conheçam"
+],
+"original": [
+{
+"lang": "he",
+"word": "יָדַע",
+"translit": "yada'",
+"strong": "H3045",
+"meaning": "conhecer por experiência, ter intimidade"
+},
+{
+"lang": "gr",
+"word": "γινώσκω",
+"translit": "ginṓskō",
+"strong": "G1097",
+"meaning": "conhecer, chegar a conhecer"
+}
+],
+"definition": "Conhecer, na Bíblia, é mais do que ter informação: é relação. O mesmo verbo yada' descreve a intimidade do casamento (“conheceu Adão a Eva”) e a relação com Deus (“conhecei o Senhor”, Os 6.3). Jesus define a vida eterna como conhecer o Pai e o Filho.",
+"refs": [
+"Gn 4.1",
+"Os 6.3",
+"Jr 31.34",
+"Jo 17.3",
+"Fp 3.10"
+],
+"see": [
+"vida-eterna"
+],
+"senses": [
+{
+"sense": "Saber, ter informação",
+"refs": [
+"Jo 21.17"
+]
+},
+{
+"sense": "Intimidade conjugal",
+"refs": [
+"Gn 4.1",
+"Mt 1.25"
+]
+},
+{
+"sense": "Relação pessoal com Deus",
+"refs": [
+"Jr 31.34",
+"Jo 17.3",
+"Fp 3.10"
+]
+},
+{
+"sense": "Escolher, reconhecer como seu",
+"refs": [
+"Am 3.2",
+"Mt 7.23"
+],
+"note": "“Nunca vos conheci”: não tive relação convosco."
+}
+],
+"inflections": [
+{
+"lang": "he",
+"word": "יָדַע",
+"translit": "yada'",
+"parsing": "Qal, perfeito, 3ª pessoa masculino singular",
+"gloss": "Conheceu",
+"ref": "Gn 4.1"
+},
+{
+"lang": "gr",
+"word": "γινώσκωσιν",
+"translit": "ginṓskōsin",
+"parsing": "Presente, subjuntivo, ativo, 3ª pessoa do plural",
+"gloss": "que te conheçam",
+"ref": "Jo 17.3",
+"note": "Presente: um conhecimento que continua crescendo."
+}
+],
+"domain": "virtudes"
+},
+{
+"id": "santificar",
+"term": "Santificar",
+"kind": "verbo",
+"forms": [
+"santificar",
+"santificai-vos"
+],
+"original": [
+{
+"lang": "he",
+"word": "קָדַשׁ",
+"translit": "qadash",
+"strong": "H6942",
+"meaning": "ser santo; no Piel: santificar, consagrar"
+},
+{
+"lang": "gr",
+"word": "ἁγιάζω",
+"translit": "hagiázō",
+"strong": "G37",
+"meaning": "santificar, separar para Deus"
+}
+],
+"definition": "Santificar é separar algo ou alguém para Deus. Em hebraico, a mesma raiz muda de sentido conforme a forma do verbo (binyan): ser santo (Qal), tornar santo (Piel), santificar-se (Hitpael).",
+"refs": [
+"Êx 20.8",
+"Lv 11.44",
+"Jo 17.17",
+"1Ts 5.23"
+],
+"see": [
+"santo",
+"santificacao"
+],
+"inflections": [
+{
+"lang": "he",
+"word": "לְקַדְּשׁוֹ",
+"translit": "leqaddesho",
+"parsing": "Piel, infinitivo construto, com sufixo “o”",
+"gloss": "para o santificar",
+"ref": "Êx 20.8",
+"note": "Piel: tratar como santo, separar."
+},
+{
+"lang": "he",
+"word": "וְהִתְקַדִּשְׁתֶּם",
+"translit": "vehitqaddishtem",
+"parsing": "Hitpael, perfeito com waw consecutivo, 2ª pessoa masculino plural",
+"gloss": "santificai-vos",
+"ref": "Lv 11.44",
+"note": "Hitpael: forma reflexiva — santificai a vós mesmos."
+}
+],
+"domain": "salvacao"
+},
+{
+"id": "mundo",
+"term": "Mundo",
+"kind": "termo",
+"forms": [
+"mundo"
+],
+"original": [
+{
+"lang": "gr",
+"word": "κόσμος",
+"translit": "kósmos",
+"strong": "G2889",
+"meaning": "ordem, arranjo; o mundo; adorno"
+}
+],
+"definition": "Kósmos quer dizer, primeiro, “ordem, arranjo” — daí “cosmético” (o que arruma a aparência). No Novo Testamento, a palavra muda muito de sentido conforme o contexto: o universo criado, a humanidade que Deus ama, ou o sistema de valores que se opõe a Deus. Por isso a mesma Bíblia diz “Deus amou o mundo” e “não ameis o mundo”.",
+"refs": [
+"Jo 3.16",
+"1Jo 2.15-17",
+"At 17.24",
+"1Pe 3.3"
+],
+"see": [
+"amor"
+],
+"senses": [
+{
+"sense": "O universo criado",
+"refs": [
+"At 17.24",
+"Jo 1.10"
+]
+},
+{
+"sense": "A humanidade, as pessoas",
+"refs": [
+"Jo 3.16",
+"Jo 1.29"
+],
+"note": "O mundo que Deus amou."
+},
+{
+"sense": "O sistema que se opõe a Deus",
+"refs": [
+"1Jo 2.15-17",
+"Tg 4.4",
+"Jo 15.18-19"
+],
+"note": "O mundo que não devemos amar."
+},
+{
+"sense": "Adorno, enfeite",
+"refs": [
+"1Pe 3.3"
+],
+"note": "O sentido original: “o vosso kósmos não seja o exterior”."
+}
+],
+"domain": "humano"
+}
+]

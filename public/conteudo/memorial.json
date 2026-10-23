@@ -1,0 +1,3786 @@
+[
+{
+"id": "adao",
+"name": "Adão",
+"title": "O primeiro homem",
+"meaning": "homem; da terra (adamah)",
+"period": "Início da humanidade",
+"groups": [
+"personagens"
+],
+"summary": "Formado por Deus do pó da terra e animado pelo sopro divino, foi posto no jardim do Éden para cultivá-lo e guardá-lo, e deu nome aos animais. Desobedeceu ao único mandamento, comendo do fruto proibido, e o pecado e a morte entraram no mundo. Ainda assim, recebeu a promessa de que a descendência da mulher esmagaria a cabeça da serpente. Paulo apresenta Cristo como o “último Adão”, que traz vida onde o primeiro trouxe morte.",
+"facts": [
+[
+"Esposa",
+"Eva"
+],
+[
+"Filhos",
+"Caim, Abel, Sete e outros"
+],
+[
+"Viveu",
+"930 anos"
+]
+],
+"refs": [
+"Gn 2.7-25",
+"Gn 3.1-24",
+"Gn 5.1-5",
+"Rm 5.12-19",
+"1Co 15.22,45"
+],
+"keyVerse": "1Co 15.22",
+"legacy": "O que o primeiro Adão perdeu, o último Adão, Jesus, restaurou."
+},
+{
+"id": "eva",
+"name": "Eva",
+"title": "Mãe de todos os viventes",
+"meaning": "vida, vivente",
+"period": "Início da humanidade",
+"groups": [
+"personagens",
+"mulheres"
+],
+"summary": "Formada por Deus a partir de Adão, como auxiliadora idônea, “osso dos meus ossos e carne da minha carne”. Enganada pela serpente, comeu do fruto e o deu ao marido. Recebeu, junto com o juízo, a primeira promessa de redenção: a sua descendência venceria a serpente. Adão lhe deu o nome de Eva, “porque era a mãe de todos os viventes”.",
+"facts": [
+[
+"Marido",
+"Adão"
+],
+[
+"Filhos",
+"Caim, Abel e Sete"
+]
+],
+"refs": [
+"Gn 2.18-24",
+"Gn 3.1-20",
+"Gn 4.1-2,25"
+],
+"keyVerse": "Gn 3.15",
+"legacy": "Mesmo depois da queda, Deus começou a história da redenção com uma promessa."
+},
+{
+"id": "abel",
+"name": "Abel",
+"title": "O primeiro mártir",
+"meaning": "sopro, vapor",
+"period": "Início da humanidade",
+"groups": [
+"herois"
+],
+"summary": "Segundo filho de Adão e Eva, pastor de ovelhas. Ofereceu a Deus “as primícias do seu rebanho”, e Deus se agradou da sua oferta — não pelo tamanho, mas pela fé. Caim, com inveja, o matou no campo. É o primeiro justo a morrer na Bíblia, e Jesus o cita como o primeiro dos mártires.",
+"facts": [
+[
+"Família",
+"Filho de Adão e Eva; irmão de Caim e de Sete"
+],
+[
+"Profissão",
+"Pastor de ovelhas"
+]
+],
+"refs": [
+"Gn 4.1-10",
+"Mt 23.35",
+"Hb 12.24"
+],
+"keyVerse": "Hb 11.4",
+"legacy": "Deus olha primeiro para o coração de quem oferece, e depois para a oferta."
+},
+{
+"id": "enoque",
+"name": "Enoque",
+"title": "O homem que andou com Deus",
+"meaning": "dedicado, consagrado",
+"period": "Antes do Dilúvio",
+"groups": [
+"herois"
+],
+"summary": "Da sétima geração depois de Adão, Enoque “andou com Deus” durante 300 anos depois do nascimento do filho Matusalém. Num mundo que se corrompia, viveu tão perto de Deus que não passou pela morte: “já não era, porque Deus o tomou”. Judas cita uma profecia dele sobre a vinda do Senhor com os seus santos.",
+"facts": [
+[
+"Viveu",
+"365 anos — um para cada dia do ano"
+],
+[
+"Filho",
+"Matusalém, o homem mais longevo da Bíblia (969 anos)"
+]
+],
+"refs": [
+"Gn 5.18-24",
+"Jd 1.14-15"
+],
+"keyVerse": "Hb 11.5",
+"legacy": "Andar com Deus é uma caminhada diária, longa e fiel — e agrada a Deus."
+},
+{
+"id": "noe",
+"name": "Noé",
+"title": "Pregador da justiça",
+"meaning": "descanso",
+"period": "Antes e depois do Dilúvio",
+"groups": [
+"herois"
+],
+"summary": "Num mundo cheio de violência, “Noé achou graça aos olhos do Senhor”. Obedeceu à ordem de construir uma arca enorme longe do mar, numa obra de muitos anos, enquanto pregava aos da sua geração (2Pe 2.5). Salvou a família e os animais, e depois do Dilúvio recebeu de Deus a aliança do arco-íris.",
+"facts": [
+[
+"Arca",
+"300 × 50 × 30 côvados (cerca de 135 × 22 × 13 m)"
+],
+[
+"Filhos",
+"Sem, Cam e Jafé"
+],
+[
+"Viveu",
+"950 anos"
+]
+],
+"refs": [
+"Gn 6.8-22",
+"Gn 8.20-22",
+"Gn 9.8-17",
+"2Pe 2.5"
+],
+"keyVerse": "Hb 11.7",
+"legacy": "A fé obedece mesmo quando o que Deus diz ainda não tem sinal nenhum à vista."
+},
+{
+"id": "melquisedeque",
+"name": "Melquisedeque",
+"title": "Rei de justiça e sacerdote do Altíssimo",
+"meaning": "rei de justiça",
+"period": "c. 2000 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Rei de Salém (provavelmente Jerusalém) e sacerdote do Deus Altíssimo. Saiu ao encontro de Abraão, que voltava da vitória sobre os reis, levou pão e vinho e o abençoou; Abraão lhe deu o dízimo de tudo. O Salmo 110 anuncia um rei-sacerdote “segundo a ordem de Melquisedeque”, e Hebreus mostra que essa figura aponta para Cristo.",
+"facts": [
+[
+"Cidade",
+"Salém"
+],
+[
+"Ofício",
+"Rei e sacerdote"
+]
+],
+"refs": [
+"Gn 14.17-20",
+"Sl 110.4",
+"Hb 7.1-17"
+],
+"keyVerse": "Hb 7.1-3",
+"legacy": "Jesus é o sacerdote eterno que nos abençoa e intercede por nós."
+},
+{
+"id": "abraao",
+"name": "Abraão",
+"title": "O pai da fé",
+"meaning": "pai de uma multidão (antes, Abrão: “pai exaltado”)",
+"period": "c. 2000 a.C.",
+"groups": [
+"herois",
+"patriarcas"
+],
+"summary": "Saiu de Ur dos caldeus e de Harã aos 75 anos, sem saber para onde ia, porque Deus o chamou. Recebeu a promessa de uma terra, de uma descendência como as estrelas e de ser bênção para todas as famílias da terra. Esperou 25 anos pelo filho Isaque — e depois esteve pronto a oferecê-lo no monte Moriá, crendo que Deus podia ressuscitá-lo.",
+"facts": [
+[
+"Esposa",
+"Sara"
+],
+[
+"Filhos",
+"Ismael (com Agar) e Isaque"
+],
+[
+"Lugares",
+"Ur, Harã, Siquém, Betel, Egito, Hebrom, Berseba"
+],
+[
+"Viveu",
+"175 anos"
+]
+],
+"refs": [
+"Gn 12.1-9",
+"Gn 15.1-6",
+"Gn 22.1-18",
+"Rm 4.16-22",
+"Gl 3.6-9"
+],
+"keyVerse": "Gn 15.6",
+"legacy": "A fé confia na promessa de Deus mesmo quando a realidade diz o contrário — e isso nos é contado como justiça."
+},
+{
+"id": "sara",
+"name": "Sara",
+"title": "A mãe da promessa",
+"meaning": "princesa (antes, Sarai)",
+"period": "c. 2000 a.C.",
+"groups": [
+"herois",
+"mulheres"
+],
+"summary": "Esposa de Abraão, acompanhou o marido em toda a peregrinação. Estéril, ofereceu a serva Agar a Abraão e depois sofreu as consequências. Riu quando ouviu que teria um filho aos 90 anos — e Deus perguntou: “Há coisa demasiado difícil para o Senhor?”. Deu à luz Isaque, cujo nome quer dizer “riso”.",
+"facts": [
+[
+"Idade ao ser mãe",
+"90 anos"
+],
+[
+"Viveu",
+"127 anos; sepultada na caverna de Macpela, em Hebrom"
+]
+],
+"refs": [
+"Gn 17.15-19",
+"Gn 18.9-15",
+"Gn 21.1-7",
+"1Pe 3.5-6"
+],
+"keyVerse": "Hb 11.11",
+"legacy": "Deus é fiel ao que promete, mesmo quando a nossa fé vacila no caminho."
+},
+{
+"id": "isaque",
+"name": "Isaque",
+"title": "O filho da promessa",
+"meaning": "ele ri",
+"period": "c. 1900 a.C.",
+"groups": [
+"herois",
+"patriarcas"
+],
+"summary": "Filho tão esperado de Abraão e Sara. Ainda jovem, subiu o monte Moriá carregando a lenha do próprio sacrifício, e Deus providenciou um carneiro no seu lugar. Casou-se com Rebeca, que o servo de Abraão foi buscar em Harã. Foi pai de Esaú e Jacó, e pela fé abençoou os dois sobre as coisas futuras.",
+"facts": [
+[
+"Esposa",
+"Rebeca"
+],
+[
+"Filhos",
+"Esaú e Jacó (gêmeos)"
+],
+[
+"Viveu",
+"180 anos"
+]
+],
+"refs": [
+"Gn 21.1-7",
+"Gn 22.1-14",
+"Gn 24.62-67",
+"Gn 26.1-5"
+],
+"keyVerse": "Hb 11.20",
+"legacy": "A promessa de Deus passa de geração em geração — e cada geração precisa recebê-la pela fé."
+},
+{
+"id": "jo",
+"name": "Jó",
+"title": "O justo que sofreu",
+"period": "Época dos patriarcas (data incerta)",
+"groups": [
+"personagens"
+],
+"summary": "Homem íntegro e reto da terra de Uz, o mais rico do Oriente. Num só dia perdeu bens e filhos, e depois a saúde, mas disse: “o Senhor o deu e o Senhor o tomou; bendito seja o nome do Senhor”. Debateu com três amigos, que o acusavam de algum pecado escondido. Deus lhe respondeu do meio de um redemoinho, mostrando a sua grandeza, e depois restaurou em dobro tudo o que ele tinha.",
+"refs": [
+"Jó 1.1-22",
+"Jó 19.25-27",
+"Jó 38.1-7",
+"Jó 42.1-10",
+"Tg 5.11"
+],
+"keyVerse": "Jó 19.25",
+"legacy": "Podemos confiar em Deus mesmo quando não entendemos o sofrimento."
+},
+{
+"id": "jaco",
+"name": "Jacó (Israel)",
+"title": "O que lutou com Deus",
+"meaning": "o que segura o calcanhar, suplantador; Israel: “o que luta com Deus”",
+"period": "c. 1850 a.C.",
+"groups": [
+"herois",
+"patriarcas"
+],
+"summary": "Segundo dos gêmeos de Isaque, comprou o direito de primogenitura de Esaú e enganou o pai para receber a bênção. Fugiu para Harã, onde foi enganado por Labão e se casou com Lia e Raquel. Na volta, lutou com Deus a noite inteira junto ao rio Jaboque e recebeu o nome de Israel. Os seus doze filhos deram origem às doze tribos.",
+"facts": [
+[
+"Esposas",
+"Lia e Raquel (e as servas Bila e Zilpa)"
+],
+[
+"Filhos",
+"Os doze patriarcas das tribos, e Diná"
+],
+[
+"Viveu",
+"147 anos; morreu no Egito"
+]
+],
+"refs": [
+"Gn 25.21-34",
+"Gn 28.10-22",
+"Gn 32.22-32",
+"Gn 49.1-28"
+],
+"keyVerse": "Gn 32.26-28",
+"legacy": "Deus transforma enganadores em príncipes — mas o encontro com Ele deixa marcas."
+},
+{
+"id": "juda",
+"name": "Judá",
+"title": "O pai da tribo real",
+"meaning": "louvor (“desta vez louvarei ao Senhor”)",
+"period": "c. 1800 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Quarto filho de Jacó e Lia. Sugeriu vender José em vez de matá-lo. Errou com a nora Tamar, mas reconheceu: “mais justa é ela do que eu”. Anos depois, no Egito, ofereceu-se como escravo no lugar de Benjamim — um homem transformado. Jacó profetizou que o cetro não se afastaria de Judá: dele vieram Davi e Jesus, “o Leão da tribo de Judá”.",
+"facts": [
+[
+"Pais",
+"Jacó e Lia"
+],
+[
+"Filhos",
+"Er, Onã, Selá, e os gêmeos Farés e Zará (com Tamar)"
+]
+],
+"refs": [
+"Gn 29.35",
+"Gn 37.26-27",
+"Gn 38.24-26",
+"Gn 44.18-34",
+"Gn 49.8-10",
+"Ap 5.5"
+],
+"keyVerse": "Gn 49.10",
+"legacy": "Deus transforma pessoas: o que vendeu um irmão depois se ofereceu por outro."
+},
+{
+"id": "tamar",
+"name": "Tamar",
+"title": "A viúva que lutou pela promessa",
+"meaning": "palmeira",
+"period": "c. 1800 a.C.",
+"groups": [
+"personagens",
+"mulheres"
+],
+"summary": "Nora de Judá, viúva de Er e depois de Onã. Pela lei do levirato, deveria casar com Selá, o filho mais novo, mas Judá não cumpriu a palavra. Disfarçada, ela engravidou do próprio Judá, que acabou reconhecendo a injustiça. Deu à luz gêmeos, Farés e Zará; Farés está na genealogia de Davi e de Jesus. Mateus a cita entre as quatro mulheres da genealogia.",
+"facts": [
+[
+"Filhos",
+"Farés e Zará"
+]
+],
+"refs": [
+"Gn 38.6-30",
+"Rt 4.12",
+"Mt 1.3"
+],
+"keyVerse": "Gn 38.26",
+"legacy": "Deus faz a sua promessa avançar até por histórias complicadas."
+},
+{
+"id": "jose",
+"name": "José",
+"title": "Do poço ao palácio",
+"meaning": "ele acrescentará",
+"period": "c. 1700 a.C.",
+"groups": [
+"herois",
+"patriarcas"
+],
+"summary": "Filho preferido de Jacó, foi vendido pelos irmãos como escravo aos 17 anos. No Egito, foi fiel na casa de Potifar, preso injustamente e esquecido na prisão. Aos 30 anos, interpretou os sonhos do faraó e tornou-se governador do Egito, salvando muitos povos — inclusive a própria família — da fome. Perdoou os irmãos.",
+"facts": [
+[
+"Esposa",
+"Asenate, egípcia"
+],
+[
+"Filhos",
+"Manassés e Efraim"
+],
+[
+"Viveu",
+"110 anos; seus ossos foram levados a Canaã no Êxodo"
+]
+],
+"refs": [
+"Gn 37.1-28",
+"Gn 39.1-23",
+"Gn 41.37-57",
+"Gn 45.1-15",
+"Gn 50.15-21"
+],
+"keyVerse": "Gn 50.20",
+"legacy": "Deus pode transformar em bem até o mal que fizeram contra nós."
+},
+{
+"id": "anrao-e-joquebede",
+"name": "Anrão e Joquebede",
+"title": "Os pais de Moisés",
+"meaning": "Joquebede: “o Senhor é glória”",
+"period": "c. 1520 a.C.",
+"groups": [
+"herois"
+],
+"summary": "Casal da tribo de Levi, escravo no Egito. Quando o faraó mandou lançar no Nilo todo menino hebreu, eles viram que o filho era “formoso” e o esconderam por três meses, sem temer o decreto do rei. Depois o puseram num cesto de junco no rio, e Deus o levou para o palácio — onde a própria mãe foi contratada para criá-lo.",
+"facts": [
+[
+"Filhos",
+"Miriã, Arão e Moisés"
+],
+[
+"Tribo",
+"Levi"
+]
+],
+"refs": [
+"Êx 2.1-10",
+"Êx 6.20",
+"Nm 26.59"
+],
+"keyVerse": "Hb 11.23",
+"legacy": "A fé de pais anônimos pode mudar a história de um povo."
+},
+{
+"id": "moises",
+"name": "Moisés",
+"title": "O libertador e legislador",
+"meaning": "tirado das águas",
+"period": "c. 1520–1400 a.C.",
+"groups": [
+"herois",
+"profetas"
+],
+"summary": "Criado no palácio do faraó, escolheu “ser maltratado com o povo de Deus”. Fugiu para Midiã depois de matar um egípcio e, 40 anos depois, foi chamado na sarça ardente. Enfrentou o faraó, conduziu Israel pelo mar Vermelho, recebeu a Lei no Sinai e liderou o povo por 40 anos no deserto. Viu a terra prometida do monte Nebo e morreu ali.",
+"facts": [
+[
+"Família",
+"Filho de Anrão e Joquebede; irmão de Arão e Miriã"
+],
+[
+"Esposa",
+"Zípora, filha de Jetro"
+],
+[
+"Viveu",
+"120 anos (40 no Egito, 40 em Midiã, 40 no deserto)"
+],
+[
+"Escreveu",
+"O Pentateuco, segundo a tradição, e o Salmo 90"
+]
+],
+"refs": [
+"Êx 2.1-15",
+"Êx 3.1-14",
+"Êx 14.13-31",
+"Êx 20.1-17",
+"Dt 34.1-12"
+],
+"keyVerse": "Hb 11.24-27",
+"legacy": "Deus usa pessoas que se acham incapazes, quando elas aprendem a depender dele."
+},
+{
+"id": "arao",
+"name": "Arão",
+"title": "O primeiro sumo sacerdote",
+"meaning": "incerto (talvez “iluminado”)",
+"period": "c. 1530–1400 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Irmão mais velho de Moisés e seu porta-voz diante do faraó. Foi consagrado como o primeiro sumo sacerdote de Israel, e os seus descendentes formaram o sacerdócio. Falhou gravemente ao fazer o bezerro de ouro, mas foi restaurado. A sua vara floresceu como sinal da escolha de Deus. Morreu no monte Hor, e o filho Eleazar o sucedeu.",
+"facts": [
+[
+"Esposa",
+"Eliseba, filha de Aminadabe"
+],
+[
+"Filhos",
+"Nadabe, Abiú, Eleazar e Itamar"
+]
+],
+"refs": [
+"Êx 4.14-16",
+"Êx 28.1",
+"Êx 32.1-6",
+"Nm 17.8",
+"Nm 20.23-29"
+],
+"keyVerse": "Nm 6.24-26",
+"legacy": "A bênção sacerdotal que Deus deu a Arão ainda é pronunciada sobre o povo de Deus."
+},
+{
+"id": "josue",
+"name": "Josué",
+"title": "O conquistador da terra",
+"meaning": "o Senhor é salvação (a mesma forma hebraica de Jesus)",
+"period": "c. 1450–1370 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Servo de Moisés desde a juventude, comandou a vitória sobre os amalequitas e foi um dos dois espias que confiaram em Deus. Sucedeu a Moisés, atravessou o Jordão, conquistou Jericó e repartiu a terra entre as tribos. No fim da vida, desafiou o povo: “eu e a minha casa serviremos ao Senhor”.",
+"facts": [
+[
+"Tribo",
+"Efraim"
+],
+[
+"Viveu",
+"110 anos"
+]
+],
+"refs": [
+"Êx 17.9-14",
+"Nm 14.6-9",
+"Js 1.1-9",
+"Js 6.1-20",
+"Js 24.14-15"
+],
+"keyVerse": "Js 1.9",
+"legacy": "Sê forte e corajoso: o Senhor é contigo por onde quer que andares."
+},
+{
+"id": "calebe",
+"name": "Calebe",
+"title": "O homem que perseverou",
+"meaning": "cão (no sentido de fiel)",
+"period": "c. 1480–1380 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Um dos doze espias enviados a Canaã. Com Josué, foi o único a dizer que Israel podia conquistar a terra com a ajuda de Deus. Por isso, de toda aquela geração, só os dois entraram nela. Aos 85 anos, pediu a região montanhosa de Hebrom, onde viviam gigantes: “dá-me este monte”.",
+"facts": [
+[
+"Tribo",
+"Judá"
+],
+[
+"Herança",
+"Hebrom"
+]
+],
+"refs": [
+"Nm 13.30",
+"Nm 14.24",
+"Js 14.6-14"
+],
+"keyVerse": "Js 14.12",
+"legacy": "A fidelidade que segue a Deus “inteiramente” não se aposenta."
+},
+{
+"id": "miria",
+"name": "Miriã",
+"title": "A profetisa do cântico",
+"meaning": "incerto (talvez “amada” ou “amargura”)",
+"period": "c. 1500–1400 a.C.",
+"groups": [
+"profetas",
+"mulheres"
+],
+"summary": "Irmã mais velha de Moisés. Ainda menina, vigiou o cesto no Nilo e, com coragem, ofereceu à filha do faraó uma ama hebreia — a própria mãe. Depois da travessia do mar, pegou o tamboril e conduziu as mulheres no cântico de vitória. Chamada de profetisa, falhou ao criticar Moisés com Arão e ficou leprosa por sete dias.",
+"facts": [
+[
+"Família",
+"Irmã de Moisés e Arão"
+],
+[
+"Morreu",
+"Em Cades, no deserto de Zim"
+]
+],
+"refs": [
+"Êx 2.4-8",
+"Nm 12.1-15",
+"Nm 20.1",
+"Mq 6.4"
+],
+"keyVerse": "Êx 15.20-21",
+"legacy": "Liderar o louvor é um dom; a humildade guarda o dom."
+},
+{
+"id": "raabe",
+"name": "Raabe",
+"title": "A estrangeira salva pela fé",
+"meaning": "larga, ampla",
+"period": "c. 1400 a.C.",
+"groups": [
+"herois",
+"mulheres"
+],
+"summary": "Prostituta de Jericó, escondeu os dois espias de Josué no telhado, debaixo das canas de linho, porque tinha ouvido o que o Senhor fizera no mar Vermelho: “o Senhor vosso Deus é Deus em cima nos céus e embaixo na terra”. Pendurou o cordão de escarlate na janela e foi salva com toda a família. Casou-se com Salmom e tornou-se antepassada de Davi e de Jesus.",
+"facts": [
+[
+"Cidade",
+"Jericó"
+],
+[
+"Descendentes",
+"Boaz (filho), Davi e Jesus (Mt 1.5)"
+]
+],
+"refs": [
+"Js 2.1-21",
+"Js 6.22-25",
+"Mt 1.5",
+"Tg 2.25"
+],
+"keyVerse": "Hb 11.31",
+"legacy": "Ninguém está longe demais para ser alcançado pela graça de Deus."
+},
+{
+"id": "otniel",
+"name": "Otniel",
+"title": "O primeiro juiz",
+"meaning": "força de Deus",
+"period": "c. 1370 a.C.",
+"groups": [
+"juizes"
+],
+"summary": "Sobrinho de Calebe, conquistou Quiriate-Sefer e ganhou como esposa Acsa, filha do tio. Quando Israel serviu aos baalins e foi oprimido oito anos por Cusã-Risataim, rei da Mesopotâmia, o povo clamou e o Espírito do Senhor veio sobre Otniel. Ele livrou Israel, e a terra teve descanso por 40 anos.",
+"facts": [
+[
+"Tribo",
+"Judá"
+],
+[
+"Opressor",
+"Cusã-Risataim, da Mesopotâmia (8 anos)"
+],
+[
+"Descanso",
+"40 anos"
+]
+],
+"refs": [
+"Js 15.16-17",
+"Jz 3.7-11"
+],
+"keyVerse": "Jz 3.9-10"
+},
+{
+"id": "eude",
+"name": "Eúde",
+"title": "O juiz canhoto",
+"meaning": "unido, majestade",
+"period": "c. 1310 a.C.",
+"groups": [
+"juizes"
+],
+"summary": "Benjamita canhoto, levou o tributo de Israel a Eglom, rei de Moabe, que oprimia o povo havia 18 anos. Com um punhal escondido na coxa direita — onde os guardas não revistavam —, matou o rei e fugiu. Depois convocou Israel, que tomou os vaus do Jordão e derrotou Moabe. A terra teve descanso por 80 anos.",
+"facts": [
+[
+"Tribo",
+"Benjamim"
+],
+[
+"Opressor",
+"Eglom, rei de Moabe (18 anos)"
+],
+[
+"Descanso",
+"80 anos"
+]
+],
+"refs": [
+"Jz 3.12-30"
+],
+"keyVerse": "Jz 3.15"
+},
+{
+"id": "sangar",
+"name": "Sangar",
+"title": "O homem da aguilhada",
+"period": "c. 1250 a.C.",
+"groups": [
+"juizes"
+],
+"summary": "Matou 600 filisteus com uma aguilhada de bois — um bastão de ponta de ferro usado para tocar os animais. Era o que tinha à mão, numa época em que os filisteus controlavam o ferro. Débora o lembra no seu cântico: nos dias de Sangar, as estradas estavam desertas.",
+"facts": [
+[
+"Arma",
+"Uma aguilhada de bois"
+]
+],
+"refs": [
+"Jz 3.31",
+"Jz 5.6"
+],
+"keyVerse": "Jz 3.31",
+"legacy": "Deus usa o que temos nas mãos."
+},
+{
+"id": "debora",
+"name": "Débora",
+"title": "Juíza e profetisa",
+"meaning": "abelha",
+"period": "c. 1200 a.C.",
+"groups": [
+"juizes",
+"profetas",
+"mulheres"
+],
+"summary": "Profetisa e juíza, julgava Israel sentada debaixo de uma palmeira entre Ramá e Betel. Quando Jabim, rei cananeu, oprimia o povo com 900 carros de ferro, ela chamou Baraque para a batalha e foi com ele. Deus mandou uma tempestade, o rio Quisom transbordou, os carros atolaram, e Israel venceu. O cântico de Débora (Jz 5) é um dos poemas mais antigos da Bíblia.",
+"facts": [
+[
+"Opressor",
+"Jabim, de Hazor, e o general Sísera (20 anos)"
+],
+[
+"Batalha",
+"Monte Tabor e o ribeiro de Quisom"
+],
+[
+"Descanso",
+"40 anos"
+]
+],
+"refs": [
+"Jz 4.4-16",
+"Jz 5.1-31"
+],
+"keyVerse": "Jz 4.14",
+"legacy": "Deus levanta homens e mulheres para liderar o seu povo com fé e coragem."
+},
+{
+"id": "baraque",
+"name": "Baraque",
+"title": "O general que foi com Débora",
+"meaning": "relâmpago",
+"period": "c. 1200 a.C.",
+"groups": [
+"herois",
+"juizes"
+],
+"summary": "De Quedes, em Naftali, foi convocado por Débora para enfrentar Sísera com 10 mil homens. Disse que só iria se ela fosse junto — e por isso a honra da vitória coube a uma mulher, Jael, que matou Sísera. Mesmo assim, Hebreus 11 o lembra entre os heróis da fé.",
+"facts": [
+[
+"Tribo",
+"Naftali"
+],
+[
+"Exército",
+"10 mil homens de Naftali e Zebulom"
+]
+],
+"refs": [
+"Jz 4.6-16",
+"Jz 5.12",
+"1Sm 12.11"
+],
+"keyVerse": "Hb 11.32-34"
+},
+{
+"id": "gideao",
+"name": "Gideão",
+"title": "O valente homem que tinha medo",
+"meaning": "cortador, derrubador",
+"period": "c. 1170 a.C.",
+"groups": [
+"herois",
+"juizes"
+],
+"summary": "Malhava o trigo escondido num lagar, com medo dos midianitas, quando o anjo o chamou de “valente homem”. Derrubou o altar de Baal do próprio pai, pediu sinais com a lã e venceu um exército enorme com apenas 300 homens, tochas, cântaros e trombetas. Recusou ser rei: “o Senhor sobre vós dominará”.",
+"facts": [
+[
+"Tribo",
+"Manassés (clã de Abiezer, em Ofra)"
+],
+[
+"Opressor",
+"Midiã (7 anos)"
+],
+[
+"Também chamado",
+"Jerubaal: “que Baal contenda”"
+]
+],
+"refs": [
+"Jz 6.11-24",
+"Jz 6.36-40",
+"Jz 7.1-22",
+"Jz 8.22-23"
+],
+"keyVerse": "Jz 7.7",
+"legacy": "A vitória vem de Deus, não do número nem da força."
+},
+{
+"id": "tola",
+"name": "Tola",
+"title": "Juiz por 23 anos",
+"period": "c. 1120 a.C.",
+"groups": [
+"juizes"
+],
+"summary": "Depois do caos deixado por Abimeleque, filho de Gideão, Tola “se levantou para livrar Israel” e julgou o povo por 23 anos, morando em Samir, nas montanhas de Efraim. A Bíblia não registra batalhas: às vezes a obra de Deus é dar estabilidade.",
+"facts": [
+[
+"Tribo",
+"Issacar"
+],
+[
+"Julgou",
+"23 anos"
+]
+],
+"refs": [
+"Jz 10.1-2"
+],
+"keyVerse": "Jz 10.1"
+},
+{
+"id": "jair",
+"name": "Jair",
+"title": "O juiz dos trinta jumentos",
+"meaning": "ele ilumina",
+"period": "c. 1100 a.C.",
+"groups": [
+"juizes"
+],
+"summary": "Gileadita, julgou Israel por 22 anos. Tinha 30 filhos que montavam 30 jumentos e governavam 30 cidades — sinal de riqueza e de prestígio.",
+"facts": [
+[
+"Região",
+"Gileade, a leste do Jordão"
+],
+[
+"Julgou",
+"22 anos"
+]
+],
+"refs": [
+"Jz 10.3-5"
+],
+"keyVerse": "Jz 10.3"
+},
+{
+"id": "jefte",
+"name": "Jefté",
+"title": "O rejeitado que Deus levantou",
+"meaning": "ele abre",
+"period": "c. 1100 a.C.",
+"groups": [
+"herois",
+"juizes"
+],
+"summary": "Filho de uma prostituta, foi expulso de casa pelos irmãos e viveu com um bando de aventureiros. Quando os amonitas atacaram, os mesmos anciãos que o rejeitaram vieram buscá-lo. Ele tentou negociar, lembrando a história com fé, e venceu. Mas fez um voto imprudente que custou a sua única filha — a Bíblia registra a tragédia sem aprová-la.",
+"facts": [
+[
+"Região",
+"Gileade"
+],
+[
+"Opressor",
+"Amom (18 anos)"
+],
+[
+"Julgou",
+"6 anos"
+]
+],
+"refs": [
+"Jz 11.1-11",
+"Jz 11.29-40",
+"1Sm 12.11"
+],
+"keyVerse": "Hb 11.32-33",
+"legacy": "Deus usa quem os outros desprezam — e nos ensina a não fazer promessas precipitadas."
+},
+{
+"id": "ibsa",
+"name": "Ibsã",
+"title": "Juiz de Belém",
+"period": "c. 1090 a.C.",
+"groups": [
+"juizes"
+],
+"summary": "De Belém, julgou Israel por sete anos. Teve 30 filhos e 30 filhas, e casou todos fora do seu clã — o que fortalecia alianças entre as famílias.",
+"facts": [
+[
+"Cidade",
+"Belém"
+],
+[
+"Julgou",
+"7 anos"
+]
+],
+"refs": [
+"Jz 12.8-10"
+],
+"keyVerse": "Jz 12.8"
+},
+{
+"id": "elom",
+"name": "Elom",
+"title": "Juiz de Zebulom",
+"meaning": "carvalho",
+"period": "c. 1080 a.C.",
+"groups": [
+"juizes"
+],
+"summary": "Zebulonita, julgou Israel por dez anos e foi sepultado em Aijalom, no território de Zebulom.",
+"facts": [
+[
+"Tribo",
+"Zebulom"
+],
+[
+"Julgou",
+"10 anos"
+]
+],
+"refs": [
+"Jz 12.11-12"
+],
+"keyVerse": "Jz 12.11"
+},
+{
+"id": "abdom",
+"name": "Abdom",
+"title": "Juiz de Piratom",
+"meaning": "servo",
+"period": "c. 1070 a.C.",
+"groups": [
+"juizes"
+],
+"summary": "De Piratom, em Efraim, julgou Israel por oito anos. Tinha 40 filhos e 30 netos que montavam 70 jumentos — um retrato de prosperidade antes da opressão filisteia que viria.",
+"facts": [
+[
+"Tribo",
+"Efraim"
+],
+[
+"Julgou",
+"8 anos"
+]
+],
+"refs": [
+"Jz 12.13-15"
+],
+"keyVerse": "Jz 12.13"
+},
+{
+"id": "sansao",
+"name": "Sansão",
+"title": "O nazireu mais forte",
+"meaning": "pequeno sol",
+"period": "c. 1070 a.C.",
+"groups": [
+"herois",
+"juizes",
+"nazireus"
+],
+"summary": "Anunciado por um anjo a pais estéreis, foi nazireu desde o ventre. O Espírito do Senhor o capacitava com força extraordinária: matou um leão, derrubou mil filisteus com uma queixada de jumento e arrancou as portas de Gaza. Mas foi dominado pelas paixões e revelou o seu segredo a Dalila. Cego e preso, orou pela última vez e derrubou o templo de Dagom.",
+"facts": [
+[
+"Tribo",
+"Dã (de Zorá)"
+],
+[
+"Pais",
+"Manoá e a mulher (sem nome no texto)"
+],
+[
+"Julgou",
+"20 anos"
+],
+[
+"Voto",
+"Nazireu desde o nascimento: nada de vinho, de navalha ou de mortos"
+]
+],
+"refs": [
+"Jz 13.2-5",
+"Jz 14.5-6",
+"Jz 15.14-16",
+"Jz 16.15-22",
+"Jz 16.28-30"
+],
+"keyVerse": "Jz 16.28",
+"legacy": "O dom de Deus não substitui o caráter — mas a graça de Deus ouve até a última oração de quem se arrepende."
+},
+{
+"id": "rute",
+"name": "Rute",
+"title": "A moabita fiel",
+"meaning": "amiga, companheira (incerto)",
+"period": "c. 1100 a.C.",
+"groups": [
+"mulheres"
+],
+"summary": "Viúva moabita, recusou-se a abandonar a sogra Noemi e escolheu o Deus de Israel: “o teu povo é o meu povo, o teu Deus é o meu Deus”. Em Belém, foi respigar nos campos de Boaz, parente de Elimeleque, que a protegeu e, como remidor, casou-se com ela. Tornou-se bisavó do rei Davi e está na genealogia de Jesus.",
+"facts": [
+[
+"Origem",
+"Moabe"
+],
+[
+"Marido",
+"Malom; depois, Boaz"
+],
+[
+"Filho",
+"Obede, avô de Davi"
+]
+],
+"refs": [
+"Rt 1.6-18",
+"Rt 2.1-12",
+"Rt 4.13-17",
+"Mt 1.5"
+],
+"keyVerse": "Rt 1.16",
+"legacy": "A fidelidade nas coisas simples entra na grande história de Deus."
+},
+{
+"id": "boaz",
+"name": "Boaz",
+"title": "O remidor de Belém",
+"meaning": "nele há força",
+"period": "c. 1100 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Proprietário rico de Belém, parente de Elimeleque. Recebeu com bondade a moabita Rute nos seus campos, mandou deixar espigas para ela e a protegeu. Como parente remidor (go'el), resgatou a herança da família e se casou com Rute. Foi bisavô de Davi e é uma figura de Cristo, o nosso Redentor. Mateus diz que era filho de Raabe.",
+"facts": [
+[
+"Esposa",
+"Rute"
+],
+[
+"Filho",
+"Obede, avô de Davi"
+]
+],
+"refs": [
+"Rt 2.1-16",
+"Rt 3.9-13",
+"Rt 4.9-17",
+"Mt 1.5"
+],
+"keyVerse": "Rt 4.9-10",
+"legacy": "O remidor paga o preço para restaurar quem perdeu tudo."
+},
+{
+"id": "jesse",
+"name": "Jessé",
+"title": "O pai de Davi",
+"period": "c. 1080–1020 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Belemita, neto de Rute e Boaz. Teve oito filhos; quando Samuel veio ungir um rei entre eles, Jessé nem chamou o caçula, Davi, que cuidava das ovelhas. Isaías anunciou que de “o tronco de Jessé” sairia o Messias, como um rebento depois que a árvore fosse cortada.",
+"facts": [
+[
+"Cidade",
+"Belém"
+],
+[
+"Filhos",
+"Eliabe, Abinadabe, Simeia, Davi e outros"
+]
+],
+"refs": [
+"1Sm 16.1-13",
+"Is 11.1-10",
+"Rm 15.12"
+],
+"keyVerse": "Is 11.1",
+"legacy": "Deus faz brotar vida nova de um tronco cortado."
+},
+{
+"id": "eli",
+"name": "Eli",
+"title": "O sacerdote de Siló",
+"meaning": "elevado",
+"period": "c. 1100–1060 a.C.",
+"groups": [
+"juizes"
+],
+"summary": "Sumo sacerdote e juiz em Siló durante 40 anos. Abençoou Ana e criou o menino Samuel no tabernáculo. Mas não corrigiu os filhos, Hofni e Fineias, que roubavam as ofertas e se deitavam com as mulheres que serviam na porta do tabernáculo. Ao saber que a arca fora tomada pelos filisteus e que os filhos tinham morrido, caiu da cadeira e morreu.",
+"facts": [
+[
+"Julgou",
+"40 anos"
+],
+[
+"Filhos",
+"Hofni e Fineias"
+]
+],
+"refs": [
+"1Sm 1.9-18",
+"1Sm 2.12-17",
+"1Sm 3.11-18",
+"1Sm 4.12-18"
+],
+"keyVerse": "1Sm 3.13",
+"legacy": "Amar os filhos inclui corrigi-los."
+},
+{
+"id": "ana-mae-de-samuel",
+"name": "Ana",
+"title": "A mãe que orou em Siló",
+"meaning": "graça",
+"period": "c. 1100 a.C.",
+"groups": [
+"mulheres"
+],
+"summary": "Estéril e provocada pela outra esposa de Elcana, Ana orou no tabernáculo com tanta angústia que Eli pensou que estivesse bêbada. Prometeu que, se tivesse um filho, o entregaria a Deus por toda a vida, como nazireu. Deus lhe deu Samuel, e ela o levou a Siló ainda pequeno. O seu cântico (1Sm 2) é o modelo do Magnificat de Maria.",
+"facts": [
+[
+"Marido",
+"Elcana"
+],
+[
+"Filhos",
+"Samuel e, depois, mais três filhos e duas filhas"
+]
+],
+"refs": [
+"1Sm 1.1-28",
+"1Sm 2.1-10",
+"1Sm 2.21"
+],
+"keyVerse": "1Sm 1.27-28",
+"legacy": "A oração derramada diante de Deus é ouvida — e o que recebemos dele, devolvemos a Ele."
+},
+{
+"id": "samuel",
+"name": "Samuel",
+"title": "O último juiz e o primeiro dos profetas",
+"meaning": "nome de Deus; ou “pedido a Deus”",
+"period": "c. 1100–1015 a.C.",
+"groups": [
+"herois",
+"juizes",
+"profetas",
+"nazireus"
+],
+"summary": "Filho da oração de Ana, foi consagrado desde o ventre (“navalha não passará pela sua cabeça”) e cresceu servindo no tabernáculo. Ainda menino, ouviu Deus chamá-lo de noite: “Fala, porque o teu servo ouve”. Foi juiz, sacerdote e profeta, percorreu Israel ensinando, ungiu Saul e depois Davi. Nenhuma das suas palavras “caiu em terra”.",
+"facts": [
+[
+"Pais",
+"Elcana e Ana"
+],
+[
+"Cidade",
+"Ramá"
+],
+[
+"Ungiu",
+"Saul e Davi"
+],
+[
+"Voto",
+"Consagrado desde o nascimento (1Sm 1.11)"
+]
+],
+"refs": [
+"1Sm 1.11",
+"1Sm 3.1-21",
+"1Sm 7.3-17",
+"1Sm 16.1-13",
+"At 3.24"
+],
+"keyVerse": "1Sm 3.10",
+"legacy": "Ouvir a Deus vem antes de falar por Ele."
+},
+{
+"id": "saul",
+"name": "Saul",
+"title": "O primeiro rei de Israel",
+"meaning": "pedido",
+"period": "c. 1050–1010 a.C.",
+"groups": [
+"reis-unido"
+],
+"summary": "Alto, bonito e humilde no começo, foi ungido por Samuel quando o povo pediu um rei “como as outras nações”. Venceu os amonitas, mas logo desobedeceu: ofereceu sacrifício sem esperar Samuel e poupou o que Deus mandou destruir dos amalequitas. Perseguiu Davi por inveja, consultou uma necromante em En-Dor e morreu com os filhos na batalha do monte Gilboa.",
+"facts": [
+[
+"Tribo",
+"Benjamim (de Gibeá)"
+],
+[
+"Filhos",
+"Jônatas, Isbosete e outros"
+],
+[
+"Morte",
+"No monte Gilboa, contra os filisteus"
+]
+],
+"refs": [
+"1Sm 9.15-10.1",
+"1Sm 13.8-14",
+"1Sm 15.10-23",
+"1Sm 31.1-6"
+],
+"keyVerse": "1Sm 15.22",
+"legacy": "Obedecer é melhor do que sacrificar.",
+"reign": {
+"years": "c. 1050–1010 a.C.",
+"length": "40 anos",
+"verdict": "misto"
+}
+},
+{
+"id": "davi",
+"name": "Davi",
+"title": "O homem segundo o coração de Deus",
+"meaning": "amado",
+"period": "c. 1040–970 a.C.",
+"groups": [
+"herois",
+"reis-unido"
+],
+"summary": "O caçula de Jessé, pastor em Belém, ungido ainda jovem. Venceu Golias, fugiu de Saul por anos sem levantar a mão contra o “ungido do Senhor”, e reinou sobre todo Israel a partir de Jerusalém, que conquistou. Trouxe a arca para a cidade e recebeu a promessa de um trono eterno. Pecou gravemente com Bate-Seba, mas se arrependeu de verdade. Escreveu 73 salmos.",
+"facts": [
+[
+"Tribo",
+"Judá (de Belém)"
+],
+[
+"Reinou",
+"7 anos e meio em Hebrom e 33 em Jerusalém"
+],
+[
+"Filhos",
+"Amnom, Absalão, Adonias, Salomão e outros"
+],
+[
+"Escreveu",
+"73 salmos, segundo os títulos"
+]
+],
+"refs": [
+"1Sm 16.1-13",
+"1Sm 17.45-50",
+"2Sm 5.1-10",
+"2Sm 7.8-16",
+"2Sm 12.1-13",
+"Sl 51"
+],
+"keyVerse": "At 13.22",
+"legacy": "Deus não procura pessoas perfeitas, mas corações que se voltam para Ele.",
+"reign": {
+"years": "c. 1010–970 a.C.",
+"length": "40 anos",
+"verdict": "bom"
+}
+},
+{
+"id": "jonatas",
+"name": "Jônatas",
+"title": "O amigo fiel",
+"meaning": "o Senhor deu",
+"period": "c. 1040–1010 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Filho mais velho do rei Saul e herdeiro do trono, valente guerreiro que venceu os filisteus em Micmás com o seu escudeiro. Amou Davi “como à sua própria alma”, fez aliança com ele e o protegeu da fúria do pai, mesmo sabendo que Davi seria rei no seu lugar. Morreu com Saul no monte Gilboa.",
+"refs": [
+"1Sm 14.6",
+"1Sm 18.1-4",
+"1Sm 20.12-17",
+"1Sm 23.16-18",
+"2Sm 1.25-26"
+],
+"keyVerse": "1Sm 23.16-17",
+"legacy": "A verdadeira amizade fortalece o outro em Deus, mesmo quando isso custa."
+},
+{
+"id": "bate-seba",
+"name": "Bate-Seba",
+"title": "A mãe de Salomão",
+"meaning": "filha do juramento",
+"period": "c. 1000–960 a.C.",
+"groups": [
+"personagens",
+"mulheres"
+],
+"summary": "Esposa de Urias, o hitita, um dos valentes de Davi. O rei a tomou e, para encobrir o pecado, mandou matar Urias. Depois do arrependimento de Davi, ela foi mãe de Salomão e de Natã. No fim do reinado, garantiu que Salomão fosse ungido rei. Está na genealogia de Jesus tanto em Mateus (por Salomão) quanto em Lucas (por Natã).",
+"facts": [
+[
+"Maridos",
+"Urias e Davi"
+],
+[
+"Filhos",
+"Salomão, Natã, Simeia e Sobabe"
+]
+],
+"refs": [
+"2Sm 11.1-27",
+"2Sm 12.24",
+"1Rs 1.11-31",
+"Mt 1.6"
+],
+"keyVerse": "2Sm 12.24",
+"legacy": "Deus é capaz de trazer restauração até depois das piores quedas."
+},
+{
+"id": "abigail",
+"name": "Abigail",
+"title": "A mulher sábia que evitou uma tragédia",
+"meaning": "meu pai é alegria",
+"period": "c. 1015 a.C.",
+"groups": [
+"mulheres"
+],
+"summary": "Esposa de Nabal, um homem rico e grosseiro que insultou Davi. Quando soube que Davi vinha com 400 homens para matar todos da casa, preparou presentes, foi ao encontro dele e, com humildade e sabedoria, o impediu de se vingar com as próprias mãos. Depois da morte de Nabal, Davi se casou com ela.",
+"facts": [
+[
+"Primeiro marido",
+"Nabal, de Maom"
+],
+[
+"Filho com Davi",
+"Quileabe (Daniel)"
+]
+],
+"refs": [
+"1Sm 25.2-42"
+],
+"keyVerse": "1Sm 25.32-33",
+"legacy": "Uma palavra sábia, na hora certa, pode impedir um grande mal."
+},
+{
+"id": "nata",
+"name": "Natã",
+"title": "O profeta que disse “Tu és o homem”",
+"meaning": "ele deu",
+"period": "c. 1000–970 a.C.",
+"groups": [
+"profetas"
+],
+"summary": "Profeta da corte de Davi. Levou ao rei a promessa da aliança eterna (2Sm 7). Depois do pecado com Bate-Seba, contou a parábola da ovelhinha do pobre e, quando Davi se indignou, disse: “Tu és o homem”. No fim do reinado, agiu para que Salomão fosse ungido rei. Escreveu uma crônica do reinado de Davi e de Salomão.",
+"facts": [
+[
+"Serviu",
+"Davi e Salomão"
+]
+],
+"refs": [
+"2Sm 7.1-17",
+"2Sm 12.1-15",
+"1Rs 1.11-40",
+"1Cr 29.29"
+],
+"keyVerse": "2Sm 12.7",
+"legacy": "Amar alguém, às vezes, é ter coragem de confrontá-lo."
+},
+{
+"id": "gade",
+"name": "Gade",
+"title": "O vidente de Davi",
+"meaning": "sorte, fortuna",
+"period": "c. 1015–970 a.C.",
+"groups": [
+"profetas"
+],
+"summary": "Profeta que acompanhava Davi desde o tempo da fuga, quando o orientou a sair da fortaleza e voltar para Judá. Depois do recenseamento orgulhoso de Davi, levou-lhe a escolha entre três castigos e a ordem de levantar um altar na eira de Araúna — onde depois seria construído o templo. Ajudou a organizar os músicos do templo.",
+"facts": [
+[
+"Serviu",
+"Davi"
+]
+],
+"refs": [
+"1Sm 22.5",
+"2Sm 24.11-19",
+"2Cr 29.25",
+"1Cr 29.29"
+],
+"keyVerse": "2Sm 24.18"
+},
+{
+"id": "salomao",
+"name": "Salomão",
+"title": "O rei sábio",
+"meaning": "pacífico (de shalom)",
+"period": "c. 990–931 a.C.",
+"groups": [
+"reis-unido"
+],
+"summary": "Filho de Davi e Bate-Seba. Em Gibeom, pediu a Deus sabedoria para governar, e Deus lhe deu também riqueza e honra. Construiu o templo em sete anos, organizou o reino e o comércio, e recebeu a rainha de Sabá. Escreveu provérbios e cânticos. Mas teve 700 esposas e 300 concubinas, que na velhice desviaram o seu coração para outros deuses — e o reino se dividiu depois da sua morte.",
+"facts": [
+[
+"Construiu",
+"O primeiro templo de Jerusalém"
+],
+[
+"Escreveu",
+"Provérbios, Eclesiastes, Cantares e os Salmos 72 e 127, segundo a tradição"
+],
+[
+"Filho e sucessor",
+"Roboão"
+]
+],
+"refs": [
+"1Rs 3.5-14",
+"1Rs 8.22-30",
+"1Rs 10.1-10",
+"1Rs 11.1-13"
+],
+"keyVerse": "1Rs 3.9",
+"legacy": "Começar bem não basta: é preciso guardar o coração até o fim.",
+"reign": {
+"years": "c. 970–931 a.C.",
+"length": "40 anos",
+"verdict": "misto"
+}
+},
+{
+"id": "aias",
+"name": "Aías, de Siló",
+"title": "O profeta da capa rasgada",
+"meaning": "irmão do Senhor",
+"period": "c. 930 a.C.",
+"groups": [
+"profetas"
+],
+"summary": "Encontrou Jeroboão no caminho, rasgou a própria capa nova em doze pedaços e lhe deu dez: Deus tiraria dez tribos da mão de Salomão por causa da idolatria. Anos depois, já cego, recebeu a mulher de Jeroboão disfarçada e anunciou o juízo sobre a casa do rei, que se afastara de Deus.",
+"facts": [
+[
+"Cidade",
+"Siló"
+]
+],
+"refs": [
+"1Rs 11.29-39",
+"1Rs 14.1-18"
+],
+"keyVerse": "1Rs 11.31"
+},
+{
+"id": "roboao",
+"name": "Roboão",
+"title": "O rei que dividiu o reino",
+"meaning": "o povo se amplia",
+"period": "931–913 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Filho de Salomão, rejeitou o conselho dos anciãos e seguiu o dos jovens: “meu pai vos castigou com açoites; eu vos castigarei com escorpiões”. As dez tribos do Norte se revoltaram e fizeram Jeroboão rei. No quinto ano do seu reinado, o faraó Sisaque saqueou os tesouros do templo — campanha registrada nas paredes do templo de Karnak, no Egito.",
+"facts": [
+[
+"Mãe",
+"Naamá, amonita"
+],
+[
+"Invasão",
+"Sisaque, do Egito (c. 925 a.C.)"
+]
+],
+"refs": [
+"1Rs 12.1-20",
+"1Rs 14.21-31",
+"2Cr 12.1-12"
+],
+"keyVerse": "1Rs 12.13-14",
+"reign": {
+"years": "931–913 a.C.",
+"length": "17 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "jeroboao-i",
+"name": "Jeroboão I",
+"title": "O rei que fez Israel pecar",
+"meaning": "o povo contende (ou se multiplica)",
+"period": "931–910 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Servo de Salomão, recebeu do profeta Aías a promessa de dez tribos. Primeiro rei do Norte, temeu que o povo voltasse a Jerusalém para adorar e fez dois bezerros de ouro, em Betel e em Dã: “eis os teus deuses, ó Israel”. Criou sacerdotes e festas próprias. A Bíblia mede os reis seguintes por ele: “andou no pecado de Jeroboão”.",
+"facts": [
+[
+"Capital",
+"Siquém e depois Tirza"
+],
+[
+"Santuários",
+"Betel e Dã"
+]
+],
+"refs": [
+"1Rs 11.26-40",
+"1Rs 12.25-33",
+"1Rs 13.1-6",
+"1Rs 14.7-16"
+],
+"keyVerse": "1Rs 12.28",
+"reign": {
+"years": "931–910 a.C.",
+"length": "22 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "abias",
+"name": "Abias (Abião)",
+"title": "O filho de Roboão",
+"meaning": "o Senhor é meu pai",
+"period": "913–911 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Andou nos pecados do pai. Mesmo assim, numa batalha contra Jeroboão, fez um discurso lembrando que Judá mantinha o templo e o sacerdócio legítimos, e venceu porque o povo clamou ao Senhor (2Cr 13).",
+"refs": [
+"1Rs 15.1-8",
+"2Cr 13.1-20"
+],
+"keyVerse": "2Cr 13.18",
+"reign": {
+"years": "913–911 a.C.",
+"length": "3 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "asa",
+"name": "Asa",
+"title": "O rei reformador",
+"meaning": "médico (incerto)",
+"period": "911–870 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Tirou os ídolos e os prostitutos cultuais da terra e chegou a depor a própria avó, Maaca, por ter feito um ídolo de Aserá. Diante de um exército etíope enorme, orou: “Senhor, nada é para ti ajudar, quer o poderoso, quer o de nenhuma força”. No fim da vida, porém, confiou no rei da Síria e nos médicos, e não buscou a Deus.",
+"facts": [
+[
+"Reforma",
+"Destruiu altares estranhos e renovou a aliança"
+],
+[
+"Doença",
+"Nos pés, nos últimos anos"
+]
+],
+"refs": [
+"1Rs 15.9-24",
+"2Cr 14.2-15",
+"2Cr 15.8-18",
+"2Cr 16.7-12"
+],
+"keyVerse": "2Cr 14.11",
+"reign": {
+"years": "911–870 a.C.",
+"length": "41 anos",
+"verdict": "bom"
+}
+},
+{
+"id": "nadabe",
+"name": "Nadabe",
+"title": "Herdeiro de Jeroboão",
+"meaning": "generoso",
+"period": "910–909 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Filho de Jeroboão, reinou só dois anos e andou no pecado do pai. Foi morto por Baasa durante o cerco de Gibetom, cidade filisteia, e toda a casa de Jeroboão foi exterminada, como Aías havia profetizado.",
+"refs": [
+"1Rs 15.25-31"
+],
+"keyVerse": "1Rs 15.29",
+"reign": {
+"years": "910–909 a.C.",
+"length": "2 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "baasa",
+"name": "Baasa",
+"title": "O usurpador de Issacar",
+"period": "909–886 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Tomou o trono matando Nadabe, mas repetiu os mesmos pecados. Fortificou Ramá para bloquear Judá, até que Asa pagou o rei da Síria para atacá-lo. O profeta Jeú, filho de Hanani, anunciou que a sua casa teria o mesmo fim da de Jeroboão.",
+"facts": [
+[
+"Tribo",
+"Issacar"
+],
+[
+"Capital",
+"Tirza"
+]
+],
+"refs": [
+"1Rs 15.27-34",
+"1Rs 16.1-7"
+],
+"keyVerse": "1Rs 16.2",
+"reign": {
+"years": "909–886 a.C.",
+"length": "24 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "ela",
+"name": "Elá",
+"title": "O rei que morreu embriagado",
+"period": "886–885 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Filho de Baasa. Enquanto bebia até se embriagar na casa do mordomo, em Tirza, foi morto por Zinri, comandante da metade dos seus carros. Com ele acabou a dinastia de Baasa.",
+"refs": [
+"1Rs 16.8-14"
+],
+"keyVerse": "1Rs 16.9-10",
+"reign": {
+"years": "886–885 a.C.",
+"length": "2 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "zinri",
+"name": "Zinri",
+"title": "O rei de sete dias",
+"period": "885 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Matou Elá e toda a família de Baasa, mas o exército, que estava em campanha, proclamou o general Onri rei. Cercado em Tirza, Zinri entrou na torre do palácio, pôs fogo nela e morreu queimado. Reinou apenas sete dias.",
+"refs": [
+"1Rs 16.9-20"
+],
+"keyVerse": "1Rs 16.18",
+"reign": {
+"years": "885 a.C.",
+"length": "7 dias",
+"verdict": "mau"
+}
+},
+{
+"id": "onri",
+"name": "Onri",
+"title": "O fundador de Samaria",
+"period": "885–874 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "General do exército, venceu Zinri e, depois de quatro anos de disputa com Tibni, ficou com o trono. Comprou o monte de Semer e construiu Samaria, a nova capital. A Bíblia lhe dedica poucos versículos, mas ele foi tão importante que os assírios chamavam Israel de “a casa de Onri”, e a Pedra Moabita, de Mesa, registra que ele dominou Moabe.",
+"facts": [
+[
+"Capital",
+"Samaria, que ele fundou"
+],
+[
+"Filho",
+"Acabe"
+]
+],
+"refs": [
+"1Rs 16.21-28",
+"Mq 6.16"
+],
+"keyVerse": "1Rs 16.24-25",
+"reign": {
+"years": "885–874 a.C.",
+"length": "12 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "acabe",
+"name": "Acabe",
+"title": "O rei de Jezabel",
+"meaning": "irmão do pai",
+"period": "874–853 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Casou-se com Jezabel, princesa de Sidom, e fez do culto a Baal a religião oficial, com templo em Samaria. Enfrentou Elias, que anunciou três anos e meio de seca e venceu os profetas de Baal no Carmelo. Mandou matar Nabote para tomar a sua vinha. Foi um rei militarmente forte — uma inscrição assíria diz que levou 2 mil carros à batalha de Qarqar —, mas morreu atingido por uma flecha “ao acaso” em Ramote-Gileade.",
+"facts": [
+[
+"Esposa",
+"Jezabel, de Sidom"
+],
+[
+"Profetas",
+"Elias e Micaías"
+],
+[
+"Morte",
+"Em Ramote-Gileade; os cães lamberam o seu sangue"
+]
+],
+"refs": [
+"1Rs 16.29-33",
+"1Rs 18.17-40",
+"1Rs 21.1-29",
+"1Rs 22.29-38"
+],
+"keyVerse": "1Rs 16.30",
+"reign": {
+"years": "874–853 a.C.",
+"length": "22 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "elias",
+"name": "Elias",
+"title": "O profeta de fogo",
+"meaning": "meu Deus é o Senhor",
+"period": "c. 870–850 a.C.",
+"groups": [
+"profetas"
+],
+"summary": "De Tisbe, em Gileade, apareceu de repente diante de Acabe anunciando seca. Foi alimentado por corvos no ribeiro de Querite e por uma viúva em Sarepta, cujo filho ressuscitou. No Carmelo, desafiou os 450 profetas de Baal e Deus respondeu com fogo. Depois, ameaçado por Jezabel, quis morrer, e Deus o encontrou no Horebe num “cicio tranquilo e suave”. Foi levado ao céu num redemoinho.",
+"facts": [
+[
+"Sucessor",
+"Eliseu"
+],
+[
+"Fim",
+"Arrebatado num carro de fogo, junto ao Jordão"
+],
+[
+"No Novo Testamento",
+"Apareceu na transfiguração de Jesus"
+]
+],
+"refs": [
+"1Rs 17.1-24",
+"1Rs 18.20-40",
+"1Rs 19.1-18",
+"2Rs 2.1-11",
+"Ml 4.5",
+"Tg 5.17-18"
+],
+"keyVerse": "1Rs 18.36-37",
+"legacy": "Elias era “homem sujeito às mesmas paixões que nós” — e a sua oração mudou o céu."
+},
+{
+"id": "josafa",
+"name": "Josafá",
+"title": "O rei que venceu com louvor",
+"meaning": "o Senhor julga",
+"period": "872–848 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Mandou príncipes e levitas ensinarem a Lei por todas as cidades de Judá e nomeou juízes, dizendo: “o juízo não é dos homens, mas do Senhor”. Diante de moabitas e amonitas, proclamou jejum, orou e pôs cantores à frente do exército — e Deus derrotou os inimigos. Errou ao se aliar com Acabe e casar o filho com a filha dele, Atalia.",
+"facts": [
+[
+"Pai",
+"Asa"
+],
+[
+"Erro",
+"Aliança com a casa de Acabe"
+]
+],
+"refs": [
+"1Rs 22.41-50",
+"2Cr 17.3-9",
+"2Cr 19.5-7",
+"2Cr 20.1-30"
+],
+"keyVerse": "2Cr 20.20",
+"reign": {
+"years": "872–848 a.C.",
+"length": "25 anos",
+"verdict": "bom"
+}
+},
+{
+"id": "micaias",
+"name": "Micaías",
+"title": "O profeta que não se vendeu",
+"meaning": "quem é como o Senhor?",
+"period": "853 a.C.",
+"groups": [
+"profetas"
+],
+"summary": "Quando 400 profetas da corte prometeram vitória a Acabe e Josafá, Micaías foi chamado e pressionado a concordar. Respondeu: “o que o Senhor me disser, isso falarei”. Anunciou que Acabe morreria e foi preso a pão e água. Acabe morreu na batalha, como ele dissera.",
+"refs": [
+"1Rs 22.1-38",
+"2Cr 18.1-27"
+],
+"keyVerse": "1Rs 22.14",
+"legacy": "A verdade de Deus vale mais do que a aprovação da maioria."
+},
+{
+"id": "acazias-de-israel",
+"name": "Acazias (de Israel)",
+"title": "O rei que consultou Baal-Zebube",
+"meaning": "o Senhor sustenta",
+"period": "853–852 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Filho de Acabe e Jezabel. Caiu pela grade de um quarto alto em Samaria e mandou consultar Baal-Zebube, deus de Ecrom, para saber se sararia. Elias interceptou os mensageiros: “Porventura não há Deus em Israel?”. Morreu sem filhos.",
+"refs": [
+"1Rs 22.51-53",
+"2Rs 1.1-17"
+],
+"keyVerse": "2Rs 1.3",
+"reign": {
+"years": "853–852 a.C.",
+"length": "2 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "jeorao-de-juda",
+"name": "Jeorão (de Judá)",
+"title": "O genro de Acabe",
+"meaning": "o Senhor é exaltado",
+"period": "853–841 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Filho de Josafá, casou-se com Atalia, filha de Acabe, e andou nos caminhos dos reis de Israel. Ao subir ao trono, matou todos os irmãos. Edom se revoltou. Recebeu uma carta de Elias anunciando o juízo e morreu de uma doença terrível nas entranhas — “e se foi sem deixar saudades”.",
+"refs": [
+"2Rs 8.16-24",
+"2Cr 21.4-20"
+],
+"keyVerse": "2Cr 21.6",
+"reign": {
+"years": "853–841 a.C.",
+"length": "8 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "jorao-de-israel",
+"name": "Jorão (de Israel)",
+"title": "O último da casa de Onri",
+"meaning": "o Senhor é exaltado",
+"period": "852–841 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Outro filho de Acabe. Tirou a coluna de Baal que o pai fizera, mas manteve os bezerros de Jeroboão. Viveu os grandes milagres de Eliseu: a vitória sobre Moabe, a cura de Naamã e o cerco de Samaria. Ferido na guerra contra a Síria, foi morto por Jeú com uma flecha no coração, justamente na vinha de Nabote.",
+"refs": [
+"2Rs 3.1-27",
+"2Rs 5.1-8",
+"2Rs 9.14-26"
+],
+"keyVerse": "2Rs 3.2-3",
+"reign": {
+"years": "852–841 a.C.",
+"length": "12 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "eliseu",
+"name": "Eliseu",
+"title": "O profeta da porção dobrada",
+"meaning": "Deus é salvação",
+"period": "c. 850–795 a.C.",
+"groups": [
+"profetas"
+],
+"summary": "Lavrava a terra com doze juntas de bois quando Elias lançou sobre ele a sua capa. Pediu “porção dobrada” do espírito de Elias e viu o mestre ser arrebatado. A Bíblia registra cerca do dobro dos milagres de Elias: dividiu o Jordão, multiplicou o azeite da viúva, ressuscitou o filho da sunamita, curou Naamã da lepra e mostrou ao servo os carros de fogo em Dotã.",
+"facts": [
+[
+"Mestre",
+"Elias"
+],
+[
+"Serviu",
+"Do reinado de Jorão ao de Jeoás"
+]
+],
+"refs": [
+"1Rs 19.19-21",
+"2Rs 2.9-15",
+"2Rs 4.1-37",
+"2Rs 5.1-14",
+"2Rs 6.15-17",
+"2Rs 13.20-21"
+],
+"keyVerse": "2Rs 6.16-17",
+"legacy": "Mais são os que estão conosco do que os que estão com eles."
+},
+{
+"id": "acazias-de-juda",
+"name": "Acazias (de Judá)",
+"title": "Filho de Atalia",
+"meaning": "o Senhor sustenta",
+"period": "841 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Neto de Acabe pelo lado da mãe, Atalia, que era a sua conselheira “para proceder impiamente”. Reinou um ano. Visitava o tio Jorão, ferido em Jezreel, quando Jeú chegou e o matou também.",
+"refs": [
+"2Rs 8.25-29",
+"2Rs 9.27-29",
+"2Cr 22.1-9"
+],
+"keyVerse": "2Cr 22.3",
+"reign": {
+"years": "841 a.C.",
+"length": "1 ano",
+"verdict": "mau"
+}
+},
+{
+"id": "jeu",
+"name": "Jeú",
+"title": "O que guiava furiosamente",
+"meaning": "o Senhor é Ele",
+"period": "841–814 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Comandante do exército, foi ungido por um discípulo de Eliseu para exterminar a casa de Acabe. Matou Jorão, Acazias de Judá e Jezabel, e acabou com o culto a Baal em Israel. Mas não deixou os bezerros de ouro de Jeroboão. O Obelisco Negro do rei assírio Salmaneser III, hoje no Museu Britânico, mostra Jeú (ou um enviado seu) prostrado, pagando tributo — a única imagem conhecida de um rei de Israel.",
+"facts": [
+[
+"Fama",
+"“Guia furiosamente” o seu carro (2Rs 9.20)"
+],
+[
+"Dinastia",
+"Durou quatro gerações, como Deus prometeu"
+]
+],
+"refs": [
+"2Rs 9.1-13",
+"2Rs 9.30-37",
+"2Rs 10.18-31"
+],
+"keyVerse": "2Rs 10.30-31",
+"reign": {
+"years": "841–814 a.C.",
+"length": "28 anos",
+"verdict": "misto"
+}
+},
+{
+"id": "atalia",
+"name": "Atalia",
+"title": "A rainha usurpadora",
+"meaning": "o Senhor é exaltado",
+"period": "841–835 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Filha de Acabe e Jezabel, viúva de Jeorão. Quando o filho Acazias morreu, mandou matar toda a descendência real para reinar. Só escapou o neto Joás, de um ano, escondido pela tia Jeoseba no templo. Seis anos depois, o sacerdote Joiada coroou o menino; Atalia gritou “Traição!” e foi morta. É a única pessoa que governou Judá sem ser da linhagem de Davi.",
+"refs": [
+"2Rs 11.1-20",
+"2Cr 22.10-23.15"
+],
+"keyVerse": "2Rs 11.1-3",
+"reign": {
+"years": "841–835 a.C.",
+"length": "6 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "joas-de-juda",
+"name": "Joás (de Judá)",
+"title": "O menino rei",
+"meaning": "o Senhor deu",
+"period": "835–796 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Escondido no templo desde bebê, foi coroado aos sete anos pelo sacerdote Joiada. Enquanto Joiada viveu, fez o que era reto e restaurou o templo, com uma caixa de ofertas à porta. Depois da morte do sacerdote, seguiu os príncipes na idolatria e mandou apedrejar Zacarias, filho de Joiada, no pátio do templo — morte que Jesus lembrou (Mt 23.35). Foi morto pelos próprios servos.",
+"refs": [
+"2Rs 11.21-12.21",
+"2Cr 24.1-27"
+],
+"keyVerse": "2Cr 24.2",
+"reign": {
+"years": "835–796 a.C.",
+"length": "40 anos",
+"verdict": "misto"
+}
+},
+{
+"id": "joel",
+"name": "Joel",
+"title": "O profeta do Pentecostes",
+"meaning": "o Senhor é Deus",
+"period": "Data incerta",
+"groups": [
+"profetas-menores"
+],
+"summary": "Filho de Petuel. Diante de uma praga de gafanhotos que devastou Judá, chamou o povo a um jejum nacional e ao arrependimento sincero: “rasgai o vosso coração, e não as vossas vestes”. Anunciou o Dia do Senhor e a promessa de que Deus derramaria o seu Espírito sobre toda carne — profecia que Pedro citou no dia de Pentecostes.",
+"facts": [
+[
+"Livro",
+"3 capítulos (4 no texto hebraico)"
+],
+[
+"Citado",
+"At 2.16-21; Rm 10.13"
+]
+],
+"refs": [
+"Jl 1.1-4",
+"Jl 2.12-13",
+"Jl 2.25-32",
+"At 2.16-21"
+],
+"keyVerse": "Jl 2.28",
+"legacy": "Deus restitui “os anos que foram consumidos” e derrama o seu Espírito sobre os que se voltam para Ele."
+},
+{
+"id": "jeoacaz-de-israel",
+"name": "Jeoacaz (de Israel)",
+"title": "O rei que suplicou",
+"meaning": "o Senhor sustenta",
+"period": "814–798 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Filho de Jeú. A Síria de Hazael e Ben-Hadade reduziu o seu exército a 50 cavaleiros, 10 carros e 10 mil soldados. Ele suplicou ao Senhor, e Deus ouviu e deu a Israel um libertador — mas o povo não abandonou os pecados de Jeroboão.",
+"refs": [
+"2Rs 13.1-9"
+],
+"keyVerse": "2Rs 13.4-5",
+"reign": {
+"years": "814–798 a.C.",
+"length": "17 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "jeoas-de-israel",
+"name": "Jeoás (de Israel)",
+"title": "O rei das três flechadas",
+"meaning": "o Senhor deu",
+"period": "798–782 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Visitou Eliseu no leito de morte e chorou: “meu pai, carros de Israel e seus cavaleiros!”. O profeta mandou que ele ferisse o chão com as flechas; ele bateu só três vezes, e por isso venceu a Síria só três vezes. Também derrotou Amazias de Judá e derrubou parte do muro de Jerusalém.",
+"refs": [
+"2Rs 13.10-25",
+"2Rs 14.8-14"
+],
+"keyVerse": "2Rs 13.18-19",
+"reign": {
+"years": "798–782 a.C.",
+"length": "16 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "amazias",
+"name": "Amazias",
+"title": "Reto, mas não de coração perfeito",
+"meaning": "o Senhor é forte",
+"period": "796–767 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Começou bem e obedeceu à Lei ao punir os assassinos do pai sem matar os filhos deles. Venceu os edomitas — mas trouxe os deuses de Edom e se prostrou diante deles. Orgulhoso, desafiou Jeoás de Israel, foi derrotado e preso. Morreu assassinado em Laquis.",
+"refs": [
+"2Rs 14.1-20",
+"2Cr 25.1-28"
+],
+"keyVerse": "2Cr 25.2",
+"reign": {
+"years": "796–767 a.C.",
+"length": "29 anos",
+"verdict": "misto"
+}
+},
+{
+"id": "jeroboao-ii",
+"name": "Jeroboão II",
+"title": "O rei da prosperidade",
+"period": "793–753 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "O reinado mais longo de Israel. Restaurou as fronteiras do norte, “desde a entrada de Hamate até o mar da Arabá”, como Jonas havia profetizado. Foi um tempo de riqueza, casas de marfim e festas religiosas cheias — e de injustiça contra os pobres, que Amós e Oseias denunciaram. Trinta anos depois da sua morte, Samaria caiu.",
+"facts": [
+[
+"Profetas",
+"Jonas, Amós e Oseias"
+]
+],
+"refs": [
+"2Rs 14.23-29",
+"Am 7.10-11",
+"Os 1.1"
+],
+"keyVerse": "2Rs 14.25-27",
+"reign": {
+"years": "793–753 a.C.",
+"length": "41 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "uzias",
+"name": "Uzias (Azarias)",
+"title": "O rei que o orgulho derrubou",
+"meaning": "o Senhor é a minha força",
+"period": "792–740 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Rei aos 16 anos, buscou a Deus nos dias do profeta Zacarias, “e enquanto buscou ao Senhor, Deus o fez prosperar”: venceu os filisteus, fortificou Jerusalém, cavou poços e amou a agricultura. Mas, poderoso, ensoberbeceu-se e entrou no templo para queimar incenso, o que só os sacerdotes podiam fazer. Ficou leproso até morrer. No ano da sua morte, Isaías viu o Senhor no trono.",
+"refs": [
+"2Rs 15.1-7",
+"2Cr 26.1-23",
+"Is 6.1"
+],
+"keyVerse": "2Cr 26.5",
+"reign": {
+"years": "792–740 a.C.",
+"length": "52 anos",
+"verdict": "misto"
+}
+},
+{
+"id": "jonas",
+"name": "Jonas",
+"title": "O profeta que fugiu",
+"meaning": "pomba",
+"period": "c. 780 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "De Gate-Hefer, na Galileia, profetizou a expansão de Israel no tempo de Jeroboão II. Mandado a pregar em Nínive, capital da cruel Assíria, embarcou para o lado oposto, para Társis. Numa tempestade, foi lançado ao mar e engolido por um grande peixe. Pregou em Nínive, a cidade se arrependeu — e Jonas ficou irado com a misericórdia de Deus.",
+"facts": [
+[
+"Cidade",
+"Gate-Hefer, perto de Nazaré"
+],
+[
+"Citado por Jesus",
+"O sinal de Jonas (Mt 12.39-41)"
+]
+],
+"refs": [
+"2Rs 14.25",
+"Jn 1.1-17",
+"Jn 3.1-10",
+"Jn 4.1-11",
+"Mt 12.39-41"
+],
+"keyVerse": "Jn 2.9",
+"legacy": "A misericórdia de Deus é maior do que os nossos preconceitos."
+},
+{
+"id": "amos",
+"name": "Amós",
+"title": "O boieiro de Tecoa",
+"meaning": "carregado, carregador",
+"period": "c. 760 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "Não era profeta de profissão nem filho de profeta: era boieiro e colhedor de sicômoros em Tecoa, Judá. Deus o mandou ao Reino do Norte, em plena prosperidade, para denunciar os ricos que “vendem o justo por dinheiro e o necessitado por um par de sandálias”. Em Betel, o sacerdote Amazias o mandou embora.",
+"facts": [
+[
+"Livro",
+"9 capítulos"
+],
+[
+"Época",
+"Reinados de Uzias (Judá) e Jeroboão II (Israel)"
+]
+],
+"refs": [
+"Am 1.1",
+"Am 5.21-24",
+"Am 7.10-15",
+"Am 9.11-15"
+],
+"keyVerse": "Am 5.24",
+"legacy": "Deus não aceita culto de quem pisa no pobre."
+},
+{
+"id": "oseias-profeta",
+"name": "Oseias",
+"title": "O profeta do amor que não desiste",
+"meaning": "salvação",
+"period": "c. 755–715 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "Profetizou no Reino do Norte nos seus últimos anos. Deus lhe mandou casar com Gômer, que lhe foi infiel; os filhos receberam nomes de juízo (Jezreel, Lo-Ruama — “não amada” —, Lo-Ami — “não meu povo”). Depois, Oseias comprou a esposa de volta. A sua vida retratou o amor de Deus por Israel, infiel com Baal.",
+"facts": [
+[
+"Esposa",
+"Gômer"
+],
+[
+"Livro",
+"14 capítulos — o primeiro dos Profetas Menores"
+]
+],
+"refs": [
+"Os 1.2-9",
+"Os 3.1-5",
+"Os 6.1-6",
+"Os 11.1-4",
+"Os 14.1-9"
+],
+"keyVerse": "Os 6.6",
+"legacy": "Deus prefere misericórdia a sacrifício, e o conhecimento dele a holocaustos."
+},
+{
+"id": "zacarias-rei",
+"name": "Zacarias (de Israel)",
+"title": "O fim da dinastia de Jeú",
+"meaning": "o Senhor se lembra",
+"period": "753 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Filho de Jeroboão II, reinou seis meses e foi morto publicamente por Salum. Era a quarta geração de Jeú: cumpriu-se a palavra de que os filhos de Jeú se assentariam no trono até a quarta geração.",
+"refs": [
+"2Rs 15.8-12"
+],
+"keyVerse": "2Rs 15.12",
+"reign": {
+"years": "753 a.C.",
+"length": "6 meses",
+"verdict": "mau"
+}
+},
+{
+"id": "salum",
+"name": "Salum",
+"title": "O rei de um mês",
+"period": "752 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Matou Zacarias e reinou só um mês em Samaria, até ser morto por Menaém. Era o começo dos anos de golpes que levariam à queda do Reino do Norte.",
+"refs": [
+"2Rs 15.13-15"
+],
+"keyVerse": "2Rs 15.13",
+"reign": {
+"years": "752 a.C.",
+"length": "1 mês",
+"verdict": "mau"
+}
+},
+{
+"id": "menaem",
+"name": "Menaém",
+"title": "O rei que pagou à Assíria",
+"meaning": "consolador",
+"period": "752–742 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Tomou o trono com violência. Quando Pul — Tiglate-Pileser III, da Assíria — invadiu a terra, pagou-lhe mil talentos de prata, cobrando 50 siclos de cada homem rico, para continuar no poder. Os anais assírios citam o tributo de “Menahimmu de Samaria”.",
+"refs": [
+"2Rs 15.16-22"
+],
+"keyVerse": "2Rs 15.19-20",
+"reign": {
+"years": "752–742 a.C.",
+"length": "10 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "jotao",
+"name": "Jotão",
+"title": "O rei que firmou os seus caminhos",
+"meaning": "o Senhor é perfeito",
+"period": "750–732 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Governou primeiro no lugar do pai, Uzias, que ficou leproso. Fez o que era reto, construiu a porta alta do templo, cidades e torres, e venceu os amonitas. “Tornou-se poderoso, porque dirigiu os seus caminhos na presença do Senhor”. Mas o povo continuava se corrompendo.",
+"refs": [
+"2Rs 15.32-38",
+"2Cr 27.1-9"
+],
+"keyVerse": "2Cr 27.6",
+"reign": {
+"years": "750–732 a.C.",
+"length": "16 anos",
+"verdict": "bom"
+}
+},
+{
+"id": "pecaias",
+"name": "Pecaías",
+"title": "Filho de Menaém",
+"meaning": "o Senhor abriu os olhos",
+"period": "742–740 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Reinou dois anos em Samaria e foi assassinado no palácio pelo seu capitão, Peca, com 50 homens de Gileade.",
+"refs": [
+"2Rs 15.23-26"
+],
+"keyVerse": "2Rs 15.25",
+"reign": {
+"years": "742–740 a.C.",
+"length": "2 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "peca",
+"name": "Peca",
+"title": "O rei que perdeu a Galileia",
+"period": "752–732 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Aliou-se a Rezim, rei da Síria, para atacar Judá e forçar Acaz a entrar numa coalizão contra a Assíria — o contexto da profecia de Emanuel (Is 7). Tiglate-Pileser III reagiu, tomou a Galileia, Naftali e Gileade e deportou a população: foi o início do cativeiro assírio. Peca foi morto por Oseias.",
+"facts": [
+[
+"Contexto",
+"Isaías 7: “Eis que a virgem conceberá”"
+]
+],
+"refs": [
+"2Rs 15.27-31",
+"2Rs 16.5",
+"Is 7.1-9"
+],
+"keyVerse": "2Rs 15.29",
+"reign": {
+"years": "752–732 a.C.",
+"length": "20 anos (contando o tempo em que governou Gileade)",
+"verdict": "mau"
+}
+},
+{
+"id": "isaias",
+"name": "Isaías",
+"title": "O profeta da santidade e do Messias",
+"meaning": "o Senhor é salvação",
+"period": "c. 740–680 a.C.",
+"groups": [
+"profetas-maiores"
+],
+"summary": "Filho de Amoz, de Jerusalém, com acesso à corte. Chamado numa visão do Senhor no templo, com os serafins clamando “Santo, santo, santo”, respondeu: “Eis-me aqui, envia-me a mim”. Profetizou por mais de 40 anos, sob quatro reis, enfrentou a ameaça assíria e aconselhou Ezequias. Anunciou o Emanuel, o Príncipe da Paz e o Servo sofredor. Segundo a tradição judaica, foi serrado ao meio por Manassés.",
+"facts": [
+[
+"Família",
+"Casado com uma profetisa; filhos Sear-Jasube e Maer-Salal-Hás-Baz, nomes que eram mensagens"
+],
+[
+"Reis",
+"Uzias, Jotão, Acaz e Ezequias"
+],
+[
+"Livro",
+"66 capítulos — o profeta mais citado no Novo Testamento"
+]
+],
+"refs": [
+"Is 6.1-8",
+"Is 7.14",
+"Is 9.6-7",
+"Is 40.1-11",
+"Is 53.1-12",
+"2Rs 19.1-7"
+],
+"keyVerse": "Is 6.8",
+"legacy": "Quem vê a santidade de Deus reconhece o próprio pecado — e é enviado."
+},
+{
+"id": "miqueias",
+"name": "Miqueias",
+"title": "O profeta de Belém",
+"meaning": "quem é como o Senhor?",
+"period": "c. 735–700 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "De Moresete, no interior de Judá, contemporâneo de Isaías. Denunciou os poderosos que cobiçavam campos e casas e os tomavam à força, e os profetas que pregavam por dinheiro. Anunciou que o governante de Israel nasceria em Belém Efrata — texto que os escribas citaram a Herodes. Resumiu o que Deus pede: justiça, misericórdia e humildade.",
+"facts": [
+[
+"Livro",
+"7 capítulos"
+],
+[
+"Lembrado",
+"Um século depois, sua profecia salvou a vida de Jeremias (Jr 26.18-19)"
+]
+],
+"refs": [
+"Mq 3.8-12",
+"Mq 5.2",
+"Mq 6.6-8",
+"Mq 7.18-20",
+"Mt 2.5-6"
+],
+"keyVerse": "Mq 6.8"
+},
+{
+"id": "acaz",
+"name": "Acaz",
+"title": "O rei que recusou o sinal",
+"meaning": "ele segurou",
+"period": "735–715 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Um dos piores reis de Judá: queimou o próprio filho em sacrifício e fechou as portas do templo. Ameaçado pela Síria e por Israel, recusou o sinal que Deus lhe oferecia por Isaías — e Deus deu o sinal assim mesmo: “a virgem conceberá e dará à luz um filho”. Pagou a Tiglate-Pileser com os tesouros do templo e copiou um altar pagão de Damasco.",
+"refs": [
+"2Rs 16.1-20",
+"2Cr 28.1-27",
+"Is 7.1-14"
+],
+"keyVerse": "Is 7.10-14",
+"reign": {
+"years": "735–715 a.C.",
+"length": "16 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "oseias-rei",
+"name": "Oseias (de Israel)",
+"title": "O último rei de Israel",
+"meaning": "salvação",
+"period": "732–722 a.C.",
+"groups": [
+"reis-israel"
+],
+"summary": "Matou Peca e reinou como vassalo da Assíria. Parou de pagar o tributo e buscou ajuda de “Sô, rei do Egito”. Salmaneser V o prendeu e cercou Samaria por três anos. Em 722 a.C., a cidade caiu e as dez tribos foram levadas cativas para a Assíria. Não era tão mau quanto os anteriores — mas o juízo acumulado chegou.",
+"refs": [
+"2Rs 17.1-23",
+"2Rs 18.9-12"
+],
+"keyVerse": "2Rs 17.6-7",
+"reign": {
+"years": "732–722 a.C.",
+"length": "9 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "ezequias",
+"name": "Ezequias",
+"title": "O rei que confiou",
+"meaning": "o Senhor fortalece",
+"period": "715–686 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Reabriu e purificou o templo, celebrou uma Páscoa como não se via desde Salomão e destruiu até a serpente de bronze de Moisés, que virara ídolo. Cavou um túnel de 533 metros na rocha para levar a água da fonte de Giom para dentro de Jerusalém — o túnel e a inscrição de Siloé existem até hoje. Quando Senaqueribe cercou a cidade, abriu a carta do inimigo diante do Senhor e orou; Deus livrou Jerusalém. Doente, orou e recebeu mais 15 anos de vida.",
+"facts": [
+[
+"Profeta",
+"Isaías"
+],
+[
+"Obra",
+"Túnel de Ezequias (Siloé)"
+],
+[
+"Invasão",
+"Senaqueribe, 701 a.C."
+]
+],
+"refs": [
+"2Rs 18.1-8",
+"2Rs 19.14-20",
+"2Rs 19.35-37",
+"2Rs 20.1-11",
+"2Cr 30.1-27",
+"2Cr 32.30"
+],
+"keyVerse": "2Rs 18.5-6",
+"reign": {
+"years": "715–686 a.C.",
+"length": "29 anos",
+"verdict": "bom"
+}
+},
+{
+"id": "manasses",
+"name": "Manassés",
+"title": "O pior rei — e o arrependido",
+"meaning": "o que faz esquecer",
+"period": "696–642 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Filho de Ezequias, desfez toda a reforma do pai: reconstruiu os altares de Baal, pôs uma imagem de Aserá no templo, queimou o filho no fogo, praticou feitiçaria e “derramou muitíssimo sangue inocente”. O seu reinado foi o motivo final do exílio. Mas, levado preso com ganchos para a Babilônia, humilhou-se diante de Deus, e Deus o ouviu e o trouxe de volta.",
+"refs": [
+"2Rs 21.1-18",
+"2Cr 33.1-20",
+"2Rs 24.3-4"
+],
+"keyVerse": "2Cr 33.12-13",
+"legacy": "Ninguém é tão mau que não possa se arrepender — mas o mal que plantamos deixa raízes.",
+"reign": {
+"years": "696–642 a.C. (com o pai, até 686)",
+"length": "55 anos — o mais longo de Judá",
+"verdict": "mau"
+}
+},
+{
+"id": "naum",
+"name": "Naum",
+"title": "O profeta da queda de Nínive",
+"meaning": "consolo",
+"period": "Entre 663 e 612 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "De Elcós (local incerto — talvez Cafarnaum, “aldeia de Naum”, venha do seu nome). Anunciou a destruição de Nínive, a orgulhosa capital assíria que parecia invencível. A profecia se cumpriu em 612 a.C., quando babilônios e medos arrasaram a cidade, que nunca mais foi reconstruída.",
+"facts": [
+[
+"Livro",
+"3 capítulos"
+]
+],
+"refs": [
+"Na 1.2-8",
+"Na 2.6-10",
+"Na 3.1-7"
+],
+"keyVerse": "Na 1.7"
+},
+{
+"id": "amom",
+"name": "Amom",
+"title": "Filho de Manassés",
+"period": "642–640 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Seguiu a idolatria do pai, mas não o seu arrependimento: “Amom multiplicou a culpa”. Os servos conspiraram e o mataram em casa; o povo matou os conspiradores e pôs no trono o seu filho Josias, de oito anos.",
+"refs": [
+"2Rs 21.19-26",
+"2Cr 33.21-25"
+],
+"keyVerse": "2Cr 33.23",
+"reign": {
+"years": "642–640 a.C.",
+"length": "2 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "josias",
+"name": "Josias",
+"title": "O rei da grande reforma",
+"meaning": "o Senhor sustenta (ou cura)",
+"period": "640–609 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Rei aos oito anos, começou a buscar a Deus aos 16. Na reforma do templo, o sacerdote Hilquias achou o Livro da Lei, esquecido; ao ouvi-lo, Josias rasgou as vestes e consultou a profetisa Hulda. Destruiu os altares pagãos de Judá até Betel, profanou o vale de Hinom e celebrou uma Páscoa histórica. Morreu em Megido, ao enfrentar o faraó Neco. Jeremias compôs lamentações por ele.",
+"facts": [
+[
+"Idade ao reinar",
+"8 anos"
+],
+[
+"Livro achado",
+"Em 622 a.C., no 18º ano do reinado"
+],
+[
+"Profetas",
+"Jeremias, Sofonias e Hulda"
+]
+],
+"refs": [
+"2Rs 22.1-20",
+"2Rs 23.1-25",
+"2Rs 23.29-30",
+"2Cr 35.20-25"
+],
+"keyVerse": "2Rs 23.25",
+"legacy": "Um coração sensível à Palavra pode mudar uma nação.",
+"reign": {
+"years": "640–609 a.C.",
+"length": "31 anos",
+"verdict": "bom"
+}
+},
+{
+"id": "sofonias",
+"name": "Sofonias",
+"title": "O profeta da linhagem real",
+"meaning": "o Senhor esconde (protege)",
+"period": "c. 640–620 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "Trineto do rei Ezequias, profetizou no início do reinado de Josias, quando ainda se adorava Baal e os astros nos terraços de Jerusalém. Anunciou o Dia do Senhor como dia de ira — e terminou com uma das imagens mais ternas da Bíblia: Deus se alegrando com o seu povo com cânticos.",
+"facts": [
+[
+"Livro",
+"3 capítulos"
+]
+],
+"refs": [
+"Sf 1.1-6",
+"Sf 1.14-18",
+"Sf 2.3",
+"Sf 3.14-20"
+],
+"keyVerse": "Sf 3.17"
+},
+{
+"id": "jeremias",
+"name": "Jeremias",
+"title": "O profeta que chorou",
+"meaning": "o Senhor exalta (ou estabelece)",
+"period": "c. 627–580 a.C.",
+"groups": [
+"profetas-maiores"
+],
+"summary": "De uma família de sacerdotes de Anatote, foi chamado ainda jovem: “antes que te formasse no ventre, te conheci”. Por 40 anos anunciou a Judá que se arrependesse, e depois que se rendesse à Babilônia. Foi espancado, preso no tronco, jogado numa cisterna de lama e acusado de traição. Viu Jerusalém cair, comprou um campo como sinal de esperança e anunciou a nova aliança. Foi levado à força para o Egito.",
+"facts": [
+[
+"Secretário",
+"Baruque, que escreveu os seus rolos"
+],
+[
+"Família",
+"Deus lhe proibiu casar e ter filhos, como sinal (Jr 16.2)"
+],
+[
+"Escreveu",
+"Jeremias e, segundo a tradição, Lamentações"
+]
+],
+"refs": [
+"Jr 1.4-10",
+"Jr 20.7-9",
+"Jr 29.10-14",
+"Jr 31.31-34",
+"Jr 32.6-15",
+"Jr 38.6-13"
+],
+"keyVerse": "Jr 1.5",
+"legacy": "Fidelidade a Deus não é medida pelo aplauso, mas pela obediência — mesmo chorando."
+},
+{
+"id": "hulda",
+"name": "Hulda",
+"title": "A profetisa consultada pelo rei",
+"meaning": "doninha (nome comum)",
+"period": "622 a.C.",
+"groups": [
+"profetas",
+"mulheres"
+],
+"summary": "Profetisa que morava na Cidade Baixa (“segundo bairro”) de Jerusalém, esposa de Salum, guarda das vestimentas. Quando o Livro da Lei foi encontrado no templo, o rei Josias mandou os sacerdotes consultá-la — mesmo com Jeremias já profetizando. Ela confirmou o juízo sobre Judá, mas disse que Josias, por ter se humilhado, não veria a destruição.",
+"refs": [
+"2Rs 22.12-20",
+"2Cr 34.20-28"
+],
+"keyVerse": "2Rs 22.18-19"
+},
+{
+"id": "jeoacaz-de-juda",
+"name": "Jeoacaz (de Judá)",
+"title": "O rei levado ao Egito",
+"meaning": "o Senhor sustenta",
+"period": "609 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Também chamado Salum, filho de Josias. O povo o escolheu rei depois da morte do pai, mas, três meses depois, o faraó Neco o prendeu em Ribla, impôs tributo e o levou ao Egito, onde morreu. Jeremias lamentou: “ele nunca mais voltará”.",
+"refs": [
+"2Rs 23.31-34",
+"Jr 22.10-12"
+],
+"keyVerse": "2Rs 23.33-34",
+"reign": {
+"years": "609 a.C.",
+"length": "3 meses",
+"verdict": "mau"
+}
+},
+{
+"id": "jeoaquim",
+"name": "Jeoaquim",
+"title": "O rei que queimou a Palavra",
+"meaning": "o Senhor levanta",
+"period": "609–598 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Posto no trono pelo faraó Neco, que mudou o seu nome de Eliaquim. Construiu um palácio luxuoso sem pagar os trabalhadores e matou o profeta Urias. Quando leram para ele o rolo das profecias de Jeremias, cortava as colunas com um canivete e as jogava no braseiro. Passou a servir à Babilônia e depois se rebelou.",
+"refs": [
+"2Rs 23.34-24.6",
+"Jr 22.13-19",
+"Jr 26.20-23",
+"Jr 36.20-32"
+],
+"keyVerse": "Jr 36.23",
+"reign": {
+"years": "609–598 a.C.",
+"length": "11 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "habacuque",
+"name": "Habacuque",
+"title": "O profeta das perguntas",
+"meaning": "abraço (incerto)",
+"period": "c. 609–598 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "Diferente dos outros profetas, Habacuque fala com Deus em nome do povo, e não com o povo em nome de Deus. Pergunta até quando a violência ficaria sem castigo; depois, como Deus podia usar os caldeus, ainda piores. Sobe à torre de vigia e espera. A resposta — “o justo viverá pela sua fé” — virou o lema da Reforma.",
+"facts": [
+[
+"Livro",
+"3 capítulos; o último é um salmo"
+],
+[
+"Citado",
+"Rm 1.17; Gl 3.11; Hb 10.38"
+]
+],
+"refs": [
+"Hc 1.1-4",
+"Hc 1.12-13",
+"Hc 2.1-4",
+"Hc 3.17-19"
+],
+"keyVerse": "Hc 2.4",
+"legacy": "Pode-se perguntar a Deus — e continuar confiando nele."
+},
+{
+"id": "daniel",
+"name": "Daniel",
+"title": "Fiel na Babilônia",
+"meaning": "Deus é o meu juiz",
+"period": "605–536 a.C.",
+"groups": [
+"profetas-maiores"
+],
+"summary": "Jovem da nobreza de Judá levado para a Babilônia em 605 a.C. Recusou-se a contaminar-se com a comida do rei, interpretou os sonhos de Nabucodonosor e a escrita na parede de Belsazar, e serviu como alto oficial na Babilônia e na Pérsia. Já idoso, continuou orando três vezes por dia com as janelas abertas para Jerusalém e foi jogado na cova dos leões. Recebeu visões sobre os impérios e sobre o Filho do homem.",
+"facts": [
+[
+"Nome babilônico",
+"Beltessazar"
+],
+[
+"Amigos",
+"Hananias, Misael e Azarias (Sadraque, Mesaque e Abede-Nego)"
+],
+[
+"Serviu",
+"Nabucodonosor, Belsazar, Dario, o medo, e Ciro"
+]
+],
+"refs": [
+"Dn 1.8-17",
+"Dn 2.19-23",
+"Dn 5.25-30",
+"Dn 6.10-23",
+"Dn 7.13-14",
+"Dn 9.1-19"
+],
+"keyVerse": "Dn 6.10",
+"legacy": "É possível servir com excelência num ambiente hostil sem negociar a fidelidade a Deus."
+},
+{
+"id": "joaquim",
+"name": "Joaquim (Jeconias)",
+"title": "O rei exilado e libertado",
+"meaning": "o Senhor estabelece",
+"period": "598–597 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Reinou três meses aos 18 anos e se rendeu a Nabucodonosor, que o levou para a Babilônia com a mãe, os príncipes, os artesãos e Ezequiel. Passou 37 anos preso até ser libertado por Evil-Merodaque, que lhe deu lugar à mesa real. Tabuinhas babilônicas de ração, achadas em Babilônia, citam “Ya’ukinu, rei de Judá” e os seus filhos.",
+"facts": [
+[
+"Também chamado",
+"Jeconias e Conias"
+],
+[
+"Genealogia",
+"Aparece na linhagem de Jesus (Mt 1.11-12)"
+]
+],
+"refs": [
+"2Rs 24.8-17",
+"2Rs 25.27-30",
+"Jr 22.24-30",
+"Mt 1.11-12"
+],
+"keyVerse": "2Rs 25.27-29",
+"reign": {
+"years": "598–597 a.C.",
+"length": "3 meses",
+"verdict": "mau"
+}
+},
+{
+"id": "zedequias",
+"name": "Zedequias",
+"title": "O último rei de Judá",
+"meaning": "o Senhor é justiça",
+"period": "597–586 a.C.",
+"groups": [
+"reis-juda"
+],
+"summary": "Tio de Joaquim, posto no trono por Nabucodonosor, que lhe mudou o nome de Matanias. Fraco e indeciso, consultava Jeremias às escondidas, mas tinha medo dos príncipes e deixou que prendessem o profeta. Rebelou-se contra a Babilônia, confiando no Egito. Jerusalém foi cercada e destruída; em Ribla, viu os filhos serem mortos, teve os olhos vazados e foi levado acorrentado.",
+"refs": [
+"2Rs 24.17-25.7",
+"Jr 37.16-21",
+"Jr 38.14-28",
+"Jr 52.1-11"
+],
+"keyVerse": "Jr 38.19-20",
+"reign": {
+"years": "597–586 a.C.",
+"length": "11 anos",
+"verdict": "mau"
+}
+},
+{
+"id": "ezequiel",
+"name": "Ezequiel",
+"title": "O sacerdote que viu a glória no exílio",
+"meaning": "Deus fortalece",
+"period": "593–571 a.C.",
+"groups": [
+"profetas-maiores"
+],
+"summary": "Sacerdote levado para a Babilônia em 597 a.C., com o rei Joaquim. Aos 30 anos, junto ao rio Quebar, viu a glória de Deus num trono sobre querubins e rodas. Encenou as suas mensagens: ficou deitado de lado por 390 dias, raspou a barba, não pôde chorar a morte da esposa. Depois da queda de Jerusalém, anunciou um coração novo, ossos secos que revivem e um novo templo.",
+"facts": [
+[
+"Lugar",
+"Tel-Abibe, junto ao rio Quebar"
+],
+[
+"Título dado por Deus",
+"“Filho do homem” (93 vezes)"
+]
+],
+"refs": [
+"Ez 1.1-28",
+"Ez 3.17-21",
+"Ez 24.15-18",
+"Ez 36.25-27",
+"Ez 37.1-14"
+],
+"keyVerse": "Ez 36.26",
+"legacy": "Deus não está preso a um lugar: a sua glória chega até o exílio."
+},
+{
+"id": "obadias",
+"name": "Obadias",
+"title": "O profeta contra o orgulho de Edom",
+"meaning": "servo do Senhor",
+"period": "Provavelmente pouco depois de 586 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "Nada se sabe da sua vida. Escreveu o menor livro do Antigo Testamento, contra Edom, povo irmão (descendente de Esaú), que se alegrou, saqueou e entregou os fugitivos de Jerusalém quando a cidade foi destruída. Os edomitas se sentiam seguros nas suas cidades escavadas na rocha — mas o orgulho os enganou.",
+"facts": [
+[
+"Livro",
+"1 capítulo, 21 versículos"
+]
+],
+"refs": [
+"Ob 1.3-4",
+"Ob 1.10-15",
+"Ob 1.21"
+],
+"keyVerse": "Ob 1.15"
+},
+{
+"id": "ester",
+"name": "Ester",
+"title": "Rainha para tal tempo como este",
+"meaning": "estrela (do persa); nome hebraico: Hadassa, “murta”",
+"period": "c. 483–473 a.C.",
+"groups": [
+"mulheres"
+],
+"summary": "Órfã judia criada pelo primo Mardoqueu em Susã, foi escolhida rainha do rei Assuero (Xerxes I) sem revelar a sua origem. Quando Hamã conseguiu um decreto para exterminar todos os judeus do império, jejuou três dias com o povo e entrou na presença do rei sem ser chamada, arriscando a vida: “se perecer, pereci”. Deus livrou o seu povo, e a festa de Purim lembra até hoje esse dia.",
+"facts": [
+[
+"Marido",
+"Assuero (Xerxes I), rei da Pérsia"
+],
+[
+"Primo",
+"Mardoqueu"
+],
+[
+"Festa",
+"Purim"
+]
+],
+"refs": [
+"Et 2.7-17",
+"Et 4.13-16",
+"Et 5.1-3",
+"Et 7.1-6",
+"Et 9.20-28"
+],
+"keyVerse": "Et 4.14",
+"legacy": "Deus coloca pessoas em lugares estratégicos para cumprir os seus propósitos."
+},
+{
+"id": "mardoqueu",
+"name": "Mardoqueu",
+"title": "O primo que não se curvou",
+"period": "c. 483–470 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Judeu da tribo de Benjamim que servia na porta do rei em Susã. Criou a prima órfã Ester e a orientou. Recusou-se a se prostrar diante de Hamã, descobriu uma conspiração contra o rei e convenceu Ester a interceder pelo povo. No fim, foi exaltado como o segundo homem do império e instituiu a festa de Purim.",
+"refs": [
+"Et 2.5-7",
+"Et 3.2-6",
+"Et 4.13-14",
+"Et 10.3"
+],
+"keyVerse": "Et 4.14"
+},
+{
+"id": "esdras",
+"name": "Esdras",
+"title": "O escriba da Lei",
+"meaning": "ajuda",
+"period": "c. 480–440 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Sacerdote descendente de Arão e “escriba hábil na lei de Moisés”. Em 458 a.C., voltou da Babilônia com um segundo grupo de exilados, com autorização do rei Artaxerxes. Tinha preparado o coração para buscar a Lei, cumpri-la e ensiná-la. Liderou o povo no arrependimento e, com Neemias, leu a Lei publicamente desde a manhã até o meio-dia.",
+"refs": [
+"Ed 7.1-10",
+"Ed 9.5-15",
+"Ne 8.1-8"
+],
+"keyVerse": "Ed 7.10",
+"legacy": "Buscar, praticar e ensinar a Palavra — nessa ordem."
+},
+{
+"id": "neemias",
+"name": "Neemias",
+"title": "O reconstrutor dos muros",
+"meaning": "o Senhor consola",
+"period": "c. 445–430 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Copeiro do rei Artaxerxes I em Susã. Ao saber que os muros de Jerusalém estavam derrubados, chorou, jejuou e orou. O rei o nomeou governador, e ele organizou a reconstrução dos muros em 52 dias, com o povo trabalhando com uma mão e segurando a arma com a outra. Enfrentou a oposição com oração, coragem e integridade, e liderou reformas sociais e religiosas.",
+"refs": [
+"Ne 1.1-11",
+"Ne 2.1-8",
+"Ne 4.14-18",
+"Ne 6.15-16"
+],
+"keyVerse": "Ne 2.20",
+"legacy": "Oração e trabalho andam juntos."
+},
+{
+"id": "ageu",
+"name": "Ageu",
+"title": "O profeta da reconstrução",
+"meaning": "festivo (nascido num dia de festa)",
+"period": "520 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "Profetizou durante quatro meses de 520 a.C., em mensagens datadas com precisão, aos que tinham voltado da Babilônia. A obra do templo estava parada havia 16 anos, enquanto cada um cuidava da própria casa. A sua pregação despertou Zorobabel, o sumo sacerdote Josué e o povo, que retomaram a obra em 24 dias.",
+"facts": [
+[
+"Livro",
+"2 capítulos"
+],
+[
+"Contemporâneo",
+"Zacarias"
+]
+],
+"refs": [
+"Ag 1.1-15",
+"Ag 2.4-9",
+"Ed 5.1-2"
+],
+"keyVerse": "Ag 1.7-8"
+},
+{
+"id": "zorobabel",
+"name": "Zorobabel",
+"title": "O governador da reconstrução",
+"meaning": "semente da Babilônia (nascido na Babilônia)",
+"period": "c. 560–500 a.C.",
+"groups": [
+"personagens"
+],
+"summary": "Neto do rei Joaquim (Jeconias), da linhagem de Davi. Liderou o primeiro grupo de judeus que voltou da Babilônia em 538 a.C., levantou o altar e lançou os alicerces do templo. Desanimado pela oposição, foi despertado por Ageu e Zacarias e concluiu o templo em 516 a.C. Deus disse: “farei de ti um anel de selar”. Está nas duas genealogias de Jesus.",
+"facts": [
+[
+"Pai",
+"Salatiel"
+],
+[
+"Ofício",
+"Governador da Judeia sob os persas"
+]
+],
+"refs": [
+"Ed 2.1-2",
+"Ed 3.8-11",
+"Ag 2.20-23",
+"Zc 4.6-10",
+"Mt 1.12"
+],
+"keyVerse": "Zc 4.6",
+"legacy": "Não por força nem por violência, mas pelo Espírito de Deus."
+},
+{
+"id": "zacarias-profeta",
+"name": "Zacarias",
+"title": "O profeta das visões e do Rei humilde",
+"meaning": "o Senhor se lembra",
+"period": "520–480 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "Sacerdote e profeta, contemporâneo de Ageu. Recebeu oito visões numa só noite para encorajar a reconstrução do templo e de Jerusalém: “não por força nem por violência, mas pelo meu Espírito”. É o mais messiânico dos profetas menores: anunciou o Rei montado num jumentinho, as 30 moedas de prata, o pastor ferido e o traspassado.",
+"facts": [
+[
+"Livro",
+"14 capítulos — o maior dos Profetas Menores"
+],
+[
+"Cumprimentos",
+"Mt 21.5; Mt 27.9-10; Jo 19.37"
+]
+],
+"refs": [
+"Zc 1.1-6",
+"Zc 4.6-10",
+"Zc 9.9",
+"Zc 12.10",
+"Zc 13.7"
+],
+"keyVerse": "Zc 4.6"
+},
+{
+"id": "malaquias",
+"name": "Malaquias",
+"title": "O último profeta do Antigo Testamento",
+"meaning": "meu mensageiro",
+"period": "c. 440–430 a.C.",
+"groups": [
+"profetas-menores"
+],
+"summary": "Profetizou na época de Neemias, quando a fé tinha esfriado: sacerdotes ofereciam animais doentes, o povo retinha os dízimos e os casamentos eram desfeitos. Em forma de debate, anunciou o mensageiro que prepararia o caminho do Senhor e a volta de Elias. Depois dele, foram cerca de 400 anos sem profeta, até João Batista.",
+"facts": [
+[
+"Livro",
+"4 capítulos (3 no texto hebraico)"
+]
+],
+"refs": [
+"Ml 1.6-8",
+"Ml 3.1-3",
+"Ml 3.8-12",
+"Ml 4.1-6"
+],
+"keyVerse": "Ml 3.1"
+},
+{
+"id": "isabel",
+"name": "Isabel",
+"title": "A mãe de João Batista",
+"meaning": "o meu Deus é juramento",
+"period": "c. 6 a.C.",
+"groups": [
+"mulheres"
+],
+"summary": "Descendente de Arão, esposa do sacerdote Zacarias, “ambos justos diante de Deus”. Estéril e já idosa, concebeu João. Quando Maria, sua parente, a visitou, o bebê saltou no ventre, e Isabel, cheia do Espírito Santo, a chamou de “mãe do meu Senhor”. No nascimento, insistiu que o menino se chamasse João.",
+"refs": [
+"Lc 1.5-25",
+"Lc 1.39-45",
+"Lc 1.57-63"
+],
+"keyVerse": "Lc 1.41-43"
+},
+{
+"id": "jose-de-nazare",
+"name": "José de Nazaré",
+"title": "O homem justo",
+"meaning": "ele acrescentará",
+"period": "séc. I a.C. – séc. I d.C.",
+"groups": [
+"personagens"
+],
+"summary": "Carpinteiro de Nazaré, descendente de Davi, prometido em casamento a Maria. Ao saber da gravidez, quis deixá-la em segredo para não expô-la, mas obedeceu ao anjo e a recebeu como esposa. Deu ao menino o nome de Jesus, fugiu com a família para o Egito e voltou a Nazaré. Criou Jesus como filho, ensinou-lhe o ofício e o levou ao templo. Não aparece mais depois da infância de Jesus.",
+"facts": [
+[
+"Profissão",
+"Carpinteiro (artesão)"
+],
+[
+"Linhagem",
+"Davi, por Salomão (Mt 1)"
+]
+],
+"refs": [
+"Mt 1.18-25",
+"Mt 2.13-15",
+"Lc 2.4-7",
+"Lc 2.41-51"
+],
+"keyVerse": "Mt 1.24",
+"legacy": "A obediência silenciosa e imediata também é grandeza diante de Deus."
+},
+{
+"id": "nicodemos",
+"name": "Nicodemos",
+"title": "O mestre que veio de noite",
+"meaning": "vencedor do povo",
+"period": "séc. I",
+"groups": [
+"personagens"
+],
+"summary": "Fariseu e membro do Sinédrio, “o mestre de Israel”. Visitou Jesus de noite e ouviu sobre o novo nascimento e o amor de Deus. Depois, defendeu que Jesus fosse ouvido antes de ser julgado. Na morte de Jesus, já não se escondeu: com José de Arimateia, levou cerca de 30 kg de mirra e aloés para sepultá-lo.",
+"refs": [
+"Jo 3.1-16",
+"Jo 7.50-51",
+"Jo 19.38-40"
+],
+"keyVerse": "Jo 3.3",
+"legacy": "A fé que começa escondida pode crescer até se mostrar com coragem."
+},
+{
+"id": "lazaro",
+"name": "Lázaro",
+"title": "O amigo que Jesus ressuscitou",
+"meaning": "forma de Eleazar: Deus ajudou",
+"period": "séc. I",
+"groups": [
+"personagens"
+],
+"summary": "Irmão de Marta e Maria, em Betânia, amigo querido de Jesus. Morreu, e Jesus chegou quatro dias depois. Diante do túmulo, Jesus chorou e depois chamou: “Lázaro, vem para fora!”. Muitos creram por causa dele — e os principais sacerdotes decidiram matar também Lázaro.",
+"refs": [
+"Jo 11.1-44",
+"Jo 12.1-2",
+"Jo 12.9-11"
+],
+"keyVerse": "Jo 11.25-26",
+"legacy": "Jesus é a ressurreição e a vida."
+},
+{
+"id": "maria-mae-de-jesus",
+"name": "Maria",
+"title": "A serva do Senhor, mãe de Jesus",
+"meaning": "do hebraico Miriam (sentido incerto)",
+"period": "c. 20 a.C. – séc. I",
+"groups": [
+"mulheres"
+],
+"summary": "Jovem de Nazaré, prometida em casamento a José. Ao ouvir do anjo Gabriel que seria mãe do Filho do Altíssimo pelo Espírito Santo, respondeu: “eis aqui a serva do Senhor”. Cantou o Magnificat, deu à luz em Belém, fugiu para o Egito e “guardava todas estas coisas no coração”. Esteve junto à cruz e orava com os discípulos no cenáculo antes do Pentecostes.",
+"facts": [
+[
+"Marido",
+"José, carpinteiro"
+],
+[
+"Outros filhos",
+"Tiago, José, Simão, Judas e filhas (Mc 6.3)"
+]
+],
+"refs": [
+"Lc 1.26-38",
+"Lc 1.46-55",
+"Lc 2.19",
+"Jo 2.1-5",
+"Jo 19.25-27",
+"At 1.14"
+],
+"keyVerse": "Lc 1.38",
+"legacy": "A grandeza diante de Deus é a disposição de dizer: “cumpra-se em mim segundo a tua palavra”."
+},
+{
+"id": "ana-profetisa",
+"name": "Ana, a profetisa",
+"title": "A viúva que esperou no templo",
+"meaning": "graça",
+"period": "c. 5 a.C.",
+"groups": [
+"profetas",
+"mulheres"
+],
+"summary": "Da tribo de Aser, viúva depois de só sete anos de casamento, não saía do templo, servindo a Deus com jejuns e orações de noite e de dia. Aos 84 anos, quando Maria e José trouxeram o menino Jesus para apresentá-lo, ela reconheceu o Messias e falava dele a todos os que esperavam a redenção de Jerusalém.",
+"refs": [
+"Lc 2.36-38"
+],
+"keyVerse": "Lc 2.37-38"
+},
+{
+"id": "joao-batista",
+"name": "João Batista",
+"title": "A voz que clama no deserto",
+"meaning": "o Senhor é gracioso",
+"period": "c. 6 a.C. – 28 d.C.",
+"groups": [
+"profetas",
+"nazireus"
+],
+"summary": "Filho de Zacarias e Isabel, anunciado pelo anjo: “não beberá vinho, nem bebida forte, e será cheio do Espírito Santo já desde o ventre” — um consagrado como os nazireus. Vivia no deserto, vestido de pelos de camelo, comendo gafanhotos e mel silvestre. Pregou arrependimento, batizou no Jordão e apresentou Jesus: “Eis o Cordeiro de Deus”. Foi preso e degolado por Herodes Antipas.",
+"facts": [
+[
+"Pais",
+"Zacarias e Isabel"
+],
+[
+"Batizou",
+"Jesus, no rio Jordão"
+],
+[
+"Jesus disse",
+"Entre os nascidos de mulher, não há maior do que João (Mt 11.11)"
+]
+],
+"refs": [
+"Lc 1.13-17",
+"Mt 3.1-17",
+"Jo 1.29-34",
+"Jo 3.27-30",
+"Mc 6.17-29"
+],
+"keyVerse": "Jo 3.30",
+"legacy": "É necessário que Ele cresça e que eu diminua."
+},
+{
+"id": "pedro",
+"name": "Pedro",
+"title": "A pedra",
+"meaning": "Pedro (grego Pétros) e Cefas (aramaico Kefa): pedra",
+"period": "séc. I (morto c. 64–67 d.C.)",
+"groups": [
+"apostolos"
+],
+"summary": "Pescador de Betsaida que morava em Cafarnaum, levado a Jesus pelo irmão André. Impulsivo, andou sobre as águas, confessou “Tu és o Cristo” e negou Jesus três vezes. Restaurado pelo Ressuscitado junto ao mar, pregou no Pentecostes e quase 3 mil se converteram. Abriu a porta aos gentios na casa de Cornélio. Escreveu duas cartas. Segundo a tradição, foi crucificado em Roma, de cabeça para baixo.",
+"facts": [
+[
+"Nome",
+"Simão, filho de Jonas"
+],
+[
+"Família",
+"Casado (Mc 1.30; 1Co 9.5); irmão de André"
+],
+[
+"Escreveu",
+"1 e 2 Pedro; a tradição liga o Evangelho de Marcos à sua pregação"
+]
+],
+"refs": [
+"Mt 16.13-19",
+"Mt 14.28-31",
+"Lc 22.54-62",
+"Jo 21.15-19",
+"At 2.14-41",
+"At 10.34-48"
+],
+"keyVerse": "Mt 16.16",
+"legacy": "Deus não desiste de quem falha: restaura e envia."
+},
+{
+"id": "andre",
+"name": "André",
+"title": "O que trazia pessoas a Jesus",
+"meaning": "varonil",
+"period": "séc. I",
+"groups": [
+"apostolos"
+],
+"summary": "Irmão de Pedro, pescador, foi discípulo de João Batista e um dos dois primeiros a seguir Jesus. Logo foi buscar o irmão: “Achamos o Messias”. Depois levou a Jesus o menino dos pães e peixes e os gregos que queriam vê-lo. Segundo a tradição, pregou na Grécia e foi crucificado em Patras, numa cruz em forma de X.",
+"refs": [
+"Jo 1.35-42",
+"Jo 6.8-9",
+"Jo 12.20-22",
+"Mc 1.16-18"
+],
+"keyVerse": "Jo 1.41-42",
+"legacy": "Levar uma pessoa a Jesus pode mudar a história — André trouxe Pedro."
+},
+{
+"id": "tiago-zebedeu",
+"name": "Tiago, filho de Zebedeu",
+"title": "O primeiro apóstolo mártir",
+"meaning": "forma de Jacó",
+"period": "séc. I (morto c. 44 d.C.)",
+"groups": [
+"apostolos"
+],
+"summary": "Pescador, irmão de João. Com ele e Pedro, formava o círculo mais próximo de Jesus: viu a transfiguração, a ressurreição da filha de Jairo e a agonia no Getsêmani. Jesus chamou os dois irmãos de “Boanerges”, filhos do trovão. Foi o primeiro dos doze a morrer pela fé: Herodes Agripa I o matou à espada.",
+"refs": [
+"Mc 1.19-20",
+"Mc 3.17",
+"Mc 9.2",
+"Mc 10.35-40",
+"At 12.1-2"
+],
+"keyVerse": "Mc 10.38-39"
+},
+{
+"id": "joao-apostolo",
+"name": "João",
+"title": "O discípulo amado",
+"meaning": "o Senhor é gracioso",
+"period": "séc. I (morto c. 100 d.C.)",
+"groups": [
+"apostolos"
+],
+"summary": "Filho de Zebedeu, pescador, “filho do trovão” que pediu fogo do céu sobre uma aldeia samaritana — e tornou-se o apóstolo do amor. Reclinava-se junto a Jesus na ceia, estava ao pé da cruz e recebeu Maria como mãe. Correu ao sepulcro e “viu e creu”. Liderou a igreja em Jerusalém e depois em Éfeso, e foi exilado em Patmos. Segundo a tradição, foi o único dos doze a morrer de velhice.",
+"facts": [
+[
+"Escreveu",
+"O Evangelho de João, três cartas e o Apocalipse"
+],
+[
+"Irmão",
+"Tiago"
+]
+],
+"refs": [
+"Mc 1.19-20",
+"Lc 9.51-56",
+"Jo 13.23",
+"Jo 19.26-27",
+"Jo 20.2-8",
+"Ap 1.9"
+],
+"keyVerse": "1Jo 4.7-8",
+"legacy": "Quem se deixa amar por Jesus aprende a amar."
+},
+{
+"id": "filipe",
+"name": "Filipe",
+"title": "“Vem e vê”",
+"meaning": "amigo dos cavalos",
+"period": "séc. I",
+"groups": [
+"apostolos"
+],
+"summary": "De Betsaida, como Pedro e André. Ao ser chamado, foi logo buscar Natanael: “Vem e vê”. Na multiplicação dos pães, fez as contas e achou impossível. Na última ceia, pediu: “Senhor, mostra-nos o Pai” — e ouviu: “quem me vê a mim vê o Pai”. Não confundir com Filipe, o diácono e evangelista de Atos 8.",
+"refs": [
+"Jo 1.43-46",
+"Jo 6.5-7",
+"Jo 12.21-22",
+"Jo 14.8-9"
+],
+"keyVerse": "Jo 14.9"
+},
+{
+"id": "bartolomeu",
+"name": "Bartolomeu (Natanael)",
+"title": "O israelita sem falsidade",
+"meaning": "Bartolomeu: filho de Tolmai; Natanael: dom de Deus",
+"period": "séc. I",
+"groups": [
+"apostolos"
+],
+"summary": "Quase certamente o mesmo Natanael de Caná, já que João o cita entre os doze e os outros Evangelhos põem Bartolomeu ao lado de Filipe. Duvidou: “de Nazaré pode vir alguma coisa boa?”. Jesus o chamou de “verdadeiro israelita, em quem não há dolo” e disse que o vira debaixo da figueira. Ele respondeu: “Tu és o Filho de Deus”.",
+"refs": [
+"Jo 1.45-51",
+"Jo 21.2",
+"Mt 10.3"
+],
+"keyVerse": "Jo 1.47-49"
+},
+{
+"id": "tome",
+"name": "Tomé",
+"title": "“Senhor meu, e Deus meu!”",
+"meaning": "Tomé (aramaico) e Dídimo (grego): gêmeo",
+"period": "séc. I",
+"groups": [
+"apostolos"
+],
+"summary": "Corajoso, disse aos outros: “vamos também nós, para morrermos com ele”. Franco, perguntou: “como saber o caminho?” — e ouviu “Eu sou o caminho”. Ausente na primeira aparição do Ressuscitado, exigiu ver as marcas dos cravos. Oito dias depois, fez a confissão mais alta dos Evangelhos. A tradição diz que levou o Evangelho até a Índia, onde há igrejas que se dizem fundadas por ele.",
+"refs": [
+"Jo 11.16",
+"Jo 14.5-6",
+"Jo 20.24-29",
+"Jo 21.2"
+],
+"keyVerse": "Jo 20.28-29"
+},
+{
+"id": "mateus",
+"name": "Mateus (Levi)",
+"title": "O publicano que virou evangelista",
+"meaning": "dom do Senhor",
+"period": "séc. I",
+"groups": [
+"apostolos"
+],
+"summary": "Cobrador de impostos em Cafarnaum, a serviço de Herodes Antipas e de Roma — odiado pelo povo. Jesus o chamou na coletoria: “Segue-me”, e ele deixou tudo. Ofereceu um banquete com publicanos e pecadores, e Jesus disse que não veio chamar justos, mas pecadores. A tradição lhe atribui o primeiro Evangelho.",
+"facts": [
+[
+"Profissão",
+"Publicano (cobrador de impostos)"
+],
+[
+"Escreveu",
+"O Evangelho de Mateus, segundo a tradição"
+]
+],
+"refs": [
+"Mt 9.9-13",
+"Lc 5.27-32",
+"Mc 2.14"
+],
+"keyVerse": "Mt 9.9",
+"legacy": "Jesus chama até quem a sociedade considera indigno."
+},
+{
+"id": "tiago-alfeu",
+"name": "Tiago, filho de Alfeu",
+"title": "O apóstolo silencioso",
+"period": "séc. I",
+"groups": [
+"apostolos"
+],
+"summary": "Aparece só nas listas dos doze. Muitos o identificam com “Tiago, o menor”, filho de uma das Marias que estavam junto à cruz. Não deve ser confundido com Tiago, irmão do Senhor, que liderou a igreja de Jerusalém e escreveu a carta. A sua fidelidade discreta também faz parte da história.",
+"refs": [
+"Mt 10.3",
+"Mc 15.40",
+"At 1.13"
+],
+"keyVerse": "At 1.13-14"
+},
+{
+"id": "tadeu",
+"name": "Tadeu (Judas, filho de Tiago)",
+"title": "O que perguntou na última ceia",
+"period": "séc. I",
+"groups": [
+"apostolos"
+],
+"summary": "Mateus e Marcos o chamam de Tadeu; Lucas e João, de “Judas, não o Iscariotes”. Na última ceia, perguntou por que Jesus se manifestaria aos discípulos e não ao mundo, e ouviu: “se alguém me ama, guardará a minha palavra, e meu Pai o amará, e viremos a ele e faremos nele morada”.",
+"refs": [
+"Mt 10.3",
+"Lc 6.16",
+"Jo 14.22-23"
+],
+"keyVerse": "Jo 14.23"
+},
+{
+"id": "simao-zelote",
+"name": "Simão, o Zelote",
+"title": "Do nacionalismo ao Reino",
+"period": "séc. I",
+"groups": [
+"apostolos"
+],
+"summary": "Chamado “o Zelote” (ou “o cananeu”, do aramaico qan’an, zeloso). Os zelotes eram nacionalistas judeus, alguns dispostos à luta armada contra Roma. No mesmo grupo de Jesus estavam Simão, que odiava Roma, e Mateus, que trabalhava para ela — unidos por Cristo.",
+"refs": [
+"Lc 6.15",
+"At 1.13",
+"Mt 10.4"
+],
+"keyVerse": "Lc 6.13-16"
+},
+{
+"id": "maria-madalena",
+"name": "Maria Madalena",
+"title": "A primeira testemunha da ressurreição",
+"meaning": "Madalena: de Magdala",
+"period": "séc. I",
+"groups": [
+"mulheres"
+],
+"summary": "De Magdala, à beira do mar da Galileia. Jesus a libertou de sete demônios, e ela passou a segui-lo e a sustentá-lo com os seus bens, com outras mulheres. Esteve junto à cruz e no sepultamento. No domingo, de madrugada, foi ao túmulo e foi a primeira a ver Jesus ressuscitado, que a chamou pelo nome: “Maria!”. A Bíblia não diz que ela foi prostituta — essa ideia surgiu séculos depois.",
+"refs": [
+"Lc 8.1-3",
+"Mc 15.40-47",
+"Jo 20.1-2",
+"Jo 20.11-18"
+],
+"keyVerse": "Jo 20.16-18",
+"legacy": "Quem foi muito libertado, muito ama — e é enviado a anunciar."
+},
+{
+"id": "maria-de-betania",
+"name": "Maria de Betânia",
+"title": "Aos pés de Jesus",
+"period": "séc. I",
+"groups": [
+"mulheres"
+],
+"summary": "Irmã de Marta e de Lázaro, em Betânia, perto de Jerusalém. Enquanto Marta se ocupava com o serviço, ela se sentou aos pés de Jesus para ouvir — e Jesus disse que escolhera “a boa parte”. Seis dias antes da Páscoa, ungiu os pés de Jesus com um perfume de nardo puro, que valia um ano de salário, e os enxugou com os cabelos.",
+"refs": [
+"Lc 10.38-42",
+"Jo 11.28-33",
+"Jo 12.1-8"
+],
+"keyVerse": "Lc 10.41-42",
+"legacy": "Nada é desperdício quando é derramado aos pés de Jesus."
+},
+{
+"id": "matias",
+"name": "Matias",
+"title": "O escolhido no lugar de Judas",
+"meaning": "dom do Senhor",
+"period": "séc. I",
+"groups": [
+"apostolos"
+],
+"summary": "Depois da traição e da morte de Judas Iscariotes, os discípulos, reunidos no cenáculo, quiseram completar o número dos doze antes do Pentecostes. Era preciso ter acompanhado Jesus desde o batismo de João até a ascensão. Indicaram José Barsabás e Matias, oraram e lançaram sortes; a sorte caiu sobre Matias.",
+"refs": [
+"At 1.15-26"
+],
+"keyVerse": "At 1.24-26"
+},
+{
+"id": "tiago-irmao-do-senhor",
+"name": "Tiago, irmão do Senhor",
+"title": "O líder da igreja de Jerusalém",
+"period": "séc. I (morto c. 62 d.C.)",
+"groups": [
+"personagens"
+],
+"summary": "Um dos irmãos de Jesus, que não criam nele durante o seu ministério. Jesus ressuscitado lhe apareceu, e Tiago se tornou uma das “colunas” da igreja de Jerusalém, presidindo o Concílio de Jerusalém. Escreveu a carta de Tiago. Segundo o historiador Josefo, foi apedrejado em Jerusalém por volta de 62 d.C. A tradição o chama de “Tiago, o Justo”.",
+"refs": [
+"Mc 6.3",
+"Jo 7.5",
+"1Co 15.7",
+"At 15.13-21",
+"Gl 2.9"
+],
+"keyVerse": "Tg 2.17"
+},
+{
+"id": "estevao",
+"name": "Estêvão",
+"title": "O primeiro mártir",
+"meaning": "coroa",
+"period": "séc. I (morto c. 34 d.C.)",
+"groups": [
+"personagens"
+],
+"summary": "Um dos sete homens “cheios do Espírito Santo e de sabedoria” escolhidos para servir às mesas, fazia grandes prodígios entre o povo. Acusado diante do Sinédrio, contou toda a história de Israel e denunciou a resistência ao Espírito. Viu os céus abertos e Jesus em pé à direita de Deus. Morreu apedrejado, orando pelos que o matavam. Saulo estava ali.",
+"refs": [
+"At 6.3-8",
+"At 7.51-60",
+"At 8.1"
+],
+"keyVerse": "At 7.59-60",
+"legacy": "Perdoar os inimigos até no último momento é o testemunho mais forte."
+},
+{
+"id": "barnabe",
+"name": "Barnabé",
+"title": "O filho da consolação",
+"meaning": "filho da consolação (ou da exortação)",
+"period": "séc. I",
+"groups": [
+"personagens"
+],
+"summary": "Levita de Chipre chamado José, a quem os apóstolos deram o apelido de Barnabé. Vendeu um campo e deu o dinheiro à igreja. Foi quem apresentou Saulo, recém-convertido, aos apóstolos desconfiados, e foi buscá-lo em Tarso para ensinar em Antioquia. Fez com Paulo a primeira viagem missionária e deu uma segunda chance a João Marcos.",
+"refs": [
+"At 4.36-37",
+"At 9.26-27",
+"At 11.22-26",
+"At 13.2-3",
+"At 15.36-39"
+],
+"keyVerse": "At 11.23-24",
+"legacy": "Encorajar e acreditar nas pessoas muda vidas — Paulo e Marcos que o digam."
+},
+{
+"id": "timoteo",
+"name": "Timóteo",
+"title": "O filho na fé",
+"meaning": "que honra a Deus",
+"period": "séc. I",
+"groups": [
+"personagens"
+],
+"summary": "De Listra, filho de mãe judia crente e pai grego. Aprendeu as Escrituras desde criança com a mãe, Eunice, e a avó, Loide. Juntou-se a Paulo na segunda viagem e foi o seu colaborador mais próximo, enviado a muitas igrejas. Liderou a igreja de Éfeso e recebeu duas cartas de Paulo.",
+"refs": [
+"At 16.1-3",
+"Fp 2.19-22",
+"1Tm 4.12",
+"2Tm 1.5",
+"2Tm 3.14-15"
+],
+"keyVerse": "1Tm 4.12",
+"legacy": "Ninguém despreze a tua mocidade: sê exemplo dos fiéis."
+},
+{
+"id": "lucas",
+"name": "Lucas",
+"title": "O médico amado",
+"period": "séc. I",
+"groups": [
+"personagens"
+],
+"summary": "Médico, provavelmente o único autor gentio da Bíblia. Companheiro de Paulo nas viagens — nos trechos de Atos em que o texto passa a dizer “nós” — e na prisão em Roma, quando quase todos o tinham deixado. Pesquisou com testemunhas oculares e escreveu o Evangelho de Lucas e o livro de Atos, mais de um quarto do Novo Testamento.",
+"refs": [
+"Lc 1.1-4",
+"At 16.10-11",
+"Cl 4.14",
+"2Tm 4.11"
+],
+"keyVerse": "Lc 1.3-4"
+},
+{
+"id": "joao-marcos",
+"name": "João Marcos",
+"title": "O que recebeu uma segunda chance",
+"period": "séc. I",
+"groups": [
+"personagens"
+],
+"summary": "Filho de Maria, em cuja casa a igreja de Jerusalém orava por Pedro. Primo de Barnabé, acompanhou-o com Paulo na primeira viagem, mas voltou no meio do caminho. Paulo não quis levá-lo de novo, e Barnabé o levou. Anos depois, Paulo escreveu: “traze Marcos contigo, porque me é muito útil”. A tradição diz que escreveu o Evangelho de Marcos a partir da pregação de Pedro.",
+"refs": [
+"At 12.12",
+"At 13.13",
+"At 15.37-39",
+"2Tm 4.11",
+"1Pe 5.13"
+],
+"keyVerse": "2Tm 4.11",
+"legacy": "Um fracasso não é o fim da história com Deus."
+},
+{
+"id": "dorcas",
+"name": "Dorcas (Tabita)",
+"title": "A mulher das boas obras",
+"meaning": "gazela (em grego Dorcas, em aramaico Tabita)",
+"period": "séc. I",
+"groups": [
+"mulheres"
+],
+"summary": "Discípula de Jope, “cheia de boas obras e esmolas”, fazia túnicas e vestidos para as viúvas pobres. Quando morreu, as viúvas mostraram a Pedro, chorando, as roupas que ela havia feito. Pedro orou e disse: “Tabita, levanta-te”, e ela voltou à vida — e muitos creram no Senhor.",
+"refs": [
+"At 9.36-42"
+],
+"keyVerse": "At 9.36",
+"legacy": "O amor que se faz em obras simples deixa marcas que ninguém esquece."
+},
+{
+"id": "paulo",
+"name": "Paulo",
+"title": "O apóstolo dos gentios",
+"meaning": "pequeno (do latim Paulus); nome hebraico: Saulo, “pedido”",
+"period": "c. 5 – c. 67 d.C.",
+"groups": [
+"apostolos",
+"nazireus"
+],
+"summary": "Judeu de Tarso, cidadão romano, fariseu formado aos pés de Gamaliel, perseguiu a igreja até encontrar Jesus ressuscitado no caminho de Damasco. Fez três grandes viagens missionárias, fundou igrejas na Ásia Menor e na Grécia, escreveu 13 cartas do Novo Testamento e foi levado preso a Roma. Em Cencreia, rapou a cabeça por causa de um voto, e em Jerusalém pagou as despesas de quatro homens que cumpriam o voto de nazireu, participando da purificação com eles.",
+"facts": [
+[
+"Profissão",
+"Fabricante de tendas"
+],
+[
+"Viagens",
+"Três viagens missionárias e a viagem a Roma"
+],
+[
+"Escreveu",
+"13 cartas, de Romanos a Filemom"
+],
+[
+"Voto",
+"At 18.18 e At 21.23-26 (voto de nazireu)"
+],
+[
+"Morte",
+"Segundo a tradição, decapitado em Roma, no tempo de Nero"
+]
+],
+"refs": [
+"At 9.1-19",
+"At 13.1-3",
+"At 18.18",
+"At 21.23-26",
+"2Co 11.23-28",
+"2Tm 4.6-8"
+],
+"keyVerse": "Fp 3.7-8",
+"legacy": "Ninguém está longe demais da graça — e quem foi alcançado por ela vive para anunciá-la."
+},
+{
+"id": "agabo",
+"name": "Ágabo",
+"title": "O profeta do cinto de Paulo",
+"period": "séc. I",
+"groups": [
+"profetas"
+],
+"summary": "Profeta de Jerusalém. Em Antioquia, anunciou pelo Espírito uma grande fome, que aconteceu no tempo do imperador Cláudio — e a igreja enviou ajuda aos irmãos da Judeia. Anos depois, em Cesareia, amarrou os próprios pés e mãos com o cinto de Paulo para mostrar que ele seria preso em Jerusalém.",
+"refs": [
+"At 11.27-30",
+"At 21.10-14"
+],
+"keyVerse": "At 21.10-11"
+},
+{
+"id": "lidia",
+"name": "Lídia",
+"title": "A primeira convertida da Europa",
+"meaning": "da Lídia (região da Ásia Menor)",
+"period": "séc. I",
+"groups": [
+"mulheres"
+],
+"summary": "Vendedora de púrpura — um tecido caríssimo — natural de Tiatira, morava em Filipos e adorava a Deus. Num sábado, à beira do rio, ouviu Paulo, e “o Senhor lhe abriu o coração”. Foi batizada com toda a sua casa e insistiu em hospedar os missionários. A primeira igreja da Europa começou na casa dela.",
+"refs": [
+"At 16.13-15",
+"At 16.40"
+],
+"keyVerse": "At 16.14"
+},
+{
+"id": "priscila",
+"name": "Priscila",
+"title": "Mestra e companheira de missão",
+"meaning": "de Prisca, “antiga, venerável”",
+"period": "séc. I",
+"groups": [
+"mulheres"
+],
+"summary": "Com o marido, Áquila, fabricante de tendas como Paulo, foi expulsa de Roma pelo imperador Cláudio e se estabeleceu em Corinto, onde hospedou Paulo. Acompanhou-o a Éfeso e, com Áquila, ensinou “mais pontualmente o caminho de Deus” ao eloquente Apolo. Havia igreja na casa deles. Paulo diz que arriscaram a vida por ele. O seu nome aparece quase sempre antes do do marido.",
+"refs": [
+"At 18.1-3",
+"At 18.24-26",
+"Rm 16.3-5",
+"1Co 16.19"
+],
+"keyVerse": "At 18.26"
+}
+]

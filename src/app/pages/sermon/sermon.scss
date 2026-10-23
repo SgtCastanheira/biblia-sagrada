@@ -1,0 +1,238 @@
+:host {
+  display: block;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  margin: 0 -8px 4px;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.overline {
+  font: 600 13px Inter, sans-serif;
+  letter-spacing: 0.3px;
+  color: var(--accent-gold);
+}
+
+.title {
+  display: block;
+  width: 100%;
+  margin: 6px 0 12px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  resize: none;
+  overflow: hidden;
+  background: none;
+  color: var(--mat-sys-on-surface);
+  font: 600 30px/1.2 var(--heading-font);
+  letter-spacing: -0.3px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  .ready {
+    color: var(--mat-sys-primary);
+  }
+}
+
+.card {
+  margin-bottom: 12px;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  background: var(--mat-sys-surface-container-low);
+  box-shadow: var(--shadow-soft);
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  font: 600 19px var(--heading-font);
+
+  mat-icon {
+    color: var(--accent-gold);
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+h3 {
+  margin: 16px 0 8px;
+  font: 600 14px Inter, sans-serif;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.field {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 46px;
+  padding: 0 14px;
+  border-radius: 14px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  outline: 0;
+  font: 500 15px Inter, sans-serif;
+
+  &:focus {
+    border-color: var(--mat-sys-primary);
+  }
+
+  & + & {
+    margin-top: 8px;
+  }
+
+  &.area {
+    padding: 12px 14px;
+    resize: none;
+    font: 400 16px/1.6 var(--reading-font);
+  }
+
+  &.soft {
+    border-style: dashed;
+  }
+}
+
+app-passage-view + .field {
+  margin-top: 8px;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  margin: 0 -16px;
+  padding: 0 16px 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  button {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 18px;
+    border: 1px solid var(--mat-sys-outline-variant);
+    background: var(--mat-sys-surface);
+    color: var(--mat-sys-on-surface);
+    font: 500 14px Inter, sans-serif;
+    cursor: pointer;
+
+    i {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--c);
+    }
+
+    &.active {
+      border-color: var(--c);
+      background: color-mix(in srgb, var(--c) 14%, var(--mat-sys-surface));
+      font-weight: 700;
+    }
+  }
+}
+
+.date {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  margin-top: 10px;
+  padding: 0 12px;
+  border-radius: 14px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface-variant);
+
+  input {
+    border: 0;
+    outline: 0;
+    background: none;
+    color: var(--mat-sys-on-surface);
+    font: 500 15px Inter, sans-serif;
+  }
+}
+
+.point-head {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: -4px -8px 10px 0;
+
+  .num {
+    flex: none;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--accent-gold);
+    color: var(--map-badge-text);
+    font: 700 15px Inter, sans-serif;
+  }
+
+  .point-title {
+    flex: 1;
+    min-width: 0;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background: none;
+    color: var(--mat-sys-on-surface);
+    font: 600 18px var(--heading-font);
+  }
+
+  button {
+    color: var(--mat-sys-on-surface-variant);
+  }
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  height: 52px;
+  margin-bottom: 12px;
+  border-radius: 18px;
+  border: 1px dashed color-mix(in srgb, var(--accent-gold) 55%, var(--mat-sys-outline-variant));
+  background: none;
+  color: var(--mat-sys-primary);
+  font: 600 15px Inter, sans-serif;
+  cursor: pointer;
+}
+
+.saved {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 12px 0 0;
+  font: var(--mat-sys-body-small);
+  color: var(--mat-sys-on-surface-variant);
+
+  mat-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+}

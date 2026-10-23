@@ -1,0 +1,104 @@
+@if (lesson(); as l) {
+  <div class="top">
+    <app-back fallback="/ebd" label="Voltar às lições" />
+    <span class="spacer"></span>
+    <a mat-icon-button [routerLink]="['/ebd/licao', l.number - 1]" [disabled]="l.number === 1" aria-label="Lição anterior">
+      <mat-icon>chevron_left</mat-icon>
+    </a>
+    <a mat-icon-button [routerLink]="['/ebd/licao', l.number + 1]" [disabled]="l.number === ebd.lessons().length" aria-label="Próxima lição">
+      <mat-icon>chevron_right</mat-icon>
+    </a>
+  </div>
+
+  <span class="overline">Lição {{ l.number }} · {{ formatLong(l.date) }}</span>
+  <textarea class="title-input" cdkTextareaAutosize rows="1" placeholder="Título da lição"
+            [value]="l.title" (input)="update({ title: value($event) })" aria-label="Título da lição"></textarea>
+
+  <button class="done-toggle" [class.on]="l.done" (click)="update({ done: !l.done })">
+    <mat-icon>{{ l.done ? 'check_circle' : 'radio_button_unchecked' }}</mat-icon>
+    {{ l.done ? 'Aula concluída' : 'Marcar aula como concluída' }}
+  </button>
+
+  <div class="tip">
+    <mat-icon>content_paste</mat-icon>
+    <span>Cole o texto da lição e o app preenche o título e as referências sozinho. O restante do texto é descartado.</span>
+    <button mat-stroked-button (click)="importFromMagazine()">Colar da revista</button>
+  </div>
+
+  <!-- Texto Áureo -->
+  <section>
+    <h2>Texto Áureo</h2>
+    <input class="ref-input" placeholder="Referência (ex.: Hb 11.30)" [value]="l.goldenText"
+           (input)="update({ goldenText: value($event) })" aria-label="Referência do Texto Áureo" />
+    @if (l.goldenText) { <app-passage-view [refs]="l.goldenText" /> }
+  </section>
+
+  <!-- Leitura Bíblica -->
+  <section>
+    <h2>Leitura Bíblica em Classe</h2>
+    <input class="ref-input" placeholder="Referência (ex.: Js 6.1-20)" [value]="l.reading"
+           (input)="update({ reading: value($event) })" aria-label="Referência da Leitura Bíblica" />
+    @if (l.reading) { <app-passage-view [refs]="l.reading" /> }
+  </section>
+
+  <!-- Leitura diária -->
+  <section>
+    <h2>Leitura diária <span class="count">{{ dailyDone() }}/6</span></h2>
+    <div class="daily">
+      @for (date of dailyDates(); track date; let i = $index) {
+        <div class="day" [class.done]="l.dailyDone[i]">
+          <button class="check" (click)="toggleDaily(i)" [attr.aria-label]="'Marcar leitura de ' + formatWeekday(date)">
+            <mat-icon>{{ l.dailyDone[i] ? 'check_circle' : 'radio_button_unchecked' }}</mat-icon>
+          </button>
+          <span class="day-name"><strong>{{ formatWeekday(date) }}</strong><small>{{ dayOfMonth(date) }}</small></span>
+          <input placeholder="Referência" [value]="l.daily[i]" (input)="ebd.setDaily(l.number, i, { ref: value($event) })"
+                 [attr.aria-label]="'Leitura de ' + formatWeekday(date)" />
+          @if (readerLink(l.daily[i]); as link) {
+            <a mat-icon-button [routerLink]="link" aria-label="Ler"><mat-icon>arrow_forward</mat-icon></a>
+          }
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Mapas -->
+  @if (maps().length) {
+    <section>
+      <h2>Mapas desta lição</h2>
+      <div class="maps">
+        @for (m of maps(); track m.id) {
+          <a class="map" matRipple [routerLink]="['/mapas', m.id]">
+            <app-bible-map [map]="m" [compact]="true" />
+            <span><small>{{ m.period }}</small>{{ m.title }}</span>
+          </a>
+        }
+      </div>
+    </section>
+  }
+
+  <!-- Anotações -->
+  <section>
+    <h2>Minhas anotações</h2>
+    <textarea class="notes" cdkTextareaAutosize cdkAutosizeMinRows="4" placeholder="O que você aprendeu, o que chamou sua atenção…"
+              [value]="l.notes" (input)="update({ notes: value($event) })" aria-label="Anotações"></textarea>
+  </section>
+
+  <section>
+    <h2>Perguntas para a classe</h2>
+    <textarea class="notes" cdkTextareaAutosize cdkAutosizeMinRows="3" placeholder="Dúvidas ou perguntas para levar no domingo"
+              [value]="l.questions" (input)="update({ questions: value($event) })" aria-label="Perguntas"></textarea>
+  </section>
+
+  @if (ebd.teacherMode()) {
+    <section>
+      <h2>Roteiro da aula <span class="count">Professor</span></h2>
+      <textarea class="notes plan" cdkTextareaAutosize cdkAutosizeMinRows="6"
+                placeholder="Introdução&#10;Tópico 1&#10;Tópico 2&#10;Tópico 3&#10;Aplicação prática&#10;Oração final"
+                [value]="l.plan" (input)="update({ plan: value($event) })" aria-label="Roteiro da aula"></textarea>
+    </section>
+  }
+
+  <p class="saved"><mat-icon>cloud_done</mat-icon> Salvo automaticamente neste aparelho</p>
+} @else {
+  <p>Lição não encontrada. <a routerLink="/ebd">Voltar à EBD</a></p>
+}

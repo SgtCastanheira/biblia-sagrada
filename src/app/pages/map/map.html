@@ -1,0 +1,84 @@
+@if (map(); as m) {
+  <div class="top">
+    <app-back fallback="/mapas" label="Voltar aos mapas" />
+  </div>
+  <span class="overline">{{ m.period }}</span>
+  <h1>{{ m.title }}</h1>
+  <p class="summary">{{ m.summary }}</p>
+  <p class="facts">
+    <span><mat-icon>flag</mat-icon>{{ m.steps.length }} {{ m.route === false ? 'lugares' : 'etapas' }}</span>
+    @if (distances().total; as total) { <span><mat-icon>straighten</mat-icon>Percurso {{ total }} (em linha reta)</span> }
+  </p>
+
+  <div class="actions">
+    <button mat-flat-button class="journey" (click)="story.set(activeStep() ?? 0)">
+      <mat-icon>play_circle</mat-icon> {{ m.route === false ? 'Visitar os lugares' : 'Viver a jornada' }}
+    </button>
+    @if (article(); as a) {
+      <a mat-stroked-button class="journey" [routerLink]="['/artigo', a.id]"><mat-icon>menu_book</mat-icon> Ler o estudo</a>
+    }
+  </div>
+
+  <div class="map-frame">
+    <app-bible-map #mapView [map]="m" [interactive]="true" [(activeStep)]="activeStep"
+                   [era]="layers().era ? era() : null" [nearby]="layers().nearby" [modern]="layers().modern" />
+    @if (mapView.zoomed()) {
+      <button class="reset" (click)="mapView.reset()" aria-label="Ver o mapa inteiro"><mat-icon>zoom_out_map</mat-icon></button>
+    }
+  </div>
+  <div class="layers" role="group" aria-label="Camadas do mapa">
+    <button [class.on]="layers().nearby" [attr.aria-pressed]="layers().nearby" (click)="toggleLayer('nearby')"><mat-icon>location_city</mat-icon> Lugares ao redor</button>
+    @if (era()) {
+      <button [class.on]="layers().era" [attr.aria-pressed]="layers().era" (click)="toggleLayer('era')"><mat-icon>layers</mat-icon> Reinos da época</button>
+    }
+    <button [class.on]="layers().modern" [attr.aria-pressed]="layers().modern" (click)="toggleLayer('modern')"><mat-icon>public</mat-icon> Países de hoje</button>
+  </div>
+  @if (era(); as e) {
+    <a class="era-card" matRipple routerLink="/atlas" [queryParams]="{ epoca: e.id }">
+      <mat-icon>history</mat-icon>
+      <span><small>Época · {{ e.period }}</small>{{ e.name }} — veja o mundo ao redor no Atlas</span>
+      <mat-icon class="go">chevron_right</mat-icon>
+    </a>
+  }
+  <div class="legend">
+    <span><i class="dot"></i> Lugar</span>
+    <span><i class="dot uncertain"></i> Localização provável ou tradicional</span>
+    @if (m.route !== false) { <span><i class="line"></i> Trajeto</span> }
+  </div>
+  <p class="hint">Arraste para mover, use dois dedos (ou a roda do mouse) para aproximar e toque num número para destacar a etapa.</p>
+
+  <h2>{{ m.route === false ? 'Lugares' : 'Etapas' }}</h2>
+  <ol class="steps">
+    @for (step of m.steps; track $index; let i = $index) {
+      <li [class.active]="activeStep() === i" (click)="toggleStep(i)">
+        <span class="num">{{ i + 1 }}</span>
+        <span class="text">
+          @if (distances().steps[i]; as km) { <span class="km">{{ km }}</span> }
+          {{ step.text }}
+          @if (link(step.ref); as l) {
+            <a [routerLink]="l.path" [fragment]="l.fragment" (click)="$event.stopPropagation()">{{ step.ref }}</a>
+          } @else {
+            <span class="ref">{{ step.ref }}</span>
+          }
+        </span>
+      </li>
+    }
+  </ol>
+
+  @if (m.note) {
+    <p class="note"><mat-icon>info</mat-icon> {{ m.note }}</p>
+  }
+
+  <h2>Capítulos relacionados</h2>
+  <div class="chapters">
+    @for (c of chapters(); track c.label) {
+      <a matRipple [routerLink]="['/ler', c.bookId, c.chapter]">{{ c.label }}</a>
+    }
+  </div>
+  <p class="credit">Geografia: Natural Earth (domínio público). Traçado aproximado, para fins de estudo.</p>
+  @if (story() !== null) {
+    <app-map-story [map]="m" [startAt]="story()!" (closed)="story.set(null)" />
+  }
+} @else {
+  <p>Mapa não encontrado. <a routerLink="/mapas">Ver todos os mapas</a></p>
+}

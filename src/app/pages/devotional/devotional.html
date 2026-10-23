@@ -1,0 +1,111 @@
+<header class="page-head">
+  <span class="overline">Meu momento com Deus</span>
+  <h1>Devocional</h1>
+  <button mat-stroked-button class="config" (click)="configure()">
+    <mat-icon>tune</mat-icon> Montar
+  </button>
+</header>
+
+<!-- Sequência e semana -->
+<section class="streak card">
+  <div class="streak-number">
+    <strong>{{ service.streak() }}</strong>
+    <span>{{ service.streak() === 1 ? 'dia seguido' : 'dias seguidos' }}</span>
+  </div>
+  <div class="week">
+    @for (day of service.week(); track day.date) {
+      <span class="day" [class.done]="day.done" [class.today]="day.today">
+        <small>{{ formatWeekday(day.date).charAt(0) }}</small>
+        <span class="dot">
+          @if (day.done) { <mat-icon>check</mat-icon> } @else { {{ dayOfMonth(day.date) }} }
+        </span>
+      </span>
+    }
+  </div>
+</section>
+
+<!-- Hoje -->
+@if (service.todayEntry(); as entry) {
+  @if (entry.done) {
+    <a class="today-card card done" matRipple routerLink="/devocional/hoje">
+      <span class="label"><mat-icon>check_circle</mat-icon> Devocional de hoje concluído</span>
+      <span class="passage">{{ entry.passage }}</span>
+      @if (entry.keyVerse) { <span class="key reading-font">“{{ entry.keyVerse }}”</span> }
+      <span class="action">Rever <mat-icon>arrow_forward</mat-icon></span>
+    </a>
+  } @else {
+    <a class="today-card card" matRipple routerLink="/devocional/hoje">
+      <span class="label"><mat-icon>edit_note</mat-icon> Em andamento</span>
+      <span class="title">{{ entry.passage || 'Escolha o texto de hoje' }}</span>
+      <span class="action">Continuar <mat-icon>arrow_forward</mat-icon></span>
+    </a>
+  }
+} @else {
+  <a class="today-card card start" matRipple routerLink="/devocional/hoje">
+    <span class="label"><mat-icon>wb_twilight</mat-icon> {{ formatLong(service.week()[6].date) }}</span>
+    <span class="title">Comece seu devocional de hoje</span>
+    <span class="sub">Leitura, reflexão e oração — no seu ritmo.</span>
+    <span class="action">Começar <mat-icon>arrow_forward</mat-icon></span>
+  </a>
+}
+
+<!-- Pedidos de oração -->
+<section class="prayers">
+  <div class="section-header">
+    <h2>Pedidos de oração</h2>
+    @if (service.answeredPrayers().length) {
+      <button mat-button (click)="showAnswered.set(!showAnswered())">
+        {{ showAnswered() ? 'Ocultar' : 'Respondidos (' + service.answeredPrayers().length + ')' }}
+      </button>
+    }
+  </div>
+
+  <form class="add" (submit)="$event.preventDefault(); addPrayer()">
+    <input placeholder="Novo pedido de oração…" [value]="newPrayer()" (input)="newPrayer.set($any($event.target).value)" aria-label="Novo pedido" />
+    <button mat-icon-button type="submit" [disabled]="!newPrayer().trim()" aria-label="Adicionar"><mat-icon>add</mat-icon></button>
+  </form>
+
+  <div class="prayer-list card">
+    @for (p of service.openPrayers(); track p.id) {
+      <div class="prayer">
+        <button class="mark" (click)="service.toggleAnswered(p.id)" aria-label="Marcar como respondido">
+          <mat-icon>radio_button_unchecked</mat-icon>
+        </button>
+        <span class="text">{{ p.text }}</span>
+        <button mat-icon-button class="delete" (click)="removePrayer(p.id)" aria-label="Excluir"><mat-icon>close</mat-icon></button>
+      </div>
+    } @empty {
+      <p class="empty">Nenhum pedido em aberto. Anote aqui por quem e pelo que você está orando.</p>
+    }
+    @if (showAnswered()) {
+      @for (p of service.answeredPrayers(); track p.id) {
+        <div class="prayer answered">
+          <button class="mark" (click)="service.toggleAnswered(p.id)" aria-label="Desmarcar">
+            <mat-icon>check_circle</mat-icon>
+          </button>
+          <span class="text">{{ p.text }}<small>Deus respondeu</small></span>
+          <button mat-icon-button class="delete" (click)="removePrayer(p.id)" aria-label="Excluir"><mat-icon>close</mat-icon></button>
+        </div>
+      }
+    }
+  </div>
+</section>
+
+<!-- Histórico -->
+@if (service.history().length) {
+  <section class="history">
+    <h2>Histórico</h2>
+    <div class="card list">
+      @for (entry of service.history(); track entry.date) {
+        <a class="history-item" matRipple [routerLink]="['/devocional', entry.date]">
+          <span class="date"><strong>{{ dayOfMonth(entry.date) }}</strong><small>{{ formatWeekday(entry.date) }}</small></span>
+          <span class="info">
+            <span class="passage">{{ entry.passage || 'Sem texto' }}</span>
+            @if (entry.keyVerse) { <span class="key">“{{ entry.keyVerse }}”</span> }
+          </span>
+          @if (entry.done) { <mat-icon class="check">check_circle</mat-icon> }
+        </a>
+      }
+    </div>
+  </section>
+}

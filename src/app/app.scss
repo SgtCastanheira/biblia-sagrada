@@ -1,0 +1,237 @@
+:host {
+  --nav-height: 72px;
+  --rail-width: 88px;
+  display: block;
+  min-height: 100%;
+}
+
+/* ---------- Barra superior ---------- */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 60px;
+  padding: env(safe-area-inset-top) 8px 0 16px;
+  background: color-mix(in srgb, var(--mat-sys-surface) 92%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo {
+  color: var(--mat-sys-primary);
+}
+
+.brand-name {
+  font: 600 21px/1 var(--heading-font);
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+}
+
+// Em celulares estreitos mostra só "Bíblia" para caber os botões
+@media (max-width: 439px) {
+  .wide-only {
+    display: none;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+.bell {
+  position: relative;
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    right: 11px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    box-shadow: 0 0 0 2px var(--mat-sys-surface);
+  }
+}
+
+.version-chip {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 34px;
+  padding: 0 6px 0 12px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: 17px;
+  cursor: pointer;
+  background: var(--mat-sys-surface-container-low);
+  color: var(--mat-sys-on-surface);
+  font: 600 13px Inter, sans-serif;
+  letter-spacing: 0.6px;
+
+  mat-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--mat-sys-on-surface-variant);
+  }
+}
+
+.offline {
+  position: sticky;
+  top: 60px;
+  z-index: 19;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font: 500 13px Inter, sans-serif;
+  background: var(--mat-sys-surface-container-high);
+  color: var(--mat-sys-on-surface-variant);
+
+  mat-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ---------- Navegação: barra inferior (celular) ---------- */
+.nav {
+  position: fixed;
+  z-index: 30;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  height: var(--nav-height);
+  padding-bottom: env(safe-area-inset-bottom);
+  background: color-mix(in srgb, var(--mat-sys-surface) 94%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--mat-sys-outline-variant);
+  transition: transform 250ms ease;
+
+  &.hidden {
+    transform: translateY(100%);
+  }
+}
+
+.rail-logo {
+  display: none;
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--mat-sys-on-surface-variant);
+  text-decoration: none;
+  font: 500 13px Inter, sans-serif;
+  letter-spacing: 0.2px;
+
+  .indicator {
+    width: 52px;
+    height: 30px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    transition: background-color 200ms, color 200ms;
+    overflow: hidden;
+  }
+
+  &.active {
+    color: var(--mat-sys-primary);
+    font-weight: 600;
+
+    .indicator {
+      background: var(--mat-sys-primary-container);
+    }
+
+    mat-icon {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  }
+}
+
+.content {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 8px 20px calc(var(--nav-height) + 28px + env(safe-area-inset-bottom));
+
+  &.reader {
+    padding-top: 0;
+    max-width: 760px;
+  }
+}
+
+/* ---------- Navegação: trilho lateral (tablet/computador) ---------- */
+@media (min-width: 840px) {
+  .top-bar {
+    padding-left: calc(var(--rail-width) + 28px);
+  }
+
+  .nav {
+    top: 0;
+    right: auto;
+    width: var(--rail-width);
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 16px 0;
+    border-top: 0;
+    border-right: 1px solid var(--mat-sys-outline-variant);
+
+    &.hidden {
+      transform: none;
+    }
+  }
+
+  .rail-logo {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 24px;
+    color: var(--mat-sys-primary);
+    text-decoration: none;
+
+    mat-icon {
+      font-size: 30px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .nav-item {
+    flex: none;
+  }
+
+  .brand .logo {
+    display: none;
+  }
+
+  .content {
+    padding: 16px 40px 56px calc(var(--rail-width) + 40px);
+    max-width: calc(1040px + var(--rail-width));
+
+    &.reader {
+      max-width: calc(760px + var(--rail-width));
+    }
+  }
+}

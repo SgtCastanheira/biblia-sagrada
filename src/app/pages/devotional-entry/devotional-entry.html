@@ -1,0 +1,90 @@
+<div class="top">
+  <app-back fallback="/devocional" />
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="share()" [disabled]="!entry().passage" aria-label="Compartilhar"><mat-icon>ios_share</mat-icon></button>
+  <button mat-icon-button (click)="configure()" aria-label="Montar meu devocional"><mat-icon>tune</mat-icon></button>
+</div>
+
+<span class="overline">{{ isToday() ? 'Hoje' : 'Devocional' }} · {{ dateLabel() }}</span>
+<h1>Meu devocional</h1>
+<div class="progress"><span [style.width.%]="progress()"></span></div>
+
+<!-- 1. Leitura -->
+<section class="step">
+  <h2><span class="num">1</span> Ler</h2>
+  <p class="question">Escolha um texto e leia com calma, sem pressa.</p>
+  @if (!entry().passage) {
+    <div class="suggestions">
+      @for (s of service.suggestions(); track s.label) {
+        <button class="suggestion" (click)="update({ passage: s.ref })">
+          <mat-icon>{{ s.icon }}</mat-icon>
+          <span><small>{{ s.label }}</small>{{ s.ref }}</span>
+        </button>
+      }
+    </div>
+  }
+  <input class="field ref" placeholder="Ou digite uma referência (ex.: Fp 4.4-9)" [value]="entry().passage"
+         (input)="update({ passage: value($event) })" aria-label="Texto bíblico" />
+  @if (entry().passage) {
+    <app-passage-view [refs]="entry().passage" />
+    <input class="field key" placeholder="O versículo que mais falou com você" [value]="entry().keyVerse"
+           (input)="update({ keyVerse: value($event) })" aria-label="Versículo-chave" />
+  }
+</section>
+
+@for (block of blocks(); track block.id) {
+  <section class="step">
+    <h2><span class="num">{{ block.step }}</span> {{ block.title }}</h2>
+    <p class="question">{{ block.question }}</p>
+
+    @switch (block.id) {
+      @case ('observation') {
+        <textarea class="field" cdkTextareaAutosize cdkAutosizeMinRows="3" [value]="entry().observation"
+                  (input)="update({ observation: value($event) })" [attr.aria-label]="block.title"></textarea>
+      }
+      @case ('application') {
+        <textarea class="field" cdkTextareaAutosize cdkAutosizeMinRows="3" [value]="entry().application"
+                  (input)="update({ application: value($event) })" [attr.aria-label]="block.title"></textarea>
+      }
+      @case ('prayer') {
+        <textarea class="field prayer" cdkTextareaAutosize cdkAutosizeMinRows="4" placeholder="Senhor, …" [value]="entry().prayer"
+                  (input)="update({ prayer: value($event) })" [attr.aria-label]="block.title"></textarea>
+      }
+      @case ('requests') {
+        <div class="requests">
+          @for (p of service.openPrayers(); track p.id) {
+            <div class="request">
+              <button (click)="service.toggleAnswered(p.id)" aria-label="Marcar como respondido">
+                <mat-icon>radio_button_unchecked</mat-icon>
+              </button>
+              <span>{{ p.text }}</span>
+            </div>
+          } @empty {
+            <p class="muted">Nenhum pedido em aberto. <a routerLink="/devocional">Adicionar pedidos</a></p>
+          }
+        </div>
+      }
+      @case ('gratitude') {
+        <div class="gratitude">
+          @for (i of [0, 1, 2]; track i) {
+            <label>
+              <span>{{ i + 1 }}</span>
+              <input class="field" [value]="entry().gratitude[i]" (input)="setGratitude(i, value($event))"
+                     placeholder="Sou grato(a) por…" [attr.aria-label]="'Gratidão ' + (i + 1)" />
+            </label>
+          }
+        </div>
+      }
+      @case ('worship') {
+        <input class="field" placeholder="Nome da música ou link" [value]="entry().worship"
+               (input)="update({ worship: value($event) })" [attr.aria-label]="block.title" />
+      }
+    }
+  </section>
+}
+
+<button mat-flat-button class="finish" [class.done]="entry().done" (click)="finish()" [disabled]="!entry().passage">
+  <mat-icon>{{ entry().done ? 'check_circle' : 'done_all' }}</mat-icon>
+  {{ entry().done ? 'Devocional concluído' : 'Concluir devocional' }}
+</button>
+<p class="saved"><mat-icon>cloud_done</mat-icon> Salvo automaticamente neste aparelho</p>

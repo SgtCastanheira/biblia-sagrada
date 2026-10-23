@@ -1,0 +1,68 @@
+@if (curiosity(); as c) {
+  <div class="top">
+    <app-back fallback="/curiosidades" />
+    <button mat-icon-button (click)="share()" aria-label="Compartilhar"><mat-icon>ios_share</mat-icon></button>
+  </div>
+
+  <article>
+    <span class="icon"><mat-icon>{{ c.icon }}</mat-icon></span>
+    <span class="overline">Você sabia? · {{ c.topic }}</span>
+    <h1>{{ c.question }}</h1>
+
+    <p class="answer">{{ c.answer }}</p>
+
+    @for (paragraph of c.body; track $index) {
+      <p class="body">{{ paragraph }}</p>
+    }
+
+    @if (c.points) {
+      <ol class="steps">
+        @for (point of c.points; track point.label; let last = $last) {
+          <li [class.total]="last && c.points.length > 2">
+            <span class="marker"></span>
+            <span class="step-label">{{ point.label }}</span>
+            <span class="step-text">{{ point.text }}</span>
+          </li>
+        }
+      </ol>
+    }
+
+    @if (c.closing) {
+      <p class="body">{{ c.closing }}</p>
+    }
+
+    <h2>O que diz o texto <span>{{ version()?.abbrev }}</span></h2>
+
+    @if (passages().loading) {
+      <div class="skeleton"><span></span><span></span><span class="short"></span></div>
+    } @else {
+      @for (p of passages().items; track p.reference) {
+        <figure class="passage">
+          @if (p.verses?.length) {
+            <blockquote class="reading-font">
+              @for (v of p.verses; track v.verse) {
+                <sup>{{ v.verse }}</sup>{{ v.text }}
+              }
+            </blockquote>
+          } @else {
+            <blockquote class="unavailable">Trecho não disponível na versão {{ version()?.name }}.</blockquote>
+          }
+          <figcaption>
+            <span>{{ p.reference }}</span>
+            <a mat-button [routerLink]="['/ler', p.range.bookId, p.range.chapter]" [fragment]="'v' + p.range.from">
+              Ler capítulo <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+            </a>
+          </figcaption>
+        </figure>
+      }
+    }
+  </article>
+
+  <a class="next" matRipple [routerLink]="['/curiosidades', next().id]">
+    <span class="next-label">Próxima curiosidade</span>
+    <span class="next-question">{{ next().question }}</span>
+    <mat-icon>arrow_forward</mat-icon>
+  </a>
+} @else {
+  <p>Curiosidade não encontrada.</p>
+}

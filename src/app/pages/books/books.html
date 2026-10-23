@@ -1,0 +1,55 @@
+<h1>Livros</h1>
+
+<div class="search">
+  <mat-icon>search</mat-icon>
+  <input placeholder="Buscar livro (ex.: Salmos, Jo, Rm)" [value]="query()" (input)="query.set($any($event.target).value)" />
+  @if (query()) {
+    <button (click)="query.set('')" aria-label="Limpar busca"><mat-icon>close</mat-icon></button>
+  }
+</div>
+
+@if (results(); as found) {
+  <p class="count">{{ found.length }} resultado{{ found.length === 1 ? '' : 's' }}</p>
+  <div class="grid">
+    @for (book of found; track book.id) {
+      <ng-container *ngTemplateOutlet="tile; context: { $implicit: book }" />
+    } @empty {
+      <p class="empty">Nenhum livro encontrado.</p>
+    }
+  </div>
+} @else {
+  <div class="segmented" role="tablist">
+    <button role="tab" [class.active]="testament() === 'AT'" (click)="testament.set('AT')">
+      Antigo Testamento <span>39</span>
+    </button>
+    <button role="tab" [class.active]="testament() === 'NT'" (click)="testament.set('NT')">
+      Novo Testamento <span>27</span>
+    </button>
+  </div>
+
+  @for (group of groups(); track group.category.id) {
+    <section class="group" [style.--c]="group.category.color">
+      <h2><span class="bar"></span>{{ group.category.name }} <small>{{ group.books.length }}</small></h2>
+      <div class="grid">
+        @for (book of group.books; track book.id) {
+          <ng-container *ngTemplateOutlet="tile; context: { $implicit: book }" />
+        }
+      </div>
+    </section>
+  }
+}
+
+<ng-template #tile let-book>
+  <a class="tile" matRipple [routerLink]="['/livro', book.id]" [style.--c]="book.category.color">
+    <span class="abbrev">{{ book.abbrev }}</span>
+    <span class="info">
+      <span class="name">{{ book.name }}</span>
+      <span class="chapters">{{ book.chapters }} capítulo{{ book.chapters > 1 ? 's' : '' }}</span>
+    </span>
+    @if (progress(book.id, book.chapters); as p) {
+      <span class="ring" [style.--p]="p" [attr.aria-label]="p + '% lido'">
+        @if (p === 100) { <mat-icon>check</mat-icon> } @else { {{ p }}% }
+      </span>
+    }
+  </a>
+</ng-template>

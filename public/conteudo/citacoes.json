@@ -1,0 +1,878 @@
+[
+{
+"nt": "Mt 1.23",
+"ot": "Is 7.14",
+"type": "citacao",
+"note": "A virgem conceberá: o nascimento de Jesus cumpre o sinal dado a Acaz."
+},
+{
+"nt": "Mt 2.6",
+"ot": "Mq 5.2",
+"type": "citacao",
+"note": "Os escribas citam Miqueias a Herodes: o governador nasceria em Belém."
+},
+{
+"nt": "Mt 2.15",
+"ot": "Os 11.1",
+"type": "citacao",
+"note": "Tipologia: Jesus revive a saída de Israel do Egito."
+},
+{
+"nt": "Mt 2.18",
+"ot": "Jr 31.15",
+"type": "citacao",
+"note": "A dor de Raquel no exílio ecoa na matança de Belém."
+},
+{
+"nt": "Mt 3.3",
+"ot": "Is 40.3",
+"type": "citacao",
+"note": "João Batista é a voz que prepara o caminho do Senhor."
+},
+{
+"nt": "Mt 4.4",
+"ot": "Dt 8.3",
+"type": "citacao",
+"note": "Jesus responde ao diabo com Deuteronômio: nem só de pão viverá o homem."
+},
+{
+"nt": "Mt 4.6",
+"ot": "Sl 91.11-12",
+"type": "citacao",
+"note": "O diabo cita um salmo fora do contexto."
+},
+{
+"nt": "Mt 4.7",
+"ot": "Dt 6.16",
+"type": "citacao",
+"note": "Não tentarás o Senhor teu Deus."
+},
+{
+"nt": "Mt 4.10",
+"ot": "Dt 6.13",
+"type": "citacao",
+"note": "Só ao Senhor adorarás."
+},
+{
+"nt": "Mt 4.15-16",
+"ot": "Is 9.1-2",
+"type": "citacao",
+"note": "A luz que raiou na Galileia."
+},
+{
+"nt": "Mt 5.21",
+"ot": "Êx 20.13",
+"type": "citacao",
+"note": "Jesus aprofunda o mandamento: não matarás."
+},
+{
+"nt": "Mt 5.27",
+"ot": "Êx 20.14",
+"type": "citacao",
+"note": "Jesus aprofunda o mandamento: não adulterarás."
+},
+{
+"nt": "Mt 5.38",
+"ot": "Êx 21.24",
+"type": "citacao",
+"note": "A lei do olho por olho, que limitava a vingança."
+},
+{
+"nt": "Mt 5.43",
+"ot": "Lv 19.18",
+"type": "citacao",
+"note": "Amarás o teu próximo — e Jesus acrescenta: os inimigos."
+},
+{
+"nt": "Mt 8.17",
+"ot": "Is 53.4",
+"type": "citacao",
+"note": "As curas de Jesus cumprem o Servo que levou as nossas enfermidades."
+},
+{
+"nt": "Mt 9.13",
+"ot": "Os 6.6",
+"type": "citacao",
+"note": "Misericórdia quero, e não sacrifício."
+},
+{
+"nt": "Mt 11.10",
+"ot": "Ml 3.1",
+"type": "citacao",
+"note": "João é o mensageiro que prepara o caminho."
+},
+{
+"nt": "Mt 12.18-21",
+"ot": "Is 42.1-4",
+"type": "citacao",
+"note": "Jesus é o Servo escolhido, que não esmaga a cana quebrada."
+},
+{
+"nt": "Mt 12.40",
+"ot": "Jn 1.17",
+"type": "alusao",
+"note": "O sinal de Jonas: três dias e três noites."
+},
+{
+"nt": "Mt 13.14-15",
+"ot": "Is 6.9-10",
+"type": "citacao",
+"note": "Ouvindo, não entendem — o mesmo endurecimento do tempo de Isaías."
+},
+{
+"nt": "Mt 13.35",
+"ot": "Sl 78.2",
+"type": "citacao",
+"note": "Falar por parábolas, como o salmista."
+},
+{
+"nt": "Mt 15.8-9",
+"ot": "Is 29.13",
+"type": "citacao",
+"note": "Este povo honra-me com os lábios."
+},
+{
+"nt": "Mt 19.4-5",
+"ot": "Gn 1.27; Gn 2.24",
+"type": "citacao",
+"note": "Jesus volta à criação para ensinar sobre o casamento."
+},
+{
+"nt": "Mt 21.5",
+"ot": "Zc 9.9",
+"type": "citacao",
+"note": "O Rei humilde, montado num jumentinho."
+},
+{
+"nt": "Mt 21.9",
+"ot": "Sl 118.25-26",
+"type": "citacao",
+"note": "Hosana! Bendito o que vem em nome do Senhor."
+},
+{
+"nt": "Mt 21.13",
+"ot": "Is 56.7; Jr 7.11",
+"type": "citacao",
+"note": "Casa de oração, transformada em covil de ladrões."
+},
+{
+"nt": "Mt 21.16",
+"ot": "Sl 8.2",
+"type": "citacao",
+"note": "Da boca das crianças sai o louvor."
+},
+{
+"nt": "Mt 21.42",
+"ot": "Sl 118.22-23",
+"type": "citacao",
+"note": "A pedra rejeitada tornou-se a pedra angular."
+},
+{
+"nt": "Mt 22.32",
+"ot": "Êx 3.6",
+"type": "citacao",
+"note": "Deus de Abraão, Isaque e Jacó: Deus de vivos."
+},
+{
+"nt": "Mt 22.37",
+"ot": "Dt 6.5",
+"type": "citacao",
+"note": "O primeiro mandamento: amar a Deus de todo o coração."
+},
+{
+"nt": "Mt 22.39",
+"ot": "Lv 19.18",
+"type": "citacao",
+"note": "O segundo: amar o próximo como a si mesmo."
+},
+{
+"nt": "Mt 22.44",
+"ot": "Sl 110.1",
+"type": "citacao",
+"note": "Como Davi chama o seu descendente de Senhor?"
+},
+{
+"nt": "Mt 24.15",
+"ot": "Dn 9.27",
+"type": "citacao",
+"note": "A abominação da desolação, de que falou Daniel."
+},
+{
+"nt": "Mt 24.30",
+"ot": "Dn 7.13",
+"type": "alusao",
+"note": "O Filho do homem vindo sobre as nuvens."
+},
+{
+"nt": "Mt 26.31",
+"ot": "Zc 13.7",
+"type": "citacao",
+"note": "Fere o pastor, e as ovelhas se dispersarão."
+},
+{
+"nt": "Mt 26.64",
+"ot": "Dn 7.13; Sl 110.1",
+"type": "alusao",
+"note": "Diante do sumo sacerdote, Jesus une Daniel e o Salmo 110."
+},
+{
+"nt": "Mt 27.9-10",
+"ot": "Zc 11.12-13",
+"type": "citacao",
+"note": "As trinta moedas de prata e o campo do oleiro."
+},
+{
+"nt": "Mt 27.35",
+"ot": "Sl 22.18",
+"type": "alusao",
+"note": "Os soldados repartem as vestes."
+},
+{
+"nt": "Mt 27.46",
+"ot": "Sl 22.1",
+"type": "citacao",
+"note": "Deus meu, Deus meu, por que me desamparaste?"
+},
+{
+"nt": "Mc 1.2",
+"ot": "Ml 3.1",
+"type": "citacao",
+"note": "O mensageiro enviado adiante."
+},
+{
+"nt": "Mc 1.3",
+"ot": "Is 40.3",
+"type": "citacao",
+"note": "A voz que clama no deserto."
+},
+{
+"nt": "Mc 12.29-30",
+"ot": "Dt 6.4-5",
+"type": "citacao",
+"note": "O Shemá: o Senhor é um só."
+},
+{
+"nt": "Mc 14.62",
+"ot": "Dn 7.13",
+"type": "alusao",
+"note": "O Filho do homem à direita do Poder."
+},
+{
+"nt": "Lc 1.17",
+"ot": "Ml 4.6",
+"type": "alusao",
+"note": "João vem no espírito de Elias, convertendo os corações dos pais aos filhos."
+},
+{
+"nt": "Lc 2.23",
+"ot": "Êx 13.2",
+"type": "citacao",
+"note": "Todo primogênito será consagrado ao Senhor."
+},
+{
+"nt": "Lc 3.4-6",
+"ot": "Is 40.3-5",
+"type": "citacao",
+"note": "Toda carne verá a salvação de Deus."
+},
+{
+"nt": "Lc 4.18-19",
+"ot": "Is 61.1-2",
+"type": "citacao",
+"note": "Em Nazaré, Jesus lê a sua missão em Isaías."
+},
+{
+"nt": "Lc 22.37",
+"ot": "Is 53.12",
+"type": "citacao",
+"note": "Foi contado com os transgressores."
+},
+{
+"nt": "Lc 23.46",
+"ot": "Sl 31.5",
+"type": "citacao",
+"note": "Nas tuas mãos entrego o meu espírito."
+},
+{
+"nt": "Jo 1.1",
+"ot": "Gn 1.1",
+"type": "tema",
+"note": "“No princípio”: João começa como Gênesis."
+},
+{
+"nt": "Jo 1.14",
+"ot": "Êx 40.34",
+"type": "tema",
+"note": "O Verbo “armou a sua tenda” entre nós, como a glória no tabernáculo."
+},
+{
+"nt": "Jo 1.23",
+"ot": "Is 40.3",
+"type": "citacao",
+"note": "João: “Eu sou a voz do que clama no deserto”."
+},
+{
+"nt": "Jo 1.29",
+"ot": "Is 53.7; Êx 12.3-7",
+"type": "alusao",
+"note": "O Cordeiro de Deus: o servo levado ao matadouro e o cordeiro da Páscoa."
+},
+{
+"nt": "Jo 1.51",
+"ot": "Gn 28.12",
+"type": "alusao",
+"note": "A escada de Jacó: Jesus é a ligação entre o céu e a terra."
+},
+{
+"nt": "Jo 2.17",
+"ot": "Sl 69.9",
+"type": "citacao",
+"note": "O zelo da tua casa me devorará."
+},
+{
+"nt": "Jo 3.14",
+"ot": "Nm 21.8-9",
+"type": "alusao",
+"note": "Como a serpente levantada no deserto, o Filho do homem será levantado."
+},
+{
+"nt": "Jo 6.31",
+"ot": "Êx 16.4; Sl 78.24",
+"type": "citacao",
+"note": "O maná, pão do céu — e Jesus, o verdadeiro pão."
+},
+{
+"nt": "Jo 6.45",
+"ot": "Is 54.13",
+"type": "citacao",
+"note": "Todos serão ensinados por Deus."
+},
+{
+"nt": "Jo 10.11",
+"ot": "Ez 34.11-16",
+"type": "tema",
+"note": "O bom Pastor cumpre a promessa: “eu mesmo procurarei as minhas ovelhas”."
+},
+{
+"nt": "Jo 12.15",
+"ot": "Zc 9.9",
+"type": "citacao",
+"note": "Eis que o teu Rei vem, montado num jumentinho."
+},
+{
+"nt": "Jo 12.38",
+"ot": "Is 53.1",
+"type": "citacao",
+"note": "Quem deu crédito à nossa pregação?"
+},
+{
+"nt": "Jo 12.40",
+"ot": "Is 6.10",
+"type": "citacao",
+"note": "Cegou-lhes os olhos e endureceu-lhes o coração."
+},
+{
+"nt": "Jo 13.18",
+"ot": "Sl 41.9",
+"type": "citacao",
+"note": "O que come o pão comigo levantou contra mim o calcanhar."
+},
+{
+"nt": "Jo 15.25",
+"ot": "Sl 69.4",
+"type": "citacao",
+"note": "Odiaram-me sem causa."
+},
+{
+"nt": "Jo 19.24",
+"ot": "Sl 22.18",
+"type": "citacao",
+"note": "Repartiram entre si as minhas vestes e lançaram sortes."
+},
+{
+"nt": "Jo 19.36",
+"ot": "Êx 12.46; Sl 34.20",
+"type": "citacao",
+"note": "Nenhum dos seus ossos será quebrado: o Cordeiro pascal."
+},
+{
+"nt": "Jo 19.37",
+"ot": "Zc 12.10",
+"type": "citacao",
+"note": "Olharão para aquele a quem traspassaram."
+},
+{
+"nt": "At 1.20",
+"ot": "Sl 69.25; Sl 109.8",
+"type": "citacao",
+"note": "Pedro aplica os salmos a Judas e à escolha de Matias."
+},
+{
+"nt": "At 2.17-21",
+"ot": "Jl 2.28-32",
+"type": "citacao",
+"note": "Pentecostes: o cumprimento da promessa de Joel."
+},
+{
+"nt": "At 2.25-28",
+"ot": "Sl 16.8-11",
+"type": "citacao",
+"note": "Não deixarás a minha alma no Hades: a ressurreição de Cristo."
+},
+{
+"nt": "At 2.34-35",
+"ot": "Sl 110.1",
+"type": "citacao",
+"note": "Assenta-te à minha direita."
+},
+{
+"nt": "At 3.22-23",
+"ot": "Dt 18.15-19",
+"type": "citacao",
+"note": "O profeta como Moisés."
+},
+{
+"nt": "At 3.25",
+"ot": "Gn 22.18",
+"type": "citacao",
+"note": "Na tua descendência serão benditas todas as famílias da terra."
+},
+{
+"nt": "At 4.11",
+"ot": "Sl 118.22",
+"type": "citacao",
+"note": "A pedra desprezada pelos edificadores."
+},
+{
+"nt": "At 4.25-26",
+"ot": "Sl 2.1-2",
+"type": "citacao",
+"note": "Os reis se levantam contra o Senhor e o seu Ungido."
+},
+{
+"nt": "At 7.49-50",
+"ot": "Is 66.1-2",
+"type": "citacao",
+"note": "O céu é o meu trono: Deus não habita em templos feitos por mãos."
+},
+{
+"nt": "At 8.32-33",
+"ot": "Is 53.7-8",
+"type": "citacao",
+"note": "O eunuco lê o Servo sofredor, e Filipe anuncia Jesus."
+},
+{
+"nt": "At 13.33",
+"ot": "Sl 2.7",
+"type": "citacao",
+"note": "Tu és meu Filho: a ressurreição."
+},
+{
+"nt": "At 13.34",
+"ot": "Is 55.3",
+"type": "citacao",
+"note": "As fiéis misericórdias prometidas a Davi."
+},
+{
+"nt": "At 13.35",
+"ot": "Sl 16.10",
+"type": "citacao",
+"note": "Não permitirás que o teu Santo veja corrupção."
+},
+{
+"nt": "At 13.47",
+"ot": "Is 49.6",
+"type": "citacao",
+"note": "Luz para os gentios: a missão de Paulo e Barnabé."
+},
+{
+"nt": "At 15.16-17",
+"ot": "Am 9.11-12",
+"type": "citacao",
+"note": "O tabernáculo de Davi reconstruído, para que os gentios busquem ao Senhor."
+},
+{
+"nt": "At 28.26-27",
+"ot": "Is 6.9-10",
+"type": "citacao",
+"note": "As últimas palavras de Atos ecoam o chamado de Isaías."
+},
+{
+"nt": "Rm 1.17",
+"ot": "Hc 2.4",
+"type": "citacao",
+"note": "O justo viverá da fé — o versículo da Reforma."
+},
+{
+"nt": "Rm 3.10-12",
+"ot": "Sl 14.1-3",
+"type": "citacao",
+"note": "Não há justo, nem um sequer."
+},
+{
+"nt": "Rm 4.3",
+"ot": "Gn 15.6",
+"type": "citacao",
+"note": "Abraão creu, e isso lhe foi imputado como justiça."
+},
+{
+"nt": "Rm 4.7-8",
+"ot": "Sl 32.1-2",
+"type": "citacao",
+"note": "Bem-aventurados aqueles cujas maldades são perdoadas."
+},
+{
+"nt": "Rm 8.36",
+"ot": "Sl 44.22",
+"type": "citacao",
+"note": "Por amor de ti somos entregues à morte todo o dia."
+},
+{
+"nt": "Rm 9.13",
+"ot": "Ml 1.2-3",
+"type": "citacao",
+"note": "Amei Jacó e aborreci Esaú: a eleição."
+},
+{
+"nt": "Rm 10.13",
+"ot": "Jl 2.32",
+"type": "citacao",
+"note": "Todo aquele que invocar o nome do Senhor será salvo."
+},
+{
+"nt": "Rm 10.15",
+"ot": "Is 52.7",
+"type": "citacao",
+"note": "Quão formosos os pés dos que anunciam boas-novas."
+},
+{
+"nt": "Rm 11.26-27",
+"ot": "Is 59.20-21",
+"type": "citacao",
+"note": "De Sião virá o Libertador."
+},
+{
+"nt": "Rm 12.19",
+"ot": "Dt 32.35",
+"type": "citacao",
+"note": "Minha é a vingança, eu recompensarei."
+},
+{
+"nt": "Rm 12.20",
+"ot": "Pv 25.21-22",
+"type": "citacao",
+"note": "Se o teu inimigo tiver fome, dá-lhe de comer."
+},
+{
+"nt": "Rm 15.12",
+"ot": "Is 11.10",
+"type": "citacao",
+"note": "A raiz de Jessé, em quem os gentios esperarão."
+},
+{
+"nt": "1Co 1.19",
+"ot": "Is 29.14",
+"type": "citacao",
+"note": "Destruirei a sabedoria dos sábios."
+},
+{
+"nt": "1Co 2.9",
+"ot": "Is 64.4",
+"type": "citacao",
+"note": "O que olhos não viram, Deus preparou para os que o amam."
+},
+{
+"nt": "1Co 5.7",
+"ot": "Êx 12.21",
+"type": "tema",
+"note": "Cristo, nossa Páscoa, foi sacrificado por nós."
+},
+{
+"nt": "1Co 10.1-4",
+"ot": "Êx 14.21-22; Êx 17.6",
+"type": "tema",
+"note": "O mar, a nuvem e a rocha no deserto como figuras de Cristo."
+},
+{
+"nt": "1Co 15.45",
+"ot": "Gn 2.7",
+"type": "citacao",
+"note": "O primeiro Adão, alma vivente; o último Adão, espírito vivificante."
+},
+{
+"nt": "1Co 15.54",
+"ot": "Is 25.8",
+"type": "citacao",
+"note": "Tragada foi a morte na vitória."
+},
+{
+"nt": "1Co 15.55",
+"ot": "Os 13.14",
+"type": "citacao",
+"note": "Onde está, ó morte, o teu aguilhão?"
+},
+{
+"nt": "2Co 6.2",
+"ot": "Is 49.8",
+"type": "citacao",
+"note": "Eis agora o tempo aceitável."
+},
+{
+"nt": "2Co 6.16",
+"ot": "Lv 26.12",
+"type": "citacao",
+"note": "Habitarei no meio deles."
+},
+{
+"nt": "Gl 3.6",
+"ot": "Gn 15.6",
+"type": "citacao",
+"note": "Abraão creu em Deus."
+},
+{
+"nt": "Gl 3.8",
+"ot": "Gn 12.3",
+"type": "citacao",
+"note": "O evangelho anunciado de antemão a Abraão."
+},
+{
+"nt": "Gl 3.11",
+"ot": "Hc 2.4",
+"type": "citacao",
+"note": "O justo viverá da fé."
+},
+{
+"nt": "Gl 3.13",
+"ot": "Dt 21.23",
+"type": "citacao",
+"note": "Maldito o que for pendurado no madeiro."
+},
+{
+"nt": "Gl 4.27",
+"ot": "Is 54.1",
+"type": "citacao",
+"note": "Alegra-te, estéril."
+},
+{
+"nt": "Ef 4.8",
+"ot": "Sl 68.18",
+"type": "citacao",
+"note": "Subindo ao alto, levou cativo o cativeiro e deu dons aos homens."
+},
+{
+"nt": "Ef 5.31",
+"ot": "Gn 2.24",
+"type": "citacao",
+"note": "Os dois serão uma só carne: Cristo e a igreja."
+},
+{
+"nt": "Ef 6.2-3",
+"ot": "Êx 20.12",
+"type": "citacao",
+"note": "Honra a teu pai e a tua mãe — o primeiro mandamento com promessa."
+},
+{
+"nt": "Fp 2.10-11",
+"ot": "Is 45.23",
+"type": "alusao",
+"note": "Todo joelho se dobrará: o que Isaías diz de Deus, Paulo diz de Jesus."
+},
+{
+"nt": "Hb 1.5",
+"ot": "Sl 2.7; 2Sm 7.14",
+"type": "citacao",
+"note": "Tu és meu Filho; eu lhe serei por Pai."
+},
+{
+"nt": "Hb 1.8-9",
+"ot": "Sl 45.6-7",
+"type": "citacao",
+"note": "O teu trono, ó Deus, é para todo o sempre."
+},
+{
+"nt": "Hb 1.13",
+"ot": "Sl 110.1",
+"type": "citacao",
+"note": "Assenta-te à minha direita."
+},
+{
+"nt": "Hb 2.6-8",
+"ot": "Sl 8.4-6",
+"type": "citacao",
+"note": "Que é o homem? Cumprido em Jesus, coroado de glória."
+},
+{
+"nt": "Hb 3.7-11",
+"ot": "Sl 95.7-11",
+"type": "citacao",
+"note": "Hoje, se ouvirdes a sua voz, não endureçais o coração."
+},
+{
+"nt": "Hb 5.6",
+"ot": "Sl 110.4",
+"type": "citacao",
+"note": "Sacerdote para sempre, segundo a ordem de Melquisedeque."
+},
+{
+"nt": "Hb 7.1-3",
+"ot": "Gn 14.18-20",
+"type": "tema",
+"note": "Melquisedeque, rei de justiça e de paz, como figura de Cristo."
+},
+{
+"nt": "Hb 8.8-12",
+"ot": "Jr 31.31-34",
+"type": "citacao",
+"note": "A nova aliança, citada por inteiro."
+},
+{
+"nt": "Hb 10.5-7",
+"ot": "Sl 40.6-8",
+"type": "citacao",
+"note": "Corpo me preparaste: Cristo veio fazer a vontade de Deus."
+},
+{
+"nt": "Hb 10.37-38",
+"ot": "Hc 2.3-4",
+"type": "citacao",
+"note": "O que há de vir virá; o justo viverá da fé."
+},
+{
+"nt": "Hb 11.5",
+"ot": "Gn 5.24",
+"type": "alusao",
+"note": "Enoque foi trasladado para não ver a morte."
+},
+{
+"nt": "Hb 12.5-6",
+"ot": "Pv 3.11-12",
+"type": "citacao",
+"note": "O Senhor corrige a quem ama."
+},
+{
+"nt": "Hb 13.5",
+"ot": "Dt 31.6",
+"type": "citacao",
+"note": "Não te deixarei, nem te desampararei."
+},
+{
+"nt": "Tg 2.8",
+"ot": "Lv 19.18",
+"type": "citacao",
+"note": "A lei real: amarás o teu próximo."
+},
+{
+"nt": "Tg 2.23",
+"ot": "Gn 15.6",
+"type": "citacao",
+"note": "Abraão creu, e foi chamado amigo de Deus."
+},
+{
+"nt": "1Pe 1.16",
+"ot": "Lv 11.44",
+"type": "citacao",
+"note": "Sede santos, porque eu sou santo."
+},
+{
+"nt": "1Pe 1.24-25",
+"ot": "Is 40.6-8",
+"type": "citacao",
+"note": "Toda carne é como erva; a palavra do Senhor permanece."
+},
+{
+"nt": "1Pe 2.6",
+"ot": "Is 28.16",
+"type": "citacao",
+"note": "A pedra angular, eleita e preciosa, posta em Sião."
+},
+{
+"nt": "1Pe 2.7",
+"ot": "Sl 118.22",
+"type": "citacao",
+"note": "A pedra rejeitada."
+},
+{
+"nt": "1Pe 2.9",
+"ot": "Êx 19.6",
+"type": "alusao",
+"note": "Sacerdócio real, nação santa: o que se disse de Israel no Sinai."
+},
+{
+"nt": "1Pe 2.22",
+"ot": "Is 53.9",
+"type": "citacao",
+"note": "Não cometeu pecado, nem na sua boca se achou engano."
+},
+{
+"nt": "1Pe 2.24",
+"ot": "Is 53.5",
+"type": "alusao",
+"note": "Pelas suas feridas fostes sarados."
+},
+{
+"nt": "1Pe 3.10-12",
+"ot": "Sl 34.12-16",
+"type": "citacao",
+"note": "Quem quer amar a vida refreie a língua do mal."
+},
+{
+"nt": "1Pe 5.5",
+"ot": "Pv 3.34",
+"type": "citacao",
+"note": "Deus resiste aos soberbos, mas dá graça aos humildes."
+},
+{
+"nt": "Ap 1.7",
+"ot": "Dn 7.13; Zc 12.10",
+"type": "alusao",
+"note": "Vem com as nuvens, e o verão os que o traspassaram."
+},
+{
+"nt": "Ap 1.13-15",
+"ot": "Dn 7.9-13; Dn 10.5-6",
+"type": "alusao",
+"note": "O Filho do homem com vestes, cabelos brancos e olhos como chama de fogo."
+},
+{
+"nt": "Ap 4.8",
+"ot": "Is 6.3",
+"type": "alusao",
+"note": "Santo, santo, santo — o mesmo canto dos serafins."
+},
+{
+"nt": "Ap 5.5",
+"ot": "Gn 49.9-10",
+"type": "alusao",
+"note": "O Leão da tribo de Judá."
+},
+{
+"nt": "Ap 13.1-2",
+"ot": "Dn 7.3-7",
+"type": "alusao",
+"note": "A besta do mar reúne os animais de Daniel."
+},
+{
+"nt": "Ap 19.15",
+"ot": "Sl 2.9",
+"type": "alusao",
+"note": "Ele as regerá com vara de ferro."
+},
+{
+"nt": "Ap 21.1",
+"ot": "Is 65.17",
+"type": "alusao",
+"note": "Novo céu e nova terra."
+},
+{
+"nt": "Ap 21.4",
+"ot": "Is 25.8",
+"type": "alusao",
+"note": "Deus limpará de seus olhos toda lágrima."
+},
+{
+"nt": "Ap 22.2",
+"ot": "Ez 47.12; Gn 2.9",
+"type": "alusao",
+"note": "A árvore da vida e o rio: o Éden restaurado."
+}
+]

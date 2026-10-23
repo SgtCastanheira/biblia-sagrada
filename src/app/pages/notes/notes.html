@@ -1,0 +1,64 @@
+<header class="page-head">
+  <span class="overline">Meu caderno</span>
+  <h1>Anotações</h1>
+</header>
+<app-notebook-tabs />
+
+<a class="sermon-cta" matRipple routerLink="/sermoes">
+  <mat-icon>co_present</mat-icon>
+  <span><strong>Crie o seu próprio sermão</strong><small>Modelos expositivo, temático e textual · modo púlpito</small></span>
+  <mat-icon class="go">arrow_forward</mat-icon>
+</a>
+
+<button class="new" matRipple (click)="create()">
+  <span class="plus"><mat-icon>add</mat-icon></span>
+  <span class="new-text">
+    <strong>Nova anotação</strong>
+    <small>{{ type() ?? service.suggestedType() }} · hoje</small>
+  </span>
+</button>
+
+@if (service.notes().length) {
+  <div class="search">
+    <mat-icon>search</mat-icon>
+    <input placeholder="Buscar nas anotações" [value]="query()" (input)="query.set($any($event.target).value)" aria-label="Buscar nas anotações" />
+  </div>
+
+  <div class="filters">
+    <button [class.active]="!type()" (click)="type.set(null)">Todas <span>{{ service.notes().length }}</span></button>
+    @for (t of service.usedTypes(); track t.type) {
+      <button [class.active]="type() === t.type" (click)="type.set(t.type)">
+        <i [style.background]="color(t.type)"></i>{{ t.type }} <span>{{ t.count }}</span>
+      </button>
+    }
+  </div>
+}
+
+<div class="list">
+  @for (n of filtered(); track n.id) {
+    <a class="note" matRipple [routerLink]="['/anotacoes', n.id]" [style.--c]="color(n.type)">
+      <span class="meta">
+        <span class="type">{{ n.type }}</span>
+        <span class="date">{{ formatLong(n.date) }}</span>
+      </span>
+      <span class="title" [class.empty]="!n.title">{{ n.title || 'Sem tema' }}</span>
+      @if (n.preacher || n.refs) {
+        <span class="sub">
+          @if (n.preacher) { <span><mat-icon>person</mat-icon>{{ n.preacher }}</span> }
+          @if (n.refs) { <span><mat-icon>menu_book</mat-icon>{{ n.refs }}</span> }
+        </span>
+      }
+      @if (n.body) { <span class="snippet">{{ n.body }}</span> }
+    </a>
+  } @empty {
+    @if (service.notes().length) {
+      <p class="empty-text">Nenhuma anotação encontrada.</p>
+    } @else {
+      <div class="empty">
+        <span class="icon"><mat-icon>edit_note</mat-icon></span>
+        <h2>Anote o que Deus falou</h2>
+        <p>Registre as pregações do Culto de Ensino, do Culto de Domingo e de outros momentos — com os textos bíblicos e o que você vai praticar.</p>
+      </div>
+    }
+  }
+</div>

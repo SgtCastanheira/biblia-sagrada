@@ -1,0 +1,52 @@
+@if (!isReader()) {
+  <header class="top-bar">
+    <a routerLink="/" class="brand">
+      <mat-icon class="logo">menu_book</mat-icon>
+      <span class="brand-name">Bíblia<span class="wide-only"> Sagrada</span></span>
+    </a>
+    <span class="spacer"></span>
+    <button class="version-chip" matRipple (click)="changeVersion()" aria-label="Trocar versão">
+      <span>{{ version()?.abbrev }}</span>
+      <mat-icon>expand_more</mat-icon>
+    </button>
+    <a mat-icon-button routerLink="/busca" matTooltip="Buscar" aria-label="Buscar na Bíblia">
+      <mat-icon>search</mat-icon>
+    </a>
+    <a mat-icon-button routerLink="/curiosidades" class="bell" matTooltip="Você sabia?" aria-label="Curiosidades">
+      <mat-icon>notifications</mat-icon>
+      @if (curiosities.unreadToday()) { <span class="badge" aria-label="Nova curiosidade"></span> }
+    </a>
+    <a mat-icon-button routerLink="/ajustes" matTooltip="Ajustes" aria-label="Ajustes">
+      <mat-icon>settings</mat-icon>
+    </a>
+  </header>
+}
+
+<nav class="nav" [class.hidden]="isReader() && ui.barsHidden()" aria-label="Navegação principal">
+  <a class="rail-logo" routerLink="/" aria-label="Início"><mat-icon>menu_book</mat-icon></a>
+
+  <a class="nav-item" [routerLink]="nav[0].link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <span class="indicator" matRipple><mat-icon>{{ nav[0].icon }}</mat-icon></span>
+    <span class="label">{{ nav[0].label }}</span>
+  </a>
+  <a class="nav-item" [routerLink]="readLink()" [class.active]="isReader()">
+    <span class="indicator" matRipple><mat-icon>import_contacts</mat-icon></span>
+    <span class="label">Ler</span>
+  </a>
+  @for (item of nav.slice(1); track item.link) {
+    <a class="nav-item" [routerLink]="item.link" routerLinkActive="active" [class.active]="(item.link === '/anotacoes' && isNotebook()) || (item.link === '/estudo' && isStudy())">
+      <span class="indicator" matRipple><mat-icon>{{ item.icon }}</mat-icon></span>
+      <span class="label">{{ item.label }}</span>
+    </a>
+  }
+</nav>
+
+@if (!pwa.online()) {
+  <div class="offline" role="status">
+    <mat-icon>cloud_off</mat-icon> Você está offline — os capítulos já abertos continuam disponíveis.
+  </div>
+}
+
+<main class="content" [class.reader]="isReader()">
+  <router-outlet />
+</main>

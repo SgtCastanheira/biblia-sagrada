@@ -1,0 +1,122 @@
+<header class="page-head">
+  <span class="overline">Escola Bíblica Dominical</span>
+  <h1>EBD</h1>
+  @if (ebd.quarter(); as q) {
+    <p class="subtitle">Lições Bíblicas {{ q.className }} · {{ q.quarter }}º Trimestre {{ q.year }}</p>
+    @if (q.theme) { <p class="theme">“{{ q.theme }}”</p> }
+  } @else {
+    <p class="subtitle">Organize suas aulas, leia os textos bíblicos de cada lição e guarde suas anotações.</p>
+  }
+  @if (ebd.quarter()) {
+    <button mat-icon-button class="menu-btn" [matMenuTriggerFor]="menu" aria-label="Opções do trimestre">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item (click)="ebd.teacherMode.set(!ebd.teacherMode())">
+        <mat-icon>{{ ebd.teacherMode() ? 'check_box' : 'check_box_outline_blank' }}</mat-icon>
+        <span>Modo professor</span>
+      </button>
+      <button mat-menu-item (click)="reset()">
+        <mat-icon>delete</mat-icon>
+        <span>Apagar trimestre</span>
+      </button>
+    </mat-menu>
+  }
+</header>
+
+@if (ebd.quarter(); as q) {
+  <!-- Próxima aula -->
+  @if (ebd.nextLesson(); as next) {
+    <a class="upcoming card" matRipple [routerLink]="['/ebd/licao', next.number]">
+      <span class="next-label"><mat-icon>event</mat-icon>{{ next.date === todayKey ? 'Aula de hoje' : 'Próxima aula' }} · {{ formatLong(next.date) }}</span>
+      <span class="next-title">Lição {{ next.number }}@if (next.title) {: {{ next.title }}}</span>
+      @if (!next.title) { <span class="hint">Toque para preencher o título e as referências da revista</span> }
+      <span class="next-action">Preparar aula <mat-icon>arrow_forward</mat-icon></span>
+    </a>
+  } @else {
+    <div class="upcoming card">
+      <span class="next-title">Trimestre concluído</span>
+      <span class="hint">Quando a nova revista chegar, crie o próximo trimestre pelo menu ⋮.</span>
+    </div>
+  }
+
+  <div class="progress-row">
+    <span>{{ ebd.doneCount() }} de {{ q.lessons.length }} aulas concluídas</span>
+    <span class="bar"><span [style.width.%]="(ebd.doneCount() / q.lessons.length) * 100"></span></span>
+  </div>
+
+  <!-- Lições -->
+  <div class="lessons">
+    @for (lesson of q.lessons; track lesson.number) {
+      @let status = ebd.status(lesson);
+      <a class="lesson" matRipple [routerLink]="['/ebd/licao', lesson.number]" [class]="'lesson ' + status">
+        <span class="date">
+          <strong>{{ dayOfMonth(lesson.date) }}</strong>
+          <small>{{ formatMonth(lesson.date) }}</small>
+        </span>
+        <span class="info">
+          <span class="number">Lição {{ lesson.number }}
+            @if (statusLabel[status]) { <span class="status">{{ statusLabel[status] }}</span> }
+          </span>
+          <span class="title" [class.empty]="!lesson.title">{{ lesson.title || 'Título não preenchido' }}</span>
+          @if (lesson.reading) { <span class="reading">{{ lesson.reading }}</span> }
+        </span>
+        @if (lesson.done) {
+          <mat-icon class="check">check_circle</mat-icon>
+        } @else {
+          <mat-icon class="chevron">chevron_right</mat-icon>
+        }
+      </a>
+    }
+  </div>
+} @else {
+  <!-- Configuração do trimestre -->
+  <section class="setup card">
+    <h2>Começar um trimestre</h2>
+    <p class="muted">Informe os dados da sua revista. O app cria as 13 aulas com as datas dos domingos.</p>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Classe</mat-label>
+      <mat-select [value]="className()" (valueChange)="className.set($event)">
+        @for (c of classes; track c) { <mat-option [value]="c">{{ c }}</mat-option> }
+      </mat-select>
+    </mat-form-field>
+
+    <div class="row">
+      <mat-form-field appearance="outline" class="year">
+        <mat-label>Ano</mat-label>
+        <input matInput type="number" [ngModel]="year()" (ngModelChange)="setQuarter(+$event, quarterNumber())" />
+      </mat-form-field>
+      <mat-button-toggle-group [value]="quarterNumber()" (change)="setQuarter(year(), $event.value)" aria-label="Trimestre">
+        @for (n of [1, 2, 3, 4]; track n) { <mat-button-toggle [value]="n">{{ n }}º</mat-button-toggle> }
+      </mat-button-toggle-group>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Tema do trimestre (opcional)</mat-label>
+      <input matInput [ngModel]="theme()" (ngModelChange)="theme.set($event)" placeholder="Como está na capa da revista" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Data da 1ª aula</mat-label>
+      <input matInput type="date" [ngModel]="startDate()" (ngModelChange)="startDate.set($event)" />
+      <mat-hint>Sugestão: primeiro domingo do trimestre</mat-hint>
+    </mat-form-field>
+
+    <button mat-flat-button class="create" (click)="create()" [disabled]="!startDate()">
+      Criar {{ quarterNumber() }}º trimestre de {{ year() }}
+    </button>
+  </section>
+}
+
+<!-- Revista oficial -->
+<aside class="magazine card">
+  <mat-icon>menu_book</mat-icon>
+  <div>
+    <strong>Use junto com a sua revista</strong>
+    <p>Este app não reproduz o conteúdo das Lições Bíblicas. Cadastre apenas o título e as referências — o texto da lição fica na revista.</p>
+    <a mat-stroked-button [href]="cpadUrl" target="_blank" rel="noopener">
+      Revista no site da CPAD <mat-icon iconPositionEnd>open_in_new</mat-icon>
+    </a>
+  </div>
+</aside>

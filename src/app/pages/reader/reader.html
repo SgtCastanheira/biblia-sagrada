@@ -1,0 +1,190 @@
+@if (bookInfo(); as book) {
+  <!-- Cabeçalho do leitor -->
+  <header class="reader-bar" [class.hidden]="ui.barsHidden()">
+    <button class="chapter-btn" matRipple (click)="openChapters()" aria-label="Escolher livro e capítulo">
+      <span>{{ book.name }} {{ chapterNum() }}</span>
+      <mat-icon>expand_more</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button class="chip" matRipple (click)="changeVersion()" aria-label="Trocar versão">{{ version()?.abbrev }}</button>
+    @if (compare(); as c) {
+      <span class="chip compare">
+        <button matRipple (click)="changeCompare()" aria-label="Trocar versão de comparação">
+          <mat-icon>compare_arrows</mat-icon>{{ c.abbrev }}
+        </button>
+        <button class="close" (click)="stopCompare()" aria-label="Parar de comparar"><mat-icon>close</mat-icon></button>
+      </span>
+    } @else {
+      <button mat-icon-button (click)="changeCompare()" matTooltip="Comparar versões" aria-label="Comparar versões">
+        <mat-icon>compare_arrows</mat-icon>
+      </button>
+    }
+    <a mat-icon-button routerLink="/busca" matTooltip="Buscar" aria-label="Buscar na Bíblia"><mat-icon>search</mat-icon></a>
+    <button mat-icon-button (click)="openSettings()" matTooltip="Aparência" aria-label="Aparência da leitura">
+      <mat-icon>format_size</mat-icon>
+    </button>
+  </header>
+
+  <article class="page" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+    <!-- Abertura do capítulo -->
+    <div class="chapter-head" [style.--c]="book.category.color">
+      <span class="category">{{ book.category.name }}</span>
+      <h1>{{ book.name }}</h1>
+      <span class="chapter-number">{{ chapterNum() }}</span>
+      <span class="ornament" aria-hidden="true"><span></span><i></i><span></span></span>
+    </div>
+
+
+    <!-- Um só painel com tudo o que há para estudar neste capítulo -->
+    @if (settings.studyNotes() && studyItems().length) {
+      <section class="study-card" [class.open]="studyOpen()">
+        <button class="study-head" matRipple (click)="studyOpen.set(!studyOpen())" [attr.aria-expanded]="studyOpen()">
+          <mat-icon>local_library</mat-icon>
+          <span>
+            <small>Estudar este capítulo</small>
+            {{ studySummary() }}
+          </span>
+          <mat-icon class="chevron">expand_more</mat-icon>
+        </button>
+        @if (studyOpen()) {
+          <div class="study-body">
+            @if (intro(); as i) {
+              <h3 class="study-section"><mat-icon>info</mat-icon> Contexto histórico de {{ book.name }}</h3>
+              <dl class="intro-facts">
+                <div><dt>Autor</dt><dd>{{ i.author }}</dd></div>
+                <div><dt>Data</dt><dd>{{ i.date }}</dd></div>
+              </dl>
+              <p class="intro-context">{{ i.context }}</p>
+            }
+            @if (notes().length) {
+              <h3 class="study-section"><mat-icon>sticky_note_2</mat-icon> Notas de estudo</h3>
+              @for (n of notes(); track n.v) {
+                <article class="study-note">
+                  <a class="verse-ref" [routerLink]="[]" [fragment]="'v' + n.v.split('-')[0]">v. {{ n.v }}</a>
+                  <h4>{{ n.title }}</h4>
+                  <p>{{ n.text }}</p>
+                </article>
+              }
+            }
+            @if (links().length) {
+              <h3 class="study-section"><mat-icon>link</mat-icon> Para aprofundar</h3>
+              @for (l of links(); track l.link) {
+                <a class="study-link" matRipple [routerLink]="l.link">
+                  <mat-icon>{{ l.icon }}</mat-icon>
+                  <span><small>{{ l.kind }}</small>{{ l.title }}</span>
+                  <mat-icon class="go">chevron_right</mat-icon>
+                </a>
+              }
+            }
+            <a class="study-more" [routerLink]="['/livro', book.id]" fragment="contexto">
+              Tudo para estudar {{ book.name }} <mat-icon>arrow_forward</mat-icon>
+            </a>
+          </div>
+        }
+      </section>
+    }
+
+    @if (state().loading) {
+      <div class="skeleton" aria-label="Carregando">
+        <p class="slow">Aguardando a fonte desta versão — leituras seguidas podem levar alguns segundos…</p>
+        @for (w of [100, 94, 98, 70, 100, 88, 96, 60, 100, 92, 85]; track $index) {
+          <span [style.width.%]="w"></span>
+        }
+      </div>
+    } @else if (state().error) {
+      <div class="error-state">
+        <span class="icon"><mat-icon>cloud_off</mat-icon></span>
+        <p>{{ state().error }}</p>
+        <div class="error-actions">
+          @if (!isLocal()) {
+            <button mat-stroked-button (click)="readAlmeida()">Ler na Almeida</button>
+          } @else {
+            <button mat-stroked-button (click)="changeVersion()">Trocar versão</button>
+          }
+          <button mat-flat-button (click)="reload()"><mat-icon>refresh</mat-icon> Tentar de novo</button>
+        </div>
+      </div>
+    } @else {
+      @if (state().compareError) {
+        <div class="notice">
+          <mat-icon>info</mat-icon>
+          <span>{{ state().compareError }}</span>
+        </div>
+      }
+
+      @if (comparing()) {
+        <!-- Modo comparação: um bloco por versículo -->
+        <div class="compare-head">
+          <span>{{ version()?.name }}</span>
+          <span>{{ compare()?.name }}</span>
+        </div>
+        <div class="compare reading-font" [style.font-size.px]="settings.fontSize()" [style.line-height]="settings.lineHeight()">
+          @for (row of state().rows; track row.verse) {
+            <div class="pair" [id]="'v' + row.verse" [class.target]="fragment() === 'v' + row.verse" (click)="openVerse(row)">
+              <p [style.background]="highlightOf(row.verse)"><sup>{{ row.verse }}</sup>{{ row.text ?? '—' }}</p>
+              <p class="other"><span class="tag">{{ compare()?.abbrev }}</span>{{ row.compareText ?? '—' }}</p>
+            </div>
+          }
+        </div>
+      } @else {
+        @if (settings.verseLayout() === 'lines') {
+          <!-- Um versículo por linha, com o número numa coluna à esquerda -->
+          <div class="lines reading-font" [style.font-size.px]="settings.fontSize()" [style.line-height]="settings.lineHeight()">
+            @for (row of state().rows; track row.verse) {
+              <p class="line" [id]="'v' + row.verse" [class.target]="fragment() === 'v' + row.verse"
+                 [style.background]="highlightOf(row.verse)" [class.marked]="highlightOf(row.verse)" (click)="openVerse(row)">
+                <span class="n">{{ row.verse }}</span><span class="t">@for (part of partsOf(row); track $index) {@if (part.entry) {<button type="button" class="word" (click)="openWord($event, part.entry, row.verse)">{{ part.text }}</button>} @else {{{ part.text }}}}</span>
+              </p>
+            }
+          </div>
+        } @else {
+          <!-- Texto corrido, como num livro -->
+          <p class="text reading-font" [style.font-size.px]="settings.fontSize()" [style.line-height]="settings.lineHeight()">
+            @for (row of state().rows; track row.verse) {
+              <span class="verse" [id]="'v' + row.verse" [class.target]="fragment() === 'v' + row.verse"
+                    [class.marked]="highlightOf(row.verse)" [style.background]="highlightOf(row.verse)"
+                    (click)="openVerse(row)"><sup>{{ row.verse }}</sup>@for (part of partsOf(row); track $index) {@if (part.entry) {<button type="button" class="word" (click)="openWord($event, part.entry, row.verse)">{{ part.text }}</button>} @else {{{ part.text }}}} </span>
+            }
+          </p>
+        }
+      }
+
+      <p class="source">{{ version()?.name }} · domínio público</p>
+    }
+
+    <!-- Navegação entre capítulos -->
+    <nav class="chapter-nav">
+      @if (previous(); as prev) {
+        <a class="nav-card" matRipple [routerLink]="['/ler', prev.bookId, prev.chapter]">
+          <mat-icon>arrow_back</mat-icon>
+          <span><small>Anterior</small>{{ prev.label }}</span>
+        </a>
+      } @else {
+        <span></span>
+      }
+      @if (next(); as nxt) {
+        <a class="nav-card next" matRipple [routerLink]="['/ler', nxt.bookId, nxt.chapter]">
+          <span><small>Próximo</small>{{ nxt.label }}</span>
+          <mat-icon>arrow_forward</mat-icon>
+        </a>
+      }
+    </nav>
+  </article>
+
+  <!-- Botões flutuantes -->
+  <div class="fabs" [class.hidden]="ui.barsHidden()">
+    @if (previous(); as prev) {
+      <a class="fab" matRipple [routerLink]="['/ler', prev.bookId, prev.chapter]" aria-label="Capítulo anterior">
+        <mat-icon>chevron_left</mat-icon>
+      </a>
+    }
+    <span class="spacer"></span>
+    @if (next(); as nxt) {
+      <a class="fab" matRipple [routerLink]="['/ler', nxt.bookId, nxt.chapter]" aria-label="Próximo capítulo">
+        <mat-icon>chevron_right</mat-icon>
+      </a>
+    }
+  </div>
+} @else {
+  <p>Livro não encontrado.</p>
+}

@@ -1,0 +1,71 @@
+@if (note(); as n) {
+  <div class="top">
+    <app-back fallback="/anotacoes" />
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="share()" aria-label="Compartilhar"><mat-icon>ios_share</mat-icon></button>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Mais opções"><mat-icon>more_vert</mat-icon></button>
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item (click)="remove()"><mat-icon>delete</mat-icon><span>Excluir anotação</span></button>
+    </mat-menu>
+  </div>
+
+  <!-- Indicação do culto -->
+  <div class="types" role="radiogroup" aria-label="Indicação">
+    @for (t of service.types(); track t) {
+      <button role="radio" [attr.aria-checked]="n.type === t" [class.active]="n.type === t" [style.--c]="color(t)"
+              (click)="update({ type: t })">
+        <i></i>{{ t }}
+        @if (service.customTypes().includes(t) && n.type === t) {
+          <mat-icon class="remove" (click)="$event.stopPropagation(); removeType(t)" aria-label="Remover indicação">close</mat-icon>
+        }
+      </button>
+    }
+    @if (addingType()) {
+      <input class="new-type" placeholder="Ex.: Culto de Jovens" (keydown.enter)="addType($event)" (blur)="addType($event)"
+             aria-label="Nova indicação" #newType />
+    } @else {
+      <button class="add" (click)="addingType.set(true)"><mat-icon>add</mat-icon> Nova</button>
+    }
+  </div>
+
+  <textarea class="title" cdkTextareaAutosize rows="1" placeholder="Tema da pregação" [value]="n.title"
+            (input)="update({ title: value($event) })" aria-label="Tema"></textarea>
+
+  <div class="row">
+    <label class="field date">
+      <mat-icon>event</mat-icon>
+      <input type="date" [value]="n.date" (change)="update({ date: value($event) || n.date })" aria-label="Data" />
+    </label>
+    <label class="field">
+      <mat-icon>person</mat-icon>
+      <input placeholder="Pregador(a)" [value]="n.preacher" (input)="update({ preacher: value($event) })" aria-label="Pregador" />
+    </label>
+  </div>
+
+  <section>
+    <h2>Textos bíblicos</h2>
+    <label class="field">
+      <mat-icon>menu_book</mat-icon>
+      <input placeholder="Ex.: Fp 4.4-7; Ne 8.10" [value]="n.refs" (input)="update({ refs: value($event) })" aria-label="Textos bíblicos" />
+    </label>
+    @if (n.refs) { <app-passage-view [refs]="n.refs" /> }
+  </section>
+
+  <section>
+    <h2>Anotações</h2>
+    <textarea class="body" cdkTextareaAutosize cdkAutosizeMinRows="8"
+              placeholder="Pontos principais, frases marcantes, perguntas…" [value]="n.body"
+              (input)="update({ body: value($event) })" aria-label="Anotações"></textarea>
+  </section>
+
+  <section>
+    <h2>O que vou praticar</h2>
+    <textarea class="body practice" cdkTextareaAutosize cdkAutosizeMinRows="3"
+              placeholder="Uma atitude concreta para esta semana" [value]="n.application"
+              (input)="update({ application: value($event) })" aria-label="O que vou praticar"></textarea>
+  </section>
+
+  <p class="saved"><mat-icon>cloud_done</mat-icon> Salvo automaticamente neste aparelho</p>
+} @else {
+  <p>Anotação não encontrada. <a routerLink="/anotacoes">Voltar às anotações</a></p>
+}

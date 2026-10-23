@@ -1,0 +1,174 @@
+<section class="greeting">
+  <p class="date">{{ today }}</p>
+  <h1>{{ greeting }}</h1>
+</section>
+
+<nav class="quick">
+  <a matRipple routerLink="/livros"><mat-icon>auto_stories</mat-icon> Livros</a>
+  <a matRipple routerLink="/busca"><mat-icon>search</mat-icon> Buscar</a>
+  <a matRipple routerLink="/mapas"><mat-icon>map</mat-icon> Mapas</a>
+  <a matRipple routerLink="/estudo"><mat-icon>local_library</mat-icon> Estudo</a>
+</nav>
+
+<!-- Versículo do dia -->
+<article class="verse-of-day">
+  <div class="vod-top">
+    <span class="overline">Versículo do dia</span>
+    <span class="version">{{ version()?.abbrev }}</span>
+  </div>
+
+  <span class="quote-mark" aria-hidden="true">“</span>
+
+  @if (highlightText().loading) {
+    <div class="skeleton">
+      <span></span><span></span><span class="short"></span>
+    </div>
+  } @else if (highlightText().text; as text) {
+    <blockquote class="reading-font">{{ text }}</blockquote>
+  } @else {
+    <p class="unavailable">Este versículo não está disponível na versão {{ version()?.name }}.</p>
+  }
+
+  <div class="vod-bottom">
+    <span class="reference">{{ highlightBook.name }} {{ highlight.chapter }}:{{ highlight.verse }}</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="shareHighlight()" aria-label="Opções do versículo" [disabled]="!highlightText().text">
+      <mat-icon>ios_share</mat-icon>
+    </button>
+    <a mat-button [routerLink]="['/ler', highlight.bookId, highlight.chapter]" [fragment]="'v' + highlight.verse">
+      Ler capítulo <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+    </a>
+  </div>
+</article>
+
+<!-- Devocional -->
+<a class="devotional card" matRipple routerLink="/devocional/hoje" [class.done]="devotional.todayEntry()?.done">
+  <span class="dev-icon"><mat-icon>{{ devotional.todayEntry()?.done ? 'check' : 'self_improvement' }}</mat-icon></span>
+  <span class="dev-text">
+    <span class="overline">Devocional</span>
+    <span class="dev-title">
+      @if (devotional.todayEntry()?.done) {
+        Concluído hoje
+      } @else if (devotional.todayEntry()?.passage) {
+        Continuar: {{ devotional.todayEntry()?.passage }}
+      } @else {
+        Seu momento com Deus hoje
+      }
+    </span>
+    @if (devotional.streak()) {
+      <span class="caption">{{ devotional.streak() }} {{ devotional.streak() === 1 ? 'dia seguido' : 'dias seguidos' }}</span>
+    }
+  </span>
+  <mat-icon class="go">arrow_forward</mat-icon>
+</a>
+
+<!-- Continuar lendo -->
+@if (lastRead(); as last) {
+  <a class="continue card" matRipple [routerLink]="['/ler', last.book.id, last.chapter]">
+    <span class="book-badge">{{ last.book.abbrev }}</span>
+    <span class="continue-text">
+      <span class="overline">Continuar lendo</span>
+      <span class="title">{{ last.book.name }} {{ last.chapter }}</span>
+      <span class="progress"><span [style.width.%]="last.progress"></span></span>
+      <span class="caption">{{ last.read }} de {{ last.book.chapters }} capítulos · {{ last.progress }}%</span>
+    </span>
+    <mat-icon class="go">arrow_forward</mat-icon>
+  </a>
+} @else {
+  <a class="continue card" matRipple [routerLink]="['/ler', 'GEN', 1]">
+    <span class="book-badge">Gn</span>
+    <span class="continue-text">
+      <span class="overline">Comece por aqui</span>
+      <span class="title">Gênesis 1</span>
+      <span class="caption">“No princípio criou Deus os céus e a terra.”</span>
+    </span>
+    <mat-icon class="go">arrow_forward</mat-icon>
+  </a>
+}
+
+<!-- EBD -->
+@if (ebd.nextLesson(); as lesson) {
+  <a class="ebd card" matRipple [routerLink]="['/ebd/licao', lesson.number]">
+    <span class="ebd-icon"><mat-icon>school</mat-icon></span>
+    <span class="ebd-text">
+      <span class="overline">EBD · {{ formatLong(lesson.date) }}</span>
+      <span class="ebd-title">Lição {{ lesson.number }}@if (lesson.title) {: {{ lesson.title }}}</span>
+      @if (lesson.reading) { <span class="caption">{{ lesson.reading }}</span> }
+    </span>
+    <mat-icon class="go">arrow_forward</mat-icon>
+  </a>
+} @else if (!ebd.quarter()) {
+  <a class="ebd card" matRipple routerLink="/ebd">
+    <span class="ebd-icon"><mat-icon>school</mat-icon></span>
+    <span class="ebd-text">
+      <span class="overline">Escola Bíblica Dominical</span>
+      <span class="ebd-title">Organize as aulas da sua revista</span>
+    </span>
+    <mat-icon class="go">arrow_forward</mat-icon>
+  </a>
+}
+
+<!-- Você sabia? -->
+<a class="did-you-know card" matRipple [routerLink]="['/curiosidades', curiosities.today().id]">
+  <span class="dyk-icon"><mat-icon>{{ curiosities.today().icon }}</mat-icon></span>
+  <span class="dyk-text">
+    <span class="overline">Você sabia?
+      @if (curiosities.unreadToday()) { <span class="new">Nova</span> }
+    </span>
+    <span class="dyk-question">{{ curiosities.today().question }}</span>
+  </span>
+  <mat-icon class="go">arrow_forward</mat-icon>
+</a>
+
+<!-- Estudo -->
+<section class="study">
+  <div class="section-header">
+    <h2>Para estudar</h2>
+    <a mat-button routerLink="/estudo">Ver tudo</a>
+  </div>
+  <div class="carousel">
+    @for (s of study; track s.name) {
+      <a class="study-card" matRipple [routerLink]="s.link" [queryParams]="s.queryParams">
+        <mat-icon>{{ s.icon }}</mat-icon>
+        <span class="study-name">{{ s.name }}</span>
+        <span class="study-desc">{{ s.description }}</span>
+      </a>
+    }
+  </div>
+</section>
+
+<!-- Estatísticas -->
+<section class="stats card">
+  <a class="stat" routerLink="/livros" matRipple>
+    <strong>{{ settings.totalRead() }}</strong>
+    <span>capítulos lidos</span>
+    <small>{{ overallProgress() }}% da Bíblia</small>
+  </a>
+  <a class="stat" routerLink="/favoritos" matRipple>
+    <strong>{{ favorites.favorites().length }}</strong>
+    <span>favoritos</span>
+    <small>versículos salvos</small>
+  </a>
+  <a class="stat" routerLink="/ajustes" matRipple>
+    <strong>{{ versionsCount }}</strong>
+    <span>versões</span>
+    <small>em 8 idiomas</small>
+  </a>
+</section>
+
+<!-- Leituras populares -->
+<section class="popular">
+  <div class="section-header">
+    <h2>Leituras populares</h2>
+    <a mat-button routerLink="/livros">Ver todos</a>
+  </div>
+  <div class="carousel">
+    @for (p of popular; track p.bookId + p.chapter) {
+      <a class="pop-card" matRipple [routerLink]="['/ler', p.bookId, p.chapter]" [style.--c]="p.book.category.color">
+        <mat-icon>{{ p.icon }}</mat-icon>
+        <span class="pop-title">{{ p.title }}</span>
+        <span class="pop-ref">{{ p.book.name }} {{ p.chapter }}</span>
+      </a>
+    }
+  </div>
+</section>
