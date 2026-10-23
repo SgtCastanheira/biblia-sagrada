@@ -20,7 +20,7 @@ export interface VersionSheetData {
         <h3>{{ group.language }}</h3>
         @for (v of group.versions; track v.id) {
           <button matRipple class="item" [class.selected]="v.id === data.current" (click)="ref.dismiss(v.id)">
-            <span class="badge">{{ v.abbrev }}</span>
+            <span class="badge">{{ v.badge ?? v.abbrev }}</span>
             <span class="text">
               <span class="name">{{ v.name }}</span>
               <span class="meta">{{ v.flag }} {{ v.language }}{{ v.ntOnly ? ' · só Novo Testamento' : '' }}</span>

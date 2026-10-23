@@ -26,6 +26,8 @@ export interface BibleVersion {
   language: string;
   flag: string;
   ntOnly?: boolean;
+  /** Sigla curta para o círculo da lista de versões, quando a sigla não cabe ("ALM" para "ALM1911"). */
+  badge?: string;
 }
 
 export interface Verse {
