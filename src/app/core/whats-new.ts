@@ -22,6 +22,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'ebd-apoio-ao-professor',
+    date: '23 de outubro de 2026',
+    title: 'Apoio ao professor da EBD',
+    items: [
+      { icon: 'volunteer_activism', title: 'EBD: Adolescentes, Jovens e Adultos', text: 'Para cada tema da revista: como abrir a aula, curiosidades, contexto histórico, dinâmicas para a idade da turma, perguntas e aplicação.', link: '/ebd/apoio' },
+      { icon: 'school', title: 'Para preparar a aula', text: 'Cada lição da sua EBD mostra o que o app tem sobre os textos: contexto do livro, estudos, profecias, personagens e mapas.', link: '/ebd', tip: 'Abra uma lição e preencha o Texto Áureo e a Leitura Bíblica.' },
+      { icon: 'visibility', title: 'Aula-modelo: Neemias', text: 'Veja como cada tema vai aparecer, com uma dinâmica diferente para cada turma.', link: '/ebd/apoio/aula/modelo-neemias-reconstroi-os-muros' },
+    ],
+  },
+  {
     id: 'reinos-templo-fontes',
     date: '23 de outubro de 2026',
     title: 'Os dois reinos, o templo no mapa e as fontes',

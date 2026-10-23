@@ -61,6 +61,13 @@
     </div>
   </section>
 
+  <!-- Apoio ao professor: o que o app tem sobre os textos desta lição (nada da revista) -->
+  <section class="support">
+    <h2>Para preparar a aula</h2>
+    <p class="support-lead">Contexto, curiosidades e estudos do app sobre os textos desta lição.</p>
+    <app-lesson-support [refs]="[l.goldenText, l.reading]" [className]="ebd.quarter()?.className ?? ''" />
+  </section>
+
   <!-- Mapas -->
   @if (maps().length) {
     <section>

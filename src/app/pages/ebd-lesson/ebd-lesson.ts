@@ -12,11 +12,12 @@ import { BIBLE_MAPS, mapsFor } from '../../core/maps';
 import { parseReferences } from '../../core/reference-parser';
 import { BibleMapView } from '../../shared/bible-map';
 import { PassageView } from '../../shared/passage-view';
+import { LessonSupport } from '../../shared/lesson-support';
 import { Sheets } from '../../shared/sheets';
 
 @Component({
   selector: 'app-ebd-lesson',
-  imports: [BackButton, RouterLink, CdkTextareaAutosize, MatButtonModule, MatIconModule, MatRippleModule, PassageView, BibleMapView],
+  imports: [BackButton, RouterLink, CdkTextareaAutosize, MatButtonModule, MatIconModule, MatRippleModule, PassageView, BibleMapView, LessonSupport],
   templateUrl: './ebd-lesson.html',
   styleUrl: './ebd-lesson.scss',
 })

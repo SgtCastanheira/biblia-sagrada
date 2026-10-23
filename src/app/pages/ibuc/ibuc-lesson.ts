@@ -2,14 +2,14 @@ import { Component, computed, effect, inject, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { ACTIVITY_ICONS, findIbucClass, findIbucLesson, IbucActivity, IBUC_NAME } from '../../core/ibuc';
+import { ACTIVITY_ICONS, findProgram, IbucActivity } from '../../core/teaching';
 import { BackButton } from '../../shared/back-button';
 import { PassageView } from '../../shared/passage-view';
 import { RichText } from '../../shared/rich-text';
 import { Sheets } from '../../shared/sheets';
 import { SourcesBox } from '../../shared/sources-box';
 
-/** Uma aula do IBUC: abertura, curiosidades, contexto, brincadeiras, perguntas e aplicação. */
+/** Uma aula (IBUC ou EBD): abertura, curiosidades, contexto, dinâmicas, perguntas e aplicação. */
 @Component({
   selector: 'app-ibuc-lesson',
   imports: [RouterLink, MatIconModule, BackButton, PassageView, RichText, SourcesBox],
@@ -17,11 +17,11 @@ import { SourcesBox } from '../../shared/sources-box';
     @if (lesson(); as l) {
       <div class="article">
         <div class="top"><app-back [fallback]="backLink()" label="Voltar à turma" /></div>
-        <span class="overline">{{ ibuc }} · {{ classNames() }}</span>
+        <span class="overline">{{ p().name }} · {{ classNames() }}</span>
         <h1 class="title">{{ l.title }}</h1>
         <p class="lead">{{ l.theme }}</p>
         @if (l.example) {
-          <p class="example"><mat-icon>visibility</mat-icon> Modelo de aula: é assim que cada tema do IBUC vai aparecer.</p>
+          <p class="example"><mat-icon>visibility</mat-icon> Modelo de aula: é assim que cada tema vai aparecer.</p>
         }
 
         <div class="chips-row">
@@ -42,7 +42,7 @@ import { SourcesBox } from '../../shared/sources-box';
         <h2 class="section-title"><mat-icon>history_edu</mat-icon> Contexto histórico</h2>
         <app-rich-text [source]="l.context" />
 
-        <h2 class="section-title"><mat-icon>sports_esports</mat-icon> Brincadeiras e dinâmicas</h2>
+        <h2 class="section-title"><mat-icon>sports_esports</mat-icon> {{ p().activitiesTitle }}</h2>
         @for (a of l.activities; track a.name) {
           <article class="activity">
             <header>
@@ -68,9 +68,9 @@ import { SourcesBox } from '../../shared/sources-box';
         <app-passage-view [refs]="l.memoryVerse" />
       </div>
     } @else {
-      <p class="empty">Aula não encontrada. <a routerLink="/ibuc">Ver as turmas do IBUC</a></p>
+      <p class="empty">Aula não encontrada. <a [routerLink]="p().path">Ver as turmas</a></p>
     }
-    <app-sources topic="ibuc" />
+    <app-sources [topic]="p().sources" />
   `,
   styleUrl: '../../shared/study.scss',
   styles: `
@@ -108,20 +108,25 @@ export class IbucLessonPage {
   /** Turma de onde a pessoa veio (para voltar a ela). */
   readonly turma = input<string>();
   private readonly sheets = inject(Sheets);
-  protected readonly ibuc = IBUC_NAME;
+  readonly program = input<string>();
+  protected readonly p = computed(() => findProgram(this.program()));
   protected readonly icons = ACTIVITY_ICONS;
 
-  protected readonly lesson = computed(() => findIbucLesson(this.id()));
-  protected readonly classNames = computed(() => (this.lesson()?.classes ?? []).map((c) => findIbucClass(c)?.name).filter(Boolean).join(' e '));
-  protected readonly backLink = computed(() => `/ibuc/${this.turma() ?? this.lesson()?.classes[0] ?? ''}`);
+  protected readonly lesson = computed(() => this.p().lessons.find((l) => l.id === this.id()));
+  protected readonly classNames = computed(() => this.names(this.lesson()?.classes ?? []));
+  protected readonly backLink = computed(() => `${this.p().path}/${this.turma() ?? this.lesson()?.classes[0] ?? ''}`);
 
   constructor() {
     const title = inject(Title);
-    effect(() => title.setTitle(`${this.lesson()?.title ?? 'Aula'} · IBUC`));
+    effect(() => title.setTitle(`${this.lesson()?.title ?? 'Aula'} · ${this.p().name}`));
   }
 
   protected classesOf(a: IbucActivity): string {
-    return (a.classes ?? []).map((c) => findIbucClass(c)?.name).join(', ');
+    return this.names(a.classes ?? [], ', ');
+  }
+
+  private names(ids: string[], sep = ' e '): string {
+    return ids.map((id) => this.p().classes.find((c) => c.id === id)?.name).filter(Boolean).join(sep);
   }
 
   /** Passos da atividade como lista numerada (com as referências clicáveis). */

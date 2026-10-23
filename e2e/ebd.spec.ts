@@ -35,3 +35,23 @@ test('cria o trimestre e importa a lição colando o texto', async ({ page }) =>
   // A lição de Filipenses mostra o mapa da 2ª viagem
   await expect(page.getByText('Mapas desta lição')).toBeVisible();
 });
+
+test('apoio ao professor: turmas da EBD, aula-modelo e o material do app na lição', async ({ page }) => {
+  await page.goto('/ebd');
+  await page.getByRole('link', { name: /Apoio ao professor/ }).click();
+  await expect(page.getByRole('heading', { name: 'EBD — Apoio ao professor', level: 1 })).toBeVisible();
+  await page.getByRole('link', { name: /Jovens/ }).click();
+  await expect(page.getByText('Como ensinar nesta idade')).toBeVisible();
+  await page.getByRole('link', { name: /Neemias reconstrói os muros/ }).click();
+  await expect(page.getByText('Quatro meses de oração')).toBeVisible();
+  await expect(page.getByText('Debate: oração ou planejamento?')).toBeVisible();
+
+  // A lição cadastrada com a leitura em Neemias já mostra a aula de apoio e o contexto do livro
+  await page.goto('/ebd');
+  await page.locator('button.create').click();
+  await page.goto('/ebd/licao/1');
+  await page.locator('.ref-input').nth(1).fill('Ne 2.1-20');
+  const apoio = page.locator('app-lesson-support');
+  await expect(apoio.getByRole('link', { name: /Neemias reconstrói os muros/ })).toBeVisible();
+  await expect(apoio.getByRole('link', { name: /Quem escreveu Neemias/ })).toBeVisible();
+});

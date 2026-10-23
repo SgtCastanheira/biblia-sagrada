@@ -24,6 +24,13 @@
   }
 </header>
 
+<!-- Apoio ao professor por classe (a revista é só a inspiração) -->
+<a class="support-card card" matRipple routerLink="/ebd/apoio">
+  <mat-icon>volunteer_activism</mat-icon>
+  <span><small>Apoio ao professor</small>Adolescentes, Jovens e Adultos: curiosidades, contexto e dinâmicas</span>
+  <mat-icon class="go">chevron_right</mat-icon>
+</a>
+
 @if (ebd.quarter(); as q) {
   <!-- Próxima aula -->
   @if (ebd.nextLesson(); as next) {

@@ -148,7 +148,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'capitulos-e-versiculos': { ancient: ['Capítulos de Stephen Langton (c. 1227)', 'Novo Testamento grego de Robert Estienne, com versículos (1551)', 'Bíblia de Genebra (1560), a primeira inglesa com versículos em toda a Bíblia'], works: ['metzger-ehrman', 'geisler-nix'] },
 };
 
-export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc';
+export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd';
 
 /** Fontes de cada parte do app (o que não é um artigo). */
 export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; note?: string }> = {
@@ -161,6 +161,7 @@ export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; not
   profecias: { title: 'Promessas e profecias', note: 'As interpretações são apresentadas como as principais tradições cristãs as entendem.', works: ['fee-stuart', 'clouse', 'baldwin', 'ladd'] },
   dicionario: { title: 'Dicionário bíblico', works: ['strong', 'ditat', 'ditnt', 'ndb', 'kelley', 'mounce'] },
   curiosidades: { title: 'Curiosidades', works: ['walton-at', 'keener-nt', 'ndb'] },
+  ebd: { title: 'EBD — Apoio ao professor', note: 'A revista é só a inspiração dos temas: o contexto e as curiosidades vêm da Bíblia, de achados arqueológicos (como os papiros de Elefantina) e das obras abaixo.', works: ['walton-at', 'keener-nt', 'ndb', 'dillard-longman', 'carson-moo'] },
   ibuc: { title: 'IBUC', note: 'As aulas não reproduzem as revistas do IBUC: o contexto e as curiosidades vêm da Bíblia e das obras abaixo.', works: ['walton-at', 'keener-nt', 'ndb'] },
 };
 

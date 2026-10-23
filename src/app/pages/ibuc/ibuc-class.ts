@@ -3,18 +3,18 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { findIbucClass, IBUC_NAME, lessonsOfClass } from '../../core/ibuc';
+import { findProgram, lessonsOfClass } from '../../core/teaching';
 import { BackButton } from '../../shared/back-button';
 
-/** Uma turma do IBUC: como ensinar nessa idade e as aulas. */
+/** Uma turma (IBUC ou EBD): como ensinar nessa idade e as aulas. */
 @Component({
   selector: 'app-ibuc-class',
   imports: [RouterLink, MatIconModule, MatRippleModule, BackButton],
   template: `
     @if (group(); as c) {
-      <div class="top"><app-back fallback="/ibuc" label="Voltar ao IBUC" /></div>
+      <div class="top"><app-back [fallback]="p().path" [label]="'Voltar a ' + p().name" /></div>
       <header class="page-head">
-        <span class="overline">{{ ibuc }} · {{ c.ages }}</span>
+        <span class="overline">{{ p().name }} · {{ c.ages }}</span>
         <h1>{{ c.name }}</h1>
       </header>
 
@@ -29,7 +29,7 @@ import { BackButton } from '../../shared/back-button';
       @if (real().length) {
         <div class="list">
           @for (l of real(); track l.id) {
-            <a class="card row" matRipple [routerLink]="['/ibuc/aula', l.id]" [queryParams]="{ turma: c.id }">
+            <a class="card row" matRipple [routerLink]="[p().path, 'aula', l.id]" [queryParams]="{ turma: c.id }">
               <span class="badge"><mat-icon>school</mat-icon></span>
               <span class="texts"><span class="meta">{{ l.refs }}</span><span class="name">{{ l.title }}</span><span class="desc">{{ l.theme }}</span></span>
               <mat-icon class="go">chevron_right</mat-icon>
@@ -43,7 +43,7 @@ import { BackButton } from '../../shared/back-button';
       @if (examples().length) {
         <h2 class="section-title">Modelo de aula</h2>
         @for (l of examples(); track l.id) {
-          <a class="card row" matRipple [routerLink]="['/ibuc/aula', l.id]" [queryParams]="{ turma: c.id }">
+          <a class="card row" matRipple [routerLink]="[p().path, 'aula', l.id]" [queryParams]="{ turma: c.id }">
             <span class="badge example"><mat-icon>visibility</mat-icon></span>
             <span class="texts"><span class="meta">Exemplo · {{ l.refs }}</span><span class="name">{{ l.title }}</span><span class="desc">Veja como cada aula vai aparecer.</span></span>
             <mat-icon class="go">chevron_right</mat-icon>
@@ -51,7 +51,7 @@ import { BackButton } from '../../shared/back-button';
         }
       }
     } @else {
-      <p class="empty">Turma não encontrada. <a routerLink="/ibuc">Ver as turmas</a></p>
+      <p class="empty">Turma não encontrada. <a [routerLink]="p().path">Ver as turmas</a></p>
     }
   `,
   styleUrl: '../../shared/study.scss',
@@ -67,13 +67,14 @@ import { BackButton } from '../../shared/back-button';
 })
 export class IbucClassPage {
   readonly turma = input.required<string>();
-  protected readonly ibuc = IBUC_NAME;
-  protected readonly group = computed(() => findIbucClass(this.turma()));
-  protected readonly real = computed(() => lessonsOfClass(this.turma()).filter((l) => !l.example));
-  protected readonly examples = computed(() => lessonsOfClass(this.turma()).filter((l) => l.example));
+  readonly program = input<string>();
+  protected readonly p = computed(() => findProgram(this.program()));
+  protected readonly group = computed(() => this.p().classes.find((c) => c.id === this.turma()));
+  protected readonly real = computed(() => lessonsOfClass(this.p(), this.turma()).filter((l) => !l.example));
+  protected readonly examples = computed(() => lessonsOfClass(this.p(), this.turma()).filter((l) => l.example));
 
   constructor() {
     const title = inject(Title);
-    effect(() => title.setTitle(`${this.group()?.name ?? 'Turma'} · IBUC`));
+    effect(() => title.setTitle(`${this.group()?.name ?? 'Turma'} · ${this.p().name}`));
   }
 }

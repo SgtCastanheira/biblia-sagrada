@@ -27,7 +27,6 @@ import { Sheets } from './shared/sheets';
   },
 })
 export class App {
-  // Primeiro de todos: precisa ver os dados antes de qualquer configuração ser gravada
   private readonly whatsNew = inject(WhatsNewService);
   protected readonly settings = inject(SettingsService);
   protected readonly ui = inject(UiService);

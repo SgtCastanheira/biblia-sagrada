@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, computed, effect, inject, input } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import { IBUC_CLASSES, IBUC_FULL_NAME, IBUC_NAME, IBUC_UNIT, lessonsOfClass } from '../../core/ibuc';
+import { findProgram, lessonsOfClass } from '../../core/teaching';
 
-/** Início do módulo IBUC: as turmas por idade e como o módulo ajuda o professor. */
+/** Início de um módulo de apoio ao professor (IBUC ou EBD): as turmas e como o módulo ajuda. */
 @Component({
   selector: 'app-ibuc',
   imports: [RouterLink, MatIconModule, MatRippleModule],
   template: `
     <header class="page-head">
-      <span class="overline">Apoio ao professor · {{ unit }}</span>
-      <h1>{{ name }}</h1>
-      <p>{{ fullName }} — {{ unit }}. Curiosidades, contexto histórico e brincadeiras para cada tema, por idade, para ajudar o professor a preparar a aula mesmo com pouco tempo.</p>
+      <span class="overline">{{ p().overline }}</span>
+      <h1>{{ p().name }}</h1>
+      <p>{{ p().subtitle }}. {{ p().intro }}</p>
     </header>
 
     <aside class="about card">
@@ -23,17 +24,17 @@ import { IBUC_CLASSES, IBUC_FULL_NAME, IBUC_NAME, IBUC_UNIT, lessonsOfClass } fr
           <li><b>Para abrir a aula:</b> uma pergunta ou um objeto que prende a atenção nos primeiros minutos.</li>
           <li><b>Você sabia?</b> Curiosidades do tema, com os versículos.</li>
           <li><b>Contexto histórico</b> para o professor explicar com segurança.</li>
-          <li><b>Brincadeiras e dinâmicas</b> com material, tempo e passo a passo.</li>
+          <li><b>{{ p().activitiesTitle }}</b> com material, tempo e passo a passo.</li>
           <li><b>Perguntas</b> para revisar e uma <b>aplicação</b> para a semana.</li>
         </ul>
-        <p class="note">O app não reproduz a revista nem os PDFs do IBUC: use-os normalmente na sala. Aqui fica o apoio para aprofundar o tema.</p>
+        <p class="note">{{ p().disclaimer }}</p>
       </div>
     </aside>
 
-    <h2 class="section-title">Turmas por idade</h2>
+    <h2 class="section-title">Turmas</h2>
     <div class="grid">
-      @for (c of classes; track c.id) {
-        <a class="card row" matRipple [routerLink]="['/ibuc', c.id]">
+      @for (c of p().classes; track c.id) {
+        <a class="card row" matRipple [routerLink]="[p().path, c.id]">
           <span class="badge"><mat-icon>{{ c.icon }}</mat-icon></span>
           <span class="texts">
             <span class="meta">{{ c.ages }}</span>
@@ -56,13 +57,17 @@ import { IBUC_CLASSES, IBUC_FULL_NAME, IBUC_NAME, IBUC_UNIT, lessonsOfClass } fr
   `,
 })
 export class IbucPage {
-  protected readonly name = IBUC_NAME;
-  protected readonly fullName = IBUC_FULL_NAME;
-  protected readonly unit = IBUC_UNIT;
-  protected readonly classes = IBUC_CLASSES;
+  /** Vem dos dados da rota ("ibuc" ou "ebd"). */
+  readonly program = input<string>();
+  protected readonly p = computed(() => findProgram(this.program()));
+
+  constructor() {
+    const title = inject(Title);
+    effect(() => title.setTitle(`${this.p().name} · Bíblia Sagrada`));
+  }
 
   protected count(classId: string): string {
-    const n = lessonsOfClass(classId).filter((l) => !l.example).length;
+    const n = lessonsOfClass(this.p(), classId).filter((l) => !l.example).length;
     return n ? `${n} ${n === 1 ? 'aula' : 'aulas'}` : 'Aulas em preparação';
   }
 }

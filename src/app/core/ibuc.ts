@@ -1,50 +1,11 @@
+import type { IbucClass, IbucLesson } from './teaching';
+
 /**
  * IBUC — Instituto Bíblico Único Caminho (Sede): apoio ao professor, por faixa etária.
  * O app não reproduz as revistas nem os PDFs (direitos autorais): traz curiosidades, contexto histórico,
  * brincadeiras e perguntas sobre os temas, para ajudar quem tem pouco tempo para preparar a aula.
  * Os textos usam [[referências]] (abrem o versículo) e **negrito**.
  */
-
-export interface IbucClass {
-  id: string;
-  name: string;
-  ages: string;
-  icon: string;
-  /** Como ensinar nesta idade (dicas para o professor). */
-  tips: string[];
-}
-
-export type ActivityKind = 'brincadeira' | 'dinâmica' | 'trabalho manual' | 'dramatização' | 'música';
-
-export interface IbucActivity {
-  name: string;
-  kind: ActivityKind;
-  time: string;
-  material: string;
-  steps: string[];
-  /** Turmas em que funciona melhor (ids); vazio = todas. */
-  classes?: string[];
-}
-
-export interface IbucLesson {
-  id: string;
-  /** Turmas em que a aula aparece. */
-  classes: string[];
-  title: string;
-  theme: string;
-  refs: string;
-  memoryVerse: string;
-  /** Aula-modelo, para mostrar como as aulas aparecem. */
-  example?: boolean;
-  /** Como abrir a aula e prender a atenção nos primeiros minutos. */
-  opening: string;
-  curiosities: { title: string; text: string }[];
-  /** Contexto histórico e cultural (texto com [[referências]]). */
-  context: string;
-  activities: IbucActivity[];
-  questions: { q: string; ref?: string }[];
-  application: string;
-}
 
 export const IBUC_NAME = 'IBUC';
 export const IBUC_FULL_NAME = 'Instituto Bíblico Único Caminho';
@@ -138,13 +99,6 @@ export const IBUC_CLASSES: IbucClass[] = [
   },
 ];
 
-export const ACTIVITY_ICONS: Record<ActivityKind, string> = {
-  brincadeira: 'sports_esports',
-  dinâmica: 'emoji_people',
-  'trabalho manual': 'content_cut',
-  dramatização: 'theater_comedy',
-  música: 'music_note',
-};
 
 /** Aulas (o conteúdo de cada tema do IBUC será acrescentado aqui). */
 export const IBUC_LESSONS: IbucLesson[] = [
@@ -228,6 +182,3 @@ export const IBUC_LESSONS: IbucLesson[] = [
   },
 ];
 
-export const findIbucClass = (id: string) => IBUC_CLASSES.find((c) => c.id === id);
-export const findIbucLesson = (id: string) => IBUC_LESSONS.find((l) => l.id === id);
-export const lessonsOfClass = (classId: string) => IBUC_LESSONS.filter((l) => l.classes.includes(classId));
