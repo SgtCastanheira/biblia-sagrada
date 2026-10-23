@@ -1,6 +1,6 @@
 import { expect, expectNoHorizontalOverflow, goToTab, test } from './base';
 
-const rotas = ['/', '/livros', '/livro/JHN', '/ler/JHN/3', '/devocional', '/devocional/hoje', '/ebd', '/anotacoes',
+const rotas = ['/', '/ensino', '/meu-espaco', '/livros', '/livro/JHN', '/ler/JHN/3', '/devocional', '/devocional/hoje', '/ebd', '/anotacoes',
   '/favoritos', '/mapas', '/mapas/exodo', '/busca', '/curiosidades', '/curiosidades/voltas-em-jerico', '/ajustes',
   '/estudo', '/memorial', '/memorial?grupo=reis-juda', '/memorial?grupo=dois-reinos', '/memorial/davi', '/historia', '/historia?colecao=biblia', '/artigo/cativeiros-de-israel',
   '/avivamento', '/avivamento/spurgeon-olhai-para-mim', '/dicionario', '/dicionario/graca', '/livro/GEN', '/mapas/cativeiros-de-israel',
@@ -18,9 +18,17 @@ for (const rota of rotas) {
 
 test('barra de navegação leva às áreas principais', async ({ page }) => {
   await page.goto('/');
-  for (const [aba, url] of [['Estudo', /\/estudo/], ['Devocional', /\/devocional/], ['Anotações', /\/anotacoes/], ['Início', /\/$/]] as const) {
+  for (const [aba, url] of [['Bíblia', /\/ler\//], ['Estudo', /\/estudo/], ['Ensino', /\/ensino/], ['Meu espaço', /\/meu-espaco/], ['Início', /\/$/]] as const) {
     await goToTab(page, aba);
     await expect(page).toHaveURL(url);
+  }
+});
+
+test('cada tela acende a aba certa do menu', async ({ page }) => {
+  const nav = page.getByRole('navigation', { name: 'Navegação principal' });
+  for (const [url, aba] of [['/tribos', 'Estudo'], ['/ebd', 'Ensino'], ['/sermoes', 'Ensino'], ['/ibuc', 'Ensino'], ['/devocional', 'Meu espaço'], ['/favoritos', 'Meu espaço'], ['/livros', 'Bíblia']] as const) {
+    await page.goto(url);
+    await expect(nav.locator('.nav-item.active')).toHaveText(new RegExp(aba));
   }
 });
 

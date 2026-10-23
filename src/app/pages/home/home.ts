@@ -111,27 +111,7 @@ function pickVerse(): (typeof HIGHLIGHTS)[number] {
   return HIGHLIGHTS[i];
 }
 
-const POPULAR = [
-  { bookId: 'GEN', chapter: 1, title: 'A Criação', icon: 'public' },
-  { bookId: 'PSA', chapter: 23, title: 'O Bom Pastor', icon: 'grass' },
-  { bookId: 'MAT', chapter: 5, title: 'Sermão do Monte', icon: 'landscape' },
-  { bookId: 'JHN', chapter: 1, title: 'O Verbo se fez carne', icon: 'light_mode' },
-  { bookId: '1CO', chapter: 13, title: 'O amor', icon: 'favorite' },
-  { bookId: 'ROM', chapter: 8, title: 'Vida no Espírito', icon: 'air' },
-  { bookId: 'PSA', chapter: 91, title: 'Proteção divina', icon: 'shield' },
-  { bookId: 'REV', chapter: 21, title: 'Novo céu e nova terra', icon: 'wb_twilight' },
-];
 
-const STUDY = [
-  { link: '/atlas', icon: 'public', name: 'Atlas histórico', description: 'Reinos e impérios, época por época' },
-  { link: '/genealogia', icon: 'account_tree', name: 'Genealogia de Jesus', description: 'De Adão a Maria, com os reis' },
-  { link: '/profecias', icon: 'visibility', name: 'Profecias', description: 'Do anúncio ao cumprimento' },
-  { link: '/artigo/cativeiros-de-israel', icon: 'link_off', name: 'Os cativeiros de Israel', description: 'Para onde o povo foi levado — com mapa' },
-  { link: '/memorial', icon: 'military_tech', name: 'Memorial da Fé', description: 'Heróis da fé, profetas, reis e nazireus' },
-  { link: '/avivamento', icon: 'campaign', name: 'Sermões históricos', description: 'Wesley, Spurgeon, Moody, Seymour…' },
-  { link: '/historia', icon: 'history_edu', name: 'História da Igreja', description: 'Das perseguições às reformas' },
-  { link: '/dicionario', icon: 'translate', name: 'Dicionário bíblico', description: 'Hebraico, grego, aramaico e latim' },
-];
 
 const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
 
@@ -171,8 +151,6 @@ export class HomePage {
   protected readonly version = computed(() => findVersion(this.settings.version()));
   protected readonly versionsCount = VERSIONS.length;
   protected readonly totalChapters = TOTAL_CHAPTERS;
-  protected readonly study: { link: string; queryParams?: Record<string, string>; icon: string; name: string; description: string }[] = STUDY;
-  protected readonly popular = POPULAR.map((p) => ({ ...p, book: findBook(p.bookId)! }));
 
   protected readonly highlightText = toSignal(
     combineLatest([toObservable(this.settings.version), toObservable(this.highlightSignal)]).pipe(

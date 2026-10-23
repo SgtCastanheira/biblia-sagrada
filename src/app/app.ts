@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { CuriositiesService } from './core/curiosities.service';
 import { DevotionalService } from './core/devotional.service';
@@ -17,9 +17,11 @@ import { UiService } from './core/ui.service';
 import { findVersion } from './core/versions';
 import { Sheets } from './shared/sheets';
 
+type NavTab = 'inicio' | 'biblia' | 'estudo' | 'ensino' | 'eu';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatIconModule, MatButtonModule, MatRippleModule, MatTooltipModule],
+  imports: [RouterOutlet, RouterLink, MatIconModule, MatButtonModule, MatRippleModule, MatTooltipModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   host: {
@@ -44,22 +46,25 @@ export class App {
     { initialValue: this.router.url },
   );
   protected readonly isReader = computed(() => this.url().startsWith('/ler/'));
-  protected readonly isNotebook = computed(() => /^\/(anotacoes|sermoes|favoritos)/.test(this.url()));
-  /** Todas as telas de estudo acendem a aba Estudo. */
-  protected readonly isStudy = computed(() =>
-    /^\/(estudo|fontes|ebd|ibuc|memorial|genealogia|tribos|atlas|mapas|profecias|artigo|historia|avivamento|dicionario|curiosidades|livros|livro\/)/.test(this.url()),
-  );
+  /** Aba do menu de cada tela: cada coisa mora em um só lugar. */
+  protected readonly tab = computed<NavTab | null>(() => {
+    const url = this.url();
+    if (/^\/(ler\/|busca|livros)/.test(url)) return 'biblia';
+    if (/^\/(ensino|ebd|ibuc|sermoes)/.test(url)) return 'ensino';
+    if (/^\/(meu-espaco|devocional|anotacoes|favoritos|ajustes|novidades|creditos)/.test(url)) return 'eu';
+    if (/^\/(estudo|fontes|memorial|genealogia|tribos|atlas|mapas|profecias|artigo|historia|avivamento|dicionario|curiosidades|livro\/)/.test(url)) return 'estudo';
+    return /^\/($|\?|#)/.test(url) ? 'inicio' : null;
+  });
   protected readonly version = computed(() => findVersion(this.settings.version()));
   protected readonly readLink = computed(() => {
     const last = this.settings.lastRead();
     return ['/ler', last?.bookId ?? 'GEN', last?.chapter ?? 1];
   });
 
-  protected readonly nav = [
-    { label: 'Início', icon: 'home', link: '/', exact: true },
-    { label: 'Estudo', icon: 'local_library', link: '/estudo', exact: false },
-    { label: 'Devocional', icon: 'self_improvement', link: '/devocional', exact: false },
-    { label: 'Anotações', icon: 'edit_note', link: '/anotacoes', exact: false },
+  protected readonly nav: { tab: NavTab; label: string; icon: string; link: string }[] = [
+    { tab: 'estudo', label: 'Estudo', icon: 'local_library', link: '/estudo' },
+    { tab: 'ensino', label: 'Ensino', icon: 'school', link: '/ensino' },
+    { tab: 'eu', label: 'Meu espaço', icon: 'person', link: '/meu-espaco' },
   ];
 
   constructor() {

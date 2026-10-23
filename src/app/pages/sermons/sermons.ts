@@ -4,17 +4,17 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
 import { SERMON_KINDS, SermonKind, SermonsService } from '../../core/sermons.service';
-import { NotebookTabs } from '../../shared/notebook-tabs';
+import { BackButton } from '../../shared/back-button';
 
 @Component({
   selector: 'app-sermons',
-  imports: [RouterLink, DatePipe, MatIconModule, MatRippleModule, NotebookTabs],
+  imports: [RouterLink, DatePipe, MatIconModule, MatRippleModule, BackButton],
   template: `
+    <div class="top"><app-back fallback="/ensino" label="Voltar ao Ensino" /></div>
     <header class="page-head">
-      <span class="overline">Meu caderno</span>
-      <h1>Sermões</h1>
+      <span class="overline">Ensino · Pregação</span>
+      <h1>Meus sermões</h1>
     </header>
-    <app-notebook-tabs />
 
     <section class="create">
       <h2>Crie o seu próprio sermão</h2>

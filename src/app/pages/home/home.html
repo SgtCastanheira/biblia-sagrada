@@ -3,13 +3,6 @@
   <h1>{{ greeting }}</h1>
 </section>
 
-<nav class="quick">
-  <a matRipple routerLink="/livros"><mat-icon>auto_stories</mat-icon> Livros</a>
-  <a matRipple routerLink="/busca"><mat-icon>search</mat-icon> Buscar</a>
-  <a matRipple routerLink="/mapas"><mat-icon>map</mat-icon> Mapas</a>
-  <a matRipple routerLink="/estudo"><mat-icon>local_library</mat-icon> Estudo</a>
-</nav>
-
 <!-- Versículo do dia -->
 <article class="verse-of-day">
   <div class="vod-top">
@@ -111,67 +104,9 @@
   </a>
 }
 
-<!-- Você sabia? -->
-<a class="did-you-know card" matRipple [routerLink]="['/curiosidades', curiosities.today().id]">
-  <span class="dyk-icon"><mat-icon>{{ curiosities.today().icon }}</mat-icon></span>
-  <span class="dyk-text">
-    <span class="overline">Você sabia?
-      @if (curiosities.unreadToday()) { <span class="new">Nova</span> }
-    </span>
-    <span class="dyk-question">{{ curiosities.today().question }}</span>
-  </span>
-  <mat-icon class="go">arrow_forward</mat-icon>
+<!-- Novidades do app -->
+<a class="whats-new" matRipple routerLink="/novidades">
+  <mat-icon>celebration</mat-icon>
+  <span>O que há de novo no app</span>
+  <mat-icon class="go">chevron_right</mat-icon>
 </a>
-
-<!-- Estudo -->
-<section class="study">
-  <div class="section-header">
-    <h2>Para estudar</h2>
-    <a mat-button routerLink="/estudo">Ver tudo</a>
-  </div>
-  <div class="carousel">
-    @for (s of study; track s.name) {
-      <a class="study-card" matRipple [routerLink]="s.link" [queryParams]="s.queryParams">
-        <mat-icon>{{ s.icon }}</mat-icon>
-        <span class="study-name">{{ s.name }}</span>
-        <span class="study-desc">{{ s.description }}</span>
-      </a>
-    }
-  </div>
-</section>
-
-<!-- Estatísticas -->
-<section class="stats card">
-  <a class="stat" routerLink="/livros" matRipple>
-    <strong>{{ settings.totalRead() }}</strong>
-    <span>capítulos lidos</span>
-    <small>{{ overallProgress() }}% da Bíblia</small>
-  </a>
-  <a class="stat" routerLink="/favoritos" matRipple>
-    <strong>{{ favorites.favorites().length }}</strong>
-    <span>favoritos</span>
-    <small>versículos salvos</small>
-  </a>
-  <a class="stat" routerLink="/ajustes" matRipple>
-    <strong>{{ versionsCount }}</strong>
-    <span>versões</span>
-    <small>em 8 idiomas</small>
-  </a>
-</section>
-
-<!-- Leituras populares -->
-<section class="popular">
-  <div class="section-header">
-    <h2>Leituras populares</h2>
-    <a mat-button routerLink="/livros">Ver todos</a>
-  </div>
-  <div class="carousel">
-    @for (p of popular; track p.bookId + p.chapter) {
-      <a class="pop-card" matRipple [routerLink]="['/ler', p.bookId, p.chapter]" [style.--c]="p.book.category.color">
-        <mat-icon>{{ p.icon }}</mat-icon>
-        <span class="pop-title">{{ p.title }}</span>
-        <span class="pop-ref">{{ p.book.name }} {{ p.chapter }}</span>
-      </a>
-    }
-  </div>
-</section>

@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   { path: '', title: 'Bíblia Sagrada', loadComponent: () => import('./pages/home/home').then((m) => m.HomePage) },
+  { path: 'ensino', title: 'Ensino · Bíblia Sagrada', loadComponent: () => import('./pages/teach/teach').then((m) => m.TeachPage) },
+  { path: 'meu-espaco', title: 'Meu espaço · Bíblia Sagrada', loadComponent: () => import('./pages/me/me').then((m) => m.MePage) },
   { path: 'estudo/livros', title: 'Estudo livro por livro · Bíblia Sagrada', loadComponent: () => import('./pages/study-books/study-books').then((m) => m.StudyBooksPage) },
   { path: 'estudo', title: 'Estudo · Bíblia Sagrada', loadComponent: () => import('./pages/study/study').then((m) => m.StudyPage) },
   { path: 'memorial', title: 'Memorial da Fé · Bíblia Sagrada', loadComponent: () => import('./pages/memorial/memorial').then((m) => m.MemorialPage) },

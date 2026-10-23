@@ -79,6 +79,15 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 
 **What's new** (`core/whats-new.ts`): when publishing user-visible features, add a new entry at the top of `RELEASES` with a new `id`. Every device sees it once (first visits included), in a bottom sheet (`WhatsNewService`, checked at startup before the daily reminders). It is also listed at `/novidades`, which has a share button.
 
+**Navigation:** the bottom menu has five tabs, and each screen belongs to exactly one of them (`tab` in `app.ts`):
+- Início (`/`)
+- Bíblia (reader, `/livros`, `/busca`)
+- Estudo (`/estudo` library in six sections, and every study page)
+- Ensino (`/ensino`: EBD, `/ebd/apoio`, IBUC, sermons)
+- Meu espaço (`/meu-espaco`: devotional, notes, favorites, settings)
+
+Add a new screen to the right tab regex and to the right hub; don't list the same item in two hubs.
+
 **Navigation and UI:**
 - Detail pages use `<app-back>` / `NavigationService.back(fallback)`, never hard-coded links back.
 - Destructive or exit flows use `replaceUrl` so the history stays clean.

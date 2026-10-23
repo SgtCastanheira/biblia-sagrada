@@ -22,6 +22,18 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'app-organizado',
+    date: '23 de outubro de 2026',
+    title: 'O app ficou mais organizado',
+    items: [
+      { icon: 'import_contacts', title: 'Bíblia', text: 'A aba “Ler” agora se chama Bíblia: abre o leitor onde você parou.', link: '/livros' },
+      { icon: 'local_library', title: 'Estudo em seis seções', text: 'Personagens, Mapas, Contexto, Profecias, Idiomas e História — cada estudo em um só lugar, com um índice no topo.', link: '/estudo' },
+      { icon: 'school', title: 'Nova aba Ensino', text: 'A EBD, o apoio ao professor, o IBUC e os seus sermões com o modo púlpito ficam juntos.', link: '/ensino' },
+      { icon: 'person', title: 'Nova aba Meu espaço', text: 'O devocional, as anotações de culto, os favoritos e a sua leitura — o que é seu, num lugar só.', link: '/meu-espaco' },
+      { icon: 'home', title: 'Início mais simples', text: 'Só o essencial do dia: o versículo, o devocional, a leitura e a aula da semana.', link: '/' },
+    ],
+  },
+  {
     id: 'ebd-apoio-ao-professor',
     date: '23 de outubro de 2026',
     title: 'Apoio ao professor da EBD',
