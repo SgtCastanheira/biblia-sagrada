@@ -32,7 +32,7 @@ interface Section {
       <p>Personagens, geografia, profecias, idiomas originais, contexto histórico e cultural — tudo ligado ao texto bíblico, para ir da leitura simples ao estudo aprofundado.</p>
     </header>
 
-    <!-- EBD e estudo livro por livro -->
+    <!-- EBD e IBUC -->
     <div class="top-cards">
       @if (ebd.nextLesson(); as lesson) {
         <a class="card top-card ebd" matRipple [routerLink]="['/ebd/licao', lesson.number]">
@@ -53,11 +53,6 @@ interface Section {
       <a class="card top-card" matRipple routerLink="/ibuc">
         <span class="badge"><mat-icon>child_care</mat-icon></span>
         <span class="texts"><span class="kicker">Apoio ao professor, por idade</span><span class="name">IBUC — Instituto Bíblico Único Caminho</span></span>
-        <mat-icon class="go">chevron_right</mat-icon>
-      </a>
-      <a class="card top-card" matRipple routerLink="/estudo/livros">
-        <span class="badge"><mat-icon>menu_book</mat-icon></span>
-        <span class="texts"><span class="kicker">De Gênesis a Apocalipse</span><span class="name">Estudo livro por livro</span></span>
         <mat-icon class="go">chevron_right</mat-icon>
       </a>
     </div>
@@ -113,7 +108,6 @@ interface Section {
   styles: `
     .top-cards { display: grid; gap: 10px; margin-bottom: 14px; }
     @media (min-width: 700px) { .top-cards { grid-template-columns: 1fr 1fr; } }
-    @media (min-width: 1100px) { .top-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     .top-card { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 14px 16px; }
     .top-card .badge {
       width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center;
