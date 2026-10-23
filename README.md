@@ -2,6 +2,8 @@
 
 Aplicativo da Bíblia em português, feito com **Angular** e **Angular Material**, para ler, estudar e preparar aulas — no celular ou no computador, com ou sem internet.
 
+**Abrir o app:** https://sgtcastanheira.github.io/biblia-sagrada/ — no celular, use “Adicionar à tela inicial” para instalar.
+
 ## O que o app tem
 
 - **Leitura**: a Almeida embutida (funciona offline) e outras versões em domínio público; comparação de versões; destaques e favoritos; busca por palavra.
