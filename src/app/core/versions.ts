@@ -4,7 +4,7 @@ import { BibleVersion } from './models';
 // As demais são traduções em domínio público disponíveis em https://bible-api.com
 export const VERSIONS: BibleVersion[] = [
   { id: 'almeida', abbrev: 'ALM', name: 'João Ferreira de Almeida', language: 'Português', flag: '🇧🇷' },
-  { id: 'blivre', abbrev: 'BLIVRE', name: 'Bíblia Livre (Almeida atualizada)', language: 'Português', flag: '🇧🇷' },
+  { id: 'blivre', abbrev: 'BLIVRE', badge: 'BL', name: 'Bíblia Livre (Almeida atualizada)', language: 'Português', flag: '🇧🇷' },
   { id: 'nbv', abbrev: 'NBV', name: 'Nova Bíblia Viva (Biblica® Open)', language: 'Português', flag: '🇧🇷' },
   { id: 'bpm', abbrev: 'BPM', name: 'Bíblia Portuguesa Mundial', language: 'Português', flag: '🇧🇷' },
   { id: 'blt', abbrev: 'BLT', name: 'Bíblia Livre Para Todos', language: 'Português', flag: '🇧🇷', ntOnly: true },
