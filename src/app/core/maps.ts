@@ -54,6 +54,8 @@ export interface BibleMap {
   distances?: boolean;
   /** Regiões sempre coloridas (ex.: os territórios das tribos), recortadas pelo litoral. */
   territories?: MapTerritory[];
+  /** Ponto de referência sempre visível (ex.: o templo); a região destacada mostra a distância até ele. */
+  landmark?: { name: string; lon: number; lat: number };
   /** Estudo ligado ao mapa (quando não é um artigo). */
   study?: { link: string; label: string };
 }
@@ -65,6 +67,8 @@ export interface MapTerritory {
   name: string;
   color: string;
   polygon: Lonlat[];
+  /** De onde se mede a distância até o ponto de referência. */
+  center?: Lonlat;
 }
 
 export const BIBLE_MAPS: BibleMap[] = [

@@ -253,3 +253,19 @@ test('IBUC: turma por idade e aula-modelo com curiosidades e brincadeiras', asyn
   await page.getByRole('button', { name: 'Voltar à turma' }).click();
   await expect(page).toHaveURL(/\/ibuc\/primarios/);
 });
+
+test('mapa das tribos: o templo aparece e a tribo escolhida mostra a distância até ele', async ({ page }) => {
+  await page.goto('/tribos');
+  await expect(page.locator('#mapa .landmark')).toHaveAttribute('aria-label', 'Templo · Jerusalém');
+  await expect(page.locator('#mapa .measure')).toHaveCount(0);
+  await page.getByRole('group', { name: 'Destacar o território de uma tribo' }).getByRole('button', { name: 'Naftali' }).click();
+  await expect(page.locator('#mapa .measure-label')).toHaveText(/≈ \d+ km/);
+
+  await page.goto('/tribos/manasses');
+  // As duas metades de Manassés, cada uma com a sua distância
+  await expect(page.locator('.measure-label')).toHaveCount(2);
+
+  await page.goto('/mapas/tribos-de-israel');
+  await page.locator('ol.steps li').first().click();
+  await expect(page.locator('.measure-label')).toHaveText(/≈ \d+ km/);
+});

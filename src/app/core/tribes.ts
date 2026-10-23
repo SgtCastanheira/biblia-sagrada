@@ -771,7 +771,6 @@ export const CAMP: { side: Exclude<CampSide, 'centro'>; leader: string; tribes: 
 
 const places: MapPlace[] = [
   ...TERRITORIES.map(({ territory: t }) => ({ id: t.id, name: t.name, lon: t.center[0], lat: t.center[1], label: 'r' as const })),
-  { id: 'jerusalem', name: 'Jerusalém (o templo)', lon: TEMPLE.lon, lat: TEMPLE.lat, label: 'l' },
   { id: 'silo', name: 'Siló', lon: SHILOH.lon, lat: SHILOH.lat, label: 'r' },
   { id: 'mar-grande', name: 'Mar Mediterrâneo', lon: 34.45, lat: 32.55, region: true },
   { id: 'mar-morto', name: 'Mar Morto', lon: 35.48, lat: 31.25, region: true },
@@ -807,7 +806,8 @@ export const TRIBES_MAP: BibleMap = {
   route: false,
   distances: false,
   zoom: 0.5,
-  territories: TERRITORIES.map(({ tribe, territory: t }) => ({ id: t.id, tribe: tribe.id, name: t.name, color: tribe.color, polygon: t.polygon })),
+  territories: TERRITORIES.map(({ tribe, territory: t }) => ({ id: t.id, tribe: tribe.id, name: t.name, color: tribe.color, polygon: t.polygon, center: t.center })),
+  landmark: { name: 'Templo · Jerusalém', lon: TEMPLE.lon, lat: TEMPLE.lat },
   study: { link: '/tribos', label: 'As doze tribos' },
   note: 'Fronteiras aproximadas, traçadas a partir de Josué 13–19; as cidades citadas nem sempre têm localização certa. O templo só foi construído por Salomão (1Rs 6); nos dias de Josué, o tabernáculo estava em Siló.',
   chapters: TRIBE_CHAPTERS.filter((c) => !c.startsWith('GEN 29') && !c.startsWith('GEN 30')),

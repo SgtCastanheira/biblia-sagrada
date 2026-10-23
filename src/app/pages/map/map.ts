@@ -30,6 +30,14 @@ export class MapPage {
   protected readonly settings = inject(SettingsService);
   protected readonly era = computed(() => eraOfMap(this.id()) ?? null);
   protected readonly layers = this.settings.mapLayers;
+  /** Mapas com territórios: a etapa escolhida destaca o território (e mostra a distância até o templo). */
+  protected readonly highlight = computed(() => {
+    const m = this.map();
+    const i = this.activeStep();
+    if (!m?.territories || i === null) return null;
+    const place = m.steps[i]?.place;
+    return m.territories.some((t) => t.id === place) ? place : null;
+  });
 
   /** Distância (em linha reta) desde a etapa anterior, e o total do percurso. */
   protected readonly distances = computed(() => {

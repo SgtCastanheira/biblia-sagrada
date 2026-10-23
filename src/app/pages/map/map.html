@@ -24,7 +24,7 @@
 
   <div class="map-frame">
     <app-bible-map #mapView [map]="m" [interactive]="true" [(activeStep)]="activeStep"
-                   [era]="layers().era ? era() : null" [nearby]="layers().nearby" [modern]="layers().modern" />
+                   [era]="layers().era ? era() : null" [nearby]="layers().nearby" [modern]="layers().modern" [highlight]="highlight()" />
     @if (mapView.zoomed()) {
       <button class="reset" (click)="mapView.reset()" aria-label="Ver o mapa inteiro"><mat-icon>zoom_out_map</mat-icon></button>
     }

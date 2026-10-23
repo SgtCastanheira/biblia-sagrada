@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { afterNextRender, Component, computed, DestroyRef, effect, ElementRef, inject, input, model, signal, untracked } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { catchError, of, switchMap, tap } from 'rxjs';
-import { Era, GAZETTEER, GazetteerKind, MODERN_COUNTRIES } from '../core/atlas';
+import { distanceKm, Era, formatKm, GAZETTEER, GazetteerKind, MODERN_COUNTRIES } from '../core/atlas';
 import { BibleMap, LabelSide, projector } from '../core/maps';
 
 interface Geography {
@@ -125,6 +125,12 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
               [attr.marker-end]="storyStep() === null ? 'url(#arrow-' + map().id + ')' : null" />
       }
 
+      <!-- Distância do território destacado até o ponto de referência (o templo) -->
+      @for (m of measures(); track m.key) {
+        <path class="measure" [attr.d]="m.d" [attr.stroke-width]="font() * 0.13" [attr.stroke-dasharray]="font() * 0.35 + ' ' + font() * 0.25" />
+        <text class="measure-label" [attr.x]="m.lx" [attr.y]="m.ly" [attr.font-size]="font() * 0.85">{{ m.label }}</text>
+      }
+
       @if (traveler(); as t) {
         <circle class="pulse" [attr.cx]="t.x" [attr.cy]="t.y" [attr.r]="font() * 1.1" />
       }
@@ -143,6 +149,15 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
             <text class="label" [attr.x]="p.lx" [attr.y]="p.ly" [attr.text-anchor]="p.anchor" [attr.font-size]="font()">
               {{ p.name }}{{ p.uncertain ? ' (?)' : '' }}
             </text>
+          }
+        </g>
+      }
+
+      @if (landmark(); as lm) {
+        <g class="landmark" role="img" [attr.aria-label]="lm.name">
+          <path [attr.d]="lm.icon" [attr.stroke-width]="font() * 0.1" />
+          @if (!compact()) {
+            <text [attr.x]="lm.x - font() * 0.95" [attr.y]="lm.y + font() * 0.35" text-anchor="end" [attr.font-size]="font() * 0.9">{{ lm.name }}</text>
           }
         </g>
       }
@@ -190,6 +205,17 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
       paint-order: stroke; stroke: var(--map-land); stroke-width: .28em; stroke-linejoin: round;
     }
     .place.active .label { fill: var(--mat-sys-primary); }
+    .measure { fill: none; stroke: var(--mat-sys-primary); stroke-linecap: round; pointer-events: none; }
+    .measure-label {
+      fill: var(--mat-sys-primary); font-family: Inter, sans-serif; font-weight: 700; text-anchor: middle; pointer-events: none;
+      paint-order: stroke; stroke: var(--map-land); stroke-width: .3em; stroke-linejoin: round;
+    }
+    .landmark { pointer-events: none; }
+    .landmark path { fill: var(--accent-gold); stroke: var(--map-land); stroke-linejoin: round; }
+    .landmark text {
+      fill: var(--map-ink); font-family: Inter, sans-serif; font-weight: 700;
+      paint-order: stroke; stroke: var(--map-land); stroke-width: .3em; stroke-linejoin: round;
+    }
     .traveler { fill: var(--accent-gold); stroke: var(--map-land); pointer-events: none; }
     .pulse {
       pointer-events: none;
@@ -408,6 +434,12 @@ export class BibleMapView {
     type Rect = [number, number, number, number];
     const overlaps = (a: Rect, b: Rect) => a[0] < b[2] && a[2] > b[0] && a[1] < b[3] && a[3] > b[1];
     const markers: Rect[] = places.map((m) => [m.x - m.mw / 2, m.y - m.r, m.x + m.mw / 2, m.y + m.r]);
+    // O ponto de referência (o templo) e o seu nome também ocupam espaço
+    const lm = this.map().landmark;
+    if (lm && !this.compact()) {
+      const lx = v.x(lm.lon), ly = v.y(lm.lat);
+      markers.push([lx - f * 0.8, ly - f * 0.8, lx + f * 0.8, ly + f * 0.8], [lx - f * 0.95 - lm.name.length * f * 0.58, ly - f * 0.6, lx - f * 0.8, ly + f * 0.45]);
+    }
     const labels: Rect[] = [];
 
     // Prioridade: etapa atual, lugares das etapas (na ordem), depois os demais
@@ -508,6 +540,43 @@ export class BibleMapView {
         return { key: `p-${p.name}`, name: p.name, color: p.color, d: path(pts), lx, ly, territory: false, focus: false, dim: false };
       }),
     ];
+  });
+
+  /** Ponto de referência (o templo), com um pequeno desenho de templo: frontão, colunas e base. */
+  protected readonly landmark = computed(() => {
+    const lm = this.map().landmark;
+    if (!lm) return null;
+    const v = this.view();
+    const f = this.font() * (this.compact() ? 1.4 : 1);
+    const x = v.x(lm.lon);
+    const y = v.y(lm.lat);
+    const w = f * 0.68;
+    const icon =
+      `M${x - w},${y - w * 0.35}L${x},${y - w * 1.1}L${x + w},${y - w * 0.35}Z` +
+      [-0.75, -0.25, 0.25, 0.75].map((c) => `M${x + w * c - w * 0.12},${y - w * 0.3}h${w * 0.24}v${w * 0.95}h-${w * 0.24}Z`).join('') +
+      `M${x - w * 1.1},${y + w * 0.7}h${w * 2.2}v${w * 0.3}h-${w * 2.2}Z`;
+    return { name: lm.name, x, y, icon };
+  });
+
+  /** Linhas do território destacado até o ponto de referência, com a distância em linha reta. */
+  protected readonly measures = computed(() => {
+    const lm = this.map().landmark;
+    const focus = this.highlight();
+    if (!lm || !focus || this.compact()) return [];
+    const v = this.view();
+    return (this.map().territories ?? [])
+      .filter((t) => t.center && (t.id === focus || t.tribe === focus))
+      .map((t) => {
+        const [lon, lat] = t.center!;
+        const x0 = v.x(lon), y0 = v.y(lat), x1 = v.x(lm.lon), y1 = v.y(lm.lat);
+        return {
+          key: t.id,
+          d: `M${x0.toFixed(1)},${y0.toFixed(1)}L${x1.toFixed(1)},${y1.toFixed(1)}`,
+          lx: (x0 + x1) / 2,
+          ly: (y0 + y1) / 2 - this.font() * 0.35,
+          label: formatKm(distanceKm({ lon, lat }, lm)),
+        };
+      });
   });
 
   /**
