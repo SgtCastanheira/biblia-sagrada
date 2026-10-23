@@ -9,6 +9,7 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } fro
 import { filter, map } from 'rxjs';
 import { CuriositiesService } from './core/curiosities.service';
 import { DevotionalService } from './core/devotional.service';
+import { WhatsNewService } from './core/whats-new.service';
 import { EbdService } from './core/ebd.service';
 import { PwaService } from './core/pwa.service';
 import { SettingsService } from './core/settings.service';
@@ -26,6 +27,8 @@ import { Sheets } from './shared/sheets';
   },
 })
 export class App {
+  // Primeiro de todos: precisa ver os dados antes de qualquer configuração ser gravada
+  private readonly whatsNew = inject(WhatsNewService);
   protected readonly settings = inject(SettingsService);
   protected readonly ui = inject(UiService);
   protected readonly curiosities = inject(CuriositiesService);
@@ -71,7 +74,11 @@ export class App {
       devotional.check();
       this.curiosities.check();
     };
-    setTimeout(check, 1500);
+    // Depois de uma atualização, as novidades aparecem sozinhas; os lembretes esperam a próxima verificação
+    const whatsNew = this.whatsNew;
+    setTimeout(() => {
+      if (!whatsNew.check()) check();
+    }, 1500);
     setInterval(check, 60 * 1000);
   }
 

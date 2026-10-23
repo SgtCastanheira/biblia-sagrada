@@ -39,6 +39,7 @@ export const routes: Routes = [
   { path: 'sermoes/:id', loadComponent: () => import('./pages/sermon/sermon').then((m) => m.SermonPage) },
   { path: 'sermoes/:id/pregar', title: 'Púlpito · Bíblia Sagrada', loadComponent: () => import('./pages/pulpit/pulpit').then((m) => m.PulpitPage) },
   { path: 'favoritos', title: 'Favoritos · Bíblia Sagrada', loadComponent: () => import('./pages/favorites/favorites').then((m) => m.FavoritesPage) },
+  { path: 'novidades', title: 'Novidades · Bíblia Sagrada', loadComponent: () => import('./pages/whats-new/whats-new').then((m) => m.WhatsNewPage) },
   { path: 'creditos', title: 'Créditos · Bíblia Sagrada', loadComponent: () => import('./pages/credits/credits').then((m) => m.CreditsPage) },
   { path: 'ajustes', title: 'Ajustes · Bíblia Sagrada', loadComponent: () => import('./pages/settings/settings').then((m) => m.SettingsPage) },
   { path: '**', redirectTo: '' },

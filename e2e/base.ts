@@ -1,3 +1,4 @@
+import { LATEST_RELEASE } from '../src/app/core/whats-new';
 import { expect, Page, test as base } from '@playwright/test';
 
 /** Problemas detectados automaticamente durante cada teste. */
@@ -60,14 +61,16 @@ export const test = base.extend<Fixtures>({
       }
 
       // Estado limpo + sem avisos automáticos (curiosidade/devocional/EBD) cobrindo a tela
-      await page.addInitScript(() => {
+      await page.addInitScript((latest) => {
         if (sessionStorage.getItem('e2e-init')) return;
         sessionStorage.setItem('e2e-init', '1');
         Object.keys(localStorage).filter((k) => k.startsWith('biblia.')).forEach((k) => localStorage.removeItem(k));
         const d = new Date();
         const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
         localStorage.setItem('biblia.notify.done', JSON.stringify([`curiosidade-${key}`, `devocional-${key}`]));
-      });
+        // As novidades da atualização também não aparecem sozinhas (veja novidades.spec.ts)
+        localStorage.setItem('biblia.novidades.visto', latest);
+      }, LATEST_RELEASE.id);
 
       await use({ errors, allow: (pattern) => allowed.push(pattern) });
 

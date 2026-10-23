@@ -77,6 +77,8 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 
 **IBUC module** (`core/ibuc.ts`, `pages/ibuc/`) supports teachers by age group (`IBUC_CLASSES`). Lessons (`IBUC_LESSONS`) hold curiosities, historical context, activities and questions; `example: true` marks the model lesson. Never reproduce the IBUC magazines or PDFs.
 
+**What's new** (`core/whats-new.ts`): when publishing user-visible features, add a new entry at the top of `RELEASES` with a new `id`. Returning users see it once, in a bottom sheet (`WhatsNewService`, checked at startup before the daily reminders). It is also listed at `/novidades`, which has a share button.
+
 **Navigation and UI:**
 - Detail pages use `<app-back>` / `NavigationService.back(fallback)`, never hard-coded links back.
 - Destructive or exit flows use `replaceUrl` so the history stays clean.

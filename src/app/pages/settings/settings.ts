@@ -124,7 +124,8 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
     <section class="about">
       <span class="logo"><mat-icon>menu_book</mat-icon></span>
       <strong>Bíblia Sagrada</strong>
-      <small>Almeida embutida no app (domínio público, com ortografia atualizada).<br />Demais versões em domínio público via bible-api.com.</small>
+      <small>Sete versões em português embutidas no app, todas de domínio público ou licença livre.<br />Versões em outros idiomas via bible-api.com.</small>
+      <a mat-stroked-button routerLink="/novidades" class="credits"><mat-icon>celebration</mat-icon> Novidades</a>
       <a mat-stroked-button routerLink="/creditos" class="credits"><mat-icon>verified</mat-icon> Créditos e licenças</a>
     </section>
   `,

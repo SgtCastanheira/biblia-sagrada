@@ -1,0 +1,35 @@
+import { expect, test } from './base';
+
+test('novidades aparecem uma vez para quem já usava o app, e não para quem chegou agora', async ({ page }) => {
+  await page.goto('/');
+  // Quem já usava: tem dados do app e viu a atualização anterior
+  await page.evaluate(() => localStorage.setItem('biblia.novidades.visto', 'versao-anterior'));
+  await page.reload();
+  const painel = page.locator('app-whats-new-sheet');
+  await expect(painel).toContainText('As doze tribos de Israel');
+  await painel.getByRole('button', { name: 'Entendi' }).click();
+  await expect(painel).toHaveCount(0);
+  await page.reload();
+  await page.waitForTimeout(2500);
+  await expect(painel).toHaveCount(0);
+
+  // Primeira visita (sem dados do app): nada aparece
+  await page.evaluate(() => Object.keys(localStorage).forEach((k) => localStorage.removeItem(k)));
+  await page.reload();
+  await page.waitForTimeout(2500);
+  await expect(painel).toHaveCount(0);
+});
+
+test('a página de novidades leva às telas novas e copia o texto para compartilhar', async ({ page, context, browserName }) => {
+  test.skip(browserName !== 'chromium');
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await page.goto('/ajustes');
+  await page.getByRole('link', { name: 'Novidades' }).click();
+  await page.evaluate(() => Object.defineProperty(navigator, 'share', { value: undefined }));
+  await page.getByRole('button', { name: 'Compartilhar' }).first().click();
+  const texto = await page.evaluate(() => navigator.clipboard.readText());
+  expect(texto).toContain('*Bíblia Sagrada* — novidades');
+  expect(texto).toContain('Abra e instale no celular: http');
+  await page.getByRole('link', { name: /IBUC/ }).click();
+  await expect(page).toHaveURL(/\/ibuc$/);
+});
