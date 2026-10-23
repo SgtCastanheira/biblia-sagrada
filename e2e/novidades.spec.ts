@@ -1,3 +1,4 @@
+import { LATEST_RELEASE } from '../src/app/core/whats-new';
 import { expect, test } from './base';
 
 test('novidades aparecem uma vez para quem já usava o app, e não para quem chegou agora', async ({ page }) => {
@@ -6,7 +7,7 @@ test('novidades aparecem uma vez para quem já usava o app, e não para quem che
   await page.evaluate(() => localStorage.setItem('biblia.novidades.visto', 'versao-anterior'));
   await page.reload();
   const painel = page.locator('app-whats-new-sheet');
-  await expect(painel).toContainText('As doze tribos de Israel');
+  await expect(painel).toContainText(LATEST_RELEASE.items[0].title);
   await painel.getByRole('button', { name: 'Entendi' }).click();
   await expect(painel).toHaveCount(0);
   await page.reload();
@@ -30,6 +31,6 @@ test('a página de novidades leva às telas novas e copia o texto para compartil
   const texto = await page.evaluate(() => navigator.clipboard.readText());
   expect(texto).toContain('*Bíblia Sagrada* — novidades');
   expect(texto).toContain('Abra e instale no celular: http');
-  await page.getByRole('link', { name: /IBUC/ }).click();
-  await expect(page).toHaveURL(/\/ibuc$/);
+  await page.getByRole('link', { name: /Fontes das informações/ }).click();
+  await expect(page).toHaveURL(/\/fontes$/);
 });

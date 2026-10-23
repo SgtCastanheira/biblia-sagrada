@@ -22,6 +22,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'reinos-templo-fontes',
+    date: '23 de outubro de 2026',
+    title: 'Os dois reinos, o templo no mapa e as fontes',
+    items: [
+      { icon: 'compare_arrows', title: 'Os dois reinos lado a lado', text: 'Os reis de Israel e de Judá numa só linha do tempo, com a avaliação de cada um e os fatos que ligam os dois reinos.', link: '/memorial', tip: 'No Memorial da Fé, toque na aba “Os dois reinos”.' },
+      { icon: 'account_balance', title: 'O templo no mapa das tribos', text: 'O templo aparece no mapa, e cada tribo mostra a distância do seu território até ele.', link: '/tribos', tip: 'Toque no nome de uma tribo, embaixo do mapa.' },
+      { icon: 'library_books', title: 'Fontes das informações', text: 'Cada estudo mostra de onde vêm as informações: a Bíblia, fontes antigas, arqueologia e obras de referência.', link: '/fontes' },
+    ],
+  },
+  {
     id: 'tribos-ibuc-versoes',
     date: '23 de outubro de 2026',
     title: 'Tribos de Israel, IBUC e novas versões',
