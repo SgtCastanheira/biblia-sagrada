@@ -46,6 +46,8 @@ O vigia também:
 | `logica/mapas-dados.spec.ts` | Cada etapa de cada mapa tem lugar existente e versículo válido; geografia gerada |
 | `logica/mapas-ordem.spec.ts` | Mapas na ordem dos livros da Bíblia |
 | `logica/conteudo-estudo.spec.ts` | Dicionário (sentidos e conjugações), contexto dos 66 livros, notas, memorial, genealogia, profecias, citações do AT no NT, atlas, artigos e sermões: **toda referência bíblica precisa ser válida**, todo personagem, mapa e estudo citado precisa existir |
+| `logica/tribos.spec.ts` | As 12 tribos: **toda referência existe na Almeida** (até o versículo), censos somam o que Números diz, grupos do acampamento, personagens do memorial, número de cada território dentro do polígono e distâncias |
+| `logica/ibuc.spec.ts` | IBUC: turmas e aulas ligadas a turmas existentes, referências válidas |
 | `navegacao.spec.ts` | Todas as telas (40 rotas) abrem sem erros e **sem rolagem lateral**; barra de navegação; rota inexistente |
 | `leitor.spec.ts` | Um versículo por linha; texto corrido; **sem 404 de arquivos locais**; destacar/favoritar; próximo capítulo; comparação; cartão de mapa |
 | `busca.spec.ts` | "Ir para" por referência; busca por palavra (quando a Almeida embutida existir) |

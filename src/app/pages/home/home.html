@@ -13,7 +13,7 @@
 <!-- Versículo do dia -->
 <article class="verse-of-day">
   <div class="vod-top">
-    <span class="overline">Versículo do dia</span>
+    <span class="overline">Versículo para você</span>
     <span class="version">{{ version()?.abbrev }}</span>
   </div>
 
@@ -32,6 +32,9 @@
   <div class="vod-bottom">
     <span class="reference">{{ highlightBook.name }} {{ highlight.chapter }}:{{ highlight.verse }}</span>
     <span class="spacer"></span>
+    <button mat-icon-button (click)="anotherVerse()" aria-label="Outro versículo" title="Outro versículo">
+      <mat-icon>refresh</mat-icon>
+    </button>
     <button mat-icon-button (click)="shareHighlight()" aria-label="Opções do versículo" [disabled]="!highlightText().text">
       <mat-icon>ios_share</mat-icon>
     </button>

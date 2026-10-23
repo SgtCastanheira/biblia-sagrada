@@ -59,7 +59,7 @@ test('botões principais têm área de toque de pelo menos 40px', async ({ page,
 
 test('todos os ícones aparecem como ícone (e não como texto)', async ({ page }) => {
   for (const tela of ['/', '/ler/JHN/3', '/devocional', '/ebd', '/anotacoes', '/sermoes', '/mapas', '/ajustes',
-    '/estudo', '/memorial', '/historia', '/avivamento', '/dicionario', '/atlas', '/genealogia', '/profecias', '/mapas/vida-de-jesus']) {
+    '/estudo', '/memorial', '/historia', '/avivamento', '/dicionario', '/atlas', '/genealogia', '/tribos', '/ibuc', '/ibuc/juniores', '/ibuc/aula/modelo-davi-e-golias', '/tribos/manasses', '/profecias', '/mapas/vida-de-jesus']) {
     await page.goto(tela);
     await page.waitForLoadState('networkidle');
     await page.evaluate(async () => {

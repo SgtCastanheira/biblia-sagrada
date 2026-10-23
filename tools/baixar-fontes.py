@@ -21,6 +21,9 @@ def icon_names():
         for expr in re.findall(r"<mat-icon[^>]*>\s*\{\{(.*?)\}\}\s*</mat-icon>", s, re.S):
             names.update(re.findall(r"'([a-z0-9_]+)'", expr))
         names.update(re.findall(r"icon:\s*'([a-z0-9_]+)'", s))
+        # Tabelas de ícones: export const ALGO_ICONS = { chave: 'nome_do_icone', ... }
+        for table in re.findall(r"_ICONS[^=]*=\s*\{([^}]*)\}", s):
+            names.update(re.findall(r":\s*'([a-z0-9_]+)'", table))
     return sorted(names)
 
 

@@ -11,6 +11,7 @@ import { ARTICLES } from '../../core/library';
 import { findMap } from '../../core/maps';
 import { findGroup, VERDICTS } from '../../core/memorial';
 import { articlesOfPerson, inGenealogy, mapsOfPerson, relatedPeople } from '../../core/relations';
+import { tribeOfPerson, tribesOfPatriarch } from '../../core/tribes';
 import { PassageView } from '../../shared/passage-view';
 import { Sheets } from '../../shared/sheets';
 
@@ -73,11 +74,14 @@ import { Sheets } from '../../shared/sheets';
           </div>
         }
 
-        @if (inGenealogy() || maps().length || articles().length) {
+        @if (inGenealogy() || maps().length || articles().length || tribes().length) {
           <h2 class="section-title">Para continuar o estudo</h2>
           <div class="links">
             @if (inGenealogy()) {
               <a class="card link" matRipple routerLink="/genealogia"><mat-icon>account_tree</mat-icon><span><small>Genealogia</small>Está na genealogia de Jesus</span><mat-icon class="go">chevron_right</mat-icon></a>
+            }
+            @for (t of tribes(); track t.id) {
+              <a class="card link" matRipple [routerLink]="['/tribos', t.id]"><mat-icon>groups</mat-icon><span><small>{{ t.kind }}</small>Tribo de {{ t.name }}</span><mat-icon class="go">chevron_right</mat-icon></a>
             }
             @for (m of maps(); track m.id) {
               <a class="card link" matRipple [routerLink]="['/mapas', m.id]"><mat-icon>map</mat-icon><span><small>Mapa</small>{{ m.title }}</span><mat-icon class="go">chevron_right</mat-icon></a>
@@ -187,6 +191,12 @@ export class PersonPage {
     return id ? relatedPeople(id).map((r) => all.find((p) => p.id === r)).filter((p) => !!p) : [];
   });
   protected readonly inGenealogy = computed(() => inGenealogy(this.id()));
+  /** A tribo do personagem ou, se for patriarca, as tribos que descendem dele. */
+  protected readonly tribes = computed(() => {
+    const own = tribesOfPatriarch(this.id()).map((t) => ({ id: t.id, name: t.name, kind: 'Tribo que descende dele' }));
+    const of = tribeOfPerson(this.id());
+    return of ? [...own, { id: of.id, name: of.name, kind: 'Da tribo' }] : own;
+  });
   protected readonly maps = computed(() => mapsOfPerson(this.id()).map((m) => findMap(m)!).filter(Boolean));
   protected readonly articles = computed(() => articlesOfPerson(this.id()).map((a) => ARTICLES.find((x) => x.id === a)!).filter(Boolean));
 

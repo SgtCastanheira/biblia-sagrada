@@ -45,7 +45,7 @@ export class App {
   protected readonly isNotebook = computed(() => /^\/(anotacoes|sermoes|favoritos)/.test(this.url()));
   /** Todas as telas de estudo acendem a aba Estudo. */
   protected readonly isStudy = computed(() =>
-    /^\/(estudo|ebd|memorial|genealogia|atlas|mapas|profecias|artigo|historia|avivamento|dicionario|curiosidades|livros|livro\/)/.test(this.url()),
+    /^\/(estudo|ebd|ibuc|memorial|genealogia|tribos|atlas|mapas|profecias|artigo|historia|avivamento|dicionario|curiosidades|livros|livro\/)/.test(this.url()),
   );
   protected readonly version = computed(() => findVersion(this.settings.version()));
   protected readonly readLink = computed(() => {

@@ -2,7 +2,7 @@ import { expect, test } from './base';
 
 test('lista todos os mapas', async ({ page }) => {
   await page.goto('/mapas');
-  await expect(page.locator('.grid .card')).toHaveCount(13);
+  await expect(page.locator('.grid .card')).toHaveCount(14);
   await expect(page.getByRole('heading', { name: 'Antigo Testamento' })).toBeVisible();
   await expect(page.locator('.card').first()).toContainText('Gênesis 11–13');
 });

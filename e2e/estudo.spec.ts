@@ -126,6 +126,34 @@ test('genealogia: linhas de Mateus e Lucas e link para o memorial', async ({ pag
   await expect(page.getByText('Está na genealogia de Jesus')).toBeVisible();
 });
 
+test('tribos: mapa com territórios, página da tribo e ligação com o memorial', async ({ page }) => {
+  await page.goto('/tribos');
+  await expect(page.locator('app-bible-map path.territory')).toHaveCount(14);
+  // Destacar uma tribo apaga as outras
+  await page.getByRole('group', { name: 'Destacar o território de uma tribo' }).getByRole('button', { name: 'Manassés' }).click();
+  await expect(page.locator('app-bible-map path.territory.focus')).toHaveCount(2);
+  await expect(page.getByRole('cell', { name: /Benjamim/ }).first()).toBeVisible();
+
+  await page.getByRole('link', { name: /Judá.*realeza/ }).click();
+  await expect(page).toHaveURL(/\/tribos\/juda/);
+  await expect(page.getByRole('heading', { name: 'Judá', level: 1 })).toBeVisible();
+  await expect(page.getByText('Nasom, filho de Aminadabe')).toBeVisible();
+  await expect(page.getByText(/O cetro não se arredará/)).toBeVisible();
+  await page.getByRole('link', { name: 'Davi', exact: true }).click();
+  await expect(page).toHaveURL(/\/memorial\/davi/);
+  await expect(page.getByText('Tribo de Judá')).toBeVisible();
+});
+
+test('leitor: Josué 18 oferece o estudo e o mapa das tribos', async ({ page }) => {
+  await page.goto('/ler/JOS/18');
+  await page.getByRole('button', { name: /Estudar este capítulo/ }).click();
+  await page.getByRole('link', { name: /As doze tribos de Israel/ }).click();
+  await expect(page).toHaveURL(/\/tribos$/);
+  await page.goto('/mapas/tribos-de-israel');
+  await page.getByRole('link', { name: 'As doze tribos' }).click();
+  await expect(page.getByRole('heading', { name: 'As doze tribos de Israel' })).toBeVisible();
+});
+
 test('profecias: filtro e página com interpretações', async ({ page }) => {
   await page.goto('/profecias');
   await page.getByRole('navigation', { name: 'Situação' }).getByRole('link', { name: 'Interpretações diferentes' }).click();
@@ -211,4 +239,17 @@ test('pregações recomendadas com link para ouvir', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Pregações recomendadas' })).toBeVisible();
   const ouvir = page.getByRole('link', { name: 'Ouvir' }).first();
   await expect(ouvir).toHaveAttribute('href', /youtube\.com\/results/);
+});
+
+test('IBUC: turma por idade e aula-modelo com curiosidades e brincadeiras', async ({ page }) => {
+  await page.goto('/estudo');
+  await page.getByRole('link', { name: /IBUC/ }).click();
+  await expect(page.getByRole('heading', { name: 'IBUC', level: 1 })).toBeVisible();
+  await page.getByRole('link', { name: /Primários/ }).click();
+  await expect(page.getByText('Como ensinar nesta idade')).toBeVisible();
+  await page.getByRole('link', { name: /Davi e Golias/ }).click();
+  await expect(page.getByText('Quase três metros')).toBeVisible();
+  await expect(page.getByText('Acerte o gigante')).toBeVisible();
+  await page.getByRole('button', { name: 'Voltar à turma' }).click();
+  await expect(page).toHaveURL(/\/ibuc\/primarios/);
 });

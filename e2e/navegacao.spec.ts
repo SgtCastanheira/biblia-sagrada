@@ -4,7 +4,7 @@ const rotas = ['/', '/livros', '/livro/JHN', '/ler/JHN/3', '/devocional', '/devo
   '/favoritos', '/mapas', '/mapas/exodo', '/busca', '/curiosidades', '/curiosidades/voltas-em-jerico', '/ajustes',
   '/estudo', '/memorial', '/memorial?grupo=reis-juda', '/memorial/davi', '/historia', '/historia?colecao=biblia', '/artigo/cativeiros-de-israel',
   '/avivamento', '/avivamento/spurgeon-olhai-para-mim', '/dicionario', '/dicionario/graca', '/livro/GEN', '/mapas/cativeiros-de-israel',
-  '/atlas', '/atlas?epoca=roma', '/genealogia', '/profecias', '/profecias/setenta-semanas', '/artigo/legiao-e-o-exercito-romano',
+  '/atlas', '/atlas?epoca=roma', '/genealogia', '/tribos', '/ibuc', '/ibuc/primarios', '/ibuc/maternal', '/ibuc/aula/modelo-davi-e-golias', '/tribos/juda', '/tribos/levi', '/mapas/tribos-de-israel', '/profecias', '/profecias/setenta-semanas', '/artigo/legiao-e-o-exercito-romano',
   '/artigo/apocalipse', '/memorial?grupo=linha-do-tempo', '/dicionario/salvar', '/historia?colecao=contexto', '/estudo/livros', '/dicionario?ordem=biblia', '/creditos'];
 
 for (const rota of rotas) {

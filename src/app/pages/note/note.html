@@ -44,11 +44,9 @@
 
   <section>
     <h2>Textos bíblicos</h2>
-    <label class="field">
-      <mat-icon>menu_book</mat-icon>
-      <input placeholder="Ex.: Fp 4.4-7; Ne 8.10" [value]="n.refs" (input)="update({ refs: value($event) })" aria-label="Textos bíblicos" />
-    </label>
-    @if (n.refs) { <app-passage-view [refs]="n.refs" /> }
+    <app-ref-input [value]="n.refs" (valueChange)="update({ refs: $event })" />
+    <!-- Só procura o texto depois do capítulo (enquanto digita o livro, não há o que mostrar) -->
+    @if (hasChapter(n.refs)) { <app-passage-view [refs]="n.refs" /> }
   </section>
 
   <section>

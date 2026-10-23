@@ -6,6 +6,7 @@ test('mapas seguem a ordem dos livros da Bíblia', () => {
   console.log(ordem.join('\n'));
   expect(MAPS_IN_ORDER.map((m) => m.id)).toEqual([
     'jornada-de-abraao',
+    'tribos-de-israel',
     'fuga-e-retorno-de-moises',
     'exodo',
     'conquista-de-jerico',

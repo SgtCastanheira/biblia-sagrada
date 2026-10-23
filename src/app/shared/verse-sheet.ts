@@ -1,4 +1,5 @@
 import { Clipboard } from '@angular/cdk/clipboard';
+import { EXTERNAL_VERSIONS, externalVerseUrl } from '../core/versions';
 import { Component, computed, inject } from '@angular/core';
 import { MAT_BOTTOM_SHEET_DATA, MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -47,6 +48,14 @@ export interface VerseSheetData {
         <button mat-stroked-button (click)="copy()"><mat-icon>content_copy</mat-icon> Copiar</button>
         <button mat-flat-button (click)="share()"><mat-icon>share</mat-icon> Compartilhar</button>
       </div>
+
+      <p class="label xref-title">Ler em outras versões</p>
+      <div class="external" role="group" aria-label="Abrir este versículo em outras versões, no site do YouVersion">
+        @for (v of external; track v.abbrev) {
+          <a [href]="url(v)" target="_blank" rel="noopener" [attr.aria-label]="v.name + ' (abre o site do YouVersion)'" [title]="v.name">{{ v.abbrev }}</a>
+        }
+      </div>
+      <p class="credit">Abre o versículo no site do YouVersion (bible.com). Essas versões têm direitos autorais e não ficam guardadas no app.</p>
 
       @if (links()?.length) {
         <p class="label xref-title">Referências cruzadas</p>
@@ -98,11 +107,20 @@ export interface VerseSheetData {
     .xref-note { font: 400 14px/1.45 var(--reading-font); color: var(--mat-sys-on-surface-variant); }
     .credit { margin: 8px 0 0; font: 400 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .external { display: flex; flex-wrap: wrap; gap: 8px; }
+    .external a {
+      display: inline-flex; align-items: center; min-height: 40px; min-width: 56px; justify-content: center; padding: 0 12px; border-radius: 20px;
+      border: 1px solid var(--mat-sys-outline-variant); color: var(--mat-sys-primary); font: 600 14px Inter, sans-serif; text-decoration: none;
+    }
     .actions button { height: 48px; }
   `,
 })
 export class VerseSheet {
   protected readonly data = inject<VerseSheetData>(MAT_BOTTOM_SHEET_DATA);
+  protected readonly external = EXTERNAL_VERSIONS;
+  protected url(v: (typeof EXTERNAL_VERSIONS)[number]): string {
+    return externalVerseUrl(v, this.data.ref.bookId, this.data.ref.chapter, this.data.ref.verse);
+  }
   private readonly ref = inject(MatBottomSheetRef<VerseSheet>);
   private readonly favorites = inject(FavoritesService);
   private readonly clipboard = inject(Clipboard);

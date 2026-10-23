@@ -11,10 +11,11 @@ import { formatLong } from '../../core/dates';
 import { NotesService, ServiceNote } from '../../core/notes.service';
 import { noteTypeColor } from '../../shared/note-types';
 import { PassageView } from '../../shared/passage-view';
+import { RefInput } from '../../shared/ref-input';
 
 @Component({
   selector: 'app-note',
-  imports: [BackButton, RouterLink, CdkTextareaAutosize, MatButtonModule, MatIconModule, MatMenuModule, PassageView],
+  imports: [BackButton, RouterLink, CdkTextareaAutosize, MatButtonModule, MatIconModule, MatMenuModule, PassageView, RefInput],
   templateUrl: './note.html',
   styleUrl: './note.scss',
 })
@@ -38,6 +39,10 @@ export class NotePage {
 
   protected update(patch: Partial<ServiceNote>): void {
     this.service.update(this.id(), patch);
+  }
+
+  protected hasChapter(refs: string): boolean {
+    return /\d/.test(refs.replace(/^\s*[1-3]\s*(?=\p{L})/u, ''));
   }
 
   protected value(event: Event): string {

@@ -49,6 +49,21 @@
       }
     },
     {
+      "name": "versoes-portugues",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/bible/blivre/*.json",
+          "/bible/nbv/*.json",
+          "/bible/bpm/*.json",
+          "/bible/blt/*.json",
+          "/bible/nva/*.json",
+          "/bible/alm1911/*.json"
+        ]
+      }
+    },
+    {
       "name": "referencias",
       "installMode": "lazy",
       "updateMode": "prefetch",

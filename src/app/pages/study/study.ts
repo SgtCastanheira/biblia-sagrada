@@ -50,6 +50,11 @@ interface Section {
           <mat-icon class="go">chevron_right</mat-icon>
         </a>
       }
+      <a class="card top-card" matRipple routerLink="/ibuc">
+        <span class="badge"><mat-icon>child_care</mat-icon></span>
+        <span class="texts"><span class="kicker">Apoio ao professor, por idade</span><span class="name">IBUC — Instituto Bíblico Único Caminho</span></span>
+        <mat-icon class="go">chevron_right</mat-icon>
+      </a>
       <a class="card top-card" matRipple routerLink="/estudo/livros">
         <span class="badge"><mat-icon>menu_book</mat-icon></span>
         <span class="texts"><span class="kicker">De Gênesis a Apocalipse</span><span class="name">Estudo livro por livro</span></span>
@@ -108,6 +113,7 @@ interface Section {
   styles: `
     .top-cards { display: grid; gap: 10px; margin-bottom: 14px; }
     @media (min-width: 700px) { .top-cards { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1100px) { .top-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     .top-card { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 14px 16px; }
     .top-card .badge {
       width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center;
@@ -160,6 +166,7 @@ export class StudyPage {
         { link: '/memorial', icon: 'military_tech', name: 'Memorial da Fé', description: 'Heróis da fé, patriarcas, juízes, profetas, reis de Israel e de Judá, nazireus, mulheres de fé e apóstolos.' },
         { link: '/memorial', queryParams: { grupo: 'linha-do-tempo' }, icon: 'timeline', name: 'Linha do tempo', description: 'Todos os personagens na ordem da história, de Adão aos apóstolos.' },
         { link: '/genealogia', icon: 'account_tree', name: 'Genealogia de Jesus', description: 'As linhas de Mateus (por Salomão) e de Lucas (por Natã), com explicações.' },
+        { link: '/tribos', icon: 'groups', name: 'As doze tribos de Israel', description: 'Os filhos de Jacó, as bênçãos, os líderes, o acampamento e a vocação de cada tribo.' },
       ],
     },
     {
@@ -167,6 +174,7 @@ export class StudyPage {
       icon: 'public',
       shelves: [
         { link: '/atlas', icon: 'public', name: 'Atlas histórico', description: 'Reinos e impérios época por época, com os povos, as cidades e os países de hoje.' },
+        { link: '/mapas/tribos-de-israel', icon: 'grid_view', name: 'A divisão da terra', description: 'Os territórios das tribos em Josué, com a distância de cada um até o templo.' },
         { link: '/mapas', icon: 'map', name: 'Mapas das jornadas', description: 'Abraão, Moisés, o Êxodo, os cativeiros, Jesus, os discípulos e Paulo — com distâncias e lugares ao redor.' },
       ],
     },

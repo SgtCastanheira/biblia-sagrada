@@ -1,6 +1,6 @@
 """
 Gera a geografia dos mapas (public/maps/<id>.json) a partir do Natural Earth (domínio público).
-Lê ids e limites de src/app/core/maps.ts (e do atlas, src/app/core/atlas.ts) e usa a mesma projeção do app.
+Lê ids e limites de src/app/core/maps.ts (e de atlas.ts e tribes.ts, na mesma pasta) e usa a mesma projeção do app.
 Inclui as fronteiras atuais dos países (para comparar com as da época).
 Uso: python3 -I gerar-mapas.py <maps.ts> <pasta_natural_earth> <pasta_saida>
 """
@@ -12,9 +12,11 @@ RIVERS = {"Nile", "Damietta Branch", "Rosetta Branch", "Jordan", "Euphrates", "F
           "Orontes", "Karkheh", "Shatt al Arab"}
 
 src = open(maps_ts, encoding="utf-8").read()
-atlas_ts = os.path.join(os.path.dirname(maps_ts), "atlas.ts")
-if os.path.exists(atlas_ts):
-    src += open(atlas_ts, encoding="utf-8").read()
+# Mapas definidos fora de maps.ts: o atlas e a divisão da terra entre as tribos
+for extra in ("atlas.ts", "tribes.ts"):
+    path = os.path.join(os.path.dirname(maps_ts), extra)
+    if os.path.exists(path):
+        src += open(path, encoding="utf-8").read()
 maps = [(m.group(1), [float(x) for x in m.group(2).split(",")])
         for m in re.finditer(r"id: '([^']+)',\s*title:[\s\S]*?bounds: \[([^\]]+)\]", src)]
 

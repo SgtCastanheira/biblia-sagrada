@@ -1,8 +1,15 @@
 import { BibleVersion } from './models';
 
-// Traduções em domínio público disponíveis em https://bible-api.com
+// Em português: a Almeida e as versões de licença livre do eBible.org, embutidas no app (tools/gerar-versoes.py).
+// As demais são traduções em domínio público disponíveis em https://bible-api.com
 export const VERSIONS: BibleVersion[] = [
   { id: 'almeida', abbrev: 'ALM', name: 'João Ferreira de Almeida', language: 'Português', flag: '🇧🇷' },
+  { id: 'blivre', abbrev: 'BLIVRE', name: 'Bíblia Livre (Almeida atualizada)', language: 'Português', flag: '🇧🇷' },
+  { id: 'nbv', abbrev: 'NBV', name: 'Nova Bíblia Viva (Biblica® Open)', language: 'Português', flag: '🇧🇷' },
+  { id: 'bpm', abbrev: 'BPM', name: 'Bíblia Portuguesa Mundial', language: 'Português', flag: '🇧🇷' },
+  { id: 'blt', abbrev: 'BLT', name: 'Bíblia Livre Para Todos', language: 'Português', flag: '🇧🇷', ntOnly: true },
+  { id: 'nva', abbrev: 'NVA', name: 'Bíblia Nova Versão de Acesso Livre', language: 'Português', flag: '🇧🇷' },
+  { id: 'alm1911', abbrev: 'ALM1911', name: 'Almeida 1911 (ortografia original)', language: 'Português', flag: '🇧🇷' },
   { id: 'kjv', abbrev: 'KJV', name: 'King James Version', language: 'Inglês', flag: '🇬🇧' },
   { id: 'asv', abbrev: 'ASV', name: 'American Standard Version (1901)', language: 'Inglês', flag: '🇺🇸' },
   { id: 'web', abbrev: 'WEB', name: 'World English Bible', language: 'Inglês', flag: '🇺🇸' },
@@ -28,3 +35,20 @@ export const VERSION_GROUPS = Object.entries(
 ).map(([language, versions]) => ({ language, versions }));
 
 export const findVersion = (id: string): BibleVersion | undefined => VERSIONS.find((v) => v.id === id);
+
+/**
+ * Versões em português com direitos autorais (Sociedade Bíblica do Brasil, Biblica/Vida, Mundo Cristão):
+ * o app não guarda o texto delas, só abre o mesmo versículo no site do YouVersion (bible.com).
+ * Os números são os ids de cada versão no YouVersion.
+ */
+export const EXTERNAL_VERSIONS: { abbrev: string; name: string; youversion: number }[] = [
+  { abbrev: 'ARA', name: 'Almeida Revista e Atualizada', youversion: 1608 },
+  { abbrev: 'ARC', name: 'Almeida Revista e Corrigida', youversion: 212 },
+  { abbrev: 'NVI', name: 'Nova Versão Internacional', youversion: 129 },
+  { abbrev: 'NTLH', name: 'Nova Tradução na Linguagem de Hoje', youversion: 211 },
+  { abbrev: 'NAA', name: 'Nova Almeida Atualizada', youversion: 1840 },
+  { abbrev: 'NVT', name: 'Nova Versão Transformadora', youversion: 1930 },
+];
+
+export const externalVerseUrl = (v: (typeof EXTERNAL_VERSIONS)[number], bookId: string, chapter: number, verse?: number) =>
+  `https://www.bible.com/bible/${v.youversion}/${bookId}.${chapter}${verse ? `.${verse}` : ''}.${v.abbrev}`;

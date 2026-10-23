@@ -1,5 +1,7 @@
+import type { Lonlat } from './atlas';
 import { BOOKS } from './books';
 import { Testament } from './models';
+import { TRIBES_MAP } from './tribes';
 
 /**
  * Mapas históricos. Cada mapa tem limites geográficos (longitude/latitude), lugares e uma rota numerada.
@@ -50,6 +52,19 @@ export interface BibleMap {
   chapters: string[];
   /** false: as etapas não são uma viagem só (não mostra distâncias). */
   distances?: boolean;
+  /** Regiões sempre coloridas (ex.: os territórios das tribos), recortadas pelo litoral. */
+  territories?: MapTerritory[];
+  /** Estudo ligado ao mapa (quando não é um artigo). */
+  study?: { link: string; label: string };
+}
+
+export interface MapTerritory {
+  id: string;
+  /** Grupo de regiões destacadas juntas (ex.: as duas metades de Manassés). */
+  tribe?: string;
+  name: string;
+  color: string;
+  polygon: Lonlat[];
 }
 
 export const BIBLE_MAPS: BibleMap[] = [
@@ -545,6 +560,7 @@ export const BIBLE_MAPS: BibleMap[] = [
     note: 'Hala e Habor ficavam no norte da Mesopotâmia (Gozã é a atual Tell Halaf, na Síria); a posição exata de Hala e do rio Quebar é estimada. As dez tribos do Norte nunca voltaram como reino; de Judá, voltaram os que quiseram, em três grupos.',
     chapters: ['2KI 15', '1CH 5', '2KI 17', '2KI 18', '2KI 19', '2CH 33', '2KI 23', 'DAN 1', '2KI 24', 'EZK 1', '2KI 25', 'JER 43', 'PSA 137', 'JER 29', 'DAN 5', 'EZR 1', 'EZR 2', 'EST 4', 'EZR 7', 'NEH 1', 'NEH 6'],
   },
+  TRIBES_MAP,
 ];
 
 export const findMap = (id: string) => BIBLE_MAPS.find((m) => m.id === id);

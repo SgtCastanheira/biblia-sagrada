@@ -78,9 +78,10 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
         <!-- Reinos e impérios da época (recortados pelo litoral) -->
         @if (powers().length) {
           <g [attr.clip-path]="'url(#' + clipId + ')'">
-            @for (pw of powers(); track pw.name) {
-              <path class="power" [attr.d]="pw.d" [style.fill]="pw.color" [style.stroke]="pw.color" [attr.stroke-width]="font() * 0.12"
-                    [attr.stroke-dasharray]="font() * 0.5 + ' ' + font() * 0.3" />
+            @for (pw of powers(); track pw.key) {
+              <path class="power" [class.territory]="pw.territory" [class.dim]="pw.dim" [class.focus]="pw.focus" [attr.d]="pw.d"
+                    [style.fill]="pw.color" [style.stroke]="pw.color" [attr.stroke-width]="font() * (pw.focus ? 0.2 : 0.12)"
+                    [attr.stroke-dasharray]="pw.territory ? null : font() * 0.5 + ' ' + font() * 0.3" />
             }
           </g>
         }
@@ -196,6 +197,9 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
       animation: pulse 1.6s ease-out infinite;
     }
     .power { fill-opacity: .16; stroke-opacity: .75; stroke-linejoin: round; pointer-events: none; }
+    .power.territory { fill-opacity: .3; stroke-opacity: .9; transition: fill-opacity .3s, stroke-opacity .3s; }
+    .power.territory.dim { fill-opacity: .07; stroke-opacity: .3; }
+    .power.territory.focus { fill-opacity: .5; stroke-opacity: 1; }
     .power-label {
       font-family: Inter, sans-serif; font-weight: 700; text-anchor: middle; text-transform: uppercase; letter-spacing: .04em;
       paint-order: stroke; stroke: var(--map-land); stroke-width: .3em; stroke-linejoin: round; pointer-events: none;
@@ -230,6 +234,8 @@ export class BibleMapView {
   readonly nearby = input(false);
   /** Fronteiras e nomes dos países de hoje. */
   readonly modern = input(false);
+  /** Território destacado (id do território ou do grupo): os outros ficam apagados. */
+  readonly highlight = input<string | null>(null);
 
   protected readonly clipId = `land-clip-${++instances}`;
 
@@ -466,11 +472,18 @@ export class BibleMapView {
     }[];
   });
 
-  /** Polígonos dos reinos da época, já projetados. */
+  /** Territórios do mapa e polígonos dos reinos da época, já projetados. */
   protected readonly powers = computed(() => {
-    const era = this.era();
-    if (!era || this.compact()) return [];
     const v = this.view();
+    const project = (polygon: [number, number][]) => polygon.map(([lon, lat]) => [v.x(lon), v.y(lat)]);
+    const path = (pts: number[][]) => `M${pts.map((q) => q[0].toFixed(1) + ',' + q[1].toFixed(1)).join('L')}Z`;
+    const focus = this.highlight();
+    const territories = (this.map().territories ?? []).map((t) => {
+      const on = !!focus && (t.id === focus || t.tribe === focus);
+      return { key: `t-${t.id}`, name: t.name, color: t.color, d: path(project(t.polygon)), lx: 0, ly: 0, territory: true, focus: on, dim: !!focus && !on };
+    });
+    const era = this.era();
+    if (!era || this.compact()) return territories;
     const [lon0, lat0, lon1, lat1] = this.map().bounds;
     // Um império que cobre o mapa inteiro não ajuda a ver nada: fica só na legenda
     const coversAll = (poly: [number, number][]) => {
@@ -487,11 +500,14 @@ export class BibleMapView {
       const corners = [inside(lon0, lat0), inside(lon1, lat1), inside(lon0, lat1), inside(lon1, lat0)].filter(Boolean).length;
       return inside((lon0 + lon1) / 2, (lat0 + lat1) / 2) && corners >= 3;
     };
-    return era.powers.filter((p) => !coversAll(p.polygon)).map((p) => {
-      const pts = p.polygon.map(([lon, lat]) => [v.x(lon), v.y(lat)]);
-      const [lx, ly] = p.label ? [v.x(p.label[0]), v.y(p.label[1])] : [pts.reduce((s, q) => s + q[0], 0) / pts.length, pts.reduce((s, q) => s + q[1], 0) / pts.length];
-      return { name: p.name, color: p.color, d: `M${pts.map((q) => q[0].toFixed(1) + ',' + q[1].toFixed(1)).join('L')}Z`, lx, ly };
-    });
+    return [
+      ...territories,
+      ...era.powers.filter((p) => !coversAll(p.polygon)).map((p) => {
+        const pts = project(p.polygon);
+        const [lx, ly] = p.label ? [v.x(p.label[0]), v.y(p.label[1])] : [pts.reduce((s, q) => s + q[0], 0) / pts.length, pts.reduce((s, q) => s + q[1], 0) / pts.length];
+        return { key: `p-${p.name}`, name: p.name, color: p.color, d: path(pts), lx, ly, territory: false, focus: false, dim: false };
+      }),
+    ];
   });
 
   /**
@@ -533,7 +549,8 @@ export class BibleMapView {
       }
     };
 
-    for (const pw of this.powers()) tryCentered(`pw-${pw.name}`, 'power', pw.name, pw.lx, pw.ly, 0.82, pw.color);
+    // Os territórios não levam nome: o lugar numerado de cada um já diz qual é
+    for (const pw of this.powers()) if (!pw.territory) tryCentered(`pw-${pw.name}`, 'power', pw.name, pw.lx, pw.ly, 0.82, pw.color);
     for (const p of this.era()?.peoples ?? []) tryCentered(`pe-${p.name}`, 'people', p.name, v.x(p.lon), v.y(p.lat), 0.8);
     if (this.modern()) {
       for (const c of MODERN_COUNTRIES) tryCentered(`mo-${c.name}`, 'modern', c.name.toUpperCase(), v.x(c.lon), v.y(c.lat), 0.85);

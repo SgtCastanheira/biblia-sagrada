@@ -19,6 +19,7 @@ import { SettingsService } from '../../core/settings.service';
 import { UiService } from '../../core/ui.service';
 import { articlesFor } from '../../core/library';
 import { mapsFor } from '../../core/maps';
+import { TRIBE_CHAPTERS } from '../../core/tribes';
 import { findVersion } from '../../core/versions';
 import { Sheets } from '../../shared/sheets';
 
@@ -146,6 +147,7 @@ export class ReaderPage {
   /** Aulas, mapas e profecias do capítulo — sempre com os mesmos ícones e nesta ordem. */
   protected readonly links = computed(() => [
     ...this.lessons().map((a) => ({ icon: 'school', kind: a.collection === 'contexto' ? 'Aula de contexto' : 'Estudo', title: a.title, link: `/artigo/${a.id}` })),
+    ...(TRIBE_CHAPTERS.includes(`${this.book()} ${this.chapterNum()}`) ? [{ icon: 'school', kind: 'Estudo', title: 'As doze tribos de Israel', link: '/tribos' }] : []),
     ...this.maps().map((m) => ({ icon: 'map', kind: 'Mapa', title: m.title, link: `/mapas/${m.id}` })),
     ...this.prophecies().map((p) => ({ icon: 'visibility', kind: p.given ? 'Profecia' : 'Cumprimento de profecia', title: p.title, link: `/profecias/${p.id}` })),
   ]);

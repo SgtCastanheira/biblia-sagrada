@@ -10,8 +10,11 @@ interface ChapterResponse {
 /** Livro embutido no app: capítulos → pares [versículo, texto]. */
 type LocalBook = [number, string][][];
 
-/** Versões cujo texto completo vem junto com o app (domínio público, revisado). */
-export const LOCAL_VERSIONS = new Set(['almeida']);
+/** Versões cujo texto vem junto com o app (domínio público ou licença livre). */
+export const LOCAL_VERSIONS = new Set(['almeida', 'blivre', 'nbv', 'bpm', 'blt', 'nva', 'alm1911']);
+
+/** Versões que só existem embutidas (a bible-api.com não as tem): não há para onde recorrer. */
+const LOCAL_ONLY = new Set(['blivre', 'nbv', 'bpm', 'blt', 'nva', 'alm1911']);
 
 /** Índice gerado junto com os arquivos: quais livros de cada versão estão embutidos. */
 type LocalIndex = Record<string, string[]>;
@@ -50,8 +53,10 @@ export class BibleService {
         ? this.localIndex.pipe(
             switchMap((index) =>
               index[versionId]?.includes(bookId)
-                ? this.fromLocal(versionId, bookId, chapter).pipe(catchError(() => this.fromApi(key)))
-                : this.fromApi(key),
+                ? this.fromLocal(versionId, bookId, chapter).pipe(catchError((err) => (LOCAL_ONLY.has(versionId) ? throwError(() => err) : this.fromApi(key))))
+                : LOCAL_ONLY.has(versionId)
+                  ? throwError(() => new HttpErrorResponse({ status: 404 }))
+                  : this.fromApi(key),
             ),
           )
         : this.fromApi(key);

@@ -7,6 +7,12 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Fonte | Uso no app | Licença |
 |---|---|---|
 | Bíblia de João Ferreira de Almeida | Texto embutido (`public/bible/almeida`), com correções de caracteres e ortografia do Acordo de 1990 | Domínio público |
+| Bíblia Livre (BLIVRE) — © 2018 Diego Santos, Mario Sérgio e Marco Teles | Texto embutido (`public/bible/blivre`), do eBible.org (`porbr2018`) | CC BY 4.0 Brasil |
+| Biblica® Open Nova Bíblia Viva™ — © 2007, 2010 by Biblica, Inc. | Texto embutido sem alterações (`public/bible/nbv`), do eBible.org (`poronbv`). “Biblica” é uma marca registrada na Oficina de Patentes e Marcas dos Estados Unidos por Biblica, Inc. Usado com permissão. Original gratuito em www.biblica.com e open.bible | CC BY-SA 4.0 |
+| Bíblia Portuguesa Mundial (BPM) | Texto embutido (`public/bible/bpm`), do eBible.org (`porbrbsl`), sem os deuterocanônicos | Domínio público |
+| Bíblia Livre Para Todos (BLT) — © 2022 Free Bible Ministry, Inc. | Novo Testamento embutido (`public/bible/blt`), do eBible.org (`porblt`) | CC BY-SA 4.0 |
+| Bíblia Nova Versão de Acesso Livre (NVA) — biblianva.com.br, baseada na Unlocked Literal Bible | Texto embutido (`public/bible/nva`), do módulo `PorNVA` da CrossWire | CC BY-SA 4.0 |
+| Almeida 1911 (reimpressão de 1911 de uma edição de 1900) | Texto embutido com a ortografia original (`public/bible/alm1911`), do módulo `PorAlmeida1911` da CrossWire, convertido com o pysword (MIT) | Texto em domínio público; módulo sob GPL |
 | [bible-api.com](https://bible-api.com) | Demais versões, carregadas pela internet | Textos em domínio público |
 
 ## Estudo

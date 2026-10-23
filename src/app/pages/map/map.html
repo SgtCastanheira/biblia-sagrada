@@ -17,6 +17,9 @@
     @if (article(); as a) {
       <a mat-stroked-button class="journey" [routerLink]="['/artigo', a.id]"><mat-icon>menu_book</mat-icon> Ler o estudo</a>
     }
+    @if (m.study; as st) {
+      <a mat-stroked-button class="journey" [routerLink]="st.link"><mat-icon>menu_book</mat-icon> {{ st.label }}</a>
+    }
   </div>
 
   <div class="map-frame">
