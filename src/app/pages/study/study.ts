@@ -189,6 +189,7 @@ export class StudyPage {
         { link: '/historia', queryParams: { colecao: 'contexto' }, icon: 'school', name: 'Aulas de contexto', description: 'O exército romano, a crucificação, o casamento judaico, os Herodes, as moedas, o templo, pastores e agricultura.' },
         { link: '/livros', icon: 'info', name: 'Contexto dos livros', description: 'Autor, data e cenário histórico de cada livro — e notas de estudo dentro dos capítulos.' },
         { link: '/artigo/cativeiros-de-israel', icon: 'link_off', name: 'Os cativeiros de Israel', description: 'Egito, Assíria, Babilônia e o retorno — com mapa interativo.' },
+        { link: '/fontes', icon: 'library_books', name: 'Fontes das informações', description: 'De onde vêm os textos de estudo: a Bíblia, fontes antigas, arqueologia e obras de referência.' },
       ],
     },
     {

@@ -79,6 +79,7 @@
     }
   </div>
   <p class="credit">Geografia: Natural Earth (domínio público). Traçado aproximado, para fins de estudo.</p>
+  <app-sources topic="mapas" />
   @if (story() !== null) {
     <app-map-story [map]="m" [startAt]="story()!" (closed)="story.set(null)" />
   }

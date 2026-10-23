@@ -6,12 +6,13 @@ import { RouterLink } from '@angular/router';
 import { BOOK_GROUPS, BOOKS } from '../../core/books';
 import { Testament } from '../../core/models';
 import { SettingsService } from '../../core/settings.service';
+import { SourcesBox } from '../../shared/sources-box';
 
 const normalize = (text: string) => text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 
 @Component({
   selector: 'app-books',
-  imports: [RouterLink, NgTemplateOutlet, MatIconModule, MatRippleModule],
+  imports: [RouterLink, NgTemplateOutlet, MatIconModule, MatRippleModule, SourcesBox],
   templateUrl: './books.html',
   styleUrl: './books.scss',
 })

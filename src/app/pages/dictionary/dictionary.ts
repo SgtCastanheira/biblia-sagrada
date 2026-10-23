@@ -7,13 +7,14 @@ import { ContentService } from '../../core/content.service';
 import { bookOfRef, positionOfRef } from '../../core/bible-order';
 import { findBook } from '../../core/books';
 import { DictionaryEntry, DictionaryLang, DOMAINS, fold, KINDS, LANGS } from '../../core/dictionary';
+import { SourcesBox } from '../../shared/sources-box';
 
 type Filter = 'todos' | 'verbos' | DictionaryLang;
 
 /** Dicionário bíblico com filtros por idioma original. */
 @Component({
   selector: 'app-dictionary',
-  imports: [RouterLink, MatIconModule, MatRippleModule],
+  imports: [RouterLink, MatIconModule, MatRippleModule, SourcesBox],
   template: `
     <header class="page-head">
       <span class="overline">Biblioteca</span>
@@ -63,6 +64,7 @@ type Filter = 'todos' | 'verbos' | DictionaryLang;
         <p class="empty">Nenhum verbete encontrado.</p>
       }
     }
+    <app-sources topic="dicionario" />
   `,
   styleUrl: '../../shared/study.scss',
   styles: `

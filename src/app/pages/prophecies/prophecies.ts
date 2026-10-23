@@ -8,11 +8,12 @@ import { articlesOf } from '../../core/library';
 import { bookOfRef, inBibleOrder, positionOfRef } from '../../core/bible-order';
 import { findBook } from '../../core/books';
 import { CATEGORIES, ProphecyCategory, ProphecyStatus, STATUSES } from '../../core/prophecy';
+import { SourcesBox } from '../../shared/sources-box';
 
 /** Promessas e profecias: do Antigo Testamento ao cumprimento, com a situação de cada uma. */
 @Component({
   selector: 'app-prophecies',
-  imports: [RouterLink, MatIconModule, MatRippleModule],
+  imports: [RouterLink, MatIconModule, MatRippleModule, SourcesBox],
   template: `
     <header class="page-head">
       <span class="overline">Estudo</span>
@@ -72,6 +73,7 @@ import { CATEGORIES, ProphecyCategory, ProphecyStatus, STATUSES } from '../../co
       “Interpretações diferentes” quando estudiosos e tradições divergem; “Futura” quando a maioria entende que ainda vai se cumprir.
       Veja os princípios em <a routerLink="/artigo/como-interpretar-profecias">Como interpretar as profecias</a>.
     </p>
+    <app-sources topic="profecias" />
   `,
   styleUrl: '../../shared/study.scss',
   styles: `

@@ -8,13 +8,14 @@ import { GROUPS, MemorialGroup, Person, reignStart, TWO_KINGDOMS_EVENTS, VERDICT
 import { inBibleOrder, positionOfRef } from '../../core/bible-order';
 import { ERA_BANDS, yearOf } from '../../core/relations';
 import { Sheets } from '../../shared/sheets';
+import { SourcesBox } from '../../shared/sources-box';
 
 const KING_GROUPS: MemorialGroup[] = ['reis-unido', 'reis-israel', 'reis-juda'];
 
 /** Memorial da Fé: personagens por grupo. */
 @Component({
   selector: 'app-memorial',
-  imports: [RouterLink, MatIconModule, MatRippleModule],
+  imports: [RouterLink, MatIconModule, MatRippleModule, SourcesBox],
   template: `
     <header class="page-head">
       <span class="overline">Memorial da Fé</span>
@@ -128,6 +129,7 @@ const KING_GROUPS: MemorialGroup[] = ['reis-unido', 'reis-israel', 'reis-juda'];
         }
       </div>
     }
+    <app-sources topic="memorial" />
   `,
   styleUrl: '../../shared/study.scss',
   styles: `

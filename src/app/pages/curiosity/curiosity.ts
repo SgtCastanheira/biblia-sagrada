@@ -14,6 +14,7 @@ import { CURIOSITIES_IN_ORDER, findCuriosity, VerseRange } from '../../core/curi
 import { CuriositiesService } from '../../core/curiosities.service';
 import { SettingsService } from '../../core/settings.service';
 import { findVersion } from '../../core/versions';
+import { SourcesBox } from '../../shared/sources-box';
 
 interface Passage {
   range: VerseRange;
@@ -23,7 +24,7 @@ interface Passage {
 
 @Component({
   selector: 'app-curiosity',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule],
+  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, SourcesBox],
   templateUrl: './curiosity.html',
   styleUrl: './curiosity.scss',
 })

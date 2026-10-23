@@ -100,6 +100,11 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 - `referencias` is cached lazily.
 - New content files under those globs are picked up automatically.
 
+**Sources** (`core/sources.ts`, rendered by `<app-sources>` and the `/fontes` page):
+- Every article needs an `ARTICLE_SOURCES` entry; `logica/fontes.spec.ts` fails otherwise.
+- The other study parts use `TOPIC_SOURCES`.
+- Only cite works that really exist and ancient sources the text actually draws on. The study texts are written for the app and are not copied from those works.
+
 ## Content and copyright rules
 
 These rules are deliberate; keep them. Licenses are tracked in CREDITOS.md and in the in-app credits screen (`core/credits.ts`).

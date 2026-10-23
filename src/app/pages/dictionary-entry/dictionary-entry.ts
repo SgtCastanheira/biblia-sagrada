@@ -8,11 +8,12 @@ import { RouterLink } from '@angular/router';
 import { ContentService } from '../../core/content.service';
 import { KINDS, LANGS } from '../../core/dictionary';
 import { Sheets } from '../../shared/sheets';
+import { SourcesBox } from '../../shared/sources-box';
 
 /** Verbete completo do dicionário. */
 @Component({
   selector: 'app-dictionary-entry',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule],
+  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, SourcesBox],
   template: `
     @if (entry(); as e) {
       <div class="article">
@@ -100,6 +101,7 @@ import { Sheets } from '../../shared/sheets';
     } @else {
       <div class="skeleton"><span></span><span></span><span class="short"></span></div>
     }
+    <app-sources topic="dicionario" />
   `,
   styleUrl: '../../shared/study.scss',
   styles: `

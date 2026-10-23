@@ -284,3 +284,14 @@ test('memorial: os dois reinos lado a lado, com os fatos que os ligam', async ({
   await page.locator('.realm-king', { hasText: 'Ezequias' }).click();
   await expect(page).toHaveURL(/\/memorial\/ezequias/);
 });
+
+test('fontes: cada estudo mostra de onde vêm as informações, e há uma página com todas', async ({ page }) => {
+  await page.goto('/artigo/o-templo-de-herodes');
+  await page.getByText('Fontes das informações').click();
+  await expect(page.getByText(/Antiguidades Judaicas 15\.380/)).toBeVisible();
+  await expect(page.getByText('Jerusalém no tempo de Jesus')).toBeVisible();
+  await page.getByRole('link', { name: 'Todas as fontes do app' }).click();
+  await expect(page.getByRole('heading', { name: 'Fontes das informações', level: 1 })).toBeVisible();
+  await page.goto('/estudo');
+  await expect(page.getByRole('link', { name: /Fontes das informações/ })).toBeVisible();
+});

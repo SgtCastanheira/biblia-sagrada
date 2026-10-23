@@ -10,6 +10,7 @@ import {
 } from '../../core/tribes';
 import { BibleMapView } from '../../shared/bible-map';
 import { RichText } from '../../shared/rich-text';
+import { SourcesBox } from '../../shared/sources-box';
 
 /** Origem da tribo: "4º filho de Jacó · Lia" ou "Filho de José". */
 export const tribeOrigin = (t: Tribe) => (t.order ? `${t.order}º filho de Jacó · ${t.mother.split(',')[0]}` : 'Filho de José, adotado por Jacó');
@@ -17,7 +18,7 @@ export const tribeOrigin = (t: Tribe) => (t.order ? `${t.order}º filho de Jacó
 /** As doze tribos de Israel: os filhos de Jacó, a divisão da terra, o acampamento e as perguntas mais comuns. */
 @Component({
   selector: 'app-tribes',
-  imports: [DecimalPipe, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, BibleMapView, RichText],
+  imports: [DecimalPipe, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, BibleMapView, RichText, SourcesBox],
   template: `
     <header class="page-head">
       <span class="overline">Estudo bíblico</span>
@@ -154,6 +155,7 @@ export const tribeOrigin = (t: Tribe) => (t.order ? `${t.order}º filho de Jacó
         </details>
       }
     </section>
+    <app-sources topic="tribos" />
   `,
   styleUrl: '../../shared/study.scss',
   styles: `

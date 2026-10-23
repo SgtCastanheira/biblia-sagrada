@@ -14,11 +14,12 @@ import { articlesOfPerson, inGenealogy, mapsOfPerson, relatedPeople } from '../.
 import { tribeOfPerson, tribesOfPatriarch } from '../../core/tribes';
 import { PassageView } from '../../shared/passage-view';
 import { Sheets } from '../../shared/sheets';
+import { SourcesBox } from '../../shared/sources-box';
 
 /** Página de um personagem do Memorial da Fé. */
 @Component({
   selector: 'app-person',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView],
+  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView, SourcesBox],
   template: `
     @if (person(); as p) {
       <div class="article">
@@ -101,6 +102,7 @@ import { Sheets } from '../../shared/sheets';
           </nav>
         }
 
+        <app-sources topic="memorial" />
         <nav class="neighbours">
           @if (neighbours().prev; as prev) {
             <a class="card" matRipple [routerLink]="['/memorial', prev.id]"><mat-icon>arrow_back</mat-icon><span><small>Anterior</small>{{ prev.name }}</span></a>

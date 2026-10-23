@@ -6,13 +6,14 @@ import { Router, RouterLink } from '@angular/router';
 import { GenNode, GENEALOGY, GENEALOGY_QUESTIONS } from '../../core/genealogy';
 import { RichText } from '../../shared/rich-text';
 import { Sheets } from '../../shared/sheets';
+import { SourcesBox } from '../../shared/sources-box';
 
 type Line = 'mt' | 'lk' | 'both';
 
 /** A genealogia de Jesus, de Adão até a encarnação, com as duas linhas (Mateus e Lucas). */
 @Component({
   selector: 'app-genealogy',
-  imports: [NgTemplateOutlet, RouterLink, MatIconModule, MatRippleModule, RichText],
+  imports: [NgTemplateOutlet, RouterLink, MatIconModule, MatRippleModule, RichText, SourcesBox],
   template: `
     <header class="page-head">
       <span class="overline">Memorial da Fé</span>
@@ -116,6 +117,7 @@ type Line = 'mt' | 'lk' | 'both';
         </details>
       }
     </section>
+    <app-sources topic="genealogia" />
   `,
   styleUrl: './genealogy.scss',
 })

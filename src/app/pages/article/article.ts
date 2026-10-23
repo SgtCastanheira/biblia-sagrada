@@ -13,11 +13,12 @@ import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
 import { outline } from '../../core/rich-text-parser';
 import { RichText } from '../../shared/rich-text';
+import { SourcesBox } from '../../shared/sources-box';
 
 /** Artigo de estudo (história da Igreja, origem da Bíblia, estudos bíblicos). */
 @Component({
   selector: 'app-article',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, BibleMapView],
+  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, BibleMapView, SourcesBox],
   template: `
     @if (article(); as a) {
       <div class="article">
@@ -54,6 +55,7 @@ import { RichText } from '../../shared/rich-text';
           <p class="empty">Não foi possível abrir este texto agora.</p>
         }
 
+        <app-sources [article]="id()" />
         <nav class="neighbours">
           @if (neighbours().prev; as prev) {
             <a class="card" matRipple [routerLink]="['/artigo', prev.id]"><mat-icon>arrow_back</mat-icon><span><small>Anterior</small>{{ prev.title }}</span></a>

@@ -12,11 +12,12 @@ import { findArticle } from '../../core/library';
 import { CATEGORIES, KINDS, STATUSES } from '../../core/prophecy';
 import { PassageView } from '../../shared/passage-view';
 import { Sheets } from '../../shared/sheets';
+import { SourcesBox } from '../../shared/sources-box';
 
 /** Uma profecia: o texto, o contexto, o cumprimento e as interpretações. */
 @Component({
   selector: 'app-prophecy',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView],
+  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView, SourcesBox],
   template: `
     @if (prophecy(); as p) {
       <div class="article">
@@ -81,6 +82,7 @@ import { Sheets } from '../../shared/sheets';
     } @else {
       <div class="skeleton"><span></span><span></span><span class="short"></span></div>
     }
+    <app-sources topic="profecias" />
   `,
   styleUrl: '../../shared/study.scss',
   styles: `

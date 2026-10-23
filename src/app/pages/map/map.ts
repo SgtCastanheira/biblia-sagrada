@@ -13,10 +13,11 @@ import { SettingsService } from '../../core/settings.service';
 import { parseReferences } from '../../core/reference-parser';
 import { BibleMapView } from '../../shared/bible-map';
 import { MapStory } from '../../shared/map-story';
+import { SourcesBox } from '../../shared/sources-box';
 
 @Component({
   selector: 'app-map',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, BibleMapView, MapStory],
+  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, BibleMapView, MapStory, SourcesBox],
   templateUrl: './map.html',
   styleUrl: './map.scss',
 })

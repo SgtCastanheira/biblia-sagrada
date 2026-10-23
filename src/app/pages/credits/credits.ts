@@ -1,3 +1,4 @@
+import { RouterLink } from '@angular/router';
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { CREDITS } from '../../core/credits';
@@ -6,13 +7,14 @@ import { BackButton } from '../../shared/back-button';
 /** Sobre o app e os créditos das fontes usadas. */
 @Component({
   selector: 'app-credits',
-  imports: [BackButton, MatIconModule],
+  imports: [BackButton, MatIconModule, RouterLink],
   template: `
     <div class="article">
       <div class="top"><app-back fallback="/ajustes" /></div>
       <span class="overline">Sobre</span>
       <h1 class="title">Créditos e licenças</h1>
       <p class="lead">Este app reúne textos e dados de várias fontes. Agradecemos a quem os disponibilizou — e respeitamos as licenças de cada um.</p>
+      <p class="lead">As fontes dos textos de estudo (fontes antigas, arqueologia e obras de referência) estão em <a routerLink="/fontes">Fontes das informações</a>.</p>
 
       @for (g of credits; track g.group) {
         <h2 class="section-title">{{ g.group }}</h2>

@@ -12,10 +12,11 @@ import { ContentService } from '../../core/content.service';
 import { SettingsService } from '../../core/settings.service';
 import { BookMaterialsView } from '../../shared/book-materials';
 import { Sheets } from '../../shared/sheets';
+import { SourcesBox } from '../../shared/sources-box';
 
 @Component({
   selector: 'app-book',
-  imports: [BackButton, BookMaterialsView, RouterLink, MatButtonModule, MatIconModule, MatRippleModule],
+  imports: [BackButton, BookMaterialsView, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, SourcesBox],
   template: `
     @if (bookInfo(); as b) {
       <header class="hero" [style.--c]="b.category.color">
@@ -66,6 +67,7 @@ import { Sheets } from '../../shared/sheets';
     } @else {
       <p>Livro não encontrado.</p>
     }
+    <app-sources topic="livros" />
   `,
   styles: `
     .hero {

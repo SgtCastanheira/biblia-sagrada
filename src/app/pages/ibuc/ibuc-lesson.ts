@@ -7,11 +7,12 @@ import { BackButton } from '../../shared/back-button';
 import { PassageView } from '../../shared/passage-view';
 import { RichText } from '../../shared/rich-text';
 import { Sheets } from '../../shared/sheets';
+import { SourcesBox } from '../../shared/sources-box';
 
 /** Uma aula do IBUC: abertura, curiosidades, contexto, brincadeiras, perguntas e aplicação. */
 @Component({
   selector: 'app-ibuc-lesson',
-  imports: [RouterLink, MatIconModule, BackButton, PassageView, RichText],
+  imports: [RouterLink, MatIconModule, BackButton, PassageView, RichText, SourcesBox],
   template: `
     @if (lesson(); as l) {
       <div class="article">
@@ -69,6 +70,7 @@ import { Sheets } from '../../shared/sheets';
     } @else {
       <p class="empty">Aula não encontrada. <a routerLink="/ibuc">Ver as turmas do IBUC</a></p>
     }
+    <app-sources topic="ibuc" />
   `,
   styleUrl: '../../shared/study.scss',
   styles: `

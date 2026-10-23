@@ -12,11 +12,12 @@ import { PassageView } from '../../shared/passage-view';
 import { RichText } from '../../shared/rich-text';
 import { Sheets } from '../../shared/sheets';
 import { tribeOrigin } from '../tribes/tribes';
+import { SourcesBox } from '../../shared/sources-box';
 
 /** Uma das tribos de Israel: patriarca, bênçãos, vocação, líderes, território e personagens. */
 @Component({
   selector: 'app-tribe',
-  imports: [DecimalPipe, RouterLink, MatIconModule, MatRippleModule, BackButton, BibleMapView, PassageView, RichText],
+  imports: [DecimalPipe, RouterLink, MatIconModule, MatRippleModule, BackButton, BibleMapView, PassageView, RichText, SourcesBox],
   template: `
     @if (tribe(); as t) {
       <div class="article">
@@ -95,6 +96,7 @@ import { tribeOrigin } from '../tribes/tribes';
         <h2 class="section-title">Na história de Israel</h2>
         <app-rich-text [source]="t.history" />
 
+        <app-sources topic="tribos" />
         <nav class="neighbours">
           @if (neighbours().prev; as prev) {
             <a class="card" matRipple [routerLink]="['/tribos', prev.id]"><mat-icon>arrow_back</mat-icon><span><small>Anterior</small>{{ prev.name }}</span></a>

@@ -8,11 +8,12 @@ import { findMap } from '../../core/maps';
 import { SettingsService } from '../../core/settings.service';
 import { BibleMapView } from '../../shared/bible-map';
 import { Sheets } from '../../shared/sheets';
+import { SourcesBox } from '../../shared/sources-box';
 
 /** Atlas histórico: o mundo da Bíblia época por época (reinos, impérios, povos e acontecimentos). */
 @Component({
   selector: 'app-atlas',
-  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, BibleMapView],
+  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, BibleMapView, SourcesBox],
   template: `
     <header class="page-head">
       <span class="overline">Geografia bíblica</span>
@@ -84,6 +85,7 @@ import { Sheets } from '../../shared/sheets';
       }
     </article>
     <p class="credit">Litoral, rios e fronteiras atuais: Natural Earth (domínio público). Fronteiras antigas aproximadas.</p>
+    <app-sources topic="mapas" />
   `,
   styleUrl: './atlas.scss',
 })
