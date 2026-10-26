@@ -1,0 +1,74 @@
+A Assembleia de Deus que nasceu em Belém em 1911 cresceu tanto que hoje não é uma única organização: é uma grande família de igrejas, ligadas a convenções diferentes. As duas maiores são chamadas popularmente de **“Missão”** e **“Madureira”**. Este estudo conta, a partir das fontes, como se chegou a isso — de Gunnar Vingren a **Paulo Leivas Macalão** e à separação de **1989**.
+
+:::nota
+**Sem tomar partido.** Divisões na igreja são sempre dolorosas, e cada lado conta a sua história. Aqui estão os fatos como as fontes registram. Onde elas descrevem o mesmo fato com palavras diferentes, as duas versões aparecem.
+:::
+
+:::figura ad-arvore
+A árvore das Assembleias de Deus: de Belém (1911) às convenções de hoje. A linha tracejada indica a separação de 1989.
+:::
+
+## Antes de Macalão: de Belém ao Rio
+
+Tudo começou em Belém, com **Gunnar Vingren** e **Daniel Berg**, em 1911 (veja [Daniel Berg e Gunnar Vingren](/artigo/daniel-berg-e-gunnar-vingren)). Nos anos seguintes, a obra se espalhou pelo Norte e pelo Nordeste.
+
+No **Rio de Janeiro**, a Assembleia de Deus se estabeleceu em **1922**, no bairro de **São Cristóvão**, e ganhou força com a chegada de Gunnar e **Frida Vingren** em 1924. Vingren pastoreou São Cristóvão até 1932, e Frida dirigia cultos, a Escola Dominical e o trabalho social (veja [Frida Vingren](/artigo/frida-vingren)). Foi nesse primeiro grupo do Rio que um jovem gaúcho começou a congregar: **Paulo Leivas Macalão**.
+
+![Gunnar Vingren](imagens/gunnar-vingren.jpg "Gunnar Vingren em 1908. Foto de autor desconhecido, em domínio público (Wikimedia Commons).")
+
+## Paulo Leivas Macalão (1903–1982)
+
+Paulo Leivas Macalão nasceu em **17 de setembro de 1903**, em Santana do Livramento (RS), filho de João Maria Macalão, oficial do Exército Brasileiro, e de Joaquina Georgina Leivas Macalão. Passou parte da infância na casa de um tio.
+
+Converteu-se aos 20 anos, em **5 de abril de 1924**, depois de receber um folheto que o convidava para a “Igreja do Orfanato”, dirigida pelo pastor inglês James Robert. Fez amizade com Gunnar Vingren e participou do começo da Assembleia de Deus no Rio de Janeiro.
+
+![Paulo Leivas Macalão](imagens/paulo-leivas-macalao.jpg "Paulo Leivas Macalão. Foto em domínio público (Wikimedia Commons).")
+
+**O trabalho em Madureira.** Em **15 de novembro de 1929**, Macalão iniciou a igreja no bairro de **Madureira**, no subúrbio do Rio. Em **17 de agosto de 1930**, foi consagrado pastor por Gunnar Vingren e pelo pastor sueco Lewi Pethrus. Construiu em Bangu o primeiro templo da Assembleia de Deus no Sudeste, inaugurado em 1º de janeiro de 1933, e abriu igrejas em todas as regiões da cidade, no interior do estado e em outros estados. A esse conjunto de igrejas ligadas a Madureira se deu o nome de **Ministério de Madureira**.
+
+Casou-se com **Zélia Brito** em 1934. Criou o programa de rádio *Voz das Assembleias de Deus* (1955) e o jornal *O Semeador* (1960). Foi também o principal tradutor e adaptador dos hinos da **Harpa Cristã**, onde as suas iniciais, **P.L.M.**, aparecem em centenas de hinos (veja [A história da Harpa Cristã](/artigo/harpa-crista)). Morreu no Rio de Janeiro em **26 de agosto de 1982**.
+
+## A organização: a Convenção Geral (1930)
+
+À medida que a igreja crescia, os pastores sentiram necessidade de se organizar. Depois de uma reunião preparatória em Natal, em fevereiro de 1929, a primeira assembleia geral se reuniu de **5 a 10 de setembro de 1930**, com a maioria dos pastores brasileiros e os missionários suecos. Ali começou a **Convenção Geral das Assembleias de Deus no Brasil (CGADB)**, e o jornal *Mensageiro da Paz* se tornou o seu órgão oficial. Em 1946, numa assembleia em Recife, a CGADB foi registrada como pessoa jurídica.
+
+## A convenção de Madureira (1958)
+
+As igrejas ligadas a Madureira continuaram crescendo pelo Brasil. Em **2 de maio de 1958**, elas formaram a sua própria convenção — a *Convenção Nacional dos Ministros das Assembleias de Deus em Madureira e Igrejas Filiadas*, hoje **CONAMAD** —, e Macalão foi eleito pastor geral. Ele a presidiu até morrer. Em 1982, o Ministério de Madureira reunia cerca de 600 igrejas e 500 mil membros e congregados.
+
+## A separação (1989)
+
+Por anos, os pastores de Madureira participaram das duas convenções. O conflito veio com duas regras da CGADB:
+- um ministro não poderia pertencer a outra convenção nacional do mesmo tipo;
+- uma igreja não poderia abrir trabalho na área de outro ministério.
+
+Em **setembro de 1989**, numa assembleia geral extraordinária em **Salvador**, a CGADB aplicou essas regras aos pastores ligados à convenção de Madureira. As fontes contam o resultado com palavras diferentes:
+- **Pelo lado de Madureira**, os pastores foram suspensos até aceitarem as decisões e depois **excluídos** pela diretoria da CGADB.
+- **Em outra descrição**, a assembleia **deliberou o desligamento** desses pastores, com base no estatuto que proibia pertencer a mais de uma convenção nacional.
+
+Desde então, a **CONAMAD** seguiu como convenção completamente independente da CGADB.
+
+## Depois de Macalão
+
+Depois da morte de Macalão, a igreja-sede de Madureira foi presidida por Orosman Dagoberto (1982–1988), Luiz Francisco Fontes (1988–1990), **Manoel Ferreira** e, desde 2006, **Abner Ferreira**. A CONAMAD é presidida por **Manoel Ferreira desde 1987**; em 1999 a sua sede foi transferida para **Brasília**.
+
+## As Assembleias de Deus hoje
+
+:::tempo
+- 1911 | Belém | Missão da Fé Apostólica, que em 1918 passou a se chamar Assembleia de Deus
+- 1922 | Rio de Janeiro | A igreja se estabelece em São Cristóvão
+- 1929 | Madureira | Paulo Leivas Macalão inicia o trabalho
+- 1930 | CGADB | A primeira assembleia geral da Convenção Geral
+- 1958 | Convenção de Madureira | Hoje CONAMAD, com Macalão como pastor geral
+- 1982 | Morre Macalão | Rio de Janeiro (26 de agosto)
+- 1989 | Salvador | Os pastores de Madureira deixam a CGADB
+- 1999 | Brasília | A sede da CONAMAD vai para a capital
+:::
+
+Hoje há três grandes convenções: a **CGADB** e a **CADB**, chamadas popularmente de “Missão” por serem herdeiras da missão sueca, e a **CONAMAD**, a “Madureira”. Há ainda outros ministérios independentes. Uma das diferenças entre elas está no ministério das mulheres: a CONAMAD e a CADB consagram mulheres, a CGADB não.
+
+Todas reconhecem a mesma origem em Belém e a mesma fé: a Bíblia como Palavra de Deus, a salvação pela graça em Cristo, o batismo no Espírito Santo e a esperança da volta de Jesus.
+
+## Para a vida
+
+Jesus orou pela unidade dos seus discípulos: “para que todos sejam um” [[Jo 17.21]]. Paulo e Barnabé, depois de uma forte discordância, seguiram caminhos separados — e o evangelho continuou avançando pelos dois [[At 15.36-41]]. Paulo pede que estejamos “procurando diligentemente guardar a unidade do Espírito no vínculo da paz” [[Ef 4.3]].

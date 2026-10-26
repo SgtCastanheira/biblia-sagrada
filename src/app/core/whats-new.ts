@@ -22,6 +22,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'frida-madureira-frances',
+    date: '26 de outubro de 2026',
+    title: 'Frida Vingren, Madureira e a Bíblia em francês',
+    items: [
+      { icon: 'woman', title: 'Frida Vingren', text: 'A missionária, pregadora e compositora que ajudou a construir a Assembleia de Deus — e foi esquecida por décadas.', link: '/artigo/frida-vingren', tip: 'Em Estudo → História da Igreja.' },
+      { icon: 'account_tree', title: 'Macalão e a separação de 1989', text: 'De Gunnar Vingren no Rio ao Ministério de Madureira e às convenções de hoje, com a árvore das Assembleias de Deus.', link: '/artigo/madureira-e-a-separacao' },
+      { icon: 'translate', title: 'Bíblia em francês', text: 'A Louis Segond (1910), funcionando sem internet.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto da tela.' },
+    ],
+  },
+  {
     id: 'berg-e-vingren',
     date: '26 de outubro de 2026',
     title: 'Daniel Berg e Gunnar Vingren',

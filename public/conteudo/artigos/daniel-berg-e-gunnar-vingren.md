@@ -2,6 +2,8 @@ Em 19 de novembro de 1910, dois jovens suecos desembarcaram em Belém do Pará s
 
 ## Gunnar Vingren (1879–1933)
 
+![Gunnar Vingren](imagens/gunnar-vingren.jpg "Gunnar Vingren em 1908. Foto de autor desconhecido, em domínio público (Wikimedia Commons).")
+
 **Adolph Gunnar Vingren** nasceu em **8 de agosto de 1879**, em Östra Husby, na província de Östergötland, na Suécia. Aos onze anos já trabalhava como jardineiro, a profissão do pai. Foi batizado nas águas aos 18 anos, em 1897, e passou a ensinar na Escola Dominical no lugar do pai; no ano seguinte, fez uma escola bíblica em Götabro.
 
 Em **1903** emigrou para os Estados Unidos e foi morar com um tio em Kansas City. Em 1904 mudou-se para **Chicago**, para estudar no seminário teológico batista sueco, e em **1909** tornou-se pastor, assumindo a Primeira Igreja Batista de Menominee, em Michigan.

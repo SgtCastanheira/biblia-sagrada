@@ -59,7 +59,8 @@
           "/bible/bpm/*.json",
           "/bible/blt/*.json",
           "/bible/nva/*.json",
-          "/bible/alm1911/*.json"
+          "/bible/alm1911/*.json",
+          "/bible/lsg/*.json"
         ]
       }
     },

@@ -18,6 +18,7 @@ export const CREDITS: { group: string; items: Credit[] }[] = [
       { name: 'Bíblia Nova Versão de Acesso Livre (NVA)', use: 'Texto embutido no app, do módulo da CrossWire. Baseada na Unlocked Literal Bible; biblianva.com.br.', license: 'Creative Commons Atribuição-CompartilhaIgual 4.0 (CC BY-SA 4.0)', url: 'https://www.biblianva.com.br' },
       { name: 'Almeida 1911', use: 'Reimpressão de 1911 da tradução de João Ferreira de Almeida, com a ortografia original. Texto embutido, do módulo PorAlmeida1911 da CrossWire.', license: 'Texto em domínio público; módulo distribuído sob GPL', url: 'https://www.crosswire.org/sword/modules/ModInfo.jsp?modName=PorAlmeida1911' },
       { name: 'CrossWire Bible Society e pysword', use: 'Fonte dos módulos SWORD da NVA e da Almeida 1911, convertidos com o pysword.', license: 'Serviço gratuito; pysword sob licença MIT', url: 'https://www.crosswire.org' },
+      { name: 'Louis Segond (1910)', use: 'Bíblia em francês, texto embutido no app, do eBible.org (fraLSG).', license: 'Domínio público', url: 'https://ebible.org/fraLSG/' },
       { name: 'eBible.org', use: 'Fonte dos arquivos das versões em português de licença livre.', license: 'Serviço gratuito', url: 'https://ebible.org' },
       { name: 'bible-api.com', use: 'As demais versões, todas em domínio público, carregadas pela internet.', license: 'Serviço gratuito; textos em domínio público', url: 'https://bible-api.com' },
     ],
@@ -37,6 +38,14 @@ export const CREDITS: { group: string; items: Credit[] }[] = [
       { name: 'The Spurgeon Center', use: 'Texto original do sermão de C. H. Spurgeon.', license: 'Domínio público', url: 'https://www.spurgeon.org' },
       { name: 'Projeto Gutenberg', use: 'The Way to God, de D. L. Moody.', license: 'Domínio público', url: 'https://www.gutenberg.org/ebooks/30449' },
       { name: 'Pregações recomendadas', use: 'Só o tema e um link de busca: os sermões pertencem aos seus autores.', license: 'Direitos dos autores' },
+    ],
+  },
+  {
+    group: 'Fotos',
+    items: [
+      { name: 'Gunnar Vingren (1908)', use: 'Foto nos estudos da história da Igreja.', license: 'Domínio público (autor desconhecido)', url: 'https://commons.wikimedia.org/wiki/File:Gunnar_Vingren.jpg' },
+      { name: 'Paulo Leivas Macalão', use: 'Foto no estudo sobre Madureira.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Paulo_Leivas_Macal%C3%A3o.jpg' },
+      { name: 'Frida Vingren', use: 'Foto no estudo sobre Frida Vingren. Acervo do Centro de Estudos Pentecostais da CPAD.', license: 'Creative Commons Atribuição-CompartilhaIgual 3.0 (CC BY-SA 3.0)', url: 'https://commons.wikimedia.org/wiki/File:Frida_Vingren.jpg' },
     ],
   },
   {

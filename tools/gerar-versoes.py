@@ -20,6 +20,8 @@ VERSIONS = {
     # Da CrossWire (módulos SWORD convertidos com sword-para-vpl.py para <pasta>/<Nome>/<Nome>_vpl.txt)
     "PorNVA": "nva",         # Bíblia Nova Versão de Acesso Livre (CC BY-SA 4.0)
     "PorAlmeida1911": "alm1911",  # Almeida, reimpressão de 1911 (texto em domínio público; módulo sob GPL)
+    # Em francês
+    "fraLSG": "lsg",         # Louis Segond 1910 (domínio público)
 }
 # Fora de propósito: portft (Tradução para Tradutores) é uma ferramenta de tradução, cheia de colchetes e barras.
 
@@ -37,9 +39,13 @@ index_path = os.path.join(out_dir, "index.json")
 index = json.load(open(index_path, encoding="utf-8"))
 
 for ebible_id, app_id in VERSIONS.items():
+    source = os.path.join(src_dir, ebible_id, f"{ebible_id}_vpl.txt")
+    if not os.path.exists(source):
+        print(f"{app_id:8} pulada (sem {source}); os arquivos já gerados continuam")
+        continue
     books = {}
     skipped = set()
-    with open(os.path.join(src_dir, ebible_id, f"{ebible_id}_vpl.txt"), encoding="utf-8-sig") as f:
+    with open(source, encoding="utf-8-sig") as f:
         for raw in f:
             m = LINE.match(raw.rstrip("\n"))
             if not m:

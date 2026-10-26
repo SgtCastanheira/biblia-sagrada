@@ -61,7 +61,7 @@ test('todos os ícones aparecem como ícone (e não como texto)', async ({ page 
   // Percorre muitas telas: precisa de mais tempo do que o padrão
   test.setTimeout(150_000);
   for (const tela of ['/', '/ler/JHN/3', '/devocional', '/ebd', '/anotacoes', '/sermoes', '/mapas', '/ajustes',
-    '/estudo', '/memorial', '/historia', '/avivamento', '/dicionario', '/atlas', '/genealogia', '/tribos', '/harpa', '/harpa/1', '/ensino', '/meu-espaco', '/fontes', '/novidades', '/ibuc', '/ebd/apoio', '/ebd/apoio/aula/modelo-neemias-reconstroi-os-muros', '/ibuc/juniores', '/ibuc/aula/modelo-davi-e-golias', '/tribos/manasses', '/profecias', '/mapas/vida-de-jesus']) {
+    '/estudo', '/memorial', '/historia', '/avivamento', '/dicionario', '/atlas', '/genealogia', '/tribos', '/artigo/madureira-e-a-separacao', '/harpa', '/harpa/1', '/ensino', '/meu-espaco', '/fontes', '/novidades', '/ibuc', '/ebd/apoio', '/ebd/apoio/aula/modelo-neemias-reconstroi-os-muros', '/ibuc/juniores', '/ibuc/aula/modelo-davi-e-golias', '/tribos/manasses', '/profecias', '/mapas/vida-de-jesus']) {
     await page.goto(tela);
     await page.waitForLoadState('networkidle');
     await page.evaluate(async () => {

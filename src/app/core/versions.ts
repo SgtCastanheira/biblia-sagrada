@@ -10,6 +10,7 @@ export const VERSIONS: BibleVersion[] = [
   { id: 'blt', abbrev: 'BLT', name: 'Bíblia Livre Para Todos', language: 'Português', flag: '🇧🇷', ntOnly: true },
   { id: 'nva', abbrev: 'NVA', name: 'Bíblia Nova Versão de Acesso Livre', language: 'Português', flag: '🇧🇷' },
   { id: 'alm1911', abbrev: 'ALM1911', badge: 'ALM', name: 'Almeida 1911 (ortografia original)', language: 'Português', flag: '🇧🇷' },
+  { id: 'lsg', abbrev: 'LSG', name: 'Louis Segond (1910)', language: 'Francês', flag: '🇫🇷' },
   { id: 'kjv', abbrev: 'KJV', name: 'King James Version', language: 'Inglês', flag: '🇬🇧' },
   { id: 'asv', abbrev: 'ASV', name: 'American Standard Version (1901)', language: 'Inglês', flag: '🇺🇸' },
   { id: 'web', abbrev: 'WEB', name: 'World English Bible', language: 'Inglês', flag: '🇺🇸' },

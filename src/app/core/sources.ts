@@ -154,6 +154,25 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ancient: ['Wikipédia: Gunnar Vingren (pt.wikipedia.org/wiki/Gunnar_Vingren)', 'Wikipédia: Daniel Berg (pt.wikipedia.org/wiki/Daniel_Berg)', 'Svenskt kvinnobiografiskt lexikon: Frida Strandberg (Vingren)'],
     works: ['vingren-diario', 'berg-enviado', 'conde', 'araujo-dicionario', 'araujo-100'],
   },
+  'frida-vingren': {
+    ancientLabel: 'Documentos e sites consultados',
+    ancient: [
+      'Svenskt kvinnobiografiskt lexikon: Frida Strandberg, por Jan-Åke Alvarsson (skbl.se)',
+      'Wikipédia: Frida Vingren (pt.wikipedia.org/wiki/Frida_Vingren)',
+      'Itatiaia, 15/10/2024: sanção da lei do Dia Nacional da Música Gospel (9 de junho)',
+      'Kajsa Norell, Halleluja, Brasilien! (Bladh by Bladh, 2011)',
+      'Isael de Araujo, Frida Vingren: uma biografia da mulher de Deus, esposa de Gunnar Vingren (CPAD, 2016)',
+    ],
+    works: ['vingren-diario', 'araujo-dicionario'],
+  },
+  'madureira-e-a-separacao': {
+    ancientLabel: 'Documentos e sites consultados',
+    ancient: [
+      'Wikipédia: Paulo Leivas Macalão; Convenção Nacional das Assembleias de Deus no Brasil (CONAMAD); Convenção Geral das Assembleias de Deus no Brasil (CGADB); Assembleias de Deus no Brasil',
+      'Harpa Cristã (CPAD): história, em harpacrista.com.br',
+    ],
+    works: ['araujo-dicionario', 'araujo-100', 'conde', 'mariano'],
+  },
   'ministerios-na-biblia': {
     ancient: ['Didaquê, capítulos 11–15 (apóstolos, profetas, bispos e diáconos)', 'Clemente de Roma, Carta aos Coríntios 42–44 (c. 96)', 'Inácio de Antioquia, Cartas aos Magnésios 6 e aos Esmirnenses 8 (c. 110)'],
     works: ['ditnt', 'ndb', 'carson-moo', 'keener-nt', 'ferguson', 'kelly', 'declaracao-fe-ad'],

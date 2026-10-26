@@ -72,6 +72,9 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 - `rich-text-parser.ts` and `shared/rich-text.ts` render the content Markdown:
   - `[[Jo 3.16]]` or `[[Ref|texto]]` become tappable passages.
   - `:::tempo` and `:::nota` blocks render as a timeline and a callout.
+  - `![alt](imagens/x.jpg "legenda com crédito")` shows a photo from `public/conteudo/imagens/`. Only use public-domain or open-license photos, and credit them in the caption, `credits.ts` and CREDITOS.md.
+  - `:::figura id` shows a drawn SVG illustration from `shared/figure.ts`; the lines inside the block are its caption.
+  - `logica/ilustracoes.spec.ts` checks that every photo exists and has a caption, and that every figure id exists.
 - `DictionaryMatcher` (`dictionary.ts`) marks dictionary `forms` in the reader. Each entry is marked once per chapter, and the longest form wins.
 - `bible-order.ts` and `study-index.ts` order and group everything in canonical order (Genesis to Revelation) per book and chapter. Lists shown to users should follow Bible order.
 

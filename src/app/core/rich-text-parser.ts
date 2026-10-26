@@ -8,7 +8,7 @@ export interface Inline {
 }
 
 export interface Block {
-  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table';
+  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure';
   inlines?: Inline[];
   items?: Inline[][];
   events?: { date: string; title: string; text: Inline[] }[];
@@ -16,6 +16,13 @@ export interface Block {
   anchor?: string;
   head?: Inline[][];
   rows?: Inline[][][];
+  /** Foto: caminho dentro de public/conteudo e descrição para leitores de tela. */
+  src?: string;
+  alt?: string;
+  /** Ilustração desenhada pelo app (id do diagrama em shared/figure.ts). */
+  figure?: string;
+  /** Legenda da foto ou da ilustração (com o crédito). */
+  caption?: Inline[];
 }
 
 const cells = (line: string) =>
@@ -41,7 +48,8 @@ export function parseInline(line: string): Inline[] {
 
 /**
  * Markdown simples: ## e ### títulos, parágrafos, > citação, listas (- e 1.),
- * ":::tempo" (linha do tempo: "- data | título | texto") e ":::nota" (destaque).
+ * ":::tempo" (linha do tempo: "- data | título | texto"), ":::nota" (destaque),
+ * ":::figura id" (ilustração do app, com a legenda dentro) e fotos: ![descrição](imagens/foto.jpg "legenda").
  */
 export function parseBlocks(source: string): Block[] {
   const blocks: Block[] = [];
@@ -58,12 +66,20 @@ export function parseBlocks(source: string): Block[] {
       flush();
       continue;
     }
-    const fence = line.match(/^:::\s*(tempo|nota)$/);
+    const image = line.match(/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$/);
+    if (image) {
+      flush();
+      blocks.push({ type: 'image', alt: image[1], src: image[2], caption: image[3] ? parseInline(image[3]) : undefined });
+      continue;
+    }
+    const fence = line.match(/^:::\s*(tempo|nota|figura)(?:\s+([\w-]+))?$/);
     if (fence) {
       flush();
       const body: string[] = [];
       while (++i < lines.length && lines[i].trim() !== ':::') body.push(lines[i].trim());
-      if (fence[1] === 'tempo') {
+      if (fence[1] === 'figura') {
+        blocks.push({ type: 'figure', figure: fence[2], caption: body.length ? parseInline(body.filter(Boolean).join(' ')) : undefined });
+      } else if (fence[1] === 'tempo') {
         const events = body
           .filter((l) => l.startsWith('- '))
           .map((l) => {

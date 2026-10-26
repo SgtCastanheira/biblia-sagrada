@@ -328,3 +328,14 @@ test('história da Igreja: o estudo de Daniel Berg e Gunnar Vingren, ligado ao d
   await page.getByText('Fontes das informações').click();
   await expect(page.getByText(/O diário do pioneiro Gunnar Vingren/)).toBeVisible();
 });
+
+test('história da Igreja ilustrada: árvore das Assembleias de Deus, fotos e o estudo de Frida Vingren', async ({ page }) => {
+  await page.goto('/artigo/madureira-e-a-separacao');
+  await expect(page.getByRole('img', { name: /Árvore das Assembleias de Deus/ })).toBeVisible();
+  const foto = page.getByRole('img', { name: 'Paulo Leivas Macalão' });
+  await foto.scrollIntoViewIfNeeded();
+  await expect.poll(() => foto.evaluate((img: HTMLImageElement) => img.naturalWidth)).toBeGreaterThan(0);
+  await page.locator('app-rich-text').getByRole('link', { name: 'Frida Vingren' }).first().click();
+  await expect(page.getByRole('img', { name: /O caminho de Frida Vingren/ })).toBeVisible();
+  await expect(page.getByText('Dia Nacional da Música Gospel').first()).toBeVisible();
+});

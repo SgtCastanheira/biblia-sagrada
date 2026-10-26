@@ -3,12 +3,13 @@ import { Component, computed, inject, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { parseBlocks } from '../core/rich-text-parser';
+import { Figure } from './figure';
 import { Sheets } from './sheets';
 
 /** Mostra texto de estudo formatado. Referências bíblicas abrem o texto num painel. */
 @Component({
   selector: 'app-rich-text',
-  imports: [NgTemplateOutlet, RouterLink, MatIconModule],
+  imports: [NgTemplateOutlet, RouterLink, MatIconModule, Figure],
   template: `
     <ng-template #line let-parts>@for (p of parts; track $index) {@switch (p.t) {@case ('b') {<strong>{{ p.text }}</strong>}@case ('i') {<em>{{ p.text }}</em>}@case ('ref') {<button type="button" class="ref" (click)="openRef(p.href)">{{ p.text }}</button>}@case ('link') {<a class="link" [routerLink]="p.href">{{ p.text }}</a>}@default {{{ p.text }}}}}</ng-template>
 
@@ -49,6 +50,18 @@ import { Sheets } from './sheets';
               </tbody>
             </table>
           </div>
+        }
+        @case ('image') {
+          <figure class="photo">
+            <img [src]="'conteudo/' + b.src" [alt]="b.alt" loading="lazy" />
+            @if (b.caption) { <figcaption><ng-container *ngTemplateOutlet="line; context: { $implicit: b.caption }" /></figcaption> }
+          </figure>
+        }
+        @case ('figure') {
+          <figure class="diagram">
+            <app-figure [id]="b.figure!" />
+            @if (b.caption) { <figcaption><ng-container *ngTemplateOutlet="line; context: { $implicit: b.caption }" /></figcaption> }
+          </figure>
         }
         @default { <p><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></p> }
       }
@@ -95,6 +108,10 @@ import { Sheets } from './sheets';
       border: 1.5px solid var(--accent-gold); background: var(--mat-sys-surface);
     }
     .date { font: 600 13px Inter, sans-serif; color: var(--accent-gold); letter-spacing: .3px; }
+    figure { margin: 6px 0 22px; }
+    .photo img { display: block; width: min(100%, 240px); height: auto; border-radius: 14px; border: 1px solid var(--mat-sys-outline-variant); }
+    .diagram { padding: 12px; border-radius: 16px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface-container-low); }
+    figcaption { margin-top: 8px; font: 400 13px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .title { font: 600 17px/1.35 var(--heading-font); }
     .text { font: 400 16px/1.6 var(--reading-font); color: var(--mat-sys-on-surface-variant); }
   `,

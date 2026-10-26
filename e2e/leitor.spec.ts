@@ -80,6 +80,9 @@ test('versões em português embutidas: Bíblia Livre, Nova Bíblia Viva e a BLT
   await page.evaluate(() => localStorage.setItem('biblia.settings.version', JSON.stringify('alm1911')));
   await page.goto('/ler/JHN/3');
   await expect(page.locator('#v16')).toContainText('aquelle');
+  await page.evaluate(() => localStorage.setItem('biblia.settings.version', JSON.stringify('lsg')));
+  await page.goto('/ler/JHN/3');
+  await expect(page.locator('#v16')).toContainText('Car Dieu a tant aimé le monde');
   await page.evaluate(() => localStorage.setItem('biblia.settings.version', JSON.stringify('nva')));
   await page.goto('/ler/PSA/23');
   await expect(page.locator('#v1')).toContainText('meu pastor');
