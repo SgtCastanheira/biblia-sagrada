@@ -60,7 +60,9 @@
         <span class="text">
           @if (distances().steps[i]; as km) { <span class="km">{{ km }}</span> }
           {{ step.text }}
-          @if (link(step.ref); as l) {
+          @if (step.link) {
+            <a class="ref" [routerLink]="step.link" (click)="$event.stopPropagation()">{{ step.ref }} · Ler a história</a>
+          } @else if (link(step.ref); as l) {
             <a [routerLink]="l.path" [fragment]="l.fragment" (click)="$event.stopPropagation()">{{ step.ref }}</a>
           } @else {
             <span class="ref">{{ step.ref }}</span>

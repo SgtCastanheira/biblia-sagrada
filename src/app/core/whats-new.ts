@@ -24,9 +24,9 @@ export const RELEASES: Release[] = [
   {
     id: 'ad-de-onde-saiu-cada-pioneiro',
     date: '26 de outubro de 2026',
-    title: 'De onde saiu cada pioneiro',
+    title: 'A Assembleia de Deus em cada estado',
     items: [
-      { icon: 'pin_drop', title: 'A Assembleia de Deus cidade por cidade', text: 'Em que cidade a igreja começou em cada estado, quem levou a mensagem e de onde essa pessoa saiu — com linhas no mapa.', link: '/mapas/assembleia-de-deus-estados', tip: 'Toque em “Visitar os lugares”.' },
+      { icon: 'pin_drop', title: 'A história completa de cada estado', text: 'Escolha o estado: veja no mapa, com a seta, de onde saíram os pioneiros e leia como o evangelho foi construído ali.', link: '/assembleia-de-deus', tip: 'Em Estudo → História da Igreja e da Bíblia.' },
       { icon: 'help', title: 'Por que as histórias divergem', text: 'O caso de Mato Grosso e de outros estados: o que cada fonte conta e por quê.', link: '/artigo/assembleia-de-deus-no-brasil' },
     ],
   },

@@ -386,3 +386,20 @@ test('Assembleia de Deus no Brasil: estudo aprofundado com o mapa interativo de 
   await page.getByRole('button', { name: 'Viver a jornada' }).click();
   await expect(page.getByRole('dialog')).toContainText('Belém');
 });
+
+test('Assembleia de Deus em cada estado: escolher o estado, ver de onde saíram os pioneiros e ler a história', async ({ page }) => {
+  await page.goto('/assembleia-de-deus');
+  await page.getByRole('link', { name: /Ceará/ }).click();
+  await expect(page).toHaveURL(/\/assembleia-de-deus\/ce$/);
+  await expect(page.getByRole('heading', { level: 1, name: 'Ceará' })).toBeVisible();
+  await expect(page.locator('.route-line')).toContainText('Belém (PA) → Uruburetama (CE)');
+  await expect(page.getByRole('heading', { name: 'De onde saiu' })).toBeVisible();
+  await page.getByRole('link', { name: /Próximo/ }).click();
+  await expect(page).toHaveURL(/\/assembleia-de-deus\/pb$/);
+});
+
+test('no mapa estado por estado, cada etapa leva à história completa', async ({ page }) => {
+  await page.goto('/mapas/assembleia-de-deus-estados');
+  await page.locator('.steps').getByRole('link', { name: /1914 · Ler a história/ }).first().click();
+  await expect(page).toHaveURL(/\/assembleia-de-deus\/(ce|pb)$/);
+});

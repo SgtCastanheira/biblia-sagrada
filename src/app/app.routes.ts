@@ -22,6 +22,8 @@ export const routes: Routes = [
   { path: 'dicionario', title: 'Dicionário bíblico · Bíblia Sagrada', loadComponent: () => import('./pages/dictionary/dictionary').then((m) => m.DictionaryPage) },
   { path: 'dicionario/:id', loadComponent: () => import('./pages/dictionary-entry/dictionary-entry').then((m) => m.DictionaryEntryPage) },
   { path: 'atlas', title: 'Atlas histórico · Bíblia Sagrada', loadComponent: () => import('./pages/atlas/atlas').then((m) => m.AtlasPage) },
+  { path: 'assembleia-de-deus', title: 'A Assembleia de Deus em cada estado · Bíblia Sagrada', loadComponent: () => import('./pages/ad-states/ad-states').then((m) => m.AdStatesPage) },
+  { path: 'assembleia-de-deus/:id', loadComponent: () => import('./pages/ad-states/ad-state').then((m) => m.AdStatePage) },
   { path: 'mapas', title: 'Mapas · Bíblia Sagrada', loadComponent: () => import('./pages/maps/maps').then((m) => m.MapsPage) },
   { path: 'mapas/:id', loadComponent: () => import('./pages/map/map').then((m) => m.MapPage) },
   { path: 'busca', title: 'Buscar · Bíblia Sagrada', loadComponent: () => import('./pages/search/search').then((m) => m.SearchPage) },

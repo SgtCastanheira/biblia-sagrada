@@ -34,6 +34,8 @@ export interface MapStep {
   ref: string;
   /** De onde saiu quem levou a mensagem (id de lugar): o mapa liga a origem a esta etapa. */
   from?: string;
+  /** Página com a história completa desta etapa (ex.: "/assembleia-de-deus/ce"). */
+  link?: string;
 }
 
 export interface BibleMap {

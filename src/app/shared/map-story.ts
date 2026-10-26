@@ -50,6 +50,9 @@ const NARRATION_KEY = 'biblia.maps.narration';
           <span class="count">{{ step() + 1 }} de {{ m.steps.length }}</span>
         </div>
         <p class="text">{{ s.text }}</p>
+        @if (s.link) {
+          <a class="story-link" [routerLink]="s.link">Ler a história completa <mat-icon>arrow_forward</mat-icon></a>
+        }
 
         @if (verses().loading) {
           <div class="skeleton"><span></span><span class="short"></span></div>
@@ -120,6 +123,8 @@ const NARRATION_KEY = 'biblia.maps.narration';
     .place { flex: 1; font: 600 21px var(--heading-font); }
     .count { font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .text { margin: 10px 0 0; font: 400 16px/1.55 Inter, sans-serif; }
+    .story-link { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; margin-top: 4px; font: 600 15px Inter, sans-serif; color: var(--mat-sys-primary); text-decoration: none; }
+    .story-link mat-icon { font-size: 18px; width: 18px; height: 18px; }
     blockquote {
       margin: 12px 0 0; padding: 10px 0 2px 14px; border-left: 3px solid var(--accent-gold);
       font-size: 16px; line-height: 1.6; color: var(--mat-sys-on-surface-variant);

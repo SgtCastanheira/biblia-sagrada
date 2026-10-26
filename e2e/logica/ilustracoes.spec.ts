@@ -91,3 +91,29 @@ test('o leitor entende a ficha e o cartão de sermão', () => {
   expect(ficha.facts?.[0].text.map((i) => i.t)).toEqual(['text', 'ref']);
   expect(sermao).toMatchObject({ type: 'sermon', sermon: 'evan-roberts-quatro-condicoes' });
 });
+
+test('Assembleia de Deus em cada estado: história, etapa no mapa com link, origem e referências válidas', async () => {
+  const { AD_STATES } = await import('../../src/app/core/ad-states');
+  const { findMap } = await import('../../src/app/core/maps');
+  const { parseReferences } = await import('../../src/app/core/reference-parser');
+  const map = findMap('assembleia-de-deus-estados')!;
+  const problems: string[] = [];
+  expect(AD_STATES.length).toBe(27);
+  for (const s of AD_STATES) {
+    const file = `public/conteudo/ad-estados/${s.id}.md`;
+    if (!existsSync(file)) { problems.push(`${s.id}: história não existe`); continue; }
+    const step = map.steps.find((x) => x.place === s.id);
+    if (!step) problems.push(`${s.id}: sem etapa no mapa`);
+    else {
+      if (step.link !== `/assembleia-de-deus/${s.id}`) problems.push(`${s.id}: etapa sem link para a história`);
+      if ((step.from ?? null) !== (s.from ?? null)) problems.push(`${s.id}: origem do mapa (${step.from}) diferente da história (${s.from})`);
+    }
+    for (const b of parseBlocks(readFileSync(file, 'utf8'))) {
+      for (const p of b.people ?? []) if (p.src && !existsSync(`public/conteudo/${p.src}`)) problems.push(`${s.id}: foto ${p.src} não existe`);
+      if (b.type === 'read' && !ARTICLES.some((a) => a.id === b.article)) problems.push(`${s.id}: "leia ${b.article}" não existe`);
+      const inl = [...(b.inlines ?? []), ...(b.cite ?? []), ...(b.items ?? []).flat(), ...(b.events ?? []).flatMap((e) => e.text)];
+      for (const i of inl) if (i.t === 'ref' && parseReferences(i.href!).errors.length) problems.push(`${s.id}: referência "${i.href}" inválida`);
+    }
+  }
+  expect(problems).toEqual([]);
+});

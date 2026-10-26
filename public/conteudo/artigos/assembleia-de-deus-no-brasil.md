@@ -30,6 +30,8 @@ O mapa interativo mostra o caminho, etapa por etapa:
 
 ## Estado por estado
 
+[Abra a história completa de cada estado](/assembleia-de-deus) — escolha o estado e veja no mapa de onde saíram os pioneiros e como a igreja foi construída ali. Abaixo, o resumo.
+
 O jornal *Mensageiro da Paz* publicou a lista dos primeiros passos da igreja em cada estado, e as igrejas estaduais guardam as suas próprias histórias. Elas mostram um padrão: a maioria dos pioneiros **saiu de Belém** — missionários enviados, obreiros e, muitas vezes, crentes comuns que voltavam para a sua terra. As fontes nem sempre concordam; onde há divergência, isso aparece. No [mapa estado por estado](/mapas/assembleia-de-deus-estados), linhas douradas ligam a cidade de onde cada pessoa saiu à cidade aonde chegou.
 
 ### Os que vieram de fora do Brasil

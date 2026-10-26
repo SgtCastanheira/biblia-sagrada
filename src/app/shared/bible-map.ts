@@ -270,6 +270,8 @@ export class BibleMapView {
   readonly modern = input(false);
   /** Território destacado (id do território ou do grupo): os outros ficam apagados. */
   readonly highlight = input<string | null>(null);
+  /** Lugares para enquadrar ao abrir (ex.: a origem e o destino de uma viagem). */
+  readonly focus = input<string[] | null>(null);
 
   protected readonly clipId = `land-clip-${++instances}`;
 
@@ -576,8 +578,8 @@ export class BibleMapView {
     return map.steps.flatMap((s, i) => {
       const a = s.from ? place(s.from) : undefined;
       const b = place(s.place);
-      // Na jornada, só a linha da etapa atual; no mapa, todas (a escolhida em destaque)
-      if (!a || !b || (this.storyStep() !== null && i !== active)) return [];
+      // Na jornada ou com lugares enquadrados, só a linha da etapa atual; no mapa, todas (a escolhida em destaque)
+      if (!a || !b || ((this.storyStep() !== null || this.focus()) && i !== active)) return [];
       const x0 = v.x(a.lon), y0 = v.y(a.lat), x1 = v.x(b.lon), y1 = v.y(b.lat);
       const cx = (x0 + x1) / 2 - (y1 - y0) * 0.18, cy = (y0 + y1) / 2 + (x1 - x0) * 0.18;
       return [{ key: `${i}`, on: i === active, d: `M${x0.toFixed(1)},${y0.toFixed(1)}Q${cx.toFixed(1)},${cy.toFixed(1)} ${x1.toFixed(1)},${y1.toFixed(1)}` }];
@@ -706,6 +708,23 @@ export class BibleMapView {
       destroy.onDestroy(() => observer.disconnect());
     });
     destroy.onDestroy(() => cancelAnimationFrame(this.frame));
+
+    // Enquadra os lugares pedidos (ex.: de onde saiu e aonde chegou)
+    effect(() => {
+      const ids = this.focus();
+      const size = this.hostSize();
+      untracked(() => {
+        const v = this.view();
+        const pts = (ids ?? [])
+          .map((id) => this.map().places.find((p) => p.id === id))
+          .filter((p) => !!p)
+          .map((p) => ({ x: v.x(p.lon), y: v.y(p.lat) }));
+        if (!pts.length) return;
+        const target = this.fitBox(pts, size, 0.22);
+        const start = this.camera();
+        this.animate(700, (t) => this.cam.set(this.lerpBox(start, target, ease(t))));
+      });
+    });
 
     // Modo história: anima a câmera (e o viajante) a cada mudança de etapa
     let previous: number | null = null;
