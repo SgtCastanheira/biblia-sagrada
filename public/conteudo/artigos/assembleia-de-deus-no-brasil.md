@@ -28,6 +28,47 @@ O mapa interativo mostra o caminho, etapa por etapa:
 **O jeito sueco-nordestino.** O sociólogo Paul Freston descreve o jeito das primeiras Assembleias de Deus como um “ethos sueco-nordestino”: a piedade simples e rigorosa dos missionários suecos misturada com a cultura patriarcal do Nordeste, de onde vinha grande parte dos membros. Isso marcou a igreja por décadas: a liturgia, os costumes e a liderança.
 :::
 
+## Estado por estado
+
+As listas da denominação e as histórias das igrejas de cada estado registram quando e por quem a igreja chegou. Muitas vezes os primeiros a pregar não foram pastores, mas **crentes comuns** que voltavam para a sua terra ou iam visitar parentes. As fontes nem sempre concordam: onde há divergência, as duas datas aparecem. Veja tudo no [mapa estado por estado](/mapas/assembleia-de-deus-estados).
+
+### Norte
+- **Pará (1911):** Belém, a igreja-mãe, na casa de Celina de Albuquerque.
+- **Roraima (1915):** Cordulino Teixeira Bastos, que conheceu a fé pentecostal em Belém, mudou-se com a família para a região do rio Branco. A igreja foi registrada em 1948.
+- **Amapá (1916–1917):** em Macapá, Clímaco Bueno Aza vendia Bíblias e evangelizava; em 27 de junho de 1917, José de Matos Caravella fundou a igreja, com seis pessoas — a primeira igreja evangélica do Amapá.
+- **Amazonas (1917–1918):** Severino Moreno de Araújo chegou a Manaus em 1917; Samuel e Lina Nyström organizaram a igreja em 1º de janeiro de 1918.
+- **Rondônia (1922):** os primeiros passos, na região do rio Madeira.
+- **Acre (1932):** Manoel Pirabas dos Santos é lembrado como o evangelizador.
+- **Tocantins (1952):** Armando Chaves Cohen organizou a evangelização pelos rios Tocantins e Araguaia.
+
+### Nordeste
+- **Ceará, Alagoas e Paraíba (1914):** as histórias locais lembram a irmã Maria Nazaré, no Ceará, e Manoel Francisco Dubu, na Paraíba. Em Alagoas, o trabalho foi depois acompanhado por missionários suecos.
+- **Pernambuco (1916–1918):** Adriano Nobre foi enviado ao Recife em 1916; os missionários Joel e Signe Carlson chegaram em 1918.
+- **Rio Grande do Norte (1914–1918):** Joaquim Batista de Macedo evangelizou; o missionário Simon Sjögren é lembrado como fundador, em 1918. Natal recebeu a reunião preparatória de 1929 e a primeira Convenção Geral, em 1930.
+- **Maranhão (1921):** em São Luís, Clímaco Bueno Aza é lembrado como fundador.
+- **Bahia (1926–1927):** Joaquina de Souza Carvalho evangelizou; os primeiros batismos registrados foram em Canavieiras, em 1927. Segundo um registro local, o missionário Otto Nelson consagrou Teodoro Santana como o primeiro pastor da igreja no estado.
+- **Piauí e Sergipe (1927):** Raimundo Prudente de Almeida, no Piauí, e o sargento Ormínio, em Sergipe, são lembrados como os primeiros a evangelizar.
+
+### Sudeste
+- **Rio de Janeiro (1922–1924):** a igreja se estabeleceu em São Cristóvão; Gunnar e Frida Vingren chegaram em 1924.
+- **Espírito Santo (1922):** Daniel e Sara Berg fundaram a igreja em Vitória.
+- **São Paulo (1923–1924):** os Berg começaram em Santos a primeira Assembleia de Deus do estado.
+- **Minas Gerais (1927):** a igreja chegou a Belo Horizonte e ao interior.
+
+### Sul
+- **Santa Catarina (1920 e 1931):** as listas registram dois começos.
+- **Rio Grande do Sul (1924):** a igreja chegou a Porto Alegre.
+- **Paraná (1928):** a igreja chegou ao estado.
+
+### Centro-Oeste
+- **Goiás (1936):** em Goiânia, o pastor Antônio Moreira, um pedreiro vindo do Rio de Janeiro para as obras da nova capital, fundou a igreja.
+- **Mato Grosso (1936 ou 1944) e Mato Grosso do Sul (1944):** Juvenal Roque de Andrade é lembrado como fundador das igrejas de Cuiabá e de Campo Grande.
+- **Distrito Federal (1957–1959):** irmãos chegaram em 1957 para trabalhar na construção de Brasília; a igreja foi fundada em Taguatinga, em maio de 1959.
+
+:::nota
+**E a sua cidade?** A história de cada cidade está guardada nas igrejas locais: nas atas, nos livros de batismo e na memória dos irmãos mais antigos. Vale a pena perguntar a eles e registrar.
+:::
+
 ## Como os obreiros eram separados
 
 A palavra que a igreja usa vem da Bíblia. Em Antioquia, “disse o Espírito Santo: **Separai-me** a Barnabé e a Saulo para a obra a que os tenho chamado. Então, depois que jejuaram, oraram e lhes impuseram as mãos, os despediram” [[At 13.2-3]]. Por isso, nas Assembleias de Deus, consagrar um obreiro é **separá-lo**: a igreja reconhece um chamado, ora e impõe as mãos [[1Tm 4.14]]. E Paulo adverte: “a ninguém imponhas precipitadamente as mãos” [[1Tm 5.22]] — por isso o obreiro é “primeiro provado” [[1Tm 3.10]].

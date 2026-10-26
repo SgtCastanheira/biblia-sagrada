@@ -29,6 +29,7 @@ export const RELEASES: Release[] = [
       { icon: 'local_fire_department', title: 'Os avivamentos desde Atos', text: 'Época por época: como começou cada avivamento, por quem, como terminou, o que mudou na sociedade e os sermões de cada tempo.', link: '/artigo/avivamentos-desde-atos', tip: 'Em Estudo → Avivamentos.' },
       { icon: 'church', title: 'A história da Assembleia de Deus no Brasil', text: 'Como os obreiros eram separados em cada época, o casamento dos pioneiros, os costumes, o ensino e as mulheres na obra.', link: '/artigo/assembleia-de-deus-no-brasil' },
       { icon: 'map', title: 'Mapa interativo: do Pará ao Rio e a São Paulo', text: 'O caminho da igreja, etapa por etapa, com as datas e as distâncias.', link: '/mapas/assembleia-de-deus-no-brasil', tip: 'Toque em “Viver a jornada”.' },
+      { icon: 'pin_drop', title: 'Estado por estado', text: 'Quando e por quem a Assembleia de Deus chegou a cada estado, de Belém a Brasília, num mapa.', link: '/mapas/assembleia-de-deus-estados' },
     ],
   },
   {

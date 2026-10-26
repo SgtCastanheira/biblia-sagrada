@@ -169,6 +169,8 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'Wikipédia: Assembleias de Deus no Brasil e Convenção Geral das Assembleias de Deus no Brasil (pt.wikipedia.org)',
       'Histórias das Assembleias de Deus no Amazonas, em Pernambuco, no Ceará e na Paraíba, publicadas pelas próprias igrejas',
       'IBAD: histórico institucional (ibad.com.br)',
+      'ADEB: “A Assembleia de Deus no Brasil”, lista da chegada a cada estado (adeb.com.br)',
+      'Histórias das igrejas e convenções estaduais (Amapá, Roraima, Maranhão/CEADEMA, Bahia, Goiás/Jornal Opção, Brasília) e Portal CADB',
       'IBGE: Censos demográficos de 2000 e 2010 (religião)',
     ],
     works: ['conde', 'araujo-dicionario', 'araujo-100', 'vingren-diario', 'berg-enviado', 'freston', 'alencar'],

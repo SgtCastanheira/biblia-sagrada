@@ -81,6 +81,7 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
     - `:::pessoas` lists the characters, one per line: `- Nome | papel | imagens/foto.jpg` (photo optional; initials otherwise).
     - Scenes must only restate facts already in the article and its sources; no invented details.
     - `:::leia article-id` is a "read the full story" card linking to another article; the text inside (optional) says how the two stories connect. Use it where stories cross, so they interweave but each still stands alone.
+  - `:::ficha Título` is a fact sheet: lines `- Rótulo | texto` (used for each revival: Como começou, Por quê, Por meio de quem, A trajetória, O fim, Impacto na sociedade, A mensagem). `:::sermao id` is a card to a historical sermon in `CLASSIC_SERMONS`; each sermon's `revival` points back to the study of its revival.
   - A collection can have one overview article (`overview: true` in `library.ts`), like the book of Acts: a light summary of every story with a `:::leia` card for each. The history page features it first, and every story's cover links back to it. `ilustracoes.spec.ts` checks that every `:::leia` id exists and that the Igreja overview links to every Igreja article, so add a card there when adding a church-history article.
   - Story mode (`<app-rich-text [story]="true">`, used for the `STORY_COLLECTIONS` in `library.ts`, i.e. Igreja and Bíblia) adds numbered chapters, a drop cap, photos as tilted period prints, an alternating timeline on wide screens and reveal-on-scroll (CSS scroll-driven animations, off with reduced motion). The article page adds a dark cover (`portraits` in `Article`) and a reading progress bar.
 - `DictionaryMatcher` (`dictionary.ts`) marks dictionary `forms` in the reader. Each entry is marked once per chapter, and the longest form wins.
@@ -93,6 +94,8 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 - Every hymn lists the sources that confirm its number and author, and every origin lists its sources.
 - Never store lyrics (copyright of CPAD and the authors).
 - Only add hymns confirmed in public sources. Do not scrape sites that protect themselves against bots (hymnary.org does).
+
+**Narration voice** (`core/voice.ts`): the map journey speaks with the Web Speech API. It prefers Microsoft's Francisca (`pt-BR-FranciscaNeural`, available in the Edge browser as "Microsoft Francisca Online (Natural)"), then other natural pt-BR voices, then any Brazilian voice. The Azure voice itself would need a server with a secret key, so the app does not call it.
 
 **What's new** (`core/whats-new.ts`): when publishing user-visible features, add a new entry at the top of `RELEASES` with a new `id`. Every device sees it once (first visits included), in a bottom sheet (`WhatsNewService`, checked at startup before the daily reminders). It is also listed at `/novidades`, which has a share button.
 
