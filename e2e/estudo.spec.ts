@@ -319,3 +319,12 @@ test('estudo dos ministérios: na seção Igreja e ministérios, ligado ao dicio
   await page.getByRole('button', { name: /Estudar este capítulo/ }).click();
   await expect(page.getByRole('link', { name: /Os ministérios na Bíblia/ })).toBeVisible();
 });
+
+test('história da Igreja: o estudo de Daniel Berg e Gunnar Vingren, ligado ao do pentecostalismo no Brasil', async ({ page }) => {
+  await page.goto('/artigo/pentecostes-no-brasil');
+  await page.locator('app-rich-text').getByRole('link', { name: 'Daniel Berg e Gunnar Vingren' }).click();
+  await expect(page).toHaveURL(/\/artigo\/daniel-berg-e-gunnar-vingren/);
+  await expect(page.getByRole('heading', { name: 'O chamado: “Pará”' })).toBeVisible();
+  await page.getByText('Fontes das informações').click();
+  await expect(page.getByText(/O diário do pioneiro Gunnar Vingren/)).toBeVisible();
+});

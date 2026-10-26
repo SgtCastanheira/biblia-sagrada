@@ -22,6 +22,14 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'berg-e-vingren',
+    date: '26 de outubro de 2026',
+    title: 'Daniel Berg e Gunnar Vingren',
+    items: [
+      { icon: 'sailing', title: 'Os pioneiros da Assembleia de Deus', text: 'A vida dos dois suecos que chegaram a Belém em 1910: o chamado para o “Pará”, o trabalho na fundição, o nascimento da igreja em 1911 e o legado.', link: '/artigo/daniel-berg-e-gunnar-vingren', tip: 'Em Estudo → História da Igreja.' },
+    ],
+  },
+  {
     id: 'ministerios-na-biblia',
     date: '26 de outubro de 2026',
     title: 'Os ministérios na Bíblia',

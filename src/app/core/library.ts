@@ -307,6 +307,15 @@ export const ARTICLES: Article[] = [
     minutes: 5,
   },
   {
+    id: 'daniel-berg-e-gunnar-vingren',
+    collection: 'igreja',
+    title: 'Daniel Berg e Gunnar Vingren',
+    subtitle: 'Os dois suecos que chegaram a Belém em 1910 e deram início à Assembleia de Deus no Brasil: a vida, o chamado, o trabalho e o legado.',
+    period: '1879–1963',
+    icon: 'sailing',
+    minutes: 8,
+  },
+  {
     id: 'harpa-crista',
     collection: 'igreja',
     title: 'A história da Harpa Cristã',

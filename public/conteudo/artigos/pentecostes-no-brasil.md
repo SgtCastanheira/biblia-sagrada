@@ -6,6 +6,8 @@ O italiano **Luigi (Louis) Francescon**, que se tornara pentecostal em Chicago, 
 
 ## Gunnar Vingren e Daniel Berg
 
+A vida dos dois pioneiros está contada em detalhe no estudo [Daniel Berg e Gunnar Vingren](/artigo/daniel-berg-e-gunnar-vingren).
+
 **Gunnar Vingren** (1879–1933) e **Daniel Berg** (1884–1963) eram jovens suecos de origem batista que emigraram para os Estados Unidos. Em Chicago, foram batizados no Espírito Santo. Numa reunião de oração em South Bend, Indiana, um irmão, Adolf Uldin, profetizou que eles deveriam ir para um lugar chamado **Pará**. Nenhum dos dois sabia onde ficava; foram procurar numa biblioteca e descobriram que era um estado no norte do Brasil.
 
 Partiram sem sustento de nenhuma missão. Chegaram a **Belém** em **19 de novembro de 1910**, no navio *Clement*. Sem falar português, foram recebidos na Igreja Batista local. Daniel Berg trabalhou como fundidor numa companhia para sustentar os dois e pagar as aulas de português de Vingren; à noite, oravam com os irmãos que desejavam a promessa do Espírito.

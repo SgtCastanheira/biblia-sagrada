@@ -68,6 +68,8 @@ export const WORKS: Record<string, Work> = {
   conde: { author: 'Emílio Conde', title: 'História das Assembleias de Deus no Brasil', publisher: 'CPAD', kind: 'historia' },
   mariano: { author: 'Ricardo Mariano', title: 'Neopentecostais: sociologia do novo pentecostalismo no Brasil', publisher: 'Loyola, 1999', kind: 'historia' },
   // Igreja e ministérios
+  'vingren-diario': { author: 'Ivar Vingren', title: 'O diário do pioneiro Gunnar Vingren', publisher: 'CPAD, 1973', kind: 'historia' },
+  'berg-enviado': { author: 'Daniel Berg', title: 'Enviado por Deus: memórias de Daniel Berg', publisher: 'CPAD', kind: 'historia' },
   'declaracao-fe-ad': { author: 'Convenção Geral das Assembleias de Deus no Brasil (CGADB)', title: 'Declaração de Fé das Assembleias de Deus', publisher: 'CPAD, 2017', kind: 'historia' },
   // Hinos e Harpa Cristã
   'araujo-dicionario': { author: 'Isael de Araujo', title: 'Dicionário do Movimento Pentecostal', publisher: 'CPAD, 2007', kind: 'historia' },
@@ -147,6 +149,11 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'missoes-modernas': { ancient: ['William Carey, An Enquiry into the Obligations of Christians (1792)'], works: ['tucker', 'neill', 'noll'] },
   'movimento-pentecostal': { ancient: ['The Apostolic Faith, jornal da missão da Rua Azusa (1906–1908)'], works: ['robeck', 'synan', 'noll'] },
   'pentecostes-no-brasil': { works: ['conde', 'mariano', 'synan'] },
+  'daniel-berg-e-gunnar-vingren': {
+    ancientLabel: 'Documentos e sites consultados',
+    ancient: ['Wikipédia: Gunnar Vingren (pt.wikipedia.org/wiki/Gunnar_Vingren)', 'Wikipédia: Daniel Berg (pt.wikipedia.org/wiki/Daniel_Berg)', 'Svenskt kvinnobiografiskt lexikon: Frida Strandberg (Vingren)'],
+    works: ['vingren-diario', 'berg-enviado', 'conde', 'araujo-dicionario', 'araujo-100'],
+  },
   'ministerios-na-biblia': {
     ancient: ['Didaquê, capítulos 11–15 (apóstolos, profetas, bispos e diáconos)', 'Clemente de Roma, Carta aos Coríntios 42–44 (c. 96)', 'Inácio de Antioquia, Cartas aos Magnésios 6 e aos Esmirnenses 8 (c. 110)'],
     works: ['ditnt', 'ndb', 'carson-moo', 'keener-nt', 'ferguson', 'kelly', 'declaracao-fe-ad'],
