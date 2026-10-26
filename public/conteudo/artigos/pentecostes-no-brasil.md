@@ -6,6 +6,10 @@ O italiano **Luigi (Louis) Francescon**, que se tornara pentecostal em Chicago, 
 
 ## Gunnar Vingren e Daniel Berg
 
+:::cena Porto de Belém · 19 de novembro de 1910
+Dois jovens suecos descem do navio Clement sem falar português e sem sustento de nenhuma missão. Poucos meses depois, nasceria ali a Assembleia de Deus.
+:::
+
 A vida dos dois pioneiros está contada em detalhe no estudo [Daniel Berg e Gunnar Vingren](/artigo/daniel-berg-e-gunnar-vingren).
 
 **Gunnar Vingren** (1879–1933) e **Daniel Berg** (1884–1963) eram jovens suecos de origem batista que emigraram para os Estados Unidos. Em Chicago, foram batizados no Espírito Santo. Numa reunião de oração em South Bend, Indiana, um irmão, Adolf Uldin, profetizou que eles deveriam ir para um lugar chamado **Pará**. Nenhum dos dois sabia onde ficava; foram procurar numa biblioteca e descobriram que era um estado no norte do Brasil.

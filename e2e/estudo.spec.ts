@@ -332,10 +332,29 @@ test('história da Igreja: o estudo de Daniel Berg e Gunnar Vingren, ligado ao d
 test('história da Igreja ilustrada: árvore das Assembleias de Deus, fotos e o estudo de Frida Vingren', async ({ page }) => {
   await page.goto('/artigo/madureira-e-a-separacao');
   await expect(page.getByRole('img', { name: /Árvore das Assembleias de Deus/ })).toBeVisible();
-  const foto = page.getByRole('img', { name: 'Paulo Leivas Macalão' });
+  const foto = page.locator('figure.photo').getByRole('img', { name: 'Paulo Leivas Macalão' });
   await foto.scrollIntoViewIfNeeded();
   await expect.poll(() => foto.evaluate((img: HTMLImageElement) => img.naturalWidth)).toBeGreaterThan(0);
   await page.locator('app-rich-text').getByRole('link', { name: 'Frida Vingren' }).first().click();
   await expect(page.getByRole('img', { name: /O caminho de Frida Vingren/ })).toBeVisible();
   await expect(page.getByText('Dia Nacional da Música Gospel').first()).toBeVisible();
+});
+
+test('histórias imersivas: capa, personagens, capítulos, cenas e destaque', async ({ page }) => {
+  await page.goto('/artigo/daniel-berg-e-gunnar-vingren');
+  await expect(page.locator('.hero').getByRole('heading', { level: 1, name: 'Daniel Berg e Gunnar Vingren' })).toBeVisible();
+  const personagens = page.getByRole('list', { name: 'Personagens desta história' });
+  await expect(personagens.getByText('Celina de Albuquerque')).toBeVisible();
+  await expect(page.locator('.chapter').first()).toHaveText('Capítulo 1');
+  await expect(page.locator('.scene').filter({ hasText: '19 de novembro de 1910' })).toHaveCount(1);
+  await expect(page.getByRole('img', { name: /A viagem de Gunnar Vingren e Daniel Berg/ })).toBeAttached();
+  await page.locator('.pullquote').getByRole('button', { name: 'Mc 16.15' }).click();
+  await expect(page.getByText(/Ide por todo o mundo/).last()).toBeVisible();
+});
+
+test('estudos que não são histórias continuam com a leitura simples', async ({ page }) => {
+  await page.goto('/artigo/ministerios-na-biblia');
+  await expect(page.getByRole('heading', { level: 1, name: 'Os ministérios na Bíblia' })).toBeVisible();
+  await expect(page.locator('.hero')).toHaveCount(0);
+  await expect(page.locator('.chapter')).toHaveCount(0);
 });

@@ -64,6 +64,24 @@ import { Component, input } from '@angular/core';
           <g class="place"><circle cx="92" cy="268" r="7" /><text x="78" y="294" class="sub">Rio de Janeiro</text></g>
         </svg>
       }
+      @case ('berg-vingren-viagem') {
+        <svg viewBox="0 0 340 330" role="img" aria-label="A viagem de Gunnar Vingren e Daniel Berg: da Suécia aos Estados Unidos e de Nova York a Belém do Pará">
+          <g class="region"><rect x="8" y="8" width="186" height="150" rx="18" /><text x="101" y="30" class="label">ESTADOS UNIDOS</text></g>
+          <g class="region"><rect x="214" y="8" width="118" height="120" rx="18" /><text x="273" y="30" class="label">SUÉCIA</text></g>
+          <g class="region"><rect x="96" y="196" width="236" height="126" rx="18" /><text x="214" y="218" class="label">BRASIL</text></g>
+          <g class="links">
+            <path class="route" d="M262 72 C 220 56, 110 56, 52 72" />
+            <path d="M48 82 C 66 112, 104 124, 150 116" />
+            <path class="route back" d="M158 122 C 200 150, 230 200, 210 262" />
+          </g>
+          <text x="200" y="50" class="year">1902–1903</text>
+          <text x="248" y="186" class="year">nov. 1910</text>
+          <g class="place"><circle cx="268" cy="72" r="7" /><text x="273" y="96" class="sub">Östra Husby</text><text x="273" y="112" class="sub">e Vargön</text></g>
+          <g class="place"><circle cx="46" cy="76" r="7" /><text x="60" y="94" class="sub start">Chicago e</text><text x="60" y="110" class="sub start">South Bend</text></g>
+          <g class="place"><circle cx="154" cy="118" r="7" /><text x="140" y="144" class="sub">Nova York</text></g>
+          <g class="place"><circle cx="208" cy="268" r="8" /><text x="224" y="273" class="sub start">Belém do Pará</text><text x="224" y="290" class="sub start">1910–1911</text></g>
+        </svg>
+      }
     }
   `,
   styles: `

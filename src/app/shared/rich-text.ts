@@ -2,24 +2,64 @@ import { NgTemplateOutlet } from '@angular/common';
 import { Component, computed, inject, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import { parseBlocks } from '../core/rich-text-parser';
+import { Block, parseBlocks } from '../core/rich-text-parser';
 import { Figure } from './figure';
 import { Sheets } from './sheets';
 
-/** Mostra texto de estudo formatado. Referências bíblicas abrem o texto num painel. */
+/** Seções que fecham a história recebem um nome em vez de número de capítulo. */
+const SECTION_LABELS: Record<string, string> = {
+  'Para a vida': 'Reflexão',
+  'Linha do tempo': 'Em resumo',
+  Resumo: 'Em resumo',
+  Redescoberta: 'Epílogo',
+};
+
+/**
+ * Mostra texto de estudo formatado. Referências bíblicas abrem o texto num painel.
+ * No modo história (story), o texto vira uma narrativa: capítulos numerados, letra capitular,
+ * fotos como retratos de época, cenas, frases em destaque e blocos que aparecem ao rolar.
+ */
 @Component({
   selector: 'app-rich-text',
   imports: [NgTemplateOutlet, RouterLink, MatIconModule, Figure],
+  host: { '[class.story]': 'story()' },
   template: `
     <ng-template #line let-parts>@for (p of parts; track $index) {@switch (p.t) {@case ('b') {<strong>{{ p.text }}</strong>}@case ('i') {<em>{{ p.text }}</em>}@case ('ref') {<button type="button" class="ref" (click)="openRef(p.href)">{{ p.text }}</button>}@case ('link') {<a class="link" [routerLink]="p.href">{{ p.text }}</a>}@default {{{ p.text }}}}}</ng-template>
 
-    @for (b of blocks(); track $index) {
+    @for (b of blocks(); track $index; let i = $index) {
       @switch (b.type) {
-        @case ('h2') { <h2 [id]="b.anchor"><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></h2> }
+        @case ('h2') {
+          @if (story()) { <span class="chapter" aria-hidden="true">{{ labels()[i] }}</span> }
+          <h2 [id]="b.anchor"><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></h2>
+        }
         @case ('h3') { <h3><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></h3> }
         @case ('quote') { <blockquote><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></blockquote> }
         @case ('note') {
           <aside class="note"><mat-icon>lightbulb</mat-icon><p><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></p></aside>
+        }
+        @case ('scene') {
+          <section class="scene">
+            @if (b.place) { <span class="place"><mat-icon>location_on</mat-icon>{{ b.place }}</span> }
+            <p><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></p>
+          </section>
+        }
+        @case ('pullquote') {
+          <figure class="pullquote">
+            <blockquote><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></blockquote>
+            @if (b.cite) { <figcaption><ng-container *ngTemplateOutlet="line; context: { $implicit: b.cite }" /></figcaption> }
+          </figure>
+        }
+        @case ('people') {
+          <ul class="people" aria-label="Personagens desta história">
+            @for (p of b.people; track p.name) {
+              <li>
+                @if (p.src) { <img [src]="'conteudo/' + p.src" [alt]="p.name" loading="lazy" /> }
+                @else { <span class="initials" aria-hidden="true">{{ initials(p.name) }}</span> }
+                <strong>{{ p.name }}</strong>
+                <span class="role">{{ p.role }}</span>
+              </li>
+            }
+          </ul>
         }
         @case ('ul') {
           <ul>@for (item of b.items; track $index) { <li><ng-container *ngTemplateOutlet="line; context: { $implicit: item }" /></li> }</ul>
@@ -33,8 +73,10 @@ import { Sheets } from './sheets';
               <li>
                 <span class="marker"></span>
                 <span class="date">{{ e.date }}</span>
-                <span class="title">{{ e.title }}</span>
-                <span class="text"><ng-container *ngTemplateOutlet="line; context: { $implicit: e.text }" /></span>
+                <span class="card-text">
+                  <span class="title">{{ e.title }}</span>
+                  <span class="text"><ng-container *ngTemplateOutlet="line; context: { $implicit: e.text }" /></span>
+                </span>
               </li>
             }
           </ol>
@@ -52,7 +94,7 @@ import { Sheets } from './sheets';
           </div>
         }
         @case ('image') {
-          <figure class="photo">
+          <figure class="photo" [class.left]="photoSide()[i]">
             <img [src]="'conteudo/' + b.src" [alt]="b.alt" loading="lazy" />
             @if (b.caption) { <figcaption><ng-container *ngTemplateOutlet="line; context: { $implicit: b.caption }" /></figcaption> }
           </figure>
@@ -63,63 +105,42 @@ import { Sheets } from './sheets';
             @if (b.caption) { <figcaption><ng-container *ngTemplateOutlet="line; context: { $implicit: b.caption }" /></figcaption> }
           </figure>
         }
-        @default { <p><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></p> }
+        @default { <p [class.opening]="i === opening()"><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></p> }
       }
     }
   `,
-  styles: `
-    :host { display: block; font: 400 17px/1.75 var(--reading-font); }
-    p { margin: 0 0 16px; }
-    h2 { font: 600 22px/1.3 var(--heading-font); margin: 30px 0 10px; letter-spacing: -.2px; scroll-margin-top: 72px; }
-    h3 { font: 600 18px/1.35 var(--heading-font); margin: 22px 0 8px; color: var(--mat-sys-primary); }
-    strong { font-weight: 600; }
-    blockquote {
-      margin: 0 0 18px; padding: 4px 0 4px 18px; border-left: 3px solid var(--accent-gold);
-      font-style: italic; color: var(--mat-sys-on-surface);
-    }
-    ul, ol { margin: 0 0 16px; padding-left: 22px; }
-    li { margin-bottom: 6px; }
-    li::marker { color: var(--accent-gold); font-weight: 600; }
-    .ref {
-      display: inline; padding: 0; border: 0; background: none; cursor: pointer; font: inherit; font-weight: 600;
-      color: var(--mat-sys-primary); text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
-      text-underline-offset: 3px;
-    }
-    .link { color: var(--mat-sys-primary); font-weight: 600; text-underline-offset: 3px; }
-    .note {
-      display: flex; gap: 12px; margin: 4px 0 20px; padding: 14px 16px; border-radius: 16px;
-      background: var(--mat-sys-primary-container); color: var(--mat-sys-on-primary-container);
-    }
-    .note mat-icon { flex: none; color: var(--accent-gold); }
-    .note p { margin: 0; font: 400 16px/1.6 var(--reading-font); }
-    .table-wrap { overflow-x: auto; margin: 4px 0 20px; border-radius: 14px; border: 1px solid var(--mat-sys-outline-variant); }
-    table { width: 100%; border-collapse: collapse; font: 400 15px/1.45 var(--reading-font); }
-    th { text-align: left; font: 600 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); background: var(--mat-sys-surface-container); padding: 10px 12px; }
-    td { padding: 10px 12px; border-top: 1px solid var(--mat-sys-outline-variant); vertical-align: top; min-width: 120px; }
-    .timeline { list-style: none; padding: 0; margin: 8px 0 22px; }
-    .timeline li { position: relative; display: flex; flex-direction: column; padding: 0 0 18px 28px; margin: 0; }
-    .timeline li::before {
-      content: ''; position: absolute; left: 5px; top: 18px; bottom: -2px; width: 1px; background: var(--mat-sys-outline-variant);
-    }
-    .timeline li:last-child { padding-bottom: 0; }
-    .timeline li:last-child::before { display: none; }
-    .marker {
-      position: absolute; left: 0; top: 5px; width: 11px; height: 11px; border-radius: 50%; box-sizing: border-box;
-      border: 1.5px solid var(--accent-gold); background: var(--mat-sys-surface);
-    }
-    .date { font: 600 13px Inter, sans-serif; color: var(--accent-gold); letter-spacing: .3px; }
-    figure { margin: 6px 0 22px; }
-    .photo img { display: block; width: min(100%, 240px); height: auto; border-radius: 14px; border: 1px solid var(--mat-sys-outline-variant); }
-    .diagram { padding: 12px; border-radius: 16px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface-container-low); }
-    figcaption { margin-top: 8px; font: 400 13px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
-    .title { font: 600 17px/1.35 var(--heading-font); }
-    .text { font: 400 16px/1.6 var(--reading-font); color: var(--mat-sys-on-surface-variant); }
-  `,
+  styleUrl: './rich-text.scss',
 })
 export class RichText {
   readonly source = input.required<string>();
+  /** Modo história: capítulos, letra capitular, retratos e animações ao rolar. */
+  readonly story = input(false);
   private readonly sheets = inject(Sheets);
   protected readonly blocks = computed(() => parseBlocks(this.source()));
+
+  /** Rótulo de cada título de seção: "Capítulo 1", "Capítulo 2"… ou um nome especial. */
+  protected readonly labels = computed(() => {
+    let n = 0;
+    return this.blocks().map((b) => {
+      if (b.type !== 'h2') return '';
+      const text = b.inlines!.map((x) => x.text).join('');
+      return SECTION_LABELS[text] ?? `Capítulo ${++n}`;
+    });
+  });
+
+  /** O primeiro parágrafo ganha a letra capitular. */
+  protected readonly opening = computed(() => (this.story() ? this.blocks().findIndex((b: Block) => b.type === 'p') : -1));
+
+  /** As fotos alternam de lado no computador, como numa revista. */
+  protected readonly photoSide = computed(() => {
+    let n = 0;
+    return this.blocks().map((b) => b.type === 'image' && n++ % 2 === 1);
+  });
+
+  protected initials(name: string): string {
+    const words = name.split(/\s+/).filter((w) => /^[A-ZÀ-Ú]/.test(w));
+    return (words[0]?.[0] ?? '') + (words.length > 1 ? words[words.length - 1][0] : '');
+  }
 
   protected openRef(ref: string): void {
     this.sheets.passage(ref);

@@ -8,6 +8,10 @@ Em **1921**, em Belém do Pará, saiu o **Cantor Pentecostal**, editado sob a di
 
 ## A primeira Harpa (1922)
 
+:::cena Recife · 1922
+Mil exemplares de um hinário novo, a Harpa Cristã, ficam prontos. O missionário Samuel Nyström os leva pelo Brasil, e o hinário começa a chegar às igrejas.
+:::
+
 :::tempo
 - 1921 | Cantor Pentecostal | Belém: 44 hinos e 10 corinhos, sob a direção de Almeida Sobrinho
 - 1922 | 1ª edição da Harpa Cristã | Recife, sob a orientação editorial do pastor **Adriano Nobre**; mil exemplares, levados pelo Brasil pelo missionário **Samuel Nyström**. A CPAD registra 100 hinos nessa edição
@@ -22,9 +26,22 @@ Do pastor Adriano Nobre (1883–1938), que serviu de intérprete para Gunnar Vin
 
 ## Quem traduziu e escreveu
 
+:::pessoas
+- Paulo Leivas Macalão | principal tradutor e adaptador (P.L.M.) | imagens/paulo-leivas-macalao.jpg
+- Frida Vingren | hinos como o 85 (F.V.) | imagens/frida-vingren.jpg
+- Samuel Nyström | traduções do sueco (S.N.)
+- Adriano Nobre | editor da primeira Harpa
+- Emílio Conde | da comissão da Harpa com música
+:::
+
 A maior parte dos primeiros hinos veio da **hinódia escandinava**, trazida pelos missionários suecos. **Samuel Nyström**, que ainda não dominava o português, traduzia os textos ao pé da letra; o pastor **Paulo Leivas Macalão** (1903–1982) adaptava as palavras às melodias. Macalão é lembrado como o principal tradutor e adaptador da Harpa, e traduziu também hinos dos hinários das assembleias italianas dos Estados Unidos — como o **328, “O Pão da Vida”**, vindo do italiano *Gesù, pane di vita*.
 
 Outros nomes ligados à Harpa são **Frida Vingren**, esposa de Gunnar Vingren, **Emílio Conde** e o missionário **Nils Kastberg**. A Harpa traz as iniciais de quem escreveu ou traduziu cada hino — como **P.L.M.** (Paulo Leivas Macalão), **F.V.** (Frida Vingren) e **S.N.** (Samuel Nyström).
+
+:::destaque
+Cantai ao Senhor um cântico novo, cantai ao Senhor, todos os moradores da terra.
+— [[Sl 96.1]]
+:::
 
 ## A Harpa com música
 

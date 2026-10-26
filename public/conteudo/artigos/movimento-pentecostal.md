@@ -14,6 +14,10 @@ Em 1905, Parham abriu uma escola em Houston, no Texas. Um de seus alunos foi **W
 
 No início de 1906, Seymour foi convidado para pregar numa pequena igreja de Los Angeles. Pregou sobre o batismo no Espírito com línguas — e, como ele mesmo ainda não tinha a experiência, a líder da igreja trancou a porta. Ele continuou as reuniões de oração na casa de Richard e Ruth Asberry, na rua Bonnie Brae, nº 214. Em 9 de abril de 1906, depois de dias de oração e jejum, o Espírito Santo foi derramado: várias pessoas falaram em línguas, e Seymour recebeu a experiência poucos dias depois. Multidões se juntaram na rua.
 
+:::cena Rua Bonnie Brae, nº 214, Los Angeles · 9 de abril de 1906
+Depois de dias de oração e jejum numa casa simples, várias pessoas começam a falar em outras línguas. A notícia corre, e uma multidão se junta na rua.
+:::
+
 O grupo alugou um velho prédio de madeira na **Rua Azusa, nº 312**, antes uma igreja metodista episcopal africana, que estava sendo usado como depósito e estábulo. Ali, com bancos feitos de tábuas e um púlpito de caixotes, começaram cultos que duraram três anos, de manhã à noite, quase sem parar.
 
 :::tempo
@@ -27,6 +31,11 @@ O grupo alugou um velho prédio de madeira na **Rua Azusa, nº 312**, antes uma 
 :::
 
 O jornal *Los Angeles Times* zombou dos cultos com a manchete “Estranha babel de línguas”. Mas o que mais impressionava os visitantes era outra coisa: brancos, negros, latinos e asiáticos, ricos e pobres, homens e mulheres, oravam juntos e se abraçavam — numa época de segregação racial. Frank Bartleman, que viveu aquele avivamento, escreveu que ali “a linha da cor foi lavada pelo sangue”.
+
+:::destaque
+Mas recebereis poder, ao descer sobre vós o Espírito Santo, e ser-me-eis testemunhas.
+— [[At 1.8]]
+:::
 
 ## Do mundo inteiro, para o mundo inteiro
 

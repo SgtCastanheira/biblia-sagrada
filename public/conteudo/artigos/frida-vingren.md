@@ -2,11 +2,23 @@
 
 **Frida Vingren** foi enfermeira, missionária, pregadora, professora, escritora, editora e compositora de hinos. Esposa de Gunnar Vingren, trabalhou ao lado dele por quinze anos no começo da Assembleia de Deus no Brasil — e, durante décadas, quase não foi lembrada. Hoje a sua história foi redescoberta: desde 2024, o dia do seu nascimento, **9 de junho**, é o **Dia Nacional da Música Gospel** no Brasil.
 
+:::pessoas
+- Frida Vingren | enfermeira, pregadora e compositora | imagens/frida-vingren.jpg
+- Gunnar Vingren | o marido, pioneiro da Assembleia de Deus | imagens/gunnar-vingren.jpg
+- Lewi Pethrus | pastor da Igreja Filadélfia de Estocolmo
+- Lina Nyström | missionária com quem Frida começou em Belém
+- Samuel Nyström | missionário contrário à pregação feminina
+:::
+
 ## Da Suécia ao chamado
 
 **Frida Maria Strandberg** nasceu em **9 de junho de 1891**, em Själevad, no norte da Suécia, numa família luterana. Perdeu a mãe em 1905, aos 14 anos. Em 1914 fez um curso bíblico — as fontes divergem sobre a escola — e depois se formou em **enfermagem** (1915–1917).
 
 Em 1916 conheceu os pentecostais em Estocolmo e entrou para a **Igreja Filadélfia**, a igreja pastoreada por Lewi Pethrus. Foi batizada nas águas em **24 de janeiro de 1917** e, poucos meses depois, foi enviada como a **primeira missionária** daquela igreja. Saiu de Estocolmo em 28 de maio de 1917 e chegou ao Pará em **julho de 1917**, aos 26 anos.
+
+:::cena Estocolmo · 28 de maio de 1917
+Uma enfermeira de 26 anos, batizada havia quatro meses, deixa a Suécia como a primeira missionária enviada pela Igreja Filadélfia. O destino é o Pará, do outro lado do oceano.
+:::
 
 :::figura frida-caminho
 O caminho de Frida: de Själevad e Estocolmo a Belém (1917), ao Rio de Janeiro (1924) e de volta à Suécia (1932).
@@ -29,6 +41,10 @@ Com a família, Frida foi para o Rio de Janeiro e trabalhou na igreja de **São 
 Quando os jornais *Boa Semente* e *O Som Alegre* se uniram no **Mensageiro da Paz**, em 1930, Gunnar e Samuel Nyström eram os editores oficiais, mas, segundo o mesmo dicionário, quem fazia o trabalho era Frida.
 
 ## A questão do ministério feminino
+
+:::cena Natal · setembro de 1930
+Missionários suecos e pastores brasileiros estão reunidos. O assunto oficial é passar a liderança da obra aos brasileiros, mas a discussão mais dura é outra: o que as mulheres podem fazer na igreja. Frida defende o seu ministério com textos bíblicos.
+:::
 
 Em **setembro de 1930**, em Natal, missionários e pastores brasileiros se reuniram na assembleia que deu origem à **Convenção Geral das Assembleias de Deus**. O assunto oficial era passar a liderança da obra aos pastores brasileiros, mas a discussão mais dura foi sobre **o que as mulheres podiam fazer na igreja**. O missionário Samuel Nyström era contra as mulheres pregarem; Frida defendeu o seu ministério com textos bíblicos, mas a reunião restringiu o papel das mulheres.
 
@@ -57,6 +73,11 @@ Em **outubro de 2024**, foi sancionada a lei que criou o **Dia Nacional da Músi
 - 1932 | Volta à Suécia | Depois da morte da filha Gunvor
 - 1940 | Morte | Estocolmo (30 de setembro)
 - 2024 | Dia Nacional da Música Gospel | Celebrado no dia do seu nascimento, 9 de junho
+:::
+
+:::destaque
+Porque Deus não é injusto, para se esquecer da vossa obra, e do amor que para com o seu nome mostrastes.
+— [[Hb 6.10]]
 :::
 
 ## Para a vida

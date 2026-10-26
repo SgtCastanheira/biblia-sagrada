@@ -16,7 +16,12 @@ export interface Article {
   map?: string;
   /** Capítulos em que o leitor oferece este estudo (ex.: "MRK 5"). */
   passages?: string[];
+  /** Retratos na capa da história (fotos em public/conteudo/imagens). */
+  portraits?: string[];
 }
+
+/** Coleções lidas como narrativa (capa, capítulos e cenas). */
+export const STORY_COLLECTIONS: ArticleCollection[] = ['igreja', 'biblia'];
 
 export const COLLECTIONS: Record<ArticleCollection, { name: string; description: string; icon: string }> = {
   estudos: {
@@ -314,6 +319,7 @@ export const ARTICLES: Article[] = [
     period: '1879–1963',
     icon: 'sailing',
     minutes: 8,
+    portraits: ['imagens/gunnar-vingren.jpg'],
   },
   {
     id: 'frida-vingren',
@@ -323,6 +329,7 @@ export const ARTICLES: Article[] = [
     period: '1891–1940',
     icon: 'woman',
     minutes: 7,
+    portraits: ['imagens/frida-vingren.jpg'],
   },
   {
     id: 'madureira-e-a-separacao',
@@ -332,6 +339,7 @@ export const ARTICLES: Article[] = [
     period: '1922–hoje',
     icon: 'account_tree',
     minutes: 8,
+    portraits: ['imagens/gunnar-vingren.jpg', 'imagens/paulo-leivas-macalao.jpg'],
   },
   {
     id: 'harpa-crista',

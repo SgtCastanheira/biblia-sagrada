@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { map, startWith, switchMap } from 'rxjs';
 import { ContentService } from '../../core/content.service';
-import { articlesOf, COLLECTIONS, findArticle } from '../../core/library';
+import { articlesOf, COLLECTIONS, findArticle, STORY_COLLECTIONS } from '../../core/library';
 import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
 import { outline } from '../../core/rich-text-parser';
@@ -26,10 +26,27 @@ import { SourcesBox } from '../../shared/sources-box';
           <app-back fallback="/historia" [queryParams]="{ colecao: a.collection }" />
           <button mat-icon-button (click)="share()" aria-label="Compartilhar"><mat-icon>ios_share</mat-icon></button>
         </div>
-        <span class="overline">{{ collection()?.name }} · {{ a.period }}</span>
-        <h1 class="title">{{ a.title }}</h1>
-        <p class="lead">{{ a.subtitle }}</p>
-        <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
+        @if (story()) {
+          <div class="progress" aria-hidden="true"></div>
+          <header class="hero">
+            <mat-icon class="watermark" aria-hidden="true">{{ a.icon }}</mat-icon>
+            <span class="hero-over">{{ collection()?.name }}</span>
+            <span class="era">{{ a.period }}</span>
+            @if (a.portraits?.length) {
+              <div class="portraits" aria-hidden="true">
+                @for (src of a.portraits; track src) { <img [src]="'conteudo/' + src" alt="" /> }
+              </div>
+            }
+            <h1 class="title">{{ a.title }}</h1>
+            <p class="lead">{{ a.subtitle }}</p>
+            <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura · role para entrar na história</p>
+          </header>
+        } @else {
+          <span class="overline">{{ collection()?.name }} · {{ a.period }}</span>
+          <h1 class="title">{{ a.title }}</h1>
+          <p class="lead">{{ a.subtitle }}</p>
+          <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
+        }
 
         @if (mapInfo(); as m) {
           <a class="card map" matRipple [routerLink]="['/mapas', m.id]">
@@ -40,9 +57,9 @@ import { SourcesBox } from '../../shared/sources-box';
 
         @if (toc().length > 2) {
           <nav class="toc" aria-label="Neste estudo">
-            <span class="toc-title"><mat-icon>list</mat-icon> Neste estudo</span>
+            <span class="toc-title"><mat-icon>list</mat-icon> {{ story() ? 'Nesta história' : 'Neste estudo' }}</span>
             @for (t of toc(); track t.anchor) {
-              <button (click)="jump(t.anchor)">{{ t.text }}</button>
+              <button (click)="jump(t.anchor)">@if (story()) {<span class="n">{{ $index + 1 }}</span>}{{ t.text }}</button>
             }
           </nav>
         }
@@ -50,7 +67,7 @@ import { SourcesBox } from '../../shared/sources-box';
         @if (body() === undefined) {
           <div class="skeleton"><span></span><span></span><span></span><span class="short"></span></div>
         } @else if (body(); as text) {
-          <app-rich-text [source]="text" />
+          <app-rich-text [source]="text" [story]="story()" />
         } @else {
           <p class="empty">Não foi possível abrir este texto agora.</p>
         }
@@ -97,6 +114,40 @@ import { SourcesBox } from '../../shared/sources-box';
     .neighbours small { font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .neighbours .next { justify-content: flex-end; text-align: right; }
     .neighbours mat-icon { color: var(--mat-sys-primary); flex: none; }
+    .toc .n {
+      display: inline-grid; place-items: center; width: 24px; height: 24px; margin-right: 10px; border-radius: 50%;
+      font: 700 13px Inter, sans-serif; color: var(--accent-gold); border: 1px solid var(--accent-gold);
+    }
+    /* Capa das histórias: escura e sépia, como a abertura de um documentário */
+    .hero {
+      position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: flex-start;
+      margin: 4px -20px 24px; padding: 28px 20px 22px; color: #fbf4e6;
+      background: radial-gradient(110% 80% at 100% 0%, rgba(226, 194, 140, .28), transparent 60%), linear-gradient(165deg, #45321f, #21180f 75%);
+    }
+    @media (min-width: 840px) { .hero { margin: 4px 0 28px; padding: 40px 36px 30px; border-radius: 28px; } }
+    .watermark {
+      position: absolute; right: -24px; bottom: -36px; width: 220px; height: 220px; font-size: 220px;
+      color: rgba(226, 194, 140, .1); pointer-events: none;
+    }
+    .hero-over { font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 2px; color: #e2c28c; }
+    .era { margin: 6px 0 14px; font: 600 40px/1 var(--heading-font); letter-spacing: -.5px; color: #e2c28c; }
+    .portraits { display: flex; margin-bottom: 16px; }
+    .portraits img {
+      width: 84px; height: 84px; border-radius: 50%; object-fit: cover; object-position: top; filter: sepia(.4) contrast(1.05);
+      box-shadow: 0 0 0 3px #21180f, 0 0 0 5px #e2c28c;
+    }
+    .portraits img + img { margin-left: -14px; }
+    .hero .title { position: relative; margin: 0 0 10px; font-size: 34px; color: #fff8ec; }
+    .hero .lead { position: relative; margin: 0 0 16px; color: #eadfcb; }
+    .hero .time { position: relative; margin: 0; color: #d9c9ad; }
+    .progress {
+      display: none; position: fixed; inset: 0 0 auto; z-index: 1000; height: 3px; background: var(--accent-gold);
+      transform-origin: 0 50%; transform: scaleX(0);
+    }
+    @supports (animation-timeline: scroll()) {
+      .progress { display: block; animation: read linear both; animation-timeline: scroll(root); }
+    }
+    @keyframes read { to { transform: scaleX(1); } }
   `,
 })
 export class ArticlePage {
@@ -108,6 +159,8 @@ export class ArticlePage {
     const a = this.article();
     return a ? COLLECTIONS[a.collection] : undefined;
   });
+  /** Histórias (Igreja e Bíblia) ganham capa e leitura em capítulos. */
+  protected readonly story = computed(() => STORY_COLLECTIONS.includes(this.article()?.collection!));
   protected readonly mapInfo = computed(() => {
     const id = this.article()?.map;
     return id ? findMap(id) : undefined;

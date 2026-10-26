@@ -1,5 +1,13 @@
 Em 19 de novembro de 1910, dois jovens suecos desembarcaram em Belém do Pará sem falar português, sem salário de nenhuma missão e sem conhecer ninguém. Sete meses depois nascia a igreja que viria a ser a **Assembleia de Deus**, hoje a maior igreja evangélica do Brasil. Esta é a história de **Gunnar Vingren** e **Daniel Berg** — e de como Deus usa gente simples que obedece: “Ide por todo o mundo, e pregai o evangelho a toda criatura” [[Mc 16.15]].
 
+:::pessoas
+- Gunnar Vingren | pastor e organizador | imagens/gunnar-vingren.jpg
+- Daniel Berg | fundidor e evangelista
+- Frida Vingren | missionária e pregadora | imagens/frida-vingren.jpg
+- Celina de Albuquerque | a primeira batizada no Espírito em Belém
+- Lewi Pethrus | o amigo de Berg que liderou os pentecostais suecos
+:::
+
 ## Gunnar Vingren (1879–1933)
 
 ![Gunnar Vingren](imagens/gunnar-vingren.jpg "Gunnar Vingren em 1908. Foto de autor desconhecido, em domínio público (Wikimedia Commons).")
@@ -18,11 +26,23 @@ Em **1902** foi para os Estados Unidos: chegou a Boston em março e depois foi p
 
 ## O chamado: “Pará”
 
+:::cena South Bend, Indiana · 1910
+Numa reunião de oração, uma profecia aponta para um lugar que nenhum dos dois conhece: Pará. Para descobrir onde fica, eles vão procurar numa biblioteca.
+:::
+
 Em South Bend, numa reunião de oração, Vingren e Berg receberam uma **profecia** chamando os dois para um lugar chamado **Pará**. Segundo o relato dos pioneiros, nenhum dos dois sabia onde ficava: foram a uma biblioteca e descobriram que era um estado no norte do Brasil, na foz do Amazonas.
 
 Partiram de **Nova York** no começo de novembro de 1910 e chegaram a **Belém em 19 de novembro de 1910**, como Abraão, que “saiu, sem saber para onde ia” [[Hb 11.8]].
 
+:::figura berg-vingren-viagem
+O caminho dos pioneiros: da Suécia aos Estados Unidos (1902–1903) e de Nova York a Belém do Pará (novembro de 1910).
+:::
+
 ## Belém: fundidor de dia, estudante à noite
+
+:::cena Porto de Belém · 19 de novembro de 1910
+Dois jovens suecos descem do navio Clement. Não falam português, não recebem salário de nenhuma missão e não conhecem ninguém na cidade.
+:::
 
 Os dois foram recebidos pela **Igreja Batista de Belém** e hospedados no porão da casa de um ministro batista. Daniel Berg empregou-se como caldeireiro e fundidor na companhia **Port of Pará**: com o salário pagava as aulas de português de Vingren e comprava Bíblias. De dia Vingren estudava a língua; à noite ensinava a Berg o que tinha aprendido, e os dois oravam com os irmãos que buscavam a promessa do Espírito [[At 2.38-39]].
 
@@ -30,8 +50,17 @@ Em junho de 1911, a irmã **Celina de Albuquerque** foi a primeira a receber o b
 
 Em **18 de junho de 1911**, esse pequeno grupo formou a **Missão da Fé Apostólica**. Em **11 de janeiro de 1918**, Vingren registrou a igreja em cartório já com o nome de **Assembleia de Deus**.
 
+:::cena Belém · 18 de junho de 1911
+Excluídos da igreja batista, dezoito irmãos e os dois missionários se reúnem como um grupo novo: a Missão da Fé Apostólica. Era o começo da Assembleia de Deus.
+:::
+
 :::nota
 **Como a igreja primitiva.** O grupo de Belém começou pequeno, perseguido e sem recursos, mas cheio do Espírito — como os discípulos em Jerusalém, que “perseveravam unanimemente em oração” [[At 1.14]] — e “cada dia acrescentava-lhes o Senhor os que iam sendo salvos” [[At 2.47]].
+:::
+
+:::destaque
+Ide por todo o mundo, e pregai o evangelho a toda criatura.
+— Jesus, em [[Mc 16.15]]
 :::
 
 ## Gunnar Vingren: o pastor e organizador

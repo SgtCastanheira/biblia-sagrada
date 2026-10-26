@@ -8,7 +8,7 @@ export interface Inline {
 }
 
 export interface Block {
-  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure';
+  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people';
   inlines?: Inline[];
   items?: Inline[][];
   events?: { date: string; title: string; text: Inline[] }[];
@@ -23,6 +23,12 @@ export interface Block {
   figure?: string;
   /** Legenda da foto ou da ilustração (com o crédito). */
   caption?: Inline[];
+  /** Cena: lugar e data que abrem o quadro. */
+  place?: string;
+  /** Destaque: de quem é a frase (pode ter referência bíblica). */
+  cite?: Inline[];
+  /** Personagens: nome, papel e foto opcional. */
+  people?: { name: string; role: string; src?: string }[];
 }
 
 const cells = (line: string) =>
@@ -50,6 +56,8 @@ export function parseInline(line: string): Inline[] {
  * Markdown simples: ## e ### títulos, parágrafos, > citação, listas (- e 1.),
  * ":::tempo" (linha do tempo: "- data | título | texto"), ":::nota" (destaque),
  * ":::figura id" (ilustração do app, com a legenda dentro) e fotos: ![descrição](imagens/foto.jpg "legenda").
+ * Para as histórias: ":::cena Lugar, data" (um quadro que põe o leitor no lugar), ":::destaque" (frase em
+ * destaque; a última linha começando com "— " é o autor) e ":::pessoas" ("- Nome | papel | imagens/foto.jpg").
  */
 export function parseBlocks(source: string): Block[] {
   const blocks: Block[] = [];
@@ -72,13 +80,27 @@ export function parseBlocks(source: string): Block[] {
       blocks.push({ type: 'image', alt: image[1], src: image[2], caption: image[3] ? parseInline(image[3]) : undefined });
       continue;
     }
-    const fence = line.match(/^:::\s*(tempo|nota|figura)(?:\s+([\w-]+))?$/);
+    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas)(?:\s+(.+))?$/);
     if (fence) {
       flush();
       const body: string[] = [];
       while (++i < lines.length && lines[i].trim() !== ':::') body.push(lines[i].trim());
-      if (fence[1] === 'figura') {
-        blocks.push({ type: 'figure', figure: fence[2], caption: body.length ? parseInline(body.filter(Boolean).join(' ')) : undefined });
+      const text = body.filter(Boolean);
+      if (fence[1] === 'cena') {
+        blocks.push({ type: 'scene', place: fence[2]?.trim(), inlines: parseInline(text.join(' ')) });
+      } else if (fence[1] === 'destaque') {
+        const cite = text.length > 1 && text[text.length - 1].startsWith('— ') ? text.pop()!.slice(2) : undefined;
+        blocks.push({ type: 'pullquote', inlines: parseInline(text.join(' ')), cite: cite ? parseInline(cite) : undefined });
+      } else if (fence[1] === 'pessoas') {
+        const people = text
+          .filter((l) => l.startsWith('- '))
+          .map((l) => {
+            const [name, role, src] = l.slice(2).split('|').map((p) => p.trim());
+            return { name, role: role ?? '', src: src || undefined };
+          });
+        blocks.push({ type: 'people', people });
+      } else if (fence[1] === 'figura') {
+        blocks.push({ type: 'figure', figure: fence[2]?.trim(), caption: body.length ? parseInline(body.filter(Boolean).join(' ')) : undefined });
       } else if (fence[1] === 'tempo') {
         const events = body
           .filter((l) => l.startsWith('- '))

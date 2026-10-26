@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'historias-imersivas',
+    date: '26 de outubro de 2026',
+    title: 'Entre na história',
+    items: [
+      { icon: 'movie', title: 'Histórias com cara de documentário', text: 'Capa com os retratos, capítulos numerados, cenas que levam você ao lugar e à data, os personagens de cada história e uma linha do tempo nova.', link: '/artigo/daniel-berg-e-gunnar-vingren', tip: 'Em Estudo → História da Igreja.' },
+      { icon: 'route', title: 'A viagem dos pioneiros', text: 'Uma ilustração do caminho de Daniel Berg e Gunnar Vingren: da Suécia aos Estados Unidos e de Nova York a Belém do Pará.', link: '/artigo/daniel-berg-e-gunnar-vingren' },
+    ],
+  },
+  {
     id: 'frida-madureira-frances',
     date: '26 de outubro de 2026',
     title: 'Frida Vingren, Madureira e a Bíblia em francês',

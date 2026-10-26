@@ -75,6 +75,12 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
   - `![alt](imagens/x.jpg "legenda com crédito")` shows a photo from `public/conteudo/imagens/`. Only use public-domain or open-license photos, and credit them in the caption, `credits.ts` and CREDITOS.md.
   - `:::figura id` shows a drawn SVG illustration from `shared/figure.ts`; the lines inside the block are its caption.
   - `logica/ilustracoes.spec.ts` checks that every photo exists and has a caption, and that every figure id exists.
+  - Story blocks for history articles:
+    - `:::cena Lugar · data` is a dark "scene" panel that places the reader in the moment.
+    - `:::destaque` is a pull-quote; a last line starting with `— ` is the attribution.
+    - `:::pessoas` lists the characters, one per line: `- Nome | papel | imagens/foto.jpg` (photo optional; initials otherwise).
+    - Scenes must only restate facts already in the article and its sources; no invented details.
+  - Story mode (`<app-rich-text [story]="true">`, used for the `STORY_COLLECTIONS` in `library.ts`, i.e. Igreja and Bíblia) adds numbered chapters, a drop cap, photos as tilted period prints, an alternating timeline on wide screens and reveal-on-scroll (CSS scroll-driven animations, off with reduced motion). The article page adds a dark cover (`portraits` in `Article`) and a reading progress bar.
 - `DictionaryMatcher` (`dictionary.ts`) marks dictionary `forms` in the reader. Each entry is marked once per chapter, and the longest form wins.
 - `bible-order.ts` and `study-index.ts` order and group everything in canonical order (Genesis to Revelation) per book and chapter. Lists shown to users should follow Bible order.
 

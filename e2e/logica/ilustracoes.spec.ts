@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { parseBlocks } from '../../src/app/core/rich-text-parser';
+import { ARTICLES } from '../../src/app/core/library';
 
 const FIGURES = [...readFileSync('src/app/shared/figure.ts', 'utf8').matchAll(/@case \('([\w-]+)'\)/g)].map((m) => m[1]);
 
@@ -16,4 +17,34 @@ test('ilustrações: toda foto existe na pasta e toda figura existe no app, com 
     }
   }
   expect(problems).toEqual([]);
+});
+
+test('histórias: cenas, destaques e personagens bem formados; retratos da capa existem', () => {
+  const problems: string[] = [];
+  for (const file of readdirSync('public/conteudo/artigos')) {
+    for (const b of parseBlocks(readFileSync(`public/conteudo/artigos/${file}`, 'utf8'))) {
+      if (b.type === 'scene' && (!b.place || !b.inlines?.length)) problems.push(`${file}: cena sem lugar ou sem texto`);
+      if (b.type === 'pullquote' && (!b.inlines?.length || !b.cite)) problems.push(`${file}: destaque sem texto ou sem autor`);
+      for (const p of b.people ?? []) {
+        if (!p.name || !p.role) problems.push(`${file}: personagem sem nome ou papel`);
+        if (p.src && !existsSync(`public/conteudo/${p.src}`)) problems.push(`${file}: foto ${p.src} não existe`);
+      }
+    }
+  }
+  for (const a of ARTICLES) {
+    for (const src of a.portraits ?? []) if (!existsSync(`public/conteudo/${src}`)) problems.push(`${a.id}: retrato ${src} não existe`);
+  }
+  expect(problems).toEqual([]);
+});
+
+test('o leitor entende os blocos das histórias', () => {
+  const [cena, destaque, pessoas] = parseBlocks(
+    ':::cena Belém · 1910\nDois jovens.\n:::\n\n:::destaque\nIde.\n— Jesus, em [[Mc 16.15]]\n:::\n\n:::pessoas\n- Gunnar Vingren | pastor | imagens/gunnar-vingren.jpg\n- Daniel Berg | evangelista\n:::',
+  );
+  expect(cena).toMatchObject({ type: 'scene', place: 'Belém · 1910' });
+  expect(destaque.cite?.map((i) => i.t)).toEqual(['text', 'ref']);
+  expect(pessoas.people).toEqual([
+    { name: 'Gunnar Vingren', role: 'pastor', src: 'imagens/gunnar-vingren.jpg' },
+    { name: 'Daniel Berg', role: 'evangelista', src: undefined },
+  ]);
 });
