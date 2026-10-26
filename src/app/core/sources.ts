@@ -241,8 +241,12 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ancient: [
       'Wikipédia: Paulo Leivas Macalão; Convenção Nacional das Assembleias de Deus no Brasil (CONAMAD); Convenção Geral das Assembleias de Deus no Brasil (CGADB); Assembleias de Deus no Brasil',
       'Harpa Cristã (CPAD): história, em harpacrista.com.br',
+      'Marina Correa, “Assembleias de Deus, suas convenções e ministérios” (ISER/Nexo, 2024)',
+      'Wikipédia: Convenção da Assembleia de Deus no Brasil (CADB) e CONAMAD',
+      'Point Rhema e Comunhão (2017): a saída da igreja-mãe de Belém da CGADB e a fundação da CADB',
+      'CGADB: lista oficial das convenções (cgadb.org.br)',
     ],
-    works: ['araujo-dicionario', 'araujo-100', 'conde', 'mariano'],
+    works: ['araujo-dicionario', 'araujo-100', 'conde', 'mariano', 'alencar'],
   },
   'ministerios-na-biblia': {
     ancient: ['Didaquê, capítulos 11–15 (apóstolos, profetas, bispos e diáconos)', 'Clemente de Roma, Carta aos Coríntios 42–44 (c. 96)', 'Inácio de Antioquia, Cartas aos Magnésios 6 e aos Esmirnenses 8 (c. 110)'],

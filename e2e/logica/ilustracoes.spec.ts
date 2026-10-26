@@ -117,3 +117,13 @@ test('Assembleia de Deus em cada estado: história, etapa no mapa com link, orig
   }
   expect(problems).toEqual([]);
 });
+
+test('ministérios em cada estado: todo estado tem as convenções da CGADB, e os ministérios citados são de estados que existem', async () => {
+  const { AD_STATES, CGADB_CONVENTIONS, STATE_MINISTRIES, BODIES } = await import('../../src/app/core/ad-states');
+  const ids = new Set(AD_STATES.map((s) => s.id));
+  for (const s of AD_STATES) expect(CGADB_CONVENTIONS[s.id]?.length, `${s.id} sem convenções da CGADB`).toBeGreaterThan(0);
+  for (const [id, list] of Object.entries(STATE_MINISTRIES)) {
+    expect(ids.has(id), `estado "${id}" não existe`).toBe(true);
+    for (const m of list) expect(BODIES[m.body], `${id}: convenção "${m.body}"`).toBeTruthy();
+  }
+});

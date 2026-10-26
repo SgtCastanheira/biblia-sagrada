@@ -394,6 +394,8 @@ test('Assembleia de Deus em cada estado: escolher o estado, ver de onde saíram 
   await expect(page.getByRole('heading', { level: 1, name: 'Ceará' })).toBeVisible();
   await expect(page.locator('.route-line')).toContainText('Belém (PA) → Uruburetama (CE)');
   await expect(page.getByRole('heading', { name: 'De onde saiu' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Os ministérios no estado' })).toBeAttached();
+  await expect(page.getByText('CONADEC — Convenção das Assembleias de Deus no Ceará')).toBeAttached();
   await page.getByRole('link', { name: /Próximo/ }).click();
   await expect(page).toHaveURL(/\/assembleia-de-deus\/pb$/);
 });

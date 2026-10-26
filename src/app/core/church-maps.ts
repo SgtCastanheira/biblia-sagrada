@@ -107,7 +107,7 @@ export const CHURCH_MAPS: BibleMap[] = [
       { place: 'go', from: 'rj', ref: '1936', link: '/assembleia-de-deus/go', text: 'Saiu do Rio: Antônio do Carmo Moreira, diácono da igreja de Madureira e pedreiro nas obras da nova capital, começa a igreja em Goiânia.' },
       { place: 'mt', ref: '1936', link: '/assembleia-de-deus/mt', text: 'O pastor itinerante Eduardo Pablo Joerck é o primeiro a pregar a mensagem pentecostal em Cuiabá, debaixo de oposição. De 1974 a 2020, o pastor Sebastião Rodrigues de Souza, vindo de Minas Gerais, lidera a igreja. Algumas listas dão 1944 para Mato Grosso: provavelmente falam de Campo Grande, que fazia parte do estado até 1977.' },
       { place: 'ms', ref: '1944', link: '/assembleia-de-deus/ms', text: 'Juvenal Roque de Andrade começa a igreja em Campo Grande — na época, ainda no estado de Mato Grosso; o Mato Grosso do Sul só foi criado em 1977.' },
-      { place: 'to', ref: '1952', link: '/assembleia-de-deus/to', text: 'Armando Chaves Cohen organiza a evangelização pelos rios Tocantins e Araguaia.' },
+      { place: 'to', ref: '1948–1952', link: '/assembleia-de-deus/to', text: 'O SETA, Serviço de Evangelização dos Rios Araguaia e Tocantins, leva o evangelho às povoações das margens; uma fonte atribui a organização a Armando Chaves Cohen, em 1952.' },
       { place: 'df', ref: '1957–1959', link: '/assembleia-de-deus/df', text: 'Irmãos de vários estados chegam em 1957 para trabalhar na construção de Brasília; a igreja é fundada em Taguatinga, em maio de 1959.' },
     ],
     route: false,

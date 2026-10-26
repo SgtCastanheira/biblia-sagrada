@@ -66,6 +66,27 @@ Desde então, a **CONAMAD** seguiu como convenção completamente independente d
 
 Depois da morte de Macalão, a igreja-sede de Madureira foi presidida por Orosman Dagoberto (1982–1988), Luiz Francisco Fontes (1988–1990), **Manoel Ferreira** e, desde 2006, **Abner Ferreira**. A CONAMAD é presidida por **Manoel Ferreira desde 1987**; em 1999 a sua sede foi transferida para **Brasília**.
 
+## A CADB (2017)
+
+Em 2013 e de novo em 2017, a eleição para a presidência da CGADB foi disputada entre o grupo de **José Wellington Bezerra da Costa** — que presidiu a Convenção Geral por cerca de 25 anos — e o pastor **Samuel Câmara**, da igreja-mãe de Belém. As eleições foram contestadas na Justiça. Em 2017 venceu **José Wellington Costa Junior**, filho do antigo presidente.
+
+:::cena Templo Central de Belém · 2 de dezembro de 2017
+Na igreja onde tudo começou em 1911, milhares de pastores aclamam Samuel Câmara presidente de uma nova convenção nacional. O lema: “De volta ao lar”.
+:::
+
+Em novembro de 2017, os pastores da convenção da igreja-mãe de Belém aprovaram por unanimidade a saída da CGADB; a convenção do Amazonas, de Jônatas Câmara, e líderes do Amapá fizeram o mesmo. Em **2 de dezembro de 2017** foi fundada em Belém a **Convenção da Assembleia de Deus no Brasil (CADB)**, com sede na histórica igreja de São Cristóvão, no Rio. Ela começou dizendo ter cerca de 10 mil pastores em 26 unidades da federação. Entre os motivos lembrados estão a ordenação de mulheres, que a CGADB não admitia, e a falta de alternância na liderança.
+
+## Como cada convenção se organiza
+
+As convenções não diferem só no nome:
+- **CGADB (“Missão”):** é uma convenção de ministros. Cada igreja-sede é dirigida por um pastor-presidente, e os ministérios são independentes entre si; segundo a pesquisadora Marina Correa, os bens ficam com as igrejas e os seus pastores-presidentes. Reúne cerca de 63 convenções estaduais e regionais. Não ordena mulheres como pastoras.
+- **CONAMAD (Madureira):** tem governo episcopal, com bispos e um bispo primaz (Manoel Ferreira); os bens pertencem à convenção. Tem 28 convenções estaduais e outras no exterior. Ordena mulheres.
+- **CADB:** a convenção mais nova, ligada às igrejas pioneiras de Belém, de Manaus e de São Cristóvão. Ordena mulheres.
+
+Além delas, há ministérios grandes e independentes, como a Assembleia de Deus Vitória em Cristo, no Rio, e ministérios que se separaram da CONAMAD, como os de São Bernardo do Campo, Nova Gerty, Santo Amaro e Perus, em São Paulo.
+
+[Veja os ministérios em cada estado](/assembleia-de-deus)
+
 ## As Assembleias de Deus hoje
 
 :::tempo
@@ -77,6 +98,7 @@ Depois da morte de Macalão, a igreja-sede de Madureira foi presidida por Orosma
 - 1982 | Morre Macalão | Rio de Janeiro (26 de agosto)
 - 1989 | Salvador | Os pastores de Madureira deixam a CGADB
 - 1999 | Brasília | A sede da CONAMAD vai para a capital
+- 2017 | CADB | Fundada em Belém (2 de dezembro)
 :::
 
 Hoje há três grandes convenções: a **CGADB** e a **CADB**, chamadas popularmente de “Missão” por serem herdeiras da missão sueca, e a **CONAMAD**, a “Madureira”. Há ainda outros ministérios independentes. Uma das diferenças entre elas está no ministério das mulheres: a CONAMAD e a CADB consagram mulheres, a CGADB não.

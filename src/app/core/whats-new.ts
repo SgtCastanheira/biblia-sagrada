@@ -22,6 +22,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'ad-ministerios-em-cada-estado',
+    date: '26 de outubro de 2026',
+    title: 'Os ministérios em cada estado',
+    items: [
+      { icon: 'account_tree', title: 'Missão, Madureira e CADB, lado a lado', text: 'Em cada estado: a quem pertence hoje a igreja pioneira, as convenções e os grandes ministérios — como Belém e Brás, em São Paulo, e São Cristóvão e Madureira, no Rio.', link: '/assembleia-de-deus' },
+      { icon: 'history_edu', title: 'A CADB e como cada convenção se organiza', text: 'A separação de 2017 e as diferenças entre a CGADB, a CONAMAD e a CADB.', link: '/artigo/madureira-e-a-separacao' },
+      { icon: 'person', title: 'Mato Grosso: o pastor Sebastião Rodrigues de Souza', text: 'De sete congregações a mais de duas mil igrejas (1974–2020).', link: '/assembleia-de-deus/mt' },
+    ],
+  },
+  {
     id: 'ad-de-onde-saiu-cada-pioneiro',
     date: '26 de outubro de 2026',
     title: 'A Assembleia de Deus em cada estado',
