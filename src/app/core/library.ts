@@ -296,6 +296,15 @@ export const ARTICLES: Article[] = [
     icon: 'flag',
     minutes: 5,
   },
+  {
+    id: 'harpa-crista',
+    collection: 'igreja',
+    title: 'A história da Harpa Cristã',
+    subtitle: 'Do Cantor Pentecostal de 1921 aos 640 hinos: quem organizou, traduziu e escreveu o hinário das Assembleias de Deus.',
+    period: '1921–hoje',
+    icon: 'music_note',
+    minutes: 5,
+  },
   // De onde veio a Bíblia
   {
     id: 'formacao-do-antigo-testamento',

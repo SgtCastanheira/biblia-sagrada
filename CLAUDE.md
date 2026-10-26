@@ -77,6 +77,12 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 
 **IBUC module** (`core/ibuc.ts`, `pages/ibuc/`) supports teachers by age group (`IBUC_CLASSES`). Lessons (`IBUC_LESSONS`) hold curiosities, historical context, activities and questions; `example: true` marks the model lesson. A lesson with `quarter` ("2026-4") and `number` fills that slot in the class's list of lessons 1–13 and is linked from the user's EBD lesson with the same number. Never reproduce the IBUC magazines or PDFs.
 
+**Harpa Cristã** (`core/harpa.ts`, `public/conteudo/harpa.json`, `pages/harpa/`):
+- Each hymn has its number, title and author, plus the origin when documented.
+- Every hymn lists the sources that confirm its number and author, and every origin lists its sources.
+- Never store lyrics (copyright of CPAD and the authors).
+- Only add hymns confirmed in public sources. Do not scrape sites that protect themselves against bots (hymnary.org does).
+
 **What's new** (`core/whats-new.ts`): when publishing user-visible features, add a new entry at the top of `RELEASES` with a new `id`. Every device sees it once (first visits included), in a bottom sheet (`WhatsNewService`, checked at startup before the daily reminders). It is also listed at `/novidades`, which has a share button.
 
 **Navigation:** the bottom menu has five tabs, and each screen belongs to exactly one of them (`tab` in `app.ts`):

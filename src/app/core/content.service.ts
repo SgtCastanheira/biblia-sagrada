@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { catchError, map, Observable, of, shareReplay } from 'rxjs';
 import { DictionaryEntry } from './dictionary';
+import { HarpaData } from './harpa';
 import { Person } from './memorial';
 import { Prophecy } from './prophecy';
 
@@ -47,6 +48,7 @@ export class ContentService {
   readonly memorial = this.json<Person[]>('memorial.json', []);
   readonly prophecies = this.json<Prophecy[]>('profecias.json', []);
   readonly quotations = this.json<Quotation[]>('citacoes.json', []);
+  readonly harpa = this.json<HarpaData>('harpa.json', { hymns: [], people: {} });
 
   intro(bookId: string): Observable<BookIntro | null> {
     return this.bookIntros.pipe(map((all) => all[bookId] ?? null));

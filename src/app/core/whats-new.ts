@@ -22,6 +22,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'harpa-crista',
+    date: '26 de outubro de 2026',
+    title: 'A história da Harpa Cristã',
+    items: [
+      { icon: 'music_note', title: 'Harpa Cristã', text: 'A história do hinário das Assembleias de Deus, de 1921 aos 640 hinos — e de cada hino: quem escreveu, traduziu, quando e por quê.', link: '/harpa', tip: 'Em Estudo, na seção História da Igreja e da Bíblia.' },
+      { icon: 'auto_stories', title: 'A origem dos hinos', text: 'Chuvas de Graça, Noite de Paz, Grandioso És Tu, O Pão da Vida e outros, com o hino original e o texto bíblico.', link: '/harpa' },
+      { icon: 'library_books', title: 'Sempre com a fonte', text: 'Cada hino mostra onde se confirmam o número, o autor e a história. As letras não ficam no app.', link: '/harpa/1' },
+    ],
+  },
+  {
     id: 'app-organizado',
     date: '23 de outubro de 2026',
     title: 'O app ficou mais organizado',

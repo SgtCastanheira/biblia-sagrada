@@ -9,6 +9,8 @@ export const routes: Routes = [
   { path: 'memorial', title: 'Memorial da Fé · Bíblia Sagrada', loadComponent: () => import('./pages/memorial/memorial').then((m) => m.MemorialPage) },
   { path: 'tribos', title: 'As doze tribos de Israel · Bíblia Sagrada', loadComponent: () => import('./pages/tribes/tribes').then((m) => m.TribesPage) },
   { path: 'tribos/:id', loadComponent: () => import('./pages/tribe/tribe').then((m) => m.TribePage) },
+  { path: 'harpa', title: 'Harpa Cristã · Bíblia Sagrada', loadComponent: () => import('./pages/harpa/harpa').then((m) => m.HarpaPage) },
+  { path: 'harpa/:n', loadComponent: () => import('./pages/harpa/hymn').then((m) => m.HymnPage) },
   { path: 'genealogia', title: 'Genealogia de Jesus · Bíblia Sagrada', loadComponent: () => import('./pages/genealogy/genealogy').then((m) => m.GenealogyPage) },
   { path: 'memorial/:id', loadComponent: () => import('./pages/person/person').then((m) => m.PersonPage) },
   { path: 'historia', title: 'História · Bíblia Sagrada', loadComponent: () => import('./pages/history/history').then((m) => m.HistoryPage) },

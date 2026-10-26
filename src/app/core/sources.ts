@@ -17,6 +17,8 @@ export interface Work {
 export interface SourceSet {
   /** Fontes antigas, documentos e achados arqueológicos citados. */
   ancient?: string[];
+  /** Título desse grupo, quando não são fontes antigas ("Documentos consultados"). */
+  ancientLabel?: string;
   /** Obras de referência (ids de WORKS). */
   works: string[];
 }
@@ -65,6 +67,12 @@ export const WORKS: Record<string, Work> = {
   synan: { author: 'Vinson Synan', title: 'The Holiness-Pentecostal Tradition', publisher: 'Eerdmans, 1997', kind: 'historia' },
   conde: { author: 'Emílio Conde', title: 'História das Assembleias de Deus no Brasil', publisher: 'CPAD', kind: 'historia' },
   mariano: { author: 'Ricardo Mariano', title: 'Neopentecostais: sociologia do novo pentecostalismo no Brasil', publisher: 'Loyola, 1999', kind: 'historia' },
+  // Hinos e Harpa Cristã
+  'araujo-dicionario': { author: 'Isael de Araujo', title: 'Dicionário do Movimento Pentecostal', publisher: 'CPAD, 2007', kind: 'historia' },
+  'araujo-100': { author: 'Isael de Araujo', title: '100 acontecimentos que marcaram a história das Assembleias de Deus no Brasil', publisher: 'CPAD, 2011', kind: 'historia' },
+  'manual-harpa': { author: 'CPAD', title: 'Manual da Harpa Cristã', publisher: 'CPAD, 1999', kind: 'historia' },
+  osbeck: { author: 'Kenneth W. Osbeck', title: '101 Hymn Stories', publisher: 'Kregel, 1982', kind: 'historia' },
+  julian: { author: 'John Julian', title: 'A Dictionary of Hymnology', publisher: '1892 (domínio público)', kind: 'historia' },
   // Formação, texto e tradução da Bíblia
   beckwith: { author: 'Roger Beckwith', title: 'The Old Testament Canon of the New Testament Church', publisher: 'Eerdmans, 1985', kind: 'biblia' },
   'bruce-canon': { author: 'F. F. Bruce', title: 'O cânon das Escrituras', publisher: 'Hagnos', kind: 'biblia' },
@@ -137,6 +145,11 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'missoes-modernas': { ancient: ['William Carey, An Enquiry into the Obligations of Christians (1792)'], works: ['tucker', 'neill', 'noll'] },
   'movimento-pentecostal': { ancient: ['The Apostolic Faith, jornal da missão da Rua Azusa (1906–1908)'], works: ['robeck', 'synan', 'noll'] },
   'pentecostes-no-brasil': { works: ['conde', 'mariano', 'synan'] },
+  'harpa-crista': {
+    ancientLabel: 'Documentos consultados',
+    ancient: ['Site oficial da Harpa Cristã (CPAD): harpacrista.com.br — história, lançamento e edição com música', 'Jornal Boa Semente, dezembro de 1923, p. 4', 'Jornal Mensageiro da Paz, julho de 1939, p. 2', 'Samuel Nyström, Despertamento apostólico no Brasil', 'Hinologia.org: biografia de Adriano Nobre (Jacó Rodrigues Santiago)'],
+    works: ['araujo-dicionario', 'araujo-100', 'manual-harpa', 'conde'],
+  },
   'formacao-do-antigo-testamento': { ancient: ['Flávio Josefo, Contra Ápion 1.37–43 (os 22 livros dos judeus)', 'Talmude Babilônico, Baba Batra 14b–15a'], works: ['beckwith', 'dillard-longman', 'bruce-canon'] },
   septuaginta: { ancient: ['Carta de Aristeias (séc. II a.C.)'], works: ['jobes-silva', 'tov', 'bruce-canon'] },
   'formacao-do-novo-testamento': { ancient: ['Fragmento Muratoriano (séc. II)', 'Atanásio, Carta Festal 39 (367)', 'Eusébio, História Eclesiástica 3.25 (CPAD)'], works: ['metzger-canon', 'bruce-canon', 'carson-moo'] },
@@ -148,7 +161,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'capitulos-e-versiculos': { ancient: ['Capítulos de Stephen Langton (c. 1227)', 'Novo Testamento grego de Robert Estienne, com versículos (1551)', 'Bíblia de Genebra (1560), a primeira inglesa com versículos em toda a Bíblia'], works: ['metzger-ehrman', 'geisler-nix'] },
 };
 
-export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd';
+export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd' | 'harpa';
 
 /** Fontes de cada parte do app (o que não é um artigo). */
 export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; note?: string }> = {
@@ -161,6 +174,13 @@ export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; not
   profecias: { title: 'Promessas e profecias', note: 'As interpretações são apresentadas como as principais tradições cristãs as entendem.', works: ['fee-stuart', 'clouse', 'baldwin', 'ladd'] },
   dicionario: { title: 'Dicionário bíblico', works: ['strong', 'ditat', 'ditnt', 'ndb', 'kelley', 'mounce'] },
   curiosidades: { title: 'Curiosidades', works: ['walton-at', 'keener-nt', 'ndb'] },
+  harpa: {
+    title: 'Harpa Cristã',
+    note: 'Cada hino indica onde se confirmam o número, o título e o autor; a origem dos hinos traduzidos vem das obras de hinologia abaixo e das fontes indicadas em cada hino. As letras não são reproduzidas.',
+    ancientLabel: 'Catálogos e sites consultados',
+    ancient: ['Hymnary.org: Harpa Cristã, 10ª ed., CPAD, 1999 (hymnary.org/hymnal/HC1999)', 'Hinologia.org: Harpa Cristã', 'Site oficial da Harpa Cristã (CPAD): harpacrista.com.br'],
+    works: ['araujo-dicionario', 'manual-harpa', 'osbeck', 'julian'],
+  },
   ebd: { title: 'EBD — Apoio ao professor', note: 'A revista é só a inspiração dos temas: o contexto e as curiosidades vêm da Bíblia, de achados arqueológicos (como os papiros de Elefantina) e das obras abaixo.', works: ['walton-at', 'keener-nt', 'ndb', 'dillard-longman', 'carson-moo'] },
   ibuc: { title: 'IBUC', note: 'As aulas não reproduzem as revistas do IBUC: o contexto e as curiosidades vêm da Bíblia e das obras abaixo.', works: ['walton-at', 'keener-nt', 'ndb'] },
 };

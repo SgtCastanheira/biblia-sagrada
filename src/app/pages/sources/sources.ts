@@ -33,7 +33,7 @@ import { BackButton } from '../../shared/back-button';
         <details class="article">
           <summary><a [routerLink]="['/artigo', a.id]" (click)="$event.stopPropagation()">{{ a.title }}</a><mat-icon>expand_more</mat-icon></summary>
           @if (sources[a.id]?.ancient?.length) {
-            <p class="label">Fontes antigas e arqueologia</p>
+            <p class="label">{{ sources[a.id].ancientLabel ?? 'Fontes antigas e arqueologia' }}</p>
             <ul>@for (x of sources[a.id].ancient; track x) { <li>{{ x }}</li> }</ul>
           }
           <p class="label">Para conferir e aprofundar</p>

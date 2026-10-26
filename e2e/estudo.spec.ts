@@ -295,3 +295,15 @@ test('fontes: cada estudo mostra de onde vêm as informações, e há uma págin
   await page.goto('/estudo');
   await expect(page.getByRole('link', { name: /Fontes das informações/ })).toBeVisible();
 });
+
+test('Harpa Cristã: busca por número, página do hino com autor e fontes, sem a letra', async ({ page }) => {
+  await page.goto('/estudo');
+  await page.getByRole('link', { name: /Harpa Cristã/ }).click();
+  await expect(page.getByRole('heading', { name: 'Harpa Cristã', level: 1 })).toBeVisible();
+  await page.getByRole('textbox', { name: 'Buscar hino' }).fill('1');
+  await page.locator('ol.hymns a').first().click();
+  await expect(page).toHaveURL(/\/harpa\/1$/);
+  await expect(page.getByText('A letra não aparece no app')).toBeVisible();
+  await expect(page.getByRole('link', { name: /Hymnary\.org: Harpa Cristã nº 1/ })).toBeVisible();
+  await expect(page.locator('.facts cite', { hasText: 'There Shall Be Showers of Blessing' })).toBeVisible();
+});

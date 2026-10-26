@@ -13,7 +13,7 @@ import { ARTICLE_SOURCES, SourceSet, SourceTopic, TOPIC_SOURCES, WORKS } from '.
         <summary><mat-icon>menu_book</mat-icon><span>Fontes das informações</span><mat-icon class="chevron">expand_more</mat-icon></summary>
         <p class="lead">Texto escrito para este app a partir da Bíblia (os versículos estão no próprio texto) e das fontes abaixo.@if (s.note) { {{ s.note }} }</p>
         @if (s.ancient?.length) {
-          <h3>Fontes antigas e arqueologia</h3>
+          <h3>{{ s.ancientLabel ?? 'Fontes antigas e arqueologia' }}</h3>
           <ul>@for (a of s.ancient; track a) { <li>{{ a }}</li> }</ul>
         }
         <h3>Para conferir e aprofundar</h3>

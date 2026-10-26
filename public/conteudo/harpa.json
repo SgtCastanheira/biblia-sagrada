@@ -1,0 +1,333 @@
+{
+ "hymns": [
+  {
+   "n": 1,
+   "title": "Chuvas de Graça",
+   "author": "J.R.",
+   "person": "Rodrigues_JosePereira",
+   "sources": [
+    {
+     "label": "Hymnary.org: Harpa Cristã nº 1 (CPAD, 1999)",
+     "url": "https://hymnary.org/hymn/HC1999/1"
+    },
+    {
+     "label": "Cifras.com.br: índice da Harpa Cristã",
+     "url": "https://www.cifras.com.br/harpa-crista"
+    }
+   ],
+   "origin": {
+    "title": "There Shall Be Showers of Blessing",
+    "language": "inglês",
+    "author": "Daniel W. Whittle",
+    "composer": "James McGranahan",
+    "year": "1883",
+    "story": "Daniel Webster Whittle foi oficial do exército da União na Guerra Civil americana e depois se tornou evangelista, ao lado do cantor James McGranahan. Escreveu este hino a partir da promessa de [[Ez 34.26]]: “farei descer a chuva a seu tempo; chuvas de bênçãos serão”. Foi publicado por Ira D. Sankey na coletânea *Gospel Hymns No. 4*, em 1883. Na Harpa, abre o hinário como hino nº 1.",
+    "bible": "Ez 34.26",
+    "sources": [
+     {
+      "label": "Wikipedia: There Shall Be Showers of Blessing",
+      "url": "https://en.wikipedia.org/wiki/There_Shall_Be_Showers_of_Blessing"
+     }
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "title": "Saudosa Lembrança",
+   "author": "A.N.",
+   "person": "Nobre_Adriano",
+   "sources": [
+    {
+     "label": "Hinologia.org: Adriano Nobre (1883-1938) — versões dos hinos 2, 3, 10 e 413",
+     "url": "http://www.hinologia.org/adriano-nobre/"
+    },
+    {
+     "label": "Cifras.com.br: índice da Harpa Cristã",
+     "url": "https://www.cifras.com.br/harpa-crista"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Plena Paz",
+   "author": "A.N.",
+   "person": "Nobre_Adriano",
+   "sources": [
+    {
+     "label": "Hymnary.org: Harpa Cristã nº 3 (CPAD, 1999)",
+     "url": "https://hymnary.org/hymn/HC1999/3"
+    },
+    {
+     "label": "Hinologia.org: Adriano Nobre (1883-1938) — versões dos hinos 2, 3, 10 e 413",
+     "url": "http://www.hinologia.org/adriano-nobre/"
+    },
+    {
+     "label": "Cifras.com.br: índice da Harpa Cristã",
+     "url": "https://www.cifras.com.br/harpa-crista"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Cristo Cura, Sim!",
+   "author": "***",
+   "sources": [
+    {
+     "label": "Hymnary.org: Harpa Cristã nº 7 (CPAD, 1999)",
+     "url": "https://hymnary.org/hymn/HC1999/7"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Eu Te Louvo",
+   "author": "A.N.",
+   "person": "Nobre_Adriano",
+   "sources": [
+    {
+     "label": "Hinologia.org: Adriano Nobre (1883-1938) — versões dos hinos 2, 3, 10 e 413",
+     "url": "http://www.hinologia.org/adriano-nobre/"
+    },
+    {
+     "label": "Cifras.com.br: índice da Harpa Cristã",
+     "url": "https://www.cifras.com.br/harpa-crista"
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "title": "Glória a Jesus",
+   "author": "P.L.M.",
+   "person": "Macalao_Paulo",
+   "sources": [
+    {
+     "label": "Hymnary.org: Harpa Cristã nº 23 (CPAD, 1999)",
+     "url": "https://hymnary.org/hymn/HC1999/23"
+    }
+   ]
+  },
+  {
+   "n": 85,
+   "title": "Deixai Entrar o Espírito de Deus",
+   "author": "F.V.",
+   "person": "Vingren_Frida",
+   "sources": [
+    {
+     "label": "Hymnary.org: Harpa Cristã nº 85 (CPAD, 1999)",
+     "url": "https://hymnary.org/hymn/HC1999/85"
+    },
+    {
+     "label": "Cifras.com.br: índice da Harpa Cristã",
+     "url": "https://www.cifras.com.br/harpa-crista"
+    }
+   ]
+  },
+  {
+   "n": 120,
+   "title": "Noite de Paz",
+   "sources": [
+    {
+     "label": "Letras.com: Noite de Paz (Harpa Cristã 120)",
+     "url": "https://www.letras.com/suzana-gomes/noite-de-paz-harpa-crista-120/"
+    }
+   ],
+   "origin": {
+    "title": "Stille Nacht",
+    "language": "alemão",
+    "author": "Joseph Mohr",
+    "composer": "Franz Xaver Gruber",
+    "year": "1816 (letra), 1818 (música)",
+    "story": "O padre Joseph Mohr escreveu o poema em 1816, na Áustria. Em 1818, na aldeia de Oberndorf, pediu ao professor e organista Franz Xaver Gruber uma melodia para violão, e o hino foi cantado pela primeira vez na véspera de Natal, 24 de dezembro de 1818. Canta a noite em que os anjos anunciaram o nascimento de Jesus aos pastores [[Lc 2.8-14]]. Hoje é um dos cânticos mais cantados do mundo.",
+    "bible": "Lc 2.8-14",
+    "sources": [
+     {
+      "label": "Wikipedia: Silent Night",
+      "url": "https://en.wikipedia.org/wiki/Silent_Night"
+     }
+    ]
+   }
+  },
+  {
+   "n": 167,
+   "title": "As Testemunhas de Jesus",
+   "author": "S.N.",
+   "person": "Nystrom_Samuel",
+   "sources": [
+    {
+     "label": "Hymnary.org: Harpa Cristã nº 167 (CPAD, 1999)",
+     "url": "https://hymnary.org/hymn/HC1999/167"
+    }
+   ]
+  },
+  {
+   "n": 187,
+   "title": "Mais Perto, Meu Deus, de Ti!",
+   "sources": [
+    {
+     "label": "Cifras.com.br: Harpa Cristã 187 (Sarah Flower Adams e Lowell Mason)",
+     "url": "https://www.cifras.com.br/teclado/harpa-crista/187"
+    },
+    {
+     "label": "Cifras.com.br: índice da Harpa Cristã",
+     "url": "https://www.cifras.com.br/harpa-crista"
+    }
+   ],
+   "origin": {
+    "title": "Nearer, My God, to Thee",
+    "language": "inglês",
+    "author": "Sarah Flower Adams",
+    "composer": "Lowell Mason (melodia “Bethany”, 1856)",
+    "year": "1841",
+    "story": "A poetisa inglesa Sarah Flower Adams escreveu o hino em 1841, inspirada no sonho de Jacó em Betel, quando ele viu uma escada que ligava a terra ao céu e Deus lhe falou do alto [[Gn 28.10-22]]. A melodia mais cantada, “Bethany”, é de Lowell Mason (1856). Conta-se que a banda do Titanic o tocava enquanto o navio afundava, em 1912.",
+    "bible": "Gn 28.10-17",
+    "sources": [
+     {
+      "label": "Wikipedia: Nearer, My God, to Thee",
+      "url": "https://en.wikipedia.org/wiki/Nearer,_My_God,_to_Thee"
+     },
+     {
+      "label": "Kenneth W. Osbeck, 101 Hymn Stories (Kregel, 1982)"
+     }
+    ]
+   }
+  },
+  {
+   "n": 291,
+   "title": "A Mensagem da Cruz",
+   "sources": [
+    {
+     "label": "Cifras.com.br: índice da Harpa Cristã",
+     "url": "https://www.cifras.com.br/harpa-crista"
+    }
+   ],
+   "origin": {
+    "title": "The Old Rugged Cross",
+    "language": "inglês",
+    "author": "George Bennard",
+    "composer": "George Bennard",
+    "year": "1912",
+    "story": "O evangelista metodista George Bennard escreveu a letra e a música em 1912, em Albion, no estado americano de Michigan, depois de um tempo meditando no significado da cruz. O hino foi cantado pela primeira vez em 1913, em Pokagon, também em Michigan, e se tornou um dos mais cantados do século XX. Na Harpa ele começa com as palavras “Rude cruz”. Lembra que a cruz, sinal de vergonha, é para o crente motivo de glória [[Gl 6.14]].",
+    "bible": "Gl 6.14",
+    "sources": [
+     {
+      "label": "Wikipedia: The Old Rugged Cross",
+      "url": "https://en.wikipedia.org/wiki/The_Old_Rugged_Cross"
+     },
+     {
+      "label": "Kenneth W. Osbeck, 101 Hymn Stories (Kregel, 1982)"
+     }
+    ]
+   }
+  },
+  {
+   "n": 328,
+   "title": "O Pão da Vida",
+   "author": "P.L.M.",
+   "person": "Macalao_Paulo",
+   "sources": [
+    {
+     "label": "Hinologia.org: “O Pão da Vida”, nº 328 da Harpa Cristã (Gabriel Santana)",
+     "url": "https://www.hinologia.org/o-pao-da-vida-no-326-da-harpa-crista/"
+    },
+    {
+     "label": "Cifras.com.br: índice da Harpa Cristã",
+     "url": "https://www.cifras.com.br/harpa-crista"
+    }
+   ],
+   "origin": {
+    "title": "Gesù, pane di vita",
+    "language": "italiano",
+    "author": "Autor desconhecido (hinário Inni e Salmi Spirituali)",
+    "composer": "Autor desconhecido",
+    "story": "O hino veio dos hinários da Assemblea Cristiana de Chicago, uma igreja pentecostal italiana fundada em 1907, e está no hinário *Inni e Salmi Spirituali*, cujo prefácio de 1924 fala em 313 cânticos. Os autores da letra e da música não são conhecidos; a melodia é em estilo de valsa. Paulo Leivas Macalão o traduziu do italiano para o português. A letra se baseia no discurso de Jesus sobre o pão da vida [[Jo 6.22-59]] e, por isso, é muito cantado nos cultos de Santa Ceia.",
+    "bible": "Jo 6.35",
+    "sources": [
+     {
+      "label": "Hinologia.org: “O Pão da Vida”, nº 328 da Harpa Cristã (Gabriel Santana)",
+      "url": "https://www.hinologia.org/o-pao-da-vida-no-326-da-harpa-crista/"
+     }
+    ]
+   }
+  },
+  {
+   "n": 526,
+   "title": "Grandioso És Tu",
+   "sources": [
+    {
+     "label": "Cifras.com.br: índice da Harpa Cristã",
+     "url": "https://www.cifras.com.br/harpa-crista"
+    }
+   ],
+   "origin": {
+    "title": "O store Gud",
+    "language": "sueco",
+    "author": "Carl Boberg",
+    "year": "1885",
+    "story": "O sueco Carl Boberg escreveu o poema em 1885, depois de ser surpreendido por uma tempestade com trovões perto de Mönsterås, na Suécia, e ver em seguida a calma e o canto dos pássaros. O poema foi traduzido para várias línguas; a versão inglesa *How Great Thou Art*, de Stuart K. Hine, espalhou o hino pelo mundo no século XX. É um dos hinos acrescentados na Harpa ampliada de 640 hinos. Lembra o salmista que contempla a obra de Deus na criação [[Sl 8.1-9]].",
+    "bible": "Sl 8.1-4",
+    "sources": [
+     {
+      "label": "Wikipedia: How Great Thou Art",
+      "url": "https://en.wikipedia.org/wiki/How_Great_Thou_Art"
+     }
+    ]
+   }
+  }
+ ],
+ "people": {
+  "Macalao_Paulo": {
+   "name": "Paulo Leivas Macalão",
+   "bio": "Nasceu em 17 de setembro de 1903, em Santana do Livramento (RS), e morreu em 26 de agosto de 1982, no Rio de Janeiro. Pastor pioneiro das Assembleias de Deus no Rio de Janeiro, ligado à fundação do Ministério de Madureira, foi o principal tradutor e adaptador dos hinos da Harpa: dava forma em português aos textos que os missionários suecos traduziam ao pé da letra, ajustando-os às melodias. Coordenou a primeira edição da Harpa com música, de 1941, e traduziu hinos dos hinários das assembleias italianas dos Estados Unidos.",
+   "sources": [
+    {
+     "label": "Harpa Cristã (CPAD): história e edição com música",
+     "url": "https://www.harpacrista.com.br/historia/"
+    },
+    {
+     "label": "Isael de Araujo, Dicionário do Movimento Pentecostal (CPAD, 2007)"
+    },
+    {
+     "label": "Rádio Memória Evangélica: Paulo Leivas Macalão",
+     "url": "https://memoriaevangelica.blogspot.com/2014/06/paulo-leivas-macalao-maior-compositor.html"
+    }
+   ]
+  },
+  "Vingren_Frida": {
+   "name": "Frida Vingren",
+   "bio": "Frida Maria Strandberg nasceu em 9 de junho de 1891, em Själevad, na Suécia. Enfermeira, foi enviada ao Brasil em 1917 pela Igreja Filadélfia de Estocolmo e, em 18 de outubro daquele ano, casou-se com o missionário Gunnar Vingren. Foi pregadora, escritora, editora e compositora de hinos, e traduziu hinos do sueco para o português. Defendeu a participação das mulheres em todos os ministérios da igreja. Voltou à Suécia em 1932, onde morreu em 1940.",
+   "sources": [
+    {
+     "label": "Svenskt kvinnobiografiskt lexikon: Frida Strandberg (Vingren)",
+     "url": "https://skbl.se/en/article/FridaStrandberg"
+    }
+   ]
+  },
+  "Nystrom_Samuel": {
+   "name": "Samuel Nyström",
+   "bio": "Missionário sueco enviado pela Igreja Filadélfia de Estocolmo, chegou a Belém do Pará em 1916 com a esposa, Lina — o primeiro casal de missionários dessa igreja no Brasil. Trabalhou na Amazônia, em Mato Grosso e no Rio de Janeiro e presidiu nove vezes a Convenção Geral das Assembleias de Deus. Levou a primeira Harpa (1922) pelo Brasil e traduzia literalmente os hinos escandinavos, que Paulo Leivas Macalão adaptava; fez parte da comissão da Harpa com música.",
+   "sources": [
+    {
+     "label": "Maurício Antônio de Araújo Gomes, dissertação (UFJF)",
+     "url": "https://repositorio.ufjf.br/jspui/handle/ufjf/13602"
+    },
+    {
+     "label": "Harpa Cristã (CPAD): história",
+     "url": "https://www.harpacrista.com.br/historia/"
+    }
+   ]
+  },
+  "Nobre_Adriano": {
+   "name": "Adriano Nobre",
+   "bio": "Adriano Nobre de Almeida (1883–1938) serviu de intérprete para Gunnar Vingren e foi ordenado por ele em 1916. Editou a primeira edição da Harpa Cristã, publicada em 1922, no Recife. Na Harpa de hoje, são dele as versões dos hinos 2, 3, 10 e 413.",
+   "sources": [
+    {
+     "label": "Hinologia.org: Adriano Nobre (1883-1938) — versões dos hinos 2, 3, 10 e 413",
+     "url": "http://www.hinologia.org/adriano-nobre/"
+    }
+   ]
+  },
+  "Rodrigues_JosePereira": {
+   "name": "José Joaquim Pereira Rodrigues"
+  }
+ }
+}
