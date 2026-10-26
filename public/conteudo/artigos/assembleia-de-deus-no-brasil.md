@@ -30,43 +30,67 @@ O mapa interativo mostra o caminho, etapa por etapa:
 
 ## Estado por estado
 
-As listas da denominação e as histórias das igrejas de cada estado registram quando e por quem a igreja chegou. Muitas vezes os primeiros a pregar não foram pastores, mas **crentes comuns** que voltavam para a sua terra ou iam visitar parentes. As fontes nem sempre concordam: onde há divergência, as duas datas aparecem. Veja tudo no [mapa estado por estado](/mapas/assembleia-de-deus-estados).
+O jornal *Mensageiro da Paz* publicou a lista dos primeiros passos da igreja em cada estado, e as igrejas estaduais guardam as suas próprias histórias. Elas mostram um padrão: a maioria dos pioneiros **saiu de Belém** — missionários enviados, obreiros e, muitas vezes, crentes comuns que voltavam para a sua terra. As fontes nem sempre concordam; onde há divergência, isso aparece. No [mapa estado por estado](/mapas/assembleia-de-deus-estados), linhas douradas ligam a cidade de onde cada pessoa saiu à cidade aonde chegou.
+
+### Os que vieram de fora do Brasil
+- **Gunnar Vingren e Daniel Berg** (1910) e **Otto e Adina Nelson** (1914) vieram dos Estados Unidos, onde moravam.
+- **Samuel e Lina Nyström** (1916) e **Frida Strandberg** (1917) foram os primeiros missionários enviados oficialmente pela **Igreja Filadélfia de Estocolmo**, na Suécia. Depois vieram outros suecos, como **Joel e Signe Carlson** (1918) e **Gustav Nordlund**.
 
 ### Norte
-- **Pará (1911):** Belém, a igreja-mãe, na casa de Celina de Albuquerque.
-- **Roraima (1915):** Cordulino Teixeira Bastos, que conheceu a fé pentecostal em Belém, mudou-se com a família para a região do rio Branco. A igreja foi registrada em 1948.
-- **Amapá (1916–1917):** em Macapá, Clímaco Bueno Aza vendia Bíblias e evangelizava; em 27 de junho de 1917, José de Matos Caravella fundou a igreja, com seis pessoas — a primeira igreja evangélica do Amapá.
-- **Amazonas (1917–1918):** Severino Moreno de Araújo chegou a Manaus em 1917; Samuel e Lina Nyström organizaram a igreja em 1º de janeiro de 1918.
-- **Rondônia (1922):** os primeiros passos, na região do rio Madeira.
-- **Acre (1932):** Manoel Pirabas dos Santos é lembrado como o evangelizador.
+- **Pará (1911):** em Belém, a igreja-mãe. Celina de Albuquerque era membro da Igreja Batista de Belém. Daniel Berg levou a mensagem a Soure e Mosqueiro (1911), Bragança (1912) e à Ilha de Marajó; **Clímaco Bueno Aza**, convertido em 1913, pregou ao longo da Estrada de Ferro Belém–Bragança.
+- **Roraima (1915):** **saiu de Belém** Cordolino Teixeira Bastos, que ali conheceu a fé pentecostal e foi com a família, onze pessoas, para a região do rio Branco (Boa Vista).
+- **Amapá (1916–1917):** **saiu de Belém** Clímaco Bueno Aza, que vendia Bíblias em Macapá; foi preso e teve as Bíblias queimadas. Em 27 de junho de 1917, José de Matos Caravella fundou a igreja, com seis pessoas — a primeira igreja evangélica do Amapá.
+- **Amazonas (1917–1918):** **saiu de Belém** Severino Moreno de Araújo, que chegou a Manaus em 1917; os Nyström organizaram a igreja em 1º de janeiro de 1918.
+- **Rondônia (1922):** Paul John Aenis pregou ao longo da Estrada de Ferro Madeira–Mamoré e em Porto Velho; em 1923 veio Elói Bispo de Sena.
+- **Acre (1932 e 1943):** Manoel Pirabas começou em Cruzeiro do Sul (1932), e Luís Firmino Câmara em Rio Branco (1943).
 - **Tocantins (1952):** Armando Chaves Cohen organizou a evangelização pelos rios Tocantins e Araguaia.
 
 ### Nordeste
-- **Ceará, Alagoas e Paraíba (1914):** as histórias locais lembram a irmã Maria Nazaré, no Ceará, e Manoel Francisco Dubu, na Paraíba. Em Alagoas, o trabalho foi depois acompanhado por missionários suecos.
-- **Pernambuco (1916–1918):** Adriano Nobre foi enviado ao Recife em 1916; os missionários Joel e Signe Carlson chegaram em 1918.
-- **Rio Grande do Norte (1914–1918):** Joaquim Batista de Macedo evangelizou; o missionário Simon Sjögren é lembrado como fundador, em 1918. Natal recebeu a reunião preparatória de 1929 e a primeira Convenção Geral, em 1930.
-- **Maranhão (1921):** em São Luís, Clímaco Bueno Aza é lembrado como fundador.
-- **Bahia (1926–1927):** Joaquina de Souza Carvalho evangelizou; os primeiros batismos registrados foram em Canavieiras, em 1927. Segundo um registro local, o missionário Otto Nelson consagrou Teodoro Santana como o primeiro pastor da igreja no estado.
-- **Piauí e Sergipe (1927):** Raimundo Prudente de Almeida, no Piauí, e o sargento Ormínio, em Sergipe, são lembrados como os primeiros a evangelizar.
+- **Ceará (1914):** **saiu do Pará** Maria de Jesus Nazaré Araújo. Ela voltou sozinha, de navio, para a sua terra natal, **Uruburetama** (hoje Itapajé). Foi maltratada, teve a Bíblia jogada no chão e foi expulsa, mas foi acolhida por Raimundo de Salles Gomes e pelo genro, Vicente de Salles Bastos, que dirigiam uma congregação presbiteriana e aceitaram a mensagem pentecostal. Em 1922, Antonio Rêgo Barros começou em Fortaleza.
+- **Alagoas (1914):** **saíram de Belém** Gunnar Vingren e o missionário Otto Nelson, que pregaram em Maceió.
+- **Paraíba (1914 e 1920):** Manoel Francisco Dubu começou em **Campina Grande**; Francisco Félix e a esposa, em João Pessoa. As fontes não dizem de onde vieram.
+- **Pernambuco (1916):** **saiu de Belém** Adriano Nobre, obreiro e intérprete de Vingren, enviado ao Recife. Os Carlson chegaram em 1918.
+- **Rio Grande do Norte (1918):** **saiu do Recife** Adriano Nobre, que começou em Natal com pregadores de nomes desconhecidos. Em Natal se reuniram a reunião preparatória de 1929 e a primeira Convenção Geral, em 1930.
+- **Maranhão (1920–1921):** **saiu de Belém** Clímaco Bueno Aza. Partiu do porto em 3 de junho de 1920 e, depois de dois dias no mar, pregou de casa em casa em São Luís.
+- **Bahia (1926–1927):** Joaquina de Souza Carvalho começou em **Canavieiras**, no sul do estado; os primeiros batismos foram em 1927. Segundo um registro local, o missionário Otto Nelson consagrou Teodoro Santana como o primeiro pastor da igreja no estado.
+- **Piauí e Sergipe (1927):** Raimundo Prudente de Almeida começou em Teresina, e o sargento Ormínio em Aracaju.
 
 ### Sudeste
-- **Rio de Janeiro (1922–1924):** a igreja se estabeleceu em São Cristóvão; Gunnar e Frida Vingren chegaram em 1924.
-- **Espírito Santo (1922):** Daniel e Sara Berg fundaram a igreja em Vitória.
-- **São Paulo (1923–1924):** os Berg começaram em Santos a primeira Assembleia de Deus do estado.
-- **Minas Gerais (1927):** a igreja chegou a Belo Horizonte e ao interior.
+- **Rio de Janeiro (1920–1924):** **saíram do Pará** Gunnar Vingren, que visitou o Rio em 1920 e 1923, e “alguns crentes do Pará”, que chegaram em 1923. Em 1924, Vingren se mudou para o Rio com Frida.
+- **Espírito Santo (1922):** Galdino Sobrinho e a esposa, com Daniel e Sara Berg — que tinham voltado da Suécia em 1921 —, começaram em Vitória.
+- **São Paulo (1923–1924):** **saíram de Pernambuco** os crentes que começaram em Santos em 1923; Daniel Berg chegou em 1924 e, em 1927, foi para a capital.
+- **Minas Gerais (1927):** Clímaco Bueno Aza — o mesmo do Amapá e do Maranhão — começou em Belo Horizonte.
 
 ### Sul
-- **Santa Catarina (1920 e 1931):** as listas registram dois começos.
-- **Rio Grande do Sul (1924):** a igreja chegou a Porto Alegre.
-- **Paraná (1928):** a igreja chegou ao estado.
+- **Santa Catarina (1920 e 1931):** Gunnar Vingren pregou em Tubarão, Criciúma e Itajaí em 1920; em 1931, André Bernardino da Silva começou a igreja em Itajaí.
+- **Rio Grande do Sul (1924):** o missionário sueco Gustav Nordlund começou em Porto Alegre.
+- **Paraná (1928):** Bruno Skolimowski, um dos primeiros pastores separados pela igreja de Belém (1921), começou em Curitiba.
 
 ### Centro-Oeste
-- **Goiás (1936):** em Goiânia, o pastor Antônio Moreira, um pedreiro vindo do Rio de Janeiro para as obras da nova capital, fundou a igreja.
-- **Mato Grosso (1936 ou 1944) e Mato Grosso do Sul (1944):** Juvenal Roque de Andrade é lembrado como fundador das igrejas de Cuiabá e de Campo Grande.
-- **Distrito Federal (1957–1959):** irmãos chegaram em 1957 para trabalhar na construção de Brasília; a igreja foi fundada em Taguatinga, em maio de 1959.
+- **Goiás (1936):** **saíram do Rio de Janeiro** crentes da igreja de Madureira, que começaram em Goiânia; o diácono Antônio Moreira, um pedreiro que trabalhava nas obras da nova capital, foi enviado para fundar a igreja.
+- **Mato Grosso (1936):** o pastor itinerante Eduardo Pablo Joerck foi o primeiro a pregar a mensagem pentecostal em Cuiabá, debaixo de oposição.
+- **Mato Grosso do Sul (1944):** Juvenal Roque de Andrade começou a igreja em Campo Grande — que, na época, ainda fazia parte de Mato Grosso (veja abaixo por que as datas divergem).
+- **Distrito Federal (1957–1959):** irmãos de vários estados chegaram em 1957 para trabalhar na construção de Brasília; a igreja foi fundada em Taguatinga, em maio de 1959.
+
+### Por que as histórias divergem
+
+Quem compara as fontes encontra datas e nomes diferentes para o mesmo lugar. Quase sempre não é que alguém mentiu: as fontes estão contando **coisas diferentes**, ou contando **do ponto de vista de quem escreveu**.
+
+**O caso de Mato Grosso.** Uma fonte diz que a igreja chegou em **1936**, com o pastor itinerante **Eduardo Pablo Joerck**, em Cuiabá. Outra diz **1944**, com **Juvenal Roque de Andrade**. As duas podem estar certas:
+- **O mapa mudou.** Até 1977, Campo Grande ficava em Mato Grosso — o Mato Grosso do Sul só foi criado naquele ano. Uma lista antiga que diz “Mato Grosso, 1944, Juvenal Roque de Andrade” pode estar falando de **Campo Grande**, e não de Cuiabá.
+- **Quem conta.** Os documentos da igreja de Cuiabá lembram o seu pioneiro, Joerck; a história contada a partir de Campo Grande lembra Juvenal.
+
+**As causas que se repetem em outros lugares:**
+- **“Começar” quer dizer coisas diferentes.** Pode ser a primeira pregação, o primeiro convertido, o primeiro batismo, a igreja organizada ou o registro em cartório. No **Amapá**, Clímaco Bueno Aza evangelizou em 1916, José de Matos Caravella fundou a igreja em 1917, e outra fonte dá 1918. Na **Bahia**, Joaquina de Souza Carvalho começou em 1926, e os primeiros batismos foram em 1927. Em **Santa Catarina**, Vingren pregou em 1920, mas a igreja de Itajaí só começou em 1931. No **Distrito Federal**, as datas são 1956, 1957 (a chegada dos irmãos) e 1959 (a fundação da igreja).
+- **Cidades diferentes no mesmo estado.** No **Maranhão**, Clímaco Bueno Aza pregou em São Luís em 1920–1921, e uma igreja de Coelho Neto lembra a fundação ali em 1922. No **Acre**, Cruzeiro do Sul (1932) e Rio Branco (1943). Na **Paraíba**, Campina Grande (1914) e João Pessoa (1920) — e um estudo recente diz que as fontes divergem sobre o fundador, o lugar e o tempo.
+- **Missionários e obreiros brasileiros.** Muitas histórias foram escritas em torno dos missionários suecos e deixaram de lado os brasileiros que chegaram antes. Em **Pernambuco**, Adriano Nobre foi enviado em 1916, mas há histórias que começam com a chegada do casal Carlson, em 1918. No **Rio Grande do Norte**, a tradição oral lembra Adriano Nobre; um livro de história dá a primazia a José Estumano de Morais, enviado de Belém em 1919; outra lista fala de Joaquim Batista de Macedo (1914) e do missionário Simon Sjögren (1918). E muitas **mulheres** pioneiras, como Maria Nazaré, no Ceará, e Joaquina, na Bahia, foram quase esquecidas.
+- **Ministérios e convenções diferentes.** Cada ministério conta a história a partir da sua igreja-sede e do seu fundador. A mesma cidade pode ter a história da igreja ligada à Missão e a da igreja ligada a Madureira, com datas e pioneiros diferentes.
+- **Memória e documentos.** Muitas histórias foram escritas décadas depois, para um aniversário, a partir da memória dos irmãos mais antigos. Por isso aparecem diferenças na grafia dos nomes (Cordulino ou Cordolino, Aza ou Asa) e nas datas.
+
+Por isso, neste estudo, quando as fontes discordam, as versões aparecem lado a lado.
 
 :::nota
-**E a sua cidade?** A história de cada cidade está guardada nas igrejas locais: nas atas, nos livros de batismo e na memória dos irmãos mais antigos. Vale a pena perguntar a eles e registrar.
+**E a sua cidade?** A história de cada cidade está guardada nas igrejas locais: nas atas, nos livros de batismo e na memória dos irmãos mais antigos. Vale a pena perguntar a eles de onde veio quem pregou primeiro — e registrar.
 :::
 
 ## Como os obreiros eram separados

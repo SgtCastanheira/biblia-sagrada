@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'ad-de-onde-saiu-cada-pioneiro',
+    date: '26 de outubro de 2026',
+    title: 'De onde saiu cada pioneiro',
+    items: [
+      { icon: 'pin_drop', title: 'A Assembleia de Deus cidade por cidade', text: 'Em que cidade a igreja começou em cada estado, quem levou a mensagem e de onde essa pessoa saiu — com linhas no mapa.', link: '/mapas/assembleia-de-deus-estados', tip: 'Toque em “Visitar os lugares”.' },
+      { icon: 'help', title: 'Por que as histórias divergem', text: 'O caso de Mato Grosso e de outros estados: o que cada fonte conta e por quê.', link: '/artigo/assembleia-de-deus-no-brasil' },
+    ],
+  },
+  {
     id: 'avivamentos-e-ad-pelo-brasil',
     date: '26 de outubro de 2026',
     title: 'Os avivamentos desde Atos e a Assembleia de Deus pelo Brasil',

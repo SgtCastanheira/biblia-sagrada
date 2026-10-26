@@ -32,6 +32,8 @@ export interface MapStep {
   place: string;
   text: string;
   ref: string;
+  /** De onde saiu quem levou a mensagem (id de lugar): o mapa liga a origem a esta etapa. */
+  from?: string;
 }
 
 export interface BibleMap {

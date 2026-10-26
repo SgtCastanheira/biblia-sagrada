@@ -125,6 +125,12 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
               [attr.marker-end]="storyStep() === null ? 'url(#arrow-' + map().id + ')' : null" />
       }
 
+      <!-- De onde saiu quem levou a mensagem (mapas da história da Igreja) -->
+      @for (o of origins(); track o.key) {
+        <path class="origin" [class.on]="o.on" [attr.d]="o.d" [attr.stroke-width]="font() * (o.on ? 0.16 : 0.1)"
+              [attr.stroke-dasharray]="font() * 0.4 + ' ' + font() * 0.25" [attr.marker-end]="o.on ? 'url(#arrow-' + map().id + ')' : null" />
+      }
+
       <!-- Distância do território destacado até o ponto de referência (o templo) -->
       @for (m of measures(); track m.key) {
         <path class="measure" [attr.d]="m.d" [attr.stroke-width]="font() * 0.13" [attr.stroke-dasharray]="font() * 0.35 + ' ' + font() * 0.25" />
@@ -205,6 +211,8 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
       paint-order: stroke; stroke: var(--map-land); stroke-width: .28em; stroke-linejoin: round;
     }
     .place.active .label { fill: var(--mat-sys-primary); }
+    .origin { fill: none; stroke: var(--accent-gold); stroke-linecap: round; opacity: .35; pointer-events: none; }
+    .origin.on { opacity: 1; }
     .measure { fill: none; stroke: var(--mat-sys-primary); stroke-linecap: round; pointer-events: none; }
     .measure-label {
       fill: var(--mat-sys-primary); font-family: Inter, sans-serif; font-weight: 700; text-anchor: middle; pointer-events: none;
@@ -556,6 +564,24 @@ export class BibleMapView {
       [-0.75, -0.25, 0.25, 0.75].map((c) => `M${x + w * c - w * 0.12},${y - w * 0.3}h${w * 0.24}v${w * 0.95}h-${w * 0.24}Z`).join('') +
       `M${x - w * 1.1},${y + w * 0.7}h${w * 2.2}v${w * 0.3}h-${w * 2.2}Z`;
     return { name: lm.name, x, y, icon };
+  });
+
+  /** Linhas da origem de cada etapa (de onde saiu quem levou a mensagem), curvas; a etapa ativa fica em destaque. */
+  protected readonly origins = computed(() => {
+    if (this.compact()) return [];
+    const map = this.map();
+    const v = this.view();
+    const active = this.storyStep() ?? this.activeStep();
+    const place = (id: string) => map.places.find((p) => p.id === id);
+    return map.steps.flatMap((s, i) => {
+      const a = s.from ? place(s.from) : undefined;
+      const b = place(s.place);
+      // Na jornada, só a linha da etapa atual; no mapa, todas (a escolhida em destaque)
+      if (!a || !b || (this.storyStep() !== null && i !== active)) return [];
+      const x0 = v.x(a.lon), y0 = v.y(a.lat), x1 = v.x(b.lon), y1 = v.y(b.lat);
+      const cx = (x0 + x1) / 2 - (y1 - y0) * 0.18, cy = (y0 + y1) / 2 + (x1 - x0) * 0.18;
+      return [{ key: `${i}`, on: i === active, d: `M${x0.toFixed(1)},${y0.toFixed(1)}Q${cx.toFixed(1)},${cy.toFixed(1)} ${x1.toFixed(1)},${y1.toFixed(1)}` }];
+    });
   });
 
   /** Linhas do território destacado até o ponto de referência, com a distância em linha reta. */

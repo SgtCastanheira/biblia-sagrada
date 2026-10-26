@@ -375,6 +375,8 @@ test('história da Igreja como Atos: o panorama em destaque leva às histórias 
 test('Assembleia de Deus no Brasil: estudo aprofundado com o mapa interativo de Belém ao Sudeste', async ({ page }) => {
   await page.goto('/artigo/assembleia-de-deus-no-brasil');
   await expect(page.getByRole('heading', { name: 'Eram casados antes de ser pastores?' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Por que as histórias divergem' })).toBeAttached();
+  await expect(page.getByText(/Até 1977, Campo Grande ficava em Mato Grosso/)).toBeAttached();
   await page.getByRole('link', { name: /Ver no mapa interativo/ }).click();
   await expect(page).toHaveURL(/\/mapas\/assembleia-de-deus-no-brasil/);
   await expect(page.getByRole('heading', { level: 1, name: 'A Assembleia de Deus pelo Brasil' })).toBeVisible();

@@ -28,6 +28,7 @@ for (const map of CHURCH_MAPS) {
     expect(BIBLE_MAPS.some((m) => m.id === map.id), 'id repetido entre os mapas bíblicos').toBe(false);
     for (const [i, step] of map.steps.entries()) {
       expect(places.has(step.place), `etapa ${i + 1}: lugar "${step.place}" não existe`).toBe(true);
+      if (step.from) expect(places.has(step.from) && step.from !== step.place, `etapa ${i + 1}: origem "${step.from}" inválida`).toBe(true);
       // Nas etapas destes mapas, "ref" é a data, e não pode ser confundida com um texto bíblico
       expect(parseReferences(step.ref).refs, `etapa ${i + 1}: "${step.ref}" parece referência bíblica`).toEqual([]);
       expect(step.ref).toMatch(/\d{4}/);
