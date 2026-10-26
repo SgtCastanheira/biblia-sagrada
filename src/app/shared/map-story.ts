@@ -1,3 +1,4 @@
+import { narrationVoice, warmUpVoices } from '../core/voice';
 import { Component, computed, DestroyRef, effect, inject, input, output, signal, untracked } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
@@ -192,6 +193,7 @@ export class MapStory {
   private touch: { x: number; y: number } | null = null;
 
   constructor() {
+    warmUpVoices();
     const destroy = inject(DestroyRef);
     // Tela cheia: a página de trás não rola enquanto a jornada está aberta
     document.body.style.overflow = 'hidden';
@@ -290,7 +292,7 @@ export class MapStory {
       const text = `${this.placeName()}. ${s.text}${verses.text ? ` ${s.ref.replace(/(\d)\.(\d)/g, '$1, versículo $2')}: ${verses.text.replace(' …', '')}` : ''}`;
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'pt-BR';
-      utterance.voice = speechSynthesis.getVoices().find((v) => v.lang === 'pt-BR') ?? speechSynthesis.getVoices().find((v) => v.lang.startsWith('pt')) ?? null;
+      utterance.voice = narrationVoice();
       utterance.rate = 0.98;
       if (playing) utterance.onend = () => (this.timer = setTimeout(advance, 1200));
       // Pequena pausa para a câmera chegar antes de começar a falar

@@ -22,11 +22,12 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
-    id: 'assembleia-de-deus-mapa',
+    id: 'avivamentos-e-ad-pelo-brasil',
     date: '26 de outubro de 2026',
-    title: 'A Assembleia de Deus pelo Brasil, com mapa',
+    title: 'Os avivamentos desde Atos e a Assembleia de Deus pelo Brasil',
     items: [
-      { icon: 'church', title: 'A história da Assembleia de Deus no Brasil', text: 'De Belém para todo o país: como os obreiros eram separados em cada época, o casamento dos pioneiros, os costumes, o ensino e as mulheres na obra.', link: '/artigo/assembleia-de-deus-no-brasil', tip: 'Em Estudo → História da Igreja.' },
+      { icon: 'local_fire_department', title: 'Os avivamentos desde Atos', text: 'Época por época: como começou cada avivamento, por quem, como terminou, o que mudou na sociedade e os sermões de cada tempo.', link: '/artigo/avivamentos-desde-atos', tip: 'Em Estudo → Avivamentos.' },
+      { icon: 'church', title: 'A história da Assembleia de Deus no Brasil', text: 'Como os obreiros eram separados em cada época, o casamento dos pioneiros, os costumes, o ensino e as mulheres na obra.', link: '/artigo/assembleia-de-deus-no-brasil' },
       { icon: 'map', title: 'Mapa interativo: do Pará ao Rio e a São Paulo', text: 'O caminho da igreja, etapa por etapa, com as datas e as distâncias.', link: '/mapas/assembleia-de-deus-no-brasil', tip: 'Toque em “Viver a jornada”.' },
     ],
   },

@@ -2,7 +2,7 @@ import { NgTemplateOutlet } from '@angular/common';
 import { Component, computed, inject, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import { findArticle } from '../core/library';
+import { CLASSIC_SERMONS, findArticle } from '../core/library';
 import { Block, parseBlocks } from '../core/rich-text-parser';
 import { Figure } from './figure';
 import { Sheets } from './sheets';
@@ -70,6 +70,29 @@ const SECTION_LABELS: Record<string, string> = {
                 <span class="read-over">História completa · {{ a.period }}</span>
                 <span class="read-title">{{ a.title }}</span>
                 <span class="read-desc">@if (b.inlines) {<ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" />} @else {{{ a.subtitle }}}</span>
+              </span>
+              <mat-icon class="read-go">arrow_forward</mat-icon>
+            </a>
+          }
+        }
+        @case ('facts') {
+          <section class="facts">
+            @if (b.place) { <h3 class="facts-title"><mat-icon>fact_check</mat-icon>{{ b.place }}</h3> }
+            <dl>
+              @for (f of b.facts; track f.label) {
+                <div><dt>{{ f.label }}</dt><dd><ng-container *ngTemplateOutlet="line; context: { $implicit: f.text }" /></dd></div>
+              }
+            </dl>
+          </section>
+        }
+        @case ('sermon') {
+          @if (sermonOf(b.sermon); as s) {
+            <a class="read sermon-card" [routerLink]="['/avivamento', s.id]">
+              <span class="read-icon"><mat-icon>campaign</mat-icon></span>
+              <span class="read-texts">
+                <span class="read-over">Sermão da época · {{ s.year }}</span>
+                <span class="read-title">{{ s.title }}</span>
+                <span class="read-desc">@if (b.inlines) {<ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" />} @else {{{ s.preacher }} — {{ s.text }}}</span>
               </span>
               <mat-icon class="read-go">arrow_forward</mat-icon>
             </a>
@@ -150,6 +173,10 @@ export class RichText {
     let n = 0;
     return this.blocks().map((b) => b.type === 'image' && n++ % 2 === 1);
   });
+
+  protected sermonOf(id: string | undefined) {
+    return CLASSIC_SERMONS.find((s) => s.id === id);
+  }
 
   protected articleOf(id: string | undefined) {
     return id ? findArticle(id) : undefined;

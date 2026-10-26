@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { ArticleCollection, articlesOf, COLLECTIONS } from '../../core/library';
 
-const ORDER: ArticleCollection[] = ['igreja', 'biblia', 'contexto', 'profecias', 'estudos'];
+const ORDER: ArticleCollection[] = ['igreja', 'avivamentos', 'biblia', 'contexto', 'profecias', 'estudos'];
 
 /** Lista de artigos: História da Igreja, De onde veio a Bíblia e Estudos bíblicos. */
 @Component({

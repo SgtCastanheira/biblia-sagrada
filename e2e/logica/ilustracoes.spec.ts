@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { parseBlocks } from '../../src/app/core/rich-text-parser';
-import { ARTICLES } from '../../src/app/core/library';
+import { ARTICLES, CLASSIC_SERMONS } from '../../src/app/core/library';
 
 const FIGURES = [...readFileSync('src/app/shared/figure.ts', 'utf8').matchAll(/@case \('([\w-]+)'\)/g)].map((m) => m[1]);
 
@@ -63,4 +63,31 @@ test('histórias entrelaçadas: todo cartão "leia" leva a um artigo que existe,
     if (!linked.includes(a.id)) problems.push(`o panorama não leva a "${a.id}"`);
   }
   expect(problems).toEqual([]);
+});
+
+test('avivamentos: cartões de sermão existem, fichas completas e o panorama leva a todos os avivamentos', () => {
+  const problems: string[] = [];
+  for (const file of readdirSync('public/conteudo/artigos')) {
+    for (const b of parseBlocks(readFileSync(`public/conteudo/artigos/${file}`, 'utf8'))) {
+      if (b.type === 'sermon' && !CLASSIC_SERMONS.some((s) => s.id === b.sermon)) problems.push(`${file}: sermão "${b.sermon}" não existe`);
+      if (b.type === 'facts' && (!b.facts?.length || b.facts.some((f) => !f.label || !f.text.length))) problems.push(`${file}: ficha incompleta`);
+    }
+  }
+  for (const s of CLASSIC_SERMONS) {
+    if (s.revival && !ARTICLES.some((a) => a.id === s.revival)) problems.push(`sermão ${s.id}: avivamento "${s.revival}" não existe`);
+  }
+  const overview = ARTICLES.find((a) => a.overview && a.collection === 'avivamentos')!;
+  const linked = parseBlocks(readFileSync(`public/conteudo/artigos/${overview.id}.md`, 'utf8')).filter((b) => b.type === 'read').map((b) => b.article);
+  for (const a of ARTICLES.filter((x) => x.collection === 'avivamentos' && !x.overview)) {
+    if (!linked.includes(a.id)) problems.push(`o panorama dos avivamentos não leva a "${a.id}"`);
+  }
+  expect(problems).toEqual([]);
+});
+
+test('o leitor entende a ficha e o cartão de sermão', () => {
+  const [ficha, sermao] = parseBlocks(':::ficha Gales\n- Como começou | Em [[At 2.1]]\n- O fim | 1906\n:::\n\n:::sermao evan-roberts-quatro-condicoes\n:::');
+  expect(ficha).toMatchObject({ type: 'facts', place: 'Gales' });
+  expect(ficha.facts?.map((f) => f.label)).toEqual(['Como começou', 'O fim']);
+  expect(ficha.facts?.[0].text.map((i) => i.t)).toEqual(['text', 'ref']);
+  expect(sermao).toMatchObject({ type: 'sermon', sermon: 'evan-roberts-quatro-condicoes' });
 });

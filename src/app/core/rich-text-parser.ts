@@ -8,7 +8,7 @@ export interface Inline {
 }
 
 export interface Block {
-  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read';
+  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon';
   inlines?: Inline[];
   items?: Inline[][];
   events?: { date: string; title: string; text: Inline[] }[];
@@ -31,6 +31,10 @@ export interface Block {
   people?: { name: string; role: string; src?: string }[];
   /** "Leia a história completa": id do artigo ligado. */
   article?: string;
+  /** Ficha (":::ficha Título"): linhas "- Rótulo | texto". */
+  facts?: { label: string; text: Inline[] }[];
+  /** Sermão histórico ligado (":::sermao id"): id em CLASSIC_SERMONS. */
+  sermon?: string;
 }
 
 const cells = (line: string) =>
@@ -61,6 +65,8 @@ export function parseInline(line: string): Inline[] {
  * Para as histórias: ":::cena Lugar, data" (um quadro que põe o leitor no lugar), ":::destaque" (frase em
  * destaque; a última linha começando com "— " é o autor), ":::pessoas" ("- Nome | papel | imagens/foto.jpg")
  * e ":::leia id-do-artigo" (cartão que leva à história completa; o texto dentro diz por que ela se liga a esta).
+ * ":::ficha Título" resume um período em linhas "- Rótulo | texto" (como começou, por quê, quem, o fim, o impacto),
+ * e ":::sermao id" mostra o cartão de um sermão histórico do app.
  */
 export function parseBlocks(source: string): Block[] {
   const blocks: Block[] = [];
@@ -83,13 +89,23 @@ export function parseBlocks(source: string): Block[] {
       blocks.push({ type: 'image', alt: image[1], src: image[2], caption: image[3] ? parseInline(image[3]) : undefined });
       continue;
     }
-    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia)(?:\s+(.+))?$/);
+    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao)(?:\s+(.+))?$/);
     if (fence) {
       flush();
       const body: string[] = [];
       while (++i < lines.length && lines[i].trim() !== ':::') body.push(lines[i].trim());
       const text = body.filter(Boolean);
-      if (fence[1] === 'leia') {
+      if (fence[1] === 'ficha') {
+        const facts = text
+          .filter((l) => l.startsWith('- '))
+          .map((l) => {
+            const [label, ...rest] = l.slice(2).split('|');
+            return { label: label.trim(), text: parseInline(rest.join('|').trim()) };
+          });
+        blocks.push({ type: 'facts', place: fence[2]?.trim(), facts });
+      } else if (fence[1] === 'sermao') {
+        blocks.push({ type: 'sermon', sermon: fence[2]?.trim(), inlines: text.length ? parseInline(text.join(' ')) : undefined });
+      } else if (fence[1] === 'leia') {
         blocks.push({ type: 'read', article: fence[2]?.trim(), inlines: text.length ? parseInline(text.join(' ')) : undefined });
       } else if (fence[1] === 'cena') {
         blocks.push({ type: 'scene', place: fence[2]?.trim(), inlines: parseInline(text.join(' ')) });

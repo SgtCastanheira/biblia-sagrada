@@ -2,7 +2,7 @@
 
 import { inBibleOrder, positionOfChapter, positionOfRef } from './bible-order';
 
-export type ArticleCollection = 'estudos' | 'contexto' | 'profecias' | 'igreja' | 'biblia';
+export type ArticleCollection = 'estudos' | 'contexto' | 'profecias' | 'igreja' | 'avivamentos' | 'biblia';
 
 export interface Article {
   id: string;
@@ -23,7 +23,7 @@ export interface Article {
 }
 
 /** Coleções lidas como narrativa (capa, capítulos e cenas). */
-export const STORY_COLLECTIONS: ArticleCollection[] = ['igreja', 'biblia'];
+export const STORY_COLLECTIONS: ArticleCollection[] = ['igreja', 'avivamentos', 'biblia'];
 
 export const COLLECTIONS: Record<ArticleCollection, { name: string; description: string; icon: string }> = {
   estudos: {
@@ -45,6 +45,11 @@ export const COLLECTIONS: Record<ArticleCollection, { name: string; description:
     name: 'História da Igreja',
     description: 'De Pentecostes às reformas e aos avivamentos: como a fé chegou até nós.',
     icon: 'history_edu',
+  },
+  avivamentos: {
+    name: 'Avivamentos',
+    description: 'Os grandes avivamentos desde Atos: como começaram, por quem, como terminaram, o que mudaram na sociedade e o que foi pregado.',
+    icon: 'local_fire_department',
   },
   biblia: {
     name: 'De onde veio a Bíblia',
@@ -382,6 +387,62 @@ export const ARTICLES: Article[] = [
     icon: 'music_note',
     minutes: 5,
   },
+  // Avivamentos
+  {
+    id: 'avivamentos-desde-atos',
+    collection: 'avivamentos',
+    title: 'Os avivamentos desde Atos',
+    subtitle: 'Como Atos: os grandes avivamentos da história, época por época — como começaram, por quem, o fim, o impacto na sociedade e os sermões de cada tempo.',
+    period: '30–hoje',
+    icon: 'local_fire_department',
+    minutes: 15,
+    overview: true,
+  },
+  {
+    id: 'avivamento-de-oracao-1857',
+    collection: 'avivamentos',
+    title: 'O avivamento de oração',
+    subtitle: 'Uma reunião ao meio-dia em Nova York, uma crise financeira e um milhão de convertidos: de 1857 ao Ulster de 1859.',
+    period: '1857–1860',
+    icon: 'schedule',
+    minutes: 7,
+  },
+  {
+    id: 'avivamento-do-pais-de-gales',
+    collection: 'avivamentos',
+    title: 'O avivamento do País de Gales',
+    subtitle: 'Evan Roberts, as quatro condições e cem mil convertidos em poucos meses — o fogo que correu o mundo.',
+    period: '1904–1906',
+    icon: 'whatshot',
+    minutes: 8,
+  },
+  {
+    id: 'avivamento-da-coreia',
+    collection: 'avivamentos',
+    title: 'O grande avivamento da Coreia',
+    subtitle: 'Da confissão de um missionário em Wonsan às confissões de Pyongyang: a origem das orações de madrugada.',
+    period: '1903–1910',
+    icon: 'wb_twilight',
+    minutes: 7,
+  },
+  {
+    id: 'avivamento-da-africa-oriental',
+    collection: 'avivamentos',
+    title: 'O avivamento da África Oriental',
+    subtitle: 'Os balokole, “os salvos”: confissão, perdão e reconciliação de Ruanda a Uganda, ao Quênia e à Tanzânia.',
+    period: '1929–1970',
+    icon: 'diversity_3',
+    minutes: 7,
+  },
+  {
+    id: 'avivamento-das-hebridas',
+    collection: 'avivamentos',
+    title: 'O avivamento das Hébridas',
+    subtitle: 'Duas irmãs idosas oram, e uma ilha da Escócia é visitada por Deus: Lewis, 1949–1952.',
+    period: '1949–1952',
+    icon: 'water_drop',
+    minutes: 6,
+  },
   // De onde veio a Bíblia
   {
     id: 'formacao-do-antigo-testamento',
@@ -473,7 +534,7 @@ export const findArticle = (id: string) => ARTICLES.find((a) => a.id === id);
  */
 export const articlesOf = (collection: ArticleCollection) => {
   const list = ARTICLES.filter((a) => a.collection === collection);
-  if (collection === 'igreja' || collection === 'biblia') return list;
+  if (collection === 'igreja' || collection === 'avivamentos' || collection === 'biblia') return list;
   const first = (a: Article) => (a.passages?.length ? Math.min(...a.passages.map(positionOfChapter)) : -1);
   return inBibleOrder(list, first);
 };
@@ -518,11 +579,14 @@ export interface ClassicSermon {
   /** Por que este sermão ficou famoso. */
   context: string;
   source?: { label: string; url: string };
+  /** Estudo do avivamento em que o sermão foi pregado (id de artigo). */
+  revival?: string;
 }
 
 export const CLASSIC_SERMONS: ClassicSermon[] = [
   {
     id: 'wesley-salvacao-pela-fe',
+    revival: 'grandes-despertamentos',
     title: 'Salvação pela fé',
     originalTitle: 'Salvation by Faith',
     preacher: 'John Wesley',
@@ -538,6 +602,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   },
   {
     id: 'edwards-pecadores',
+    revival: 'grandes-despertamentos',
     title: 'Pecadores nas mãos de um Deus irado',
     originalTitle: 'Sinners in the Hands of an Angry God',
     preacher: 'Jonathan Edwards',
@@ -553,6 +618,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   },
   {
     id: 'whitefield-metodo-da-graca',
+    revival: 'grandes-despertamentos',
     title: 'O método da graça',
     originalTitle: 'The Method of Grace',
     preacher: 'George Whitefield',
@@ -568,6 +634,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   },
   {
     id: 'finney-o-que-e-avivamento',
+    revival: 'grandes-despertamentos',
     title: 'O que é um avivamento',
     originalTitle: 'What a Revival of Religion Is',
     preacher: 'Charles G. Finney',
@@ -582,6 +649,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   },
   {
     id: 'spurgeon-olhai-para-mim',
+    revival: 'avivamento-de-oracao-1857',
     title: 'Olhai para mim e sede salvos',
     originalTitle: 'Sovereignty and Salvation',
     preacher: 'Charles H. Spurgeon',
@@ -597,6 +665,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   },
   {
     id: 'moody-novo-nascimento',
+    revival: 'avivamento-de-oracao-1857',
     title: 'A porta de entrada do Reino',
     originalTitle: 'The Gateway into the Kingdom',
     preacher: 'Dwight L. Moody',
@@ -612,6 +681,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   },
   {
     id: 'evan-roberts-quatro-condicoes',
+    revival: 'avivamento-do-pais-de-gales',
     title: 'As quatro condições do avivamento',
     preacher: 'Evan Roberts',
     lived: '1878–1951',
@@ -625,6 +695,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   },
   {
     id: 'seymour-batismo-no-espirito',
+    revival: 'movimento-pentecostal',
     title: 'O batismo com o Espírito Santo',
     preacher: 'William J. Seymour',
     lived: '1870–1922',
@@ -638,6 +709,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   },
   {
     id: 'billy-graham',
+    revival: 'avivamentos-desde-atos',
     title: 'A mensagem de Billy Graham',
     preacher: 'Billy Graham',
     lived: '1918–2018',

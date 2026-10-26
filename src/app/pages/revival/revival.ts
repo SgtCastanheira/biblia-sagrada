@@ -16,6 +16,12 @@ import { Sheets } from '../../shared/sheets';
       <p>Mensagens de pregadores que Deus usou em grandes avivamentos, em ordem cronológica, para ler com calma.</p>
     </header>
 
+    <a class="card history" matRipple [routerLink]="['/artigo', 'avivamentos-desde-atos']">
+      <mat-icon>local_fire_department</mat-icon>
+      <span><small>A história</small>Os avivamentos desde Atos: como começou cada um, o que mudou e o que foi pregado</span>
+      <mat-icon class="go">chevron_right</mat-icon>
+    </a>
+
     <div class="list">
       @for (s of sermons; track s.id) {
         <a class="card sermon" matRipple [routerLink]="['/avivamento', s.id]">
@@ -54,6 +60,11 @@ import { Sheets } from '../../shared/sheets';
   `,
   styleUrl: '../../shared/study.scss',
   styles: `
+    .history { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; padding: 14px 16px; font: 600 16px/1.35 var(--heading-font); }
+    .history > mat-icon:first-child { color: var(--accent-gold); }
+    .history span { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+    .history small { font: 600 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold); }
+    .history .go { color: var(--mat-sys-on-surface-variant); }
     .sermon { display: flex; flex-direction: column; gap: 3px; padding: 16px 18px; border-left: 3px solid var(--accent-gold); }
     .year { font: 600 13px Inter, sans-serif; color: var(--accent-gold); letter-spacing: .4px; }
     .s-title { font: 600 20px/1.3 var(--heading-font); }

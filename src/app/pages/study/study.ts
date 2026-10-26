@@ -198,6 +198,7 @@ export class StudyPage {
         { link: '/historia', icon: 'history_edu', name: 'História da Igreja', description: 'De Pentecostes às reformas, aos avivamentos e ao pentecostalismo no Brasil.' },
         { link: '/historia', queryParams: { colecao: 'biblia' }, icon: 'auto_stories', name: 'De onde veio a Bíblia', description: 'O cânon, os manuscritos, as traduções e a Bíblia em português.' },
         { link: '/harpa', icon: 'music_note', name: 'Harpa Cristã', description: 'A história do hinário e de cada hino: quem escreveu, traduziu, quando e por quê.' },
+        { link: '/historia', queryParams: { colecao: 'avivamentos' }, icon: 'local_fire_department', name: 'Avivamentos', description: 'De Pentecostes às Hébridas: como cada avivamento começou, terminou e mudou a sociedade.' },
         { link: '/avivamento', icon: 'campaign', name: 'Sermões que marcaram a história', description: 'Wesley, Edwards, Spurgeon, Moody — e pregadores de hoje.' },
       ],
     },

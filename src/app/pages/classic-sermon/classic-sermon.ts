@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { map, startWith, switchMap } from 'rxjs';
 import { ContentService } from '../../core/content.service';
-import { CLASSIC_KINDS, CLASSIC_SERMONS, findClassic } from '../../core/library';
+import { CLASSIC_KINDS, CLASSIC_SERMONS, findArticle, findClassic } from '../../core/library';
 import { SettingsService } from '../../core/settings.service';
 import { PassageView } from '../../shared/passage-view';
 import { RichText } from '../../shared/rich-text';
@@ -39,6 +39,14 @@ import { RichText } from '../../shared/rich-text';
           <h2>Por que esta mensagem ficou na história</h2>
           <p>{{ s.context }}</p>
         </section>
+
+        @if (revival(); as r) {
+          <a class="card revival" matRipple [routerLink]="['/artigo', r.id]">
+            <mat-icon>local_fire_department</mat-icon>
+            <span><small>O avivamento daquele tempo</small>{{ r.title }}</span>
+            <mat-icon class="go">chevron_right</mat-icon>
+          </a>
+        }
 
         <h2 class="section-title">Texto bíblico</h2>
         <app-passage-view [refs]="s.text" />
@@ -72,6 +80,11 @@ import { RichText } from '../../shared/rich-text';
   `,
   styleUrl: '../../shared/study.scss',
   styles: `
+    .revival { display: flex; align-items: center; gap: 12px; margin: 14px 0 0; padding: 14px 16px; font: 600 16px/1.35 var(--heading-font); }
+    .revival > mat-icon:first-child { color: var(--accent-gold); }
+    .revival span { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+    .revival small { font: 600 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold); }
+    .revival .go { color: var(--mat-sys-on-surface-variant); }
     .size { display: flex; }
     .by { margin: 0 0 4px; font: 600 17px Inter, sans-serif; color: var(--mat-sys-primary); }
     .by em { font-weight: 400; color: var(--mat-sys-on-surface-variant); }
@@ -94,6 +107,11 @@ export class ClassicSermonPage {
   private readonly content = inject(ContentService);
   protected readonly kinds = CLASSIC_KINDS;
 
+  /** Estudo do avivamento em que o sermão foi pregado. */
+  protected readonly revival = computed(() => {
+    const id = findClassic(this.id())?.revival;
+    return id ? findArticle(id) : undefined;
+  });
   protected readonly sermon = computed(() => findClassic(this.id()));
   protected readonly next = computed(() => {
     const i = CLASSIC_SERMONS.findIndex((s) => s.id === this.id());
