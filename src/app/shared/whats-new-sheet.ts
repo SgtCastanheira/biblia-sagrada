@@ -16,19 +16,18 @@ import { Release } from '../core/whats-new';
         <span class="overline"><mat-icon>waving_hand</mat-icon> Bem-vindo</span>
         <h2>A Bíblia e o estudo da sua igreja, no celular</h2>
         <p class="intro">Tudo fica no menu de baixo. Toque para conhecer:</p>
-        <ul>
+        <ul class="tour">
           @for (i of tour; track i.title) {
             <li>
-              <button matRipple (click)="go(i.link)">
+              <button matRipple (click)="go(i.link)" [attr.aria-label]="i.title + ': ' + i.text">
                 <mat-icon>{{ i.icon }}</mat-icon>
                 <span><strong>{{ i.title }}</strong><small>{{ i.text }}</small></span>
-                <mat-icon class="go">chevron_right</mat-icon>
               </button>
             </li>
           }
         </ul>
         <button class="news" (click)="go('/novidades')"><mat-icon>celebration</mat-icon> Novidade: {{ release.title }}</button>
-        <div class="actions">
+        <div class="actions sticky">
           <button mat-stroked-button (click)="go('/novidades')"><mat-icon>share</mat-icon> Compartilhar</button>
           <button mat-flat-button (click)="ref.dismiss()">Começar</button>
         </div>
@@ -70,6 +69,12 @@ import { Release } from '../core/whats-new';
     li small { font: 400 13px/1.4 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     li em { font: 500 13px Inter, sans-serif; font-style: normal; color: var(--mat-sys-primary); }
     li .go { color: var(--mat-sys-on-surface-variant); }
+    /* Boas-vindas: itens compactos, para "Começar" aparecer sem rolar mesmo em celular pequeno */
+    .tour { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; max-height: none; }
+    .tour li:last-child { grid-column: 1 / -1; }
+    .tour li button { grid-template-columns: auto minmax(0, 1fr); gap: 8px; height: 100%; padding: 8px 10px; }
+    .tour small { line-height: 1.3; }
+    .sticky { position: sticky; bottom: 0; padding: 10px 0 4px; background: var(--mat-sys-surface); }
     .intro { margin: -4px 0 12px; font: 400 15px/1.5 var(--reading-font); color: var(--mat-sys-on-surface-variant); }
     .news {
       display: flex; align-items: center; gap: 8px; width: 100%; min-height: 40px; margin: -6px 0 14px; padding: 0 4px;
@@ -86,11 +91,11 @@ export class WhatsNewSheet {
   /** Primeira visita: apresenta as cinco abas antes da novidade. */
   protected readonly welcome = this.data.welcome;
   protected readonly tour = [
-    { icon: 'home', title: 'Início', text: 'O versículo do dia e o caminho para continuar a leitura.', link: '/' },
-    { icon: 'menu_book', title: 'Bíblia', text: 'A Almeida, mesmo sem internet. Toque num versículo para destacar, copiar ou compartilhar.', link: '/livros' },
-    { icon: 'local_library', title: 'Estudo', text: 'Personagens, mapas, profecias e a história da Igreja, ligados ao texto.', link: '/estudo' },
-    { icon: 'school', title: 'Ensino', text: 'Escola Dominical, apoio ao professor, IBUC e sermões.', link: '/ensino' },
-    { icon: 'person', title: 'Meu espaço', text: 'Devocional, anotações dos cultos e favoritos, guardados no seu celular.', link: '/meu-espaco' },
+    { icon: 'home', title: 'Início', text: 'Versículo do dia', link: '/' },
+    { icon: 'menu_book', title: 'Bíblia', text: 'Funciona sem internet', link: '/livros' },
+    { icon: 'local_library', title: 'Estudo', text: 'Mapas e história', link: '/estudo' },
+    { icon: 'school', title: 'Ensino', text: 'EBD, IBUC e sermões', link: '/ensino' },
+    { icon: 'person', title: 'Meu espaço', text: 'Devocional, anotações e favoritos', link: '/meu-espaco' },
   ];
   protected readonly ref = inject(MatBottomSheetRef<WhatsNewSheet>);
   private readonly router = inject(Router);
