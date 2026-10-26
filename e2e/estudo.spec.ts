@@ -332,7 +332,7 @@ test('história da Igreja: o estudo de Daniel Berg e Gunnar Vingren, ligado ao d
 test('história da Igreja ilustrada: árvore das Assembleias de Deus, fotos e o estudo de Frida Vingren', async ({ page }) => {
   await page.goto('/artigo/madureira-e-a-separacao');
   await expect(page.getByRole('img', { name: /Árvore das Assembleias de Deus/ })).toBeVisible();
-  const foto = page.locator('figure.photo').getByRole('img', { name: 'Paulo Leivas Macalão' });
+  const foto = page.locator('figure.photo').getByRole('img', { name: 'Gunnar Vingren' });
   await foto.scrollIntoViewIfNeeded();
   await expect.poll(() => foto.evaluate((img: HTMLImageElement) => img.naturalWidth)).toBeGreaterThan(0);
   await page.locator('app-rich-text').getByRole('link', { name: 'Frida Vingren' }).first().click();
@@ -370,4 +370,17 @@ test('história da Igreja como Atos: o panorama em destaque leva às histórias 
   await expect(page).toHaveURL(/\/artigo\/frida-vingren/);
   await page.getByRole('link', { name: /Parte do panorama/ }).click();
   await expect(page).toHaveURL(/\/artigo\/panorama-da-igreja/);
+});
+
+test('Assembleia de Deus no Brasil: estudo aprofundado com o mapa interativo de Belém ao Sudeste', async ({ page }) => {
+  await page.goto('/artigo/assembleia-de-deus-no-brasil');
+  await expect(page.getByRole('heading', { name: 'Eram casados antes de ser pastores?' })).toBeVisible();
+  await page.getByRole('link', { name: /Ver no mapa interativo/ }).click();
+  await expect(page).toHaveURL(/\/mapas\/assembleia-de-deus-no-brasil/);
+  await expect(page.getByRole('heading', { level: 1, name: 'A Assembleia de Deus pelo Brasil' })).toBeVisible();
+  // As datas das etapas aparecem como texto, e não há capítulos da Bíblia para este mapa
+  await expect(page.locator('.steps .ref').first()).toHaveText('1910–1911');
+  await expect(page.getByRole('heading', { name: 'Capítulos relacionados' })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Viver a jornada' }).click();
+  await expect(page.getByRole('dialog')).toContainText('Belém');
 });

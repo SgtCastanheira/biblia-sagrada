@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
+import { CHURCH_MAPS } from '../../core/church-maps';
 import { MAPS_IN_ORDER, mapReference, mapTestament } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
 
@@ -37,6 +38,19 @@ import { BibleMapView } from '../../shared/bible-map';
         }
       </div>
     }
+    <h2 class="testament">História da Igreja</h2>
+    <div class="grid">
+      @for (m of churchMaps; track m.id) {
+        <a class="card" matRipple [routerLink]="['/mapas', m.id]">
+          <app-bible-map [map]="m" [compact]="true" />
+          <span class="info">
+            <span class="ref"><mat-icon>history_edu</mat-icon>{{ m.period }}</span>
+            <span class="title">{{ m.title }}</span>
+            <span class="summary">{{ m.summary }}</span>
+          </span>
+        </a>
+      }
+    </div>
     <p class="credit">Geografia: Natural Earth (domínio público). Traçados aproximados, para fins de estudo.</p>
   `,
   styles: `
@@ -69,6 +83,7 @@ import { BibleMapView } from '../../shared/bible-map';
 })
 export class MapsPage {
   protected readonly reference = mapReference;
+  protected readonly churchMaps = CHURCH_MAPS;
   protected readonly sections = [
     { name: 'Antigo Testamento', maps: MAPS_IN_ORDER.filter((m) => mapTestament(m) === 'AT') },
     { name: 'Novo Testamento', maps: MAPS_IN_ORDER.filter((m) => mapTestament(m) === 'NT') },

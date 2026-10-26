@@ -112,7 +112,8 @@ Add a new screen to the right tab regex and to the right hub; don't list the sam
 
 **Maps.** SVG, no tile server:
 - `tools/gerar-mapas.py` turns Natural Earth GeoJSON into `public/maps/*.json`, driven by the map definitions in `core/maps.ts` and `core/atlas.ts`.
-- Rerun it whenever a map is added or its bounds change.
+- Rerun it whenever a map is added or its bounds change. Pass map ids at the end to regenerate only those maps.
+- Church-history maps (outside the Bible) live in `core/church-maps.ts` (`CHURCH_MAPS`), use the same viewer and are listed in their own section of `/mapas`. Their steps use `ref` for the date (shown as text, never a Bible reference), they have no `chapters`, and the page always shows today's Brazilian state borders (from `ne_50m_admin_1_states_provinces_lines`).
 - `shared/bible-map.ts` draws:
   - era polygons;
   - optional layers (nearby cities, modern borders);

@@ -1,10 +1,10 @@
-A Assembleia de Deus que nasceu em Belém em 1911 cresceu tanto que hoje não é uma única organização: é uma grande família de igrejas, ligadas a convenções diferentes. As duas maiores são chamadas popularmente de **“Missão”** e **“Madureira”**. Este estudo conta, a partir das fontes, como se chegou a isso — de Gunnar Vingren a **Paulo Leivas Macalão** e à separação de **1989**.
+A Assembleia de Deus que nasceu em Belém em 1911 cresceu tanto que hoje não é uma única organização: é uma grande família de igrejas, ligadas a convenções diferentes. As duas maiores são chamadas popularmente de **“Missão”** e **“Madureira”**. Este estudo conta, a partir das fontes, como a igreja se organizou em convenções — da Convenção Geral de 1930 à convenção de Madureira e à separação de **1989**.
 
 :::pessoas
 - Gunnar Vingren | pastor em São Cristóvão (1924–1932) | imagens/gunnar-vingren.jpg
 - Frida Vingren | pregadora e professora no Rio | imagens/frida-vingren.jpg
-- Paulo Leivas Macalão | fundador do Ministério de Madureira | imagens/paulo-leivas-macalao.jpg
 - Zélia Brito | esposa de Macalão (1934)
+- Paulo Leivas Macalão | começou o trabalho em Madureira (1929)
 - Manoel Ferreira | presidente da CONAMAD desde 1987
 :::
 
@@ -16,11 +16,11 @@ A Assembleia de Deus que nasceu em Belém em 1911 cresceu tanto que hoje não é
 A árvore das Assembleias de Deus: de Belém (1911) às convenções de hoje. A linha tracejada indica a separação de 1989.
 :::
 
-## Antes de Macalão: de Belém ao Rio
+## De Belém ao Rio
 
 Tudo começou em Belém, com **Gunnar Vingren** e **Daniel Berg**, em 1911 (veja [Daniel Berg e Gunnar Vingren](/artigo/daniel-berg-e-gunnar-vingren)). Nos anos seguintes, a obra se espalhou pelo Norte e pelo Nordeste.
 
-No **Rio de Janeiro**, a Assembleia de Deus se estabeleceu em **1922**, no bairro de **São Cristóvão**, e ganhou força com a chegada de Gunnar e **Frida Vingren** em 1924. Vingren pastoreou São Cristóvão até 1932, e Frida dirigia cultos, a Escola Dominical e o trabalho social (veja [Frida Vingren](/artigo/frida-vingren)). Foi nesse primeiro grupo do Rio que um jovem gaúcho começou a congregar: **Paulo Leivas Macalão**.
+No **Rio de Janeiro**, a Assembleia de Deus se estabeleceu em **1922**, no bairro de **São Cristóvão**, e ganhou força com a chegada de Gunnar e **Frida Vingren** em 1924. Vingren pastoreou São Cristóvão até 1932, e Frida dirigia cultos, a Escola Dominical e o trabalho social (veja [Frida Vingren](/artigo/frida-vingren)). Foi nesse primeiro grupo do Rio que começou a congregar o jovem gaúcho Paulo Leivas Macalão, que depois abriria o trabalho em Madureira.
 
 :::leia frida-vingren
 A pioneira que pregava e ensinava em São Cristóvão.
@@ -28,29 +28,19 @@ A pioneira que pregava e ensinava em São Cristóvão.
 
 ![Gunnar Vingren](imagens/gunnar-vingren.jpg "Gunnar Vingren em 1908. Foto de autor desconhecido, em domínio público (Wikimedia Commons).")
 
-## Paulo Leivas Macalão (1903–1982)
-
-:::cena Rio de Janeiro · 5 de abril de 1924
-Um folheto convida um jovem gaúcho de 20 anos, filho de um oficial do Exército, para a “Igreja do Orfanato”. Paulo Leivas Macalão se converte e logo faz amizade com Gunnar Vingren.
-:::
-
-Paulo Leivas Macalão nasceu em **17 de setembro de 1903**, em Santana do Livramento (RS), filho de João Maria Macalão, oficial do Exército Brasileiro, e de Joaquina Georgina Leivas Macalão. Passou parte da infância na casa de um tio.
-
-Converteu-se aos 20 anos, em **5 de abril de 1924**, depois de receber um folheto que o convidava para a “Igreja do Orfanato”, dirigida pelo pastor inglês James Robert. Fez amizade com Gunnar Vingren e participou do começo da Assembleia de Deus no Rio de Janeiro.
-
-![Paulo Leivas Macalão](imagens/paulo-leivas-macalao.jpg "Paulo Leivas Macalão. Foto em domínio público (Wikimedia Commons).")
-
-:::cena Madureira, subúrbio do Rio · 15 de novembro de 1929
-Macalão abre um trabalho num bairro do subúrbio carioca. Dali nascerão igrejas por toda a cidade, pelo interior do estado e por outros estados.
-:::
-
-**O trabalho em Madureira.** Em **15 de novembro de 1929**, Macalão iniciou a igreja no bairro de **Madureira**, no subúrbio do Rio. Em **17 de agosto de 1930**, foi consagrado pastor por Gunnar Vingren e pelo pastor sueco Lewi Pethrus. Construiu em Bangu o primeiro templo da Assembleia de Deus no Sudeste, inaugurado em 1º de janeiro de 1933, e abriu igrejas em todas as regiões da cidade, no interior do estado e em outros estados. A esse conjunto de igrejas ligadas a Madureira se deu o nome de **Ministério de Madureira**.
-
-Casou-se com **Zélia Brito** em 1934. Criou o programa de rádio *Voz das Assembleias de Deus* (1955) e o jornal *O Semeador* (1960). Foi também o principal tradutor e adaptador dos hinos da **Harpa Cristã**, onde as suas iniciais, **P.L.M.**, aparecem em centenas de hinos (veja [A história da Harpa Cristã](/artigo/harpa-crista)). Morreu no Rio de Janeiro em **26 de agosto de 1982**.
-
 ## A organização: a Convenção Geral (1930)
 
 À medida que a igreja crescia, os pastores sentiram necessidade de se organizar. Depois de uma reunião preparatória em Natal, em fevereiro de 1929, a primeira assembleia geral se reuniu de **5 a 10 de setembro de 1930**, com a maioria dos pastores brasileiros e os missionários suecos. Ali começou a **Convenção Geral das Assembleias de Deus no Brasil (CGADB)**, e o jornal *Mensageiro da Paz* se tornou o seu órgão oficial. Em 1946, numa assembleia em Recife, a CGADB foi registrada como pessoa jurídica.
+
+## O Ministério de Madureira
+
+:::cena Madureira, subúrbio do Rio · 15 de novembro de 1929
+Um trabalho novo começa num bairro do subúrbio carioca. Dali nascerão igrejas por toda a cidade, pelo interior do estado e por outros estados.
+:::
+
+O trabalho em **Madureira** foi aberto por Paulo Leivas Macalão (1903–1982), um gaúcho convertido no Rio em 1924, que congregava com Gunnar Vingren. Em **17 de agosto de 1930**, ele foi separado pastor por Vingren e pelo pastor sueco Lewi Pethrus. Em Bangu foi construído o primeiro templo da Assembleia de Deus no Sudeste, inaugurado em 1º de janeiro de 1933, e o trabalho se espalhou por todas as regiões da cidade, pelo interior do estado e por outros estados. A esse conjunto de igrejas ligadas a Madureira se deu o nome de **Ministério de Madureira**.
+
+O ministério teve também o programa de rádio *Voz das Assembleias de Deus* (1955) e o jornal *O Semeador* (1960). Macalão foi ainda o principal tradutor e adaptador dos hinos da Harpa Cristã (veja [A história da Harpa Cristã](/artigo/harpa-crista)).
 
 ## A convenção de Madureira (1958)
 
@@ -72,7 +62,7 @@ Em **setembro de 1989**, numa assembleia geral extraordinária em **Salvador**, 
 
 Desde então, a **CONAMAD** seguiu como convenção completamente independente da CGADB.
 
-## Depois de Macalão
+## A liderança depois de 1982
 
 Depois da morte de Macalão, a igreja-sede de Madureira foi presidida por Orosman Dagoberto (1982–1988), Luiz Francisco Fontes (1988–1990), **Manoel Ferreira** e, desde 2006, **Abner Ferreira**. A CONAMAD é presidida por **Manoel Ferreira desde 1987**; em 1999 a sua sede foi transferida para **Brasília**.
 

@@ -74,6 +74,8 @@ export const WORKS: Record<string, Work> = {
   // Hinos e Harpa Cristã
   'araujo-dicionario': { author: 'Isael de Araujo', title: 'Dicionário do Movimento Pentecostal', publisher: 'CPAD, 2007', kind: 'historia' },
   'araujo-100': { author: 'Isael de Araujo', title: '100 acontecimentos que marcaram a história das Assembleias de Deus no Brasil', publisher: 'CPAD, 2011', kind: 'historia' },
+  freston: { author: 'Paul Freston', title: 'Protestantes e política no Brasil: da Constituinte ao impeachment (tese de doutorado)', publisher: 'Unicamp, 1993', kind: 'historia' },
+  alencar: { author: 'Gedeon Freire de Alencar', title: 'Matriz pentecostal brasileira: Assembleias de Deus (1911–2011)', publisher: 'Novos Diálogos, 2013', kind: 'historia' },
   laqueur: { author: 'Thomas W. Laqueur', title: 'Religion and Respectability: Sunday Schools and Working Class Culture, 1780–1850', publisher: 'Yale University Press, 1976', kind: 'historia' },
   'gilberto-ebd': { author: 'Antonio Gilberto', title: 'Manual da Escola Dominical', publisher: 'CPAD', kind: 'historia' },
   'manual-harpa': { author: 'CPAD', title: 'Manual da Harpa Cristã', publisher: 'CPAD, 1999', kind: 'historia' },
@@ -150,6 +152,17 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'grandes-despertamentos': { ancient: ['Jonathan Edwards, Narrativa fiel da surpreendente obra de Deus (1737)', 'John Wesley, Diário'], works: ['kidd', 'noll', 'cairns'] },
   'missoes-modernas': { ancient: ['William Carey, An Enquiry into the Obligations of Christians (1792)'], works: ['tucker', 'neill', 'noll'] },
   'movimento-pentecostal': { ancient: ['The Apostolic Faith, jornal da missão da Rua Azusa (1906–1908)'], works: ['robeck', 'synan', 'noll'] },
+  'assembleia-de-deus-no-brasil': {
+    ancientLabel: 'Documentos e estudos consultados',
+    ancient: [
+      'Marina A. O. S. Correa, “Pastores das Assembleias de Deus: do apoliticismo escatológico ao aparelhamento moralista”, Interações, v. 14, n. 25, 2019',
+      'Wikipédia: Assembleias de Deus no Brasil e Convenção Geral das Assembleias de Deus no Brasil (pt.wikipedia.org)',
+      'Histórias das Assembleias de Deus no Amazonas, em Pernambuco, no Ceará e na Paraíba, publicadas pelas próprias igrejas',
+      'IBAD: histórico institucional (ibad.com.br)',
+      'IBGE: Censos demográficos de 2000 e 2010 (religião)',
+    ],
+    works: ['conde', 'araujo-dicionario', 'araujo-100', 'vingren-diario', 'berg-enviado', 'freston', 'alencar'],
+  },
   'panorama-da-igreja': { works: ['gonzalez', 'cairns', 'noll', 'conde'] },
   'escola-dominical': {
     ancientLabel: 'Documentos e sites consultados',

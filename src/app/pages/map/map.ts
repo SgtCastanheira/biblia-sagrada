@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
 import { findBook } from '../../core/books';
 import { distanceKm, eraOfMap, formatKm } from '../../core/atlas';
 import { ARTICLES } from '../../core/library';
-import { findMap } from '../../core/maps';
+import { findMap, isChurchMap } from '../../core/maps';
 import { SettingsService } from '../../core/settings.service';
 import { parseReferences } from '../../core/reference-parser';
 import { BibleMapView } from '../../shared/bible-map';
@@ -30,6 +30,11 @@ export class MapPage {
   protected readonly article = computed(() => ARTICLES.find((a) => a.map === this.id()));
   protected readonly settings = inject(SettingsService);
   protected readonly era = computed(() => eraOfMap(this.id()) ?? null);
+  /** Mapa da história da Igreja: divisas dos estados sempre visíveis, sem as camadas do mundo bíblico. */
+  protected readonly church = computed(() => {
+    const m = this.map();
+    return !!m && isChurchMap(m);
+  });
   protected readonly layers = this.settings.mapLayers;
   /** Mapas com territórios: a etapa escolhida destaca o território (e mostra a distância até o templo). */
   protected readonly highlight = computed(() => {

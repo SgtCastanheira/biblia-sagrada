@@ -93,6 +93,10 @@ Em 1920 casou-se com **Sara**, na Suécia, e no ano seguinte o casal veio para o
 
 Em 1962 voltou definitivamente para a Suécia e morreu em **27 de maio de 1963**, em Estocolmo; também está sepultado no Skogskyrkogården. Suas memórias foram publicadas com o título *Enviado por Deus*.
 
+:::leia assembleia-de-deus-no-brasil
+Como a igreja saiu de Belém para todo o Brasil — com o mapa interativo.
+:::
+
 ## Linha do tempo
 
 :::tempo

@@ -1,6 +1,7 @@
 import type { Lonlat } from './atlas';
 import { BOOKS } from './books';
 import { Testament } from './models';
+import { CHURCH_MAPS } from './church-maps';
 import { TRIBES_MAP } from './tribes';
 
 /**
@@ -567,7 +568,10 @@ export const BIBLE_MAPS: BibleMap[] = [
   TRIBES_MAP,
 ];
 
-export const findMap = (id: string) => BIBLE_MAPS.find((m) => m.id === id);
+export const findMap = (id: string) => BIBLE_MAPS.find((m) => m.id === id) ?? CHURCH_MAPS.find((m) => m.id === id);
+
+/** Mapa da história da Igreja (sem capítulos da Bíblia; as etapas têm datas). */
+export const isChurchMap = (map: BibleMap) => CHURCH_MAPS.includes(map);
 
 /** Posição de um capítulo na ordem da Bíblia ("GEN 11" → 11, "EXO 2" → 1002…). */
 const position = (chapter: string) => {

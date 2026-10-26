@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'assembleia-de-deus-mapa',
+    date: '26 de outubro de 2026',
+    title: 'A Assembleia de Deus pelo Brasil, com mapa',
+    items: [
+      { icon: 'church', title: 'A história da Assembleia de Deus no Brasil', text: 'De Belém para todo o país: como os obreiros eram separados em cada época, o casamento dos pioneiros, os costumes, o ensino e as mulheres na obra.', link: '/artigo/assembleia-de-deus-no-brasil', tip: 'Em Estudo → História da Igreja.' },
+      { icon: 'map', title: 'Mapa interativo: do Pará ao Rio e a São Paulo', text: 'O caminho da igreja, etapa por etapa, com as datas e as distâncias.', link: '/mapas/assembleia-de-deus-no-brasil', tip: 'Toque em “Viver a jornada”.' },
+    ],
+  },
+  {
     id: 'escola-dominical-panorama',
     date: '26 de outubro de 2026',
     title: 'A Escola Dominical e a história em resumo',

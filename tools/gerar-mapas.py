@@ -2,18 +2,24 @@
 Gera a geografia dos mapas (public/maps/<id>.json) a partir do Natural Earth (domínio público).
 Lê ids e limites de src/app/core/maps.ts (e de atlas.ts e tribes.ts, na mesma pasta) e usa a mesma projeção do app.
 Inclui as fronteiras atuais dos países (para comparar com as da época).
-Uso: python3 -I gerar-mapas.py <maps.ts> <pasta_natural_earth> <pasta_saida>
+Uso: python3 -I gerar-mapas.py <maps.ts> <pasta_natural_earth> <pasta_saida> [ids...]
+Com ids, gera só esses mapas (os outros arquivos ficam como estão).
+Para os mapas do Brasil (church-maps.ts), baixe também ne_50m_admin_1_states_provinces_lines: as divisas dos estados
+entram como fronteiras.
 """
 import json, math, os, re, sys
 
 maps_ts, ne_dir, out_dir = sys.argv[1:4]
+only = set(sys.argv[4:])
 WIDTH = 1000
 RIVERS = {"Nile", "Damietta Branch", "Rosetta Branch", "Jordan", "Euphrates", "Firat", "Al Furat", "Tigris", "Dicle",
-          "Orontes", "Karkheh", "Shatt al Arab"}
+          "Orontes", "Karkheh", "Shatt al Arab",
+          # Brasil (mapas da história da Igreja)
+          "Amazonas", "Negro", "Madeira", "Tapajós", "Xingu", "Tocantins", "Araguaia", "São  Francisco", "Paraná", "Parnaíba"}
 
 src = open(maps_ts, encoding="utf-8").read()
 # Mapas definidos fora de maps.ts: o atlas e a divisão da terra entre as tribos
-for extra in ("atlas.ts", "tribes.ts"):
+for extra in ("atlas.ts", "tribes.ts", "church-maps.ts"):
     path = os.path.join(os.path.dirname(maps_ts), extra)
     if os.path.exists(path):
         src += open(path, encoding="utf-8").read()
@@ -25,6 +31,9 @@ def load(name):
 
 land50, land10, lakes, rivers = load("ne_50m_land"), load("ne_10m_land"), load("ne_10m_lakes"), load("ne_10m_rivers_lake_centerlines")
 borders = load("ne_50m_admin_0_boundary_lines_land")
+states_file = os.path.join(ne_dir, "ne_50m_admin_1_states_provinces_lines.geojson")
+# Divisas dos estados brasileiros (só existem nos mapas que cobrem o Brasil)
+states = [f for f in load("ne_50m_admin_1_states_provinces_lines") if f["properties"].get("ADM0_A3") == "BRA"] if os.path.exists(states_file) else []
 
 def polygons(geom):
     if geom["type"] == "Polygon":
@@ -86,7 +95,7 @@ def bbox_hit(coords, box):
     return not (max(xs) < box[0] or min(xs) > box[2] or max(ys) < box[1] or min(ys) > box[3])
 
 os.makedirs(out_dir, exist_ok=True)
-for map_id, bounds in maps:
+for map_id, bounds in [m for m in maps if not only or m[0] in only]:
     lon0, lat0, lon1, lat1 = bounds
     # Margem larga: no celular em pé a câmera mostra além dos limites do mapa
     mx, my = (lon1 - lon0) * 0.45, (lat1 - lat0) * 0.6
@@ -122,7 +131,7 @@ for map_id, bounds in maps:
                             result[key].append(d)
                         segment = []
 
-    add_lines(borders, "borders")
+    add_lines(borders + states, "borders")
     add_lines(rivers, "rivers", lambda f: (f["properties"].get("name") or "") in RIVERS)
 
     target = os.path.join(out_dir, f"{map_id}.json")

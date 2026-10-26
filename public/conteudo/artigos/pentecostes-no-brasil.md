@@ -41,6 +41,10 @@ Em **18 de junho de 1911**, eles fundaram a **Missão de Fé Apostólica**, que 
 Dois meses depois da fundação, em agosto de 1911, já havia Escola Dominical em Belém.
 :::
 
+:::leia assembleia-de-deus-no-brasil
+A expansão estado por estado, os obreiros, os costumes e o ensino, com o mapa interativo.
+:::
+
 ## Como cresceu tão rápido
 
 - **Cada crente, um evangelista.** Os novos convertidos testemunhavam nas ruas, nos trabalhos, nas viagens.

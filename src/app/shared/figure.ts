@@ -31,8 +31,8 @@ import { Component, input } from '@angular/core';
             <text x="88" y="327" class="sub">1ª assembleia em Natal</text></g>
           <g class="node madureira"><rect x="174" y="272" width="156" height="64" rx="12" />
             <text x="252" y="294" class="year">1929 · Madureira</text>
-            <text x="252" y="311">Paulo Leivas Macalão</text>
-            <text x="252" y="327" class="sub">abre o trabalho no Rio</text></g>
+            <text x="252" y="311">Ministério</text>
+            <text x="252" y="327" class="sub">no subúrbio do Rio</text></g>
           <g class="node madureira"><rect x="174" y="366" width="156" height="64" rx="12" />
             <text x="252" y="388" class="year">1958 · Convenção</text>
             <text x="252" y="405">de Madureira</text>

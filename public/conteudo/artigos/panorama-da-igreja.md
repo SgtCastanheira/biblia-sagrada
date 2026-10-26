@@ -80,7 +80,7 @@ Os avivamentos do começo do século XX, em Topeka e na Rua Azusa, deram origem 
 
 ## As Assembleias de Deus no Brasil
 
-Gunnar Vingren e Daniel Berg chegaram a Belém em 1910, e em 1911 nasceu a igreja que viria a se chamar Assembleia de Deus. Frida Vingren pregou, ensinou e escreveu hinos; a Harpa Cristã deu à igreja um mesmo cântico; Paulo Leivas Macalão abriu o trabalho em Madureira; e a igreja cresceu até se organizar em várias convenções.
+Gunnar Vingren e Daniel Berg chegaram a Belém em 1910, e em 1911 nasceu a igreja que viria a se chamar Assembleia de Deus. Frida Vingren pregou, ensinou e escreveu hinos; a Harpa Cristã deu à igreja um mesmo cântico; crentes que migravam levaram a fé do Pará ao Nordeste, ao Rio e a São Paulo; e a igreja cresceu até se organizar em várias convenções.
 
 :::leia daniel-berg-e-gunnar-vingren
 :::
@@ -89,6 +89,9 @@ Gunnar Vingren e Daniel Berg chegaram a Belém em 1910, e em 1911 nasceu a igrej
 :::
 
 :::leia harpa-crista
+:::
+
+:::leia assembleia-de-deus-no-brasil
 :::
 
 :::leia madureira-e-a-separacao
