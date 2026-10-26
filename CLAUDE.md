@@ -88,7 +88,7 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 **Navigation:** the bottom menu has five tabs, and each screen belongs to exactly one of them (`tab` in `app.ts`):
 - Início (`/`)
 - Bíblia (reader, `/livros`, `/busca`)
-- Estudo (`/estudo` library in six sections, and every study page)
+- Estudo (`/estudo` library in seven sections, and every study page)
 - Ensino (`/ensino`: EBD, `/ebd/apoio`, IBUC, sermons)
 - Meu espaço (`/meu-espaco`: devotional, notes, favorites, settings)
 

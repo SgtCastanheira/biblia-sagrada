@@ -4,7 +4,7 @@ const rotas = ['/', '/ensino', '/meu-espaco', '/livros', '/livro/JHN', '/ler/JHN
   '/favoritos', '/mapas', '/mapas/exodo', '/busca', '/curiosidades', '/curiosidades/voltas-em-jerico', '/ajustes',
   '/estudo', '/memorial', '/memorial?grupo=reis-juda', '/memorial?grupo=dois-reinos', '/memorial/davi', '/historia', '/historia?colecao=biblia', '/artigo/cativeiros-de-israel',
   '/avivamento', '/avivamento/spurgeon-olhai-para-mim', '/dicionario', '/dicionario/graca', '/livro/GEN', '/mapas/cativeiros-de-israel',
-  '/atlas', '/atlas?epoca=roma', '/genealogia', '/tribos', '/harpa', '/harpa/328', '/artigo/harpa-crista', '/fontes', '/novidades', '/ibuc', '/ebd/apoio', '/ebd/apoio/jovens', '/ebd/apoio/aula/modelo-neemias-reconstroi-os-muros', '/ibuc/primarios', '/ibuc/maternal', '/ibuc/aula/modelo-davi-e-golias', '/tribos/juda', '/tribos/levi', '/mapas/tribos-de-israel', '/profecias', '/profecias/setenta-semanas', '/artigo/legiao-e-o-exercito-romano',
+  '/atlas', '/atlas?epoca=roma', '/genealogia', '/tribos', '/artigo/ministerios-na-biblia', '/harpa', '/harpa/328', '/artigo/harpa-crista', '/fontes', '/novidades', '/ibuc', '/ebd/apoio', '/ebd/apoio/jovens', '/ebd/apoio/aula/modelo-neemias-reconstroi-os-muros', '/ibuc/primarios', '/ibuc/maternal', '/ibuc/aula/modelo-davi-e-golias', '/tribos/juda', '/tribos/levi', '/mapas/tribos-de-israel', '/profecias', '/profecias/setenta-semanas', '/artigo/legiao-e-o-exercito-romano',
   '/artigo/apocalipse', '/memorial?grupo=linha-do-tempo', '/dicionario/salvar', '/historia?colecao=contexto', '/estudo/livros', '/dicionario?ordem=biblia', '/creditos'];
 
 for (const rota of rotas) {

@@ -67,6 +67,8 @@ export const WORKS: Record<string, Work> = {
   synan: { author: 'Vinson Synan', title: 'The Holiness-Pentecostal Tradition', publisher: 'Eerdmans, 1997', kind: 'historia' },
   conde: { author: 'Emílio Conde', title: 'História das Assembleias de Deus no Brasil', publisher: 'CPAD', kind: 'historia' },
   mariano: { author: 'Ricardo Mariano', title: 'Neopentecostais: sociologia do novo pentecostalismo no Brasil', publisher: 'Loyola, 1999', kind: 'historia' },
+  // Igreja e ministérios
+  'declaracao-fe-ad': { author: 'Convenção Geral das Assembleias de Deus no Brasil (CGADB)', title: 'Declaração de Fé das Assembleias de Deus', publisher: 'CPAD, 2017', kind: 'historia' },
   // Hinos e Harpa Cristã
   'araujo-dicionario': { author: 'Isael de Araujo', title: 'Dicionário do Movimento Pentecostal', publisher: 'CPAD, 2007', kind: 'historia' },
   'araujo-100': { author: 'Isael de Araujo', title: '100 acontecimentos que marcaram a história das Assembleias de Deus no Brasil', publisher: 'CPAD, 2011', kind: 'historia' },
@@ -145,6 +147,10 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'missoes-modernas': { ancient: ['William Carey, An Enquiry into the Obligations of Christians (1792)'], works: ['tucker', 'neill', 'noll'] },
   'movimento-pentecostal': { ancient: ['The Apostolic Faith, jornal da missão da Rua Azusa (1906–1908)'], works: ['robeck', 'synan', 'noll'] },
   'pentecostes-no-brasil': { works: ['conde', 'mariano', 'synan'] },
+  'ministerios-na-biblia': {
+    ancient: ['Didaquê, capítulos 11–15 (apóstolos, profetas, bispos e diáconos)', 'Clemente de Roma, Carta aos Coríntios 42–44 (c. 96)', 'Inácio de Antioquia, Cartas aos Magnésios 6 e aos Esmirnenses 8 (c. 110)'],
+    works: ['ditnt', 'ndb', 'carson-moo', 'keener-nt', 'ferguson', 'kelly', 'declaracao-fe-ad'],
+  },
   'harpa-crista': {
     ancientLabel: 'Documentos consultados',
     ancient: ['Site oficial da Harpa Cristã (CPAD): harpacrista.com.br — história, lançamento e edição com música', 'Jornal Boa Semente, dezembro de 1923, p. 4', 'Jornal Mensageiro da Paz, julho de 1939, p. 2', 'Samuel Nyström, Despertamento apostólico no Brasil', 'Hinologia.org: biografia de Adriano Nobre (Jacó Rodrigues Santiago)'],

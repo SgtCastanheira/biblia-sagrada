@@ -31,7 +31,7 @@ interface Section {
     <header class="page-head">
       <span class="overline">Biblioteca</span>
       <h1>Estudo</h1>
-      <p>Personagens, mapas, contexto histórico, profecias, idiomas originais e história — tudo ligado ao texto bíblico.</p>
+      <p>Personagens, mapas, contexto histórico, profecias, idiomas originais, a igreja e os ministérios e a história — tudo ligado ao texto bíblico.</p>
     </header>
 
     <nav class="toc" aria-label="Seções do estudo">
@@ -180,6 +180,14 @@ export class StudyPage {
       shelves: [
         { link: '/dicionario', icon: 'translate', name: 'Dicionário bíblico', description: 'Hebraico, aramaico, grego e latim, com os sentidos e as conjugações.' },
         { link: '/artigo/idiomas-da-biblia', icon: 'abc', name: 'Como ler as palavras originais', description: 'Alfabetos, raízes, tempos verbais e os números de Strong.' },
+      ],
+    },
+    {
+      id: 'ministerios',
+      title: 'Igreja e ministérios',
+      icon: 'diversity_3',
+      shelves: [
+        { link: '/artigo/ministerios-na-biblia', icon: 'diversity_3', name: 'Os ministérios na Bíblia', description: 'Apóstolos, profetas, evangelistas, pastores, mestres, presbíteros e diáconos — o que diz o texto e como as igrejas se organizam hoje.' },
       ],
     },
     {

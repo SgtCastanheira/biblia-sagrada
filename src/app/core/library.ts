@@ -48,6 +48,16 @@ export const COLLECTIONS: Record<ArticleCollection, { name: string; description:
 
 export const ARTICLES: Article[] = [
   {
+    id: 'ministerios-na-biblia',
+    collection: 'estudos',
+    passages: ['EPH 4', '1TI 3', 'TIT 1', 'ACT 6', 'ACT 13', 'ACT 14', 'ACT 20', 'ACT 21', '1CO 12', '1CO 14', '2TI 4', 'JAS 5', '1TI 5', '1PE 5'],
+    title: 'Os ministérios na Bíblia',
+    subtitle: 'Apóstolos, profetas, evangelistas, pastores, mestres, presbíteros e diáconos: o que cada um fazia, as qualificações e como as igrejas se organizam hoje.',
+    period: 'Antigo e Novo Testamento',
+    icon: 'diversity_3',
+    minutes: 12,
+  },
+  {
     id: 'cativeiros-de-israel',
     collection: 'estudos',
     passages: ['2KI 17', '2KI 24', '2KI 25', 'JER 29', 'PSA 137', 'EZR 1', 'NEH 1', 'DAN 1'],

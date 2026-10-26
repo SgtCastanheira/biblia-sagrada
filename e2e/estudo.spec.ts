@@ -307,3 +307,15 @@ test('Harpa Cristã: busca por número, página do hino com autor e fontes, sem 
   await expect(page.getByRole('link', { name: /Hymnary\.org: Harpa Cristã nº 1/ })).toBeVisible();
   await expect(page.locator('.facts cite', { hasText: 'There Shall Be Showers of Blessing' })).toBeVisible();
 });
+
+test('estudo dos ministérios: na seção Igreja e ministérios, ligado ao dicionário e ao leitor', async ({ page }) => {
+  await page.goto('/estudo');
+  await page.getByRole('link', { name: /Os ministérios na Bíblia/ }).click();
+  await expect(page.getByRole('heading', { name: 'Presbíteros e bispos' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Na igreja hoje' })).toBeVisible();
+  await page.getByRole('link', { name: 'Diácono', exact: true }).first().click();
+  await expect(page).toHaveURL(/\/dicionario\/diacono/);
+  await page.goto('/ler/1TI/3');
+  await page.getByRole('button', { name: /Estudar este capítulo/ }).click();
+  await expect(page.getByRole('link', { name: /Os ministérios na Bíblia/ })).toBeVisible();
+});
