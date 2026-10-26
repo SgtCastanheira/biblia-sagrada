@@ -12,6 +12,27 @@ import { Release } from '../core/whats-new';
   imports: [MatButtonModule, MatIconModule, MatRippleModule],
   template: `
     <div class="content">
+      @if (welcome) {
+        <span class="overline"><mat-icon>waving_hand</mat-icon> Bem-vindo</span>
+        <h2>A Bíblia e o estudo da sua igreja, no celular</h2>
+        <p class="intro">Tudo fica no menu de baixo. Toque para conhecer:</p>
+        <ul>
+          @for (i of tour; track i.title) {
+            <li>
+              <button matRipple (click)="go(i.link)">
+                <mat-icon>{{ i.icon }}</mat-icon>
+                <span><strong>{{ i.title }}</strong><small>{{ i.text }}</small></span>
+                <mat-icon class="go">chevron_right</mat-icon>
+              </button>
+            </li>
+          }
+        </ul>
+        <button class="news" (click)="go('/novidades')"><mat-icon>celebration</mat-icon> Novidade: {{ release.title }}</button>
+        <div class="actions">
+          <button mat-stroked-button (click)="go('/novidades')"><mat-icon>share</mat-icon> Compartilhar</button>
+          <button mat-flat-button (click)="ref.dismiss()">Começar</button>
+        </div>
+      } @else {
       <span class="overline"><mat-icon>celebration</mat-icon> Novidades no app</span>
       <h2>{{ release.title }}</h2>
       <ul>
@@ -29,6 +50,7 @@ import { Release } from '../core/whats-new';
         <button mat-stroked-button (click)="go('/novidades')"><mat-icon>share</mat-icon> Compartilhar</button>
         <button mat-flat-button (click)="ref.dismiss()">Entendi</button>
       </div>
+      }
     </div>
   `,
   styles: `
@@ -48,12 +70,28 @@ import { Release } from '../core/whats-new';
     li small { font: 400 13px/1.4 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     li em { font: 500 13px Inter, sans-serif; font-style: normal; color: var(--mat-sys-primary); }
     li .go { color: var(--mat-sys-on-surface-variant); }
+    .intro { margin: -4px 0 12px; font: 400 15px/1.5 var(--reading-font); color: var(--mat-sys-on-surface-variant); }
+    .news {
+      display: flex; align-items: center; gap: 8px; width: 100%; min-height: 40px; margin: -6px 0 14px; padding: 0 4px;
+      border: 0; background: none; cursor: pointer; text-align: left; font: 600 14px Inter, sans-serif; color: var(--mat-sys-primary);
+    }
+    .news mat-icon { font-size: 18px; width: 18px; height: 18px; color: var(--accent-gold); }
     .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .actions button { height: 48px; }
   `,
 })
 export class WhatsNewSheet {
-  protected readonly release = inject<Release>(MAT_BOTTOM_SHEET_DATA);
+  private readonly data = inject<{ release: Release; welcome: boolean }>(MAT_BOTTOM_SHEET_DATA);
+  protected readonly release = this.data.release;
+  /** Primeira visita: apresenta as cinco abas antes da novidade. */
+  protected readonly welcome = this.data.welcome;
+  protected readonly tour = [
+    { icon: 'home', title: 'Início', text: 'O versículo do dia e o caminho para continuar a leitura.', link: '/' },
+    { icon: 'menu_book', title: 'Bíblia', text: 'A Almeida, mesmo sem internet. Toque num versículo para destacar, copiar ou compartilhar.', link: '/livros' },
+    { icon: 'local_library', title: 'Estudo', text: 'Personagens, mapas, profecias e a história da Igreja, ligados ao texto.', link: '/estudo' },
+    { icon: 'school', title: 'Ensino', text: 'Escola Dominical, apoio ao professor, IBUC e sermões.', link: '/ensino' },
+    { icon: 'person', title: 'Meu espaço', text: 'Devocional, anotações dos cultos e favoritos, guardados no seu celular.', link: '/meu-espaco' },
+  ];
   protected readonly ref = inject(MatBottomSheetRef<WhatsNewSheet>);
   private readonly router = inject(Router);
 

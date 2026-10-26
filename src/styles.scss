@@ -211,6 +211,11 @@ body.theme-sepia {
   --mat-snack-bar-supporting-text-size: 15px;
   margin-top: calc(12px + env(safe-area-inset-top));
 
+  &.above-nav {
+    margin-top: 0;
+    margin-bottom: calc(72px + 12px + env(safe-area-inset-bottom)); // altura do menu de baixo (--nav-height, em app.scss)
+  }
+
   .mat-mdc-snackbar-surface {
     border: 1px solid color-mix(in srgb, var(--accent-gold) 40%, var(--mat-sys-outline-variant));
     border-radius: 16px;

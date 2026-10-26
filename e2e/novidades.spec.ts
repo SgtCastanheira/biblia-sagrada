@@ -1,7 +1,7 @@
 import { LATEST_RELEASE } from '../src/app/core/whats-new';
 import { expect, test } from './base';
 
-test('novidades aparecem uma vez em cada aparelho, inclusive na primeira visita', async ({ page }) => {
+test('novidades aparecem uma vez em cada aparelho; na primeira visita, com boas-vindas', async ({ page }) => {
   await page.goto('/');
   // Quem já usava: tem dados do app e viu a atualização anterior
   await page.evaluate(() => localStorage.setItem('biblia.novidades.visto', 'versao-anterior'));
@@ -14,11 +14,13 @@ test('novidades aparecem uma vez em cada aparelho, inclusive na primeira visita'
   await page.waitForTimeout(2500);
   await expect(painel).toHaveCount(0);
 
-  // Outro aparelho, abrindo o link pela primeira vez (sem nenhum dado do app): também vê, uma vez
+  // Outro aparelho, abrindo o link pela primeira vez (sem nenhum dado do app): boas-vindas com as abas e a novidade, uma vez
   await page.evaluate(() => Object.keys(localStorage).forEach((k) => localStorage.removeItem(k)));
   await page.reload();
-  await expect(painel).toContainText(LATEST_RELEASE.items[0].title);
-  await painel.getByRole('button', { name: 'Entendi' }).click();
+  await expect(painel).toContainText('Bem-vindo');
+  await expect(painel).toContainText(LATEST_RELEASE.title);
+  await expect(painel.getByRole('button', { name: /Meu espaço/ })).toBeVisible();
+  await painel.getByRole('button', { name: 'Começar' }).click();
   await page.reload();
   await page.waitForTimeout(2500);
   await expect(painel).toHaveCount(0);

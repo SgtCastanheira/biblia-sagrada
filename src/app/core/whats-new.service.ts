@@ -12,17 +12,21 @@ export class WhatsNewService {
 
   /** Abre as novidades se ainda não foram vistas. Devolve true quando abriu (os outros avisos esperam). */
   check(): boolean {
+    let welcome: boolean;
     try {
-      if (localStorage.getItem(SEEN_KEY) === LATEST_RELEASE.id) return false;
+      const seen = localStorage.getItem(SEEN_KEY);
+      if (seen === LATEST_RELEASE.id) return false;
+      // Nunca viu nenhuma novidade: é a primeira visita, e o painel vira boas-vindas
+      welcome = seen === null;
       localStorage.setItem(SEEN_KEY, LATEST_RELEASE.id);
     } catch {
       return false;
     }
-    this.open();
+    this.open(welcome);
     return true;
   }
 
-  open(): void {
-    this.bottomSheet.open(WhatsNewSheet, { panelClass: 'app-sheet', autoFocus: false, data: LATEST_RELEASE });
+  open(welcome = false): void {
+    this.bottomSheet.open(WhatsNewSheet, { panelClass: 'app-sheet', autoFocus: false, data: { release: LATEST_RELEASE, welcome } });
   }
 }

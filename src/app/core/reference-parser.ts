@@ -66,6 +66,8 @@ const CROSS_CHAPTER_PATTERN = /^(.+?)\s*(\d+)\s*[:.]\s*(\d+)\s*[-–]\s*(\d+)\s*
 const END_OF_CHAPTER = 999;
 // Continuação sem o nome do livro: "23.27" em "At 22.29; 23.27"
 const CONTINUATION_PATTERN = /^\d+\s*[:.]\s*\d/;
+// No celular é comum digitar só com espaços: "joão 3 16", "sl 23 1-3" → "joão 3.16"
+const SPACED_PATTERN = /^(.*[^\d\s])\s+(\d+)\s+(\d[\d,\-–]*)$/;
 
 /** Converte "9,10,12-14" em intervalos, juntando os consecutivos: [9-10], [12-14]. */
 function parseVerseList(spec: string): { from: number; to?: number }[] | null {
@@ -88,7 +90,7 @@ export function parseReferences(input: string): ParseResult {
   const result: ParseResult = { refs: [], errors: [] };
   let previousBook = '';
   for (const raw of input.split(';').map((p) => p.trim()).filter(Boolean)) {
-    const part = CONTINUATION_PATTERN.test(raw) && previousBook ? `${previousBook} ${raw}` : raw;
+    const part = (CONTINUATION_PATTERN.test(raw) && previousBook ? `${previousBook} ${raw}` : raw).replace(SPACED_PATTERN, '$1 $2.$3');
     const cross = part.match(CROSS_CHAPTER_PATTERN);
     if (cross) {
       const crossBook = BOOKS.find((b) => b.id === findBookId(cross[1]));

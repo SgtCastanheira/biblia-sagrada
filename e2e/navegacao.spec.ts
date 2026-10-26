@@ -16,6 +16,21 @@ for (const rota of rotas) {
   });
 }
 
+// Celulares Android mais simples têm 360 px de largura (o projeto "celular" usa um Pixel 7, com 412 px)
+test.describe('celular pequeno (360 px)', () => {
+  test.use({ viewport: { width: 360, height: 740 } });
+  test('nenhuma tela passa da largura do aparelho', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'só no projeto celular');
+    test.setTimeout(240_000);
+    for (const rota of rotas) {
+      await page.goto(rota);
+      await page.waitForLoadState('networkidle');
+      const largura = await page.evaluate(() => ({ pagina: document.documentElement.scrollWidth, tela: innerWidth }));
+      expect(largura.pagina, `${rota} passa da largura de 360 px`).toBeLessThanOrEqual(360);
+    }
+  });
+});
+
 test('barra de navegação leva às áreas principais', async ({ page }) => {
   await page.goto('/');
   for (const [aba, url] of [['Bíblia', /\/ler\//], ['Estudo', /\/estudo/], ['Ensino', /\/ensino/], ['Meu espaço', /\/meu-espaco/], ['Início', /\/$/]] as const) {

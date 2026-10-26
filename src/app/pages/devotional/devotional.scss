@@ -83,7 +83,7 @@ h2 {
   flex: 1;
   min-width: 0;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 2px;
 }
 
@@ -99,9 +99,11 @@ h2 {
     color: var(--mat-sys-on-surface-variant);
   }
 
+  // Encolhe nos celulares estreitos (7 dias precisam caber ao lado da sequência)
   .dot {
-    width: 28px;
-    height: 28px;
+    width: 100%;
+    max-width: 28px;
+    aspect-ratio: 1;
     border-radius: 50%;
     display: grid;
     place-items: center;

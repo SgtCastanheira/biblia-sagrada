@@ -9,6 +9,9 @@ const casos: [string, string[]][] = [
   ['I Coríntios 13', ['1 Coríntios 13']],
   ['II Reis 2.11', ['2 Reis 2:11']],
   ['Salmo 23', ['Salmos 23']],
+  // Digitado no celular, só com espaços
+  ['joão 3 16', ['João 3:16']],
+  ['1co 13 4-7', ['1 Coríntios 13:4-7']],
   ['Jo 3.16', ['João 3:16']],
   ['Jó 1.1', ['Jó 1:1']],
   ['Mt 5,1-12', ['Mateus 5:1-12']],

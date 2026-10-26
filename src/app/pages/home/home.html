@@ -31,8 +31,8 @@
     <button mat-icon-button (click)="shareHighlight()" aria-label="Opções do versículo" [disabled]="!highlightText().text">
       <mat-icon>ios_share</mat-icon>
     </button>
-    <a mat-button [routerLink]="['/ler', highlight.bookId, highlight.chapter]" [fragment]="'v' + highlight.verse">
-      Ler capítulo <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+    <a mat-button [routerLink]="['/ler', highlight.bookId, highlight.chapter]" [fragment]="'v' + highlight.verse" aria-label="Ler o capítulo">
+      Ler <mat-icon iconPositionEnd>arrow_forward</mat-icon>
     </a>
   </div>
 </article>

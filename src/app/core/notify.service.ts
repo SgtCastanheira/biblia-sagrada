@@ -86,10 +86,12 @@ export class NotifyService {
       return;
     }
     this.showing = true;
+    // No celular o aviso fica embaixo, acima do menu, para não tampar o título nem a busca
+    const phone = matchMedia('(max-width: 839px)').matches;
     const ref = this.snackBar.open(banner.message, banner.action, {
       duration: 8000,
-      verticalPosition: 'top',
-      panelClass: 'curiosity-snack',
+      verticalPosition: phone ? 'bottom' : 'top',
+      panelClass: phone ? ['curiosity-snack', 'above-nav'] : 'curiosity-snack',
     });
     ref.onAction().subscribe(() => this.router.navigateByUrl(banner.url));
     ref.afterDismissed().subscribe(() => {
