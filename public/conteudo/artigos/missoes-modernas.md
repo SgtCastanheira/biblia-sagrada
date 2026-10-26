@@ -33,6 +33,10 @@ No Brasil colonial e imperial, a religião oficial era a católica e o culto pro
 
 Os colportores — vendedores ambulantes de Bíblias, muitas vezes enviados pelas sociedades bíblicas — percorriam o país a pé e a cavalo, levando a Palavra a cidades onde nunca tinha chegado um pastor. Muitas igrejas brasileiras nasceram de uma Bíblia deixada numa casa.
 
+:::leia escola-dominical
+Em 1855, Sarah Kalley começou em Petrópolis a primeira Escola Dominical permanente do Brasil.
+:::
+
 ## Edimburgo, 1910
 
 Em 1910, mais de 1.200 delegados de sociedades missionárias se reuniram em Edimburgo, na Escócia, sonhando “evangelizar o mundo nesta geração”. Naquele mesmo ano, dois jovens suecos desembarcavam em Belém do Pará — mas essa é a história do pentecostalismo no Brasil.

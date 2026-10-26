@@ -69,6 +69,15 @@ li::marker {
   text-underline-offset: 3px;
 }
 
+// No toque, a área clicável cresce para cima e para baixo sem mexer nas linhas
+@media (pointer: coarse) {
+  .ref,
+  .link {
+    padding-block: 10px;
+    margin-block: -10px;
+  }
+}
+
 .link {
   color: var(--mat-sys-primary);
   font-weight: 600;
@@ -354,6 +363,63 @@ figcaption {
   }
 }
 
+// "Leia a história completa": cartão que liga uma história à outra
+.read {
+  clear: both;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  margin: 6px 0 14px;
+  padding: 14px 14px 14px 12px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  background: var(--mat-sys-surface-container-low);
+  border: 1px solid color-mix(in srgb, var(--accent-gold) 45%, var(--mat-sys-outline-variant));
+  border-left: 4px solid var(--accent-gold);
+
+  &:hover {
+    background: var(--mat-sys-surface-container);
+  }
+}
+
+.read-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  color: $gold-light;
+  background: linear-gradient(160deg, $ink-2, $ink);
+}
+
+.read-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.read-over {
+  font: 700 13px Inter, sans-serif;
+  letter-spacing: 0.4px;
+  color: var(--accent-gold);
+}
+
+.read-title {
+  font: 600 17px/1.3 var(--heading-font);
+}
+
+.read-desc {
+  font: 400 14px/1.45 Inter, sans-serif;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.read-go {
+  color: var(--mat-sys-primary);
+}
+
 // ---------- Modo história ----------
 :host(.story) {
   .chapter {
@@ -487,7 +553,7 @@ figcaption {
 // Os blocos aparecem suavemente ao rolar (só onde o navegador permite e sem "reduzir movimento")
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
-    :host(.story) > :is(p, h2, .chapter, figure, .scene, .people, aside),
+    :host(.story) > :is(p, h2, .chapter, figure, .scene, .people, aside, .read),
     :host(.story) .timeline li {
       animation: reveal linear both;
       animation-timeline: view();

@@ -4,6 +4,10 @@ A **Harpa Cristã** é o hinário oficial das Assembleias de Deus no Brasil. Nas
 
 No começo, as Assembleias de Deus não tinham hinário próprio. Cantavam pelo **Salmos e Hinos**, organizado pelo casal de missionários Robert e Sarah Poulton Kalley, que chegou ao Brasil em 1855.
 
+:::leia escola-dominical
+Os Kalley, que fizeram o Salmos e Hinos, também começaram a primeira Escola Dominical do Brasil.
+:::
+
 Em **1921**, em Belém do Pará, saiu o **Cantor Pentecostal**, editado sob a direção de **Almeida Sobrinho**: 44 hinos e 10 corinhos, impressos na tipografia Guajarina. Foi o primeiro passo de um hinário pentecostal brasileiro.
 
 ## A primeira Harpa (1922)

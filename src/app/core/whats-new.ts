@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'escola-dominical-panorama',
+    date: '26 de outubro de 2026',
+    title: 'A Escola Dominical e a história em resumo',
+    items: [
+      { icon: 'school', title: 'A história da Escola Dominical', text: 'De Robert Raikes, na Inglaterra (1780), a Sarah Kalley, em Petrópolis (1855), e às Lições Bíblicas das Assembleias de Deus.', link: '/artigo/escola-dominical', tip: 'Em Estudo → História da Igreja.' },
+      { icon: 'auto_stories', title: 'A história da Igreja em resumo', text: 'Como o livro de Atos: um panorama de dois mil anos, com cartões que levam a cada história completa. As histórias agora se cruzam.', link: '/artigo/panorama-da-igreja' },
+    ],
+  },
+  {
     id: 'historias-imersivas',
     date: '26 de outubro de 2026',
     title: 'Entre na história',

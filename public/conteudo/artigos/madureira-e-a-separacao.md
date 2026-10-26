@@ -22,6 +22,10 @@ Tudo começou em Belém, com **Gunnar Vingren** e **Daniel Berg**, em 1911 (veja
 
 No **Rio de Janeiro**, a Assembleia de Deus se estabeleceu em **1922**, no bairro de **São Cristóvão**, e ganhou força com a chegada de Gunnar e **Frida Vingren** em 1924. Vingren pastoreou São Cristóvão até 1932, e Frida dirigia cultos, a Escola Dominical e o trabalho social (veja [Frida Vingren](/artigo/frida-vingren)). Foi nesse primeiro grupo do Rio que um jovem gaúcho começou a congregar: **Paulo Leivas Macalão**.
 
+:::leia frida-vingren
+A pioneira que pregava e ensinava em São Cristóvão.
+:::
+
 ![Gunnar Vingren](imagens/gunnar-vingren.jpg "Gunnar Vingren em 1908. Foto de autor desconhecido, em domínio público (Wikimedia Commons).")
 
 ## Paulo Leivas Macalão (1903–1982)

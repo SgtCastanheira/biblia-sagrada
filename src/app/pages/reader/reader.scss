@@ -443,8 +443,8 @@ sup {
 /* Botões flutuantes de capítulo */
 .fabs {
   position: fixed;
-  left: 12px;
-  right: 12px;
+  left: 4px;
+  right: 4px;
   bottom: calc(80px + 16px + env(safe-area-inset-bottom));
   z-index: 15;
   display: flex;
@@ -459,8 +459,8 @@ sup {
 
 .fab {
   pointer-events: auto;
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: grid;
   place-items: center;

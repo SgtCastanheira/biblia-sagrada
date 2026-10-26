@@ -68,10 +68,10 @@
   display: flex;
   align-items: center;
   gap: 2px;
-  height: 34px;
+  height: 40px;
   padding: 0 6px 0 12px;
   border: 1px solid var(--mat-sys-outline-variant);
-  border-radius: 17px;
+  border-radius: 20px;
   cursor: pointer;
   background: var(--mat-sys-surface-container-low);
   color: var(--mat-sys-on-surface);
@@ -142,7 +142,8 @@
   color: var(--mat-sys-on-surface-variant);
   text-decoration: none;
   font: 500 13px Inter, sans-serif;
-  letter-spacing: 0.2px;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
 
   .indicator {
     width: 52px;

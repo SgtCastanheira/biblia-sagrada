@@ -135,7 +135,7 @@ import { SourcesBox } from '../../shared/sources-box';
     dt { font: 600 13px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     dd { margin: 0; font: 400 15px/1.5 var(--reading-font); }
     .inline-ref {
-      display: inline-flex; align-items: center; min-height: 32px; padding: 0 4px; border: 0; background: none; cursor: pointer;
+      display: inline-flex; align-items: center; min-height: 40px; padding: 0 4px; border: 0; background: none; cursor: pointer;
       color: var(--mat-sys-primary); font: 600 14px Inter, sans-serif; text-decoration: underline; text-underline-offset: 3px;
     }
     .small-note { display: block; margin: 0 4px 12px; font-size: 14px; color: var(--mat-sys-on-surface-variant); }

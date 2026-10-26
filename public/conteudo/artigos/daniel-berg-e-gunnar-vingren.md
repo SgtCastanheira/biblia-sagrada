@@ -74,6 +74,10 @@ Vingren ajudou a organizar a igreja que crescia:
 - Trabalhou pela **Convenção Geral das Assembleias de Deus** e presidiu a sua segunda reunião.
 - Preparou um hinário, o **Psaltério Pentecostal** (1931). Veja a história da [Harpa Cristã](/artigo/harpa-crista).
 
+:::leia escola-dominical
+O Boa Semente trouxe as primeiras lições impressas da Escola Dominical.
+:::
+
 De saúde frágil, voltou com a família para a Suécia em **15 de agosto de 1932** e morreu em **29 de junho de 1933**, de câncer no estômago. Está sepultado no cemitério Skogskyrkogården, em Estocolmo. As anotações do seu diário foram publicadas pelo filho Ivar como *Diário do Pioneiro*.
 
 ## Daniel Berg: o evangelista das estradas

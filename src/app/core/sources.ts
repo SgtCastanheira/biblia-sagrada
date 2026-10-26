@@ -74,6 +74,8 @@ export const WORKS: Record<string, Work> = {
   // Hinos e Harpa Cristã
   'araujo-dicionario': { author: 'Isael de Araujo', title: 'Dicionário do Movimento Pentecostal', publisher: 'CPAD, 2007', kind: 'historia' },
   'araujo-100': { author: 'Isael de Araujo', title: '100 acontecimentos que marcaram a história das Assembleias de Deus no Brasil', publisher: 'CPAD, 2011', kind: 'historia' },
+  laqueur: { author: 'Thomas W. Laqueur', title: 'Religion and Respectability: Sunday Schools and Working Class Culture, 1780–1850', publisher: 'Yale University Press, 1976', kind: 'historia' },
+  'gilberto-ebd': { author: 'Antonio Gilberto', title: 'Manual da Escola Dominical', publisher: 'CPAD', kind: 'historia' },
   'manual-harpa': { author: 'CPAD', title: 'Manual da Harpa Cristã', publisher: 'CPAD, 1999', kind: 'historia' },
   osbeck: { author: 'Kenneth W. Osbeck', title: '101 Hymn Stories', publisher: 'Kregel, 1982', kind: 'historia' },
   julian: { author: 'John Julian', title: 'A Dictionary of Hymnology', publisher: '1892 (domínio público)', kind: 'historia' },
@@ -148,6 +150,17 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'grandes-despertamentos': { ancient: ['Jonathan Edwards, Narrativa fiel da surpreendente obra de Deus (1737)', 'John Wesley, Diário'], works: ['kidd', 'noll', 'cairns'] },
   'missoes-modernas': { ancient: ['William Carey, An Enquiry into the Obligations of Christians (1792)'], works: ['tucker', 'neill', 'noll'] },
   'movimento-pentecostal': { ancient: ['The Apostolic Faith, jornal da missão da Rua Azusa (1906–1908)'], works: ['robeck', 'synan', 'noll'] },
+  'panorama-da-igreja': { works: ['gonzalez', 'cairns', 'noll', 'conde'] },
+  'escola-dominical': {
+    ancientLabel: 'Documentos e sites consultados',
+    ancient: [
+      'Dictionary of National Biography: Thomas Stock e Robert Raikes (via victorianweb.org)',
+      'Wikipédia: Sunday school (en.wikipedia.org/wiki/Sunday_school) e Sarah Poulton Kalley',
+      'Anais da ANPUH (2024): as Lições Bíblicas e os Estudos Dominicais do Boa Semente',
+      'Universidade Metodista de São Paulo: Teologia para a vida cotidiana — uma análise das Lições Bíblicas das Assembleias de Deus',
+    ],
+    works: ['laqueur', 'gilberto-ebd', 'conde', 'araujo-dicionario'],
+  },
   'pentecostes-no-brasil': { works: ['conde', 'mariano', 'synan'] },
   'daniel-berg-e-gunnar-vingren': {
     ancientLabel: 'Documentos e sites consultados',

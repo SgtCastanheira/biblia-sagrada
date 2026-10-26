@@ -38,7 +38,7 @@ import { BackButton } from '../../shared/back-button';
     .credit p { margin: 0; font: 400 15px/1.5 var(--reading-font); color: var(--mat-sys-on-surface-variant); }
     .license { display: inline-flex; align-items: center; gap: 6px; font: 600 13px Inter, sans-serif; color: var(--accent-gold); }
     .license mat-icon { font-size: 16px; width: 16px; height: 16px; }
-    .credit a { align-self: flex-start; display: inline-flex; align-items: center; min-height: 32px; font: 500 14px Inter, sans-serif; color: var(--mat-sys-primary); }
+    .credit a { align-self: flex-start; display: inline-flex; align-items: center; min-height: 40px; font: 500 14px Inter, sans-serif; color: var(--mat-sys-primary); }
   `,
 })
 export class CreditsPage {

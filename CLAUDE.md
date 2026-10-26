@@ -80,6 +80,8 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
     - `:::destaque` is a pull-quote; a last line starting with `— ` is the attribution.
     - `:::pessoas` lists the characters, one per line: `- Nome | papel | imagens/foto.jpg` (photo optional; initials otherwise).
     - Scenes must only restate facts already in the article and its sources; no invented details.
+    - `:::leia article-id` is a "read the full story" card linking to another article; the text inside (optional) says how the two stories connect. Use it where stories cross, so they interweave but each still stands alone.
+  - A collection can have one overview article (`overview: true` in `library.ts`), like the book of Acts: a light summary of every story with a `:::leia` card for each. The history page features it first, and every story's cover links back to it. `ilustracoes.spec.ts` checks that every `:::leia` id exists and that the Igreja overview links to every Igreja article, so add a card there when adding a church-history article.
   - Story mode (`<app-rich-text [story]="true">`, used for the `STORY_COLLECTIONS` in `library.ts`, i.e. Igreja and Bíblia) adds numbered chapters, a drop cap, photos as tilted period prints, an alternating timeline on wide screens and reveal-on-scroll (CSS scroll-driven animations, off with reduced motion). The article page adds a dark cover (`portraits` in `Article`) and a reading progress bar.
 - `DictionaryMatcher` (`dictionary.ts`) marks dictionary `forms` in the reader. Each entry is marked once per chapter, and the longest form wins.
 - `bible-order.ts` and `study-index.ts` order and group everything in canonical order (Genesis to Revelation) per book and chapter. Lists shown to users should follow Bible order.

@@ -217,3 +217,11 @@ body.theme-sepia {
     box-shadow: 0 8px 28px rgb(35 33 30 / 0.12);
   }
 }
+
+// No toque, links no meio do texto ganham área clicável maior (para cima e para baixo), sem mexer nas linhas
+@media (pointer: coarse) {
+  .content :is(p, li, small, td) > a:not([class]) {
+    padding-block: 10px;
+    margin-block: -10px;
+  }
+}

@@ -2,6 +2,7 @@ import { NgTemplateOutlet } from '@angular/common';
 import { Component, computed, inject, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
+import { findArticle } from '../core/library';
 import { Block, parseBlocks } from '../core/rich-text-parser';
 import { Figure } from './figure';
 import { Sheets } from './sheets';
@@ -60,6 +61,19 @@ const SECTION_LABELS: Record<string, string> = {
               </li>
             }
           </ul>
+        }
+        @case ('read') {
+          @if (articleOf(b.article); as a) {
+            <a class="read" [routerLink]="['/artigo', a.id]">
+              <span class="read-icon"><mat-icon>{{ a.icon }}</mat-icon></span>
+              <span class="read-texts">
+                <span class="read-over">História completa · {{ a.period }}</span>
+                <span class="read-title">{{ a.title }}</span>
+                <span class="read-desc">@if (b.inlines) {<ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" />} @else {{{ a.subtitle }}}</span>
+              </span>
+              <mat-icon class="read-go">arrow_forward</mat-icon>
+            </a>
+          }
         }
         @case ('ul') {
           <ul>@for (item of b.items; track $index) { <li><ng-container *ngTemplateOutlet="line; context: { $implicit: item }" /></li> }</ul>
@@ -136,6 +150,10 @@ export class RichText {
     let n = 0;
     return this.blocks().map((b) => b.type === 'image' && n++ % 2 === 1);
   });
+
+  protected articleOf(id: string | undefined) {
+    return id ? findArticle(id) : undefined;
+  }
 
   protected initials(name: string): string {
     const words = name.split(/\s+/).filter((w) => /^[A-ZÀ-Ú]/.test(w));

@@ -8,7 +8,7 @@ export interface Inline {
 }
 
 export interface Block {
-  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people';
+  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read';
   inlines?: Inline[];
   items?: Inline[][];
   events?: { date: string; title: string; text: Inline[] }[];
@@ -29,6 +29,8 @@ export interface Block {
   cite?: Inline[];
   /** Personagens: nome, papel e foto opcional. */
   people?: { name: string; role: string; src?: string }[];
+  /** "Leia a história completa": id do artigo ligado. */
+  article?: string;
 }
 
 const cells = (line: string) =>
@@ -57,7 +59,8 @@ export function parseInline(line: string): Inline[] {
  * ":::tempo" (linha do tempo: "- data | título | texto"), ":::nota" (destaque),
  * ":::figura id" (ilustração do app, com a legenda dentro) e fotos: ![descrição](imagens/foto.jpg "legenda").
  * Para as histórias: ":::cena Lugar, data" (um quadro que põe o leitor no lugar), ":::destaque" (frase em
- * destaque; a última linha começando com "— " é o autor) e ":::pessoas" ("- Nome | papel | imagens/foto.jpg").
+ * destaque; a última linha começando com "— " é o autor), ":::pessoas" ("- Nome | papel | imagens/foto.jpg")
+ * e ":::leia id-do-artigo" (cartão que leva à história completa; o texto dentro diz por que ela se liga a esta).
  */
 export function parseBlocks(source: string): Block[] {
   const blocks: Block[] = [];
@@ -80,13 +83,15 @@ export function parseBlocks(source: string): Block[] {
       blocks.push({ type: 'image', alt: image[1], src: image[2], caption: image[3] ? parseInline(image[3]) : undefined });
       continue;
     }
-    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas)(?:\s+(.+))?$/);
+    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia)(?:\s+(.+))?$/);
     if (fence) {
       flush();
       const body: string[] = [];
       while (++i < lines.length && lines[i].trim() !== ':::') body.push(lines[i].trim());
       const text = body.filter(Boolean);
-      if (fence[1] === 'cena') {
+      if (fence[1] === 'leia') {
+        blocks.push({ type: 'read', article: fence[2]?.trim(), inlines: text.length ? parseInline(text.join(' ')) : undefined });
+      } else if (fence[1] === 'cena') {
         blocks.push({ type: 'scene', place: fence[2]?.trim(), inlines: parseInline(text.join(' ')) });
       } else if (fence[1] === 'destaque') {
         const cite = text.length > 1 && text[text.length - 1].startsWith('— ') ? text.pop()!.slice(2) : undefined;

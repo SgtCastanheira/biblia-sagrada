@@ -18,6 +18,8 @@ export interface Article {
   passages?: string[];
   /** Retratos na capa da história (fotos em public/conteudo/imagens). */
   portraits?: string[];
+  /** Panorama da coleção (como o livro de Atos): aparece em destaque, antes das histórias completas. */
+  overview?: boolean;
 }
 
 /** Coleções lidas como narrativa (capa, capítulos e cenas). */
@@ -186,6 +188,16 @@ export const ARTICLES: Article[] = [
   },
   // História da Igreja
   {
+    id: 'panorama-da-igreja',
+    collection: 'igreja',
+    title: 'A história da Igreja em resumo',
+    subtitle: 'Como o livro de Atos: dois mil anos contados de leve, de Pentecostes às Assembleias de Deus no Brasil — com o caminho para cada história completa.',
+    period: '30–hoje',
+    icon: 'auto_stories',
+    minutes: 6,
+    overview: true,
+  },
+  {
     id: 'igreja-primitiva',
     collection: 'igreja',
     title: 'A Igreja nasce',
@@ -283,6 +295,16 @@ export const ARTICLES: Article[] = [
     period: '1730–1850',
     icon: 'campaign',
     minutes: 6,
+  },
+  {
+    id: 'escola-dominical',
+    collection: 'igreja',
+    title: 'A história da Escola Dominical',
+    subtitle: 'De Robert Raikes, em Gloucester (1780), a Sarah Kalley, em Petrópolis (1855), e às Lições Bíblicas das Assembleias de Deus.',
+    period: '1780–hoje',
+    icon: 'school',
+    minutes: 7,
+    portraits: ['imagens/frida-vingren.jpg'],
   },
   {
     id: 'missoes-modernas',

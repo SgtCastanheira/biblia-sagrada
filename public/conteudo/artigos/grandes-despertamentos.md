@@ -22,6 +22,10 @@ Convencido por Whitefield, John Wesley também começou a pregar ao ar livre, em
 
 O ex-capitão de navio negreiro **John Newton**, convertido numa tempestade, tornou-se pastor, apoiou Wilberforce e escreveu o hino *Amazing Grace* (“Graça excelsa”): “Era cego, mas agora vejo” [[Jo 9.25]].
 
+:::leia escola-dominical
+Em 1780, em Gloucester, nasceu a Escola Dominical — e um dia ela chegaria ao Brasil.
+:::
+
 ## O Segundo Grande Despertamento (c. 1790–1840)
 
 Nos Estados Unidos, depois da independência, a fé tinha esfriado, sobretudo na fronteira oeste. Então começaram as “reuniões campais” (*camp meetings*): famílias viajavam dias para acampar e ouvir pregações por uma semana. A mais famosa foi em Cane Ridge, no Kentucky, em agosto de 1801, com milhares de pessoas, muitas chorando, caindo e clamando por salvação.

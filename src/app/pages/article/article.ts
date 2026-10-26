@@ -40,6 +40,9 @@ import { SourcesBox } from '../../shared/sources-box';
             <h1 class="title">{{ a.title }}</h1>
             <p class="lead">{{ a.subtitle }}</p>
             <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura · role para entrar na história</p>
+            @if (overview(); as o) {
+              <a class="part-of" [routerLink]="['/artigo', o.id]"><mat-icon>auto_stories</mat-icon> Parte do panorama: {{ o.title }}</a>
+            }
           </header>
         } @else {
           <span class="overline">{{ collection()?.name }} · {{ a.period }}</span>
@@ -56,12 +59,18 @@ import { SourcesBox } from '../../shared/sources-box';
         }
 
         @if (toc().length > 2) {
-          <nav class="toc" aria-label="Neste estudo">
-            <span class="toc-title"><mat-icon>list</mat-icon> {{ story() ? 'Nesta história' : 'Neste estudo' }}</span>
-            @for (t of toc(); track t.anchor) {
-              <button (click)="jump(t.anchor)">@if (story()) {<span class="n">{{ $index + 1 }}</span>}{{ t.text }}</button>
-            }
-          </nav>
+          <details class="toc" [open]="wide">
+            <summary class="toc-title">
+              <mat-icon>list</mat-icon> {{ story() ? 'Nesta história' : 'Neste estudo' }}
+              <span class="count">{{ toc().length }} {{ story() ? 'capítulos' : 'partes' }}</span>
+              <mat-icon class="expand">expand_more</mat-icon>
+            </summary>
+            <nav aria-label="Índice">
+              @for (t of toc(); track t.anchor) {
+                <button (click)="jump(t.anchor)">@if (story()) {<span class="n">{{ $index + 1 }}</span>}{{ t.text }}</button>
+              }
+            </nav>
+          </details>
         }
 
         @if (body() === undefined) {
@@ -101,7 +110,15 @@ import { SourcesBox } from '../../shared/sources-box';
       display: flex; flex-direction: column; gap: 2px; margin: 0 0 22px; padding: 12px 14px; border-radius: 16px;
       background: var(--mat-sys-surface-container-low); border: 1px solid var(--mat-sys-outline-variant);
     }
-    .toc-title { display: flex; align-items: center; gap: 6px; font: 600 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: .8px; color: var(--accent-gold); margin-bottom: 4px; }
+    .toc-title {
+      display: flex; align-items: center; gap: 6px; min-height: 40px; cursor: pointer; list-style: none;
+      font: 600 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: .8px; color: var(--accent-gold);
+    }
+    .toc-title::-webkit-details-marker { display: none; }
+    .toc .count { margin-left: auto; text-transform: none; letter-spacing: 0; font-weight: 500; color: var(--mat-sys-on-surface-variant); }
+    .toc .expand { transition: transform .2s; }
+    .toc[open] .expand { transform: rotate(180deg); }
+    .toc nav { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; }
     .toc-title mat-icon { font-size: 18px; width: 18px; height: 18px; }
     .toc button {
       text-align: left; min-height: 40px; padding: 6px 8px; border: 0; border-radius: 10px; background: none; cursor: pointer;
@@ -140,12 +157,24 @@ import { SourcesBox } from '../../shared/sources-box';
     .hero .title { position: relative; margin: 0 0 10px; font-size: 34px; color: #fff8ec; }
     .hero .lead { position: relative; margin: 0 0 16px; color: #eadfcb; }
     .hero .time { position: relative; margin: 0; color: #d9c9ad; }
+    .part-of {
+      position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; margin-top: 14px; padding: 0 14px;
+      border-radius: 20px; text-decoration: none; font: 600 13px Inter, sans-serif; color: #fbf4e6;
+      background: rgba(226, 194, 140, .16); border: 1px solid rgba(226, 194, 140, .4);
+    }
+    .part-of mat-icon { font-size: 18px; width: 18px; height: 18px; color: #e2c28c; }
     .progress {
       display: none; position: fixed; inset: 0 0 auto; z-index: 1000; height: 3px; background: var(--accent-gold);
       transform-origin: 0 50%; transform: scaleX(0);
     }
     @supports (animation-timeline: scroll()) {
-      .progress { display: block; animation: read linear both; animation-timeline: scroll(root); }
+      .part-of {
+      position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; margin-top: 14px; padding: 0 14px;
+      border-radius: 20px; text-decoration: none; font: 600 13px Inter, sans-serif; color: #fbf4e6;
+      background: rgba(226, 194, 140, .16); border: 1px solid rgba(226, 194, 140, .4);
+    }
+    .part-of mat-icon { font-size: 18px; width: 18px; height: 18px; color: #e2c28c; }
+    .progress { display: block; animation: read linear both; animation-timeline: scroll(root); }
     }
     @keyframes read { to { transform: scaleX(1); } }
   `,
@@ -161,6 +190,11 @@ export class ArticlePage {
   });
   /** Histórias (Igreja e Bíblia) ganham capa e leitura em capítulos. */
   protected readonly story = computed(() => STORY_COLLECTIONS.includes(this.article()?.collection!));
+  /** O panorama da coleção (como Atos), para quem quiser ver onde esta história se encaixa. */
+  protected readonly overview = computed(() => {
+    const a = this.article();
+    return a && !a.overview ? articlesOf(a.collection).find((x) => x.overview) : undefined;
+  });
   protected readonly mapInfo = computed(() => {
     const id = this.article()?.map;
     return id ? findMap(id) : undefined;
@@ -173,6 +207,8 @@ export class ArticlePage {
     ),
   );
 
+  /** No celular o índice começa fechado, para o texto aparecer logo. */
+  protected readonly wide = typeof matchMedia !== 'undefined' && matchMedia('(min-width: 840px)').matches;
   protected readonly toc = computed(() => (this.body() ? outline(this.body()!) : []));
 
   protected jump(anchor: string): void {

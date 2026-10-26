@@ -38,6 +38,10 @@ Com a família, Frida foi para o Rio de Janeiro e trabalhou na igreja de **São 
 - foi a primeira mulher a ensinar na **Escola Bíblica Dominical** e comentou as **Lições Bíblicas**;
 - cantava, tocava órgão e violão e escrevia e traduzia hinos do sueco para o português. O hino **85 da Harpa Cristã**, “Deixai Entrar o Espírito de Deus”, traz as suas iniciais (F.V.); veja a [Harpa Cristã](/harpa/85).
 
+:::leia escola-dominical
+De Raikes a Frida: como a Escola Dominical nasceu e chegou às Assembleias de Deus.
+:::
+
 Quando os jornais *Boa Semente* e *O Som Alegre* se uniram no **Mensageiro da Paz**, em 1930, Gunnar e Samuel Nyström eram os editores oficiais, mas, segundo o mesmo dicionário, quem fazia o trabalho era Frida.
 
 ## A questão do ministério feminino

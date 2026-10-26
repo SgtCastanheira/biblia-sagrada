@@ -16,6 +16,10 @@ A vida dos dois pioneiros está contada em detalhe no estudo [Daniel Berg e Gunn
 
 Partiram sem sustento de nenhuma missão. Chegaram a **Belém** em **19 de novembro de 1910**, no navio *Clement*. Sem falar português, foram recebidos na Igreja Batista local. Daniel Berg trabalhou como fundidor numa companhia para sustentar os dois e pagar as aulas de português de Vingren; à noite, oravam com os irmãos que desejavam a promessa do Espírito.
 
+:::leia daniel-berg-e-gunnar-vingren
+A vida, o chamado e o trabalho dos dois pioneiros, em detalhes.
+:::
+
 ## O nascimento da Assembleia de Deus (1911)
 
 Em junho de 1911, depois de semanas de oração, a irmã **Celina de Albuquerque** foi a primeira a ser batizada no Espírito Santo, falando em outras línguas. Logo outros receberam a mesma experiência. A doutrina dividiu a igreja batista, e o grupo pentecostal — 18 pessoas, além dos missionários — foi desligado.
@@ -31,6 +35,10 @@ Em **18 de junho de 1911**, eles fundaram a **Missão de Fé Apostólica**, que 
 - 1922 | *Harpa Cristã* | Primeira edição do hinário que se tornaria símbolo das Assembleias de Deus.
 - 1930 | Convenção Geral | Em Natal, os missionários suecos passam a liderança aos pastores brasileiros; começa a circular o jornal *Mensageiro da Paz*.
 - 1940 | CPAD | Fundada a Casa Publicadora das Assembleias de Deus, que publica as revistas de Escola Bíblica Dominical.
+:::
+
+:::leia escola-dominical
+Dois meses depois da fundação, em agosto de 1911, já havia Escola Dominical em Belém.
 :::
 
 ## Como cresceu tão rápido

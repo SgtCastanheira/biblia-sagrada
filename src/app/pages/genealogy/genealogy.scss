@@ -311,6 +311,12 @@
 
 .inline-ref {
   padding: 0;
+
+  @media (pointer: coarse) {
+    padding-block: 10px;
+    margin-block: -10px;
+  }
+
   border: 0;
   background: none;
   cursor: pointer;

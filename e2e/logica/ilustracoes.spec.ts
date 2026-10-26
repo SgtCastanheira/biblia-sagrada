@@ -48,3 +48,19 @@ test('o leitor entende os blocos das histórias', () => {
     { name: 'Daniel Berg', role: 'evangelista', src: undefined },
   ]);
 });
+
+test('histórias entrelaçadas: todo cartão "leia" leva a um artigo que existe, e o panorama cobre toda a coleção', () => {
+  const problems: string[] = [];
+  for (const file of readdirSync('public/conteudo/artigos')) {
+    for (const b of parseBlocks(readFileSync(`public/conteudo/artigos/${file}`, 'utf8'))) {
+      if (b.type === 'read' && !ARTICLES.some((a) => a.id === b.article)) problems.push(`${file}: "leia ${b.article}" não existe`);
+      if (b.type === 'read' && `${b.article}.md` === file) problems.push(`${file}: cartão para si mesmo`);
+    }
+  }
+  const overview = ARTICLES.find((a) => a.overview && a.collection === 'igreja')!;
+  const linked = parseBlocks(readFileSync(`public/conteudo/artigos/${overview.id}.md`, 'utf8')).filter((b) => b.type === 'read').map((b) => b.article);
+  for (const a of ARTICLES.filter((x) => x.collection === 'igreja' && !x.overview)) {
+    if (!linked.includes(a.id)) problems.push(`o panorama não leva a "${a.id}"`);
+  }
+  expect(problems).toEqual([]);
+});

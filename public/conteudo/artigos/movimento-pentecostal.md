@@ -41,6 +41,10 @@ Mas recebereis poder, ao descer sobre vós o Espírito Santo, e ser-me-eis teste
 
 Missionários e visitantes levaram o fogo de Azusa a todos os continentes. O norueguês **Thomas Ball Barratt**, que recebeu o batismo em Nova York em 1906, levou o pentecostalismo para a Escandinávia, onde ele influenciou o sueco **Lewi Pethrus**. Em Chicago, a missão de William Durham reuniu imigrantes europeus — entre eles os suecos e o italiano que trariam o pentecostalismo ao Brasil.
 
+:::leia pentecostes-no-brasil
+Do fogo de Azusa e de Chicago aos pioneiros que chegaram ao Brasil em 1910.
+:::
+
 ## O que os pentecostais enfatizam
 
 - **O batismo no Espírito Santo** como experiência posterior à conversão, para capacitar para o testemunho [[At 1.8]], com a evidência das línguas.

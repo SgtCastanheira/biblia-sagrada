@@ -322,7 +322,7 @@ test('estudo dos ministérios: na seção Igreja e ministérios, ligado ao dicio
 
 test('história da Igreja: o estudo de Daniel Berg e Gunnar Vingren, ligado ao do pentecostalismo no Brasil', async ({ page }) => {
   await page.goto('/artigo/pentecostes-no-brasil');
-  await page.locator('app-rich-text').getByRole('link', { name: 'Daniel Berg e Gunnar Vingren' }).click();
+  await page.locator('app-rich-text').getByRole('link', { name: 'Daniel Berg e Gunnar Vingren', exact: true }).click();
   await expect(page).toHaveURL(/\/artigo\/daniel-berg-e-gunnar-vingren/);
   await expect(page.getByRole('heading', { name: 'O chamado: “Pará”' })).toBeVisible();
   await page.getByText('Fontes das informações').click();
@@ -357,4 +357,17 @@ test('estudos que não são histórias continuam com a leitura simples', async (
   await expect(page.getByRole('heading', { level: 1, name: 'Os ministérios na Bíblia' })).toBeVisible();
   await expect(page.locator('.hero')).toHaveCount(0);
   await expect(page.locator('.chapter')).toHaveCount(0);
+});
+
+test('história da Igreja como Atos: o panorama em destaque leva às histórias completas, e elas se cruzam', async ({ page }) => {
+  await page.goto('/historia');
+  await page.getByRole('link', { name: /Comece por aqui/ }).click();
+  await expect(page).toHaveURL(/\/artigo\/panorama-da-igreja/);
+  await page.locator('a.read').filter({ hasText: 'A história da Escola Dominical' }).click();
+  await expect(page).toHaveURL(/\/artigo\/escola-dominical/);
+  await expect(page.locator('.scene').filter({ hasText: '19 de agosto de 1855' })).toHaveCount(1);
+  await page.locator('a.read').filter({ hasText: 'Frida Vingren' }).click();
+  await expect(page).toHaveURL(/\/artigo\/frida-vingren/);
+  await page.getByRole('link', { name: /Parte do panorama/ }).click();
+  await expect(page).toHaveURL(/\/artigo\/panorama-da-igreja/);
 });

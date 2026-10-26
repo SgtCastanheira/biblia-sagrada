@@ -98,7 +98,7 @@ import { SourcesBox } from '../../shared/sources-box';
     .questions { padding-left: 22px; font: 400 16px/1.6 var(--reading-font); }
     .questions li { margin-bottom: 6px; }
     .inline-ref {
-      display: inline-flex; align-items: center; min-height: 32px; padding: 0 4px; border: 0; background: none; cursor: pointer;
+      display: inline-flex; align-items: center; min-height: 40px; padding: 0 4px; border: 0; background: none; cursor: pointer;
       color: var(--mat-sys-primary); font: 600 14px Inter, sans-serif; text-decoration: underline; text-underline-offset: 3px;
     }
   `,
