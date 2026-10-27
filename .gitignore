@@ -49,3 +49,14 @@ Thumbs.db
 
 # Temporários da coleta da Harpa Cristã
 /.harpa-*
+
+# Scripts temporários de capturas de tela (revisão de usabilidade)
+/.ux-*.mjs
+/.shot.mjs
+/.s.mjs
+/.m.mjs
+/.w.mjs
+/.live.mjs
+/.audit.mjs
+/.c.mjs
+/.t.ts
