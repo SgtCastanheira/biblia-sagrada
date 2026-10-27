@@ -18,7 +18,7 @@ import { Sheets } from './sheets';
   imports: [NgTemplateOutlet, RouterLink, MatIconModule, Figure, SendChain],
   host: { '[class.story]': 'story()' },
   template: `
-    <ng-template #line let-parts>@for (p of parts; track $index) {@switch (p.t) {@case ('b') {<strong>{{ p.text }}</strong>}@case ('i') {<em>{{ p.text }}</em>}@case ('ref') {<button type="button" class="ref" (click)="openRef(p.href)">{{ p.text }}</button>}@case ('link') {<a class="link" [routerLink]="p.href">{{ p.text }}</a>}@default {{{ p.text }}}}}</ng-template>
+    <ng-template #line let-parts>@for (p of parts; track $index) {@switch (p.t) {@case ('b') {<strong>{{ p.text }}</strong>}@case ('i') {<em>{{ p.text }}</em>}@case ('ref') {<button type="button" class="ref" (click)="openRef(p.href)">{{ p.text }}</button>}@case ('link') {<a class="link" [routerLink]="p.href">{{ p.text }}</a>}@case ('ext') {<a class="link" [href]="p.href" target="_blank" rel="noopener noreferrer">{{ p.text }}</a>}@default {{{ p.text }}}}}</ng-template>
 
     @for (b of blocks(); track $index; let i = $index) {
       @switch (b.type) {

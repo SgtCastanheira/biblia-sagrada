@@ -37,7 +37,7 @@ O primeiro a “semear a semente da salvação” em Cuiabá foi **Eduardo Pablo
 - visitava a população ribeirinha e dizia que **os protestantes iriam “quebrar os santos” e falar da Bíblia**;
 - por isso, **quando Joerke chegava aos portos, as pessoas fugiam para o mato** com medo dele.
 
-O documento diz também que “era proibido ler a Bíblia na região”. A lei, porém, não proibia: desde 1890 o Código Penal punia quem impedisse o culto de qualquer religião. O que havia era a pressão de quem mandava no lugar.
+O documento diz também que “era proibido ler a Bíblia na região”. A lei, porém, não proibia: desde 1890 o Código Penal punia quem impedisse o culto de qualquer religião. O art. 186 do [Decreto nº 847, de 11 de outubro de 1890](https://www2.camara.leg.br/legin/fed/decret/1824-1899/decreto-847-11-outubro-1890-503086-publicacaooriginal-1-pe.html) (texto original, no site da Câmara dos Deputados) pune quem “impedir, por qualquer modo, a celebração de ceremonias religiosas, solemnidades e ritos de qualquer confissão religiosa, ou perturbal-a no exercicio de seu culto” (a grafia é a da época). O que havia era a pressão de quem mandava no lugar.
 
 Joerke continuou. O texto diz que ele persistiu “pacientemente” e que, “aos poucos, toda resistência contra a obra de Deus foi desaparecendo”. Não há registro de que o padre ou alguém tenha sido julgado.
 

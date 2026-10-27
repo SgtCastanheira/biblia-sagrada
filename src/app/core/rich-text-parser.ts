@@ -2,7 +2,7 @@
 
 /** Trecho de uma linha: texto, negrito, itálico, referência bíblica ou link. */
 export interface Inline {
-  t: 'text' | 'b' | 'i' | 'ref' | 'link';
+  t: 'text' | 'b' | 'i' | 'ref' | 'link' | 'ext';
   text: string;
   href?: string;
 }
@@ -53,7 +53,7 @@ export function parseInline(line: string): Inline[] {
     if (m[1]) out.push({ t: 'ref', text: m[2] ?? m[1], href: m[1].trim() });
     else if (m[3]) out.push({ t: 'b', text: m[3] });
     else if (m[4]) out.push({ t: 'i', text: m[4] });
-    else out.push({ t: 'link', text: m[5], href: m[6] });
+    else out.push({ t: /^https?:\/\//.test(m[6]) ? 'ext' : 'link', text: m[5], href: m[6] });
     last = m.index + m[0].length;
   }
   if (last < line.length) out.push({ t: 'text', text: line.slice(last) });

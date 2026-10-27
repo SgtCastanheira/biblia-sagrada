@@ -132,7 +132,7 @@ Outro tipo de oposição vinha das **autoridades locais**: Otto Nelson foi preso
 
 ## O que a lei dizia
 
-A lei estava **do lado dos perseguidos**, no papel. Desde 1890 o Brasil separou a Igreja do Estado. O Código Penal daquele ano tinha um capítulo sobre os crimes contra o livre exercício dos cultos:
+A lei estava **do lado dos perseguidos**, no papel. Desde 1890 o Brasil separou a Igreja do Estado. O [Código Penal daquele ano](https://www2.camara.leg.br/legin/fed/decret/1824-1899/decreto-847-11-outubro-1890-503086-publicacaooriginal-1-pe.html) (Decreto nº 847, texto original no site da Câmara) tinha um capítulo sobre os crimes contra o livre exercício dos cultos:
 - **Art. 186:** “Impedir, por qualquer modo, a celebração de cerimônias religiosas, solenidades e ritos de qualquer confissão religiosa, ou perturbá-la no exercício de seu culto” — prisão de dois meses a um ano.
 - **Art. 187:** usar ameaças ou injúrias contra os ministros de qualquer confissão religiosa no exercício das suas funções — prisão de seis meses a um ano.
 - **Art. 188:** quando o fato fosse acompanhado de violência contra a pessoa, a pena aumentava em um terço, sem prejuízo da pena pela própria violência.
