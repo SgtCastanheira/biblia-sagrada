@@ -86,6 +86,10 @@ export const WORKS: Record<string, Work> = {
   'ward-east-africa': { author: 'Kevin Ward e Emma Wild-Wood (orgs.)', title: 'The East African Revival: History and Legacies', publisher: 'Ashgate, 2012', kind: 'historia' },
   'peckham-lewis': { author: 'Colin e Mary Peckham', title: 'Sounds from Heaven: The Revival on the Isle of Lewis, 1949–1952', publisher: 'Christian Focus, 2004', kind: 'historia' },
   'campbell-lewis': { author: 'Duncan Campbell', title: 'The Lewis Awakening, 1949–1953', publisher: 'The Faith Mission, 1954', kind: 'historia' },
+  fausto: { author: 'Boris Fausto', title: 'História do Brasil', publisher: 'EDUSP', kind: 'historia' },
+  'schwarcz-starling': { author: 'Lilia M. Schwarcz e Heloisa M. Starling', title: 'Brasil: uma biografia', publisher: 'Companhia das Letras, 2015', kind: 'historia' },
+  hobsbawm: { author: 'Eric Hobsbawm', title: 'Era dos Extremos: o breve século XX (1914–1991)', publisher: 'Companhia das Letras', kind: 'historia' },
+  'oliveira-2012': { author: 'Sérgio Batista de Oliveira', title: 'O lugar da hermenêutica bíblica na formação teológica da Igreja Evangélica Assembleia de Deus (dissertação)', publisher: 'PUC Goiás, 2012', kind: 'historia' },
   laqueur: { author: 'Thomas W. Laqueur', title: 'Religion and Respectability: Sunday Schools and Working Class Culture, 1780–1850', publisher: 'Yale University Press, 1976', kind: 'historia' },
   'gilberto-ebd': { author: 'Antonio Gilberto', title: 'Manual da Escola Dominical', publisher: 'CPAD', kind: 'historia' },
   'manual-harpa': { author: 'CPAD', title: 'Manual da Harpa Cristã', publisher: 'CPAD, 1999', kind: 'historia' },
@@ -208,6 +212,19 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ancient: ['Revival Library: 1949 Hebrides Islands Revival e “The 1949 Hebrides Intercessors”'],
     works: ['campbell-lewis', 'peckham-lewis', 'edwards-revival'],
   },
+  'irmaos-perseguidos': {
+    ancientLabel: 'Documentos e sites consultados',
+    ancient: [
+      'Decreto nº 847, de 11 de outubro de 1890 (Código Penal), arts. 185 a 188: crimes contra o livre exercício dos cultos (Câmara dos Deputados, Legislação Informatizada)',
+      'Constituição de 1891, art. 72 (cemitérios laicos e municipais) e Decreto nº 789, de 1890',
+      'Sérgio Batista de Oliveira, dissertação (PUC Goiás, 2012), com os relatos de Emílio Conde (2000) e de Daniel Berg (1987 e 1995)',
+      'Assembleia de Deus no Estado de Alagoas: “Na centenária Assembleia de Deus, uma parte ainda pouco conhecida da história de Alagoas” (2015)',
+      'IADESL, Assembleia de Deus de São Luís: linha do tempo; Assembleia Legislativa de Mato Grosso: moção de aplausos (2019); Assembleia Legislativa do Ceará: projeto de lei 368/2021',
+      'Biografias de Otto Nelson: Sistema EBD e blog de história (2019)',
+      'Artigo da revista Tint (Mackenzie): migração e missão na Assembleia de Deus',
+    ],
+    works: ['conde', 'berg-enviado', 'vingren-diario', 'alencar', 'oliveira-2012', 'mariano'],
+  },
   'panorama-da-igreja': { works: ['gonzalez', 'cairns', 'noll', 'conde'] },
   'escola-dominical': {
     ancientLabel: 'Documentos e sites consultados',
@@ -268,7 +285,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'capitulos-e-versiculos': { ancient: ['Capítulos de Stephen Langton (c. 1227)', 'Novo Testamento grego de Robert Estienne, com versículos (1551)', 'Bíblia de Genebra (1560), a primeira inglesa com versículos em toda a Bíblia'], works: ['metzger-ehrman', 'geisler-nix'] },
 };
 
-export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd' | 'harpa';
+export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd' | 'harpa' | 'contexto-ad';
 
 /** Fontes de cada parte do app (o que não é um artigo). */
 export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; note?: string }> = {
@@ -289,6 +306,19 @@ export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; not
     works: ['araujo-dicionario', 'manual-harpa', 'osbeck', 'julian'],
   },
   ebd: { title: 'EBD — Apoio ao professor', note: 'A revista é só a inspiração dos temas: o contexto e as curiosidades vêm da Bíblia, de achados arqueológicos (como os papiros de Elefantina) e das obras abaixo.', works: ['walton-at', 'keener-nt', 'ndb', 'dillard-longman', 'carson-moo'] },
+  'contexto-ad': {
+    title: 'O Brasil e o mundo no tempo da igreja',
+    note: 'Cada fato é curto e confirmado nas obras de história abaixo e nos documentos citados. As estimativas de mortos e de datas variam entre os historiadores; onde há divergência, o texto diz.',
+    ancientLabel: 'Documentos e sites consultados',
+    ancient: [
+      'Decreto nº 847, de 11 de outubro de 1890 (Código Penal), cap. III: “Dos crimes contra o livre exercício dos cultos” (Câmara dos Deputados, Legislação Informatizada)',
+      'Decreto nº 789, de 27 de setembro de 1890, e Constituição de 1891, art. 72 (cemitérios laicos e municipais)',
+      'Fiocruz (Invivo): a pandemia de gripe de 1918 no Brasil; O Povo (2018): a gripe espanhola e o Ceará',
+      'Portal da Marinha e Revista do Exército: o Brasil na Primeira Guerra Mundial',
+      'Câmara Municipal de Sorriso e Diário do Estado de MT: a colonização de Sorriso; Assembleia Legislativa de Mato Grosso: a fundação de Sinop',
+    ],
+    works: ['fausto', 'schwarcz-starling', 'hobsbawm', 'oliveira-2012'],
+  },
   ibuc: { title: 'IBUC', note: 'As aulas não reproduzem as revistas do IBUC: o contexto e as curiosidades vêm da Bíblia e das obras abaixo.', works: ['walton-at', 'keener-nt', 'ndb'] },
 };
 

@@ -3,17 +3,10 @@ import { Component, computed, inject, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { CLASSIC_SERMONS, findArticle } from '../core/library';
-import { Block, parseBlocks } from '../core/rich-text-parser';
+import { Block, parseBlocks, sectionLabels } from '../core/rich-text-parser';
 import { Figure } from './figure';
+import { SendChain } from './send-chain';
 import { Sheets } from './sheets';
-
-/** Seções que fecham a história recebem um nome em vez de número de capítulo. */
-const SECTION_LABELS: Record<string, string> = {
-  'Para a vida': 'Reflexão',
-  'Linha do tempo': 'Em resumo',
-  Resumo: 'Em resumo',
-  Redescoberta: 'Epílogo',
-};
 
 /**
  * Mostra texto de estudo formatado. Referências bíblicas abrem o texto num painel.
@@ -22,7 +15,7 @@ const SECTION_LABELS: Record<string, string> = {
  */
 @Component({
   selector: 'app-rich-text',
-  imports: [NgTemplateOutlet, RouterLink, MatIconModule, Figure],
+  imports: [NgTemplateOutlet, RouterLink, MatIconModule, Figure, SendChain],
   host: { '[class.story]': 'story()' },
   template: `
     <ng-template #line let-parts>@for (p of parts; track $index) {@switch (p.t) {@case ('b') {<strong>{{ p.text }}</strong>}@case ('i') {<em>{{ p.text }}</em>}@case ('ref') {<button type="button" class="ref" (click)="openRef(p.href)">{{ p.text }}</button>}@case ('link') {<a class="link" [routerLink]="p.href">{{ p.text }}</a>}@default {{{ p.text }}}}}</ng-template>
@@ -85,6 +78,7 @@ const SECTION_LABELS: Record<string, string> = {
             </dl>
           </section>
         }
+        @case ('sends') { <app-send-chain [title]="b.place" [sends]="b.sends!" /> }
         @case ('sermon') {
           @if (sermonOf(b.sermon); as s) {
             <a class="read sermon-card" [routerLink]="['/avivamento', s.id]">
@@ -156,14 +150,7 @@ export class RichText {
   protected readonly blocks = computed(() => parseBlocks(this.source()));
 
   /** Rótulo de cada título de seção: "Capítulo 1", "Capítulo 2"… ou um nome especial. */
-  protected readonly labels = computed(() => {
-    let n = 0;
-    return this.blocks().map((b) => {
-      if (b.type !== 'h2') return '';
-      const text = b.inlines!.map((x) => x.text).join('');
-      return SECTION_LABELS[text] ?? `Capítulo ${++n}`;
-    });
-  });
+  protected readonly labels = computed(() => sectionLabels(this.blocks()));
 
   /** O primeiro parágrafo ganha a letra capitular. */
   protected readonly opening = computed(() => (this.story() ? this.blocks().findIndex((b: Block) => b.type === 'p') : -1));

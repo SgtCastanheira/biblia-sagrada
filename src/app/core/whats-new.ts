@@ -22,6 +22,17 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'ad-linha-do-tempo-e-perseguidos',
+    date: '27 de outubro de 2026',
+    title: 'A linha do tempo e os irmãos perseguidos',
+    items: [
+      { icon: 'timeline', title: 'Linha do tempo da Assembleia de Deus', text: 'Ano a ano, em ordem cronológica: a igreja em cada estado ao lado das guerras, secas, epidemias e crises do Brasil e do mundo.', link: '/assembleia-de-deus/linha-do-tempo' },
+      { icon: 'history_edu', title: 'Os irmãos perseguidos', text: 'O cotidiano, quem perseguia, o que a lei dizia e o que não se sabe — contado sem inventar o que as fontes não registram.', link: '/artigo/irmaos-perseguidos' },
+      { icon: 'near_me', title: 'Quem enviou quem', text: 'Nas histórias dos estados, um quadro mostra de onde saíram os pastores e para onde foram. Em Mato Grosso, a história de Sebastião Rodrigues de Souza e de Eduardo Joerke foi refeita.', link: '/assembleia-de-deus/mt' },
+      { icon: 'list', title: 'Índice ao lado do texto', text: 'No computador, o índice e o mapa ficam fixos ao lado da leitura; no celular, abrem com um toque.', link: '/assembleia-de-deus' },
+    ],
+  },
+  {
     id: 'ad-ministerios-em-cada-estado',
     date: '26 de outubro de 2026',
     title: 'Os ministérios em cada estado',

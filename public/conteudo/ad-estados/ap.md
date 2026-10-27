@@ -17,6 +17,10 @@ Um estrangeiro vende Bíblias de casa em casa e fala de Jesus. Religiosos e auto
 
 Segundo os relatos do centenário, Clímaco foi preso e expulso. Ele buscou amparo na justiça em Belém e preparou o caminho para a volta do trabalho no ano seguinte.
 
+:::leia irmaos-perseguidos
+Os casos de perseguição a pioneiros em todo o Brasil, o que a lei dizia e o que não se sabe.
+:::
+
 :::destaque
 Mas a palavra de Deus não está presa.
 — [[2Tm 2.9]]

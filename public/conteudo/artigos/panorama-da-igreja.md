@@ -94,6 +94,9 @@ Gunnar Vingren e Daniel Berg chegaram a Belém em 1910, e em 1911 nasceu a igrej
 :::leia assembleia-de-deus-no-brasil
 :::
 
+:::leia irmaos-perseguidos
+:::
+
 :::leia madureira-e-a-separacao
 :::
 

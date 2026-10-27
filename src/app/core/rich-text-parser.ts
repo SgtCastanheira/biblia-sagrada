@@ -8,7 +8,7 @@ export interface Inline {
 }
 
 export interface Block {
-  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon';
+  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon' | 'sends';
   inlines?: Inline[];
   items?: Inline[][];
   events?: { date: string; title: string; text: Inline[] }[];
@@ -35,6 +35,8 @@ export interface Block {
   facts?: { label: string; text: Inline[] }[];
   /** Sermão histórico ligado (":::sermao id"): id em CLASSIC_SERMONS. */
   sermon?: string;
+  /** Envios (":::envio Título"): de onde saiu, aonde chegou, quem foi, em que ano e por quem foi enviado. */
+  sends?: { from: string; to: string; who: string; year: string; note?: string }[];
 }
 
 const cells = (line: string) =>
@@ -67,6 +69,7 @@ export function parseInline(line: string): Inline[] {
  * e ":::leia id-do-artigo" (cartão que leva à história completa; o texto dentro diz por que ela se liga a esta).
  * ":::ficha Título" resume um período em linhas "- Rótulo | texto" (como começou, por quê, quem, o fim, o impacto),
  * e ":::sermao id" mostra o cartão de um sermão histórico do app.
+ * ":::envio Título" mostra quem enviou quem: linhas "- De | Para | Quem | Ano | observação".
  */
 export function parseBlocks(source: string): Block[] {
   const blocks: Block[] = [];
@@ -89,13 +92,21 @@ export function parseBlocks(source: string): Block[] {
       blocks.push({ type: 'image', alt: image[1], src: image[2], caption: image[3] ? parseInline(image[3]) : undefined });
       continue;
     }
-    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao)(?:\s+(.+))?$/);
+    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao|envio)(?:\s+(.+))?$/);
     if (fence) {
       flush();
       const body: string[] = [];
       while (++i < lines.length && lines[i].trim() !== ':::') body.push(lines[i].trim());
       const text = body.filter(Boolean);
-      if (fence[1] === 'ficha') {
+      if (fence[1] === 'envio') {
+        const sends = text
+          .filter((l) => l.startsWith('- '))
+          .map((l) => {
+            const [from, to, who, year, ...note] = l.slice(2).split('|').map((p) => p.trim());
+            return { from, to, who: who ?? '', year: year ?? '', note: note.join(' | ') || undefined };
+          });
+        blocks.push({ type: 'sends', place: fence[2]?.trim(), sends });
+      } else if (fence[1] === 'ficha') {
         const facts = text
           .filter((l) => l.startsWith('- '))
           .map((l) => {
@@ -178,8 +189,32 @@ export function parseBlocks(source: string): Block[] {
   return blocks;
 }
 
-/** Títulos de seção de um texto, para montar o índice. */
-export const outline = (source: string) =>
-  parseBlocks(source)
-    .filter((b) => b.type === 'h2')
-    .map((b) => ({ anchor: b.anchor!, text: b.inlines!.map((i) => i.text).join('') }));
+/** Seções que fecham a história recebem um nome em vez de número de capítulo. */
+export const SPECIAL_SECTIONS: Record<string, string> = {
+  'Para a vida': 'Reflexão',
+  'Linha do tempo': 'Em resumo',
+  Resumo: 'Em resumo',
+  Redescoberta: 'Epílogo',
+};
+
+/** Rótulo de cada título de seção (por posição no texto): "Capítulo 1", "Capítulo 2"… ou um nome especial. */
+export function sectionLabels(blocks: Block[]): string[] {
+  let n = 0;
+  return blocks.map((b) => {
+    if (b.type !== 'h2') return '';
+    const text = b.inlines!.map((x) => x.text).join('');
+    return SPECIAL_SECTIONS[text] ?? `Capítulo ${++n}`;
+  });
+}
+
+/** Títulos de seção de um texto, para montar o índice (com o número do capítulo, quando é capítulo). */
+export function outline(source: string): { anchor: string; text: string; chapter?: number; label: string }[] {
+  const blocks = parseBlocks(source);
+  const labels = sectionLabels(blocks);
+  return blocks.flatMap((b, i) => {
+    if (b.type !== 'h2') return [];
+    const label = labels[i];
+    const chapter = /^Capítulo (\d+)$/.exec(label)?.[1];
+    return [{ anchor: b.anchor!, text: b.inlines!.map((x) => x.text).join(''), chapter: chapter ? Number(chapter) : undefined, label }];
+  });
+}

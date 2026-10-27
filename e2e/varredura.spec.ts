@@ -19,7 +19,7 @@ const rotas: string[] = [
   ...CLASSIC_SERMONS.map((s) => `/avivamento/${s.id}`),
   ...TRIBES.map((t) => `/tribos/${t.id}`),
   ...CURIOSITIES.map((c) => `/curiosidades/${c.id}`),
-  '/assembleia-de-deus', '/historia', '/historia?colecao=avivamentos', '/historia?colecao=biblia', '/mapas', '/estudo', '/avivamento',
+  '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo', '/historia', '/historia?colecao=avivamentos', '/historia?colecao=biblia', '/mapas', '/estudo', '/avivamento',
 ];
 
 for (const rota of rotas) {

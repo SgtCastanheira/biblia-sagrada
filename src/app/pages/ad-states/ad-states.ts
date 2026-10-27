@@ -24,6 +24,12 @@ import { BibleMapView } from '../../shared/bible-map';
       <span class="map-label"><mat-icon>map</mat-icon> Ver no mapa, com as setas de onde saiu cada pioneiro <mat-icon class="go">arrow_forward</mat-icon></span>
     </a>
 
+    <a class="card study" matRipple routerLink="/assembleia-de-deus/linha-do-tempo">
+      <mat-icon>timeline</mat-icon>
+      <span><small>Ano a ano</small>A linha do tempo: a igreja e o que acontecia no Brasil e no mundo</span>
+      <mat-icon class="go">chevron_right</mat-icon>
+    </a>
+
     @for (r of regions; track r.name) {
       <h2 class="section-title">{{ r.name }}</h2>
       <div class="list">
@@ -54,7 +60,7 @@ import { BibleMapView } from '../../shared/bible-map';
     .map-label { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--mat-sys-outline-variant); font: 600 14px Inter, sans-serif; color: var(--mat-sys-primary); }
     .map-label .go { margin-left: auto; }
     .uf { font: 700 15px Inter, sans-serif; letter-spacing: .5px; }
-    .study { display: flex; align-items: center; gap: 12px; margin-top: 28px; padding: 14px 16px; font: 600 16px/1.35 var(--heading-font); }
+    .study { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding: 14px 16px; font: 600 16px/1.35 var(--heading-font); }
     .study > mat-icon:first-child { color: var(--accent-gold); }
     .study span { flex: 1; display: flex; flex-direction: column; gap: 2px; }
     .study small { font: 600 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold); }

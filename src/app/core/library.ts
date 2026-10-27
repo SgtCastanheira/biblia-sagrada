@@ -359,6 +359,15 @@ export const ARTICLES: Article[] = [
     portraits: ['imagens/frida-vingren.jpg'],
   },
   {
+    id: 'irmaos-perseguidos',
+    collection: 'igreja',
+    title: 'Os irmãos perseguidos',
+    subtitle: 'Quem eram os pioneiros, como viviam, quem se opôs a eles, o que a lei dizia e o que ninguém registrou: Bíblias queimadas, casas apedrejadas, uma prisão e um enterro à noite.',
+    period: '1914–1937',
+    icon: 'shield',
+    minutes: 12,
+  },
+  {
     id: 'assembleia-de-deus-no-brasil',
     collection: 'igreja',
     title: 'A história da Assembleia de Deus no Brasil',

@@ -30,7 +30,7 @@ O mapa interativo mostra o caminho, etapa por etapa:
 
 ## Estado por estado
 
-[Abra a história completa de cada estado](/assembleia-de-deus) — escolha o estado e veja no mapa de onde saíram os pioneiros e como a igreja foi construída ali. Abaixo, o resumo.
+[Abra a história completa de cada estado](/assembleia-de-deus) e veja tudo [ano a ano na linha do tempo](/assembleia-de-deus/linha-do-tempo) — escolha o estado e veja no mapa de onde saíram os pioneiros e como a igreja foi construída ali. Abaixo, o resumo.
 
 O jornal *Mensageiro da Paz* publicou a lista dos primeiros passos da igreja em cada estado, e as igrejas estaduais guardam as suas próprias histórias. Elas mostram um padrão: a maioria dos pioneiros **saiu de Belém** — missionários enviados, obreiros e, muitas vezes, crentes comuns que voltavam para a sua terra. As fontes nem sempre concordam; onde há divergência, isso aparece. No [mapa estado por estado](/mapas/assembleia-de-deus-estados), linhas douradas ligam a cidade de onde cada pessoa saiu à cidade aonde chegou.
 
@@ -73,6 +73,12 @@ O jornal *Mensageiro da Paz* publicou a lista dos primeiros passos da igreja em 
 - **Mato Grosso (1936):** o pastor itinerante Eduardo Pablo Joerck foi o primeiro a pregar a mensagem pentecostal em Cuiabá, debaixo de oposição.
 - **Mato Grosso do Sul (1944):** Juvenal Roque de Andrade começou a igreja em Campo Grande — que, na época, ainda fazia parte de Mato Grosso (veja abaixo por que as datas divergem).
 - **Distrito Federal (1957–1959):** irmãos de vários estados chegaram em 1957 para trabalhar na construção de Brasília; a igreja foi fundada em Taguatinga, em maio de 1959.
+
+### Quem sofreu para a igreja chegar
+
+:::leia irmaos-perseguidos
+Bíblias queimadas, casas apedrejadas, uma prisão e o que a lei dizia: os irmãos perseguidos.
+:::
 
 ### Por que as histórias divergem
 

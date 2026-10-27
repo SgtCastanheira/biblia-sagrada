@@ -1,3 +1,4 @@
+import { NgTemplateOutlet } from '@angular/common';
 import { Component, computed, effect, inject, input } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { MatRippleModule } from '@angular/material/core';
@@ -5,21 +6,26 @@ import { MatIconModule } from '@angular/material/icon';
 import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { map, startWith, switchMap } from 'rxjs';
-import { AD_STATES, BODIES, CGADB_CONVENTIONS, findAdState, STATE_MINISTRIES } from '../../core/ad-states';
+import { contextFor } from '../../core/ad-context';
+import { AD_STATES, CGADB_CONVENTIONS, findAdState, STATE_MINISTRIES } from '../../core/ad-states';
 import { distanceKm, formatKm } from '../../core/atlas';
 import { ContentService } from '../../core/content.service';
 import { findMap } from '../../core/maps';
+import { outline } from '../../core/rich-text-parser';
 import { BackButton } from '../../shared/back-button';
 import { BibleMapView } from '../../shared/bible-map';
+import { ContextList } from '../../shared/context-list';
+import { PageToc, TocItem } from '../../shared/page-toc';
 import { RichText } from '../../shared/rich-text';
+import { StateMinistries } from '../../shared/state-ministries';
 
 /** História completa da Assembleia de Deus num estado, com o mapa de onde saíram os pioneiros. */
 @Component({
   selector: 'app-ad-state',
-  imports: [RouterLink, MatIconModule, MatRippleModule, BibleMapView, BackButton, RichText],
+  imports: [NgTemplateOutlet, RouterLink, MatIconModule, MatRippleModule, BibleMapView, BackButton, RichText, PageToc, ContextList, StateMinistries],
   template: `
     @if (state(); as s) {
-      <div class="article">
+      <div class="article wide">
         <div class="top"><app-back fallback="/assembleia-de-deus" /></div>
         <header class="hero">
           <span class="hero-over">Assembleia de Deus · {{ s.region }}</span>
@@ -28,78 +34,66 @@ import { RichText } from '../../shared/rich-text';
           <p class="lead">{{ s.summary }}</p>
         </header>
 
-        <section class="card route">
-          <app-bible-map [map]="statesMap" [interactive]="true" [activeStep]="stepIndex()" [focus]="focusPlaces()" />
-          <div class="route-text">
-            <span class="route-line">
-              <mat-icon>near_me</mat-icon>
-              @if (trip(); as t) {
-                <strong>{{ t.from }} → {{ t.to }}</strong> · {{ t.km }} em linha reta
-              } @else {
-                <strong>{{ s.city }}</strong>
-              }
-            </span>
-            <span class="origin">{{ s.origin }}</span>
+        <div class="layout">
+          <aside class="rail">
+            <section class="card route">
+              <app-bible-map [map]="statesMap" [interactive]="true" [activeStep]="stepIndex()" [focus]="focusPlaces()" />
+              <div class="route-text">
+                <span class="route-line">
+                  <mat-icon>near_me</mat-icon>
+                  @if (trip(); as t) {
+                    <strong>{{ t.from }} → {{ t.to }}</strong> · {{ t.km }} em linha reta
+                  } @else {
+                    <strong>{{ s.city }}</strong>
+                  }
+                </span>
+                <span class="origin">{{ s.origin }}</span>
+              </div>
+            </section>
+            <app-page-toc [items]="toc()" title="Nesta história" />
+            <ng-container *ngTemplateOutlet="moves" />
+          </aside>
+
+          <div class="main">
+            @if (body() === undefined) {
+              <div class="skeleton"><span></span><span></span><span></span><span class="short"></span></div>
+            } @else if (body(); as text) {
+              <app-rich-text [source]="text" [story]="true" />
+            } @else {
+              <p class="empty">Não foi possível abrir esta história agora.</p>
+            }
+
+            <app-context-list [events]="context()" />
+            <app-state-ministries [stateName]="s.state" [ministries]="ministries()" [conventions]="conventions()" />
+
+            <details class="sources" id="fontes">
+              <summary><mat-icon>menu_book</mat-icon> Fontes das informações</summary>
+              <ul>
+                <li>Jornal Mensageiro da Paz: “Os primeiros passos da Assembleia de Deus no Brasil”</li>
+                <li>CGADB: lista oficial das convenções (cgadb.org.br/convencoes); Marina Correa, “Assembleias de Deus, suas convenções e ministérios” (ISER, 2024); Wikipédia: CADB e CONAMAD</li>
+                <li>O tempo da história: Boris Fausto, <em>História do Brasil</em>; Lilia Schwarcz e Heloisa Starling, <em>Brasil: uma biografia</em>; Eric Hobsbawm, <em>Era dos Extremos</em></li>
+                @for (src of s.sources; track src) { <li>{{ src }}</li> }
+              </ul>
+              <p>As histórias locais foram escritas pelas próprias igrejas, muitas vezes décadas depois. Onde as fontes divergem, o texto mostra as versões.</p>
+            </details>
+
+            <div class="narrow-only"><ng-container *ngTemplateOutlet="moves" /></div>
           </div>
-        </section>
+        </div>
+      </div>
 
-        @if (body() === undefined) {
-          <div class="skeleton"><span></span><span></span><span></span><span class="short"></span></div>
-        } @else if (body(); as text) {
-          <app-rich-text [source]="text" [story]="true" />
-        } @else {
-          <p class="empty">Não foi possível abrir esta história agora.</p>
-        }
-
-        <section class="ministries" aria-labelledby="min-title">
-          <h2 id="min-title"><mat-icon>account_tree</mat-icon> Os ministérios no estado</h2>
-          <p class="min-intro">A história acima é a da igreja pioneira. Hoje, em {{ s.state }}, a Assembleia de Deus é uma família de ministérios e convenções, lado a lado.</p>
-          @for (m of ministries(); track m.name) {
-            <article class="min" [attr.data-body]="m.body">
-              <span class="min-body">{{ bodies[m.body].name }}</span>
-              <h3>{{ m.name }}</h3>
-              <p>{{ m.text }}</p>
-            </article>
-          }
-          @if (conventions().length) {
-            <article class="min" data-body="CGADB">
-              <span class="min-body">{{ bodies.CGADB.name }}</span>
-              <h3>Convenções no estado</h3>
-              <ul>@for (c of conventions(); track c) { <li>{{ c }}</li> }</ul>
-            </article>
-          }
-          <article class="min" data-body="CONAMAD">
-            <span class="min-body">{{ bodies.CONAMAD.name }}</span>
-            <h3>Madureira em {{ s.state }}</h3>
-            <p>A CONAMAD tem convenção em todos os estados, com igrejas ligadas ao Ministério de Madureira.</p>
-          </article>
-          <article class="min" data-body="CADB">
-            <span class="min-body">{{ bodies.CADB.name }}</span>
-            <h3>A CADB</h3>
-            <p>{{ bodies.CADB.text }} Ao ser fundada, disse ter pastores em 26 unidades da federação.</p>
-          </article>
-          <a class="min-more" routerLink="/artigo/madureira-e-a-separacao">O que são a CGADB, a CONAMAD e a CADB</a>
-        </section>
-
-        <details class="sources">
-          <summary><mat-icon>menu_book</mat-icon> Fontes das informações</summary>
-          <ul>
-            <li>Jornal Mensageiro da Paz: “Os primeiros passos da Assembleia de Deus no Brasil”</li>
-            <li>CGADB: lista oficial das convenções (cgadb.org.br/convencoes); Marina Correa, “Assembleias de Deus, suas convenções e ministérios” (ISER, 2024); Wikipédia: CADB e CONAMAD</li>
-            @for (src of s.sources; track src) { <li>{{ src }}</li> }
-          </ul>
-          <p>As histórias locais foram escritas pelas próprias igrejas, muitas vezes décadas depois. Onde as fontes divergem, o texto mostra as versões.</p>
-        </details>
-
-        <nav class="neighbours">
+      <ng-template #moves>
+        <nav class="neighbours" aria-label="Outros estados">
           @if (neighbours().prev; as p) {
             <a class="card" matRipple [routerLink]="['/assembleia-de-deus', p.id]"><mat-icon>arrow_back</mat-icon><span><small>Anterior</small>{{ p.state }}</span></a>
           } @else { <span></span> }
           @if (neighbours().next; as n) {
             <a class="card next" matRipple [routerLink]="['/assembleia-de-deus', n.id]"><span><small>Próximo</small>{{ n.state }}</span><mat-icon>arrow_forward</mat-icon></a>
           }
+          <a class="all" routerLink="/assembleia-de-deus"><mat-icon>pin_drop</mat-icon> Todos os estados</a>
+          <a class="all" routerLink="/assembleia-de-deus/linha-do-tempo"><mat-icon>timeline</mat-icon> Linha do tempo</a>
         </nav>
-      </div>
+      </ng-template>
     } @else {
       <p class="empty">Estado não encontrado.</p>
     }
@@ -114,37 +108,32 @@ import { RichText } from '../../shared/rich-text';
     .hero-over { font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 2px; color: #e2c28c; }
     .era { margin: 6px 0 8px; font: 600 34px/1 var(--heading-font); color: #e2c28c; }
     .hero .title { margin: 0 0 8px; font-size: 34px; color: #fff8ec; }
-    .hero .lead { margin: 0; color: #eadfcb; }
-    .route { margin: 0 0 22px; }
+    .hero .lead { margin: 0; max-width: 640px; color: #eadfcb; }
     .route app-bible-map { display: block; aspect-ratio: 4 / 3; overflow: hidden; }
     .route-text { display: flex; flex-direction: column; gap: 4px; padding: 12px 16px; border-top: 1px solid var(--mat-sys-outline-variant); }
     .route-line { display: flex; align-items: center; gap: 8px; font: 500 15px Inter, sans-serif; }
     .route-line mat-icon { color: var(--accent-gold); flex: none; }
     .origin { font: 400 14px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
-    .ministries { margin: 30px 0 0; }
-    .ministries h2 { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; font: 600 24px/1.25 var(--heading-font); }
-    .ministries h2 mat-icon { color: var(--accent-gold); }
-    .min-intro { margin: 0 0 14px; font: 400 16px/1.55 var(--reading-font); color: var(--mat-sys-on-surface-variant); }
-    .min { margin: 0 0 10px; padding: 12px 14px; border-radius: 16px; border: 1px solid var(--mat-sys-outline-variant); border-left: 4px solid var(--mat-sys-outline); background: var(--mat-sys-surface-container-low); }
-    .min[data-body='CGADB'] { border-left-color: var(--mat-sys-primary); }
-    .min[data-body='CONAMAD'] { border-left-color: var(--accent-gold); }
-    .min[data-body='CADB'] { border-left-color: var(--mat-sys-tertiary); }
-    .min-body { font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: .6px; color: var(--mat-sys-on-surface-variant); }
-    .min h3 { margin: 4px 0 4px; font: 600 18px/1.3 var(--heading-font); }
-    .min p { margin: 0; font: 400 15px/1.55 var(--reading-font); }
-    .min ul { margin: 4px 0 0; padding-left: 18px; font: 400 14px/1.5 Inter, sans-serif; }
-    .min-more { display: inline-flex; align-items: center; min-height: 40px; font: 600 14px Inter, sans-serif; color: var(--mat-sys-primary); }
-    .sources { margin: 28px 0 0; padding: 12px 16px; border-radius: 16px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface-container-low); }
+    .sources { margin: 28px 0 0; padding: 12px 16px; border-radius: 16px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface-container-low); scroll-margin-top: 72px; }
     .sources summary { display: flex; align-items: center; gap: 8px; min-height: 40px; cursor: pointer; font: 600 15px Inter, sans-serif; color: var(--mat-sys-primary); }
     .sources summary mat-icon { font-size: 20px; width: 20px; height: 20px; }
     .sources ul { margin: 6px 0; padding-left: 20px; font: 400 14px/1.5 Inter, sans-serif; }
     .sources p { margin: 6px 0 4px; font: 400 13px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .neighbours { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px; }
-    .neighbours a { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 16px; font: 600 15px/1.3 var(--heading-font); }
+    .neighbours a.card { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 16px; font: 600 15px/1.3 var(--heading-font); }
     .neighbours a span { display: flex; flex-direction: column; min-width: 0; }
     .neighbours small { font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .neighbours .next { justify-content: flex-end; text-align: right; }
     .neighbours mat-icon { color: var(--mat-sys-primary); flex: none; }
+    .neighbours .all { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; border-radius: 14px; font: 600 14px Inter, sans-serif; color: var(--mat-sys-primary); text-decoration: none; background: var(--mat-sys-surface-container); }
+    .rail { display: flex; flex-direction: column; gap: 14px; margin-bottom: 18px; }
+    .rail .neighbours { display: none; }
+    .rail .route { margin: 0; }
+    @media (min-width: 1100px) {
+      .rail { position: sticky; top: 76px; max-height: calc(100vh - 92px); overflow-y: auto; margin: 0; padding-bottom: 4px; }
+      .rail .neighbours { display: grid; margin-top: 0; }
+      .narrow-only { display: none; }
+    }
   `,
 })
 export class AdStatePage {
@@ -153,9 +142,12 @@ export class AdStatePage {
   protected readonly statesMap = findMap('assembleia-de-deus-estados')!;
   protected readonly state = computed(() => findAdState(this.id()));
 
-  protected readonly bodies = BODIES;
   protected readonly ministries = computed(() => STATE_MINISTRIES[this.id()] ?? []);
   protected readonly conventions = computed(() => CGADB_CONVENTIONS[this.id()] ?? []);
+  protected readonly context = computed(() => {
+    const s = this.state();
+    return s ? contextFor(s.id, s.span) : [];
+  });
 
   /** Etapa do estado no mapa: destaca o lugar e a seta de onde saíram os pioneiros. */
   protected readonly stepIndex = computed(() => this.statesMap.steps.findIndex((s) => s.place === this.id()));
@@ -180,6 +172,17 @@ export class AdStatePage {
       switchMap((id) => this.content.text(`ad-estados/${id}.md`).pipe(map((t) => t as string | null | undefined), startWith(undefined))),
     ),
   );
+
+  /** Índice: os capítulos da história e, depois, o contexto, os ministérios e as fontes. */
+  protected readonly toc = computed<TocItem[]>(() => {
+    const chapters = this.body() ? outline(this.body()!).map((o) => ({ anchor: o.anchor, text: o.text, chapter: o.chapter })) : [];
+    return [
+      ...chapters,
+      { anchor: 'contexto', text: 'O Brasil naquele tempo' },
+      { anchor: 'ministerios', text: 'Os ministérios no estado' },
+      { anchor: 'fontes', text: 'Fontes' },
+    ];
+  });
 
   protected readonly neighbours = computed(() => {
     const i = AD_STATES.findIndex((s) => s.id === this.id());

@@ -127,3 +127,12 @@ test('ministérios em cada estado: todo estado tem as convenções da CGADB, e o
     for (const m of list) expect(BODIES[m.body], `${id}: convenção "${m.body}"`).toBeTruthy();
   }
 });
+
+test('o leitor entende o bloco de envio (quem enviou quem)', () => {
+  const [envio] = parseBlocks(':::envio Do Pará ao Ceará\n- Belém | Uruburetama | Maria Nazaré | 1914 | voltou à sua terra\n- Belém | Maceió | Otto Nelson | 1915\n:::');
+  expect(envio).toMatchObject({ type: 'sends', place: 'Do Pará ao Ceará' });
+  expect(envio.sends).toEqual([
+    { from: 'Belém', to: 'Uruburetama', who: 'Maria Nazaré', year: '1914', note: 'voltou à sua terra' },
+    { from: 'Belém', to: 'Maceió', who: 'Otto Nelson', year: '1915', note: undefined },
+  ]);
+});

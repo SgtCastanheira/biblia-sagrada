@@ -25,7 +25,7 @@ const hymns = new Set(json<{ hymns: { n: number }[] }>('harpa.json').hymns.map((
 const FIXED = new Set([
   '/', '/estudo', '/estudo/livros', '/ensino', '/meu-espaco', '/historia', '/avivamento', '/profecias', '/dicionario', '/atlas', '/mapas',
   '/busca', '/livros', '/curiosidades', '/devocional', '/ibuc', '/ebd', '/ebd/apoio', '/anotacoes', '/favoritos', '/sermoes', '/novidades',
-  '/fontes', '/creditos', '/ajustes', '/harpa', '/tribos', '/genealogia', '/memorial', '/assembleia-de-deus',
+  '/fontes', '/creditos', '/ajustes', '/harpa', '/tribos', '/genealogia', '/memorial', '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo',
 ]);
 
 /** Devolve o motivo se a rota não existe; texto vazio se existe. */
@@ -96,4 +96,23 @@ test('links dos dados (novidades, estados, mapas) levam a telas que existem', ()
   }
   for (const s of AD_STATES) expect(existsSync(`public/conteudo/ad-estados/${s.id}.md`), `história de ${s.id}`).toBe(true);
   expect(problems).toEqual([]);
+});
+
+test('linha do tempo nacional: toda história de estado tem fatos datados e o contexto cobre o período de cada estado', async () => {
+  const { AD_STATES } = await import('../../src/app/core/ad-states');
+  const { buildTimeline, yearOf } = await import('../../src/app/core/ad-timeline');
+  const { contextFor } = await import('../../src/app/core/ad-context');
+  const texts = Object.fromEntries(AD_STATES.map((s) => [s.id, readFileSync(`public/conteudo/ad-estados/${s.id}.md`, 'utf8')]));
+  const all = buildTimeline(texts);
+  expect(yearOf('c. 1948')).toBe(1948);
+  expect(yearOf('jun. 1911')).toBe(1911);
+  expect(yearOf('1922–1924')).toBe(1922);
+  expect(yearOf('sem data')).toBeNull();
+  for (const s of AD_STATES) {
+    expect(all.filter((i) => i.lane === 'igreja' && i.uf === s.id).length, `${s.id}: sem linha do tempo datada`).toBeGreaterThan(0);
+    expect(contextFor(s.id, s.span).length, `${s.id}: sem contexto do tempo`).toBeGreaterThanOrEqual(3);
+    expect(s.span[0] <= s.span[1], `${s.id}: período invertido`).toBe(true);
+  }
+  // Em ordem cronológica
+  for (let i = 1; i < all.length; i++) expect(all[i].year).toBeGreaterThanOrEqual(all[i - 1].year);
 });
