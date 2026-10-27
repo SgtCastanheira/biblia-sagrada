@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { TanakhShelf } from './tanakh-shelf';
 
 /**
  * Ilustrações desenhadas pelo app para os estudos (":::figura id" no texto).
@@ -6,8 +7,10 @@ import { Component, input } from '@angular/core';
  */
 @Component({
   selector: 'app-figure',
+  imports: [TanakhShelf],
   template: `
     @switch (id()) {
+      @case ('biblia-judaica') { <app-tanakh-shelf /> }
       @case ('ad-arvore') {
         <svg viewBox="0 0 340 618" role="img" aria-label="Árvore das Assembleias de Deus no Brasil, de 1911 até hoje">
           <g class="links">

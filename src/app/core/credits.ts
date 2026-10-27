@@ -27,6 +27,7 @@ export const CREDITS: { group: string; items: Credit[] }[] = [
       { name: 'Lutherbibel 1912', use: 'Bíblia em alemão, texto embutido no app, do eBible.org (deu1912).', license: 'Domínio público', url: 'https://ebible.org/deu1912/' },
       { name: 'Elberfelder 1905 (Unrevidierte)', use: 'Bíblia em alemão, texto embutido no app, do eBible.org (deuelo).', license: 'Domínio público', url: 'https://ebible.org/deuelo/' },
       { name: 'Schlachter 1951', use: 'Bíblia em alemão, texto embutido no app, do eBible.org (deu1951). Copyright © 1951 Genfer Bibelgesellschaft (Sociedade Bíblica de Genebra).', license: 'Creative Commons Atribuição 4.0 (CC BY 4.0)', url: 'https://ebible.org/deu1951/' },
+      { name: 'Bíblia hebraica (Franz Delitzsch)', use: 'Antigo e Novo Testamento em hebraico, texto consonantal (sem vogais), embutido no app, do eBible.org (heb).', license: 'Domínio público', url: 'https://ebible.org/heb/' },
       { name: 'eBible.org', use: 'Fonte dos arquivos das versões em português, espanhol e alemão de licença livre.', license: 'Serviço gratuito', url: 'https://ebible.org' },
       { name: 'bible-api.com', use: 'As demais versões, todas em domínio público, carregadas pela internet.', license: 'Serviço gratuito; textos em domínio público', url: 'https://bible-api.com' },
     ],

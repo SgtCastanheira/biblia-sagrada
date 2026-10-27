@@ -12,6 +12,7 @@ import { ContentService } from '../../core/content.service';
 import { articlesOf, COLLECTIONS, findArticle, STORY_COLLECTIONS } from '../../core/library';
 import { ListenService } from '../../core/listen.service';
 import { storyItems } from '../../shared/listen-dom';
+import { QuizPrompt } from '../../shared/quiz-prompt';
 import { trailOfArticle } from '../../core/trails';
 import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
@@ -22,7 +23,7 @@ import { SourcesBox } from '../../shared/sources-box';
 /** Artigo de estudo (história da Igreja, origem da Bíblia, estudos bíblicos). */
 @Component({
   selector: 'app-article',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, BibleMapView, SourcesBox],
+  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, BibleMapView, SourcesBox, QuizPrompt],
   template: `
     @if (article(); as a) {
       <div class="article">
@@ -90,6 +91,9 @@ import { SourcesBox } from '../../shared/sources-box';
           <p class="empty">Não foi possível abrir este texto agora.</p>
         }
 
+        @if (body()) {
+          <app-quiz-prompt [link]="['/quiz/historia', id()]" text="Cinco perguntas sobre esta história: datas, personagens e ideias." />
+        }
         <app-sources [article]="id()" />
         <nav class="neighbours">
           @if (neighbours().prev; as prev) {

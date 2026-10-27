@@ -142,3 +142,18 @@ test('versões em espanhol e alemão embutidas: o mesmo versículo, em cada lín
   await expect(page.getByText('Espanhol', { exact: true })).toBeVisible();
   await expect(page.getByText('Alemão', { exact: true })).toBeVisible();
 });
+
+test('Bíblia hebraica: o texto aparece da direita para a esquerda, e o Novo Testamento também', async ({ page }) => {
+  await page.goto('/ler/GEN/1');
+  await page.evaluate(() => localStorage.setItem('biblia.settings.version', JSON.stringify('hebraico')));
+  await page.goto('/ler/GEN/1');
+  await expect(page.locator('#v1')).toContainText('בראשית ברא אלהים');
+  await expect(page.locator('#v1')).toHaveAttribute('dir', 'rtl');
+  await expect(page.locator('#v1')).toHaveAttribute('lang', 'he');
+  await page.goto('/ler/JHN/3');
+  await expect(page.locator('#v16')).toContainText('כי');
+  // Voltando ao português, a página volta à direção normal
+  await page.evaluate(() => localStorage.setItem('biblia.settings.version', JSON.stringify('almeida')));
+  await page.goto('/ler/GEN/1');
+  await expect(page.locator('#v1')).not.toHaveAttribute('dir', 'rtl');
+});

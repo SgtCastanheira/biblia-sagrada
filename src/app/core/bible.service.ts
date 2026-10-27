@@ -11,10 +11,10 @@ interface ChapterResponse {
 type LocalBook = [number, string][][];
 
 /** Versões cujo texto vem junto com o app (domínio público ou licença livre). */
-export const LOCAL_VERSIONS = new Set(['almeida', 'blivre', 'nbv', 'bpm', 'blt', 'nva', 'alm1911', 'lsg', 'rv1909', 'vbl', 'nbv-es', 'bes', 'bll', 'luther1912', 'elo', 'schlachter']);
+export const LOCAL_VERSIONS = new Set(['almeida', 'blivre', 'nbv', 'bpm', 'blt', 'nva', 'alm1911', 'lsg', 'rv1909', 'vbl', 'nbv-es', 'bes', 'bll', 'luther1912', 'elo', 'schlachter', 'hebraico']);
 
 /** Versões que só existem embutidas (a bible-api.com não as tem): não há para onde recorrer. */
-const LOCAL_ONLY = new Set(['blivre', 'nbv', 'bpm', 'blt', 'nva', 'alm1911', 'lsg', 'rv1909', 'vbl', 'nbv-es', 'bes', 'bll', 'luther1912', 'elo', 'schlachter']);
+const LOCAL_ONLY = new Set(['blivre', 'nbv', 'bpm', 'blt', 'nva', 'alm1911', 'lsg', 'rv1909', 'vbl', 'nbv-es', 'bes', 'bll', 'luther1912', 'elo', 'schlachter', 'hebraico']);
 
 /** Índice gerado junto com os arquivos: quais livros de cada versão estão embutidos. */
 type LocalIndex = Record<string, string[]>;

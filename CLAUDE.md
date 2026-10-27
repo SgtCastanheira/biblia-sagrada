@@ -111,6 +111,10 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 
 **Bible versions in other languages**: Spanish (`rv1909`, `vbl`, `nbv-es`, `bes`, `bll`) and German (`luther1912`, `elo`, `schlachter`) are bundled like the Portuguese ones (`tools/gerar-versoes.py`, `LOCAL_ONLY`, ngsw group). Only public-domain or openly licensed texts: Reina-Valera Gómez and Valera 1602 Purificada were rejected (all rights reserved).
 
+**Hebrew Bible** (`hebraico` version, `core/tanakh.ts`, `shared/tanakh-shelf.ts`, article `biblia-judaica`): Franz Delitzsch's Hebrew Bible (public domain, consonantal, same versification as the other bundled versions) is a normal local version with `rtl: true`; the reader sets `dir="rtl"`/`lang="he"` on verses. The Westminster Leningrad Codex (`hboWLC`) was not bundled because its Hebrew versification differs from the app's chapters. `TANAKH` has the 24 scrolls mapped to the 39 books (`logica/tanakh.spec.ts` checks every book appears once); `:::figura biblia-judaica` draws the shelves and the Christian order.
+
+**Convention facts** (`madureira-e-a-separacao`, `cargos-na-assembleia-de-deus`): only state who presides a convention or what a rule is when a source was found; otherwise say "não consegui confirmar" with the check date. Rules for ministerial posts live in each convention's/ministry's statute: do not generalise one church's regimento to the whole denomination.
+
 **What's new** (`core/whats-new.ts`): when publishing user-visible features, add a new entry at the top of `RELEASES` with a new `id`. Every device sees it once (first visits included), in a bottom sheet (`WhatsNewService`, checked at startup before the daily reminders). It is also listed at `/novidades`, which has a share button.
 
 **Navigation:** the bottom menu has five tabs, and each screen belongs to exactly one of them (`tab` in `app.ts`):

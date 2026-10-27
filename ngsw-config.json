@@ -68,7 +68,8 @@
           "/bible/bll/*.json",
           "/bible/luther1912/*.json",
           "/bible/elo/*.json",
-          "/bible/schlachter/*.json"
+          "/bible/schlachter/*.json",
+          "/bible/hebraico/*.json"
         ]
       }
     },

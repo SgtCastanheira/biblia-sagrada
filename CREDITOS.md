@@ -22,6 +22,7 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Lutherbibel 1912, em alemão | Texto embutido (`public/bible/luther1912`), do eBible.org (`deu1912`) | Domínio público |
 | Elberfelder 1905 (Unrevidierte), em alemão | Texto embutido (`public/bible/elo`), do eBible.org (`deuelo`) | Domínio público |
 | Schlachter 1951 — © 1951 Genfer Bibelgesellschaft | Texto embutido (`public/bible/schlachter`), do eBible.org (`deu1951`) | CC BY 4.0 |
+| Bíblia hebraica de Franz Delitzsch (1813–1890), em hebraico | Texto consonantal embutido (`public/bible/hebraico`), do eBible.org (`heb`) | Domínio público |
 | Bíblia Livre Para Todos (BLT) — © 2022 Free Bible Ministry, Inc. | Novo Testamento embutido (`public/bible/blt`), do eBible.org (`porblt`) | CC BY-SA 4.0 |
 | Bíblia Nova Versão de Acesso Livre (NVA) — biblianva.com.br, baseada na Unlocked Literal Bible | Texto embutido (`public/bible/nva`), do módulo `PorNVA` da CrossWire | CC BY-SA 4.0 |
 | Almeida 1911 (reimpressão de 1911 de uma edição de 1900) | Texto embutido com a ortografia original (`public/bible/alm1911`), do módulo `PorAlmeida1911` da CrossWire, convertido com o pysword (MIT) | Texto em domínio público; módulo sob GPL |

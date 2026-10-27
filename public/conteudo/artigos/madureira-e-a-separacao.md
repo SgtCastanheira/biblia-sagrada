@@ -87,6 +87,17 @@ Além delas, há ministérios grandes e independentes, como a Assembleia de Deus
 
 [Veja os ministérios em cada estado](/assembleia-de-deus)
 
+## Quem preside as convenções hoje
+
+Os cargos mudam a cada eleição, e por isso esta lista traz **só o que consegui confirmar**, com a data da conferência: **27 de outubro de 2026**.
+
+- **CGADB:** o presidente é o pastor **José Wellington Costa Júnior**. Ele aparece como presidente da Convenção Geral na página de expediente das revistas da CPAD do 4º trimestre de 2026, e foi reeleito para o quadriênio 2021–2025, segundo uma moção da Assembleia Legislativa de Mato Grosso. A diretoria eleita em 2025 tem o pastor Nemias Gaspar de Araújo como segundo vice-presidente. Não consegui ver, numa fonte pública, o resultado completo da eleição de 2025.
+- **CONAMAD (Madureira):** **não consegui confirmar o nome do presidente atual.** O pastor Abner de Cássio Ferreira, que dirige a Assembleia de Deus em Madureira desde 1999, aparece como segundo vice-presidente da convenção em um documento recente.
+- **CADB:** o pastor **Samuel Câmara**, da igreja-mãe de Belém, aparece como o presidente da convenção que ele ajudou a fundar, em fontes consultadas, mas **não consegui confirmar o mandato atual**.
+
+Para saber quem preside hoje, o melhor caminho é o site oficial de cada convenção (para a CGADB, cgadb.org.br). Se você tiver a informação, mande para eu atualizar aqui, com a fonte.
+
+
 ## As Assembleias de Deus hoje
 
 :::tempo

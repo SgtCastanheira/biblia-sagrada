@@ -62,6 +62,7 @@ export const TRAILS: Trail[] = [
     icon: 'auto_stories',
     collections: ['biblia'],
     branches: [
+      { title: 'A Bíblia dos judeus', ids: ['biblia-judaica'] },
       { title: 'Como foi escrita e reunida', ids: ['formacao-do-antigo-testamento', 'septuaginta', 'formacao-do-novo-testamento', 'apocrifos'] },
       { title: 'Os textos e as línguas', ids: ['manuscritos', 'idiomas-da-biblia', 'capitulos-e-versiculos'] },
       { title: 'As traduções', ids: ['vulgata-e-traducoes', 'biblia-em-portugues'] },
@@ -135,7 +136,7 @@ export const TRAILS: Trail[] = [
           { link: '/mapas/assembleia-de-deus-estados', icon: 'map', name: 'No mapa', description: 'De onde saiu cada pioneiro.' },
         ],
       },
-      { title: 'Perseguições e convenções', ids: ['irmaos-perseguidos', 'madureira-e-a-separacao'] },
+      { title: 'Perseguições, convenções e cargos', ids: ['irmaos-perseguidos', 'madureira-e-a-separacao', 'cargos-na-assembleia-de-deus'] },
     ],
   },
   {

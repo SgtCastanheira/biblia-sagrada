@@ -28,6 +28,8 @@ VERSIONS = {
     "spaonbv": "nbv-es",     # Biblica® Open Nueva Biblia Viva (CC BY-SA 4.0)
     "spabes": "bes",         # La Biblia en Español Sencillo (domínio público)
     "spabll": "bll",         # Santa Biblia libre Latinoamericano (domínio público; os livros deuterocanônicos ficam de fora)
+    # Em hebraico
+    "heb": "hebraico",       # Bíblia hebraica de Franz Delitzsch (domínio público): texto consonantal, sem vogais
     # Em alemão
     "deu1912": "luther1912", # Lutherbibel 1912 (domínio público)
     "deuelo": "elo",         # Elberfelder 1905, “Unrevidierte” (domínio público)

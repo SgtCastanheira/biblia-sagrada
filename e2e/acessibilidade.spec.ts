@@ -1,6 +1,6 @@
 import { expect, test } from './base';
 
-const telas = ['/', '/devocional', '/ebd', '/anotacoes', '/ajustes', '/ler/JHN/3', '/mapas/exodo',
+const telas = ['/', '/quiz', '/quiz/capitulo/JHN/3', '/devocional', '/ebd', '/anotacoes', '/ajustes', '/ler/JHN/3', '/mapas/exodo',
   '/estudo', '/memorial?grupo=reis-israel', '/memorial/elias', '/artigo/cativeiros-de-israel', '/avivamento/edwards-pecadores', '/dicionario', '/dicionario/aba', '/livro/ROM',
   '/atlas', '/genealogia', '/profecias/milenio', '/artigo/profecias-de-daniel', '/dicionario/salvar'];
 

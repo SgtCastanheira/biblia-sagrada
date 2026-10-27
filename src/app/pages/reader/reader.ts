@@ -24,6 +24,7 @@ import { mapsFor } from '../../core/maps';
 import { TRIBE_CHAPTERS } from '../../core/tribes';
 import { findVersion } from '../../core/versions';
 import { BookRibbon } from '../../shared/book-ribbon';
+import { QuizPrompt } from '../../shared/quiz-prompt';
 import { Sheets } from '../../shared/sheets';
 
 interface VerseRow {
@@ -47,7 +48,7 @@ interface ChapterLink {
 
 @Component({
   selector: 'app-reader',
-  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, MatTooltipModule, BookRibbon],
+  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, MatTooltipModule, BookRibbon, QuizPrompt],
   templateUrl: './reader.html',
   styleUrl: './reader.scss',
   host: {

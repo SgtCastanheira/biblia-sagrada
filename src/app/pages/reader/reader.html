@@ -136,7 +136,7 @@
           <!-- Um versículo por linha, com o número numa coluna à esquerda -->
           <div class="lines reading-font" [style.font-size.px]="settings.fontSize()" [style.line-height]="settings.lineHeight()">
             @for (row of state().rows; track row.verse) {
-              <p class="line" [id]="'v' + row.verse" [class.target]="fragment() === 'v' + row.verse"
+              <p class="line" [attr.dir]="version()?.rtl ? 'rtl' : null" [attr.lang]="version()?.rtl ? 'he' : null" [id]="'v' + row.verse" [class.target]="fragment() === 'v' + row.verse"
                  [style.background]="highlightOf(row.verse)" [class.marked]="highlightOf(row.verse)" (click)="openVerse(row)">
                 <span class="n">{{ row.verse }}</span><span class="t">@for (part of partsOf(row); track $index) {@if (part.entry) {<button type="button" class="word" (click)="openWord($event, part.entry, row.verse)">{{ part.text }}</button>} @else {{{ part.text }}}}</span>
               </p>
@@ -144,7 +144,7 @@
           </div>
         } @else {
           <!-- Texto corrido, como num livro -->
-          <p class="text reading-font" [style.font-size.px]="settings.fontSize()" [style.line-height]="settings.lineHeight()">
+          <p class="text reading-font" [attr.dir]="version()?.rtl ? 'rtl' : null" [attr.lang]="version()?.rtl ? 'he' : null" [style.font-size.px]="settings.fontSize()" [style.line-height]="settings.lineHeight()">
             @for (row of state().rows; track row.verse) {
               <span class="verse" [id]="'v' + row.verse" [class.target]="fragment() === 'v' + row.verse"
                     [class.marked]="highlightOf(row.verse)" [style.background]="highlightOf(row.verse)"
@@ -155,6 +155,10 @@
       }
 
       <p class="source">{{ version()?.name }} · domínio público</p>
+    }
+
+    @if (!state().loading && state().rows.length) {
+      <app-quiz-prompt [link]="['/quiz/capitulo', book.id, chapterNum()]" text="Cinco perguntas sobre este capítulo e a sua história." />
     }
 
     <!-- Navegação entre capítulos -->

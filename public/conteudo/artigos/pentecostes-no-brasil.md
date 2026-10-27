@@ -4,6 +4,10 @@ O Brasil tem uma das maiores populações pentecostais do mundo. Essa história 
 
 O italiano **Luigi (Louis) Francescon**, que se tornara pentecostal em Chicago, chegou ao Brasil em 1910. Pregou entre os imigrantes italianos em Santo Antônio da Platina (PR) e no bairro do Brás, em São Paulo. Dali nasceu a **Congregação Cristã no Brasil**, a primeira igreja pentecostal do país, que por muito tempo realizou os cultos em italiano.
 
+:::nota
+**A Congregação Cristã faz parte da Assembleia de Deus?** Não. São **duas igrejas diferentes**, de origem diferente. A Congregação Cristã nasceu em 1910, entre imigrantes **italianos**, a partir de Luigi Francescon, que vinha de Chicago. A Assembleia de Deus nasceu em Belém, em 1911, com os missionários **suecos** Gunnar Vingren e Daniel Berg. As duas fazem parte do mesmo movimento pentecostal que se espalhou pelo mundo no início do século XX e, por isso, se parecem em algumas práticas, mas **não há ligação institucional**: cada uma tem a sua organização, e uma não saiu da outra.
+:::
+
 ## Gunnar Vingren e Daniel Berg
 
 :::cena Porto de Belém · 19 de novembro de 1910

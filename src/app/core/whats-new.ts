@@ -22,6 +22,19 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'biblia-hebraica-e-ebd-em-cartoes',
+    date: '27 de outubro de 2026',
+    title: 'A Bíblia em hebraico, a Bíblia judaica e a EBD em cartões',
+    items: [
+      { icon: 'quiz', title: 'Você lembra o que leu?', text: 'Um jogo de perguntas com as alternativas A, B, C e D: 5 perguntas sobre o capítulo e a sua história, 10 sobre o livro todo, ou 5 sobre uma história. Aparece no fim de cada capítulo e de cada história.', link: '/quiz', tip: 'Também em Estudo › Você lembra o que leu?' },
+      { icon: 'translate', title: 'A Bíblia em hebraico', text: 'Antigo e Novo Testamento em hebraico, da direita para a esquerda, para comparar com a Almeida. Escolha “Bíblia hebraica” na sigla da versão.', link: '/ler/GEN/1', tip: 'Toque na sigla da versão, no alto do capítulo.' },
+      { icon: 'menu_book', title: 'A Bíblia judaica', text: 'Como era a Bíblia no tempo de Jesus: rolos, três partes, 24 livros e outra ordem. Veja os livros em estantes e como eles mudam de lugar na nossa Bíblia.', link: '/artigo/biblia-judaica' },
+      { icon: 'swipe', title: 'EBD em cartões, com datas', text: 'Cada lição virou cartões que se deslizam, como os stories. A data de cada aula aparece, e o número da lição da semana pisca. Todas as turmas, do Berçário aos Adultos, e as 13 lições de Jovens (Filipenses).', link: '/ebd/apoio/jovens' },
+      { icon: 'account_balance', title: 'Os faraós da Bíblia', text: 'Quem foram, quando governaram, a quem respondiam e quem estava debaixo deles. E, no estudo dos Herodes, quem mandava em quem: o César, o governador da Síria e o prefeito da Judeia.', link: '/artigo/os-faraos-da-biblia' },
+      { icon: 'badge', title: 'Os cargos na Assembleia de Deus', text: 'Cooperador, diácono, presbítero, evangelista e pastor: o que a Bíblia pede, o que se encontra por escrito e o que só se ouve dizer. Também: a Congregação Cristã faz parte da Assembleia de Deus?', link: '/artigo/cargos-na-assembleia-de-deus' },
+    ],
+  },
+  {
     id: 'ponte-entre-os-testamentos',
     date: '27 de outubro de 2026',
     title: 'A ponte entre os Testamentos, a Septuaginta e a Bíblia em outras línguas',

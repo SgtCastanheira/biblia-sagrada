@@ -15,6 +15,7 @@ export const VERSIONS: BibleVersion[] = [
   { id: 'nbv-es', abbrev: 'NBV', badge: 'NBV·ES', name: 'Nueva Biblia Viva (Biblica® Open)', language: 'Espanhol', flag: '🌎' },
   { id: 'bes', abbrev: 'BES', name: 'Biblia en Español Sencillo', language: 'Espanhol', flag: '🌎' },
   { id: 'bll', abbrev: 'BLL', name: 'Biblia Libre Latinoamericano', language: 'Espanhol', flag: '🌎' },
+  { id: 'hebraico', abbrev: 'HEB', name: 'Bíblia hebraica (Delitzsch)', language: 'Hebraico', flag: '🇮🇱', rtl: true },
   { id: 'luther1912', abbrev: 'LUT1912', badge: 'LUT', name: 'Lutherbibel 1912', language: 'Alemão', flag: '🇩🇪' },
   { id: 'elo', abbrev: 'ELB1905', badge: 'ELB', name: 'Elberfelder 1905', language: 'Alemão', flag: '🇩🇪' },
   { id: 'schlachter', abbrev: 'SCH1951', badge: 'SCH', name: 'Schlachter 1951', language: 'Alemão', flag: '🇩🇪' },

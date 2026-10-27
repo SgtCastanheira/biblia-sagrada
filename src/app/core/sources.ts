@@ -156,6 +156,14 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ],
     works: ['kitchen', 'shaw', 'walton-at', 'ndb'],
   },
+  'biblia-judaica': {
+    ancient: [
+      'Flávio Josefo, Contra Ápion 1.37–43 (os 22 livros dos judeus)',
+      'Talmude Babilônico, Baba Batra 13b–15a (a ordem dos livros)',
+      'Grande Rolo de Isaías (1QIsaᵃ), Mar Morto; Códice de Aleppo (c. 930) e Códice de Leningrado (1008)',
+    ],
+    works: ['beckwith', 'tov', 'dillard-longman', 'bruce-canon'],
+  },
   'entre-os-testamentos': {
     ancient: [
       '1 Macabeus 1–4, 8, 9.27 e 13.41, e 2 Macabeus 4–6 e 10 (livros deuterocanônicos, fonte histórica do período)',
@@ -275,6 +283,16 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'Isael de Araujo, Frida Vingren: uma biografia da mulher de Deus, esposa de Gunnar Vingren (CPAD, 2016)',
     ],
     works: ['vingren-diario', 'araujo-dicionario'],
+  },
+  'cargos-na-assembleia-de-deus': {
+    ancientLabel: 'Documentos consultados',
+    ancient: [
+      'Regimento interno da Assembleia de Deus Filadélfia de Luziânia (GO): requisitos para o pastorado (exemplo de uma igreja local)',
+      'Sul21 (2012): a Convenção das Assembleias de Deus do Distrito Federal aprova a consagração de mulheres ao pastorado (2011)',
+      'Marina Correa, “Assembleias de Deus, suas convenções e ministérios” (ISER/Nexo, 2024)',
+      'Estatuto e regimento de cada convenção estadual e de cada ministério: são eles que valem para a igreja',
+    ],
+    works: ['araujo-dicionario', 'mariano', 'alencar', 'conde'],
   },
   'madureira-e-a-separacao': {
     ancientLabel: 'Documentos e sites consultados',

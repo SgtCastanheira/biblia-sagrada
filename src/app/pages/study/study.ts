@@ -160,6 +160,7 @@ export class StudyPage {
         { link: '/historia', queryParams: { trilha: 'contexto' }, icon: 'school', name: 'Aulas de contexto', description: 'O exército romano, a crucificação, o casamento judaico, os Herodes, as moedas e o templo.' },
         { link: '/artigo/cativeiros-de-israel', icon: 'link_off', name: 'Os cativeiros de Israel', description: 'Egito, Assíria, Babilônia e o retorno — com mapa.' },
         { link: '/curiosidades', icon: 'lightbulb', name: 'Você sabia?', description: 'Curiosidades bíblicas, com os versículos.' },
+        { link: '/quiz', icon: 'quiz', name: 'Você lembra o que leu?', description: 'Jogo de perguntas com alternativas A, B, C e D sobre um capítulo, um livro inteiro ou uma história.' },
       ],
     },
     {

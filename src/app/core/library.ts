@@ -412,6 +412,15 @@ export const ARTICLES: Article[] = [
     minutes: 8,
   },
   {
+    id: 'cargos-na-assembleia-de-deus',
+    collection: 'igreja',
+    title: 'Cooperador, diácono, presbítero, evangelista e pastor: como se chega a cada cargo',
+    subtitle: 'O que a Bíblia pede, o que se encontra por escrito e o que só se ouve dizer, convenção por convenção.',
+    period: 'hoje',
+    icon: 'badge',
+    minutes: 8,
+  },
+  {
     id: 'harpa-crista',
     collection: 'igreja',
     title: 'A história da Harpa Cristã',
@@ -485,6 +494,15 @@ export const ARTICLES: Article[] = [
     period: 'c. 1400–400 a.C.',
     icon: 'history_edu',
     minutes: 5,
+  },
+  {
+    id: 'biblia-judaica',
+    collection: 'biblia',
+    title: 'A Bíblia judaica: como era a Bíblia no tempo de Jesus',
+    subtitle: 'Rolos em hebraico, três partes, 24 livros e outra ordem: como os judeus leem a Escritura que Jesus leu em Nazaré.',
+    period: 'séc. III a.C. – séc. X d.C.',
+    icon: 'menu_book',
+    minutes: 9,
   },
   {
     id: 'septuaginta',
