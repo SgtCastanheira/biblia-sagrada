@@ -57,9 +57,26 @@ test('apoio ao professor: turmas da EBD, aula-modelo e o material do app na liç
 });
 
 test('apoio ao professor: a turma mostra as lições 1 a 13 do trimestre', async ({ page }) => {
-  await page.goto('/ebd/apoio/adultos');
+  // Jovens: as lições ainda estão em preparação
+  await page.goto('/ebd/apoio/jovens');
   await expect(page.getByRole('heading', { name: 'Lições do trimestre' })).toBeVisible();
   await expect(page.locator('ol.lessons > li')).toHaveCount(13);
   await expect(page.locator('ol.lessons > li .lesson').first()).toHaveAttribute('aria-label', 'Lição 1: em preparação');
   await expect(page.locator('ol.lessons > li .lesson').last()).toHaveAttribute('aria-label', 'Lição 13: em preparação');
+});
+
+test('apoio ao professor: Adultos tem as 13 lições de Deuteronômio, com lembretes e dinâmicas', async ({ page }) => {
+  await page.goto('/ebd/apoio/adultos');
+  await expect(page.locator('ol.lessons > li')).toHaveCount(13);
+  await expect(page.locator('ol.lessons > li .lesson').first()).not.toHaveAttribute('aria-label', /em preparação/);
+  await expect(page.locator('ol.lessons > li .lesson').last()).not.toHaveAttribute('aria-label', /em preparação/);
+
+  await page.goto('/ebd/apoio/aula/adultos-4t26-05-grande-mandamento');
+  await expect(page.getByRole('heading', { level: 1, name: 'O grande mandamento' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Lembretes para você, professor/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Para aprofundar no app/ })).toBeVisible();
+  await expect(page.getByText('Nos umbrais da casa')).toBeVisible();
+  // Um lembrete tem referência que abre o versículo
+  await page.getByRole('button', { name: 'Mc 12.28-34' }).first().click();
+  await expect(page.getByRole('dialog')).toBeVisible();
 });

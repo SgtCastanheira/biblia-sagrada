@@ -89,7 +89,7 @@ import { SettingsService } from '../core/settings.service';
     .label span { color: var(--mat-sys-primary); font-weight: 600; }
     .themes { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
     .fonts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-    .theme small { font: 500 12px/1.25 Inter, sans-serif; opacity: .85; text-align: center; }
+    .theme small { font: 500 13px/1.25 Inter, sans-serif; opacity: .85; text-align: center; }
     .hint { margin: 6px 0 0; font: 400 13px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .layouts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .layout {

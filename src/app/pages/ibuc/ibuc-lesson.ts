@@ -29,6 +29,15 @@ import { SourcesBox } from '../../shared/sources-box';
           <button class="chip" (click)="openRef(l.memoryVerse)"><mat-icon>psychology_alt</mat-icon>Para decorar: {{ l.memoryVerse }}</button>
         </div>
 
+        @if (l.reminders?.length) {
+          <aside class="reminders" aria-label="Lembretes para o professor">
+            <h2 class="section-title"><mat-icon>checklist</mat-icon> Lembretes para você, professor(a)</h2>
+            <ul>
+              @for (r of l.reminders; track r) { <li><app-rich-text [source]="r" /></li> }
+            </ul>
+          </aside>
+        }
+
         <h2 class="section-title"><mat-icon>campaign</mat-icon> Para abrir a aula</h2>
         <app-rich-text class="box" [source]="l.opening" />
 
@@ -66,6 +75,11 @@ import { SourcesBox } from '../../shared/sources-box';
 
         <h2 class="section-title"><mat-icon>menu_book</mat-icon> Versículo para decorar</h2>
         <app-passage-view [refs]="l.memoryVerse" />
+
+        @if (l.deepen) {
+          <h2 class="section-title"><mat-icon>travel_explore</mat-icon> Para aprofundar no app</h2>
+          <app-rich-text class="box" [source]="l.deepen" />
+        }
       </div>
     } @else {
       <p class="empty">Aula não encontrada. <a [routerLink]="p().path">Ver as turmas</a></p>
@@ -75,6 +89,12 @@ import { SourcesBox } from '../../shared/sources-box';
   styleUrl: '../../shared/study.scss',
   styles: `
     .section-title mat-icon { color: var(--accent-gold); }
+    .reminders { margin: 18px 0 0; padding: 4px 16px 10px; border-radius: 18px; background: var(--mat-sys-surface-container-low); border: 1px solid var(--mat-sys-outline-variant); }
+    .reminders .section-title { margin-top: 12px; }
+    .reminders ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .reminders li { position: relative; padding-left: 26px; }
+    .reminders li::before { content: ''; position: absolute; left: 4px; top: .5em; width: 12px; height: 12px; border-radius: 4px; border: 2px solid var(--accent-gold); }
+    .reminders li app-rich-text { display: block; }
     .example {
       display: flex; align-items: center; gap: 8px; margin: 0 0 14px; padding: 10px 14px; border-radius: 14px;
       background: var(--mat-sys-tertiary-container); color: var(--mat-sys-on-tertiary-container); font: 500 14px/1.4 Inter, sans-serif;

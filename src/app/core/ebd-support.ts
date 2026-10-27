@@ -1,3 +1,4 @@
+import { EBD_ADULTOS_4T26 } from './ebd-adultos-4t26';
 import type { IbucClass, IbucLesson } from './teaching';
 
 /**
@@ -47,6 +48,7 @@ export const EBD_SUPPORT_CLASSES: IbucClass[] = [
 
 /** Aulas de apoio (o conteúdo de cada tema da revista será acrescentado aqui). */
 export const EBD_SUPPORT_LESSONS: IbucLesson[] = [
+  ...EBD_ADULTOS_4T26,
   {
     id: 'modelo-neemias-reconstroi-os-muros',
     classes: ['adolescentes', 'jovens', 'adultos'],

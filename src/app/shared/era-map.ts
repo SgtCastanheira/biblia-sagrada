@@ -57,7 +57,7 @@ import { Sheets } from './sheets';
     .stages { display: flex; gap: 8px; margin: 0 -14px 10px; padding: 2px 14px 6px; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; }
     .stages::-webkit-scrollbar { display: none; }
     .stages button { flex: none; scroll-snap-align: start; display: flex; flex-direction: column; align-items: flex-start; gap: 1px; min-height: 48px; padding: 6px 12px; border-radius: 14px; cursor: pointer; text-align: left; font: 600 13px/1.25 Inter, sans-serif; color: var(--mat-sys-on-surface); background: var(--mat-sys-surface); border: 1px solid var(--mat-sys-outline-variant); max-width: 190px; }
-    .stages small { font: 500 12px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .stages small { font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .stages button.on { background: var(--mat-sys-primary-container); border-color: var(--mat-sys-primary); color: var(--mat-sys-on-primary-container); }
     .stages button.on small { color: inherit; }
     .frame { border-radius: 14px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--map-sea); border: 1px solid var(--mat-sys-outline-variant); }
@@ -75,7 +75,7 @@ import { Sheets } from './sheets';
     .step { display: inline-flex; align-items: center; gap: 2px; min-height: 44px; padding: 0 12px; border-radius: 12px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface); color: var(--mat-sys-primary); cursor: pointer; font: 600 14px Inter, sans-serif; }
     .step:disabled { opacity: .4; cursor: default; }
     .atlas { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; margin-top: 4px; font: 600 14px Inter, sans-serif; color: var(--mat-sys-primary); text-decoration: none; }
-    .credit { margin: 4px 0 0; font: 400 12.5px/1.4 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .credit { margin: 4px 0 0; font: 400 13px/1.4 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     @media (min-width: 840px) { .events li { grid-template-columns: 110px 1fr; } }
   `,
 })

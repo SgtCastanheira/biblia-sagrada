@@ -9,6 +9,7 @@ import { CURIOSITIES } from '../../src/app/core/curiosities';
 import { ARTICLES, CLASSIC_SERMONS, findArticle } from '../../src/app/core/library';
 import { BIBLE_MAPS, findMap } from '../../src/app/core/maps';
 import { articlesWithoutTrail, TRAILS, trailOfArticle } from '../../src/app/core/trails';
+import { parseReferences } from '../../src/app/core/reference-parser';
 import { TRIBES } from '../../src/app/core/tribes';
 import { RELEASES } from '../../src/app/core/whats-new';
 
@@ -131,4 +132,32 @@ test('histórias: todo artigo está em exatamente uma trilha e os atalhos das tr
     const bad = problemWith(l.link);
     expect(bad, `trilha ${t.id}: ${l.link}`).toBe('');
   }
+});
+
+test('EBD (Adultos, 4º trimestre): 13 lições, cada uma com lembretes, atividades e referências que existem', () => {
+  const lessons = EBD_SUPPORT_LESSONS.filter((l) => l.quarter === '2026-4' && l.classes.includes('adultos'));
+  expect(lessons.map((l) => l.number).sort((a, b) => a! - b!)).toEqual(Array.from({ length: 13 }, (_, i) => i + 1));
+  const problems: string[] = [];
+  const refs = (text: string) => [...text.matchAll(/\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g)].map((m) => m[1]);
+  const links = (text: string) => [...text.matchAll(/\]\((\/[^)\s]+)\)/g)].map((m) => m[1]);
+  for (const l of lessons) {
+    const where = `lição ${l.number}`;
+    if (!l.reminders || l.reminders.length < 3) problems.push(`${where}: poucos lembretes`);
+    if (l.curiosities.length < 3) problems.push(`${where}: poucas curiosidades`);
+    if (l.activities.length < 2) problems.push(`${where}: poucas atividades`);
+    if (l.questions.length < 5) problems.push(`${where}: poucas perguntas`);
+    if (parseReferences(l.memoryVerse).errors.length) problems.push(`${where}: versículo para decorar inválido (${l.memoryVerse})`);
+    for (const r of l.refs.split(';')) if (parseReferences(r.trim()).errors.length) problems.push(`${where}: refs inválidas (${r})`);
+    const text = [...(l.reminders ?? []), l.opening, ...l.curiosities.map((c) => c.text), l.context, ...l.activities.flatMap((a) => [a.material, ...a.steps]), l.application, l.deepen ?? ''].join('\n');
+    for (const r of refs(text)) {
+      const parsed = parseReferences(r);
+      if (parsed.errors.length || !parsed.refs.length) problems.push(`${where}: referência inválida [[${r}]]`);
+    }
+    for (const q of l.questions) if (q.ref && parseReferences(q.ref).errors.length) problems.push(`${where}: pergunta com referência inválida (${q.ref})`);
+    for (const link of links(text)) {
+      const why = problemWith(link);
+      if (why) problems.push(`${where}: ${link} → ${why}`);
+    }
+  }
+  expect(problems).toEqual([]);
 });

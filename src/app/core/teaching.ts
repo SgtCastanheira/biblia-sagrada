@@ -41,6 +41,8 @@ export interface IbucLesson {
   /** Trimestre da revista ("2026-4" = 4º trimestre de 2026) e número da lição nele. */
   quarter?: string;
   number?: number;
+  /** Lembretes ao professor: o que preparar antes e o que não esquecer durante a aula (uma linha cada). */
+  reminders?: string[];
   /** Como abrir a aula e prender a atenção nos primeiros minutos. */
   opening: string;
   curiosities: { title: string; text: string }[];
@@ -49,6 +51,8 @@ export interface IbucLesson {
   activities: IbucActivity[];
   questions: { q: string; ref?: string }[];
   application: string;
+  /** Para aprofundar: estudos do próprio app ligados à lição (texto com [links](/rota) e [[referências]]). */
+  deepen?: string;
 }
 
 export const ACTIVITY_ICONS: Record<ActivityKind, string> = {
