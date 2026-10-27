@@ -36,6 +36,8 @@ export interface MapStep {
   from?: string;
   /** Página com a história completa desta etapa (ex.: "/assembleia-de-deus/ce"). */
   link?: string;
+  /** Bandeira do estado (imagem relativa), nos mapas da Igreja por estado. */
+  flag?: string;
 }
 
 export interface BibleMap {

@@ -10,6 +10,7 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Bíblia Livre (BLIVRE) — © 2018 Diego Santos, Mario Sérgio e Marco Teles | Texto embutido (`public/bible/blivre`), do eBible.org (`porbr2018`) | CC BY 4.0 Brasil |
 | Biblica® Open Nova Bíblia Viva™ — © 2007, 2010 by Biblica, Inc. | Texto embutido sem alterações (`public/bible/nbv`), do eBible.org (`poronbv`). “Biblica” é uma marca registrada na Oficina de Patentes e Marcas dos Estados Unidos por Biblica, Inc. Usado com permissão. Original gratuito em www.biblica.com e open.bible | CC BY-SA 4.0 |
 | Bíblia Portuguesa Mundial (BPM) | Texto embutido (`public/bible/bpm`), do eBible.org (`porbrbsl`), sem os deuterocanônicos | Domínio público |
+| Bandeiras dos 27 estados | `public/conteudo/bandeiras/`, do Wikimedia Commons (arquivos marcados como domínio público; reduzidas a WebP) | Domínio público |
 | Foto de Gunnar Vingren (1908) | `public/conteudo/imagens/gunnar-vingren.jpg`, do Wikimedia Commons | Domínio público |
 | Foto de Paulo Leivas Macalão | `public/conteudo/imagens/paulo-leivas-macalao.jpg`, do Wikimedia Commons | Domínio público |
 | Foto de Frida Vingren — acervo do Centro de Estudos Pentecostais da CPAD | `public/conteudo/imagens/frida-vingren.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |

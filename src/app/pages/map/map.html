@@ -58,6 +58,7 @@
       <li [class.active]="activeStep() === i" (click)="toggleStep(i)">
         <span class="num">{{ i + 1 }}</span>
         <span class="text">
+          @if (step.flag) { <img class="flag" [src]="step.flag" alt="" width="34" height="24" loading="lazy" /> }
           @if (distances().steps[i]; as km) { <span class="km">{{ km }}</span> }
           {{ step.text }}
           @if (step.link) {

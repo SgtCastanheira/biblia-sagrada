@@ -94,7 +94,7 @@ test('o leitor entende a ficha e o cartão de sermão', () => {
 });
 
 test('Assembleia de Deus em cada estado: história, etapa no mapa com link, origem e referências válidas', async () => {
-  const { AD_STATES } = await import('../../src/app/core/ad-states');
+  const { AD_STATES, stateFlag } = await import('../../src/app/core/ad-states');
   const { findMap } = await import('../../src/app/core/maps');
   const { parseReferences } = await import('../../src/app/core/reference-parser');
   const map = findMap('assembleia-de-deus-estados')!;
@@ -103,6 +103,7 @@ test('Assembleia de Deus em cada estado: história, etapa no mapa com link, orig
   for (const s of AD_STATES) {
     const file = `public/conteudo/ad-estados/${s.id}.md`;
     if (!existsSync(file)) { problems.push(`${s.id}: história não existe`); continue; }
+    if (!existsSync(`public/${stateFlag(s.id)}`)) problems.push(`${s.id}: sem bandeira`);
     const step = map.steps.find((x) => x.place === s.id);
     if (!step) problems.push(`${s.id}: sem etapa no mapa`);
     else {

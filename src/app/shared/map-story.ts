@@ -46,6 +46,7 @@ const NARRATION_KEY = 'biblia.maps.narration';
       <article class="card" (touchstart)="touchStart($event)" (touchend)="touchEnd($event)">
         <div class="card-head">
           <span class="num">{{ step() + 1 }}</span>
+          @if (s.flag) { <img class="flag" [src]="s.flag" alt="" width="34" height="24" /> }
           <span class="place">{{ placeName() }}</span>
           <span class="count">{{ step() + 1 }} de {{ m.steps.length }}</span>
         </div>
@@ -121,6 +122,7 @@ const NARRATION_KEY = 'biblia.maps.narration';
       background: var(--accent-gold); color: var(--map-badge-text); font: 700 14px Inter, sans-serif;
     }
     .place { flex: 1; font: 600 21px var(--heading-font); }
+    .flag { width: 34px; height: auto; border-radius: 3px; box-shadow: 0 0 0 1px var(--mat-sys-outline-variant); }
     .count { font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .text { margin: 10px 0 0; font: 400 16px/1.55 Inter, sans-serif; }
     .story-link { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; margin-top: 4px; font: 600 15px Inter, sans-serif; color: var(--mat-sys-primary); text-decoration: none; }

@@ -52,6 +52,7 @@ export const CREDITS: { group: string; items: Credit[] }[] = [
   {
     group: 'Fotos',
     items: [
+      { name: 'Bandeiras dos estados brasileiros', use: 'Bandeira de cada estado, nas páginas e nos mapas da Assembleia de Deus por estado (imagens reduzidas).', license: 'Domínio público (símbolos oficiais; arquivos do Wikimedia Commons marcados como domínio público)', url: 'https://commons.wikimedia.org/wiki/Category:Flags_of_the_states_of_Brazil' },
       { name: 'Gunnar Vingren (1908)', use: 'Foto nos estudos da história da Igreja.', license: 'Domínio público (autor desconhecido)', url: 'https://commons.wikimedia.org/wiki/File:Gunnar_Vingren.jpg' },
       { name: 'Paulo Leivas Macalão', use: 'Foto no estudo sobre Madureira.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Paulo_Leivas_Macal%C3%A3o.jpg' },
       { name: 'Frida Vingren', use: 'Foto no estudo sobre Frida Vingren. Acervo do Centro de Estudos Pentecostais da CPAD.', license: 'Creative Commons Atribuição-CompartilhaIgual 3.0 (CC BY-SA 3.0)', url: 'https://commons.wikimedia.org/wiki/File:Frida_Vingren.jpg' },

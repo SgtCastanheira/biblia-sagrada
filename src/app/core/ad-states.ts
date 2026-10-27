@@ -147,4 +147,7 @@ export const AD_STATES: AdState[] = [
   { id: 'df', state: 'Distrito Federal', region: 'Centro-Oeste', city: 'Taguatinga', year: '1957–1959', origin: 'Irmãos de vários estados, trabalhadores da construção de Brasília', summary: 'Candangos crentes montam o primeiro salão enquanto a capital é construída.', span: [1957, 1960], sources: ['Assembleia de Deus de Brasília (ADEB): história'] },
 ];
 
+/** Bandeira do estado (public/conteudo/bandeiras/<sigla>.webp, Wikimedia Commons, domínio público). */
+export const stateFlag = (id: string) => `conteudo/bandeiras/${id}.webp`;
+
 export const findAdState = (id: string) => AD_STATES.find((s) => s.id === id);

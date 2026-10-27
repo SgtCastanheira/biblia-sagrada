@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import { AD_STATES, REGIONS } from '../../core/ad-states';
+import { AD_STATES, REGIONS, stateFlag } from '../../core/ad-states';
 import { findMap } from '../../core/maps';
 import { BackButton } from '../../shared/back-button';
 import { BibleMapView } from '../../shared/bible-map';
@@ -35,7 +35,7 @@ import { BibleMapView } from '../../shared/bible-map';
       <div class="list">
         @for (s of r.states; track s.id) {
           <a class="card row" matRipple [routerLink]="['/assembleia-de-deus', s.id]">
-            <span class="badge uf">{{ s.id.toUpperCase() }}</span>
+            <span class="badge uf"><img class="flag" [src]="flag(s.id)" [alt]="'Bandeira de ' + s.state" width="44" height="32" loading="lazy" /></span>
             <span class="texts">
               <span class="meta">{{ s.year }} · {{ s.city }}</span>
               <span class="name">{{ s.state }}</span>
@@ -59,7 +59,8 @@ import { BibleMapView } from '../../shared/bible-map';
     .map app-bible-map { display: block; aspect-ratio: 16 / 9; overflow: hidden; }
     .map-label { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--mat-sys-outline-variant); font: 600 14px Inter, sans-serif; color: var(--mat-sys-primary); }
     .map-label .go { margin-left: auto; }
-    .uf { font: 700 15px Inter, sans-serif; letter-spacing: .5px; }
+    .uf { width: auto !important; min-width: 52px; background: none !important; }
+    .flag { display: block; width: 52px; height: auto; border-radius: 4px; box-shadow: 0 0 0 1px var(--mat-sys-outline-variant); }
     .study { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding: 14px 16px; font: 600 16px/1.35 var(--heading-font); }
     .study > mat-icon:first-child { color: var(--accent-gold); }
     .study span { flex: 1; display: flex; flex-direction: column; gap: 2px; }
@@ -68,6 +69,7 @@ import { BibleMapView } from '../../shared/bible-map';
   `,
 })
 export class AdStatesPage {
+  protected readonly flag = stateFlag;
   protected readonly map = findMap('assembleia-de-deus-estados')!;
   protected readonly regions = REGIONS.map((name) => ({ name, states: AD_STATES.filter((s) => s.region === name) }));
 }

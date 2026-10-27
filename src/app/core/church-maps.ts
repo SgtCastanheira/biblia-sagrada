@@ -1,10 +1,10 @@
-import { findAdState } from './ad-states';
+import { findAdState, stateFlag } from './ad-states';
 import type { BibleMap, MapStep } from './maps';
 
 /** Etapa do mapa dos estados: ano, origem e página vêm de AD_STATES (um só lugar); aqui só o texto da etapa. */
 function stateStep(id: string, text: string): MapStep {
   const s = findAdState(id)!;
-  return { place: id, ...(s.from ? { from: s.from } : {}), ref: s.year, link: '/assembleia-de-deus/' + id, text };
+  return { place: id, ...(s.from ? { from: s.from } : {}), ref: s.year, link: '/assembleia-de-deus/' + id, flag: stateFlag(id), text };
 }
 
 /**

@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { map, startWith, switchMap } from 'rxjs';
 import { contextFor } from '../../core/ad-context';
-import { AD_STATES, CGADB_CONVENTIONS, findAdState, STATE_MINISTRIES } from '../../core/ad-states';
+import { AD_STATES, CGADB_CONVENTIONS, findAdState, stateFlag, STATE_MINISTRIES } from '../../core/ad-states';
 import { distanceKm, formatKm } from '../../core/atlas';
 import { ContentService } from '../../core/content.service';
 import { ListenService } from '../../core/listen.service';
@@ -37,6 +37,7 @@ import { StateMinistries } from '../../shared/state-ministries';
           </button>
         </div>
         <header class="hero">
+          <img class="hero-flag" [src]="flag(s.id)" [alt]="'Bandeira de ' + s.state" width="72" height="50" />
           <span class="hero-over">Assembleia de Deus · {{ s.region }}</span>
           <span class="era">{{ s.year }}</span>
           <h1 class="title">{{ s.state }}</h1>
@@ -114,6 +115,7 @@ import { StateMinistries } from '../../shared/state-ministries';
       background: radial-gradient(110% 80% at 100% 0%, rgba(226, 194, 140, .28), transparent 60%), linear-gradient(165deg, #45321f, #21180f 75%);
     }
     @media (min-width: 840px) { .hero { margin: 4px 0 22px; padding: 34px 32px 26px; border-radius: 28px; } }
+    .hero-flag { display: block; width: 72px; height: auto; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .35), 0 2px 8px rgba(0, 0, 0, .4); }
     .hero-over { font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 2px; color: #e2c28c; }
     .era { margin: 6px 0 8px; font: 600 34px/1 var(--heading-font); color: #e2c28c; }
     .hero .title { margin: 0 0 8px; font-size: 34px; color: #fff8ec; }
@@ -146,6 +148,7 @@ import { StateMinistries } from '../../shared/state-ministries';
   `,
 })
 export class AdStatePage {
+  protected readonly flag = stateFlag;
   readonly id = input.required<string>();
   private readonly content = inject(ContentService);
   protected readonly listen = inject(ListenService);

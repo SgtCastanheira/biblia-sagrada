@@ -324,3 +324,6 @@ h2 {
   color: var(--mat-sys-on-surface-variant);
   font: 600 13px Inter, sans-serif;
 }
+
+/* Bandeira do estado, nas etapas dos mapas da Igreja por estado */
+.steps .flag { display: inline-block; vertical-align: middle; width: 34px; height: auto; margin-right: 8px; border-radius: 3px; box-shadow: 0 0 0 1px var(--mat-sys-outline-variant); }
