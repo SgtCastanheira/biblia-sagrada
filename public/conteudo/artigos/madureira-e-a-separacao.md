@@ -95,7 +95,6 @@ Os cargos mudam a cada eleição, e por isso esta lista traz **só o que consegu
 - **CONAMAD (Madureira):** **não consegui confirmar o nome do presidente atual.** O pastor Abner de Cássio Ferreira, que dirige a Assembleia de Deus em Madureira desde 1999, aparece como segundo vice-presidente da convenção em um documento recente.
 - **CADB:** o pastor **Samuel Câmara**, da igreja-mãe de Belém, aparece como o presidente da convenção que ele ajudou a fundar, em fontes consultadas, mas **não consegui confirmar o mandato atual**.
 
-Para saber quem preside hoje, o melhor caminho é o site oficial de cada convenção (para a CGADB, cgadb.org.br). Se você tiver a informação, mande para eu atualizar aqui, com a fonte.
 
 
 ## As Assembleias de Deus hoje

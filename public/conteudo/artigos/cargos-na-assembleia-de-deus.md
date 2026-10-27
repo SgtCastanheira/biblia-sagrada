@@ -50,7 +50,7 @@ Você ouviu que, em algumas convenções, o pastor precisa ser casado, não pode
 - **Nome limpo no SPC e no Serasa.** **Não encontrei nenhum documento público** que exija isso. Pode ser uma prática local, entendida como parte do bom testemunho e de não amar o dinheiro (veja [[Rm 13.8]]: “a ninguém devais coisa alguma”). Mas, como regra escrita, **não consegui confirmar**.
 
 :::nota
-**Como saber a regra da sua convenção.** Peça ao seu pastor ou ao secretário da igreja os documentos que valem para ela: (1) o **estatuto** e o **regimento interno** da convenção estadual a que a igreja é filiada; (2) o regimento do **ministério** da igreja-sede; e (3) as **resoluções** da assembleia geral da convenção. Pergunte também ao pastor-presidente, porque é ele, com o ministério, quem aplica as regras. Se você puder, copie os trechos e me envie, e eu os acrescento aqui, com a fonte.
+**Como saber a regra da sua convenção.** Peça ao seu pastor ou ao secretário da igreja os documentos que valem para ela: (1) o **estatuto** e o **regimento interno** da convenção estadual a que a igreja é filiada; (2) o regimento do **ministério** da igreja-sede; e (3) as **resoluções** da assembleia geral da convenção. Pergunte também ao pastor-presidente, porque é ele, com o ministério, quem aplica as regras.
 :::
 
 ## Para refletir

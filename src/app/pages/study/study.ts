@@ -147,8 +147,6 @@ export class StudyPage {
       icon: 'map',
       shelves: [
         { link: '/mapas', icon: 'map', name: 'Mapas das jornadas', description: 'Abraão, Moisés, o Êxodo, os cativeiros, Jesus, os discípulos e Paulo.' },
-        { link: '/atlas', icon: 'public', name: 'Atlas histórico', description: 'Reinos e impérios época por época, com os povos e os países de hoje.' },
-        { link: '/mapas/tribos-de-israel', icon: 'grid_view', name: 'A divisão da terra', description: 'Os territórios das tribos e a distância de cada um até o templo.' },
       ],
     },
     {
@@ -157,50 +155,25 @@ export class StudyPage {
       icon: 'history_edu',
       shelves: [
         { link: '/estudo/livros', icon: 'menu_book', name: 'Contexto dos livros', description: 'Autor, data e cenário de cada livro, de Gênesis a Apocalipse, com tudo o que há para estudar nele.' },
-        { link: '/historia', queryParams: { trilha: 'contexto' }, icon: 'school', name: 'Aulas de contexto', description: 'O exército romano, a crucificação, o casamento judaico, os Herodes, as moedas e o templo.' },
-        { link: '/artigo/cativeiros-de-israel', icon: 'link_off', name: 'Os cativeiros de Israel', description: 'Egito, Assíria, Babilônia e o retorno — com mapa.' },
         { link: '/curiosidades', icon: 'lightbulb', name: 'Você sabia?', description: 'Curiosidades bíblicas, com os versículos.' },
         { link: '/quiz', icon: 'quiz', name: 'Você lembra o que leu?', description: 'Jogo de perguntas com alternativas A, B, C e D sobre um capítulo, um livro inteiro ou uma história.' },
       ],
     },
     {
       id: 'profecias',
-      title: 'Profecias',
+      title: 'Profecias e palavras',
       icon: 'visibility',
       shelves: [
         { link: '/profecias', icon: 'star', name: 'Promessas e profecias', description: 'Do anúncio ao cumprimento — e o que ainda é esperado.' },
-        { link: '/artigo/profecias-de-daniel', icon: 'visibility', name: 'As profecias de Daniel', description: 'A estátua, os quatro animais e as setenta semanas.' },
-        { link: '/artigo/apocalipse', icon: 'wb_twilight', name: 'O Apocalipse', description: 'As sete igrejas, os símbolos e as escolas de interpretação.' },
-        { link: '/artigo/como-interpretar-profecias', icon: 'explore', name: 'Como interpretar as profecias', description: 'Princípios de leitura e as visões do milênio.' },
-      ],
-    },
-    {
-      id: 'idiomas',
-      title: 'Idiomas originais',
-      icon: 'translate',
-      shelves: [
         { link: '/dicionario', icon: 'translate', name: 'Dicionário bíblico', description: 'Hebraico, aramaico, grego e latim, com os sentidos e as conjugações.' },
-        { link: '/artigo/idiomas-da-biblia', icon: 'abc', name: 'Como ler as palavras originais', description: 'Alfabetos, raízes, tempos verbais e os números de Strong.' },
-      ],
-    },
-    {
-      id: 'ministerios',
-      title: 'Igreja e ministérios',
-      icon: 'diversity_3',
-      shelves: [
-        { link: '/artigo/ministerios-na-biblia', icon: 'diversity_3', name: 'Os ministérios na Bíblia', description: 'Apóstolos, profetas, evangelistas, pastores, mestres, presbíteros e diáconos — o que diz o texto e como as igrejas se organizam hoje.' },
       ],
     },
     {
       id: 'historia',
-      title: 'História da Igreja e da Bíblia',
+      title: 'Histórias e sermões',
       icon: 'account_balance',
       shelves: [
-        { link: '/historia', queryParams: { trilha: 'igreja' }, icon: 'history_edu', name: 'História da Igreja', description: 'De Pentecostes às reformas, aos avivamentos e ao pentecostalismo no Brasil.' },
-        { link: '/historia', queryParams: { trilha: 'sobre-a-biblia' }, icon: 'auto_stories', name: 'De onde veio a Bíblia', description: 'O cânon, os manuscritos, as traduções e a Bíblia em português.' },
-        { link: '/assembleia-de-deus', icon: 'pin_drop', name: 'A Assembleia de Deus em cada estado', description: 'De onde saíram os pioneiros e como a igreja foi construída em cada estado, com mapa.' },
-        { link: '/harpa', icon: 'music_note', name: 'Harpa Cristã', description: 'A história do hinário e de cada hino: quem escreveu, traduziu, quando e por quê.' },
-        { link: '/historia', queryParams: { trilha: 'pentecostalismo' }, icon: 'local_fire_department', name: 'Avivamentos', description: 'De Pentecostes às Hébridas: como cada avivamento começou, terminou e mudou a sociedade.' },
+        { link: '/historia', icon: 'auto_stories', name: 'Histórias por assunto', description: 'Histórias da Bíblia, de onde veio a Bíblia, contexto, profecias, história da Igreja, avivamentos, o evangelho no Brasil e a Harpa Cristã.' },
         { link: '/avivamento', icon: 'campaign', name: 'Sermões que marcaram a história', description: 'Wesley, Edwards, Spurgeon, Moody — e pregadores de hoje.' },
       ],
     },

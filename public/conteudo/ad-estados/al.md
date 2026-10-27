@@ -61,15 +61,15 @@ Em abril de 1932, o casal **Jonas Batinga dos Santos e Francelina Batinga dos Sa
 
 ### São Miguel dos Campos (1933–1937)
 
-Em **1933**, o evangelista **José Antônio de Almeida** evangelizou o marceneiro **Augusto Sertão**. “A perseguição foi grande”, e o evangelista voltou a Maceió para sobreviver. Augusto ficou quatro anos sozinho; em 1937 a esposa, **Olivia**, lendo a Bíblia, “descobriu as verdades do Evangelho” e tornou-se evangelista, enfrentando “afrontas e até pedradas”. Em 2010, a Assembleia de Deus era a maior igreja evangélica da cidade, com 5.124 fiéis.
+Em **1933**, o evangelista **José Antônio de Almeida** evangelizou o marceneiro **Augusto Sertão**. Augusto ficou quatro anos sozinho; em 1937 a esposa, **Olivia**, lendo a Bíblia, “descobriu as verdades do Evangelho” e tornou-se evangelista, apesar da oposição ([os casos](/artigo/irmaos-perseguidos)). Em 2010, a Assembleia de Deus era a maior igreja evangélica da cidade, com 5.124 fiéis.
 
 ### Penedo (1935–1948)
 
-Em **dezembro de 1935**, o **sargento José Malta**, da Polícia Militar, evangélico, veio de Maceió para servir na delegacia e foi o primeiro evangelista leigo da cidade. Em janeiro de 1936 converteram-se o comerciante **Antonio Alves** e a esposa **Zefinha**. A oposição do clero chegou ao rádio da diocese, e o pastor **Esperidião de Almeida** foi atingido por tomates podres no rosto, pregando na feira livre. O primeiro templo, em terreno doado por Antonio Alves, é de **1948**.
+Em **dezembro de 1935**, o **sargento José Malta**, da Polícia Militar, evangélico, veio de Maceió para servir na delegacia e foi o primeiro evangelista leigo da cidade. Em janeiro de 1936 converteram-se o comerciante **Antonio Alves** e a esposa **Zefinha**. A oposição que a igreja enfrentou ali está nos [casos de perseguição](/artigo/irmaos-perseguidos). O primeiro templo, em terreno doado por Antonio Alves, é de **1948**.
 
 ### Mata Grande, Delmiro Gouveia e o sertão (anos 1920 e 1930)
 
-Os missionários americanos **Virgil Frank Smith** e **Orlando Boyer** evangelizaram o sertão por volta de 1929–1930. Smith contou que a perseguição “nos arrancava de dentro das casas” e que lhes atiravam frutas podres e, às vezes, os ameaçavam com facas. Em Delmiro Gouveia, um homem quebrou o violino de um missionário na cabeça dele, durante um culto ao ar livre. Smith também foi parado, a cerca de três quilômetros de Mata Grande, por cangaceiros do bando de Lampião, segundo o seu próprio relato. Pediram 500 contos de réis; ele escreveu um bilhete para que alguém da cidade mandasse o dinheiro, e ele e mais 25 pessoas foram libertados.
+Os missionários americanos **Virgil Frank Smith** e **Orlando Boyer** evangelizaram o sertão por volta de 1929–1930. Os maus-tratos que sofreram estão nos [casos de perseguição](/artigo/irmaos-perseguidos). Smith também foi parado, a cerca de três quilômetros de Mata Grande, por cangaceiros do bando de Lampião, segundo o seu próprio relato. Pediram 500 contos de réis; ele escreveu um bilhete para que alguém da cidade mandasse o dinheiro, e ele e mais 25 pessoas foram libertados.
 
 Em **dezembro de 1937**, semanas depois do golpe do Estado Novo, Mata Grande recebeu a **primeira convenção da Assembleia de Deus em Alagoas**, com os missionários Orlando Boyer, Dalas Johnson e Horácio Ward e o pastor Rêgo Barros.
 

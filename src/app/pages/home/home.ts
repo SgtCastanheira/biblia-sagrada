@@ -178,6 +178,9 @@ export class HomePage {
   protected readonly ribbon = computed(() => {
     const m = this.settings.bookmark();
     const book = m && findBook(m.bookId);
+    // Se é o mesmo capítulo do “Continuar lendo”, não repete o atalho
+    const last = this.settings.lastRead();
+    if (m && last && last.bookId === m.bookId && last.chapter === m.chapter) return null;
     return book ? { bookId: book.id, chapter: m.chapter, name: `${book.name} ${m.chapter}` } : null;
   });
 

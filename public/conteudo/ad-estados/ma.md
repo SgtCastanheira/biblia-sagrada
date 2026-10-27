@@ -33,7 +33,7 @@ O segundo presidente, **Manoel José da Penha** (outubro de 1924 a agosto de 192
 
 Foi um tempo de muita perseguição: o local de culto foi “por muitas vezes apedrejado”. Os militares crentes **Paulino Flávio Rodrigues e Leocádio Duarte Melo** foram às autoridades, “e o trabalho prosseguiu”.
 
-Depois de um período interino do missionário sueco **Nels Julius Nelson**, enviado por Samuel Nyström, chegou a São Luís, em outubro de 1927, **Manoel Cézar da Silva**. A igreja “se manteve firme ao mais duro período de perseguição, inclusive com o apedrejamento da congregação”, e ele transferiu a sede do centro para o bairro João Paulo, “como um ato de prudência”. Em seu tempo foram organizados ou oficializados trabalhos em **Pinheiro, Pedreiras, Vertente (Bom Lugar) e São Lourenço (Lago dos Rodrigues)**. Em Pedreiras ele batizou **Francisco Assis Gomes**, que depois foi pioneiro em Bacabal, Arari, Pedreiras e Vitória do Mearim. Manoel Cézar foi depois transferido para Óbidos, no Pará.
+Depois de um período interino do missionário sueco **Nels Julius Nelson**, enviado por Samuel Nyström, chegou a São Luís, em outubro de 1927, **Manoel Cézar da Silva**. A igreja “se manteve firme ao mais duro período de perseguição”, e ele transferiu a sede do centro para o bairro João Paulo, “como um ato de prudência”. Em seu tempo foram organizados ou oficializados trabalhos em **Pinheiro, Pedreiras, Vertente (Bom Lugar) e São Lourenço (Lago dos Rodrigues)**. Em Pedreiras ele batizou **Francisco Assis Gomes**, que depois foi pioneiro em Bacabal, Arari, Pedreiras e Vitória do Mearim. Manoel Cézar foi depois transferido para Óbidos, no Pará.
 
 :::leia irmaos-perseguidos
 Os casos de perseguição no Maranhão, em Alagoas e em outros estados, o que a lei dizia e o que não se sabe.

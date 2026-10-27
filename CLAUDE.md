@@ -124,7 +124,7 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 - Ensino (`/ensino`: EBD, `/ebd/apoio`, IBUC, sermons)
 - Meu espaço (`/meu-espaco`: devotional, notes, favorites, settings)
 
-Add a new screen to the right tab regex and to the right hub; don't list the same item in two hubs.
+Add a new screen to the right tab regex and to the right hub; don't list the same item in two hubs. Same for data: each fact lives in one place. `/estudo` lists tools and reference (Memorial, tribes, genealogy, maps, atlas, books, curiosities, quiz, prophecies, dictionary); stories (articles, Igreja, Harpa, AD states) live only in the `TRAILS` of `/historia`, which `/estudo` links to once. The steps of the `assembleia-de-deus-estados` map take year, origin and link from `AD_STATES` (`stateStep` in `church-maps.ts`); only the step text is written there. Persecution cases are told in `irmaos-perseguidos`; state pages link to it instead of retelling.
 
 **Navigation and UI:**
 - Detail pages use `<app-back>` / `NavigationService.back(fallback)`, never hard-coded links back.

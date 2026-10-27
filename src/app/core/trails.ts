@@ -42,16 +42,6 @@ export const TRAILS: Trail[] = [
     branches: [
       { title: 'A ponte entre os Testamentos', ids: ['entre-os-testamentos'] },
       { title: 'Estudos', ids: ['ministerios-na-biblia', 'cativeiros-de-israel', 'os-faraos-da-biblia'] },
-      {
-        title: 'Para explorar',
-        ids: [],
-        links: [
-          { link: '/memorial', icon: 'groups', name: 'Personagens e reis', description: 'Quem foi quem, em ordem cronológica.' },
-          { link: '/tribos', icon: 'diversity_3', name: 'As doze tribos', description: 'Onde cada tribo morou e o que a Bíblia diz dela.' },
-          { link: '/genealogia', icon: 'account_tree', name: 'Árvore genealógica', description: 'De Adão a Jesus.' },
-          { link: '/curiosidades', icon: 'lightbulb', name: 'Curiosidades', description: 'Detalhes que passam despercebidos na leitura.' },
-        ],
-      },
     ],
   },
   {
@@ -90,7 +80,7 @@ export const TRAILS: Trail[] = [
     collections: ['profecias'],
     branches: [
       { title: 'Comece por aqui', ids: ['como-interpretar-profecias'] },
-      { title: 'Daniel e Apocalipse', ids: ['profecias-de-daniel', 'apocalipse'], links: [{ link: '/profecias', icon: 'visibility', name: 'Todas as profecias', description: 'Cumpridas, em debate e futuras.' }] },
+      { title: 'Daniel e Apocalipse', ids: ['profecias-de-daniel', 'apocalipse'] },
     ],
   },
   {
