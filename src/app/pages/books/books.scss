@@ -127,7 +127,7 @@ h1 {
   display: grid;
   place-items: center;
   border: 1px solid color-mix(in srgb, var(--c) 35%, var(--mat-sys-outline-variant));
-  color: var(--c);
+  color: color-mix(in srgb, var(--c) 62%, var(--mat-sys-on-surface));
   font: 600 16px var(--heading-font);
 }
 

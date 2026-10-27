@@ -1,5 +1,6 @@
 export type Testament = 'AT' | 'NT';
-export type ThemeMode = 'light' | 'sepia' | 'dark';
+/** 'auto' segue o claro/escuro do aparelho; os demais são as paletas do app (todas na mesma família: sálvia e dourado). */
+export type ThemeMode = 'auto' | 'light' | 'sepia' | 'mist' | 'dark' | 'ember' | 'forest';
 export type ReadingFont = 'serif' | 'classic' | 'sans';
 export type VerseLayout = 'lines' | 'paragraph';
 export type HighlightColor = 'yellow' | 'green' | 'blue' | 'pink' | 'purple';

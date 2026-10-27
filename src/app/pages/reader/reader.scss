@@ -107,7 +107,7 @@
     font: 700 13px Inter, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.6px;
-    color: var(--c);
+    color: color-mix(in srgb, var(--c) 62%, var(--mat-sys-on-surface));
   }
 
   h1 {

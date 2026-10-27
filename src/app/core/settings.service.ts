@@ -14,10 +14,14 @@ const FONT_FAMILIES: Record<ReadingFont, string> = {
   sans: "'Inter', Roboto, sans-serif",
 };
 
-const THEME_COLORS: Record<ThemeMode, string> = {
+/** Cor da barra do navegador em cada paleta (a do tema 'auto' vem da paleta que estiver valendo). */
+const THEME_COLORS: Record<Exclude<ThemeMode, 'auto'>, string> = {
   light: '#faf8f5',
   sepia: '#f4ecdc',
+  mist: '#eceee9',
   dark: '#161514',
+  ember: '#1a1511',
+  forest: '#14201a',
 };
 
 function load<T>(key: string, fallback: T): T {
@@ -53,6 +57,15 @@ export class SettingsService {
   /** Camadas dos mapas: lugares ao redor, reinos da época e países de hoje. */
   readonly mapLayers = signal<{ nearby: boolean; era: boolean; modern: boolean }>(load('mapLayers', { nearby: true, era: true, modern: false }));
   readonly theme = signal<ThemeMode>(load('theme', load('darkMode', false) ? 'dark' : 'light'));
+  /** Luz quente (0–100): um véu âmbar que tira o azul da tela, para ler à noite. */
+  readonly warmth = signal<number>(load('warmth', 0));
+  /** O aparelho está no modo escuro? (usado pelo tema 'auto') */
+  private readonly systemDark = signal(typeof matchMedia !== 'undefined' && matchMedia('(prefers-color-scheme: dark)').matches);
+  /** A paleta que está valendo agora: o 'auto' vira claro ou escuro conforme o aparelho. */
+  readonly activeTheme = computed<Exclude<ThemeMode, 'auto'>>(() => {
+    const t = this.theme();
+    return t === 'auto' ? (this.systemDark() ? 'dark' : 'light') : t;
+  });
   readonly lastRead = signal<LastRead | null>(load('lastRead', null));
   /** A fitinha: o capítulo onde a pessoa parou. */
   readonly bookmark = signal<LastRead | null>(load('bookmark', null));
@@ -78,12 +91,16 @@ export class SettingsService {
       persist('font', font);
       document.documentElement.style.setProperty('--reading-font', FONT_FAMILIES[font]);
     });
+    effect(() => persist('warmth', this.warmth()));
+    if (typeof matchMedia !== 'undefined') {
+      matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', (e) => this.systemDark.set(e.matches));
+    }
     effect(() => {
-      const theme = this.theme();
-      persist('theme', theme);
-      document.body.classList.remove('theme-light', 'theme-sepia', 'theme-dark');
-      document.body.classList.add(`theme-${theme}`);
-      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_COLORS[theme]);
+      persist('theme', this.theme());
+      const active = this.activeTheme();
+      document.body.classList.remove('theme-light', 'theme-sepia', 'theme-mist', 'theme-dark', 'theme-ember', 'theme-forest');
+      document.body.classList.add(`theme-${active}`);
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_COLORS[active]);
     });
   }
 

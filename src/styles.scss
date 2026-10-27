@@ -111,6 +111,13 @@ body.theme-dark {
     tertiary-container: #3a3020,
     on-tertiary-container: #ecd9b6,
   ));
+}
+
+/* Variáveis comuns aos temas escuros (destaques, mapas, sombras) */
+body.theme-dark,
+body.theme-ember,
+body.theme-forest {
+  color-scheme: dark;
   --hl-yellow: #4a4128;
   --hl-green: #2c3a2e;
   --hl-blue: #26323d;
@@ -128,11 +135,106 @@ body.theme-dark {
   --map-badge-text: #161514;
 }
 
+
+/* Noite quente: leitura à noite, sem azul no texto (marrom escuro, creme e âmbar). */
+body.theme-ember {
+  @include mat.theme-overrides((
+    surface: #1a1511,
+    on-surface: #eadcc6,
+    on-surface-variant: #b8a994,
+    surface-container-lowest: #15110e,
+    surface-container-low: #1f1914,
+    surface-container: #251e18,
+    surface-container-high: #2c241d,
+    surface-container-highest: #342b23,
+    outline: #6a5d4c,
+    outline-variant: #3a3027,
+    primary: #c4cf9f,
+    on-primary: #1d2314,
+    primary-container: #2f3624,
+    on-primary-container: #dfe8c6,
+    secondary-container: #2d3125,
+    on-secondary-container: #dfe4cc,
+    tertiary: #e2b56a,
+    tertiary-container: #3d3019,
+    on-tertiary-container: #f1ddb4,
+  ));
+  --accent-gold: #e2b56a;
+  --placeholder: #968874;
+  --map-sea: #1d2224;
+  --map-land: #2a231b;
+  --map-coast: #4d4234;
+  --map-ink: #eadcc6;
+  --map-region: #8a7d69;
+  --map-badge-text: #1a1511;
+}
+
+/* Floresta: verde-sálvia profundo, o mais descansado dos escuros. */
+body.theme-forest {
+  @include mat.theme-overrides((
+    surface: #14201a,
+    on-surface: #dfe9e1,
+    on-surface-variant: #a3b8aa,
+    surface-container-lowest: #101a15,
+    surface-container-low: #182519,
+    surface-container: #1c2c23,
+    surface-container-high: #233629,
+    surface-container-highest: #2a4033,
+    outline: #54705f,
+    outline-variant: #2b3f33,
+    primary: #a9d4b9,
+    on-primary: #0f2218,
+    primary-container: #24402f,
+    on-primary-container: #cfeadb,
+    secondary-container: #213a2c,
+    on-secondary-container: #d2e8da,
+    tertiary: #d9bb85,
+    tertiary-container: #3a3220,
+    on-tertiary-container: #ecd9b6,
+  ));
+  --accent-gold: #d9bb85;
+  --placeholder: #86998d;
+  --map-sea: #15262a;
+  --map-land: #1f2d24;
+  --map-coast: #3e5646;
+  --map-ink: #e0eae2;
+  --map-region: #758a7b;
+  --map-badge-text: #14201a;
+}
+
+/* Névoa: claro de pouco brilho, cinza-esverdeado, para quem acha o branco forte demais. */
+body.theme-mist {
+  @include mat.theme-overrides((
+    surface: #eceee9,
+    on-surface: #222823,
+    on-surface-variant: #4f5a51,
+    surface-container-lowest: #f4f6f2,
+    surface-container-low: #f0f2ed,
+    surface-container: #e1e6df,
+    surface-container-high: #d9dfd6,
+    surface-container-highest: #d1d8ce,
+    outline-variant: #cbd3c8,
+    primary: #3b5b4b,
+    on-primary: #ffffff,
+    primary-container: #d0e2d7,
+    on-primary-container: #17301f,
+    secondary-container: #d9e5dc,
+    on-secondary-container: #1d3225,
+  ));
+  --accent-gold: #7a5c28;
+  --placeholder: #66736a;
+  --map-sea: #d6e0dd;
+  --map-land: #f1f0e6;
+  --map-coast: #bdb69d;
+  --map-ink: #222823;
+  --map-region: #8d9484;
+}
+
 body.theme-sepia {
   @include mat.theme-overrides((
     surface: #f4ecdc,
     on-surface: #3b3024,
-    on-surface-variant: #76664f,
+    on-surface-variant: #6a5b45,
     surface-container-lowest: #faf4e8,
     surface-container-low: #f9f3e6,
     surface-container: #ede3d0,

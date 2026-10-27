@@ -193,7 +193,7 @@
   }
 
   .type {
-    color: var(--c);
+    color: color-mix(in srgb, var(--c) 62%, var(--mat-sys-on-surface));
     font-weight: 700;
   }
 

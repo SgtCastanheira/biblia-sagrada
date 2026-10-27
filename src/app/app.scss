@@ -236,3 +236,13 @@
     }
   }
 }
+
+/* Luz quente: véu âmbar que tira o azul; fica sobre tudo e deixa passar os toques */
+.warmth {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: none;
+  background: #ff9a3d;
+  mix-blend-mode: multiply;
+}

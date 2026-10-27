@@ -9,15 +9,26 @@ import { SettingsService } from '../core/settings.service';
   selector: 'app-reading-settings',
   imports: [MatIconModule, MatSliderModule],
   template: `
-    <p class="label">Tema</p>
-    <div class="themes">
+    <p class="label">Cores</p>
+    <div class="themes" role="group" aria-label="Paleta de cores">
       @for (t of themes; track t.id) {
-        <button class="theme" [class]="'theme ' + t.id" [class.active]="settings.theme() === t.id" (click)="settings.theme.set(t.id)">
+        <button class="theme" [class]="'theme ' + t.id" [class.active]="settings.theme() === t.id" [attr.aria-pressed]="settings.theme() === t.id" (click)="settings.theme.set(t.id)">
           <span class="sample">Aa</span>
           <span>{{ t.label }}</span>
+          <small>{{ t.hint }}</small>
         </button>
       }
     </div>
+
+    <p class="label">Luz quente <span>{{ settings.warmth() === 0 ? 'desligada' : settings.warmth() + '%' }}</span></p>
+    <div class="slider-row">
+      <mat-icon>wb_sunny</mat-icon>
+      <mat-slider min="0" max="100" step="5">
+        <input matSliderThumb [value]="settings.warmth()" (valueChange)="settings.warmth.set($event)" aria-label="Luz quente: tira o azul da tela" />
+      </mat-slider>
+      <mat-icon>bedtime</mat-icon>
+    </div>
+    <p class="hint">Um véu âmbar que tira o azul da tela. Combina com qualquer paleta, e é bom para ler à noite.</p>
 
     <p class="label">Versículos</p>
     <div class="layouts">
@@ -76,7 +87,10 @@ import { SettingsService } from '../core/settings.service';
     :host { display: block; }
     .label { display: flex; justify-content: space-between; font: var(--mat-sys-label-large); color: var(--mat-sys-on-surface-variant); margin: 20px 0 10px; }
     .label span { color: var(--mat-sys-primary); font-weight: 600; }
-    .themes, .fonts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .themes { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
+    .fonts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .theme small { font: 500 12px/1.25 Inter, sans-serif; opacity: .85; text-align: center; }
+    .hint { margin: 6px 0 0; font: 400 13px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .layouts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .layout {
       display: flex; align-items: center; justify-content: center; gap: 8px; height: 46px; cursor: pointer;
@@ -88,9 +102,13 @@ import { SettingsService } from '../core/settings.service';
       border: 1px solid var(--mat-sys-outline-variant); border-radius: 14px; cursor: pointer; padding: 10px 6px;
       display: flex; flex-direction: column; align-items: center; gap: 4px; font: var(--mat-sys-label-medium);
     }
+    .theme.auto { background: var(--mat-sys-surface-container-low); color: var(--mat-sys-on-surface); border-style: dashed; }
     .theme.light { background: #faf8f5; color: #23211e; }
     .theme.sepia { background: #f4ecdc; color: #3b3024; }
+    .theme.mist { background: #eceee9; color: #222823; }
     .theme.dark { background: #161514; color: #ece8e2; }
+    .theme.ember { background: #1a1511; color: #eadcc6; }
+    .theme.forest { background: #14201a; color: #dfe9e1; }
     .sample { font: 600 20px 'Source Serif 4', serif; }
     .font { background: var(--mat-sys-surface-container-low); color: inherit; font-size: 15px; padding: 14px 6px; }
     .active { border-color: var(--mat-sys-primary); box-shadow: inset 0 0 0 1px var(--mat-sys-primary); }
@@ -102,10 +120,14 @@ import { SettingsService } from '../core/settings.service';
 })
 export class ReadingSettings {
   protected readonly settings = inject(SettingsService);
-  protected readonly themes: { id: ThemeMode; label: string }[] = [
-    { id: 'light', label: 'Claro' },
-    { id: 'sepia', label: 'Sépia' },
-    { id: 'dark', label: 'Escuro' },
+  protected readonly themes: { id: ThemeMode; label: string; hint: string }[] = [
+    { id: 'auto', label: 'Automático', hint: 'Como o aparelho' },
+    { id: 'light', label: 'Claro', hint: 'Sálvia e papel' },
+    { id: 'sepia', label: 'Sépia', hint: 'Papel antigo' },
+    { id: 'mist', label: 'Névoa', hint: 'Claro suave' },
+    { id: 'dark', label: 'Noite', hint: 'Escuro neutro' },
+    { id: 'ember', label: 'Noite quente', hint: 'Para ler no escuro' },
+    { id: 'forest', label: 'Floresta', hint: 'Verde profundo' },
   ];
   protected readonly fonts: { id: ReadingFont; label: string; family: string }[] = [
     { id: 'serif', label: 'Source Serif', family: "'Source Serif 4', serif" },

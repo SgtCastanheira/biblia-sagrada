@@ -52,3 +52,8 @@
 </main>
 
 <app-listen-player />
+
+<!-- Luz quente: véu âmbar sobre tudo (inclusive folhas e avisos), sem interferir nos toques -->
+@if (settings.warmth() > 0) {
+  <div class="warmth" aria-hidden="true" [style.opacity]="settings.warmth() / 220"></div>
+}

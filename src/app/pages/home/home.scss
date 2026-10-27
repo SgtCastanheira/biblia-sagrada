@@ -438,7 +438,7 @@
     display: grid;
     place-items: center;
     font-size: 22px;
-    color: var(--c);
+    color: color-mix(in srgb, var(--c) 62%, var(--mat-sys-on-surface));
     background: color-mix(in srgb, var(--c) 10%, transparent);
   }
 
