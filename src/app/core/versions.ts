@@ -1,6 +1,6 @@
 import { BibleVersion } from './models';
 
-// Em português: a Almeida e as versões de licença livre do eBible.org, embutidas no app (tools/gerar-versoes.py).
+// Em português, espanhol e alemão: a Almeida e as versões de licença livre do eBible.org, embutidas no app (tools/gerar-versoes.py).
 // As demais são traduções em domínio público disponíveis em https://bible-api.com
 export const VERSIONS: BibleVersion[] = [
   { id: 'almeida', abbrev: 'ALM', name: 'João Ferreira de Almeida', language: 'Português', flag: '🇧🇷' },
@@ -10,6 +10,14 @@ export const VERSIONS: BibleVersion[] = [
   { id: 'blt', abbrev: 'BLT', name: 'Bíblia Livre Para Todos', language: 'Português', flag: '🇧🇷', ntOnly: true },
   { id: 'nva', abbrev: 'NVA', name: 'Bíblia Nova Versão de Acesso Livre', language: 'Português', flag: '🇧🇷' },
   { id: 'alm1911', abbrev: 'ALM1911', badge: 'ALM', name: 'Almeida 1911 (ortografia original)', language: 'Português', flag: '🇧🇷' },
+  { id: 'rv1909', abbrev: 'RV1909', name: 'Reina-Valera 1909', language: 'Espanhol', flag: '🇪🇸' },
+  { id: 'vbl', abbrev: 'VBL', name: 'Versión Biblia Libre', language: 'Espanhol', flag: '🌎' },
+  { id: 'nbv-es', abbrev: 'NBV', badge: 'NBV·ES', name: 'Nueva Biblia Viva (Biblica® Open)', language: 'Espanhol', flag: '🌎' },
+  { id: 'bes', abbrev: 'BES', name: 'Biblia en Español Sencillo', language: 'Espanhol', flag: '🌎' },
+  { id: 'bll', abbrev: 'BLL', name: 'Biblia Libre Latinoamericano', language: 'Espanhol', flag: '🌎' },
+  { id: 'luther1912', abbrev: 'LUT1912', badge: 'LUT', name: 'Lutherbibel 1912', language: 'Alemão', flag: '🇩🇪' },
+  { id: 'elo', abbrev: 'ELB1905', badge: 'ELB', name: 'Elberfelder 1905', language: 'Alemão', flag: '🇩🇪' },
+  { id: 'schlachter', abbrev: 'SCH1951', badge: 'SCH', name: 'Schlachter 1951', language: 'Alemão', flag: '🇩🇪' },
   { id: 'lsg', abbrev: 'LSG', name: 'Louis Segond (1910)', language: 'Francês', flag: '🇫🇷' },
   { id: 'kjv', abbrev: 'KJV', name: 'King James Version', language: 'Inglês', flag: '🇬🇧' },
   { id: 'asv', abbrev: 'ASV', name: 'American Standard Version (1901)', language: 'Inglês', flag: '🇺🇸' },

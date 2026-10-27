@@ -122,3 +122,23 @@ test('virar a página: a folha nova chega com a animação do lado certo', async
   await page.keyboard.press('ArrowLeft');
   await expect(page.locator('.book-page')).toHaveClass(/turn-prev/);
 });
+
+test('versões em espanhol e alemão embutidas: o mesmo versículo, em cada língua, sem internet', async ({ page }) => {
+  const abrir = async (version: string) => {
+    await page.evaluate((v) => localStorage.setItem('biblia.settings.version', JSON.stringify(v)), version);
+    await page.goto('/ler/JHN/3');
+  };
+  await page.goto('/ler/JHN/3');
+  await abrir('rv1909');
+  await expect(page.locator('#v16')).toContainText('Porque de tal manera amó Dios al mundo');
+  await abrir('vbl');
+  await expect(page.locator('#v16')).toContainText('Dios');
+  await abrir('luther1912');
+  await expect(page.locator('#v16')).toContainText('Also hat Gott die Welt geliebt');
+  await abrir('schlachter');
+  await expect(page.locator('#v16')).toContainText('Gott');
+  // O seletor agrupa por idioma
+  await page.getByRole('button', { name: 'Trocar versão' }).click();
+  await expect(page.getByText('Espanhol', { exact: true })).toBeVisible();
+  await expect(page.getByText('Alemão', { exact: true })).toBeVisible();
+});

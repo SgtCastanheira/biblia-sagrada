@@ -22,6 +22,16 @@ VERSIONS = {
     "PorAlmeida1911": "alm1911",  # Almeida, reimpressão de 1911 (texto em domínio público; módulo sob GPL)
     # Em francês
     "fraLSG": "lsg",         # Louis Segond 1910 (domínio público)
+    # Em espanhol
+    "spaRV1909": "rv1909",   # Reina-Valera 1909 (domínio público)
+    "spavbl": "vbl",         # Versión Biblia Libre (CC BY-SA 4.0)
+    "spaonbv": "nbv-es",     # Biblica® Open Nueva Biblia Viva (CC BY-SA 4.0)
+    "spabes": "bes",         # La Biblia en Español Sencillo (domínio público)
+    "spabll": "bll",         # Santa Biblia libre Latinoamericano (domínio público; os livros deuterocanônicos ficam de fora)
+    # Em alemão
+    "deu1912": "luther1912", # Lutherbibel 1912 (domínio público)
+    "deuelo": "elo",         # Elberfelder 1905, “Unrevidierte” (domínio público)
+    "deu1951": "schlachter", # Schlachter 1951 (CC BY 4.0)
 }
 # Fora de propósito: portft (Tradução para Tradutores) é uma ferramenta de tradução, cheia de colchetes e barras.
 

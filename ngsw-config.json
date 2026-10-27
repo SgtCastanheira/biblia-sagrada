@@ -60,7 +60,15 @@
           "/bible/blt/*.json",
           "/bible/nva/*.json",
           "/bible/alm1911/*.json",
-          "/bible/lsg/*.json"
+          "/bible/lsg/*.json",
+          "/bible/rv1909/*.json",
+          "/bible/vbl/*.json",
+          "/bible/nbv-es/*.json",
+          "/bible/bes/*.json",
+          "/bible/bll/*.json",
+          "/bible/luther1912/*.json",
+          "/bible/elo/*.json",
+          "/bible/schlachter/*.json"
         ]
       }
     },

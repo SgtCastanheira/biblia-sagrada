@@ -14,6 +14,14 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Foto de Paulo Leivas Macalão | `public/conteudo/imagens/paulo-leivas-macalao.jpg`, do Wikimedia Commons | Domínio público |
 | Foto de Frida Vingren — acervo do Centro de Estudos Pentecostais da CPAD | `public/conteudo/imagens/frida-vingren.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
 | Louis Segond (1910), em francês | Texto embutido (`public/bible/lsg`), do eBible.org (`fraLSG`) | Domínio público |
+| Reina-Valera 1909, em espanhol | Texto embutido (`public/bible/rv1909`), do eBible.org (`spaRV1909`) | Domínio público |
+| Versión Biblia Libre (VBL) — © 2018–2020 Jonathan Gallagher e Shelly Barrios de Avila | Texto embutido (`public/bible/vbl`), do eBible.org (`spavbl`) | CC BY-SA 4.0 |
+| Biblica® Open Nueva Biblia Viva™ — © 2006, 2008 by Biblica, Inc. | Texto embutido sem alterações (`public/bible/nbv-es`), do eBible.org (`spaonbv`). “Biblica” é uma marca registrada na Oficina de Patentes e Marcas dos Estados Unidos por Biblica, Inc. Usado com permissão | CC BY-SA 4.0 |
+| La Biblia en Español Sencillo | Texto embutido (`public/bible/bes`), do eBible.org (`spabes`) | Domínio público |
+| Santa Biblia libre Latinoamericano | Texto embutido, sem os livros deuterocanônicos (`public/bible/bll`), do eBible.org (`spabll`) | Domínio público |
+| Lutherbibel 1912, em alemão | Texto embutido (`public/bible/luther1912`), do eBible.org (`deu1912`) | Domínio público |
+| Elberfelder 1905 (Unrevidierte), em alemão | Texto embutido (`public/bible/elo`), do eBible.org (`deuelo`) | Domínio público |
+| Schlachter 1951 — © 1951 Genfer Bibelgesellschaft | Texto embutido (`public/bible/schlachter`), do eBible.org (`deu1951`) | CC BY 4.0 |
 | Bíblia Livre Para Todos (BLT) — © 2022 Free Bible Ministry, Inc. | Novo Testamento embutido (`public/bible/blt`), do eBible.org (`porblt`) | CC BY-SA 4.0 |
 | Bíblia Nova Versão de Acesso Livre (NVA) — biblianva.com.br, baseada na Unlocked Literal Bible | Texto embutido (`public/bible/nva`), do módulo `PorNVA` da CrossWire | CC BY-SA 4.0 |
 | Almeida 1911 (reimpressão de 1911 de uma edição de 1900) | Texto embutido com a ortografia original (`public/bible/alm1911`), do módulo `PorAlmeida1911` da CrossWire, convertido com o pysword (MIT) | Texto em domínio público; módulo sob GPL |

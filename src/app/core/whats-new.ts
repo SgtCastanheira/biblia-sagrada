@@ -24,8 +24,10 @@ export const RELEASES: Release[] = [
   {
     id: 'ponte-entre-os-testamentos',
     date: '27 de outubro de 2026',
-    title: 'A ponte entre o Antigo e o Novo Testamento',
+    title: 'A ponte entre os Testamentos, a Septuaginta e a Bíblia em outras línguas',
     items: [
+      { icon: 'translate', title: 'A Bíblia em espanhol e em alemão', text: 'Reina-Valera 1909, Versión Biblia Libre, Nueva Biblia Viva e outras em espanhol; Lutero 1912, Elberfelder e Schlachter em alemão. Todas funcionam sem internet e podem ser comparadas com a Almeida.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto do capítulo.' },
+      { icon: 'menu_book', title: 'A Septuaginta, em detalhe', text: 'A lenda dos 72 sábios, o que se sabe de verdade, a ordem e os nomes dos livros da sua Bíblia, e por que o Novo Testamento cita o Antigo do jeito que cita.', link: '/artigo/septuaginta' },
       { icon: 'swap_horiz', title: 'Os 400 anos entre os Testamentos', text: 'De Malaquias a Mateus: Alexandre, os Macabeus, a chegada dos romanos, fariseus e saduceus, as sinagogas e a esperança do Messias. A história que explica o mundo em que Jesus nasceu.', link: '/artigo/entre-os-testamentos', tip: 'Também aparece ao ler Malaquias 4 e Mateus 1.' },
     ],
   },
