@@ -49,6 +49,8 @@ O vigia também:
 | `logica/tribos.spec.ts` | As 12 tribos: **toda referência existe na Almeida** (até o versículo), censos somam o que Números diz, grupos do acampamento, personagens do memorial, número de cada território dentro do polígono e distâncias |
 | `logica/ibuc.spec.ts` | IBUC: turmas e aulas ligadas a turmas existentes, referências válidas |
 | `navegacao.spec.ts` | Todas as telas (40 rotas) abrem sem erros e **sem rolagem lateral**; barra de navegação; rota inexistente |
+| `varredura.spec.ts` | **Toda tela gerada pelos dados** (cada estudo, estado da Assembleia de Deus, mapa, sermão, tribo e curiosidade) abre sem erro no console nem requisição falha, sem rolagem lateral, com texto ≥ 13px e **fotos carregando** |
+| `logica/links-internos.spec.ts` | Todo **link interno** escrito nos textos (`[texto](/artigo/x)`) e nos dados (novidades, mapas) leva a uma tela que existe; toda foto citada existe |
 | `leitor.spec.ts` | Um versículo por linha; texto corrido; **sem 404 de arquivos locais**; destacar/favoritar; próximo capítulo; comparação; cartão de mapa |
 | `busca.spec.ts` | "Ir para" por referência; busca por palavra (quando a Almeida embutida existir) |
 | `ebd.spec.ts` | Criar trimestre; colar lição; conferir que o texto da revista **não é salvo**; mapas da lição |
@@ -70,6 +72,10 @@ O vigia também:
 3. Reproduza olhando: `npx playwright test -g "nome do teste" --headed`.
 
 ### 2. Problemas conhecidos e como resolver
+
+> **Vários testes do celular falham ao mesmo tempo, mas passam quando rodados sozinhos?** É quase sempre falta de CPU:
+> o servidor de desenvolvimento ainda compilando, ou outra coisa pesada rodando ao lado. Feche o que não precisa e rode de novo
+> com `--workers=2`.
 
 | Sintoma | Causa provável | Solução |
 |---|---|---|
