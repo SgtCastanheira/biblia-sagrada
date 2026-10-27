@@ -5,6 +5,7 @@ import { RouterLink } from '@angular/router';
 import { CLASSIC_SERMONS, findArticle } from '../core/library';
 import { Block, parseBlocks, sectionLabels } from '../core/rich-text-parser';
 import { Figure } from './figure';
+import { EraMap } from './era-map';
 import { SendChain } from './send-chain';
 import { Sheets } from './sheets';
 
@@ -15,7 +16,7 @@ import { Sheets } from './sheets';
  */
 @Component({
   selector: 'app-rich-text',
-  imports: [NgTemplateOutlet, RouterLink, MatIconModule, Figure, SendChain],
+  imports: [NgTemplateOutlet, RouterLink, MatIconModule, Figure, SendChain, EraMap],
   host: { '[class.story]': 'story()' },
   template: `
     <ng-template #line let-parts>@for (p of parts; track $index) {@switch (p.t) {@case ('b') {<strong>{{ p.text }}</strong>}@case ('i') {<em>{{ p.text }}</em>}@case ('ref') {<button type="button" class="ref" (click)="openRef(p.href)">{{ p.text }}</button>}@case ('link') {<a class="link" [routerLink]="p.href">{{ p.text }}</a>}@case ('ext') {<a class="link" [href]="p.href" target="_blank" rel="noopener noreferrer">{{ p.text }}</a>}@default {{{ p.text }}}}}</ng-template>
@@ -78,6 +79,7 @@ import { Sheets } from './sheets';
             </dl>
           </section>
         }
+        @case ('eramap') { <app-era-map [ids]="b.eras!" /> }
         @case ('sends') { <app-send-chain [title]="b.place" [sends]="b.sends!" /> }
         @case ('sermon') {
           @if (sermonOf(b.sermon); as s) {

@@ -81,6 +81,23 @@ const PALESTINE_ROMAN = {
   filipe: [[35.62, 33.35], [36.45, 33.35], [36.6, 32.9], [35.65, 32.9]] as Lonlat[],
 };
 
+// Polígonos das épocas entre os Testamentos (aproximados, para estudo)
+const PERSIA_EMPIRE: Lonlat[] = [[25.5, 41.8], [29.0, 41.4], [32.0, 42.2], [36.0, 41.8], [41.5, 41.6], [45.0, 41.8], [49.0, 40.6], [54.0, 38.6], [60.0, 37.6], [62.5, 35.0], [62.5, 26.0], [57.0, 25.5], [52.0, 27.5], [48.5, 29.8], [45.0, 29.5], [40.0, 30.5], [36.5, 29.0], [34.8, 29.5], [33.0, 28.0], [34.0, 26.0], [33.0, 23.0], [31.0, 22.0], [29.5, 25.0], [28.8, 30.0], [25.0, 31.8], [24.5, 36.0], [25.0, 39.5]];
+const MACEDONIA: Lonlat[] = [[19.5, 42.0], [26.0, 42.0], [26.0, 40.2], [23.8, 38.3], [21.6, 38.0], [19.8, 39.7]];
+const WEST_ANATOLIA: Lonlat[] = [[26.0, 42.0], [29.0, 42.2], [31.0, 41.0], [31.5, 38.5], [29.0, 36.6], [26.6, 37.2], [26.0, 40.2]];
+const ASIA_PROVINCE: Lonlat[] = [[26.0, 40.3], [29.5, 40.6], [31.0, 39.5], [30.5, 37.2], [28.2, 36.6], [26.4, 37.2]];
+const JUDAH_CORE: Lonlat[] = [[34.95, 31.98], [35.5, 31.98], [35.5, 31.55], [35.0, 31.55]];
+const PTOLEMAIC: Lonlat[] = [...EGYPT_NILE.slice(0, 1), [32.4, 31.5], [34.2, 31.4], [35.0, 32.6], [35.6, 33.8], [35.95, 34.6], [36.6, 34.4], [36.4, 33.0], [35.7, 31.0], [34.8, 30.0], [33.0, 29.6], ...EGYPT_NILE.slice(3)];
+const EGYPT_ONLY: Lonlat[] = [[29, 31.8], [32.4, 31.5], [34.2, 31.3], [34.9, 29.6], [33.5, 28.5], [32.7, 27], [33.1, 24.2], [32.8, 22], [31, 22], [30.6, 25], [30.2, 28], [29.2, 30.4]];
+const SELEUCID: Lonlat[] = [[36.0, 34.6], [35.9, 36.0], [34.5, 36.8], [33.0, 38.5], [36.5, 39.5], [40.5, 38.0], [44.5, 37.5], [48.0, 37.5], [54.0, 37.0], [58.0, 36.0], [58.0, 30.0], [52.0, 28.0], [48.0, 29.8], [45.0, 30.0], [40.0, 32.0], [37.0, 32.5], [36.7, 33.5]];
+const SELEUCID_SYRIA: Lonlat[] = [[35.9, 36.8], [35.95, 34.7], [37.3, 34.6], [38.6, 35.8], [38.4, 37.2]];
+const HASMONEAN: Lonlat[] = [[34.4, 31.25], [34.5, 32.0], [34.9, 32.75], [35.1, 33.1], [35.65, 33.3], [36.05, 33.0], [36.0, 32.3], [35.9, 31.4], [35.55, 30.95], [34.95, 31.0]];
+const HEROD_KINGDOM: Lonlat[] = [[34.4, 31.25], [34.5, 32.0], [34.9, 32.75], [35.15, 33.2], [36.4, 33.4], [36.75, 32.6], [36.2, 31.7], [35.75, 31.2], [35.5, 30.95], [34.95, 31.0]];
+const NABATEAN: Lonlat[] = [[35.6, 31.35], [36.8, 32.0], [38.2, 30.5], [37.6, 27.4], [35.2, 28.0], [34.95, 29.6], [35.5, 30.9]];
+const PARTHIA: Lonlat[] = [[40.5, 38.5], [44.0, 39.0], [48.0, 38.5], [54.0, 38.0], [60.0, 38.0], [62.5, 36.0], [62.5, 26.0], [57.0, 25.5], [52.0, 27.5], [48.0, 29.5], [45.0, 30.0], [41.5, 33.0], [40.5, 35.5], [39.5, 36.5], [40.0, 38.0]];
+const PARTHIA_RISING: Lonlat[] = [[54.0, 38.2], [60.0, 38.2], [62.5, 36.0], [62.5, 33.6], [56.0, 34.4]];
+const ROME_EAST: Lonlat[] = [[19.0, 42.8], [28.5, 42.2], [29.5, 41.3], [33.0, 42.2], [36.0, 41.8], [39.0, 41.2], [40.5, 40.5], [39.5, 38.5], [38.5, 37.6], [40.0, 36.6], [38.8, 35.5], [38.0, 33.0], [36.6, 32.4], [35.7, 31.3], [34.9, 29.8], [33.0, 28.6], [32.6, 30.0], [31.8, 27.6], [33.1, 24.2], [32.8, 22], [31, 22], [30.6, 25], [30.2, 28], [29.0, 29.5], [25.0, 30.6], [19.0, 30.4]];
+
 export const ERAS: Era[] = [
   {
     id: 'antes-de-abraao',
@@ -291,24 +308,133 @@ export const ERAS: Era[] = [
   },
   {
     id: 'alexandre',
-    name: 'Alexandre e os seus sucessores',
-    year: -250,
-    period: '334–63 a.C.',
-    summary: 'Alexandre, o Grande, conquista o Império Persa em poucos anos e morre em 323 a.C. O seu reino se divide entre os generais: os Ptolomeus no Egito e os Selêucidas na Síria e na Mesopotâmia disputam a Judeia por mais de um século — a disputa entre o “rei do Sul” e o “rei do Norte” de Daniel 11. O grego se torna a língua comum do Oriente, e em Alexandria se traduz a Septuaginta.',
+    name: 'Alexandre, o Grande',
+    year: -323,
+    period: '334–323 a.C.',
+    summary: 'Em dez anos, um rei de vinte e poucos anos derruba o Império Persa e dá ao mundo uma só cultura e uma só língua, o grego. A Judeia, uma pequena província no meio do caminho, passa sem guerra do domínio persa para o grego. Alexandre morre em 323 a.C., aos 32 anos, sem deixar um herdeiro capaz de governar o que conquistou.',
     powers: [
-      { name: 'Ptolomeus (Egito)', color: C.egypt, polygon: [...EGYPT_NILE.slice(0, 1), [32.4, 31.5], [34.2, 31.4], [35.0, 32.6], [35.6, 33.8], [35.95, 34.6], [36.6, 34.4], [36.4, 33.0], [35.7, 31.0], [34.8, 30.0], [33.0, 29.6], ...EGYPT_NILE.slice(3)], label: [31.2, 26.5], note: 'Dominaram a Judeia até 198 a.C.' },
-      { name: 'Selêucidas (Síria)', color: C.greece, polygon: [[36.0, 34.6], [35.9, 36.0], [34.5, 36.8], [33.0, 38.5], [36.5, 39.5], [40.5, 38.0], [44.5, 37.5], [48.0, 37.5], [54.0, 37.0], [58.0, 36.0], [58.0, 30.0], [52.0, 28.0], [48.0, 29.8], [45.0, 30.0], [40.0, 32.0], [37.0, 32.5], [36.7, 33.5]], label: [44.0, 34.4], note: 'Antíoco IV profanou o templo em 167 a.C. (Dn 11.31).' },
-      { name: 'Macedônia', color: C.greece, polygon: [[20.5, 42.0], [26.0, 42.0], [26.0, 40.3], [23.5, 39.8], [21.0, 39.6]], label: [22.6, 40.9] },
+      { name: 'Império de Alexandre', color: C.greece, polygon: PERSIA_EMPIRE, label: [44.5, 34.8], note: 'O mesmo território dos persas, agora sob um rei grego; segue até a Índia, fora do mapa.' },
+      { name: 'Macedônia e Grécia', color: C.greece, polygon: MACEDONIA, label: [22.6, 40.9] },
+      { name: 'Judeia', color: C.judah, polygon: JUDAH_CORE, label: [35.2, 31.75], note: 'Muda de dono sem ser destruída (Josefo conta que Alexandre poupou Jerusalém; os historiadores têm dúvidas).' },
     ],
     peoples: [
-      { name: 'Judeia', lon: 35.2, lat: 31.7 },
-      { name: 'Partos (a partir de 247 a.C.)', lon: 56.0, lat: 37.5 },
+      { name: 'Alexandria', lon: 29.9, lat: 31.2 },
+      { name: 'Babilônia', lon: 44.4, lat: 32.5 },
     ],
     events: [
-      { year: '333 a.C.', text: 'Alexandre vence os persas em Isso.', ref: 'Dn 8.5-8' },
-      { year: '323 a.C.', text: 'Morte de Alexandre; o reino é dividido em quatro.', ref: 'Dn 11.3-4' },
-      { year: 'séc. III a.C.', text: 'Tradução da Septuaginta em Alexandria.' },
-      { year: '167–164 a.C.', text: 'Revolta dos Macabeus; o templo é purificado (Hanucá).', ref: 'Jo 10.22' },
+      { year: '334 a.C.', text: 'Alexandre atravessa para a Ásia com o seu exército.' },
+      { year: '333 a.C.', text: 'Vence os persas em Isso: o bode derruba o carneiro.', ref: 'Dn 8.5-7' },
+      { year: '332–331 a.C.', text: 'Toma Tiro e o Egito e funda Alexandria, onde viverá uma grande comunidade judaica.' },
+      { year: '323 a.C.', text: 'Morre na Babilônia: “quebrou-se o grande chifre”.', ref: 'Dn 8.8' },
+    ],
+    maps: [],
+  },
+  {
+    id: 'sucessores',
+    name: 'Os quatro reinos dos sucessores',
+    year: -300,
+    period: '323–200 a.C.',
+    summary: 'Depois da morte de Alexandre, os seus generais brigam por vinte anos. Em 301 a.C., na batalha de Ipsos, o império é dividido em quatro: Cassandro na Macedônia, Lisímaco na Trácia e na Ásia Menor, Seleuco na Síria e no Oriente e Ptolomeu no Egito. Daniel já tinha visto os “quatro chifres”. A Judeia fica com os Ptolomeus por mais de cem anos: o “rei do Sul” de Daniel 11 contra o “rei do Norte”, os Selêucidas, que são os vizinhos que sempre disputam a terra de Israel.',
+    powers: [
+      { name: 'Ptolomeus', color: C.egypt, polygon: PTOLEMAIC, label: [31.2, 28.0], note: 'O Egito e a Judeia, de c. 301 até c. 200 a.C. Em Alexandria, traduzem a Bíblia para o grego.' },
+      { name: 'Selêucidas', color: C.greece, polygon: SELEUCID, label: [44.0, 34.4], note: 'A Síria e o Oriente: o “rei do Norte”.' },
+      { name: 'Macedônia', color: C.rome, polygon: MACEDONIA, label: [23.6, 41.0], note: 'O reino de Cassandro.' },
+      { name: 'Trácia e Ásia Menor', color: C.aram, polygon: WEST_ANATOLIA, label: [28.6, 40.4], note: 'O reino de Lisímaco; cai em 281 a.C. e é absorvido pelos vizinhos.' },
+      { name: 'Judeia', color: C.judah, polygon: JUDAH_CORE, label: [35.2, 31.75], note: 'Governada pelo sumo sacerdote, sob os Ptolomeus.' },
+    ],
+    peoples: [
+      { name: 'Alexandria', lon: 29.9, lat: 31.2 },
+      { name: 'Antioquia', lon: 36.16, lat: 36.2 },
+    ],
+    events: [
+      { year: '323 a.C.', text: 'Morre Alexandre; o reino se divide entre os generais.', ref: 'Dn 11.3-4' },
+      { year: '301 a.C.', text: 'Batalha de Ipsos: o império em quatro reinos.', ref: 'Dn 8.8,22' },
+      { year: 'c. 301 a.C.', text: 'A Judeia passa para os Ptolomeus, do Egito.' },
+      { year: 'séc. III a.C.', text: 'As guerras entre o rei do Sul e o rei do Norte.', ref: 'Dn 11.5-9' },
+      { year: 'c. 250 a.C.', text: 'Começa a tradução da Torá para o grego, em Alexandria.' },
+      { year: 'c. 200 a.C.', text: 'Antíoco III, da Síria, vence os egípcios em Panion e toma a Judeia.', ref: 'Dn 11.15-16' },
+    ],
+    maps: [],
+  },
+  {
+    id: 'macabeus',
+    name: 'Selêucidas, Macabeus e a ascensão de Roma',
+    year: -167,
+    period: '200–142 a.C.',
+    summary: 'A Judeia passa para os Selêucidas, da Síria. Antíoco IV, que queria tornar todos os súditos gregos, proíbe a religião de Israel e instala um altar pagão no Templo, em 167 a.C.: a “abominação da desolação” de Daniel. A família de Matatias se rebela e, em 164 a.C., o Templo é purificado. Ao fundo, uma nova potência aparece no Ocidente: Roma já derrotou a Macedônia e obriga até os reis a recuar.',
+    powers: [
+      { name: 'Selêucidas', color: C.greece, polygon: SELEUCID, label: [44.0, 34.4], note: 'A Síria e o Oriente. O rei Antíoco IV profana o Templo em 167 a.C.' },
+      { name: 'Egito', color: C.egypt, polygon: EGYPT_ONLY, label: [31.2, 28.0], note: 'Dos Ptolomeus. Perde a Judeia; em 168 a.C., Roma obriga Antíoco IV a deixar o Egito.' },
+      { name: 'Macedônia (Roma)', color: C.rome, polygon: MACEDONIA, label: [23.6, 41.0], note: 'Roma vence a Macedônia em Pidna (168 a.C.) e a faz província em 148 a.C.' },
+      { name: 'Judeia (Selêucidas)', color: C.judah, polygon: JUDAH_CORE, label: [35.2, 31.75], note: 'A revolta dos Macabeus começa em Modin, em 167 a.C.' },
+      { name: 'Os partos, em ascensão', color: C.parthia, polygon: PARTHIA_RISING, label: [58.5, 36.0] },
+    ],
+    peoples: [
+      { name: 'Modin', lon: 34.92, lat: 31.9 },
+      { name: 'Jerusalém', lon: 35.22, lat: 31.78 },
+    ],
+    events: [
+      { year: 'c. 200 a.C.', text: 'A Judeia passa dos Ptolomeus aos Selêucidas.' },
+      { year: '175 a.C.', text: 'Antíoco IV Epifânio sobe ao trono; sumo sacerdócio posto à venda.' },
+      { year: '168 a.C.', text: 'Roma vence a Macedônia e ordena que Antíoco IV saia do Egito.', ref: 'Dn 11.29-30' },
+      { year: '167 a.C.', text: 'O Templo é profanado: a “abominação da desolação”.', ref: 'Dn 11.31' },
+      { year: '164 a.C.', text: 'Judas Macabeu purifica o Templo (Hanucá).', ref: 'Jo 10.22' },
+      { year: '161 a.C.', text: 'Judas faz uma aliança com Roma.' },
+    ],
+    maps: [],
+  },
+  {
+    id: 'asmoneus',
+    name: 'O reino dos Asmoneus',
+    year: -80,
+    period: '142–63 a.C.',
+    summary: 'Por menos de oitenta anos, os judeus têm um reino próprio, governado pela família dos Macabeus (os Asmoneus), que eram ao mesmo tempo sacerdotes e reis. No seu auge, o reino tem quase o tamanho do de Davi. Enquanto isso, os Selêucidas encolhem, os partos tomam o Oriente e Roma avança pela Ásia Menor. Uma guerra civil entre dois irmãos vai abrir a porta para os romanos.',
+    powers: [
+      { name: 'Reino dos Asmoneus', color: C.judah, polygon: HASMONEAN, label: [35.2, 32.1], note: 'Alexandre Janeu (103–76 a.C.) leva o reino à sua maior extensão.' },
+      { name: 'Selêucidas (só a Síria)', color: C.greece, polygon: SELEUCID_SYRIA, label: [36.9, 35.9], note: 'O império encolhe até quase desaparecer.' },
+      { name: 'Egito', color: C.egypt, polygon: EGYPT_ONLY, label: [31.2, 28.0], note: 'Ainda dos Ptolomeus, cada vez mais fraco.' },
+      { name: 'Reino Nabateu', color: C.nabatea, polygon: NABATEAN, label: [36.6, 29.6] },
+      { name: 'Império Parto', color: C.parthia, polygon: PARTHIA, label: [50.0, 33.6], note: 'Domina a Mesopotâmia e o planalto do Irã.' },
+      { name: 'Ásia (Roma)', color: C.rome, polygon: ASIA_PROVINCE, label: [28.6, 38.9], note: 'Província romana desde 133 a.C.' },
+      { name: 'Macedônia (Roma)', color: C.rome, polygon: MACEDONIA, label: [23.6, 41.0], note: 'Província romana desde 148 a.C.' },
+    ],
+    peoples: [
+      { name: 'Idumeia', lon: 35.0, lat: 31.15 },
+      { name: 'Samaria', lon: 35.25, lat: 32.25 },
+    ],
+    events: [
+      { year: '142 a.C.', text: 'Simão alcança a independência: o jugo dos gentios é tirado.' },
+      { year: '134–104 a.C.', text: 'João Hircano amplia o reino e converte os idumeus.' },
+      { year: '104 a.C.', text: 'Aristóbulo I é o primeiro a se chamar “rei”.' },
+      { year: '103–76 a.C.', text: 'Alexandre Janeu: o reino chega à maior extensão; guerra com os fariseus.' },
+      { year: '67–63 a.C.', text: 'Guerra civil entre Hircano II e Aristóbulo II; os dois pedem a ajuda de Roma.' },
+      { year: '63 a.C.', text: 'O general romano Pompeu toma Jerusalém: acaba a independência.' },
+    ],
+    maps: [],
+  },
+  {
+    id: 'herodes',
+    name: 'Roma chega: o reino de Herodes',
+    year: -20,
+    period: '63–4 a.C.',
+    summary: 'Depois de Pompeu, a Judeia passa a pagar tributo a Roma. A Síria vira província romana, e em 30 a.C. o Egito também. O Senado faz de Herodes, um idumeu, “rei dos judeus”, em 40 a.C.: um rei aliado de Roma, com um território quase tão grande quanto o dos Asmoneus. É o mundo em que Jesus vai nascer.',
+    powers: [
+      { name: 'Roma', color: C.rome, polygon: ROME_EAST, label: [29.0, 41.2], note: 'Inclui a Síria (província desde 64 a.C.) e o Egito (desde 30 a.C.).' },
+      { name: 'Reino de Herodes', color: C.judah, polygon: HEROD_KINGDOM, label: [35.3, 32.3], note: 'Rei aliado de Roma (37–4 a.C.); reconstruiu o Templo.' },
+      { name: 'Reino Nabateu', color: C.nabatea, polygon: NABATEAN, label: [36.6, 29.6] },
+      { name: 'Império Parto', color: C.parthia, polygon: PARTHIA, label: [50.0, 33.6], note: 'O grande rival de Roma no Oriente.' },
+    ],
+    peoples: [
+      { name: 'Jerusalém', lon: 35.22, lat: 31.78 },
+      { name: 'Belém', lon: 35.2, lat: 31.7 },
+    ],
+    events: [
+      { year: '63 a.C.', text: 'Pompeu toma Jerusalém; a Judeia paga tributo a Roma.' },
+      { year: '40 a.C.', text: 'O Senado romano faz Herodes “rei dos judeus”.' },
+      { year: '37 a.C.', text: 'Herodes conquista Jerusalém.' },
+      { year: '27 a.C.', text: 'Augusto, o primeiro imperador: começa a paz romana.' },
+      { year: 'c. 20 a.C.', text: 'Herodes começa a reconstruir o Templo.', ref: 'Jo 2.20' },
+      { year: 'c. 6–4 a.C.', text: 'Jesus nasce em Belém, no fim do reinado de Herodes.', ref: 'Mt 2.1' },
     ],
     maps: [],
   },
@@ -316,7 +442,7 @@ export const ERAS: Era[] = [
     id: 'roma',
     name: 'O mundo romano',
     year: 30,
-    period: '63 a.C. – 100 d.C.',
+    period: '4 a.C. – 100 d.C.',
     summary: 'Roma domina o Mediterrâneo: estradas, paz romana e o grego como língua comum abrem caminho para o Evangelho. A Palestina do tempo de Jesus está dividida: Galileia e Pereia com Herodes Antipas, Judeia e Samaria com um governador romano (Pôncio Pilatos), o norte com o tetrarca Filipe, e as dez cidades gregas da Decápolis. A leste, o Império Parto é o grande rival de Roma.',
     powers: [
       { name: 'Império Romano', color: C.rome, polygon: [[19.0, 42.8], [28.5, 42.2], [29.5, 41.3], [33.0, 42.2], [36.0, 41.8], [39.0, 41.2], [40.5, 40.5], [39.5, 38.5], [38.5, 37.6], [40.0, 36.6], [38.8, 35.5], [38.0, 33.0], [36.6, 32.4], [35.7, 31.3], [34.9, 29.8], [33.0, 28.6], [32.6, 30.0], [31.8, 27.6], [33.1, 24.2], [32.8, 22], [31, 22], [30.6, 25], [30.2, 28], [29.0, 29.5], [25.0, 30.6], [19.0, 30.4]], label: [33.5, 39.2] },
@@ -514,3 +640,18 @@ export function formatKm(km: number): string {
   const rounded = km < 20 ? Math.round(km) : km < 200 ? Math.round(km / 5) * 5 : Math.round(km / 10) * 10;
   return `≈ ${rounded.toLocaleString('pt-BR')} km`;
 }
+
+/** As épocas do mapa "entre os Testamentos", em ordem (do último profeta ao nascimento de Jesus). */
+export const BRIDGE_ERAS = ['persia', 'alexandre', 'sucessores', 'macabeus', 'asmoneus', 'herodes'];
+
+/** O Mediterrâneo oriental, de perto: o Egito, a Síria e Israel no meio (mesma geografia do atlas). */
+export const BRIDGE_MAP: BibleMap = {
+  ...ATLAS_MAP,
+  // Dois pontos invisíveis (sem nome) só para a câmera enquadrar: a geografia do atlas é a mesma
+  places: [
+    { id: 'canto-oeste', name: '', lon: 24.6, lat: 40.6, region: true },
+    { id: 'canto-leste', name: '', lon: 45.6, lat: 28.6, region: true },
+  ],
+};
+/** Lugares que a câmera do mapa das épocas enquadra. */
+export const BRIDGE_FOCUS = ['canto-oeste', 'canto-leste'];

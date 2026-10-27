@@ -20,6 +20,11 @@ Eis que eu vos enviarei o profeta Elias, antes que venha o grande e terrível di
 — [[Ml 4.5]]
 :::
 
+Antes de ler, vale ver o mapa. Ele mostra, época por época, quem mandava em cada lugar e **onde ficava Israel no meio de tudo isso**: uma faixa pequena entre o Egito, a Síria e a Mesopotâmia, que sempre foi o caminho entre os impérios. Toque nas épocas para acompanhar.
+
+:::mapa-epocas persia,alexandre,sucessores,macabeus,asmoneus,herodes
+:::
+
 ## Por volta de 430 a.C.: o último profeta e o fim de um mundo
 
 Quando Malaquias profetizou, os judeus já tinham voltado do cativeiro na Babilônia. O Templo estava reconstruído, Neemias tinha levantado os muros de Jerusalém, e a terra era uma pequena província do **Império Persa**, que mandava em tudo, do Egito à Índia. Os judeus tinham liberdade para adorar, mas não um rei: obedeciam a governadores persas e aos sacerdotes.

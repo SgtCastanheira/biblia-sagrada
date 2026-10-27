@@ -401,3 +401,17 @@ test('no mapa estado por estado, cada etapa leva à história completa', async (
   await page.locator('.steps').getByRole('link', { name: /1914 · Ler a história/ }).first().click();
   await expect(page).toHaveURL(/\/assembleia-de-deus\/(ce|pb)$/);
 });
+
+test('entre os Testamentos: o mapa passa de uma época a outra e mostra onde está Israel', async ({ page }) => {
+  await page.goto('/artigo/entre-os-testamentos');
+  const mapa = page.locator('.era-map');
+  await expect(mapa).toBeAttached();
+  await mapa.scrollIntoViewIfNeeded();
+  await expect(mapa.locator('app-bible-map path.power').first()).toBeAttached();
+  await mapa.getByRole('button', { name: /Os quatro reinos dos sucessores/ }).click();
+  await expect(mapa.getByText('Ptolomeus', { exact: false }).first()).toBeVisible();
+  await expect(mapa.getByText('3 de 6')).toBeVisible();
+  await mapa.getByRole('button', { name: /Depois/ }).click();
+  await expect(mapa.getByText('Dn 11.31')).toBeVisible();
+  await expect(mapa.getByRole('link', { name: /Ver no atlas completo/ })).toHaveAttribute('href', /atlas\?epoca=macabeus/);
+});

@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { parseBlocks } from '../../src/app/core/rich-text-parser';
 import { ARTICLES, CLASSIC_SERMONS } from '../../src/app/core/library';
+import { BRIDGE_ERAS, findEra } from '../../src/app/core/atlas';
 
 const FIGURES = [...readFileSync('src/app/shared/figure.ts', 'utf8').matchAll(/@case \('([\w-]+)'\)/g)].map((m) => m[1]);
 
@@ -135,4 +136,17 @@ test('o leitor entende o bloco de envio (quem enviou quem)', () => {
     { from: 'Belém', to: 'Uruburetama', who: 'Maria Nazaré', year: '1914', note: 'voltou à sua terra' },
     { from: 'Belém', to: 'Maceió', who: 'Otto Nelson', year: '1915', note: undefined },
   ]);
+});
+
+test('mapa das épocas: o estudo "entre os Testamentos" usa só épocas do atlas, em ordem cronológica', () => {
+  const text = readFileSync('public/conteudo/artigos/entre-os-testamentos.md', 'utf8');
+  const block = parseBlocks(text).find((b) => b.type === 'eramap');
+  expect(block?.eras?.length).toBeGreaterThanOrEqual(5);
+  const eras = block!.eras!.map((id) => findEra(id));
+  expect(eras.every(Boolean), 'toda época do mapa existe no atlas').toBe(true);
+  const years = eras.map((e) => e!.year);
+  expect(years).toEqual([...years].sort((a, b) => a - b));
+  // Judá aparece em todas as épocas do mapa, para o leitor achar Israel no meio de tudo
+  for (const e of eras) expect(e!.powers.some((p) => /Jud|Asmon|Herodes/.test(p.name)), e!.id).toBe(true);
+  expect(BRIDGE_ERAS.every((id) => block!.eras!.includes(id))).toBe(true);
 });

@@ -8,7 +8,7 @@ export interface Inline {
 }
 
 export interface Block {
-  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon' | 'sends';
+  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon' | 'sends' | 'eramap';
   inlines?: Inline[];
   items?: Inline[][];
   events?: { date: string; title: string; text: Inline[] }[];
@@ -37,6 +37,8 @@ export interface Block {
   sermon?: string;
   /** Envios (":::envio Título"): de onde saiu, aonde chegou, quem foi, em que ano e por quem foi enviado. */
   sends?: { from: string; to: string; who: string; year: string; note?: string }[];
+  /** Mapa das épocas (":::mapa-epocas id1,id2,…"): ids de épocas do atlas, em ordem. */
+  eras?: string[];
 }
 
 const cells = (line: string) =>
@@ -70,6 +72,7 @@ export function parseInline(line: string): Inline[] {
  * ":::ficha Título" resume um período em linhas "- Rótulo | texto" (como começou, por quê, quem, o fim, o impacto),
  * e ":::sermao id" mostra o cartão de um sermão histórico do app.
  * ":::envio Título" mostra quem enviou quem: linhas "- De | Para | Quem | Ano | observação".
+ * ":::mapa-epocas persia,alexandre,…" mostra o mapa do atlas passando de uma época a outra (ids de ERAS).
  */
 export function parseBlocks(source: string): Block[] {
   const blocks: Block[] = [];
@@ -92,13 +95,15 @@ export function parseBlocks(source: string): Block[] {
       blocks.push({ type: 'image', alt: image[1], src: image[2], caption: image[3] ? parseInline(image[3]) : undefined });
       continue;
     }
-    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao|envio)(?:\s+(.+))?$/);
+    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao|envio|mapa-epocas)(?:\s+(.+))?$/);
     if (fence) {
       flush();
       const body: string[] = [];
       while (++i < lines.length && lines[i].trim() !== ':::') body.push(lines[i].trim());
       const text = body.filter(Boolean);
-      if (fence[1] === 'envio') {
+      if (fence[1] === 'mapa-epocas') {
+        blocks.push({ type: 'eramap', eras: (fence[2] ?? '').split(/[,\s]+/).filter(Boolean) });
+      } else if (fence[1] === 'envio') {
         const sends = text
           .filter((l) => l.startsWith('- '))
           .map((l) => {
