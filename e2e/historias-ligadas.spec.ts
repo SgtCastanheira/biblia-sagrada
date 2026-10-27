@@ -57,3 +57,9 @@ test('continuar de onde parou: na história e na tela inicial; o capítulo atual
   await card.click();
   await expect(page).toHaveURL(new RegExp(`/artigo/${ID}`));
 });
+
+test('a curiosidade leva ao estudo que a aprofunda, sem repetir o texto', async ({ page }) => {
+  await page.goto('/curiosidades/palavra-trindade');
+  await page.getByRole('link', { name: /Para estudar mais/ }).click();
+  await expect(page).toHaveURL(/\/artigo\/trindade/);
+});

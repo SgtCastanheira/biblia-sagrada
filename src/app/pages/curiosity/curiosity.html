@@ -58,6 +58,14 @@
     }
   </article>
 
+  @if (study(); as a) {
+    <a class="study" matRipple [routerLink]="['/artigo', a.id]">
+      <mat-icon>{{ a.icon }}</mat-icon>
+      <span><small>Para estudar mais</small>{{ a.title }}</span>
+      <mat-icon class="go">arrow_forward</mat-icon>
+    </a>
+  }
+
   <a class="next" matRipple [routerLink]="['/curiosidades', next().id]">
     <span class="next-label">Próxima curiosidade</span>
     <span class="next-question">{{ next().question }}</span>

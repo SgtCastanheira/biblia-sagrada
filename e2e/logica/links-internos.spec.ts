@@ -162,3 +162,8 @@ for (const turma of ['adultos', 'jovens', 'pre-adolescentes', 'adolescentes', 'j
   }
   expect(problems).toEqual([]);
 });
+
+test('curiosidades: o estudo indicado para aprofundar existe', () => {
+  const missing = CURIOSITIES.filter((c) => c.study && !findArticle(c.study)).map((c) => `${c.id} → ${c.study}`);
+  expect(missing).toEqual([]);
+});

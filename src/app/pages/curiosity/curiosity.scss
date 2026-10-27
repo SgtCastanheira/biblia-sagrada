@@ -202,6 +202,39 @@ h2 {
   }
 }
 
+.study {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  background: var(--mat-sys-surface-container);
+  font: 600 16px/1.35 var(--heading-font);
+
+  > mat-icon:first-child {
+    color: var(--accent-gold);
+  }
+
+  span {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  small {
+    font: 500 13px Inter, sans-serif;
+    color: var(--mat-sys-on-surface-variant);
+  }
+
+  .go {
+    color: var(--mat-sys-primary);
+  }
+}
+
 .next {
   display: grid;
   grid-template-columns: 1fr auto;

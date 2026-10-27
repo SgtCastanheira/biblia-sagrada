@@ -20,6 +20,8 @@ export interface Curiosity {
   points?: { label: string; text: string }[];
   closing?: string;
   refs: VerseRange[];
+  /** Estudo do app que aprofunda o assunto (id de artigo): a curiosidade leva a ele, sem repetir o texto. */
+  study?: string;
 }
 
 export const CURIOSITIES: Curiosity[] = [
@@ -290,6 +292,7 @@ export const CURIOSITIES: Curiosity[] = [
       'Jesus manda batizar “em nome” — no singular — do Pai, do Filho e do Espírito Santo.',
     ],
     refs: [{ bookId: 'MAT', chapter: 28, from: 19 }],
+    study: 'trindade',
   },
 ];
 

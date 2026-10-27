@@ -12,6 +12,7 @@ import { BibleService } from '../../core/bible.service';
 import { findBook } from '../../core/books';
 import { CURIOSITIES_IN_ORDER, findCuriosity, VerseRange } from '../../core/curiosities';
 import { CuriositiesService } from '../../core/curiosities.service';
+import { findArticle } from '../../core/library';
 import { SettingsService } from '../../core/settings.service';
 import { findVersion } from '../../core/versions';
 import { SourcesBox } from '../../shared/sources-box';
@@ -37,6 +38,11 @@ export class CuriosityPage {
   private readonly snackBar = inject(MatSnackBar);
 
   protected readonly curiosity = computed(() => findCuriosity(this.id()));
+  /** O estudo que aprofunda esta curiosidade, quando há. */
+  protected readonly study = computed(() => {
+    const id = this.curiosity()?.study;
+    return id ? findArticle(id) : undefined;
+  });
   protected readonly version = computed(() => findVersion(this.settings.version()));
 
   protected readonly next = computed(() => {
