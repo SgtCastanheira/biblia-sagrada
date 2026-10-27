@@ -322,7 +322,7 @@ test('estudo dos ministérios: na trilha Histórias da Bíblia, ligado ao dicion
 
 test('história da Igreja: o estudo de Daniel Berg e Gunnar Vingren, ligado ao do pentecostalismo no Brasil', async ({ page }) => {
   await page.goto('/artigo/pentecostes-no-brasil');
-  await page.locator('app-rich-text').getByRole('link', { name: 'Daniel Berg e Gunnar Vingren', exact: true }).click();
+  await page.locator('a.read').filter({ hasText: 'Daniel Berg e Gunnar Vingren' }).click();
   await expect(page).toHaveURL(/\/artigo\/daniel-berg-e-gunnar-vingren/);
   await expect(page.getByRole('heading', { name: 'O chamado: “Pará”' })).toBeVisible();
   await page.getByText('Fontes das informações').click();

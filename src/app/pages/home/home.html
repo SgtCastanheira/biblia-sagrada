@@ -123,6 +123,18 @@
     <a routerLink="/historia">Ver todas</a>
   </div>
   <app-story-rings />
+  @if (stories.unfinished(); as u) {
+    <a class="continue card story-resume" matRipple [routerLink]="['/artigo', u.article.id]">
+      <span class="book-badge"><mat-icon>{{ u.article.icon }}</mat-icon></span>
+      <span class="continue-text">
+        <span class="overline">Continuar a história</span>
+        <span class="title">{{ u.article.title }}</span>
+        <span class="progress"><span [style.width.%]="u.fraction * 100"></span></span>
+        <span class="caption">{{ percent(u.fraction) }}% lida · {{ u.article.period }}</span>
+      </span>
+      <mat-icon class="go">arrow_forward</mat-icon>
+    </a>
+  }
 </section>
 
 <!-- Novidades do app -->

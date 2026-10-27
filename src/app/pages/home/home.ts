@@ -15,6 +15,7 @@ import { FavoritesService } from '../../core/favorites.service';
 import { SettingsService } from '../../core/settings.service';
 import { findVersion, VERSIONS } from '../../core/versions';
 import { Sheets } from '../../shared/sheets';
+import { StoryProgressService } from '../../core/story-progress.service';
 import { StoryRings } from '../../shared/story-rings';
 
 /** Versículos sorteados na tela inicial: um diferente a cada vez que ela é aberta. */
@@ -128,6 +129,8 @@ export class HomePage {
   protected readonly curiosities = inject(CuriositiesService);
   protected readonly ebd = inject(EbdService);
   protected readonly devotional = inject(DevotionalService);
+  /** A história começada mais recente ("Continuar a história"). */
+  protected readonly stories = inject(StoryProgressService);
   protected readonly formatLong = formatLong;
   private readonly bible = inject(BibleService);
   private readonly sheets = inject(Sheets);
@@ -187,6 +190,10 @@ export class HomePage {
   protected readonly overallProgress = computed(() =>
     ((this.settings.totalRead() / TOTAL_CHAPTERS) * 100).toFixed(1).replace('.', ','),
   );
+
+  protected percent(fraction: number): number {
+    return Math.round(fraction * 100);
+  }
 
   protected anotherVerse(): void {
     this.highlightSignal.set(pickVerse());

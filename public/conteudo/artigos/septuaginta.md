@@ -2,7 +2,7 @@ Quando Jesus e os apóstolos citavam as Escrituras, muitas vezes não usavam o h
 
 ## Por que uma Bíblia em grego?
 
-Depois das conquistas de Alexandre, o Grande, o grego se tornou a língua de todo o mundo antigo (a história está em [Os 400 anos entre os Testamentos](/artigo/entre-os-testamentos)). Alexandre fundou, em 331 a.C., a cidade de **Alexandria**, no Egito, que logo virou o maior centro de estudo do mundo, com a sua famosa biblioteca. Para lá foram muitos judeus, formando uma das maiores comunidades judaicas fora de Israel.
+Depois das conquistas de Alexandre, o Grande, o grego se tornou a língua de todo o mundo antigo (a história está em *Os 400 anos entre os Testamentos*). Alexandre fundou, em 331 a.C., a cidade de **Alexandria**, no Egito, que logo virou o maior centro de estudo do mundo, com a sua famosa biblioteca. Para lá foram muitos judeus, formando uma das maiores comunidades judaicas fora de Israel.
 
 Os filhos e netos desses judeus nasceram em terra grega, falavam grego e muitos já não entendiam o hebraico. Mas ainda queriam ouvir a Lei nas sinagogas aos sábados. A solução natural foi **traduzir as Escrituras**. É a mesma razão pela qual, hoje, a Bíblia é traduzida: as pessoas precisam entender o que ouvem.
 
@@ -32,7 +32,7 @@ Foi traduzida a Lei, os Profetas e os outros livros dos nossos pais.
 
 ## Os livros e a ordem da nossa Bíblia
 
-A Septuaginta tem alguns livros a mais do que a Bíblia hebraica: Tobias, Judite, Sabedoria, Eclesiástico, Baruque e 1 e 2 Macabeus, além de trechos acrescentados a Ester e Daniel. São os livros que a Igreja Católica chama de **deuterocanônicos** e que as Bíblias protestantes não incluem. Por que isso aconteceu é contado em [Por que a Bíblia católica tem mais livros?](/artigo/apocrifos).
+A Septuaginta tem alguns livros a mais do que a Bíblia hebraica: Tobias, Judite, Sabedoria, Eclesiástico, Baruque e 1 e 2 Macabeus, além de trechos acrescentados a Ester e Daniel. São os livros que a Igreja Católica chama de **deuterocanônicos** e que as Bíblias protestantes não incluem. Por que isso aconteceu é contado em *Por que a Bíblia católica tem mais livros?*.
 
 Duas coisas na sua Bíblia vieram da Septuaginta, e quase ninguém percebe:
 
@@ -81,7 +81,7 @@ A Septuaginta foi também a base das primeiras traduções latinas (a *Vetus Lat
 
 ## Como a conhecemos hoje
 
-A Septuaginta chegou até nós em papiros e, sobretudo, em grandes códices cristãos do século IV e V, como o **Vaticano**, o **Sinaítico** e o **Alexandrino**, que trazem toda a Bíblia em grego (veja [Os manuscritos da Bíblia](/artigo/manuscritos)). A edição crítica mais usada hoje é a de **Alfred Rahlfs** (1935), revisada por Robert Hanhart (2006).
+A Septuaginta chegou até nós em papiros e, sobretudo, em grandes códices cristãos do século IV e V, como o **Vaticano**, o **Sinaítico** e o **Alexandrino**, que trazem toda a Bíblia em grego (veja *Os manuscritos da Bíblia*). A edição crítica mais usada hoje é a de **Alfred Rahlfs** (1935), revisada por Robert Hanhart (2006).
 
 Os **Manuscritos do Mar Morto**, achados em 1947, deram um resultado surpreendente: em alguns livros, como Jeremias, a Septuaginta é mais curta e tem outra ordem, e um manuscrito de Qumran confirma que existiu um texto hebraico assim. Ou seja, a Septuaginta nem sempre é uma “tradução livre”: às vezes ela guarda um texto hebraico antigo que se perdeu.
 
@@ -109,7 +109,7 @@ Os **Manuscritos do Mar Morto**, achados em 1947, deram um resultado surpreenden
 :::
 
 :::leia entre-os-testamentos
-Os 400 anos entre Malaquias e Mateus: como o mundo ficou do jeito que Jesus encontrou.
+O mundo em que a tradução nasceu: Alexandre, os Ptolomeus do Egito e a grande comunidade judaica de Alexandria.
 :::
 
 :::leia apocrifos

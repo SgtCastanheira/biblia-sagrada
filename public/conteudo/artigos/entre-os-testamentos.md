@@ -43,7 +43,7 @@ O que Alexandre deixou foi mais importante que as vitórias: o **mundo grego**. 
 
 Dos generais de Alexandre, dois nos interessam: **Ptolomeu**, que ficou com o Egito, e **Seleuco**, que ficou com a Síria e a Mesopotâmia. A Judeia ficava entre os dois, e foi disputada por ambos por mais de cem anos.
 
-Por volta de 301 a.C., passou para os **Ptolomeus**, do Egito. Foi um tempo relativamente calmo. Em Alexandria, formou-se uma enorme comunidade judaica que falava grego, e ali, no século III a.C., começou a **tradução do Antigo Testamento para o grego** — a Septuaginta, que os apóstolos citariam depois. (A história completa está em [A Septuaginta, a Bíblia grega](/artigo/septuaginta).)
+Por volta de 301 a.C., passou para os **Ptolomeus**, do Egito. Foi um tempo relativamente calmo. Em Alexandria, formou-se uma enorme comunidade judaica que falava grego, e ali, no século III a.C., começou a **tradução do Antigo Testamento para o grego** — a Septuaginta, que os apóstolos citariam depois. (A história completa está em *A Septuaginta, a Bíblia grega*.)
 
 Por volta de 200 a.C., o rei sírio Antíoco III venceu os egípcios e a Judeia passou para os **Selêucidas**, da Síria. No começo, eles respeitaram as leis dos judeus. Mas dentro de Jerusalém havia um grupo de sacerdotes e ricos que **queria ser grego**: construíram um ginásio, onde se fazia esporte sem roupa, e alguns tentaram esconder a circuncisão (1 Macabeus 1.11-15). Alguns compravam o cargo de sumo sacerdote. A fé do povo estava dividida.
 
@@ -85,7 +85,7 @@ Quem quiser entender como era esse exército que passou a mandar na terra, pode 
 
 Depois de décadas de intrigas, quem ficou com o poder foi **Herodes**, filho de um idumeu aliado de Roma. Em 40 a.C., o Senado romano o proclamou “rei dos judeus”; em 37 a.C., ele tomou Jerusalém à força. Reinou até 4 a.C., com mão de ferro e grande habilidade política. Para ganhar a simpatia do povo, começou por volta de 20 a.C. a **reconstruir o Templo** em tamanho muito maior — o Templo que Jesus conheceu.
 
-Foi esse rei, no fim do seu reinado, que recebeu os magos e mandou matar os meninos de Belém ([[Mt 2.1-16]]). Jesus nasceu no tempo dele. Para conhecer a família toda, veja [Quem eram os Herodes?](/artigo/a-familia-de-herodes) e [O templo que Jesus conheceu](/artigo/o-templo-de-herodes).
+Foi esse rei, no fim do seu reinado, que recebeu os magos e mandou matar os meninos de Belém ([[Mt 2.1-16]]). Jesus nasceu no tempo dele. Para conhecer a família toda, veja *Quem eram os Herodes?* e [O templo que Jesus conheceu](/artigo/o-templo-de-herodes).
 
 ## Quem era quem quando Jesus nasceu
 
@@ -96,9 +96,11 @@ Dos Macabeus aos Herodes, a vida religiosa também mudou. Surgiram grupos que o 
 | **Fariseus** | Mestres e leigos piedosos, muito ligados ao povo | Obedecer a Lei e as tradições orais; criam na ressurreição e nos anjos ([[At 23.8]]) |
 | **Saduceus** | A elite dos sacerdotes, ricos e ligados ao Templo | Só a Lei escrita; negavam a ressurreição ([[Mt 22.23]]) |
 | **Essênios** | Comunidades afastadas, como a de Qumran, perto do Mar Morto | Pureza rigorosa; ligados aos rolos hoje chamados “do Mar Morto” |
-| **Zelotes** | Nacionalistas, contra o pagamento de tributo a Roma | Lutar contra os romanos; um dos doze era “Simão, o Zelote” ([[Lc 6.15]]) |
+| **Zelotes** | Nacionalistas, contra o pagamento de tributo a Roma | Lutar contra os romanos; um dos doze era “Simão, chamado Zelote” ([[Lc 6.15]]) |
 | **Herodianos** | Partidários da família de Herodes | Apoiavam o governo; aparecem em [[Mc 3.6]] |
 | **Escribas** | Estudiosos e copistas da Lei | Ensinar e interpretar as Escrituras |
+
+Como e por que cada um desses grupos nasceu é a história seguinte desta trilha: *Fariseus, saduceus e os outros grupos*.
 
 ## As sinagogas, o grego e a esperança
 

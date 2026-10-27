@@ -49,5 +49,5 @@ Imagine, numa grande cidade, uma área do tamanho de um bairro, cercada de muros
 - No dicionário: [templo](/dicionario/templo), [tabernáculo](/dicionario/tabernaculo).
 
 :::leia entre-os-testamentos
-Os 400 anos entre Malaquias e Mateus: como o mundo ficou do jeito que Jesus encontrou.
+O mesmo Templo antes de Herodes: profanado por Antíoco IV em 167 a.C. e purificado pelos Macabeus em 164 a.C., na festa da Dedicação.
 :::

@@ -71,5 +71,5 @@ Os Evangelhos contrastam dois reis. Herodes, o Grande, “rei dos judeus” por 
 - No dicionário: [tetrarca](/dicionario/tetrarca).
 
 :::leia entre-os-testamentos
-Os 400 anos entre Malaquias e Mateus: como o mundo ficou do jeito que Jesus encontrou.
+Antes dos Herodes: os Macabeus, os reis-sacerdotes, a chegada de Pompeu em 63 a.C. e de onde vinha a família idumeia de Herodes.
 :::

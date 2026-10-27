@@ -40,7 +40,7 @@ export const TRAILS: Trail[] = [
     icon: 'menu_book',
     collections: ['estudos'],
     branches: [
-      { title: 'A ponte entre os Testamentos', ids: ['entre-os-testamentos'] },
+      { title: 'A ponte entre os Testamentos', ids: ['entre-os-testamentos', 'grupos-do-tempo-de-jesus'] },
       { title: 'Estudos', ids: ['ministerios-na-biblia', 'cativeiros-de-israel', 'os-faraos-da-biblia'] },
     ],
   },

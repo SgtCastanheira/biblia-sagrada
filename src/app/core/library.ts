@@ -83,6 +83,17 @@ export const ARTICLES: Article[] = [
     minutes: 14,
   },
   {
+    id: 'grupos-do-tempo-de-jesus',
+    collection: 'estudos',
+    story: true,
+    passages: ['EZR 7', 'NEH 8', 'MRK 3', 'MRK 7', 'MRK 12', 'MAT 22', 'MAT 23', 'LUK 6', 'ACT 5', 'ACT 23', 'PHP 3'],
+    title: 'Fariseus, saduceus e os outros grupos: como nasceram',
+    subtitle: 'Escribas, fariseus, saduceus, essênios, zelotes e herodianos: quando e por que cada grupo surgiu, de Esdras à guerra contra Roma.',
+    period: 'c. 458 a.C. – 70 d.C.',
+    icon: 'groups',
+    minutes: 10,
+  },
+  {
     id: 'os-faraos-da-biblia',
     collection: 'estudos',
     story: true,

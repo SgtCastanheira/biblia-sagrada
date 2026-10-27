@@ -1,5 +1,5 @@
 import { BackButton } from '../../shared/back-button';
-import { Component, computed, DestroyRef, effect, inject, input } from '@angular/core';
+import { afterNextRender, Component, computed, DestroyRef, effect, ElementRef, inject, input, signal, untracked } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
@@ -14,6 +14,9 @@ import { ListenService } from '../../core/listen.service';
 import { storyItems } from '../../shared/listen-dom';
 import { QuizPrompt } from '../../shared/quiz-prompt';
 import { trailOfArticle } from '../../core/trails';
+import { linkedArticles, trailStep } from '../../core/story-graph';
+import { StoryProgressService } from '../../core/story-progress.service';
+import { StoryJourney } from '../../shared/story-journey';
 import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
 import { outline } from '../../core/rich-text-parser';
@@ -23,7 +26,7 @@ import { SourcesBox } from '../../shared/sources-box';
 /** Artigo de estudo (história da Igreja, origem da Bíblia, estudos bíblicos). */
 @Component({
   selector: 'app-article',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, BibleMapView, SourcesBox, QuizPrompt],
+  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, BibleMapView, SourcesBox, QuizPrompt, StoryJourney],
   template: `
     @if (article(); as a) {
       <div class="article">
@@ -38,9 +41,16 @@ import { SourcesBox } from '../../shared/sources-box';
         </div>
         @if (story()) {
           <div class="progress" aria-hidden="true"></div>
+          <div class="now" [class.on]="!!chapter()" aria-hidden="true">
+            @if (chapter(); as c) {
+              <span class="now-n">{{ c.n }}/{{ toc().length }}</span>
+              <span class="now-t">{{ c.title }}</span>
+              <span class="now-left">faltam {{ c.left }} min</span>
+            }
+          </div>
           <header class="hero">
             <mat-icon class="watermark" aria-hidden="true">{{ a.icon }}</mat-icon>
-            <span class="hero-over">{{ collection()?.name }}</span>
+            <span class="hero-over">{{ step()?.trail?.name ?? collection()?.name }}@if (step(); as st) { · {{ st.index + 1 }} de {{ st.total }} }</span>
             <span class="era">{{ a.period }}</span>
             @if (a.portraits?.length) {
               <div class="portraits" aria-hidden="true">
@@ -55,10 +65,16 @@ import { SourcesBox } from '../../shared/sources-box';
             }
           </header>
         } @else {
-          <span class="overline">{{ collection()?.name }} · {{ a.period }}</span>
+          <span class="overline">{{ step()?.trail?.name ?? collection()?.name }} · {{ a.period }}</span>
           <h1 class="title">{{ a.title }}</h1>
           <p class="lead">{{ a.subtitle }}</p>
           <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
+        }
+
+        @if (resume(); as at) {
+          <button type="button" class="resume" (click)="resumeReading(at)"><mat-icon>bookmark</mat-icon> Continuar de onde parou · {{ percent(at) }}%</button>
+        } @else if (progress.isDone(id())) {
+          <p class="read-done"><mat-icon>check_circle</mat-icon> Você já leu esta história</p>
         }
 
         @if (mapInfo(); as m) {
@@ -95,14 +111,9 @@ import { SourcesBox } from '../../shared/sources-box';
           <app-quiz-prompt [link]="['/quiz/historia', id()]" text="Cinco perguntas sobre esta história: datas, personagens e ideias." />
         }
         <app-sources [article]="id()" />
-        <nav class="neighbours">
-          @if (neighbours().prev; as prev) {
-            <a class="card" matRipple [routerLink]="['/artigo', prev.id]"><mat-icon>arrow_back</mat-icon><span><small>Anterior</small>{{ prev.title }}</span></a>
-          } @else { <span></span> }
-          @if (neighbours().next; as next) {
-            <a class="card next" matRipple [routerLink]="['/artigo', next.id]"><span><small>Próximo</small>{{ next.title }}</span><mat-icon>arrow_forward</mat-icon></a>
-          }
-        </nav>
+        @if (body()) {
+          <app-story-journey [articleId]="id()" [linked]="linked()" />
+        }
       </div>
     } @else {
       <p class="empty">Texto não encontrado.</p>
@@ -138,12 +149,6 @@ import { SourcesBox } from '../../shared/sources-box';
       font: 500 15px/1.35 Inter, sans-serif; color: var(--mat-sys-primary);
     }
     .toc button:hover { background: var(--mat-sys-surface-container); }
-    .neighbours { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 32px; }
-    .neighbours a { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 16px; font: 600 15px/1.3 var(--heading-font); }
-    .neighbours a span { display: flex; flex-direction: column; min-width: 0; }
-    .neighbours small { font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
-    .neighbours .next { justify-content: flex-end; text-align: right; }
-    .neighbours mat-icon { color: var(--mat-sys-primary); flex: none; }
     .toc .n {
       display: inline-grid; place-items: center; width: 24px; height: 24px; margin-right: 10px; border-radius: 50%;
       font: 700 13px Inter, sans-serif; color: var(--accent-gold); border: 1px solid var(--accent-gold);
@@ -181,15 +186,30 @@ import { SourcesBox } from '../../shared/sources-box';
       transform-origin: 0 50%; transform: scaleX(0);
     }
     @supports (animation-timeline: scroll()) {
-      .part-of {
-      position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; margin-top: 14px; padding: 0 14px;
-      border-radius: 20px; text-decoration: none; font: 600 13px Inter, sans-serif; color: #fbf4e6;
-      background: rgba(226, 194, 140, .16); border: 1px solid rgba(226, 194, 140, .4);
-    }
-    .part-of mat-icon { font-size: 18px; width: 18px; height: 18px; color: #e2c28c; }
     .progress { display: block; animation: read linear both; animation-timeline: scroll(root); }
     }
     @keyframes read { to { transform: scaleX(1); } }
+    .resume {
+      display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin: 0 0 18px; padding: 0 18px; border-radius: 22px; cursor: pointer;
+      border: 1px solid var(--accent-gold); background: var(--mat-sys-surface-container); color: var(--mat-sys-on-surface); font: 600 15px Inter, sans-serif;
+    }
+    .resume mat-icon { color: var(--accent-gold); }
+    .read-done { display: flex; align-items: center; gap: 6px; margin: 0 0 18px; font: 500 14px Inter, sans-serif; color: var(--mat-sys-primary); }
+    .read-done mat-icon { font-size: 20px; width: 20px; height: 20px; }
+    /* Capítulo atual, embaixo da tela, enquanto se lê a história */
+    .now {
+      position: fixed; z-index: 25; left: 0; right: 0; margin-inline: auto; bottom: calc(var(--nav-height, 72px) + 12px + env(safe-area-inset-bottom));
+      display: flex; align-items: center; gap: 8px; width: max-content; max-width: min(520px, calc(100vw - 32px)); padding: 8px 14px; border-radius: 20px; box-sizing: border-box;
+      background: var(--mat-sys-surface-container-highest); color: var(--mat-sys-on-surface); border: 1px solid var(--mat-sys-outline-variant);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .18); font: 500 13px Inter, sans-serif;
+      transform: translateY(140%); opacity: 0; transition: transform .25s, opacity .25s; pointer-events: none;
+    }
+    .now.on { transform: none; opacity: 1; }
+    @media (min-width: 840px) { .now { bottom: 20px; } }
+    @media (prefers-reduced-motion: reduce) { .now { transition: none; } }
+    .now-n { flex: none; font-weight: 700; color: var(--accent-gold); }
+    .now-t { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: 600; }
+    .now-left { flex: none; color: var(--mat-sys-on-surface-variant); }
   `,
 })
 export class ArticlePage {
@@ -211,7 +231,18 @@ export class ArticlePage {
   }
 
 
+  protected readonly progress = inject(StoryProgressService);
+  private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
+
   protected readonly article = computed(() => findArticle(this.id()));
+  /** Posição na trilha (para a capa e para o painel do fim). */
+  protected readonly step = computed(() => trailStep(this.id()));
+  /** Histórias que o texto já cita: o painel do fim não as sugere de novo. */
+  protected readonly linked = computed(() => linkedArticles(this.body() ?? ''));
+  /** Onde a pessoa parou da última vez (some quando ela continua ou passa desse ponto). */
+  protected readonly resume = signal<number | null>(null);
+  /** Capítulo que está na tela, com o tempo que falta. */
+  protected readonly chapter = signal<{ n: number; title: string; left: number } | null>(null);
   protected readonly collection = computed(() => {
     const a = this.article();
     return a ? COLLECTIONS[a.collection] : undefined;
@@ -245,15 +276,60 @@ export class ArticlePage {
     document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  protected readonly neighbours = computed(() => {
+  protected percent(at: number): number {
+    return Math.round(at * 100);
+  }
+
+  /** Leva ao ponto em que a pessoa parou. */
+  protected resumeReading(at: number): void {
+    const text = this.host.nativeElement.querySelector('app-rich-text');
+    this.resume.set(null);
+    if (!text) return;
+    const r = text.getBoundingClientRect();
+    window.scrollTo({ top: scrollY + r.top + at * r.height - innerHeight * 0.5, behavior: 'smooth' });
+  }
+
+  /** A cada rolagem: guarda até onde leu (no fim do texto, a história fica lida) e mostra o capítulo atual. */
+  private track(): void {
+    const text = this.host.nativeElement.querySelector('app-rich-text');
     const a = this.article();
-    const list = a ? articlesOf(a.collection) : [];
-    const i = list.findIndex((x) => x.id === a?.id);
-    return { prev: i > 0 ? list[i - 1] : null, next: i >= 0 && i < list.length - 1 ? list[i + 1] : null };
-  });
+    if (!text || !a || !this.body()) return;
+    const r = text.getBoundingClientRect();
+    const h = innerHeight;
+    const fraction = r.bottom <= h ? 1 : Math.min(1, Math.max(0, (h * 0.5 - r.top) / r.height));
+    this.progress.record(a.id, fraction);
+    const at = this.resume();
+    if (at !== null && fraction >= at - 0.02) this.resume.set(null);
+    if (!this.story()) return;
+    const toc = this.toc();
+    let n = -1;
+    for (let i = 0; i < toc.length; i++) {
+      const el = document.getElementById(toc[i].anchor);
+      if (!el || el.getBoundingClientRect().top > h * 0.35) break;
+      n = i;
+    }
+    this.chapter.set(n >= 0 && r.bottom > h * 0.6 ? { n: n + 1, title: toc[n].text, left: Math.max(1, Math.round(a.minutes * (1 - fraction))) } : null);
+  }
 
   constructor() {
-    inject(DestroyRef).onDestroy(() => this.listen.stop());
+    const destroy = inject(DestroyRef);
+    destroy.onDestroy(() => this.listen.stop());
+    // Ao abrir (ou trocar de) história: onde parou da última vez, e nenhum capítulo na tela ainda
+    effect(() => {
+      const id = this.id();
+      untracked(() => {
+        this.resume.set(this.progress.resumeAt(id));
+        this.chapter.set(null);
+      });
+    });
+    afterNextRender(() => {
+      let frame = 0;
+      const onScroll = () => {
+        if (!frame) frame = requestAnimationFrame(() => { frame = 0; this.track(); });
+      };
+      addEventListener('scroll', onScroll, { passive: true });
+      destroy.onDestroy(() => { removeEventListener('scroll', onScroll); cancelAnimationFrame(frame); });
+    });
     const title = inject(Title);
     effect(() => {
       const a = this.article();

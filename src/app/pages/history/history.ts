@@ -1,8 +1,9 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, inject, input } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { findArticle } from '../../core/library';
+import { StoryProgressService } from '../../core/story-progress.service';
 import { StoryRings } from '../../shared/story-rings';
 import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '../../core/trails';
 
@@ -25,9 +26,23 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
     @if (trail(); as t) {
       <section class="cover">
         <mat-icon class="watermark" aria-hidden="true">{{ t.icon }}</mat-icon>
-        <span class="c-over">{{ count(t) }} {{ count(t) === 1 ? 'história' : 'histórias' }}</span>
+        <span class="c-over">{{ count(t) }} {{ count(t) === 1 ? 'história' : 'histórias' }}@if (state(t).done) { · {{ state(t).done }} {{ state(t).done === 1 ? 'lida' : 'lidas' }} }</span>
         <h2>{{ t.name }}</h2>
         <p>{{ t.description }}</p>
+        @if (state(t).done) {
+          <span class="bar" aria-hidden="true"><span [style.width.%]="100 * state(t).done / state(t).total"></span></span>
+        }
+        @if (state(t).next; as nextId) {
+          <!-- Só para quem já começou: para começar, a primeira história já está logo abaixo -->
+          @if (state(t).started && article(nextId); as n) {
+            <a class="go-on" matRipple [routerLink]="['/artigo', n.id]">
+              <mat-icon>play_arrow</mat-icon>
+              <span><small>Continuar a trilha</small>{{ n.title }}</span>
+            </a>
+          }
+        } @else {
+          <span class="all-read"><mat-icon>check_circle</mat-icon> Você leu todas as histórias desta trilha</span>
+        }
       </section>
 
       @for (b of t.branches; track b.title) {
@@ -37,11 +52,15 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
             <a class="card row" matRipple [routerLink]="['/artigo', a.id]">
               <span class="badge"><mat-icon>{{ a.icon }}</mat-icon></span>
               <span class="texts">
-                <span class="meta">{{ a.period }}</span>
+                <span class="meta">{{ a.period }}@if (progress.isDone(a.id)) { · lida } @else if (progress.fraction(a.id) >= 0.05) { · {{ percent(a.id) }}% lida }</span>
                 <span class="name">{{ a.title }}</span>
                 <span class="desc">{{ a.subtitle }}</span>
               </span>
-              <mat-icon class="go">chevron_right</mat-icon>
+              @if (progress.isDone(a.id)) {
+                <mat-icon class="go done" aria-label="Lida">check_circle</mat-icon>
+              } @else {
+                <mat-icon class="go">chevron_right</mat-icon>
+              }
             </a>
           }
           @for (l of b.links ?? []; track l.link) {
@@ -72,7 +91,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
             <span class="texts">
               <span class="name">{{ t.name }}</span>
               <span class="desc">{{ t.description }}</span>
-              <span class="meta">{{ count(t) }} {{ count(t) === 1 ? 'história' : 'histórias' }}</span>
+              <span class="meta">{{ count(t) }} {{ count(t) === 1 ? 'história' : 'histórias' }}@if (state(t).done) { · {{ state(t).done }} {{ state(t).done === 1 ? 'lida' : 'lidas' }} }</span>
             </span>
           </a>
         }
@@ -109,6 +128,16 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
     .topic .name { font: 600 18px/1.25 var(--heading-font); }
     .topic .desc { font: 400 14px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .topic .meta { margin-top: 2px; font: 600 13px Inter, sans-serif; color: var(--accent-gold); }
+    .bar { position: relative; display: block; height: 6px; margin-top: 6px; border-radius: 3px; background: rgba(255, 255, 255, .18); overflow: hidden; }
+    .bar span { display: block; height: 100%; border-radius: 3px; background: #f1d9a8; }
+    .go-on {
+      position: relative; display: flex; align-items: center; gap: 10px; align-self: flex-start; min-height: 48px; margin-top: 10px; padding: 6px 18px 6px 12px;
+      border-radius: 24px; text-decoration: none; color: #1b2b23; background: #f1d9a8; font: 600 15px/1.25 var(--heading-font);
+    }
+    .go-on span { display: flex; flex-direction: column; }
+    .go-on small { font: 600 13px Inter, sans-serif; color: #3d3220; }
+    .all-read { position: relative; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font: 600 14px Inter, sans-serif; color: #f1d9a8; }
+    .go.done { color: var(--mat-sys-primary); }
     .next { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; padding: 14px 18px; border-radius: 18px; text-decoration: none; color: var(--mat-sys-primary); background: var(--mat-sys-surface-container); font: 600 17px/1.3 var(--heading-font); }
     .next span { display: flex; flex-direction: column; }
     .next small { font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
@@ -119,6 +148,7 @@ export class HistoryPage {
   /** Links antigos, com a coleção. */
   readonly colecao = input<string>();
   protected readonly trails = TRAILS;
+  protected readonly progress = inject(StoryProgressService);
   protected readonly trail = computed(() => findTrail(this.trilha()) ?? trailOfCollection(this.colecao()));
   protected readonly next = computed(() => {
     const i = TRAILS.findIndex((t) => t.id === this.trail()?.id);
@@ -127,6 +157,18 @@ export class HistoryPage {
 
   protected count(t: Trail): number {
     return trailArticleIds(t).length;
+  }
+
+  protected state(t: Trail) {
+    return this.progress.trail(t);
+  }
+
+  protected article(id: string) {
+    return findArticle(id);
+  }
+
+  protected percent(id: string): number {
+    return Math.round(this.progress.fraction(id) * 100);
   }
 
   protected articlesOf(ids: string[]) {

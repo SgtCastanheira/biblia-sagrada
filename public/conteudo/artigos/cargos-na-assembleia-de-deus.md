@@ -2,7 +2,7 @@ Cooperador, diácono, presbítero, evangelista e pastor: como alguém chega a ca
 
 ## Primeiro, um aviso
 
-A Assembleia de Deus **não tem uma regra única**. A CGADB, a CONAMAD e a CADB são convenções diferentes, e dentro de cada uma, cada ministério e cada igreja-sede tem o seu estatuto e o seu regimento. Quem consagra é o pastor-presidente com o seu ministério (o grupo de pastores, evangelistas e presbíteros), segundo o regimento de cada um. Na CGADB, os ministérios são independentes entre si; na CONAMAD, o governo é mais centralizado ([As convenções das Assembleias de Deus](/artigo/madureira-e-a-separacao)). Por isso, **a regra que vale para a sua igreja é a que está no regimento dela**, e não uma regra nacional.
+A Assembleia de Deus **não tem uma regra única**. A CGADB, a CONAMAD e a CADB são convenções diferentes, e dentro de cada uma, cada ministério e cada igreja-sede tem o seu estatuto e o seu regimento. Quem consagra é o pastor-presidente com o seu ministério (o grupo de pastores, evangelistas e presbíteros), segundo o regimento de cada um. Na CGADB, os ministérios são independentes entre si; na CONAMAD, o governo é mais centralizado (*As convenções das Assembleias de Deus*). Por isso, **a regra que vale para a sua igreja é a que está no regimento dela**, e não uma regra nacional.
 
 ## A escada do ministério
 

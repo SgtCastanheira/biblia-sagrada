@@ -41,5 +41,5 @@ Para conversar sobre isso com amigos católicos, o melhor caminho é o respeito 
 :::
 
 :::leia entre-os-testamentos
-Os 400 anos entre Malaquias e Mateus: como o mundo ficou do jeito que Jesus encontrou.
+Os anos que os livros dos Macabeus contam: a perseguição de Antíoco IV, a revolta e a festa da Dedicação.
 :::

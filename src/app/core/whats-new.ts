@@ -22,6 +22,17 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'historias-ligadas',
+    date: '27 de outubro de 2026',
+    title: 'Histórias ligadas: continue de onde parou',
+    items: [
+      { icon: 'route', title: 'Trilhas como uma série', text: 'No fim de cada história aparece a próxima da trilha, como o próximo episódio, com quantas você já leu. No fim da trilha, o app leva à trilha seguinte.', link: '/historia?trilha=igreja' },
+      { icon: 'schedule', title: 'Na mesma época', text: 'Também no fim de cada história: o que acontecia no mesmo tempo em outras trilhas. O app não repete as histórias que o próprio texto já indicou.', link: '/artigo/constantino-e-os-concilios' },
+      { icon: 'bookmark', title: 'Continue de onde parou', text: 'O app lembra onde você parou em cada história. Ao voltar, um toque leva ao ponto certo, e a tela inicial mostra a última história começada.', link: '/' },
+      { icon: 'check_circle', title: 'Histórias lidas', text: 'As histórias que você terminou ganham um check, e cada trilha mostra quantas já leu e qual é a próxima. Enquanto lê, o capítulo atual aparece embaixo da tela, com o tempo que falta.', link: '/historia' },
+    ],
+  },
+  {
     id: 'ebd-todas-as-turmas-e-historias-desenhadas',
     date: '27 de outubro de 2026',
     title: 'EBD de todas as turmas, bolinhas e histórias desenhadas',

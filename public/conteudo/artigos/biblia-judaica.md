@@ -26,7 +26,7 @@ A Bíblia hebraica em 24 rolos, em três partes. Toque no outro botão para ver 
 
 Nossa Bíblia tem 39 livros no Antigo Testamento; a dos judeus, 24. **O conteúdo é o mesmo.** A diferença é que os judeus juntam em **um só rolo** o que nós separamos: 1 e 2 Samuel, 1 e 2 Reis, 1 e 2 Crônicas, Esdras e Neemias, e os **Doze Profetas** (de Oseias a Malaquias) formam cinco rolos. A divisão em dois livros veio depois, da tradução grega, e só entrou nas edições hebraicas impressas no século XVI.
 
-Outros povos e épocas contavam de outro jeito. O historiador judeu **Josefo**, do século I, diz que os judeus tinham **22 livros**: 5 de Moisés, 13 dos profetas e 4 de hinos e conselhos, o mesmo número das **letras do alfabeto hebraico**. É o mesmo conteúdo, contado de outro modo ([A formação do Antigo Testamento](/artigo/formacao-do-antigo-testamento)).
+Outros povos e épocas contavam de outro jeito. O historiador judeu **Josefo**, do século I, diz que os judeus tinham **22 livros**: 5 de Moisés, 13 dos profetas e 4 de hinos e conselhos, o mesmo número das **letras do alfabeto hebraico**. É o mesmo conteúdo, contado de outro modo (*A formação do Antigo Testamento*).
 
 ## Como era a Bíblia no tempo de Jesus
 
@@ -42,7 +42,7 @@ Por que a ordem dos livros importa? Jesus mostra uma pista. Ele disse aos farise
 
 ## Qual seria a ordem se não fosse a Septuaginta?
 
-Quando os judeus de Alexandria traduziram a Bíblia para o grego (veja [A Septuaginta, a Bíblia grega](/artigo/septuaginta)), os livros foram **reagrupados por assunto**: a Lei, os livros históricos, os poéticos e os proféticos. É essa a ordem que a Igreja herdou e que está na nossa Bíblia.
+Quando os judeus de Alexandria traduziram a Bíblia para o grego (veja *A Septuaginta, a Bíblia grega*), os livros foram **reagrupados por assunto**: a Lei, os livros históricos, os poéticos e os proféticos. É essa a ordem que a Igreja herdou e que está na nossa Bíblia.
 
 **A ordem da Bíblia hebraica**, que não passou pela Septuaginta, é esta:
 
