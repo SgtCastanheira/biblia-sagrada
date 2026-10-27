@@ -37,11 +37,12 @@ import { BackButton } from '../../shared/back-button';
       <ol class="lessons" aria-label="Lições do trimestre">
         @for (item of quarter().lessons; track item.number) {
           <li>
-            <button type="button" class="lesson" [class.ready]="!!item.lesson" [class.sel]="selected() === item.number" [class.due]="item.due"
+            <button type="button" class="lesson" [class.ready]="!!item.lesson" [class.sel]="selected() === item.number" [class.due]="item.due" [class.done]="item.done"
               [attr.aria-pressed]="selected() === item.number"
-              [attr.aria-label]="item.lesson ? 'Lição ' + item.number + ': ' + item.lesson.title : 'Lição ' + item.number + ': em preparação'"
+              [attr.aria-label]="(item.lesson ? 'Lição ' + item.number + ': ' + item.lesson.title : 'Lição ' + item.number + ': em preparação') + (item.done ? ', já aconteceu' : '')"
               (click)="selected.set(item.number)">
               <span class="num">{{ item.number }}</span>
+              @if (item.done) { <mat-icon class="tick" aria-hidden="true">check</mat-icon> }
             </button>
             <span class="dt" [class.due]="item.due">{{ dateShort(item.date) }}</span>
           </li>
@@ -55,7 +56,7 @@ import { BackButton } from '../../shared/back-button';
             <span class="meta">Lição {{ cur.number }}@if (cur.lesson) { · {{ cur.lesson.refs }} }</span>
             <span class="name">{{ cur.lesson ? cur.lesson.title : 'Em preparação' }}</span>
             @if (cur.lesson) { <span class="desc">{{ cur.lesson.theme }}</span> }
-            <span class="when" [class.due]="cur.due"><mat-icon>event</mat-icon>{{ dateLabel(cur.date) }}@if (cur.due) { · é a próxima aula }</span>
+            <span class="when" [class.due]="cur.due"><mat-icon>{{ cur.done ? 'check_circle' : 'event' }}</mat-icon>{{ dateLabel(cur.date) }}@if (cur.due) { · é a próxima aula } @else if (cur.done) { · já aconteceu }</span>
           </span>
           @if (cur.lesson; as l) {
             <a class="open" matRipple [routerLink]="[p().path, 'aula', l.id]" [queryParams]="{ turma: c.id }">Abrir a lição <mat-icon>arrow_forward</mat-icon></a>
@@ -117,6 +118,9 @@ import { BackButton } from '../../shared/back-button';
     .lesson:not(.ready) .num { color: var(--mat-sys-on-surface-variant); border-color: transparent; background: transparent; }
     .lesson.sel.ready .num { background: var(--mat-sys-primary); color: var(--mat-sys-on-primary); }
     .lesson.sel:not(.ready) { border-style: solid; border-color: var(--mat-sys-primary); }
+    /* Aula que já aconteceu: um check no canto da bolinha */
+    .lesson { position: relative; }
+    .tick { position: absolute; right: -2px; bottom: -2px; width: 22px; height: 22px; font-size: 16px; display: grid; place-items: center; border-radius: 50%; background: var(--mat-sys-primary); color: var(--mat-sys-on-primary); border: 2px solid var(--mat-sys-surface); box-sizing: border-box; }
     .lesson:focus-visible { outline: 2px solid var(--mat-sys-primary); outline-offset: 3px; }
     /* A lição da vez: pisca para chamar a atenção do professor */
     .lesson.due .num { background: var(--accent-gold); color: #1d1608; border-color: var(--accent-gold); }

@@ -1,13 +1,11 @@
 import { Component, computed, effect, ElementRef, inject, input, signal, viewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { ACTIVITY_ICONS, dueLessonNumber, IbucLesson, lessonDate, lessonDateLabel } from '../core/teaching';
-import { sceneFor, storyboard } from '../core/scenes';
 import { PassageView } from './passage-view';
 import { RichText } from './rich-text';
-import { SceneArt } from './scene-art';
 import { Sheets } from './sheets';
 
-type CardKind = 'capa' | 'cena' | 'lembretes' | 'abertura' | 'curiosidade' | 'contexto' | 'atividade' | 'perguntas' | 'vida' | 'versiculo' | 'aprofundar';
+type CardKind = 'capa' | 'lembretes' | 'abertura' | 'curiosidade' | 'contexto' | 'atividade' | 'perguntas' | 'vida' | 'versiculo' | 'aprofundar';
 
 interface LessonCard {
   kind: CardKind;
@@ -23,7 +21,7 @@ interface LessonCard {
  */
 @Component({
   selector: 'app-lesson-cards',
-  imports: [MatIconModule, RichText, PassageView, SceneArt],
+  imports: [MatIconModule, RichText, PassageView],
   template: `
     <div class="segments" role="tablist" aria-label="Cartões da aula">
       @for (c of cards(); track $index) {
@@ -40,7 +38,6 @@ interface LessonCard {
             @switch (c.kind) {
               @case ('capa') {
                 <div class="cover">
-                  <div class="art"><app-scene-art [scene]="scene()" fit="cover" /></div>
                   <span class="tag"><mat-icon>{{ c.icon }}</mat-icon> {{ lesson().example ? 'Modelo de aula' : 'Lição ' + (lesson().number ?? '') }}</span>
                   <h2>{{ lesson().title }}</h2>
                   <p class="theme">{{ lesson().theme }}</p>
@@ -53,15 +50,6 @@ interface LessonCard {
                   </div>
                   <p class="swipe"><mat-icon>swipe</mat-icon> Deslize para o lado</p>
                 </div>
-              }
-              @case ('cena') {
-                <h2><mat-icon>{{ c.icon }}</mat-icon> A história desenhada</h2>
-                <div class="big"><app-scene-art [scene]="scene()" [description]="lesson().title" fit="banner" /></div>
-                <ol class="panels">
-                  @for (p of panels(); track $index) {
-                    <li><div class="pic"><app-scene-art [scene]="p.scene" [description]="p.caption" /></div><span class="cap"><b>{{ $index + 1 }}</b> {{ p.caption }}</span></li>
-                  }
-                </ol>
               }
               @case ('lembretes') {
                 <h2><mat-icon>{{ c.icon }}</mat-icon> Lembretes para você, professor(a)</h2>
@@ -147,13 +135,6 @@ interface LessonCard {
     .inline-ref { display: inline-flex; align-items: center; min-height: 40px; padding: 0 4px; border: 0; background: none; cursor: pointer; color: var(--mat-sys-primary); font: 600 14px Inter, sans-serif; text-decoration: underline; text-underline-offset: 3px; }
     .card.capa { padding: 0; border: 0; background: radial-gradient(110% 80% at 100% 0%, rgba(226, 194, 140, .26), transparent 60%), linear-gradient(165deg, #2f4a3d, #1b2b23 80%); color: #fbf4e6; }
     .cover { display: flex; flex-direction: column; gap: 10px; min-height: 100%; box-sizing: border-box; padding: 22px 20px 20px; }
-    .cover .art { height: 130px; margin: -22px -20px 4px; overflow: hidden; border-radius: 26px 26px 0 0; }
-    .big { height: 150px; margin: 0 0 12px; overflow: hidden; border-radius: 18px; border: 1px solid var(--mat-sys-outline-variant); }
-    .panels { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .panels li { display: flex; flex-direction: column; gap: 4px; }
-    .pic { height: 84px; overflow: hidden; border-radius: 12px; border: 1px solid var(--mat-sys-outline-variant); }
-    .cap { font: 500 14px/1.3 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
-    .cap b { display: inline-grid; place-items: center; width: 20px; height: 20px; margin-right: 4px; border-radius: 50%; background: var(--accent-gold); color: #1d1608; font: 700 12px Inter, sans-serif; }
     .cover .tag { display: inline-flex; align-items: center; gap: 6px; font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 1.2px; color: #e8c085; }
     .cover h2 { display: block; margin: 4px 0 0; font: 600 28px/1.15 var(--heading-font); color: #fff8ec; }
     .cover .theme { margin: 0; font: 400 16px/1.5 var(--reading-font); color: #eadfcb; }
@@ -187,7 +168,7 @@ export class LessonCards {
 
   protected readonly cards = computed<LessonCard[]>(() => {
     const l = this.lesson();
-    const out: LessonCard[] = [{ kind: 'capa', label: 'Capa', icon: 'school' }, { kind: 'cena', label: 'A história desenhada', icon: 'palette' }];
+    const out: LessonCard[] = [{ kind: 'capa', label: 'Capa', icon: 'school' }];
     if (l.reminders?.length) out.push({ kind: 'lembretes', label: 'Lembretes', icon: 'checklist' });
     out.push({ kind: 'abertura', label: 'Abertura', icon: 'campaign' });
     l.curiosities.forEach((c, index) => out.push({ kind: 'curiosidade', label: `Você sabia: ${c.title}`, icon: 'lightbulb', index }));
@@ -198,15 +179,6 @@ export class LessonCards {
     out.push({ kind: 'versiculo', label: 'Versículo para decorar', icon: 'menu_book' });
     if (l.deepen) out.push({ kind: 'aprofundar', label: 'Para aprofundar', icon: 'travel_explore' });
     return out;
-  });
-
-  /** A cena da lição, escolhida pelo assunto (título, tema e textos). */
-  protected readonly scene = computed(() => sceneFor(`${this.lesson().title} ${this.lesson().theme} ${this.lesson().refs}`));
-  /** Os quadrinhos: um para cada "Você sabia?", com o título como legenda. */
-  protected readonly panels = computed(() => {
-    const facts = this.lesson().curiosities.slice(0, 4);
-    const scenes = storyboard(facts.map((f) => `${f.title} ${f.text}`), this.scene());
-    return facts.map((f, i) => ({ caption: f.title, scene: scenes[i] }));
   });
 
   protected readonly date = computed(() => {

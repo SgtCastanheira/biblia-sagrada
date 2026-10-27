@@ -183,6 +183,8 @@ export function quartersOf(program: TeachingProgram, classId: string) {
           lesson: supportLesson(program, classId, key, i + 1),
           date: lessonDate(key, i + 1),
           due: due === i + 1,
+          /** A data da aula já passou: o professor já a deu. */
+          done: startOfDay(lessonDate(key, i + 1)).getTime() < startOfDay(new Date()).getTime(),
         })),
       };
     });

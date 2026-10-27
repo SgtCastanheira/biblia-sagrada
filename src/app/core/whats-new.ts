@@ -27,8 +27,7 @@ export const RELEASES: Release[] = [
     title: 'EBD de todas as turmas, bolinhas e histórias desenhadas',
     items: [
       { icon: 'school', title: 'As 13 lições de todas as turmas', text: 'Do Berçário aos Adultos, as 10 turmas têm as 13 lições do 4º trimestre, com lembretes, dinâmicas, brincadeiras e perguntas para o professor.', link: '/ebd/apoio' },
-      { icon: 'counter_1', title: 'Lições em bolinhas', text: 'Os números das lições agora são bolinhas, como as das histórias. A lição da vez pisca em dourado.', link: '/ebd/apoio/primarios' },
-      { icon: 'draw', title: 'A história desenhada', text: 'Cada lição ganhou uma cena desenhada, para o professor mostrar e contar a história de forma mais visual.', link: '/ebd/apoio/juniores' },
+      { icon: 'counter_1', title: 'Lições em bolinhas', text: 'Os números das lições agora são bolinhas, como as das histórias. A lição da vez pisca em dourado, e as aulas que já passaram ganham um check.', link: '/ebd/apoio/primarios' },
       { icon: 'flag', title: 'A bandeira de cada estado', text: 'Na lista dos estados, na página de cada um e nas etapas do mapa da Assembleia de Deus.', link: '/assembleia-de-deus' },
     ],
   },
