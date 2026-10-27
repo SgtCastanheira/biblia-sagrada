@@ -28,7 +28,7 @@ export interface EbdQuarter {
 
 export type LessonStatus = 'done' | 'today' | 'next' | 'past' | 'future';
 
-export const EBD_CLASSES = ['Jovens', 'Adultos', 'Adolescentes', 'Juvenis', 'Pré-adolescentes', 'Juniores', 'Primários', 'Discipulando'];
+export const EBD_CLASSES = ['Jovens', 'Adultos', 'Adolescentes', 'Juvenis', 'Pré-adolescentes', 'Juniores', 'Primários', 'Jardim de Infância', 'Maternal', 'Berçário', 'Discipulando'];
 export const LESSONS_PER_QUARTER = 13;
 export const CPAD_URL = 'https://www.cpad.com.br';
 

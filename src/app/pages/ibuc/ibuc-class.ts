@@ -3,7 +3,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { findProgram, lessonsOfClass, quartersOf } from '../../core/teaching';
+import { findProgram, lessonDateLabel, lessonsOfClass, quartersOf } from '../../core/teaching';
 import { BackButton } from '../../shared/back-button';
 
 /** Uma turma (IBUC ou EBD): como ensinar nessa idade e as aulas. */
@@ -39,14 +39,18 @@ import { BackButton } from '../../shared/back-button';
           <li [class.ready]="!!item.lesson">
             @if (item.lesson; as l) {
               <a class="card lesson ready" matRipple [routerLink]="[p().path, 'aula', l.id]" [queryParams]="{ turma: c.id }">
-                <span class="num">{{ item.number }}</span>
-                <span class="texts"><span class="meta">Lição {{ item.number }} · {{ l.refs }}</span><span class="name">{{ l.title }}</span></span>
+                <span class="num" [class.due]="item.due">{{ item.number }}</span>
+                <span class="texts">
+                  <span class="meta">Lição {{ item.number }} · {{ l.refs }}</span>
+                  <span class="name">{{ l.title }}</span>
+                  <span class="when" [class.due]="item.due"><mat-icon>event</mat-icon>{{ dateLabel(item.date) }}@if (item.due) { · é a próxima aula }</span>
+                </span>
                 <mat-icon class="go">chevron_right</mat-icon>
               </a>
             } @else {
               <div class="lesson pending" [attr.aria-label]="'Lição ' + item.number + ': em preparação'">
-                <span class="num">{{ item.number }}</span>
-                <span class="soon">Em preparação</span>
+                <span class="num" [class.due]="item.due">{{ item.number }}</span>
+                <span class="soon">Em preparação<span class="when" [class.due]="item.due">{{ dateShort(item.date) }}</span></span>
               </div>
             }
           </li>
@@ -104,7 +108,17 @@ import { BackButton } from '../../shared/back-button';
     .lesson .meta { font: 500 13px Inter, sans-serif; color: var(--accent-gold); }
     .lesson .name { font: 600 16px/1.3 var(--heading-font); }
     .lesson .go { color: var(--mat-sys-on-surface-variant); }
-    .soon { font: 500 13px Inter, sans-serif; }
+    .soon { display: flex; flex-direction: column; gap: 1px; font: 500 13px Inter, sans-serif; }
+    .when { display: inline-flex; align-items: center; gap: 4px; font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .when mat-icon { font-size: 16px; width: 16px; height: 16px; }
+    .when.due { color: var(--mat-sys-primary); font-weight: 700; }
+    /* A lição da vez: o número pisca para chamar a atenção do professor */
+    .lesson .num.due { background: var(--accent-gold); color: #1d1608; animation: due-pulse 1.3s ease-in-out infinite; }
+    @keyframes due-pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-gold) 70%, transparent); }
+      50% { transform: scale(1.14); box-shadow: 0 0 0 9px color-mix(in srgb, var(--accent-gold) 0%, transparent); }
+    }
+    @media (prefers-reduced-motion: reduce) { .lesson .num.due { animation: none; outline: 3px solid var(--accent-gold); outline-offset: 2px; } }
     .lesson .num {
       width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font: 600 15px var(--heading-font);
       background: var(--mat-sys-primary-container); color: var(--mat-sys-on-primary-container);
@@ -125,6 +139,11 @@ export class IbucClassPage {
   protected readonly picked = signal<string | null>(null);
   protected readonly quarter = computed(() => this.quarters().find((q) => q.key === this.picked()) ?? this.quarters().find((q) => q.current)!);
   protected readonly examples = computed(() => lessonsOfClass(this.p(), this.turma()).filter((l) => l.example));
+
+  protected readonly dateLabel = lessonDateLabel;
+  protected dateShort(d: Date): string {
+    return d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'short' });
+  }
 
   constructor() {
     const title = inject(Title);

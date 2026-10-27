@@ -83,6 +83,17 @@ export const ARTICLES: Article[] = [
     minutes: 14,
   },
   {
+    id: 'os-faraos-da-biblia',
+    collection: 'estudos',
+    story: true,
+    passages: ['GEN 41', 'EXO 5', '1KI 14', '2KI 19', '2KI 23', 'JER 44'],
+    title: 'Os faraós da Bíblia',
+    subtitle: 'Quem foram, quando governaram, a quem respondiam e quem estava debaixo deles: de Abraão a Hofra.',
+    period: 'c. 2000 – 570 a.C.',
+    icon: 'account_balance',
+    minutes: 11,
+  },
+  {
     id: 'cativeiros-de-israel',
     collection: 'estudos',
     passages: ['2KI 17', '2KI 24', '2KI 25', 'JER 29', 'PSA 137', 'EZR 1', 'NEH 1', 'DAN 1'],

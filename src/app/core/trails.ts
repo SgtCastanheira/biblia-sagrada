@@ -41,7 +41,7 @@ export const TRAILS: Trail[] = [
     collections: ['estudos'],
     branches: [
       { title: 'A ponte entre os Testamentos', ids: ['entre-os-testamentos'] },
-      { title: 'Estudos', ids: ['ministerios-na-biblia', 'cativeiros-de-israel'] },
+      { title: 'Estudos', ids: ['ministerios-na-biblia', 'cativeiros-de-israel', 'os-faraos-da-biblia'] },
       {
         title: 'Para explorar',
         ids: [],

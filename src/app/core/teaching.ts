@@ -130,6 +130,35 @@ export const quarterLabel = (key: string) => {
   return `${quarter}º trimestre de ${year}`;
 };
 
+const startOfDay = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+
+/**
+ * Data da lição `number` de um trimestre ("2026-4"): o primeiro domingo do trimestre mais sete dias por lição,
+ * como nas revistas da EBD (4º trimestre de 2026: 4 de outubro a 27 de dezembro).
+ */
+export function lessonDate(key: string, number: number): Date {
+  const [year, quarter] = key.split('-').map(Number);
+  const first = new Date(year, (quarter - 1) * 3, 1);
+  first.setDate(first.getDate() + ((7 - first.getDay()) % 7) + (number - 1) * 7);
+  return first;
+}
+
+/** "domingo, 1 de novembro". */
+export const lessonDateLabel = (d: Date) => d.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' });
+
+/** Quantos dias antes da aula o número da lição passa a piscar para chamar a atenção do professor. */
+export const DUE_DAYS = 7;
+
+/** A lição "da vez": a primeira que ainda vai acontecer, se cair nos próximos 7 dias (hoje conta). */
+export function dueLessonNumber(key: string, total: number, today: Date = new Date()): number | null {
+  const now = startOfDay(today).getTime();
+  for (let n = 1; n <= total; n++) {
+    const days = Math.round((startOfDay(lessonDate(key, n)).getTime() - now) / 86_400_000);
+    if (days >= 0) return days <= DUE_DAYS ? n : null;
+  }
+  return null;
+}
+
 /** Aula de apoio de uma lição da revista (turma, trimestre e número). */
 export const supportLesson = (program: TeachingProgram, classId: string, quarter: string, number: number) =>
   program.lessons.find((l) => !l.example && l.quarter === quarter && l.number === number && l.classes.includes(classId));
@@ -143,12 +172,20 @@ export function quartersOf(program: TeachingProgram, classId: string) {
   const keys = new Set([current, ...program.lessons.filter((l) => !l.example && l.quarter && l.classes.includes(classId)).map((l) => l.quarter!)]);
   return [...keys]
     .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
-    .map((key) => ({
-      key,
-      label: quarterLabel(key),
-      current: key === current,
-      lessons: Array.from({ length: program.lessonsPerQuarter }, (_, i) => ({ number: i + 1, lesson: supportLesson(program, classId, key, i + 1) })),
-    }));
+    .map((key) => {
+      const due = dueLessonNumber(key, program.lessonsPerQuarter);
+      return {
+        key,
+        label: quarterLabel(key),
+        current: key === current,
+        lessons: Array.from({ length: program.lessonsPerQuarter }, (_, i) => ({
+          number: i + 1,
+          lesson: supportLesson(program, classId, key, i + 1),
+          date: lessonDate(key, i + 1),
+          due: due === i + 1,
+        })),
+      };
+    });
 }
 
 export const findProgram = (id: string | undefined) => PROGRAMS[(id as ProgramId) ?? 'ibuc'] ?? PROGRAMS.ibuc;

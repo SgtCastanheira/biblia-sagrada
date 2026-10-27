@@ -1,13 +1,87 @@
 import { EBD_ADULTOS_4T26 } from './ebd-adultos-4t26';
+import { EBD_JOVENS_4T26 } from './ebd-jovens-4t26';
 import type { IbucClass, IbucLesson } from './teaching';
 
 /**
- * EBD — apoio ao professor das classes de Adolescentes, Jovens e Adultos.
+ * EBD — apoio ao professor de todas as classes: Berçário, Maternal, Jardim de Infância, Primários, Juniores,
+ * Pré-adolescentes, Adolescentes, Juvenis, Jovens e Adultos.
  * As revistas servem só de inspiração para os temas: nada do texto delas é reproduzido.
  * Os textos usam [[referências]] (abrem o versículo) e **negrito**.
  */
 
 export const EBD_SUPPORT_CLASSES: IbucClass[] = [
+  {
+    id: 'bercario',
+    name: 'Berçário',
+    ages: 'Bebês até 2 anos',
+    icon: 'child_care',
+    tips: [
+      'Ritmo calmo e rotina igual em todo domingo: música, história curta, momento de colo.',
+      'Fale devagar, olhando nos olhos, e repita as mesmas palavras: o bebê aprende pela repetição e pelo carinho.',
+      'Use objetos para tocar e ver (bichinhos de pano, figuras grandes) e cuide da higiene e da segurança antes de tudo.',
+      'Converse com os pais ao entregar: dizer o que foi vivido na aula leva a mensagem para casa.',
+    ],
+  },
+  {
+    id: 'maternal',
+    name: 'Maternal',
+    ages: 'De 2 a 3 anos',
+    icon: 'toys',
+    tips: [
+      'Atividades curtas, de 3 a 5 minutos, que usam o corpo: bater palmas, cantar, andar, imitar bichos.',
+      'Uma ideia por aula, repetida de várias formas: “Deus cuida de mim”, “a Bíblia é o livro de Deus”.',
+      'Use cartazes, figuras e músicas simples. Eles amam repetir e pedem “de novo”.',
+      'Dê pequenas tarefas (guardar, distribuir) para se sentirem importantes.',
+    ],
+  },
+  {
+    id: 'jardim',
+    name: 'Jardim de Infância',
+    ages: 'De 4 a 5 anos',
+    icon: 'local_florist',
+    tips: [
+      'Conte a história com voz, gestos e objetos; deixe que ajudem a contar, mostrando e imitando.',
+      'Eles perguntam muito: acolha as perguntas, mesmo as engraçadas, e responda com frases curtas e verdadeiras.',
+      'Alterne momentos calmos e de movimento: história, música, brincadeira, desenho.',
+      'Ensine um versículo curto por vez, com mímica.',
+    ],
+  },
+  {
+    id: 'primarios',
+    name: 'Primários',
+    ages: 'De 6 a 8 anos',
+    icon: 'edit',
+    tips: [
+      'Eles começam a ler e a escrever: aproveite com atividades de ligar, completar e desenhar.',
+      'Histórias bíblicas com personagens e ação funcionam melhor do que explicações longas.',
+      'Brincadeiras com regras simples e trabalho em grupos pequenos ensinam a conviver.',
+      'Elogie o esforço e valorize cada resposta, mesmo a incompleta.',
+    ],
+  },
+  {
+    id: 'juniores',
+    name: 'Juniores',
+    ages: 'De 9 a 11 anos',
+    icon: 'explore',
+    tips: [
+      'Eles gostam de desafios, de competir em equipes e de descobrir: use enigmas, jogos de perguntas e missões.',
+      'Estimule a pesquisa na Bíblia: procurar versículos, completar quadros e mapas.',
+      'Mostre que as histórias bíblicas aconteceram de verdade, com lugares, datas e pessoas.',
+      'Cuide da inclusão: ninguém deve ser escolhido por último nem ficar de fora.',
+    ],
+  },
+  {
+    id: 'pre-adolescentes',
+    name: 'Pré-adolescentes',
+    ages: 'De 12 a 14 anos',
+    icon: 'diversity_2',
+    tips: [
+      'Estão mudando por dentro e por fora: acolha sem exposição e deixe falar sem rir de ninguém.',
+      'Perguntas abertas e debates curtos funcionam melhor do que preleções.',
+      'Mostre a Bíblia como guia para o que vivem: amizades, escola, tentações, família, redes sociais.',
+      'Dê responsabilidades (ler, orar, conduzir uma dinâmica) para que se sintam respeitados.',
+    ],
+  },
   {
     id: 'adolescentes',
     name: 'Adolescentes',
@@ -18,6 +92,18 @@ export const EBD_SUPPORT_CLASSES: IbucClass[] = [
       'Eles querem pertencer: trabalhe em duplas e grupos pequenos e chame cada um pelo nome.',
       'Mostre que a Bíblia trata do que eles vivem: medo, pressão do grupo, identidade, redes sociais.',
       'Perguntas abertas valem mais do que respostas prontas; acolha a dúvida sem expor ninguém.',
+    ],
+  },
+  {
+    id: 'juvenis',
+    name: 'Juvenis',
+    ages: 'De 15 a 17 anos',
+    icon: 'sports_esports',
+    tips: [
+      'Eles querem ser levados a sério: conte com a opinião deles e evite tratá-los como crianças.',
+      'Fale de fé, escolhas, identidade, vocação e relacionamentos com honestidade, sem fórmulas prontas.',
+      'Dinâmicas de estudo de caso e debate funcionam bem; termine sempre com uma decisão prática.',
+      'Mostre que a doutrina e a vida andam juntas: aprender para viver.',
     ],
   },
   {
@@ -49,6 +135,7 @@ export const EBD_SUPPORT_CLASSES: IbucClass[] = [
 /** Aulas de apoio (o conteúdo de cada tema da revista será acrescentado aqui). */
 export const EBD_SUPPORT_LESSONS: IbucLesson[] = [
   ...EBD_ADULTOS_4T26,
+  ...EBD_JOVENS_4T26,
   {
     id: 'modelo-neemias-reconstroi-os-muros',
     classes: ['adolescentes', 'jovens', 'adultos'],

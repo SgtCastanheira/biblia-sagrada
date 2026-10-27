@@ -134,8 +134,8 @@ test('histórias: todo artigo está em exatamente uma trilha e os atalhos das tr
   }
 });
 
-test('EBD (Adultos, 4º trimestre): 13 lições, cada uma com lembretes, atividades e referências que existem', () => {
-  const lessons = EBD_SUPPORT_LESSONS.filter((l) => l.quarter === '2026-4' && l.classes.includes('adultos'));
+for (const turma of ['adultos', 'jovens']) test(`EBD (${turma}, 4º trimestre): 13 lições, cada uma com lembretes, atividades e referências que existem`, () => {
+  const lessons = EBD_SUPPORT_LESSONS.filter((l) => l.quarter === '2026-4' && l.classes.includes(turma));
   expect(lessons.map((l) => l.number).sort((a, b) => a! - b!)).toEqual(Array.from({ length: 13 }, (_, i) => i + 1));
   const problems: string[] = [];
   const refs = (text: string) => [...text.matchAll(/\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g)].map((m) => m[1]);

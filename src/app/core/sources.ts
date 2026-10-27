@@ -45,6 +45,7 @@ export const WORKS: Record<string, Work> = {
   schurer: { author: 'Emil Schürer (rev. Geza Vermes, Fergus Millar e outros)', title: 'The History of the Jewish People in the Age of Jesus Christ (175 B.C.–A.D. 135)', publisher: 'T&T Clark, 1973–1987', kind: 'historia' },
   grabbe: { author: 'Lester L. Grabbe', title: 'Judaism from Cyrus to Hadrian', publisher: 'Fortress Press, 1992', kind: 'historia' },
   russell: { author: 'D. S. Russell', title: 'Between the Testaments', publisher: 'SCM Press, 1960', kind: 'historia' },
+  shaw: { author: 'Ian Shaw (org.)', title: 'The Oxford History of Ancient Egypt', publisher: 'Oxford University Press, 2000', kind: 'historia' },
   richardson: { author: 'Peter Richardson', title: 'Herod: King of the Jews and Friend of the Romans', publisher: 'University of South Carolina Press, 1996', kind: 'referencia' },
   borowski: { author: 'Oded Borowski', title: 'Agriculture in Iron Age Israel', publisher: 'Eisenbrauns, 1987', kind: 'referencia' },
   keller: { author: 'W. Phillip Keller', title: 'Nada me faltará: o Salmo 23 à luz das experiências de um pastor de ovelhas', publisher: 'Betânia', kind: 'referencia' },
@@ -147,6 +148,14 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     works: ['hengel', 'keener-nt', 'ferguson'],
   },
   'casamento-judaico': { ancient: ['Mishná, tratado Ketubot (o contrato de casamento)'], works: ['jeremias', 'keener-nt', 'bailey'] },
+  'os-faraos-da-biblia': {
+    ancient: [
+      'Estela de Mernepta (c. 1208 a.C.), a menção mais antiga a “Israel” fora da Bíblia',
+      'Relevo de Sheshonq I (Sisaque) no templo de Carnaque; cartas de Amarna (séc. XIV a.C.)',
+      'Crônica babilônica sobre a batalha de Carquêmis (605 a.C.)',
+    ],
+    works: ['kitchen', 'shaw', 'walton-at', 'ndb'],
+  },
   'entre-os-testamentos': {
     ancient: [
       '1 Macabeus 1–4, 8, 9.27 e 13.41, e 2 Macabeus 4–6 e 10 (livros deuterocanônicos, fonte histórica do período)',
@@ -156,7 +165,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ],
     works: ['schurer', 'grabbe', 'russell', 'bruce-nt-history', 'ferguson', 'keener-nt'],
   },
-  'a-familia-de-herodes': { ancient: ['Flávio Josefo, Antiguidades Judaicas, livros 14–20, e Guerra dos Judeus, livros 1–2'], works: ['richardson', 'bruce-nt-history', 'keener-nt'] },
+  'a-familia-de-herodes': { ancient: ['Flávio Josefo, Antiguidades Judaicas, livros 14–20 (em especial 16.290, a carta de Augusto), e Guerra dos Judeus, livros 1–2', 'Tácito, Anais 15.44, e a inscrição de Pilatos, achada em Cesareia'], works: ['richardson', 'bruce-nt-history', 'keener-nt'] },
   'dinheiro-e-salarios': { ancient: ['Moedas antigas (denário, siclo de Tiro, leptos) estudadas pela numismática'], works: ['hendin', 'jeremias', 'keener-nt'] },
   'o-templo-de-herodes': {
     ancient: ['Flávio Josefo, Antiguidades Judaicas 15.380–425 e Guerra dos Judeus 5.184–247', 'Mishná, tratado Middot (as medidas do templo)', 'Inscrição de advertência do templo, que proibia a entrada dos gentios (Museu Arqueológico de Istambul)'],
