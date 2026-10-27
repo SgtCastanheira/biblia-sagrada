@@ -372,19 +372,15 @@ test('história da Igreja como Atos: o panorama em destaque leva às histórias 
   await expect(page).toHaveURL(/\/artigo\/panorama-da-igreja/);
 });
 
-test('Assembleia de Deus no Brasil: estudo aprofundado com o mapa interativo de Belém ao Sudeste', async ({ page }) => {
+test('Assembleia de Deus no Brasil: estudo aprofundado com o mapa interativo estado por estado', async ({ page }) => {
   await page.goto('/artigo/assembleia-de-deus-no-brasil');
   await expect(page.getByRole('heading', { name: 'Eram casados antes de ser pastores?' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Por que as histórias divergem' })).toBeAttached();
   await expect(page.getByText(/Até 1977, Campo Grande ficava em Mato Grosso/)).toBeAttached();
   await page.getByRole('link', { name: /Ver no mapa interativo/ }).click();
-  await expect(page).toHaveURL(/\/mapas\/assembleia-de-deus-no-brasil/);
-  await expect(page.getByRole('heading', { level: 1, name: 'A Assembleia de Deus pelo Brasil' })).toBeVisible();
-  // As datas das etapas aparecem como texto, e não há capítulos da Bíblia para este mapa
-  await expect(page.locator('.steps .ref').first()).toHaveText('1910–1911');
+  await expect(page).toHaveURL(/\/mapas\/assembleia-de-deus-estados/);
+  await expect(page.getByRole('heading', { level: 1, name: 'A Assembleia de Deus estado por estado' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Capítulos relacionados' })).toHaveCount(0);
-  await page.getByRole('button', { name: 'Viver a jornada' }).click();
-  await expect(page.getByRole('dialog')).toContainText('Belém');
 });
 
 test('Assembleia de Deus em cada estado: escolher o estado, ver de onde saíram os pioneiros e ler a história', async ({ page }) => {

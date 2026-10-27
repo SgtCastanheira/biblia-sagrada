@@ -83,8 +83,7 @@ import { BibleMapView } from '../../shared/bible-map';
 })
 export class MapsPage {
   protected readonly reference = mapReference;
-  // O mapa dos primeiros vinte anos fica só no artigo da Assembleia de Deus; aqui sobra o de estado por estado
-  protected readonly churchMaps = CHURCH_MAPS.filter((m) => m.id !== 'assembleia-de-deus-no-brasil');
+  protected readonly churchMaps = CHURCH_MAPS;
   protected readonly sections = [
     { name: 'Antigo Testamento', maps: MAPS_IN_ORDER.filter((m) => mapTestament(m) === 'AT') },
     { name: 'Novo Testamento', maps: MAPS_IN_ORDER.filter((m) => mapTestament(m) === 'NT') },

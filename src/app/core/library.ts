@@ -375,7 +375,7 @@ export const ARTICLES: Article[] = [
     period: '1910–hoje',
     icon: 'church',
     minutes: 12,
-    map: 'assembleia-de-deus-no-brasil',
+    map: 'assembleia-de-deus-estados',
     portraits: ['imagens/gunnar-vingren.jpg', 'imagens/frida-vingren.jpg'],
   },
   {

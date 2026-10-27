@@ -15,7 +15,7 @@ import { expect, expectNoHorizontalOverflow, test } from './base';
 const rotas: string[] = [
   ...ARTICLES.map((a) => `/artigo/${a.id}`),
   ...AD_STATES.map((s) => `/assembleia-de-deus/${s.id}`),
-  ...[...BIBLE_MAPS, findMap('assembleia-de-deus-no-brasil')!, findMap('assembleia-de-deus-estados')!].map((m) => `/mapas/${m.id}`),
+  ...[...BIBLE_MAPS, findMap('assembleia-de-deus-estados')!].map((m) => `/mapas/${m.id}`),
   ...CLASSIC_SERMONS.map((s) => `/avivamento/${s.id}`),
   ...TRIBES.map((t) => `/tribos/${t.id}`),
   ...CURIOSITIES.map((c) => `/curiosidades/${c.id}`),

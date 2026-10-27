@@ -90,7 +90,7 @@ test('links dos dados (novidades, estados, mapas) levam a telas que existem', ()
     if (why) problems.push(`${where}: ${route} → ${why}`);
   };
   for (const r of RELEASES) for (const i of r.items) check(`novidades/${r.id}`, i.link);
-  for (const m of [...BIBLE_MAPS, ...(findMap('assembleia-de-deus-estados') ? [findMap('assembleia-de-deus-estados')!, findMap('assembleia-de-deus-no-brasil')!] : [])]) {
+  for (const m of [...BIBLE_MAPS, ...(findMap('assembleia-de-deus-estados') ? [findMap('assembleia-de-deus-estados')!] : [])]) {
     if (m.study) check(`mapa ${m.id}`, m.study.link);
     for (const s of m.steps) if (s.link) check(`mapa ${m.id}`, s.link);
   }
