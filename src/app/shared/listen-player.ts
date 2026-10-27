@@ -27,6 +27,18 @@ import { LISTEN_RATES, ListenService } from '../core/listen.service';
             }
           </span>
         </div>
+        @if (listen.voices().length > 1) {
+          <label class="voice">
+            <mat-icon>record_voice_over</mat-icon>
+            <span>Voz</span>
+            <select (change)="listen.setVoice($any($event.target).value)" aria-label="Escolher a voz">
+              <option value="" [selected]="!listen.voiceUri()">Automática (a mais natural)</option>
+              @for (v of listen.voices(); track v.voiceURI) {
+                <option [value]="v.voiceURI" [selected]="v.voiceURI === listen.voiceUri()">{{ v.name }}</option>
+              }
+            </select>
+          </label>
+        }
       </section>
     }
   `,
@@ -51,6 +63,9 @@ import { LISTEN_RATES, ListenService } from '../core/listen.service';
     .rates { margin-left: auto; display: flex; gap: 2px; }
     .rates button { min-width: 44px; height: 44px; border-radius: 12px; font: 600 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .rates button.on { background: var(--mat-sys-primary-container); color: var(--mat-sys-on-primary-container); }
+    .voice { display: flex; align-items: center; gap: 8px; margin-top: 4px; font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .voice mat-icon { font-size: 20px; width: 20px; height: 20px; color: var(--accent-gold); }
+    .voice select { flex: 1; min-width: 0; height: 44px; padding: 0 10px; border-radius: 12px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface); color: var(--mat-sys-on-surface); font: 500 14px Inter, sans-serif; }
     button:focus-visible { outline: 2px solid var(--mat-sys-primary); outline-offset: 2px; }
   `,
 })

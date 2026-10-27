@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { splitForSpeech } from './speech-split';
-import { narrationVoice, warmUpVoices } from './voice';
+import { narrationVoice, portugueseVoices, warmUpVoices } from './voice';
 
 /** Um trecho para ouvir: o texto e, se houver, o elemento da tela que ele destaca enquanto é lido. */
 export interface ListenItem {
@@ -27,13 +27,22 @@ export class ListenService {
   readonly items = signal<ListenItem[]>([]);
   readonly index = signal(0);
   readonly rate = signal(this.savedRate());
+  /** Vozes em português deste aparelho; a lista chega depois no Chrome e no Edge. */
+  readonly voices = signal<SpeechSynthesisVoice[]>([]);
+  /** Voz escolhida pela pessoa (voiceURI); vazio = a melhor do aparelho. */
+  readonly voiceUri = signal(this.saved('listenVoice') ?? '');
 
   private run = 0;
   private timer: ReturnType<typeof setTimeout> | undefined;
   private onEnd: (() => void) | undefined;
 
   constructor() {
-    if (this.supported) warmUpVoices();
+    if (this.supported) {
+      warmUpVoices();
+      const refresh = () => this.voices.set(portugueseVoices());
+      refresh();
+      speechSynthesis.addEventListener?.('voiceschanged', refresh);
+    }
   }
 
   /** Começa a ler. `onEnd` é chamado quando o último trecho termina (a Bíblia usa para seguir ao próximo capítulo). */
@@ -81,6 +90,14 @@ export class ListenService {
     if (this.state() === 'playing') this.speakItem(this.index());
   }
 
+  setVoice(uri: string): void {
+    this.voiceUri.set(uri);
+    try {
+      localStorage.setItem('listenVoice', uri);
+    } catch { /* vale só nesta sessão */ }
+    if (this.state() === 'playing') this.speakItem(this.index());
+  }
+
   /** Cancela a fala em andamento sem mexer no estado do player. */
   private halt(): void {
     this.run++;
@@ -105,7 +122,7 @@ export class ListenService {
       }
       const utterance = new SpeechSynthesisUtterance(chunks[n]);
       utterance.lang = 'pt-BR';
-      utterance.voice = narrationVoice();
+      utterance.voice = this.voices().find((v) => v.voiceURI === this.voiceUri()) ?? narrationVoice();
       utterance.rate = this.rate();
       utterance.pitch = 0.95;
       utterance.onend = () => speakChunk(n + 1);
@@ -142,6 +159,14 @@ export class ListenService {
 
   private clearMarks(): void {
     document.querySelectorAll('.speaking').forEach((e) => e.classList.remove('speaking'));
+  }
+
+  private saved(key: string): string | null {
+    try {
+      return localStorage.getItem(key);
+    } catch {
+      return null;
+    }
   }
 
   private savedRate(): number {

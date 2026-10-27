@@ -23,3 +23,13 @@ export function warmUpVoices(): void {
   speechSynthesis.getVoices();
   speechSynthesis.addEventListener?.('voiceschanged', () => speechSynthesis.getVoices(), { once: true });
 }
+
+/** Vozes em português do aparelho, as mais naturais primeiro (para a pessoa escolher). */
+export function portugueseVoices(): SpeechSynthesisVoice[] {
+  if (typeof speechSynthesis === 'undefined') return [];
+  const score = (v: SpeechSynthesisVoice) => {
+    const i = PREFERRED.findIndex((p) => p.test(v.name));
+    return (v.lang.replace('_', '-').toLowerCase() === 'pt-br' ? 0 : 10) + (i < 0 ? PREFERRED.length : i);
+  };
+  return speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().startsWith('pt')).sort((a, b) => score(a) - score(b));
+}

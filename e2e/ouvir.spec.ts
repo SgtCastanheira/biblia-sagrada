@@ -12,7 +12,7 @@ test.beforeEach(async ({ page }) => {
     (window as unknown as { SpeechSynthesisUtterance: unknown }).SpeechSynthesisUtterance = FakeUtterance;
     Object.defineProperty(window, 'speechSynthesis', {
       value: {
-        getVoices: () => [],
+        getVoices: () => [{ name: 'Voz A', lang: 'pt-BR', voiceURI: 'a' }, { name: 'Voz B', lang: 'pt-BR', voiceURI: 'b' }],
         addEventListener: () => {},
         cancel: () => {},
         speak: (u: FakeUtterance) => { spoken.push(u.text); setTimeout(() => u.onend?.(), 5); },
@@ -30,6 +30,8 @@ test('ouvir um capítulo: anuncia o livro, lê os versículos e marca o que est�
   await expect.poll(() => page.evaluate(() => (window as unknown as { spoken: string[] }).spoken.join(' | '))).toContain('Salmos, capítulo 117');
   await expect.poll(() => page.evaluate(() => (window as unknown as { spoken: string[] }).spoken.join(' ')), { timeout: 8000 }).toContain('Louvai');
   // Pausa e continua; fechar para tudo
+  await player.getByLabel('Escolher a voz').selectOption('b');
+  await expect(player.getByLabel('Escolher a voz')).toHaveValue('b');
   await player.getByRole('button', { name: 'Pausar' }).click();
   await expect(player.getByRole('button', { name: 'Continuar a ouvir' })).toBeVisible();
   await player.getByRole('button', { name: 'Parar e fechar' }).click();
