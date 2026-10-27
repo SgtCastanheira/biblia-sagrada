@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'linguas-indigenas-trindade-deuses',
+    date: '27 de outubro de 2026',
+    title: 'A Bíblia em línguas indígenas, a Trindade e os deuses pagãos',
+    items: [
+      { icon: 'translate', title: 'A Bíblia em línguas indígenas do Brasil', text: 'A Bíblia inteira em Guarani Mbyá e em Guajajára, e o Novo Testamento em Kaiwá (Guarani Kaiowá), Kayabí, Kaapor, Mundurukú, Sateré-Mawé, Ticuna, Kaingang, Terena e Xavante, das traduções da Wycliffe.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto do capítulo.' },
+      { icon: 'check_circle', title: 'Lições com cores mais leves', text: 'Nas lições da EBD, as aulas que já foram ficam em verde-claro, com um check; as próximas, em marrom-claro; e a da vez pisca em dourado suave.', link: '/ebd/apoio' },
+    ],
+  },
+  {
     id: 'historias-ligadas',
     date: '27 de outubro de 2026',
     title: 'Histórias ligadas: continue de onde parou',

@@ -34,7 +34,21 @@ VERSIONS = {
     "deu1912": "luther1912", # Lutherbibel 1912 (domínio público)
     "deuelo": "elo",         # Elberfelder 1905, “Unrevidierte” (domínio público)
     "deu1951": "schlachter", # Schlachter 1951 (CC BY 4.0)
+    # Línguas indígenas do Brasil (Wycliffe Bible Translators, CC BY-NC-ND: sem mudar palavras nem pontuação; ver KEEP_AS_IS)
+    "gun": "mbya",           # Guarani Mbyá, Bíblia completa (2004)
+    "gubBl": "guajajara",    # Guajajára, Bíblia completa (2007)
+    "kgkNT": "kaiwa",        # Kaiwá (Guarani Kaiowá), NT (2006)
+    "kyzNT": "kayabi",       # Kayabí, NT (2012)
+    "urbNT": "kaapor",       # Kaapor, NT (2012)
+    "myu": "munduruku",      # Mundurukú, NT (2010)
+    "mavNT": "satere",       # Sateré-Mawé, NT (2011)
+    "tcaNT": "ticuna",       # Ticuna, NT (2008)
+    "kgpNT": "kaingang",     # Kaingang, NT (2011)
+    "terNT": "terena",       # Terêna, NT (2012)
+    "xavNT": "xavante",      # Xavánte, NT (2004)
 }
+# Licença sem obras derivadas: o texto e a pontuação ficam exatamente como vieram (só os espaços em branco são juntados)
+KEEP_AS_IS = {"gun", "gubBl", "kgkNT", "kyzNT", "urbNT", "myu", "mavNT", "tcaNT", "kgpNT", "terNT", "xavNT"}
 # Fora de propósito: portft (Tradução para Tradutores) é uma ferramenta de tradução, cheia de colchetes e barras.
 
 BOOKS = ["GEN","EXO","LEV","NUM","DEU","JOS","JDG","RUT","1SA","2SA","1KI","2KI","1CH","2CH","EZR","NEH","EST","JOB","PSA","PRO","ECC","SNG","ISA","JER","LAM","EZK","DAN","HOS","JOL","AMO","OBA","JON","MIC","NAM","HAB","ZEP","HAG","ZEC","MAL",
@@ -69,7 +83,8 @@ for ebible_id, app_id in VERSIONS.items():
                 continue
             text = re.sub(r"```(usfm)?", "", text)           # restos de formatação no rascunho da BPM
             text = re.sub(r"\s+", " ", text).strip()
-            text = re.sub(r"\s+([,;:.!?])", r"\1", text)     # "unigênito , para" → "unigênito, para"
+            if ebible_id not in KEEP_AS_IS:
+                text = re.sub(r"\s+([,;:.!?])", r"\1", text)  # "unigênito , para" → "unigênito, para"
             if not text:
                 continue
             books.setdefault(book, {}).setdefault(chapter, []).append([verse, text])

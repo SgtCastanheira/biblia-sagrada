@@ -10,7 +10,7 @@ import hashlib, pathlib, re, urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "public" / "fonts"
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0 Safari/537.36"
-KEEP = {"latin", "latin-ext"}  # português só precisa destes conjuntos
+KEEP = {"latin", "latin-ext", "vietnamese"}  # português; "vietnamese" traz ẽ, ỹ e o til combinante das línguas indígenas (só baixa quando a página usa)
 
 
 def icon_names():

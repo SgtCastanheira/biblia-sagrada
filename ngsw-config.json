@@ -69,7 +69,18 @@
           "/bible/luther1912/*.json",
           "/bible/elo/*.json",
           "/bible/schlachter/*.json",
-          "/bible/hebraico/*.json"
+          "/bible/hebraico/*.json",
+          "/bible/mbya/*.json",
+          "/bible/guajajara/*.json",
+          "/bible/kaiwa/*.json",
+          "/bible/kayabi/*.json",
+          "/bible/kaapor/*.json",
+          "/bible/munduruku/*.json",
+          "/bible/satere/*.json",
+          "/bible/ticuna/*.json",
+          "/bible/kaingang/*.json",
+          "/bible/terena/*.json",
+          "/bible/xavante/*.json"
         ]
       }
     },

@@ -31,6 +31,8 @@ export interface BibleVersion {
   rtl?: boolean;
   /** Sigla curta para o círculo da lista de versões, quando a sigla não cabe ("ALM" para "ALM1911"). */
   badge?: string;
+  /** Aviso de direitos que a licença pede junto do texto (mostrado no fim de cada capítulo). */
+  copyright?: string;
 }
 
 export interface Verse {

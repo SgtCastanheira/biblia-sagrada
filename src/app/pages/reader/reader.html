@@ -154,7 +154,7 @@
         }
       }
 
-      <p class="source">{{ version()?.name }} · domínio público</p>
+      <p class="source">{{ version()?.name }} · {{ version()?.copyright ?? 'domínio público' }}</p>
     }
 
     @if (!state().loading && state().rows.length) {
