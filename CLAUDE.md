@@ -117,6 +117,8 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 
 **What's new** (`core/whats-new.ts`): when publishing user-visible features, add a new entry at the top of `RELEASES` with a new `id`. Every device sees it once (first visits included), in a bottom sheet (`WhatsNewService`, checked at startup before the daily reminders). It is also listed at `/novidades`, which has a share button.
 
+**Study search** (`core/study-search.ts` pure, `core/study-search.service.ts`, field at the top of `/estudo`, `?q=`): searches title and full text of articles, AD states, historical sermons, memorial, dictionary, prophecies, curiosities and hymns (no lyrics). Terms are accent-folded, `de/da/o` ignored, matched as word prefixes, with synonyms (`SYNONYM_GROUPS`: conselho ↔ concílio). Add a new content kind in the service and `KIND_INFO`.
+
 **Navigation:** the bottom menu has five tabs, and each screen belongs to exactly one of them (`tab` in `app.ts`):
 - Início (`/`)
 - Bíblia (reader, `/livros`, `/busca`)
