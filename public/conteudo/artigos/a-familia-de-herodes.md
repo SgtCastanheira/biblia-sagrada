@@ -44,3 +44,7 @@ Os Evangelhos contrastam dois reis. Herodes, o Grande, “rei dos judeus” por 
 - A morte de Agripa I, contada também por Josefo: [[At 12.21-23]].
 - Paulo diante de Agripa II: [[At 26.1-32]].
 - No dicionário: [tetrarca](/dicionario/tetrarca).
+
+:::leia entre-os-testamentos
+Os 400 anos entre Malaquias e Mateus: como o mundo ficou do jeito que Jesus encontrou.
+:::

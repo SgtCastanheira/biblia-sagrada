@@ -42,6 +42,9 @@ export const WORKS: Record<string, Work> = {
   hengel: { author: 'Martin Hengel', title: 'Crucifixion in the Ancient World and the Folly of the Message of the Cross', publisher: 'Fortress, 1977', kind: 'referencia' },
   hendin: { author: 'David Hendin', title: 'Guide to Biblical Coins', publisher: 'Amphora', kind: 'referencia' },
   ritmeyer: { author: 'Leen Ritmeyer', title: 'The Quest: Revealing the Temple Mount in Jerusalem', publisher: 'Carta, 2006', kind: 'referencia' },
+  schurer: { author: 'Emil Schürer (rev. Geza Vermes, Fergus Millar e outros)', title: 'The History of the Jewish People in the Age of Jesus Christ (175 B.C.–A.D. 135)', publisher: 'T&T Clark, 1973–1987', kind: 'historia' },
+  grabbe: { author: 'Lester L. Grabbe', title: 'Judaism from Cyrus to Hadrian', publisher: 'Fortress Press, 1992', kind: 'historia' },
+  russell: { author: 'D. S. Russell', title: 'Between the Testaments', publisher: 'SCM Press, 1960', kind: 'historia' },
   richardson: { author: 'Peter Richardson', title: 'Herod: King of the Jews and Friend of the Romans', publisher: 'University of South Carolina Press, 1996', kind: 'referencia' },
   borowski: { author: 'Oded Borowski', title: 'Agriculture in Iron Age Israel', publisher: 'Eisenbrauns, 1987', kind: 'referencia' },
   keller: { author: 'W. Phillip Keller', title: 'Nada me faltará: o Salmo 23 à luz das experiências de um pastor de ovelhas', publisher: 'Betânia', kind: 'referencia' },
@@ -142,6 +145,15 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     works: ['hengel', 'keener-nt', 'ferguson'],
   },
   'casamento-judaico': { ancient: ['Mishná, tratado Ketubot (o contrato de casamento)'], works: ['jeremias', 'keener-nt', 'bailey'] },
+  'entre-os-testamentos': {
+    ancient: [
+      '1 Macabeus 1–4, 8, 9.27 e 13.41, e 2 Macabeus 4–6 e 10 (livros deuterocanônicos, fonte histórica do período)',
+      'Flávio Josefo, Antiguidades Judaicas, livros 11–14, e Guerra dos Judeus, livro 1; Contra Ápion 1.37–43',
+      'Carta de Aristeias (sobre a origem da Septuaginta)',
+      'Salmos de Salomão (séc. I a.C.) e os manuscritos do Mar Morto',
+    ],
+    works: ['schurer', 'grabbe', 'russell', 'bruce-nt-history', 'ferguson', 'keener-nt'],
+  },
   'a-familia-de-herodes': { ancient: ['Flávio Josefo, Antiguidades Judaicas, livros 14–20, e Guerra dos Judeus, livros 1–2'], works: ['richardson', 'bruce-nt-history', 'keener-nt'] },
   'dinheiro-e-salarios': { ancient: ['Moedas antigas (denário, siclo de Tiro, leptos) estudadas pela numismática'], works: ['hendin', 'jeremias', 'keener-nt'] },
   'o-templo-de-herodes': {

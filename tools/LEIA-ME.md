@@ -17,3 +17,30 @@ Scripts que geram os arquivos estáticos do app. Rode a partir da raiz do projet
 Escrito à mão, sem script: `dicionario.json` (com `senses` e `inflections`), `profecias.json`, `citacoes.json` (AT no NT), `livros.json` (contexto dos 66 livros), `notas.json` (notas por capítulo, chave `"JHN 3"`), `memorial.json`, e os textos em Markdown simples de `artigos/` e `sermoes/` (o índice de cada um fica em `src/app/core/library.ts`). Nos textos, `[[Jo 3.16]]` vira um versículo que abre ao tocar; `:::tempo` e `:::nota` criam linha do tempo e destaque.
 
 Depois de gerar dados, rode `npm run test:e2e` (o protocolo confere referências, mapas e ícones).
+
+## gerar-audio.mjs — a narração em voz neural das histórias
+
+Grava, com a voz neural da Microsoft (Francisca, pt-BR), a narração de cada história e de cada estado da Assembleia de Deus. O app toca esses áudios no botão "Ouvir" (em qualquer navegador) e destaca o parágrafo que está sendo falado; onde não há áudio, usa a voz do aparelho.
+
+**Uma vez só: criar a chave (grátis)**
+
+1. Crie uma conta em https://portal.azure.com (pede um cartão para confirmar a identidade; o nível gratuito não cobra).
+2. Pesquise **"Serviços de fala"** (Speech) → **Criar**. Escolha um grupo de recursos novo, a região **Brazil South** (`brazilsouth`) e o **nível de preço Free F0** (500 mil caracteres por mês de voz neural).
+3. Depois de criado, abra o recurso → **Chaves e Ponto de Extremidade**: copie a **Chave 1** e a **Localização/Região**.
+
+**Gerar**
+
+```bash
+export AZURE_SPEECH_KEY="cole-a-chave-aqui"      # só neste terminal; nunca em arquivo do projeto
+export AZURE_SPEECH_REGION="brazilsouth"
+
+node tools/gerar-audio.mjs --dry-run             # quantos caracteres e MB, sem gastar nada
+node tools/gerar-audio.mjs --only igreja-primitiva   # uma história para ouvir e aprovar a voz
+node tools/gerar-audio.mjs                       # todas (cerca de 290 mil caracteres, 320 min, ~115 MB)
+```
+
+- `--only` aceita ids de artigo (`igreja-primitiva`) e siglas de estado (`mt,pi`), separados por vírgula.
+- `--rate -12%` deixa a fala mais lenta (padrão `-8%`); `--voice pt-BR-AntonioNeural` troca para a voz masculina; `--limite 100000` recusa gastar mais que isso numa rodada; `--force` regrava tudo.
+- Gravações prontas ficam em `tools/.audio-cache` (fora do Git): rodar de novo só paga o que mudou. Se o texto de uma história mudar, o app deixa de usar a gravação antiga e volta à voz do aparelho até você gerar de novo.
+- Saída: `public/audio/artigos/*.mp3`, `public/audio/estados/*.mp3` e `public/audio/index.json` (de que segundo começa cada parágrafo). **Commite esses arquivos.** Não entram no cache offline do app (tocam pela internet).
+- A chave nunca é gravada em lugar nenhum pela ferramenta. Se ela vazar, gere outra no portal (Chaves e Ponto de Extremidade → Regenerar).

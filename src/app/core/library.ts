@@ -18,6 +18,8 @@ export interface Article {
   passages?: string[];
   /** Retratos na capa da história (fotos em public/conteudo/imagens). */
   portraits?: string[];
+  /** Lê como história (capa, capítulos e cenas), mesmo fora das coleções narrativas. */
+  story?: boolean;
   /** Panorama da coleção (como o livro de Atos): aparece em destaque, antes das histórias completas. */
   overview?: boolean;
 }
@@ -68,6 +70,17 @@ export const ARTICLES: Article[] = [
     period: 'Antigo e Novo Testamento',
     icon: 'diversity_3',
     minutes: 12,
+  },
+  {
+    id: 'entre-os-testamentos',
+    collection: 'estudos',
+    story: true,
+    passages: ['MAL 4', 'MAT 1', 'LUK 3'],
+    title: 'Os 400 anos entre os Testamentos',
+    subtitle: 'De Malaquias a Mateus: Alexandre, os Macabeus e como os romanos chegaram. A ponte que explica o mundo em que Jesus nasceu.',
+    period: 'c. 430 a.C. – 4 a.C.',
+    icon: 'swap_horiz',
+    minutes: 14,
   },
   {
     id: 'cativeiros-de-israel',

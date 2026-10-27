@@ -22,6 +22,14 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'ponte-entre-os-testamentos',
+    date: '27 de outubro de 2026',
+    title: 'A ponte entre o Antigo e o Novo Testamento',
+    items: [
+      { icon: 'swap_horiz', title: 'Os 400 anos entre os Testamentos', text: 'De Malaquias a Mateus: Alexandre, os Macabeus, a chegada dos romanos, fariseus e saduceus, as sinagogas e a esperança do Messias. A história que explica o mundo em que Jesus nasceu.', link: '/artigo/entre-os-testamentos', tip: 'Também aparece ao ler Malaquias 4 e Mateus 1.' },
+    ],
+  },
+  {
     id: 'ad-linha-do-tempo-e-perseguidos',
     date: '27 de outubro de 2026',
     title: 'A linha do tempo e os irmãos perseguidos',

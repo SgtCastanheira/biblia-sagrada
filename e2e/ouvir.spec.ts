@@ -64,3 +64,32 @@ test('ouvir sem voz no aparelho: avisa o que fazer em vez de ficar mudo', async 
   await expect(page.getByRole('alert')).toContainText('não tem voz em português', { timeout: 8000 });
   await expect(page.getByRole('button', { name: 'Continuar a ouvir' })).toBeVisible();
 });
+
+test('ouvir com a gravação: toca o áudio, destaca o parágrafo certo e mostra a voz neural', async ({ page }) => {
+  // Um MP3 mínimo (quadros de silêncio) e um índice que aponta cada trecho da tela
+  const frame = Buffer.concat([Buffer.from([0xff, 0xfb, 0x90, 0x04]), Buffer.alloc(413)]);
+  const mp3 = Buffer.concat(Array.from({ length: 400 }, () => frame));
+  await page.route('**/audio/artigos/igreja-primitiva.mp3', (route) => route.fulfill({ body: mp3, contentType: 'audio/mpeg', headers: { 'accept-ranges': 'bytes' } }));
+  await page.route('**/audio/index.json', async (route) => {
+    // Os trechos da página, como o app os vê, viram o índice da gravação
+    const texts: string[] = await page.evaluate(() => {
+      const body = document.querySelector('app-rich-text')!;
+      const wanted = [...body.querySelectorAll<HTMLElement>('h2, h3, p, blockquote, ul:not(.people) > li, ol:not(.timeline) > li')].filter((el) => !el.closest('.people, .read, .sources, .toc, .timeline, .chain, .facts, app-send-chain'));
+      return wanted.filter((el) => !wanted.some((o) => o !== el && el.contains(o))).map((el) => (el.textContent ?? '').replace(/\s+/g, ' ').trim()).filter(Boolean);
+    });
+    const { textKey } = await import('../src/app/core/audio-text');
+    const title = await page.getByRole('heading', { level: 1 }).innerText();
+    const items = [{ t: 0, k: textKey(`${title}.`) }, ...texts.map((text, i) => ({ t: (i + 1) * 0.5, k: textKey(text) }))];
+    await route.fulfill({ json: { voice: 'pt-BR-FranciscaNeural', files: { 'artigos/igreja-primitiva': { source: 'x', seconds: 20, items } } } });
+  });
+  await page.goto('/artigo/igreja-primitiva');
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  await page.getByRole('button', { name: 'Ouvir esta história' }).click();
+  const player = page.getByRole('region', { name: 'Ouvir' });
+  await expect(player).toContainText('Voz gravada: Francisca (voz neural)');
+  // Não usou a voz do aparelho
+  expect(await page.evaluate(() => (window as unknown as { spoken: string[] }).spoken.length)).toBe(0);
+  await expect(player.getByRole('button', { name: 'Pausar' })).toBeVisible();
+  await page.getByRole('button', { name: 'Parar de ouvir' }).click();
+  await expect(player).toHaveCount(0);
+});

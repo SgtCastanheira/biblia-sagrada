@@ -39,3 +39,7 @@ Os **apócrifos do Novo Testamento** são outra coisa: “evangelhos” como os 
 :::nota
 Para conversar sobre isso com amigos católicos, o melhor caminho é o respeito e a Escritura: “examinai tudo; retende o bem” [[1Ts 5.21]].
 :::
+
+:::leia entre-os-testamentos
+Os 400 anos entre Malaquias e Mateus: como o mundo ficou do jeito que Jesus encontrou.
+:::

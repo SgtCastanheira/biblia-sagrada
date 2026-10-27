@@ -11,6 +11,7 @@ import { map, startWith, switchMap } from 'rxjs';
 import { ContentService } from '../../core/content.service';
 import { articlesOf, COLLECTIONS, findArticle, STORY_COLLECTIONS } from '../../core/library';
 import { ListenService } from '../../core/listen.service';
+import { storyItems } from '../../shared/listen-dom';
 import { trailOfArticle } from '../../core/trails';
 import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
@@ -194,27 +195,15 @@ export class ArticlePage {
   private readonly snackBar = inject(MatSnackBar);
 
   /** Ouvir a história: título, resumo e cada parágrafo, um de cada vez, destacado na tela. */
-  protected listenArticle(): void {
-    if (!this.listen.supported) {
-      this.snackBar.open('Este aparelho não tem leitura em voz alta.', undefined, { duration: 3000 });
-      return;
-    }
+  protected async listenArticle(): Promise<void> {
     if (this.listen.state() !== 'idle') {
       this.listen.stop();
       return;
     }
     const a = this.article();
-    const body = document.querySelector('app-rich-text');
-    if (!a || !body) return;
-    const wanted = [...body.querySelectorAll<HTMLElement>('h2, h3, p, blockquote, ul:not(.people) > li, ol > li')]
-      .filter((el) => !el.closest('.people, .read, .sources, .toc'));
-    // Quem contém outro trecho da lista (uma citação com parágrafo dentro) fica de fora, para não ler duas vezes
-    const leaves = wanted.filter((el) => !wanted.some((other) => other !== el && el.contains(other)));
-    const items = [
-      { text: `${a.title}. ${a.subtitle}` },
-      ...leaves.map((el) => ({ el, text: (el.textContent ?? '').replace(/\s+/g, ' ').trim() })).filter((i) => i.text),
-    ];
-    this.listen.start(a.title, items);
+    if (!a) return;
+    const ok = await this.listen.startStory(a.title, `artigos/${a.id}`, storyItems(`${a.title}. ${a.subtitle}`));
+    if (!ok) this.snackBar.open('Este aparelho não tem leitura em voz alta.', undefined, { duration: 3000 });
   }
 
 
@@ -226,7 +215,7 @@ export class ArticlePage {
   /** Assunto da tela de histórias a que este artigo pertence (para onde o botão voltar leva). */
   protected readonly trailId = computed(() => trailOfArticle(this.id())?.id);
   /** Histórias (Igreja e Bíblia) ganham capa e leitura em capítulos. */
-  protected readonly story = computed(() => STORY_COLLECTIONS.includes(this.article()?.collection!));
+  protected readonly story = computed(() => STORY_COLLECTIONS.includes(this.article()?.collection!) || !!this.article()?.story);
   /** O panorama da coleção (como Atos), para quem quiser ver onde esta história se encaixa. */
   protected readonly overview = computed(() => {
     const a = this.article();

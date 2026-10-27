@@ -1,8 +1,10 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { Component, computed, effect, inject, input } from '@angular/core';
+import { Component, computed, DestroyRef, effect, inject, input } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
+import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { map, startWith, switchMap } from 'rxjs';
@@ -10,11 +12,13 @@ import { contextFor } from '../../core/ad-context';
 import { AD_STATES, CGADB_CONVENTIONS, findAdState, STATE_MINISTRIES } from '../../core/ad-states';
 import { distanceKm, formatKm } from '../../core/atlas';
 import { ContentService } from '../../core/content.service';
+import { ListenService } from '../../core/listen.service';
 import { findMap } from '../../core/maps';
 import { outline } from '../../core/rich-text-parser';
 import { BackButton } from '../../shared/back-button';
 import { BibleMapView } from '../../shared/bible-map';
 import { ContextList } from '../../shared/context-list';
+import { storyItems } from '../../shared/listen-dom';
 import { PageToc, TocItem } from '../../shared/page-toc';
 import { RichText } from '../../shared/rich-text';
 import { StateMinistries } from '../../shared/state-ministries';
@@ -22,11 +26,16 @@ import { StateMinistries } from '../../shared/state-ministries';
 /** História completa da Assembleia de Deus num estado, com o mapa de onde saíram os pioneiros. */
 @Component({
   selector: 'app-ad-state',
-  imports: [NgTemplateOutlet, RouterLink, MatIconModule, MatRippleModule, BibleMapView, BackButton, RichText, PageToc, ContextList, StateMinistries],
+  imports: [MatButtonModule, NgTemplateOutlet, RouterLink, MatIconModule, MatRippleModule, BibleMapView, BackButton, RichText, PageToc, ContextList, StateMinistries],
   template: `
     @if (state(); as s) {
       <div class="article wide">
-        <div class="top"><app-back fallback="/assembleia-de-deus" /></div>
+        <div class="top">
+          <app-back fallback="/assembleia-de-deus" />
+          <button mat-icon-button (click)="listenState()" [attr.aria-label]="listen.state() === 'idle' ? 'Ouvir esta história' : 'Parar de ouvir'">
+            <mat-icon>{{ listen.state() === 'idle' ? 'headphones' : 'stop_circle' }}</mat-icon>
+          </button>
+        </div>
         <header class="hero">
           <span class="hero-over">Assembleia de Deus · {{ s.region }}</span>
           <span class="era">{{ s.year }}</span>
@@ -139,6 +148,8 @@ import { StateMinistries } from '../../shared/state-ministries';
 export class AdStatePage {
   readonly id = input.required<string>();
   private readonly content = inject(ContentService);
+  protected readonly listen = inject(ListenService);
+  private readonly snackBar = inject(MatSnackBar);
   protected readonly statesMap = findMap('assembleia-de-deus-estados')!;
   protected readonly state = computed(() => findAdState(this.id()));
 
@@ -189,7 +200,20 @@ export class AdStatePage {
     return { prev: i > 0 ? AD_STATES[i - 1] : null, next: i >= 0 && i < AD_STATES.length - 1 ? AD_STATES[i + 1] : null };
   });
 
+  /** Ouvir a história do estado (gravação em voz neural, se existir; senão a voz do aparelho). */
+  protected async listenState(): Promise<void> {
+    if (this.listen.state() !== 'idle') {
+      this.listen.stop();
+      return;
+    }
+    const s = this.state();
+    if (!s) return;
+    const ok = await this.listen.startStory(`A Assembleia de Deus em ${s.state}`, `estados/${s.id}`, storyItems(`A Assembleia de Deus em ${s.state}. ${s.summary}`));
+    if (!ok) this.snackBar.open('Este aparelho não tem leitura em voz alta.', undefined, { duration: 3000 });
+  }
+
   constructor() {
+    inject(DestroyRef).onDestroy(() => this.listen.stop());
     const title = inject(Title);
     effect(() => {
       const s = this.state();

@@ -60,3 +60,7 @@ Thumbs.db
 /.audit.mjs
 /.c.mjs
 /.t.ts
+tools/.audio-cache/
+
+# Revistas da EBD (CPAD): material protegido, só para consulta local; nunca vai para o Git
+/EBD - Revista/

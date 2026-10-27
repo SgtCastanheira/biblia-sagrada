@@ -29,3 +29,7 @@ Depois que os cristãos passaram a usá-la para mostrar que Jesus era o Messias,
 :::nota
 O eunuco etíope lia Isaías na sua carruagem — provavelmente em grego — quando Filipe lhe perguntou: “Entendes tu o que lês?” [[At 8.30-35]]. Toda boa tradução existe para responder a essa pergunta.
 :::
+
+:::leia entre-os-testamentos
+Os 400 anos entre Malaquias e Mateus: como o mundo ficou do jeito que Jesus encontrou.
+:::

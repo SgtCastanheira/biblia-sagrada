@@ -28,7 +28,9 @@ import { LISTEN_RATES, ListenService } from '../core/listen.service';
             }
           </span>
         </div>
-        @if (listen.voices().length > 1) {
+        @if (listen.mode() === 'audio') {
+          <p class="voice"><mat-icon>record_voice_over</mat-icon><span>Voz gravada: {{ recordedName() }}</span></p>
+        } @else if (listen.voices().length > 1) {
           <label class="voice">
             <mat-icon>record_voice_over</mat-icon>
             <span>Voz</span>
@@ -75,4 +77,7 @@ import { LISTEN_RATES, ListenService } from '../core/listen.service';
 export class ListenPlayer {
   protected readonly listen = inject(ListenService);
   protected readonly rates = LISTEN_RATES;
+  protected recordedName(): string {
+    return this.listen.recordedVoice().replace(/^pt-BR-/, '').replace(/Neural$/, '') + ' (voz neural)';
+  }
 }

@@ -47,3 +47,7 @@ Imagine, numa grande cidade, uma área do tamanho de um bairro, cercada de muros
 - A visão do templo de Ezequiel: [[Ez 47.1-12]].
 - Na nova Jerusalém, não há templo: [[Ap 21.22]].
 - No dicionário: [templo](/dicionario/templo), [tabernáculo](/dicionario/tabernaculo).
+
+:::leia entre-os-testamentos
+Os 400 anos entre Malaquias e Mateus: como o mundo ficou do jeito que Jesus encontrou.
+:::
