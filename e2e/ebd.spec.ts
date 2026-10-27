@@ -57,8 +57,8 @@ test('apoio ao professor: turmas da EBD, aula-modelo e o material do app na liç
 });
 
 test('apoio ao professor: a turma mostra as lições 1 a 13 do trimestre', async ({ page }) => {
-  // Juniores: as lições ainda estão em preparação
-  await page.goto('/ebd/apoio/juniores');
+  // Berçário: as lições ainda estão em preparação
+  await page.goto('/ebd/apoio/bercario');
   await expect(page.getByRole('heading', { name: 'Lições do trimestre' })).toBeVisible();
   await expect(page.locator('ol.lessons > li')).toHaveCount(13);
   await expect(page.locator('ol.lessons > li .lesson').first()).toHaveAttribute('aria-label', 'Lição 1: em preparação');

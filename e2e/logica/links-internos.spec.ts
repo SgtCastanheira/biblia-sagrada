@@ -26,7 +26,7 @@ const hymns = new Set(json<{ hymns: { n: number }[] }>('harpa.json').hymns.map((
 
 const FIXED = new Set([
   '/', '/estudo', '/estudo/livros', '/ensino', '/meu-espaco', '/historia', '/avivamento', '/profecias', '/dicionario', '/atlas', '/mapas',
-  '/busca', '/livros', '/curiosidades', '/devocional', '/ibuc', '/ebd', '/ebd/apoio', '/anotacoes', '/favoritos', '/sermoes', '/novidades',
+  '/busca', '/quiz', '/livros', '/curiosidades', '/devocional', '/ibuc', '/ebd', '/ebd/apoio', '/anotacoes', '/favoritos', '/sermoes', '/novidades',
   '/fontes', '/creditos', '/ajustes', '/harpa', '/tribos', '/genealogia', '/memorial', '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo',
 ]);
 
@@ -35,6 +35,7 @@ function problemWith(route: string): string {
   const path = route.split(/[?#]/)[0].replace(/\/$/, '') || '/';
   if (FIXED.has(path)) return '';
   const [, section, id, extra] = path.split('/');
+  if (section === 'quiz') return '';
   const known = (set: Set<string> | string[]) => (Array.isArray(set) ? set.includes(id) : set.has(id));
   switch (section) {
     case 'artigo': return known(ARTICLES.map((a) => a.id)) ? '' : 'artigo não existe';
@@ -134,7 +135,7 @@ test('histórias: todo artigo está em exatamente uma trilha e os atalhos das tr
   }
 });
 
-for (const turma of ['adultos', 'jovens']) test(`EBD (${turma}, 4º trimestre): 13 lições, cada uma com lembretes, atividades e referências que existem`, () => {
+for (const turma of ['adultos', 'jovens', 'pre-adolescentes', 'adolescentes', 'juvenis', 'juniores']) test(`EBD (${turma}, 4º trimestre): 13 lições, cada uma com lembretes, atividades e referências que existem`, () => {
   const lessons = EBD_SUPPORT_LESSONS.filter((l) => l.quarter === '2026-4' && l.classes.includes(turma));
   expect(lessons.map((l) => l.number).sort((a, b) => a! - b!)).toEqual(Array.from({ length: 13 }, (_, i) => i + 1));
   const problems: string[] = [];

@@ -1,5 +1,9 @@
 import { EBD_ADULTOS_4T26 } from './ebd-adultos-4t26';
+import { EBD_ADOLESCENTES_4T26 } from './ebd-adolescentes-4t26';
 import { EBD_JOVENS_4T26 } from './ebd-jovens-4t26';
+import { EBD_JUNIORES_4T26 } from './ebd-juniores-4t26';
+import { EBD_JUVENIS_4T26 } from './ebd-juvenis-4t26';
+import { EBD_PRE_ADOLESCENTES_4T26 } from './ebd-pre-adolescentes-4t26';
 import type { IbucClass, IbucLesson } from './teaching';
 
 /**
@@ -136,6 +140,10 @@ export const EBD_SUPPORT_CLASSES: IbucClass[] = [
 export const EBD_SUPPORT_LESSONS: IbucLesson[] = [
   ...EBD_ADULTOS_4T26,
   ...EBD_JOVENS_4T26,
+  ...EBD_ADOLESCENTES_4T26,
+  ...EBD_JUVENIS_4T26,
+  ...EBD_JUNIORES_4T26,
+  ...EBD_PRE_ADOLESCENTES_4T26,
   {
     id: 'modelo-neemias-reconstroi-os-muros',
     classes: ['adolescentes', 'jovens', 'adultos'],
