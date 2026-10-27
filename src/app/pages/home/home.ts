@@ -15,6 +15,7 @@ import { FavoritesService } from '../../core/favorites.service';
 import { SettingsService } from '../../core/settings.service';
 import { findVersion, VERSIONS } from '../../core/versions';
 import { Sheets } from '../../shared/sheets';
+import { StoryRings } from '../../shared/story-rings';
 
 /** Versículos sorteados na tela inicial: um diferente a cada vez que ela é aberta. */
 const HIGHLIGHTS = [
@@ -117,7 +118,7 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule],
+  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, StoryRings],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

@@ -531,3 +531,28 @@
 
   > mat-icon { color: var(--accent-gold); }
 }
+
+.stories {
+  margin: 8px 0 4px;
+
+  .stories-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 2px 4px;
+
+    h2 {
+      margin: 0;
+      font: 600 20px/1.2 var(--heading-font);
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      font: 600 14px Inter, sans-serif;
+      color: var(--mat-sys-primary);
+      text-decoration: none;
+    }
+  }
+}

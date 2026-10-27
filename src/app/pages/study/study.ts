@@ -157,7 +157,7 @@ export class StudyPage {
       icon: 'history_edu',
       shelves: [
         { link: '/estudo/livros', icon: 'menu_book', name: 'Contexto dos livros', description: 'Autor, data e cenário de cada livro, de Gênesis a Apocalipse, com tudo o que há para estudar nele.' },
-        { link: '/historia', queryParams: { colecao: 'contexto' }, icon: 'school', name: 'Aulas de contexto', description: 'O exército romano, a crucificação, o casamento judaico, os Herodes, as moedas e o templo.' },
+        { link: '/historia', queryParams: { trilha: 'contexto' }, icon: 'school', name: 'Aulas de contexto', description: 'O exército romano, a crucificação, o casamento judaico, os Herodes, as moedas e o templo.' },
         { link: '/artigo/cativeiros-de-israel', icon: 'link_off', name: 'Os cativeiros de Israel', description: 'Egito, Assíria, Babilônia e o retorno — com mapa.' },
         { link: '/curiosidades', icon: 'lightbulb', name: 'Você sabia?', description: 'Curiosidades bíblicas, com os versículos.' },
       ],
@@ -195,11 +195,11 @@ export class StudyPage {
       title: 'História da Igreja e da Bíblia',
       icon: 'account_balance',
       shelves: [
-        { link: '/historia', icon: 'history_edu', name: 'História da Igreja', description: 'De Pentecostes às reformas, aos avivamentos e ao pentecostalismo no Brasil.' },
-        { link: '/historia', queryParams: { colecao: 'biblia' }, icon: 'auto_stories', name: 'De onde veio a Bíblia', description: 'O cânon, os manuscritos, as traduções e a Bíblia em português.' },
+        { link: '/historia', queryParams: { trilha: 'igreja' }, icon: 'history_edu', name: 'História da Igreja', description: 'De Pentecostes às reformas, aos avivamentos e ao pentecostalismo no Brasil.' },
+        { link: '/historia', queryParams: { trilha: 'sobre-a-biblia' }, icon: 'auto_stories', name: 'De onde veio a Bíblia', description: 'O cânon, os manuscritos, as traduções e a Bíblia em português.' },
         { link: '/assembleia-de-deus', icon: 'pin_drop', name: 'A Assembleia de Deus em cada estado', description: 'De onde saíram os pioneiros e como a igreja foi construída em cada estado, com mapa.' },
         { link: '/harpa', icon: 'music_note', name: 'Harpa Cristã', description: 'A história do hinário e de cada hino: quem escreveu, traduziu, quando e por quê.' },
-        { link: '/historia', queryParams: { colecao: 'avivamentos' }, icon: 'local_fire_department', name: 'Avivamentos', description: 'De Pentecostes às Hébridas: como cada avivamento começou, terminou e mudou a sociedade.' },
+        { link: '/historia', queryParams: { trilha: 'pentecostalismo' }, icon: 'local_fire_department', name: 'Avivamentos', description: 'De Pentecostes às Hébridas: como cada avivamento começou, terminou e mudou a sociedade.' },
         { link: '/avivamento', icon: 'campaign', name: 'Sermões que marcaram a história', description: 'Wesley, Edwards, Spurgeon, Moody — e pregadores de hoje.' },
       ],
     },

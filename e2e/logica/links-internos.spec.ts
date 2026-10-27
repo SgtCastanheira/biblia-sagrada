@@ -6,8 +6,9 @@ import { BOOKS } from '../../src/app/core/books';
 import { EBD_SUPPORT_CLASSES, EBD_SUPPORT_LESSONS } from '../../src/app/core/ebd-support';
 import { IBUC_CLASSES, IBUC_LESSONS } from '../../src/app/core/ibuc';
 import { CURIOSITIES } from '../../src/app/core/curiosities';
-import { ARTICLES, CLASSIC_SERMONS } from '../../src/app/core/library';
+import { ARTICLES, CLASSIC_SERMONS, findArticle } from '../../src/app/core/library';
 import { BIBLE_MAPS, findMap } from '../../src/app/core/maps';
+import { articlesWithoutTrail, TRAILS, trailOfArticle } from '../../src/app/core/trails';
 import { TRIBES } from '../../src/app/core/tribes';
 import { RELEASES } from '../../src/app/core/whats-new';
 
@@ -115,4 +116,19 @@ test('linha do tempo nacional: toda história de estado tem fatos datados e o co
   }
   // Em ordem cronológica
   for (let i = 1; i < all.length; i++) expect(all[i].year).toBeGreaterThanOrEqual(all[i - 1].year);
+});
+
+test('histórias: todo artigo está em exatamente uma trilha e os atalhos das trilhas levam a telas que existem', () => {
+  expect(articlesWithoutTrail().map((a) => a.id)).toEqual([]);
+  const seen = new Map<string, string>();
+  for (const t of TRAILS) for (const b of t.branches) for (const id of b.ids) {
+    expect(findArticle(id), `${t.id}: artigo ${id}`).toBeTruthy();
+    expect(seen.get(id), `${id} está em duas trilhas`).toBeUndefined();
+    seen.set(id, t.id);
+    expect(trailOfArticle(id)?.id).toBe(t.id);
+  }
+  for (const t of TRAILS) for (const b of t.branches) for (const l of b.links ?? []) {
+    const bad = problemWith(l.link);
+    expect(bad, `trilha ${t.id}: ${l.link}`).toBe('');
+  }
 });

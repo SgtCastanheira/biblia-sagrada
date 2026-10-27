@@ -9,6 +9,7 @@ import { RouterLink } from '@angular/router';
 import { map, startWith, switchMap } from 'rxjs';
 import { ContentService } from '../../core/content.service';
 import { articlesOf, COLLECTIONS, findArticle, STORY_COLLECTIONS } from '../../core/library';
+import { trailOfArticle } from '../../core/trails';
 import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
 import { outline } from '../../core/rich-text-parser';
@@ -23,7 +24,7 @@ import { SourcesBox } from '../../shared/sources-box';
     @if (article(); as a) {
       <div class="article">
         <div class="top">
-          <app-back fallback="/historia" [queryParams]="{ colecao: a.collection }" />
+          <app-back fallback="/historia" [queryParams]="{ trilha: trailId() }" />
           <button mat-icon-button (click)="share()" aria-label="Compartilhar"><mat-icon>ios_share</mat-icon></button>
         </div>
         @if (story()) {
@@ -188,6 +189,8 @@ export class ArticlePage {
     const a = this.article();
     return a ? COLLECTIONS[a.collection] : undefined;
   });
+  /** Assunto da tela de histórias a que este artigo pertence (para onde o botão voltar leva). */
+  protected readonly trailId = computed(() => trailOfArticle(this.id())?.id);
   /** Histórias (Igreja e Bíblia) ganham capa e leitura em capítulos. */
   protected readonly story = computed(() => STORY_COLLECTIONS.includes(this.article()?.collection!));
   /** O panorama da coleção (como Atos), para quem quiser ver onde esta história se encaixa. */

@@ -28,6 +28,7 @@ export const RELEASES: Release[] = [
     items: [
       { icon: 'timeline', title: 'Linha do tempo da Assembleia de Deus', text: 'Ano a ano, em ordem cronológica: a igreja em cada estado ao lado das guerras, secas, epidemias e crises do Brasil e do mundo.', link: '/assembleia-de-deus/linha-do-tempo' },
       { icon: 'history_edu', title: 'Os irmãos perseguidos', text: 'O cotidiano, quem perseguia, o que a lei dizia e o que não se sabe — contado sem inventar o que as fontes não registram.', link: '/artigo/irmaos-perseguidos' },
+      { icon: 'bubble_chart', title: 'Histórias por assunto, em círculos', text: 'Na tela inicial e em Histórias, um círculo para cada assunto: Histórias da Bíblia, Sobre a Bíblia, Contexto histórico, Profecias, História da Igreja, Pentecostalismo, Evangelho no Brasil e Harpa Cristã.', link: '/historia' },
       { icon: 'near_me', title: 'Quem enviou quem', text: 'Nas histórias dos estados, um quadro mostra de onde saíram os pastores e para onde foram. Em Mato Grosso, a história de Sebastião Rodrigues de Souza e de Eduardo Joerke foi refeita.', link: '/assembleia-de-deus/mt' },
       { icon: 'list', title: 'Índice ao lado do texto', text: 'No computador, o índice e o mapa ficam fixos ao lado da leitura; no celular, abrem com um toque.', link: '/assembleia-de-deus' },
     ],

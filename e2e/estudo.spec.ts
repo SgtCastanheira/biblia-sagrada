@@ -200,7 +200,7 @@ test('voltar leva para a tela anterior (o caminho feito), e não para uma págin
 test('aberto direto por um link, voltar vai para a página da seção', async ({ page }) => {
   await page.goto('/artigo/apocalipse');
   await page.getByRole('button', { name: 'Voltar' }).click();
-  await expect(page).toHaveURL(/\/historia\?colecao=profecias/);
+  await expect(page).toHaveURL(/\/historia\?trilha=profecias/);
 });
 
 test('ordem da Bíblia: profetas menores, profecias e estudo livro por livro', async ({ page }) => {
@@ -360,8 +360,8 @@ test('estudos que não são histórias continuam com a leitura simples', async (
 });
 
 test('história da Igreja como Atos: o panorama em destaque leva às histórias completas, e elas se cruzam', async ({ page }) => {
-  await page.goto('/historia');
-  await page.getByRole('link', { name: /Comece por aqui/ }).click();
+  await page.goto('/historia?trilha=igreja');
+  await page.getByRole('link', { name: /A história da Igreja em resumo/ }).click();
   await expect(page).toHaveURL(/\/artigo\/panorama-da-igreja/);
   await page.locator('a.read').filter({ hasText: 'A história da Escola Dominical' }).click();
   await expect(page).toHaveURL(/\/artigo\/escola-dominical/);
