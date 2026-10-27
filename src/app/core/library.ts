@@ -479,10 +479,10 @@ export const ARTICLES: Article[] = [
     id: 'septuaginta',
     collection: 'biblia',
     title: 'A Septuaginta, a Bíblia grega',
-    subtitle: 'A tradução feita em Alexandria que os apóstolos citavam.',
-    period: 'séc. III–I a.C.',
+    subtitle: 'A lenda dos 72 sábios, o que se sabe de verdade, a ordem e os nomes dos livros, e a Bíblia que os apóstolos citavam.',
+    period: 'séc. III a.C. – hoje',
     icon: 'translate',
-    minutes: 3,
+    minutes: 10,
   },
   {
     id: 'formacao-do-novo-testamento',
