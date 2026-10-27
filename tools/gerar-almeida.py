@@ -63,6 +63,13 @@ VERSE_FIXES = {
     ("MRK", 7, 11): ("poderías", "poderias"),
     ("LUK", 16, 13): ("servir dois senhores; porque ou há de odiar a um e amar ao outro, o há de odiar a um e amar ao outro, o há de dedicar-se",
                       "servir a dois senhores; porque ou há de odiar a um e amar ao outro, ou há de dedicar-se"),
+    ("1KI", 12, 28): ("fez doisvado e meio. ouro", "fez dois bezerros de ouro"),
+    ("1KI", 18, 5): ("Pode ser ser que", "Pode ser que"),
+    ("2KI", 10, 23): ("mas somente os adoradores de Baal. dom; porém não puderam.", "mas somente os adoradores de Baal."),
+    ("NUM", 7, 66): ("príncipe filhos filhos de Dã", "príncipe dos filhos de Dã"),
+    ("PSA", 42, 7): ("todas as tuas tuas ondas", "todas as tuas ondas"),
+    ("JHN", 11, 15): ("para para que creiais", "para que creiais"),
+    ("REV", 19, 12): ("ninguém sabia sabia senão", "ninguém sabia senão"),
 }
 
 def fix_verse(book, chapter, verse, text):

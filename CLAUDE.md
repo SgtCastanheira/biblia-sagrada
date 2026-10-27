@@ -167,5 +167,5 @@ These rules are deliberate; keep them. Licenses are tracked in CREDITOS.md and i
 - **No copyrighted study-Bible text:** do not add commentary from CPAD, the Pentecostal Study Bible or similar.
 - **Modern sermons** (Billy Graham etc.) appear only as metadata plus a YouTube search link, never as text.
 - **Historical sermons** are in the public domain and are translated and condensed.
-- **Bible text changes** go through `tools/gerar-almeida.py`, which applies `VERSE_FIXES` and the 1990 orthography. Do not edit `public/bible/almeida/*.json` by hand.
+- **Bible text changes** go through `tools/gerar-almeida.py`, which applies `VERSE_FIXES` and the 1990 orthography. To fix a verse without re-downloading the source, add it to `VERSE_FIXES` and run `tools/corrigir-almeida.py`. Do not edit `public/bible/almeida/*.json` by hand.
 - **Disputed prophecies:** `profecias.json` tags each prophecy with a status (`cumprida | parcial | debatida | futura`) and a kind (`direta | tipologica | dupla`). Disputed ones present several `views` instead of one position.
