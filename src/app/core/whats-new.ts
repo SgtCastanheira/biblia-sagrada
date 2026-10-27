@@ -27,6 +27,8 @@ export const RELEASES: Release[] = [
     title: 'A Bíblia em línguas indígenas, a Trindade e os deuses pagãos',
     items: [
       { icon: 'translate', title: 'A Bíblia em línguas indígenas do Brasil', text: 'A Bíblia inteira em Guarani Mbyá e em Guajajára, e o Novo Testamento em Kaiwá (Guarani Kaiowá), Kayabí, Kaapor, Mundurukú, Sateré-Mawé, Ticuna, Kaingang, Terena e Xavante, das traduções da Wycliffe.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto do capítulo.' },
+      { icon: 'change_history', title: 'A Trindade', text: 'Um só Deus, Pai, Filho e Espírito Santo: o que a Bíblia ensina, onde está escrito, os erros mais comuns e por que isso muda a oração e a vida no Espírito.', link: '/artigo/trindade' },
+      { icon: 'shield', title: 'Os deuses pagãos na Bíblia', text: 'Baal, Astarote, Moloque, Dagom, Júpiter, Diana e outros: onde aparecem, os nomes que ganharam, o que pediam e por que a Bíblia manda rejeitá-los. Com os nomes deles que ainda usamos hoje.', link: '/artigo/deuses-pagaos' },
       { icon: 'check_circle', title: 'Lições com cores mais leves', text: 'Nas lições da EBD, as aulas que já foram ficam em verde-claro, com um check; as próximas, em marrom-claro; e a da vez pisca em dourado suave.', link: '/ebd/apoio' },
     ],
   },

@@ -45,6 +45,17 @@ export const TRAILS: Trail[] = [
     ],
   },
   {
+    id: 'um-so-deus',
+    name: 'Um só Deus',
+    short: 'Um só Deus',
+    description: 'Quem é o Deus da Bíblia, Pai, Filho e Espírito Santo, e por que a Bíblia rejeita os outros deuses.',
+    icon: 'church',
+    branches: [
+      { title: 'Quem é Deus', ids: ['trindade'] },
+      { title: 'Os falsos deuses', ids: ['deuses-pagaos'] },
+    ],
+  },
+  {
     id: 'sobre-a-biblia',
     name: 'De onde veio a Bíblia',
     short: 'Sobre a Bíblia',

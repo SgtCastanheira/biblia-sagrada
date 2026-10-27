@@ -42,6 +42,10 @@ export const WORKS: Record<string, Work> = {
   hengel: { author: 'Martin Hengel', title: 'Crucifixion in the Ancient World and the Folly of the Message of the Cross', publisher: 'Fortress, 1977', kind: 'referencia' },
   hendin: { author: 'David Hendin', title: 'Guide to Biblical Coins', publisher: 'Amphora', kind: 'referencia' },
   ritmeyer: { author: 'Leen Ritmeyer', title: 'The Quest: Revealing the Temple Mount in Jerusalem', publisher: 'Carta, 2006', kind: 'referencia' },
+  'grudem-ts': { author: 'Wayne Grudem', title: 'Teologia sistemática', publisher: 'Vida Nova', kind: 'referencia' },
+  'horton-ts': { author: 'Stanley M. Horton (org.)', title: 'Teologia sistemática: uma perspectiva pentecostal', publisher: 'CPAD', kind: 'referencia' },
+  'ddd': { author: 'Karel van der Toorn, Bob Becking e Pieter W. van der Horst (orgs.)', title: 'Dictionary of Deities and Demons in the Bible', publisher: 'Brill e Eerdmans, 2ª ed., 1999', kind: 'referencia' },
+  'day-gods': { author: 'John Day', title: 'Yahweh and the Gods and Goddesses of Canaan', publisher: 'Sheffield Academic Press, 2000', kind: 'historia' },
   'sanders-judaism': { author: 'E. P. Sanders', title: 'Judaism: Practice and Belief, 63 BCE–66 CE', publisher: 'SCM Press e Trinity Press International, 1992', kind: 'historia' },
   saldarini: { author: 'Anthony J. Saldarini', title: 'Pharisees, Scribes and Sadducees in Palestinian Society', publisher: 'Michael Glazier, 1988', kind: 'historia' },
   'vanderkam-dss': { author: 'James C. VanderKam', title: 'The Dead Sea Scrolls Today', publisher: 'Eerdmans, 2ª ed., 2010', kind: 'historia' },
@@ -176,6 +180,24 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'Salmos de Salomão (séc. I a.C.) e os manuscritos do Mar Morto',
     ],
     works: ['schurer', 'grabbe', 'russell', 'bruce-nt-history', 'ferguson', 'keener-nt'],
+  },
+  trindade: {
+    ancient: [
+      'Teófilo de Antioquia, A Autólico 2.15 (a palavra “tríade”, c. 180)',
+      'Tertuliano, Contra Práxeas (a palavra “Trindade” e “uma substância, três pessoas”, c. 213)',
+      'Credo de Niceia (325) e Credo Niceno-Constantinopolitano (381)',
+      'Basílio de Cesareia, Sobre o Espírito Santo (c. 375), e Agostinho, A Trindade (c. 400–420)',
+      'Símbolo Quicumque, o chamado Credo Atanasiano (séc. V–VI)',
+    ],
+    works: ['kelly', 'gonzalez', 'grudem-ts', 'horton-ts', 'synan'],
+  },
+  'deuses-pagaos': {
+    ancient: [
+      'Textos de Ugarit (Ras Shamra, Síria, séc. XIV–XIII a.C.): os mitos de Baal',
+      'Estela de Mesa, a Pedra Moabita (c. 840 a.C., Museu do Louvre), que cita Quemós',
+      'Martinho de Dume, Sobre a correção dos rústicos (c. 572), sobre os nomes dos dias da semana',
+    ],
+    works: ['ddd', 'day-gods', 'walton-at', 'ndb', 'keener-nt'],
   },
   'grupos-do-tempo-de-jesus': {
     ancient: [
