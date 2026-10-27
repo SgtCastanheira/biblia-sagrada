@@ -43,7 +43,7 @@ test('apoio ao professor: turmas da EBD, aula-modelo e o material do app na liç
   await page.getByRole('link', { name: /Jovens/ }).click();
   await expect(page.getByText('Como ensinar nesta idade')).toBeVisible();
   await page.getByRole('link', { name: /Neemias reconstrói os muros/ }).click();
-  await expect(page.getByText('Quatro meses de oração')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Quatro meses de oração' })).toBeVisible();
   await expect(page.getByText('Debate: oração ou planejamento?')).toBeVisible();
 
   // A lição cadastrada com a leitura em Neemias já mostra a aula de apoio e o contexto do livro
@@ -57,12 +57,14 @@ test('apoio ao professor: turmas da EBD, aula-modelo e o material do app na liç
 });
 
 test('apoio ao professor: a turma mostra as lições 1 a 13 do trimestre', async ({ page }) => {
-  // Berçário: as lições ainda estão em preparação
-  await page.goto('/ebd/apoio/bercario');
-  await expect(page.getByRole('heading', { name: 'Lições do trimestre' })).toBeVisible();
-  await expect(page.locator('ol.lessons > li')).toHaveCount(13);
-  await expect(page.locator('ol.lessons > li .lesson').first()).toHaveAttribute('aria-label', 'Lição 1: em preparação');
-  await expect(page.locator('ol.lessons > li .lesson').last()).toHaveAttribute('aria-label', 'Lição 13: em preparação');
+  // Todas as 10 turmas têm as 13 lições
+  for (const turma of ['bercario', 'maternal', 'jardim', 'primarios', 'juniores', 'pre-adolescentes', 'adolescentes', 'juvenis', 'jovens', 'adultos']) {
+    await page.goto('/ebd/apoio/' + turma);
+    await expect(page.getByRole('heading', { name: 'Lições do trimestre' })).toBeVisible();
+    await expect(page.locator('ol.lessons > li')).toHaveCount(13);
+    await expect(page.locator('ol.lessons > li .lesson').first()).not.toHaveAttribute('aria-label', /em preparação/);
+    await expect(page.locator('ol.lessons > li .lesson').last()).not.toHaveAttribute('aria-label', /em preparação/);
+  }
 });
 
 test('apoio ao professor: Adultos tem as 13 lições de Deuteronômio, com lembretes e dinâmicas', async ({ page }) => {

@@ -135,7 +135,7 @@ test('histórias: todo artigo está em exatamente uma trilha e os atalhos das tr
   }
 });
 
-for (const turma of ['adultos', 'jovens', 'pre-adolescentes', 'adolescentes', 'juvenis', 'juniores']) test(`EBD (${turma}, 4º trimestre): 13 lições, cada uma com lembretes, atividades e referências que existem`, () => {
+for (const turma of ['adultos', 'jovens', 'pre-adolescentes', 'adolescentes', 'juvenis', 'juniores', 'primarios', 'jardim', 'maternal', 'bercario']) test(`EBD (${turma}, 4º trimestre): 13 lições, cada uma com lembretes, atividades e referências que existem`, () => {
   const lessons = EBD_SUPPORT_LESSONS.filter((l) => l.quarter === '2026-4' && l.classes.includes(turma));
   expect(lessons.map((l) => l.number).sort((a, b) => a! - b!)).toEqual(Array.from({ length: 13 }, (_, i) => i + 1));
   const problems: string[] = [];
@@ -146,7 +146,7 @@ for (const turma of ['adultos', 'jovens', 'pre-adolescentes', 'adolescentes', 'j
     if (!l.reminders || l.reminders.length < 3) problems.push(`${where}: poucos lembretes`);
     if (l.curiosities.length < 3) problems.push(`${where}: poucas curiosidades`);
     if (l.activities.length < 2) problems.push(`${where}: poucas atividades`);
-    if (l.questions.length < 5) problems.push(`${where}: poucas perguntas`);
+    if (l.questions.length < (['jardim', 'maternal', 'bercario'].includes(turma) ? 3 : 5)) problems.push(`${where}: poucas perguntas`);
     if (parseReferences(l.memoryVerse).errors.length) problems.push(`${where}: versículo para decorar inválido (${l.memoryVerse})`);
     for (const r of l.refs.split(';')) if (parseReferences(r.trim()).errors.length) problems.push(`${where}: refs inválidas (${r})`);
     const text = [...(l.reminders ?? []), l.opening, ...l.curiosities.map((c) => c.text), l.context, ...l.activities.flatMap((a) => [a.material, ...a.steps]), l.application, l.deepen ?? ''].join('\n');

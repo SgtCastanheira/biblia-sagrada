@@ -248,7 +248,7 @@ test('IBUC: turma por idade e aula-modelo com curiosidades e brincadeiras', asyn
   await page.getByRole('link', { name: /Primários/ }).click();
   await expect(page.getByText('Como ensinar nesta idade')).toBeVisible();
   await page.getByRole('link', { name: /Davi e Golias/ }).click();
-  await expect(page.getByText('Quase três metros')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Quase três metros' })).toBeVisible();
   await expect(page.getByText('Acerte o gigante')).toBeVisible();
   await page.getByRole('button', { name: 'Voltar à turma' }).click();
   await expect(page).toHaveURL(/\/ibuc\/primarios/);

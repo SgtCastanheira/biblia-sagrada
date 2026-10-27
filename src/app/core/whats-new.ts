@@ -22,6 +22,17 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'ebd-todas-as-turmas-e-historias-desenhadas',
+    date: '27 de outubro de 2026',
+    title: 'EBD de todas as turmas, bolinhas e histórias desenhadas',
+    items: [
+      { icon: 'school', title: 'As 13 lições de todas as turmas', text: 'Do Berçário aos Adultos, as 10 turmas têm as 13 lições do 4º trimestre, com lembretes, dinâmicas, brincadeiras e perguntas para o professor.', link: '/ebd/apoio' },
+      { icon: 'counter_1', title: 'Lições em bolinhas', text: 'Os números das lições agora são bolinhas, como as das histórias. A lição da vez pisca em dourado.', link: '/ebd/apoio/primarios' },
+      { icon: 'draw', title: 'A história desenhada', text: 'Cada lição ganhou uma cena desenhada, para o professor mostrar e contar a história de forma mais visual.', link: '/ebd/apoio/juniores' },
+      { icon: 'map', title: 'Histórias por estado em bolinhas', text: 'A Assembleia de Deus em cada estado, organizada por região ou por ordem de chegada, em bolinhas fáceis de tocar.', link: '/assembleia-de-deus' },
+    ],
+  },
+  {
     id: 'biblia-hebraica-e-ebd-em-cartoes',
     date: '27 de outubro de 2026',
     title: 'A Bíblia em hebraico, a Bíblia judaica e a EBD em cartões',
