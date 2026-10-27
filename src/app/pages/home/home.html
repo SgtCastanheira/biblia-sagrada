@@ -104,6 +104,18 @@
   </a>
 }
 
+<!-- A fitinha da Bíblia -->
+@if (ribbon(); as r) {
+  <a class="ribbon-link card" matRipple [routerLink]="['/ler', r.bookId, r.chapter]">
+    <span class="ribbon-mark" aria-hidden="true"></span>
+    <span class="ribbon-text">
+      <span class="overline">Sua fitinha</span>
+      <span class="title">{{ r.name }}</span>
+    </span>
+    <mat-icon class="go">arrow_forward</mat-icon>
+  </a>
+}
+
 <!-- Histórias por assunto: os círculos levam a cada trilha -->
 <section class="stories" aria-labelledby="stories-title">
   <div class="stories-head">

@@ -174,6 +174,13 @@ export class HomePage {
     return { book, chapter: last.chapter, read, progress: Math.round((read / book.chapters) * 100) };
   });
 
+  /** Onde está a fitinha da Bíblia (o capítulo onde a pessoa a deixou). */
+  protected readonly ribbon = computed(() => {
+    const m = this.settings.bookmark();
+    const book = m && findBook(m.bookId);
+    return book ? { bookId: book.id, chapter: m.chapter, name: `${book.name} ${m.chapter}` } : null;
+  });
+
   protected readonly overallProgress = computed(() =>
     ((this.settings.totalRead() / TOTAL_CHAPTERS) * 100).toFixed(1).replace('.', ','),
   );

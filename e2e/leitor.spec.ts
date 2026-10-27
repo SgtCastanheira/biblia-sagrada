@@ -18,7 +18,7 @@ test.describe('Leitor', () => {
     await page.getByRole('button', { name: 'Aparência da leitura' }).click();
     await page.getByRole('button', { name: /Texto corrido/ }).click();
     await page.keyboard.press('Escape');
-    await expect(page.locator('.verse').first()).toBeVisible();
+    await expect(page.getByText(/um homem chamado Nicodemos/)).toBeVisible();
     await expect(page.locator('.line')).toHaveCount(0);
   });
 
@@ -94,4 +94,31 @@ test('versículo abre o mesmo texto na NVI, ARA e NTLH (site do YouVersion)', as
   await expect(page.getByRole('link', { name: /Nova Versão Internacional/ })).toHaveAttribute('href', 'https://www.bible.com/bible/129/JHN.3.16.NVI');
   await expect(page.getByRole('link', { name: /Almeida Revista e Atualizada/ })).toHaveAttribute('href', 'https://www.bible.com/bible/1608/JHN.3.16.ARA');
   await expect(page.getByRole('link', { name: /Linguagem de Hoje/ })).toHaveAttribute('href', 'https://www.bible.com/bible/211/JHN.3.16.NTLH');
+});
+
+test('fitinha: marca o capítulo, aparece na tela inicial e some ao tocar de novo', async ({ page }) => {
+  await page.goto('/ler/JHN/3');
+  const ribbon = page.getByRole('button', { name: /fitinha/i });
+  await expect(ribbon).toHaveAttribute('aria-pressed', 'false');
+  await ribbon.click();
+  await expect(ribbon).toHaveAttribute('aria-pressed', 'true');
+  // Em outro capítulo a fitinha fica curta; a tela inicial leva de volta a ela
+  await page.goto('/ler/JHN/4');
+  await expect(page.getByRole('button', { name: /fitinha/i })).toHaveAttribute('aria-pressed', 'false');
+  await page.goto('/');
+  await page.getByRole('link', { name: /Sua fitinha/ }).click();
+  await expect(page).toHaveURL(/\/ler\/JHN\/3/);
+  await page.getByRole('button', { name: /fitinha/i }).click();
+  await expect(page.getByRole('button', { name: /fitinha/i })).toHaveAttribute('aria-pressed', 'false');
+});
+
+test('virar a página: a folha nova chega com a animação do lado certo', async ({ page }) => {
+  await page.goto('/ler/JHN/3');
+  await expect(page.getByText(/um homem chamado Nicodemos/)).toBeVisible();
+  await page.keyboard.press('ArrowRight');
+  await expect(page).toHaveURL(/\/ler\/JHN\/4/);
+  await expect(page.locator('.book-page')).toHaveClass(/turn-next/);
+  await expect(page.locator('.book-page')).not.toHaveClass(/turn-/, { timeout: 3000 });
+  await page.keyboard.press('ArrowLeft');
+  await expect(page.locator('.book-page')).toHaveClass(/turn-prev/);
 });

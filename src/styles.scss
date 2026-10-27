@@ -230,3 +230,64 @@ body.theme-sepia {
     margin-block: -10px;
   }
 }
+
+/* ---------- Leitor: a página da Bíblia que vira ---------- */
+.book-page {
+  position: relative;
+  touch-action: pan-y;
+  transform-origin: left center;
+}
+
+.book-page.dragging {
+  transition: none;
+  will-change: transform;
+}
+
+.book-page.settling {
+  transition: transform .25s ease-out;
+}
+
+/* A página nova chega virando, como quem passa a folha */
+.book-page.turn-next {
+  transform-origin: left center;
+  animation: page-in-next .55s cubic-bezier(.2, .7, .2, 1);
+}
+
+.book-page.turn-prev {
+  transform-origin: right center;
+  animation: page-in-prev .55s cubic-bezier(.2, .7, .2, 1);
+}
+
+.book-page.turn-next::after,
+.book-page.turn-prev::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .16), transparent 45%);
+  animation: page-shade .55s ease-out forwards;
+}
+
+.book-page.turn-prev::after {
+  background: linear-gradient(270deg, rgba(0, 0, 0, .16), transparent 45%);
+}
+
+@keyframes page-in-next {
+  from { transform: perspective(1400px) translateX(46px) rotateY(-14deg); opacity: .25; }
+  to { transform: perspective(1400px) none; opacity: 1; }
+}
+
+@keyframes page-in-prev {
+  from { transform: perspective(1400px) translateX(-46px) rotateY(14deg); opacity: .25; }
+  to { transform: perspective(1400px) none; opacity: 1; }
+}
+
+@keyframes page-shade {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-page.turn-next, .book-page.turn-prev { animation: none; }
+  .book-page.turn-next::after, .book-page.turn-prev::after { display: none; }
+}

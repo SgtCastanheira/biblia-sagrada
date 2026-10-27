@@ -54,6 +54,8 @@ export class SettingsService {
   readonly mapLayers = signal<{ nearby: boolean; era: boolean; modern: boolean }>(load('mapLayers', { nearby: true, era: true, modern: false }));
   readonly theme = signal<ThemeMode>(load('theme', load('darkMode', false) ? 'dark' : 'light'));
   readonly lastRead = signal<LastRead | null>(load('lastRead', null));
+  /** A fitinha: o capítulo onde a pessoa parou. */
+  readonly bookmark = signal<LastRead | null>(load('bookmark', null));
   /** Capítulos já abertos, por livro. */
   readonly readChapters = signal<Record<string, number[]>>(load('readChapters', {}));
 
@@ -69,6 +71,7 @@ export class SettingsService {
     effect(() => persist('studyNotes', this.studyNotes()));
     effect(() => persist('mapLayers', this.mapLayers()));
     effect(() => persist('lastRead', this.lastRead()));
+    effect(() => persist('bookmark', this.bookmark()));
     effect(() => persist('readChapters', this.readChapters()));
     effect(() => {
       const font = this.font();

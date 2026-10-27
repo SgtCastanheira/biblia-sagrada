@@ -4,6 +4,7 @@ import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
@@ -21,6 +22,7 @@ import { articlesFor } from '../../core/library';
 import { mapsFor } from '../../core/maps';
 import { TRIBE_CHAPTERS } from '../../core/tribes';
 import { findVersion } from '../../core/versions';
+import { BookRibbon } from '../../shared/book-ribbon';
 import { Sheets } from '../../shared/sheets';
 
 interface VerseRow {
@@ -44,7 +46,7 @@ interface ChapterLink {
 
 @Component({
   selector: 'app-reader',
-  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, MatTooltipModule],
+  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, MatTooltipModule, BookRibbon],
   templateUrl: './reader.html',
   styleUrl: './reader.scss',
   host: {
@@ -186,6 +188,22 @@ export class ReaderPage {
   });
 
   private touchStart: { x: number; y: number } | null = null;
+  private readonly snackBar = inject(MatSnackBar);
+  protected readonly dragX = signal(0);
+  protected readonly settling = signal(false);
+  /** Sentido da última virada de página, só enquanto a animação toca. */
+  protected readonly turn = signal<'next' | 'prev' | null>(null);
+  protected readonly ribbonHere = computed(() => {
+    const m = this.settings.bookmark();
+    return !!m && m.bookId === this.book() && m.chapter === this.chapterNum();
+  });
+  /** A folha acompanha o dedo, girando em torno da lombada. */
+  protected readonly dragTransform = computed(() => {
+    const dx = this.dragX();
+    if (dx === 0) return null;
+    return `perspective(1400px) translateX(${dx * 0.45}px) rotateY(${Math.max(-16, Math.min(16, dx / 12))}deg)`;
+  });
+  private lastPosition: number | null = null;
 
   constructor() {
     const title = inject(Title);
@@ -200,6 +218,19 @@ export class ReaderPage {
     effect(() => {
       this.chapterNum();
       this.studyOpen.set(false);
+    });
+
+    // A página nova chega virando, para o lado de onde veio a leitura
+    effect(() => {
+      const book = this.bookInfo();
+      if (!book) return;
+      const position = BOOKS.indexOf(book) * 1000 + this.chapterNum();
+      const before = this.lastPosition;
+      this.lastPosition = position;
+      if (before === null || before === position) return;
+      this.dragX.set(0);
+      this.turn.set(position > before ? 'next' : 'prev');
+      setTimeout(() => this.turn.set(null), 600);
     });
 
     // Rola até o versículo indicado na URL (#v16) depois que o capítulo carregar.
@@ -275,10 +306,23 @@ export class ReaderPage {
     });
   }
 
-  // Deslizar para os lados troca de capítulo (celular)
+  // Arrastar a página para o lado: ela acompanha o dedo e, passando do ponto, vira para o capítulo vizinho
   protected onTouchStart(e: TouchEvent): void {
     const t = e.changedTouches[0];
     this.touchStart = { x: t.clientX, y: t.clientY };
+    this.settling.set(false);
+  }
+
+  protected onTouchMove(e: TouchEvent): void {
+    if (!this.touchStart || e.touches.length > 1) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - this.touchStart.x;
+    const dy = t.clientY - this.touchStart.y;
+    const horizontal = Math.abs(dx) > 14 && Math.abs(dx) > Math.abs(dy) * 1.6;
+    if (!horizontal && this.dragX() === 0) return;
+    // Sem página para onde ir, a folha só dá uma leve resistência
+    const target = dx < 0 ? this.next() : this.previous();
+    this.dragX.set(Math.round(target ? dx : dx / 5) || (dx < 0 ? -1 : 1));
   }
 
   protected onTouchEnd(e: TouchEvent): void {
@@ -287,9 +331,35 @@ export class ReaderPage {
     const dx = t.clientX - this.touchStart.x;
     const dy = t.clientY - this.touchStart.y;
     this.touchStart = null;
-    if (Math.abs(dx) > 90 && Math.abs(dx) > Math.abs(dy) * 2) {
-      this.goTo(dx < 0 ? this.next() : this.previous());
+    const go = Math.abs(dx) > 90 && Math.abs(dx) > Math.abs(dy) * 2;
+    this.settle();
+    if (go) this.goTo(dx < 0 ? this.next() : this.previous());
+  }
+
+  protected onTouchCancel(): void {
+    this.touchStart = null;
+    this.settle();
+  }
+
+  private settle(): void {
+    if (this.dragX() === 0) return;
+    this.settling.set(true);
+    this.dragX.set(0);
+    setTimeout(() => this.settling.set(false), 300);
+  }
+
+  /** A fitinha: marca este capítulo; tocando de novo, tira. Em outro capítulo, traz a fitinha para cá. */
+  protected toggleRibbon(): void {
+    const here = { bookId: this.book(), chapter: this.chapterNum() };
+    const before = this.settings.bookmark();
+    if (this.ribbonHere()) {
+      this.settings.bookmark.set(null);
+      this.snackBar.open('Fitinha retirada', 'Desfazer', { duration: 3000 }).onAction().subscribe(() => this.settings.bookmark.set(before));
+      return;
     }
+    this.settings.bookmark.set(here);
+    const label = before ? `Fitinha movida para ${this.bookInfo()?.name} ${here.chapter}` : `Fitinha em ${this.bookInfo()?.name} ${here.chapter}`;
+    this.snackBar.open(label, before ? 'Desfazer' : undefined, { duration: 3000 }).onAction().subscribe(() => this.settings.bookmark.set(before));
   }
 
   private verseRef(verse: number) {

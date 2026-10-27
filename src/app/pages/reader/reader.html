@@ -25,7 +25,9 @@
     </button>
   </header>
 
-  <article class="page" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+  <article class="page book-page" [class.turn-next]="turn() === 'next'" [class.turn-prev]="turn() === 'prev'" [class.dragging]="dragX() !== 0" [class.settling]="settling()"
+    [style.transform]="dragTransform()" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)" (touchcancel)="onTouchCancel()">
+    <app-book-ribbon [placed]="ribbonHere()" (toggle)="toggleRibbon()" />
     <!-- Abertura do capítulo -->
     <div class="chapter-head" [style.--c]="book.category.color">
       <span class="category">{{ book.category.name }}</span>
