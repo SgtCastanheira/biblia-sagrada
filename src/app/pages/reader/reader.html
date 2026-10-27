@@ -19,6 +19,9 @@
         <mat-icon>compare_arrows</mat-icon>
       </button>
     }
+    <button mat-icon-button (click)="listenChapter()" [matTooltip]="listen.state() === 'idle' ? 'Ouvir este capítulo' : 'Parar de ouvir'" [attr.aria-label]="listen.state() === 'idle' ? 'Ouvir este capítulo' : 'Parar de ouvir'">
+      <mat-icon>{{ listen.state() === 'idle' ? 'headphones' : 'stop_circle' }}</mat-icon>
+    </button>
     <a mat-icon-button routerLink="/busca" matTooltip="Buscar" aria-label="Buscar na Bíblia"><mat-icon>search</mat-icon></a>
     <button mat-icon-button (click)="openSettings()" matTooltip="Aparência" aria-label="Aparência da leitura">
       <mat-icon>format_size</mat-icon>

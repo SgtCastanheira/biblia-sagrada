@@ -16,12 +16,13 @@ import { SettingsService } from './core/settings.service';
 import { UiService } from './core/ui.service';
 import { findVersion } from './core/versions';
 import { Sheets } from './shared/sheets';
+import { ListenPlayer } from './shared/listen-player';
 
 type NavTab = 'inicio' | 'biblia' | 'estudo' | 'ensino' | 'eu';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, MatIconModule, MatButtonModule, MatRippleModule, MatTooltipModule],
+  imports: [RouterOutlet, RouterLink, MatIconModule, MatButtonModule, MatRippleModule, MatTooltipModule, ListenPlayer],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   host: {

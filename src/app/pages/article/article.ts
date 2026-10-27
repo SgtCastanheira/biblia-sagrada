@@ -1,14 +1,16 @@
 import { BackButton } from '../../shared/back-button';
-import { Component, computed, effect, inject, input } from '@angular/core';
+import { Component, computed, DestroyRef, effect, inject, input } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { map, startWith, switchMap } from 'rxjs';
 import { ContentService } from '../../core/content.service';
 import { articlesOf, COLLECTIONS, findArticle, STORY_COLLECTIONS } from '../../core/library';
+import { ListenService } from '../../core/listen.service';
 import { trailOfArticle } from '../../core/trails';
 import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
@@ -25,7 +27,12 @@ import { SourcesBox } from '../../shared/sources-box';
       <div class="article">
         <div class="top">
           <app-back fallback="/historia" [queryParams]="{ trilha: trailId() }" />
-          <button mat-icon-button (click)="share()" aria-label="Compartilhar"><mat-icon>ios_share</mat-icon></button>
+          <span class="actions">
+            <button mat-icon-button (click)="listenArticle()" [attr.aria-label]="listen.state() === 'idle' ? 'Ouvir esta história' : 'Parar de ouvir'">
+              <mat-icon>{{ listen.state() === 'idle' ? 'headphones' : 'stop_circle' }}</mat-icon>
+            </button>
+            <button mat-icon-button (click)="share()" aria-label="Compartilhar"><mat-icon>ios_share</mat-icon></button>
+          </span>
         </div>
         @if (story()) {
           <div class="progress" aria-hidden="true"></div>
@@ -183,6 +190,33 @@ import { SourcesBox } from '../../shared/sources-box';
 export class ArticlePage {
   readonly id = input.required<string>();
   private readonly content = inject(ContentService);
+  protected readonly listen = inject(ListenService);
+  private readonly snackBar = inject(MatSnackBar);
+
+  /** Ouvir a história: título, resumo e cada parágrafo, um de cada vez, destacado na tela. */
+  protected listenArticle(): void {
+    if (!this.listen.supported) {
+      this.snackBar.open('Este aparelho não tem leitura em voz alta.', undefined, { duration: 3000 });
+      return;
+    }
+    if (this.listen.state() !== 'idle') {
+      this.listen.stop();
+      return;
+    }
+    const a = this.article();
+    const body = document.querySelector('app-rich-text');
+    if (!a || !body) return;
+    const wanted = [...body.querySelectorAll<HTMLElement>('h2, h3, p, blockquote, ul:not(.people) > li, ol > li')]
+      .filter((el) => !el.closest('.people, .read, .sources, .toc'));
+    // Quem contém outro trecho da lista (uma citação com parágrafo dentro) fica de fora, para não ler duas vezes
+    const leaves = wanted.filter((el) => !wanted.some((other) => other !== el && el.contains(other)));
+    const items = [
+      { text: `${a.title}. ${a.subtitle}` },
+      ...leaves.map((el) => ({ el, text: (el.textContent ?? '').replace(/\s+/g, ' ').trim() })).filter((i) => i.text),
+    ];
+    this.listen.start(a.title, items);
+  }
+
 
   protected readonly article = computed(() => findArticle(this.id()));
   protected readonly collection = computed(() => {
@@ -226,6 +260,7 @@ export class ArticlePage {
   });
 
   constructor() {
+    inject(DestroyRef).onDestroy(() => this.listen.stop());
     const title = inject(Title);
     effect(() => {
       const a = this.article();

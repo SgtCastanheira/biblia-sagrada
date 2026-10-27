@@ -97,6 +97,12 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 
 **Narration voice** (`core/voice.ts`): the map journey speaks with the Web Speech API. It prefers Microsoft's Francisca (`pt-BR-FranciscaNeural`, available in the Edge browser as "Microsoft Francisca Online (Natural)"), then other natural pt-BR voices, then any Brazilian voice. The Azure voice itself would need a server with a secret key, so the app does not call it.
 
+**Histórias por assunto** (`core/trails.ts`, `shared/story-rings.ts`, `pages/history/`): `/historia` and the home screen show one ring per subject (`TRAILS`: Histórias da Bíblia, Sobre a Bíblia, Contexto, Profecias, Igreja, Pentecostalismo, Evangelho no Brasil, Harpa). Each trail has branches (`ids` of articles + `links` to other screens). Every article must be in exactly one trail (`links-internos.spec.ts` checks); a new article goes in `library.ts` AND in a trail branch. `?colecao=` still works (legacy), the article's back button uses `?trilha=`. Colour rule: one family (sage + gold accent), no per-subject rainbow; subjects differ by icon.
+
+**Reader feel** (`pages/reader/`, `shared/book-ribbon.ts`, `.book-page` in `styles.scss`): dragging the page sideways follows the finger and turns to the next/previous chapter; the new page arrives with a turning animation (off with reduced motion). The gold ribbon (`SettingsService.bookmark`) marks the chapter where the reader stopped; the home screen links back to it.
+
+**Listen** (`core/listen.service.ts`, `shared/listen-player.ts`): "Ouvir" reads a Bible chapter (verse by verse, then continues to the next chapter) or a story (headings and paragraphs of `app-rich-text`) with the Web Speech API: best pt-BR voice from `voice.ts`, rate 0.92 by default, pause between parts, current part highlighted (`.speaking`). `splitForSpeech` is pure (`core/speech-split.ts`). The voice quality depends on the device; a studio-quality voice would need pre-generated audio files (not done).
+
 **What's new** (`core/whats-new.ts`): when publishing user-visible features, add a new entry at the top of `RELEASES` with a new `id`. Every device sees it once (first visits included), in a bottom sheet (`WhatsNewService`, checked at startup before the daily reminders). It is also listed at `/novidades`, which has a share button.
 
 **Navigation:** the bottom menu has five tabs, and each screen belongs to exactly one of them (`tab` in `app.ts`):

@@ -23,7 +23,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
     <app-story-rings [active]="trail()?.id" [all]="true" />
 
     @if (trail(); as t) {
-      <section class="cover" [style.--h]="t.hue">
+      <section class="cover">
         <mat-icon class="watermark" aria-hidden="true">{{ t.icon }}</mat-icon>
         <span class="c-over">{{ count(t) }} {{ count(t) === 1 ? 'história' : 'histórias' }}</span>
         <h2>{{ t.name }}</h2>
@@ -67,7 +67,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
     } @else {
       <div class="grid topics">
         @for (t of trails; track t.id) {
-          <a class="topic" matRipple [routerLink]="[]" [queryParams]="{ trilha: t.id }" replaceUrl [style.--h]="t.hue">
+          <a class="topic" matRipple [routerLink]="[]" [queryParams]="{ trilha: t.id }" replaceUrl>
             <span class="disc"><mat-icon>{{ t.icon }}</mat-icon></span>
             <span class="texts">
               <span class="name">{{ t.name }}</span>
@@ -82,16 +82,14 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
   styleUrl: '../../shared/study.scss',
   styles: `
     .disc {
-      --a: hsl(var(--h) 70% 52%); --b: hsl(calc(var(--h) + 40) 75% 58%);
-      display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%; box-sizing: border-box; padding: 3px;
-      background: conic-gradient(from 200deg, var(--a), var(--b), var(--a));
+      display: grid; place-items: center; box-sizing: border-box; border-radius: 50%; padding: 3px;
+      background: conic-gradient(from 200deg, var(--mat-sys-primary), var(--accent-gold), var(--mat-sys-primary));
     }
-    .disc mat-icon { width: 100%; height: 100%; display: grid; place-items: center; border-radius: 50%; font-size: 30px; background: var(--mat-sys-surface); color: hsl(var(--h) 55% 38%); box-sizing: border-box; border: 3px solid var(--mat-sys-surface); }
-    .disc { transition: transform .15s; }
+    .disc mat-icon { width: 100%; height: 100%; display: grid; place-items: center; border-radius: 50%; background: var(--mat-sys-surface); color: var(--mat-sys-primary); box-sizing: border-box; border: 3px solid var(--mat-sys-surface); }
     .page-head + app-story-rings { margin-bottom: 18px; }
     .cover {
       position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 6px; margin: 0 0 8px; padding: 22px 20px; border-radius: 24px; color: #fff8ec;
-      background: radial-gradient(110% 90% at 100% 0%, hsl(var(--h) 70% 60% / .38), transparent 62%), linear-gradient(165deg, hsl(var(--h) 35% 22%), hsl(var(--h) 40% 11%) 80%);
+      background: radial-gradient(110% 90% at 100% 0%, rgba(203, 165, 108, .26), transparent 62%), linear-gradient(165deg, #2f4a3d, #1b2b23 80%);
     }
     .cover h2 { position: relative; margin: 0; font: 600 28px/1.15 var(--heading-font); }
     .cover p { position: relative; margin: 0; max-width: 560px; font: 400 15px/1.5 var(--reading-font); color: #eadfcb; }
@@ -110,7 +108,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
     .topic .texts { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
     .topic .name { font: 600 18px/1.25 var(--heading-font); }
     .topic .desc { font: 400 14px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
-    .topic .meta { margin-top: 2px; font: 600 13px Inter, sans-serif; color: hsl(var(--h) 55% 34%); }
+    .topic .meta { margin-top: 2px; font: 600 13px Inter, sans-serif; color: var(--accent-gold); }
     .next { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; padding: 14px 18px; border-radius: 18px; text-decoration: none; color: var(--mat-sys-primary); background: var(--mat-sys-surface-container); font: 600 17px/1.3 var(--heading-font); }
     .next span { display: flex; flex-direction: column; }
     .next small { font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }

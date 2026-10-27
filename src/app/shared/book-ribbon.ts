@@ -1,7 +1,7 @@
 import { Component, input, output } from '@angular/core';
 
 /**
- * A fitinha da Bíblia: pendurada no alto da página. Comprida e vermelha, marca o capítulo onde a pessoa parou;
+ * A fitinha da Bíblia: pendurada no alto da página. Comprida e dourada, marca o capítulo onde a pessoa parou;
  * curta e discreta, nos outros capítulos, e basta tocar para trazê-la para cá.
  */
 @Component({
@@ -20,8 +20,8 @@ import { Component, input, output } from '@angular/core';
     .band {
       display: block; width: 24px; height: calc(100% - 8px); margin: 8px auto 0; opacity: .55; transform-origin: top; transition: opacity .2s;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
-      background: linear-gradient(90deg, #7d1c2b, #b02a3d 45%, #8e2031);
-      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .35));
+      background: linear-gradient(90deg, #a07a3e, #cba56c 45%, #a8854f);
+      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .25));
     }
     .ribbon:hover .band, .ribbon:focus-visible .band { opacity: .85; }
     .placed .band { opacity: 1; animation: drop .6s cubic-bezier(.3, 1.4, .5, 1); }

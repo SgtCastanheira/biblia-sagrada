@@ -291,3 +291,11 @@ body.theme-sepia {
   .book-page.turn-next, .book-page.turn-prev { animation: none; }
   .book-page.turn-next::after, .book-page.turn-prev::after { display: none; }
 }
+
+/* O trecho que está sendo lido em voz alta */
+.speaking {
+  background: color-mix(in srgb, var(--accent-gold) 20%, transparent);
+  border-radius: 8px;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-gold) 20%, transparent);
+  transition: background .3s, box-shadow .3s;
+}

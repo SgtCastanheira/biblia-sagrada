@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { afterNextRender, Component, computed, effect, inject, Injector, input, signal } from '@angular/core';
+import { afterNextRender, Component, computed, DestroyRef, effect, inject, Injector, input, signal } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
@@ -11,6 +11,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { catchError, combineLatest, map, Observable, of, startWith, switchMap } from 'rxjs';
 import { BibleService, isRateLimit, LOCAL_VERSIONS } from '../../core/bible.service';
 import { BOOKS, findBook } from '../../core/books';
+import { ListenService } from '../../core/listen.service';
 import { ContentService } from '../../core/content.service';
 import { DictionaryMatcher, TextPart } from '../../core/dictionary';
 import { parseReferences } from '../../core/reference-parser';
@@ -189,6 +190,9 @@ export class ReaderPage {
 
   private touchStart: { x: number; y: number } | null = null;
   private readonly snackBar = inject(MatSnackBar);
+  protected readonly listen = inject(ListenService);
+  /** Ao terminar um capítulo ouvindo, segue para o próximo e continua. */
+  private listenOnLoad = false;
   protected readonly dragX = signal(0);
   protected readonly settling = signal(false);
   /** Sentido da última virada de página, só enquanto a animação toca. */
@@ -220,6 +224,14 @@ export class ReaderPage {
       this.studyOpen.set(false);
     });
 
+    // Terminou de carregar o capítulo seguinte e a pessoa estava ouvindo: continua a leitura em voz alta
+    effect(() => {
+      if (this.state().loading || !this.listenOnLoad) return;
+      this.listenOnLoad = false;
+      afterNextRender(() => this.startListening(), { injector: this.injector });
+    });
+    inject(DestroyRef).onDestroy(() => this.listen.stop());
+
     // A página nova chega virando, para o lado de onde veio a leitura
     effect(() => {
       const book = this.bookInfo();
@@ -228,6 +240,7 @@ export class ReaderPage {
       const before = this.lastPosition;
       this.lastPosition = position;
       if (before === null || before === position) return;
+      if (!this.listenOnLoad) this.listen.stop();
       this.dragX.set(0);
       this.turn.set(position > before ? 'next' : 'prev');
       setTimeout(() => this.turn.set(null), 600);
@@ -346,6 +359,35 @@ export class ReaderPage {
     this.settling.set(true);
     this.dragX.set(0);
     setTimeout(() => this.settling.set(false), 300);
+  }
+
+  /** Ouvir o capítulo: lê um versículo por vez, destacando-o, e segue para o capítulo seguinte. */
+  protected listenChapter(): void {
+    if (!this.listen.supported) {
+      this.snackBar.open('Este aparelho não tem leitura em voz alta.', undefined, { duration: 3000 });
+      return;
+    }
+    if (this.listen.state() !== 'idle') this.listen.stop();
+    else this.startListening();
+  }
+
+  private startListening(): void {
+    const book = this.bookInfo();
+    const rows = this.state().rows.filter((r) => r.text);
+    if (!book || !rows.length) return;
+    const label = `${book.name} ${this.chapterNum()}`;
+    const items = [
+      { text: `${book.name}, capítulo ${this.chapterNum()}` },
+      ...rows.map((r) => ({ text: r.text!, el: document.getElementById('v' + r.verse) })),
+    ];
+    this.listen.start(label, items, {
+      onEnd: () => {
+        const next = this.next();
+        if (!next) return;
+        this.listenOnLoad = true;
+        this.goTo(next);
+      },
+    });
   }
 
   /** A fitinha: marca este capítulo; tocando de novo, tira. Em outro capítulo, traz a fitinha para cá. */

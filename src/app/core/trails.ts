@@ -26,8 +26,6 @@ export interface Trail {
   short: string;
   description: string;
   icon: string;
-  /** Matiz (0–360) das cores do círculo e da capa. */
-  hue: number;
   branches: TrailBranch[];
   /** Coleções antigas que levam a esta trilha (links com ?colecao=). */
   collections?: ArticleCollection[];
@@ -40,7 +38,6 @@ export const TRAILS: Trail[] = [
     short: 'Histórias da Bíblia',
     description: 'Povos, personagens e acontecimentos da própria Bíblia, com mapas e linhas do tempo.',
     icon: 'menu_book',
-    hue: 28,
     collections: ['estudos'],
     branches: [
       { title: 'Estudos', ids: ['ministerios-na-biblia', 'cativeiros-de-israel'] },
@@ -62,7 +59,6 @@ export const TRAILS: Trail[] = [
     short: 'Sobre a Bíblia',
     description: 'Como os livros foram escritos, reunidos, copiados e traduzidos até a Almeida.',
     icon: 'auto_stories',
-    hue: 200,
     collections: ['biblia'],
     branches: [
       { title: 'Como foi escrita e reunida', ids: ['formacao-do-antigo-testamento', 'septuaginta', 'formacao-do-novo-testamento', 'apocrifos'] },
@@ -76,7 +72,6 @@ export const TRAILS: Trail[] = [
     short: 'Contexto histórico',
     description: 'O que as palavras, os costumes e a vida da época significavam para os primeiros ouvintes.',
     icon: 'school',
-    hue: 160,
     collections: ['contexto'],
     branches: [
       { title: 'Roma e o poder', ids: ['legiao-e-o-exercito-romano', 'crucificacao-romana', 'a-familia-de-herodes'] },
@@ -90,7 +85,6 @@ export const TRAILS: Trail[] = [
     short: 'Profecias',
     description: 'Como ler as profecias, Daniel e Apocalipse, com o contexto histórico e as principais interpretações.',
     icon: 'visibility',
-    hue: 275,
     collections: ['profecias'],
     branches: [
       { title: 'Comece por aqui', ids: ['como-interpretar-profecias'] },
@@ -103,7 +97,6 @@ export const TRAILS: Trail[] = [
     short: 'História da Igreja',
     description: 'De Pentecostes às reformas e às missões: como a fé chegou até nós.',
     icon: 'history_edu',
-    hue: 40,
     collections: ['igreja'],
     branches: [
       { title: 'Os primeiros séculos', ids: ['panorama-da-igreja', 'igreja-primitiva', 'perseguicoes', 'constantino-e-os-concilios'] },
@@ -118,7 +111,6 @@ export const TRAILS: Trail[] = [
     short: 'Pentecostalismo',
     description: 'De Azusa Street aos grandes avivamentos: como começaram, por quem, como terminaram e o que mudaram.',
     icon: 'local_fire_department',
-    hue: 8,
     collections: ['avivamentos'],
     branches: [
       { title: 'O movimento pentecostal', ids: ['movimento-pentecostal'] },
@@ -131,7 +123,6 @@ export const TRAILS: Trail[] = [
     short: 'Evangelho no Brasil',
     description: 'Os pioneiros, a igreja em cada estado, as perseguições e as convenções: o pentecostalismo brasileiro.',
     icon: 'flag',
-    hue: 135,
     branches: [
       { title: 'Os pioneiros', ids: ['pentecostes-no-brasil', 'daniel-berg-e-gunnar-vingren', 'frida-vingren'] },
       {
@@ -152,7 +143,6 @@ export const TRAILS: Trail[] = [
     short: 'Harpa Cristã',
     description: 'A história do hinário que acompanha os cultos da Assembleia de Deus.',
     icon: 'music_note',
-    hue: 320,
     branches: [{
       title: 'A história e os hinos',
       ids: ['harpa-crista'],
