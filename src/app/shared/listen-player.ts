@@ -14,6 +14,7 @@ import { LISTEN_RATES, ListenService } from '../core/listen.service';
           <span class="count">{{ listen.index() + 1 }} de {{ listen.items().length }}</span>
           <button type="button" class="icon" (click)="listen.stop()" aria-label="Parar e fechar"><mat-icon>close</mat-icon></button>
         </div>
+        @if (listen.problem(); as why) { <p class="problem" role="alert"><mat-icon>info</mat-icon>{{ why }}</p> }
         <div class="bar" aria-hidden="true"><span [style.width.%]="((listen.index() + 1) / listen.items().length) * 100"></span></div>
         <div class="controls">
           <button type="button" class="icon" (click)="listen.previous()" aria-label="Trecho anterior"><mat-icon>skip_previous</mat-icon></button>
@@ -63,6 +64,8 @@ import { LISTEN_RATES, ListenService } from '../core/listen.service';
     .rates { margin-left: auto; display: flex; gap: 2px; }
     .rates button { min-width: 44px; height: 44px; border-radius: 12px; font: 600 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .rates button.on { background: var(--mat-sys-primary-container); color: var(--mat-sys-on-primary-container); }
+    .problem { display: flex; gap: 8px; align-items: flex-start; margin: 4px 0 6px; padding: 8px 10px; border-radius: 12px; background: var(--mat-sys-surface-container); font: 500 13px/1.4 Inter, sans-serif; }
+    .problem mat-icon { flex: none; font-size: 18px; width: 18px; height: 18px; color: var(--accent-gold); }
     .voice { display: flex; align-items: center; gap: 8px; margin-top: 4px; font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .voice mat-icon { font-size: 20px; width: 20px; height: 20px; color: var(--accent-gold); }
     .voice select { flex: 1; min-width: 0; height: 44px; padding: 0 10px; border-radius: 12px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface); color: var(--mat-sys-on-surface); font: 500 14px Inter, sans-serif; }

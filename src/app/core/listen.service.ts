@@ -32,8 +32,12 @@ export class ListenService {
   /** Voz escolhida pela pessoa (voiceURI); vazio = a melhor do aparelho. */
   readonly voiceUri = signal(this.saved('listenVoice') ?? '');
 
+  /** Por que a voz não tocou (sem voz no aparelho, bloqueio do navegador…); vazio quando está tudo bem. */
+  readonly problem = signal('');
+
   private run = 0;
   private timer: ReturnType<typeof setTimeout> | undefined;
+  private watchdog: ReturnType<typeof setTimeout> | undefined;
   private onEnd: (() => void) | undefined;
 
   constructor() {
@@ -60,6 +64,7 @@ export class ListenService {
       this.halt();
       this.state.set('paused');
     } else if (this.state() === 'paused') {
+      this.problem.set('');
       this.speakItem(this.index());
     }
   }
@@ -78,6 +83,7 @@ export class ListenService {
     this.halt();
     this.clearMarks();
     this.state.set('idle');
+    this.problem.set('');
     this.items.set([]);
     this.onEnd = undefined;
   }
@@ -102,6 +108,7 @@ export class ListenService {
   private halt(): void {
     this.run++;
     clearTimeout(this.timer);
+    clearTimeout(this.watchdog);
     if (this.supported) speechSynthesis.cancel();
   }
 
@@ -112,8 +119,10 @@ export class ListenService {
     const run = this.run;
     this.index.set(i);
     this.state.set('playing');
+    this.problem.set('');
     this.mark(item.el);
     const chunks = splitForSpeech(item.text);
+    let started = false;
     const speakChunk = (n: number) => {
       if (run !== this.run) return;
       if (n >= chunks.length) {
@@ -125,14 +134,30 @@ export class ListenService {
       utterance.voice = this.voices().find((v) => v.voiceURI === this.voiceUri()) ?? narrationVoice();
       utterance.rate = this.rate();
       utterance.pitch = 0.95;
+      utterance.onstart = () => (started = true);
       utterance.onend = () => speakChunk(n + 1);
       utterance.onerror = (e) => {
         // "canceled" e "interrupted" acontecem ao pausar ou trocar de trecho; o resto para o player
-        if (e.error !== 'canceled' && e.error !== 'interrupted' && run === this.run) this.state.set('paused');
+        if (e.error === 'canceled' || e.error === 'interrupted' || run !== this.run) return;
+        this.fail(run, e.error === 'not-allowed' ? 'O navegador bloqueou o som. Toque em continuar.' : undefined);
       };
       speechSynthesis.speak(utterance);
+      // Alguns navegadores (como o Brave no Linux) aceitam a fala e nunca começam: sem voz instalada
+      if (n === 0) {
+        this.watchdog = setTimeout(() => { if (!started && run === this.run) this.fail(run); }, 4000);
+      }
     };
-    speakChunk(0);
+    // O Chrome perde a fala pedida logo depois de um cancelamento; uma folga curta resolve
+    this.timer = setTimeout(() => speakChunk(0), 80);
+  }
+
+  private fail(run: number, message?: string): void {
+    if (run !== this.run) return;
+    this.halt();
+    this.state.set('paused');
+    this.problem.set(message ?? (this.voices().length
+      ? 'A voz não respondeu. Escolha outra voz abaixo ou tente de novo.'
+      : 'Este navegador não tem voz em português. Abra no Edge, no computador, ou no Chrome do celular.'));
   }
 
   private finishItem(run: number): void {
