@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { LISTEN_RATES, ListenService } from '../core/listen.service';
+import { isNaturalVoice } from '../core/voice';
 
 /** Controles de "Ouvir": ficam flutuando acima do menu enquanto algo está sendo lido. */
 @Component({
@@ -37,10 +38,13 @@ import { LISTEN_RATES, ListenService } from '../core/listen.service';
             <select (change)="listen.setVoice($any($event.target).value)" aria-label="Escolher a voz">
               <option value="" [selected]="!listen.voiceUri()">Automática (a mais natural)</option>
               @for (v of listen.voices(); track v.voiceURI) {
-                <option [value]="v.voiceURI" [selected]="v.voiceURI === listen.voiceUri()">{{ v.name }}</option>
+                <option [value]="v.voiceURI" [selected]="v.voiceURI === listen.voiceUri()">{{ v.name }}{{ natural(v.name) ? ' ★' : '' }}</option>
               }
             </select>
           </label>
+        }
+        @if (listen.mode() !== 'audio' && !hasNatural()) {
+          <p class="tip"><mat-icon>lightbulb</mat-icon><span>Para uma voz mais natural: no computador ou no Android, abra o app no <b>Edge</b> (voz “Francisca”); no iPhone, baixe uma voz <b>Premium</b> em Ajustes › Acessibilidade › Conteúdo falado › Vozes › Português.</span></p>
         }
       </section>
     }
@@ -70,6 +74,8 @@ import { LISTEN_RATES, ListenService } from '../core/listen.service';
     .problem mat-icon { flex: none; font-size: 18px; width: 18px; height: 18px; color: var(--accent-gold); }
     .voice { display: flex; align-items: center; gap: 8px; margin-top: 4px; font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .voice mat-icon { font-size: 20px; width: 20px; height: 20px; color: var(--accent-gold); }
+    .tip { display: flex; gap: 8px; margin: 6px 0 0; font: 400 13px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .tip mat-icon { flex: none; font-size: 20px; width: 20px; height: 20px; color: var(--accent-gold); }
     .voice select { flex: 1; min-width: 0; height: 44px; padding: 0 10px; border-radius: 12px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface); color: var(--mat-sys-on-surface); font: 500 14px Inter, sans-serif; }
     button:focus-visible { outline: 2px solid var(--mat-sys-primary); outline-offset: 2px; }
   `,
@@ -77,6 +83,10 @@ import { LISTEN_RATES, ListenService } from '../core/listen.service';
 export class ListenPlayer {
   protected readonly listen = inject(ListenService);
   protected readonly rates = LISTEN_RATES;
+  protected readonly natural = isNaturalVoice;
+  protected hasNatural(): boolean {
+    return this.listen.voices().length === 0 || this.listen.voices().some((v) => isNaturalVoice(v.name));
+  }
   protected recordedName(): string {
     return this.listen.recordedVoice().replace(/^pt-BR-/, '').replace(/Neural$/, '') + ' (voz neural)';
   }
