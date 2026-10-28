@@ -26,7 +26,7 @@ export const RELEASES: Release[] = [
     date: '28 de outubro de 2026',
     title: 'Jesus nasceu mesmo em 25 de dezembro?',
     items: [
-      { icon: 'local_library', title: 'Teologia Sistemático-Carismática', text: 'Resumo comentado da introdução geral e dos dois primeiros capítulos da obra de César Moisés Carvalho e Céfora Carvalho: a pergunta “teologia pode ser pública?”, o conceito de sinergista, a lógica da fé e a lógica grega, o Espírito Santo como locus e o sujeito da teologia.', link: '/artigo/teologia-sistematico-carismatica', tip: 'Também em Histórias › Pentecostalismo.' },
+      { icon: 'local_library', title: 'Teologia Sistemático-Carismática', text: 'Síntese da introdução geral e dos dois primeiros capítulos da obra de César Moisés Carvalho e Céfora Carvalho: a pergunta “teologia pode ser pública?”, o conceito de sinergista, a lógica da fé e a lógica grega, o Espírito Santo como locus e o sujeito da teologia.', link: '/artigo/teologia-sistematico-carismatica', tip: 'Também em Histórias › Pentecostalismo.' },
       { icon: 'calendar_month', title: 'O Natal e os calendários', text: 'Uma data que todo mundo conhece e uma pergunta que quase ninguém faz. Siga as pistas do Evangelho, os dois suspeitos do 25 de dezembro e a noite de 1582 em que dez dias desapareceram do calendário.', link: '/artigo/natal-e-os-calendarios', tip: 'Também em Histórias › Contexto histórico.' },
     ],
   },

@@ -94,7 +94,7 @@ export const ARTICLES: Article[] = [
     collection: 'estudos',
     story: true,
     title: 'Teologia Sistemático-Carismática',
-    subtitle: 'Resumo e comentário da introdução geral e dos capítulos 1 e 2: uma teologia que põe o Espírito Santo como fio entre as doutrinas.',
+    subtitle: 'Síntese da introdução geral e dos capítulos 1 e 2: uma teologia que põe o Espírito Santo como fio entre as doutrinas.',
     topics: [
       'Teologia Pode Ser Pública?',
       'Sinergista',
@@ -104,7 +104,7 @@ export const ARTICLES: Article[] = [
       'Igreja, Academia e Educação Cristã',
     ],
     icon: 'local_library',
-    minutes: 14,
+    minutes: 16,
   },
   {
     id: 'trindade',

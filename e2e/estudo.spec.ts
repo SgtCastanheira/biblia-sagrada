@@ -416,7 +416,7 @@ test('entre os Testamentos: o mapa passa de uma época a outra e mostra onde est
   await expect(mapa.getByRole('link', { name: /Ver no atlas completo/ })).toHaveAttribute('href', /atlas\?epoca=macabeus/);
 });
 
-test('módulo Teologia Sistemático-Carismática: resumo comentado com o plano da obra ilustrado e tópicos em maiúsculas', async ({ page }) => {
+test('módulo Teologia Sistemático-Carismática: síntese com o plano da obra ilustrado e tópicos em maiúsculas', async ({ page }) => {
   await page.goto('/historia?trilha=pentecostalismo');
   await page.getByRole('link', { name: /Teologia Sistemático-Carismática/ }).click();
   await expect(page.getByRole('heading', { level: 1, name: 'Teologia Sistemático-Carismática' })).toBeVisible();
