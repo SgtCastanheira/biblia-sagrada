@@ -50,7 +50,7 @@ import { SourcesBox } from '../../shared/sources-box';
           </div>
           <header class="hero">
             <mat-icon class="watermark" aria-hidden="true">{{ a.icon }}</mat-icon>
-            <span class="hero-over">{{ step()?.trail?.name ?? collection()?.name }}@if (step(); as st) { · {{ st.index + 1 }} de {{ st.total }} }</span>
+            <span class="hero-over">{{ step()?.trail?.name ?? collection()?.name }}@if (step(); as st) { · história {{ st.index + 1 }} de {{ st.total }} }</span>
             <span class="era">{{ a.period }}</span>
             @if (a.portraits?.length) {
               <div class="portraits" aria-hidden="true">
@@ -59,7 +59,7 @@ import { SourcesBox } from '../../shared/sources-box';
             }
             <h1 class="title">{{ a.title }}</h1>
             <p class="lead">{{ a.subtitle }}</p>
-            <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura · role para entrar na história</p>
+            <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
             @if (overview(); as o) {
               <a class="part-of" [routerLink]="['/artigo', o.id]"><mat-icon>auto_stories</mat-icon> Parte do panorama: {{ o.title }}</a>
             }

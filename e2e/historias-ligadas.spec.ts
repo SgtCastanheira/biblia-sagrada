@@ -16,7 +16,7 @@ test('fim da história: a próxima da trilha, o progresso e a mesma época, sem 
   const step = trailStep(ID)!;
   const era = sameEra(ID, linkedArticles(readFileSync(`public/conteudo/artigos/${ID}.md`, 'utf8')));
   await page.goto(`/artigo/${ID}`);
-  await expect(page.locator('.hero-over')).toContainText(`${step.trail.name} · ${step.index + 1} de ${step.total}`);
+  await expect(page.locator('.hero-over')).toContainText(`${step.trail.name} · história ${step.index + 1} de ${step.total}`);
 
   const journey = page.locator('app-story-journey');
   await journey.scrollIntoViewIfNeeded();
