@@ -49,7 +49,7 @@ import { BibleMapView } from '../../shared/bible-map';
 
     <a class="card study" matRipple routerLink="/artigo/assembleia-de-deus-no-brasil">
       <mat-icon>menu_book</mat-icon>
-      <span><small>O estudo completo</small>A história da Assembleia de Deus no Brasil</span>
+      <span><small>O estudo completo</small>A História da Assembleia de Deus no Brasil</span>
       <mat-icon class="go">chevron_right</mat-icon>
     </a>
   `,

@@ -7,13 +7,13 @@ Não houve um grande pregador no começo deste avivamento. Houve uma reunião de
 - Charles H. Spurgeon | pregava em Londres para milhares
 :::
 
-## Uma cidade sem tempo para Deus
+## Uma Cidade sem Tempo para Deus
 
 Em 1857, Nova York era uma cidade de comércio, imigrantes e dinheiro. As igrejas do centro perdiam membros, porque as famílias se mudavam para os bairros novos. A Igreja Reformada Holandesa da Rua Fulton contratou um leigo, **Jeremiah Lanphier**, um ex-comerciante de 48 anos, para visitar as casas e convidar o povo.
 
 Lanphier se sentia sem resultado e passava horas orando. Teve então uma ideia simples: uma reunião de oração **ao meio-dia**, na hora do almoço, para os homens de negócios. Quem pudesse ficar cinco minutos, ficasse cinco minutos; quem pudesse ficar uma hora, ficasse uma hora.
 
-## A sala vazia
+## A Sala Vazia
 
 :::cena Rua Fulton, Nova York · 23 de setembro de 1857
 Ao meio-dia, Lanphier está sozinho numa sala do terceiro andar. Passa meia hora orando. Às 12h30, ouve passos na escada. No fim, são seis homens.
@@ -28,11 +28,11 @@ A súplica de um justo pode muito na sua atuação.
 — [[Tg 5.16]]
 :::
 
-## Como eram as reuniões
+## Como Eram as Reuniões
 
 As reuniões eram simples e tinham regras curtas: começar e terminar na hora, orações e testemunhos de poucos minutos, sem discussões sobre política ou sobre as diferenças entre as igrejas. Pessoas de várias denominações oravam juntas. Os pedidos eram lidos em voz alta: um filho desviado, um marido que bebia, um amigo que precisava de Cristo.
 
-## O fogo atravessa o oceano
+## O Fogo Atravessa o Oceano
 
 :::cena Kells, Ulster · 1857
 Num prédio de escola, perto da vila de Connor, na Irlanda do Norte, quatro rapazes começam a se reunir para orar toda semana. Um deles, James McQuilkin, tinha se convertido pouco antes.
@@ -40,7 +40,7 @@ Num prédio de escola, perto da vila de Connor, na Irlanda do Norte, quatro rapa
 
 As notícias da América animaram os crentes do Ulster. Em **1859**, o pequeno grupo de Kells se tornou um avivamento que se espalhou por toda a província: igrejas cheias, reuniões ao ar livre e, segundo as estimativas, cerca de cem mil convertidos. No mesmo ano, o avivamento chegou ao País de Gales e à Escócia.
 
-## O fim e os frutos
+## O Fim e os Frutos
 
 Por volta de 1860, às vésperas da Guerra Civil americana, o avivamento esfriou. Mas os frutos ficaram:
 - **Conversões:** o historiador J. Edwin Orr estimou que até um milhão de pessoas se converteram nos Estados Unidos em 1858 e 1859, numa população de cerca de trinta milhões.
@@ -54,7 +54,7 @@ Por volta de 1860, às vésperas da Guerra Civil americana, o avivamento esfriou
 :::sermao spurgeon-olhai-para-mim
 :::
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - set. 1857 | Rua Fulton | Lanphier começa a reunião de oração ao meio-dia (23 de setembro)
@@ -65,6 +65,6 @@ Por volta de 1860, às vésperas da Guerra Civil americana, o avivamento esfriou
 - 1860 | O fim | O movimento esfria antes da Guerra Civil americana
 :::
 
-## Para a vida
+## Para a Vida
 
 Este avivamento mostra que Deus pode começar uma grande obra com uma reunião pequena e pessoas comuns. Jesus prometeu: “se dois de vós concordarem na terra acerca de qualquer coisa que pedirem, isso lhes será feito por meu Pai, que está nos céus” [[Mt 18.19]].

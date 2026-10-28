@@ -6,7 +6,7 @@ Em Sergipe, o pioneiro foi um sargento do Exército. Como não era obreiro, não
 - Otto Nelson | missionário sueco
 :::
 
-## De onde saiu
+## De Onde Saiu
 
 O **sargento Ormínio**, do Exército Brasileiro, era membro da igreja no **Pará**. Transferido para Aracaju, começou ali os primeiros cultos, em **1927**, na **Avenida Maranhão, nº 343**, que foi também a primeira sede.
 
@@ -14,7 +14,7 @@ O **sargento Ormínio**, do Exército Brasileiro, era membro da igreja no **Par�
 Um sargento do Exército reúne vizinhos e conhecidos para orar e ler a Bíblia. Alguns se convertem e pedem o batismo — mas ele não é obreiro e não pode batizá-los.
 :::
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 Ormínio procurou a igreja de **Maceió**, que enviou o pastor **João Pedro da Silva** — o mesmo que batizara os primeiros crentes da Bahia — para realizar os batismos, em 1928. A organização oficial veio com o missionário **Otto Nelson**: os assembleianos de Sergipe consideram **18 de fevereiro de 1932** a data da fundação em Aracaju. A igreja sergipana se tornou autônoma em 1949.
 

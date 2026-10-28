@@ -24,7 +24,7 @@ Ainda em **1909**, numa igreja batista sueca de Chicago, Vingren recebeu o **bat
 
 Em **1902** foi para os Estados Unidos: chegou a Boston em março e depois foi para Providence, onde passou sete anos e se especializou como **fundidor**. Numa visita à Suécia, ouviu falar do movimento pentecostal pelo amigo de infância **Lewi Pethrus** — que seria o grande líder pentecostal sueco. De volta aos Estados Unidos, em **1909**, recebeu o batismo no Espírito Santo. Naquele mesmo ano, numa conferência em Chicago, conheceu Gunnar Vingren.
 
-## O chamado: “Pará”
+## O Chamado: “Pará”
 
 :::cena South Bend, Indiana · 1910
 Numa reunião de oração, uma profecia aponta para um lugar que nenhum dos dois conhece: Pará. Para descobrir onde fica, eles vão procurar numa biblioteca.
@@ -38,7 +38,7 @@ Partiram de **Nova York** no começo de novembro de 1910 e chegaram a **Belém e
 O caminho dos pioneiros: da Suécia aos Estados Unidos (1902–1903) e de Nova York a Belém do Pará (novembro de 1910).
 :::
 
-## Belém: fundidor de dia, estudante à noite
+## Belém: Fundidor de Dia, Estudante à Noite
 
 :::cena Porto de Belém · 19 de novembro de 1910
 Dois jovens suecos descem do navio Clement. Não falam português, não recebem salário de nenhuma missão e não conhecem ninguém na cidade.
@@ -63,7 +63,7 @@ Ide por todo o mundo, e pregai o evangelho a toda criatura.
 — Jesus, em [[Mc 16.15]]
 :::
 
-## Gunnar Vingren: o pastor e organizador
+## Gunnar Vingren: O Pastor e Organizador
 
 Numa viagem à Suécia, Vingren conheceu a enfermeira **Frida Strandberg**, que também se sentia chamada para o Brasil. Os dois se casaram em Belém, em **1917**, e tiveram seis filhos: Ivar, Ruben, Margit, Astrid, Bertil e Gunvor. Frida foi pregadora, escritora e compositora de hinos — o hino **85 da Harpa Cristã**, “Deixai Entrar o Espírito de Deus”, é dela.
 
@@ -80,7 +80,7 @@ O Boa Semente trouxe as primeiras lições impressas da Escola Dominical.
 
 De saúde frágil, voltou com a família para a Suécia em **15 de agosto de 1932** e morreu em **29 de junho de 1933**, de câncer no estômago. Está sepultado no cemitério Skogskyrkogården, em Estocolmo. As anotações do seu diário foram publicadas pelo filho Ivar como *Diário do Pioneiro*.
 
-## Daniel Berg: o evangelista das estradas
+## Daniel Berg: O Evangelista das Estradas
 
 Quando aprendeu o português o bastante para ser entendido, Daniel Berg passou a evangelizar nas cidades e vilas ao longo da **Estrada de Ferro Belém–Bragança** e foi pioneiro na evangelização da **Ilha de Marajó** — muitas vezes vendendo Bíblias de casa em casa.
 
@@ -97,7 +97,7 @@ Em 1962 voltou definitivamente para a Suécia e morreu em **27 de maio de 1963**
 Como a igreja saiu de Belém para todo o Brasil — com o mapa interativo.
 :::
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - 1879 | Nasce Gunnar Vingren | Östra Husby, Suécia (8 de agosto)
@@ -112,8 +112,8 @@ Como a igreja saiu de Belém para todo o Brasil — com o mapa interativo.
 - 1963 | Morre Daniel Berg | Estocolmo (27 de maio)
 :::
 
-## Para a vida
+## Para a Vida
 
 Vingren e Berg não tinham fama, dinheiro nem apoio de uma grande missão. Tinham um chamado, a disposição de obedecer e a coragem de trabalhar com as próprias mãos — como Paulo, que fazia tendas para não ser pesado a ninguém [[At 18.3]] [[1Ts 2.9]]. A semente que plantaram em Belém mostra o que Jesus ensinou: o Reino começa como um grão de mostarda e cresce até virar árvore [[Mt 13.31-32]].
 
-Veja também: [O pentecostalismo no Brasil](/artigo/pentecostes-no-brasil) e [Azusa Street e o movimento pentecostal](/artigo/movimento-pentecostal).
+Veja também: [O Pentecostalismo no Brasil](/artigo/pentecostes-no-brasil) e [Azusa Street e o Movimento Pentecostal](/artigo/movimento-pentecostal).

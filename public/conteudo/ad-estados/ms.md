@@ -4,7 +4,7 @@ A igreja de Campo Grande começou quando a cidade ainda fazia parte de Mato Gros
 - Juvenal Roque de Andrade | pioneiro em Campo Grande
 :::
 
-## O começo
+## O Começo
 
 As listas da denominação registram que **Juvenal Roque de Andrade** começou a Assembleia de Deus em **Campo Grande** em **1944**. Naquela época, Campo Grande era uma cidade de Mato Grosso; o estado de **Mato Grosso do Sul** só foi criado em **1977**.
 

@@ -7,11 +7,11 @@ As Hébridas são ilhas pequenas, de pescadores e criadores de ovelhas, no noroe
 - Duncan Campbell | pregador escocês
 :::
 
-## Uma ilha sem jovens na igreja
+## Uma Ilha sem Jovens na Igreja
 
 Depois da Segunda Guerra Mundial, as igrejas de Lewis ainda eram respeitadas, mas os jovens tinham se afastado. Os bailes e os bares eram o centro da vida social, e poucas pessoas novas se convertiam.
 
-## A oração de Peggy e Christine
+## A Oração de Peggy e Christine
 
 :::cena Barvas, ilha de Lewis · 1949
 Numa casinha à beira da estrada, duas irmãs idosas oram dia e noite. Peggy, cega, e Christine, curvada pela artrite, não podem ir à igreja. Elas se apegam a uma promessa: “derramarei água sobre o sedento”.
@@ -21,7 +21,7 @@ As irmãs **Peggy e Christine Smith** oravam pela promessa de [[Is 44.3]]: “Po
 
 Numa dessas noites, num celeiro, um jovem diácono leu o [[Sl 24.3-5]]: “Quem subirá ao monte do Senhor?… Aquele que é limpo de mãos e puro de coração”. Ele desafiou todos a verificar se as suas próprias mãos e corações estavam limpos diante de Deus. Os homens se ajoelharam em arrependimento.
 
-## Duncan Campbell chega
+## Duncan Campbell Chega
 
 O pastor Mackay convidou o pregador **Duncan Campbell** para uma série de reuniões. Ele chegou em **dezembro de 1949**, para ficar algumas semanas — e ficou cerca de dois anos.
 
@@ -36,7 +36,7 @@ Porque derramarei água sobre o sedento, e correntes sobre a terra seca.
 — [[Is 44.3]]
 :::
 
-## O impacto
+## O Impacto
 
 - **Jovens convertidos:** muitos dos que antes viviam nos bailes passaram a encher as reuniões; alguns se tornaram pastores e missionários.
 - **A vida das vilas:** bares e salões de baile ficaram vazios em vários lugares, e as reuniões de oração cresceram.
@@ -44,11 +44,11 @@ Porque derramarei água sobre o sedento, e correntes sobre a terra seca.
 
 Duncan Campbell sempre insistiu em que o avivamento não começou com ele, mas com a oração das irmãs Smith e dos homens de Barvas.
 
-## O fim
+## O Fim
 
 O avivamento foi diminuindo por volta de 1952–1953. Os relatos posteriores às vezes aumentaram os números e os detalhes; os historiadores recomendam ler com cuidado. Mas os frutos nas igrejas das ilhas duraram por décadas.
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - 1949 | Barvas | As irmãs Smith e os homens da igreja oram pelo avivamento
@@ -57,6 +57,6 @@ O avivamento foi diminuindo por volta de 1952–1953. Os relatos posteriores às
 - 1952–1953 | O fim | O movimento diminui; os frutos ficam
 :::
 
-## Para a vida
+## Para a Vida
 
 Duas mulheres que não podiam sair de casa mudaram uma ilha com a oração. Ninguém é fraco demais para orar por avivamento: “Clama a mim, e responder-te-ei, e anunciar-te-ei coisas grandes e ocultas, que não sabes” [[Jr 33.3]].

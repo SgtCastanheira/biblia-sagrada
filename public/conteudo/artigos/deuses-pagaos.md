@@ -5,15 +5,15 @@ Não terás outros deuses diante de mim.
 — [[Êx 20.3]]
 :::
 
-## Os deuses que disputaram o coração de Israel
+## Os Deuses que Disputaram o Coração de Israel
 
-### O que a Bíblia diz desses deuses
+### O que a Bíblia Diz Desses Deuses
 
 A Bíblia diz duas coisas ao mesmo tempo. A primeira: **o ídolo não é nada**. Paulo escreve que “o ídolo nada é no mundo, e que não há outro Deus, senão um só” ([[1Co 8.4]]). A estátua é madeira, pedra ou metal, e não pode ajudar ninguém.
 
 A segunda: **por trás do culto havia demônios**. Moisés diz do povo: “Ofereceram sacrifícios aos demônios, não a Deus” ([[Dt 32.17]]), e Paulo explica: “as coisas que eles sacrificam, sacrificam-nas a demônios, e não a Deus” ([[1Co 10.20]]). O ídolo é vazio, mas a adoração não fica no vazio.
 
-### Os deuses de Canaã
+### Os Deuses de Canaã
 
 :::ficha Baal
 - Quem era | O principal deus dos cananeus, senhor da chuva, da tempestade e da fertilidade. “Baal” quer dizer “senhor” ou “dono”. Nos textos achados em Ugarit, na Síria (séculos XIV e XIII a.C.), ele é o deus da tempestade, também chamado Hadade.
@@ -50,7 +50,7 @@ A segunda: **por trás do culto havia demônios**. Moisés diz do povo: “Ofere
 
 ### O Egito, a Assíria e a Babilônia
 
-:::ficha Os deuses do Egito
+:::ficha Os Deuses do Egito
 - Na Bíblia | Na noite da Páscoa, Deus disse: “sobre todos os deuses do Egito executarei juízos” ([[Êx 12.12]]).
 - As pragas | Muitos estudiosos leem as pragas como um juízo sobre esses deuses: o Nilo, adorado como fonte de vida, virou sangue; as rãs lembravam a deusa Heqet; as trevas apagaram o sol, que os egípcios adoravam como Rá. A Bíblia não dá esses nomes; é uma leitura possível.
 - O bezerro de ouro | No deserto, Arão fez um bezerro de ouro, e o povo disse: “Eis aqui, ó Israel, o teu deus, que te tirou da terra do Egito” ([[Êx 32.4]]). Séculos depois, Jeroboão fez “dois bezerros de ouro” e os pôs em Betel e em Dã ([[1Rs 12.28-29]]). A Bíblia não diz que deus o bezerro representava; o touro era símbolo de força em muitos povos, inclusive no Egito.
@@ -69,7 +69,7 @@ Os reis do Egito que a Bíblia cita: quem foram, quando governaram e a quem resp
 - Os deuses dos povos levados a Samaria | Cada povo fez o seu deus: Sucote-Benote, Nergal, Asima, Nibaz, Tartaque, e Adrameleque e Anameleque, a quem os sefarvitas queimavam os filhos ([[2Rs 17.29-31]]). O rei Senaqueribe foi morto pelos filhos enquanto adorava na casa de Nisroque, o seu deus ([[2Rs 19.37]]).
 :::
 
-### Os deuses gregos e romanos, no livro de Atos
+### Os Deuses Gregos e Romanos, no Livro de Atos
 
 :::ficha Júpiter e Mercúrio, em Listra
 - O que aconteceu | Paulo curou um homem que nunca tinha andado, e a multidão gritou: “Fizeram-se os deuses semelhantes aos homens e desceram até nós”. Chamavam Barnabé de Júpiter e Paulo de Mercúrio, e o sacerdote de Júpiter trouxe touros para lhes oferecer sacrifícios ([[At 14.8-13]]).
@@ -89,9 +89,9 @@ Os reis do Egito que a Bíblia cita: quem foram, quando governaram e a quem resp
 
 Cada um desses deuses tinha um preço. Alguns cobravam o que havia de mais precioso numa casa.
 
-## O preço que eles cobravam
+## O Preço que Eles Cobravam
 
-:::ficha Os sacrifícios
+:::ficha Os Sacrifícios
 - Os filhos | A Moloque e a Baal, crianças queimadas ([[Lv 18.21]]; [[Jr 19.5]]; [[2Rs 3.27]]). O salmista resume: “derramaram sangue inocente, o sangue de seus filhos e de suas filhas” ([[Sl 106.38]]).
 - O corpo | Os profetas de Baal se cortavam até correr o sangue ([[1Rs 18.28]]).
 - A pureza | Os cultos da fertilidade misturavam sacrifício e imoralidade: em Baal-Peor, o povo “começou a prostituir-se com as filhas de Moabe” e foi convidado “aos sacrifícios dos seus deuses” ([[Nm 25.1-2]]).
@@ -101,7 +101,7 @@ Cada um desses deuses tinha um preço. Alguns cobravam o que havia de mais preci
 
 O contraste é enorme. Os deuses pediam os filhos dos homens; o Deus da Bíblia disse que isso nunca lhe tinha vindo à mente ([[Jr 7.31]]) e, em vez de pedir os nossos filhos, deu o seu: “Deus amou o mundo de tal maneira que deu o seu Filho unigênito” ([[Jo 3.16]]).
 
-## Por que a Bíblia diz não
+## Por que a Bíblia Diz Não
 
 **Porque só o Senhor é Deus.** “Todos os deuses dos povos são ídolos; mas o Senhor fez os céus” ([[Sl 96.5]]).
 
@@ -115,9 +115,9 @@ O contraste é enorme. Os deuses pediam os filhos dos homens; o Deus da Bíblia 
 
 Os templos caíram. Mas será que esses deuses sumiram mesmo?
 
-## Eles ainda estão entre nós?
+## Eles Ainda Estão entre Nós?
 
-### Os nomes que ficaram
+### Os Nomes que Ficaram
 
 Os deuses antigos perderam os templos, mas muitos nomes continuam por aí. Os planetas Mercúrio, Vênus, Marte, Júpiter e Saturno têm nomes de deuses romanos, e também os meses de janeiro (Jano), março (Marte), maio (Maia) e junho (Juno). Em espanhol, os dias da semana *martes*, *miércoles*, *jueves* e *viernes* são de Marte, Mercúrio, Júpiter e Vênus; em inglês, *Saturday* é o dia de Saturno.
 
@@ -125,7 +125,7 @@ Em português é diferente: a semana tem números (segunda, terça, quarta, quin
 
 Algumas palavras do dia a dia também vêm desses deuses: *cereal* (de Ceres), *vulcão* (de Vulcano), *pânico* (de Pã), *hermético* (de Hermes), *afrodisíaco* (de Afrodite). Usar essas palavras não é adorar ninguém: são só palavras, e “o ídolo nada é no mundo” ([[1Co 8.4]]).
 
-### Os ídolos de hoje
+### Os Ídolos de Hoje
 
 Esta parte é aplicação, para refletir. A própria Bíblia mostra que a idolatria não depende de estátua:
 

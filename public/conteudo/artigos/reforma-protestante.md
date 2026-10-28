@@ -1,18 +1,18 @@
 Em 31 de outubro de 1517, um monge e professor de Bíblia publicou 95 teses para um debate acadêmico. Não queria fundar uma nova igreja — queria corrigir a sua. Mas aquele gesto mudou a história do cristianismo e da Europa.
 
-## Um monge angustiado
+## Um Monge Angustiado
 
 Martinho Lutero nasceu em 1483, em Eisleben, na Alemanha. Estudava Direito quando, em 1505, foi surpreendido por uma tempestade e, apavorado com um raio, prometeu: “Santa Ana, ajuda-me, e serei monge!”. Entrou no mosteiro agostiniano de Erfurt e tentou de tudo para ter paz com Deus: jejuns, vigílias, confissões de horas. Quanto mais se esforçava, mais se sentia condenado diante de um Deus justo.
 
 O seu superior, Staupitz, mandou-o estudar e ensinar a Bíblia na nova Universidade de Wittenberg. Ali, estudando Salmos, Romanos e Gálatas, Lutero entendeu que “a justiça de Deus” de [[Rm 1.17]] não é a justiça com que Deus castiga, mas a justiça que Ele dá de presente a quem crê: “o justo viverá da fé”. Ele contou depois: “Senti que tinha nascido de novo e entrado no paraíso pelas portas abertas”.
 
-## As indulgências e as 95 teses
+## As Indulgências e as 95 Teses
 
 Para financiar a nova Basílica de São Pedro, em Roma, o frade Johann Tetzel percorria a região vendendo indulgências — certificados que prometiam reduzir o tempo das almas no purgatório. Atribui-se a ele o verso: “Assim que a moeda no cofre tilinta, a alma do purgatório salta”.
 
 Lutero reagiu escrevendo 95 teses em latim. Segundo a tradição, pregou-as na porta da igreja do Castelo de Wittenberg, que servia de mural da universidade. A primeira dizia: “Quando o nosso Senhor e Mestre Jesus Cristo disse ‘Arrependei-vos’, quis que toda a vida dos fiéis fosse arrependimento” [[Mt 4.17]]. Graças à imprensa, as teses foram traduzidas e espalhadas pela Alemanha em poucas semanas.
 
-## “Aqui estou”
+## “Aqui Estou”
 
 :::tempo
 - 1517 | As 95 teses | O debate sobre as indulgências começa.
@@ -31,7 +31,7 @@ Em Worms, em abril de 1521, pediram que Lutero renegasse os seus livros. Ele res
 
 Declarado fora da lei, Lutero foi “sequestrado” no caminho de volta por soldados do seu protetor, o príncipe Frederico, o Sábio, e levado ao castelo de Wartburg. Ali, disfarçado de cavaleiro, traduziu o Novo Testamento do grego para um alemão simples, que “a mãe em casa, as crianças na rua e o homem comum no mercado” pudessem entender.
 
-## O que a Reforma ensinou
+## O que a Reforma Ensinou
 
 Mais tarde, os ensinos da Reforma foram resumidos em cinco frases em latim:
 
@@ -43,11 +43,11 @@ Mais tarde, os ensinos da Reforma foram resumidos em cinco frases em latim:
 
 Lutero também ensinou o **sacerdócio de todos os crentes** [[1Pe 2.9]]: todo cristão tem acesso direto a Deus, e todo trabalho honesto — do sapateiro, da mãe, do lavrador — pode ser vocação santa.
 
-## A música da Reforma
+## A Música da Reforma
 
 Lutero amava a música e queria que a congregação cantasse, em alemão. Compôs dezenas de hinos. O mais famoso, baseado no Salmo 46, é *Castelo forte é nosso Deus*, chamado de “hino de batalha da Reforma” [[Sl 46.1-3]]. Também escreveu o Catecismo Menor (1529), para que os pais ensinassem a fé aos filhos em casa.
 
-## Luzes e sombras
+## Luzes e Sombras
 
 A Reforma tem também capítulos tristes. Na Guerra dos Camponeses (1525), Lutero apoiou com palavras duras a repressão aos revoltosos. Na velhice, escreveu textos terríveis contra os judeus, que os luteranos de hoje repudiam. A história da Igreja mostra que Deus usa pessoas imperfeitas — e que só a Palavra de Deus é infalível.
 

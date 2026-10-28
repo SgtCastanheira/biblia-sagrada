@@ -8,11 +8,11 @@ O avivamento da África Oriental não durou meses: durou décadas. Começou com 
 - Janani Luwum | arcebispo de Uganda, mártir (1977)
 :::
 
-## Igrejas grandes, mas frias
+## Igrejas Grandes, mas Frias
 
 No começo do século XX, as missões tinham levado o evangelho à região, e as igrejas cresceram muito. Mas muitos cristãos eram batizados sem uma conversão real, e havia distância entre missionários e africanos.
 
-## A amizade que começou tudo
+## A Amizade que Começou Tudo
 
 :::cena Kampala, Uganda · 1929
 O médico missionário Joe Church, cansado e desanimado com o trabalho em Ruanda, encontra um ugandense chamado Simeon Nsibambi. Os dois passam dias estudando a Bíblia e orando juntos sobre a vida cheia do Espírito.
@@ -33,18 +33,18 @@ Mas, se andarmos na luz, como ele na luz está, temos comunhão uns com os outro
 
 Pregadores leigos, como **William Nagenda**, levaram a mensagem a Uganda, ao Quênia, à Tanzânia e ao Burundi. O movimento não virou uma igreja nova: os balokole continuaram nas suas igrejas (anglicanas, sobretudo), como grupos de comunhão. Isso trouxe tensões com alguns líderes, mas também renovou as igrejas por dentro.
 
-## O impacto
+## O Impacto
 
 - **Reconciliação:** africanos e missionários, e pessoas de etnias rivais, se pediam perdão e se tratavam como irmãos. Num tempo de racismo colonial, isso era raro.
 - **Coragem:** no Quênia, durante a revolta dos Mau Mau (anos 1950), muitos balokole se recusaram a fazer juramentos de violência e alguns foram mortos. Em Uganda, sob a ditadura de Idi Amin, o arcebispo **Janani Luwum**, ligado ao avivamento, denunciou a violência e foi assassinado em 1977.
 - **Líderes:** o avivamento formou bispos, pastores e evangelistas, como **Festo Kivengere**, que pregou com Billy Graham e fundou em 1971 uma missão de evangelização para todo o continente.
 - **Vida diária:** honestidade no trabalho, devolução do que fora roubado, casamentos restaurados.
 
-## O fim
+## O Fim
 
 O avivamento não teve um fim marcado. A partir dos anos 1970, ele foi se tornando parte da vida normal das igrejas da região, e muitos dos seus líderes morreram. Os historiadores lembram também os seus limites: grupos que ficaram rígidos e julgadores, e a dificuldade de manter a reconciliação nos tempos de guerra.
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - 1929 | Kampala | Joe Church encontra Simeon Nsibambi
@@ -55,6 +55,6 @@ O avivamento não teve um fim marcado. A partir dos anos 1970, ele foi se tornan
 - 1977 | Janani Luwum | O arcebispo é morto na ditadura de Idi Amin
 :::
 
-## Para a vida
+## Para a Vida
 
 O avivamento da África Oriental ensinou a “andar na luz”: viver sem esconder o pecado, confessar e perdoar. É o caminho da comunhão verdadeira [[1Jo 1.7]] e da paz entre irmãos: “sede uns para com os outros benignos, misericordiosos, perdoando-vos uns aos outros” [[Ef 4.32]].

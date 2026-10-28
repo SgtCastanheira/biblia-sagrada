@@ -66,7 +66,7 @@ export const EBD_ADULTOS_4T26: IbucLesson[] = [
     application:
       'Deuteronômio começa lembrando e termina escolhendo. **Esta semana**, escreva três coisas que Deus fez por você e que você não quer esquecer, e conte uma delas a alguém da sua casa. Quem lembra do que Deus fez tem mais facilidade para obedecer ao que ele manda.',
     deepen:
-      'Veja como o nome “Deuteronômio” nasceu na tradução grega em [A Septuaginta, a Bíblia grega](/artigo/septuaginta). Para entender o mundo em que a Lei foi guardada e lida depois, leia [Os 400 anos entre os Testamentos](/artigo/entre-os-testamentos). O livro aparece também no mapa do [Êxodo](/mapas/exodo).',
+      'Veja como o nome “Deuteronômio” nasceu na tradução grega em [A Septuaginta, a Bíblia Grega](/artigo/septuaginta). Para entender o mundo em que a Lei foi guardada e lida depois, leia [Os 400 Anos entre os Testamentos](/artigo/entre-os-testamentos). O livro aparece também no mapa do [Êxodo](/mapas/exodo).',
   },
   {
     ...BASE,
@@ -182,7 +182,7 @@ export const EBD_ADULTOS_4T26: IbucLesson[] = [
     ],
     application:
       'Se Deus foi fiel a quem falhou tanto, ninguém tem motivo para fugir dele. **Esta semana**, procure uma pessoa afastada (ou que se sente indigna) e conte a ela uma vez em que você experimentou a fidelidade de Deus. Sem sermão: apenas o seu testemunho.',
-    deepen: 'Leia [O Êxodo](/mapas/exodo) e veja onde ficava o monte Horebe. A fidelidade de Deus na história do povo também é o fio de [Os cativeiros de Israel](/artigo/cativeiros-de-israel).',
+    deepen: 'Leia [O Êxodo](/mapas/exodo) e veja onde ficava o monte Horebe. A fidelidade de Deus na história do povo também é o fio de [Os Cativeiros de Israel](/artigo/cativeiros-de-israel).',
   },
   {
     ...BASE,
@@ -298,7 +298,7 @@ export const EBD_ADULTOS_4T26: IbucLesson[] = [
     ],
     application:
       'Amar a Deus é um **verbo de rotina**: ouvir, guardar, ensinar, lembrar. Escolha um momento fixo do dia, de cinco minutos, para ler uma passagem em voz alta em casa, nesta semana.',
-    deepen: 'Veja como Jesus citou esse texto em [[Mt 22.34-40]]. Para o ambiente do tempo de Jesus (sinagogas, escribas), veja [Os 400 anos entre os Testamentos](/artigo/entre-os-testamentos).',
+    deepen: 'Veja como Jesus citou esse texto em [[Mt 22.34-40]]. Para o ambiente do tempo de Jesus (sinagogas, escribas), veja [Os 400 Anos entre os Testamentos](/artigo/entre-os-testamentos).',
   },
   {
     ...BASE,
@@ -414,7 +414,7 @@ export const EBD_ADULTOS_4T26: IbucLesson[] = [
     ],
     application:
       'A aliança leva a sério o que fazemos com o que Deus nos deu. **Pergunte-se**: em qual área da minha vida eu tenho ouvido a voz de Deus, mas não tenho feito? Escreva e ore, agradecendo que em Cristo existe perdão e recomeço.',
-    deepen: 'Para ver como o povo foi disperso e voltou, leia [Os cativeiros de Israel](/artigo/cativeiros-de-israel) e o mapa das [doze tribos](/tribos) (Ebal e Gerizim ficam na região de Efraim e Manassés).',
+    deepen: 'Para ver como o povo foi disperso e voltou, leia [Os Cativeiros de Israel](/artigo/cativeiros-de-israel) e o mapa das [doze tribos](/tribos) (Ebal e Gerizim ficam na região de Efraim e Manassés).',
   },
   {
     ...BASE,
@@ -762,6 +762,6 @@ export const EBD_ADULTOS_4T26: IbucLesson[] = [
     ],
     application:
       'Deuteronômio termina e a história continua. Termine o trimestre com um **compromisso concreto**: escolha o texto de Deuteronômio que mais falou com você e o decore até o fim do ano. Agradeça a Deus, em oração, por quem o ensinou a amá-lo.',
-    deepen: 'Veja como o Novo Testamento cita o Antigo em [A Septuaginta, a Bíblia grega](/artigo/septuaginta) e como os Manuscritos do Mar Morto guardaram o livro, em [Os manuscritos da Bíblia](/artigo/manuscritos).',
+    deepen: 'Veja como o Novo Testamento cita o Antigo em [A Septuaginta, a Bíblia Grega](/artigo/septuaginta) e como os Manuscritos do Mar Morto guardaram o livro, em [Os Manuscritos da Bíblia](/artigo/manuscritos).',
   },
 ];

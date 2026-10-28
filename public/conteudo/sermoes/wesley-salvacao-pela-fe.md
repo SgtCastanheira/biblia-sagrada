@@ -12,7 +12,7 @@ Para que não fiquemos aquém da graça de Deus, é preciso perguntar com cuidad
 2. Que salvação é essa que vem pela fé?
 3. Como responder a algumas objeções?
 
-## I. Que fé é essa
+## I. Que Fé É Essa
 
 **Não é apenas a fé de um pagão.** Deus pede aos pagãos que creiam que Ele existe e que recompensa os que o buscam, e que vivam com justiça e misericórdia. Isso é pouco.
 
@@ -24,7 +24,7 @@ Que fé é, então? É, primeiro, **fé em Cristo**: Cristo, e Deus por meio de 
 
 A fé cristã reconhece a necessidade e o mérito da morte de Cristo e o poder da sua ressurreição. É não só aceitar todo o Evangelho, mas **descansar inteiramente no sangue de Cristo**, confiar nos méritos da sua vida, morte e ressurreição, apoiar-se nele como nossa expiação e nossa vida, dado por nós e vivendo em nós — e, por isso, unir-se a Ele e apegar-se a Ele como nossa “sabedoria, justiça, santificação e redenção”: numa palavra, a nossa salvação.
 
-## II. Que salvação é essa
+## II. Que Salvação É Essa
 
 **É uma salvação presente.** O apóstolo não diz aos efésios “sereis salvos”, mas “sois salvos”. É algo que se alcança — e que muitos já alcançaram — ainda nesta terra.
 
@@ -38,7 +38,7 @@ A fé cristã reconhece a necessidade e o mérito da morte de Cristo e o poder d
 
 Essa é a salvação que vem pela fé, ainda neste mundo: livramento da culpa e do castigo, pela expiação de Cristo aplicada à alma que crê, e livramento do poder do pecado, por Cristo formado no coração. Quem é assim justificado nasceu de novo: nasceu do Espírito para uma vida nova, “escondida com Cristo em Deus”, e cresce de fé em fé, de graça em graça, até chegar “à medida da estatura da plenitude de Cristo”.
 
-## III. Respostas às objeções
+## III. Respostas às Objeções
 
 **“Pregar a salvação só pela fé é pregar contra a santidade e as boas obras.”** Seria, se falássemos de uma fé separada delas. Mas falamos de uma fé que produz todas as boas obras e toda a santidade. Não anulamos a Lei pela fé: nós a estabelecemos.
 

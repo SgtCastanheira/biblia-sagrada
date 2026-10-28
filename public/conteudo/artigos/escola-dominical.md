@@ -9,7 +9,7 @@ Todo domingo, milhões de brasileiros abrem a revista e se sentam numa classe da
 - Frida Vingren | primeira mulher a ensinar na Escola Dominical da AD | imagens/frida-vingren.jpg
 :::
 
-## Antes de tudo: ensinar a Palavra
+## Antes de Tudo: Ensinar a Palavra
 
 O povo de Deus sempre foi um povo que ensina. Moisés mandou que as palavras de Deus estivessem no coração dos pais: “e as ensinarás a teus filhos, e delas falarás sentado em tua casa e andando pelo caminho” [[Dt 6.6-7]]. Na volta do cativeiro, Esdras e os levitas leram a Lei para o povo “e deram o sentido, de modo que se entendesse a leitura” [[Ne 8.8]]. Jesus foi chamado de Mestre, e a igreja de Jerusalém “perseverava na doutrina dos apóstolos” [[At 2.42]].
 
@@ -31,7 +31,7 @@ O movimento cresceu muito depressa. Em **1785**, William Fox organizou em Londre
 A Escola Dominical nasceu na mesma época dos avivamentos de Wesley e Whitefield.
 :::
 
-## A Escola Dominical atravessa o oceano
+## A Escola Dominical Atravessa o Oceano
 
 Dos ingleses, a ideia passou aos Estados Unidos, onde a *American Sunday School Union* foi fundada em **1824**, e daí às missões. Com o tempo, a escola dominical deixou de ser só uma escola de leitura para crianças: passou a reunir a igreja inteira, de todas as idades, para estudar a Bíblia.
 
@@ -57,7 +57,7 @@ Do trabalho dos Kalley nasceu, em **1858**, a **Igreja Evangélica Fluminense**,
 O hinário dos Kalley foi o primeiro que as Assembleias de Deus usaram.
 :::
 
-## Belém, 1911: a Escola Dominical da Assembleia de Deus
+## Belém, 1911: A Escola Dominical da Assembleia de Deus
 
 A Escola Dominical veio junto com a igreja. Segundo pesquisadores, a primeira aula na Assembleia de Deus foi em **agosto de 1911**, em Belém, cerca de dois meses depois da fundação da Missão da Fé Apostólica.
 
@@ -67,7 +67,7 @@ O nascimento da igreja em Belém, em 18 de junho de 1911.
 
 As primeiras lições impressas saíram como suplemento do jornal **Boa Semente**, fundado em Belém por Gunnar e Frida Vingren em 1919. O suplemento se chamava **Estudos Dominicais** e era escrito pelo missionário sueco **Samuel Nyström**, que tinha chegado a Belém em 1916. As fontes divergem sobre o ano exato do suplemento: 1919 ou o começo da década de 1920.
 
-## 1930: as Lições Bíblicas
+## 1930: As Lições Bíblicas
 
 :::cena Rio de Janeiro · 1930
 No mesmo ano em que nasce a Convenção Geral e os jornais da igreja se unem no Mensageiro da Paz, sai a revista Lições Bíblicas para as Escolas Dominicais.
@@ -86,7 +86,7 @@ Instrui o menino no caminho em que deve andar, e até quando envelhecer não se 
 — [[Pv 22.6]]
 :::
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - 1769 | High Wycombe | A metodista Hannah Ball reúne crianças para ensinar a Bíblia
@@ -104,6 +104,6 @@ Instrui o menino no caminho em que deve andar, e até quando envelhecer não se 
 - 1943 | Para as crianças | A primeira revista infantil
 :::
 
-## Para a vida
+## Para a Vida
 
 A Escola Dominical nasceu do cuidado com quem não tinha oportunidade de aprender, e continua sendo o lugar onde a igreja inteira aprende junto. Jesus mandou fazer discípulos “ensinando-os a observar todas as coisas que eu vos tenho mandado” [[Mt 28.20]], e Paulo pediu a Timóteo que passasse adiante o que aprendeu “a homens fiéis, que sejam idôneos para também ensinarem os outros” [[2Tm 2.2]]. Cada professor de Escola Dominical faz parte dessa corrente.

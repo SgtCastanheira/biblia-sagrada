@@ -11,11 +11,11 @@ Em Alagoas, a igreja nasceu na casa de um pescador, quatro dias depois que um mi
 - Jovenal Pedro da Silva | pastor nascido em Coruripe
 :::
 
-## O tempo em que tudo começou
+## O Tempo em que Tudo Começou
 
 Em 1915, o Brasil olhava para a guerra na Europa, e Maceió era uma capital portuária, de pescadores e do comércio do açúcar. O estado ainda não tinha vivido a gripe espanhola, que chegaria em setembro de 1918, nem a violência do cangaço, que percorreria o sertão alagoano nas décadas de 1920 e 1930.
 
-## De onde saíram os fundadores
+## De Onde Saíram os Fundadores
 
 Os dois pioneiros saíram de **Belém**. **Gunnar Vingren** desembarcou no porto de Jaraguá, em Maceió, em **1º de maio de 1915**. **Otto Nelson** — sueco que tinha chegado a Belém em 1914 com a esposa, Adina — desembarcou em **21 de agosto de 1915**.
 
@@ -25,7 +25,7 @@ Os dois pioneiros saíram de **Belém**. **Gunnar Vingren** desembarcou no porto
 Na casa simples do pescador Balbino Gomes, na Rua dos Pescadores, o missionário sueco que ele hospeda há quatro dias dirige um culto. É o primeiro culto da Assembleia de Deus em Alagoas, com seis pessoas.
 :::
 
-## 1915–1930: Otto Nelson e o primeiro templo
+## 1915–1930: Otto Nelson e o Primeiro Templo
 
 Otto Nelson presidiu a igreja por quinze anos e construiu o primeiro templo, no Farol, inaugurado em **22 de outubro de 1922**. Ele pregou em Maceió e em viagens pelo estado, e passou por provações: foi preso durante a Primeira Guerra Mundial, acusado de ser espião, e foi impedido de sepultar o filho Davi no cemitério. Em 1930 seguiu para **Salvador**, na Bahia.
 
@@ -33,7 +33,7 @@ Otto Nelson presidiu a igreja por quinze anos e construiu o primeiro templo, no 
 Os casos de Otto Nelson e de muitos outros pioneiros, o que a lei dizia e o que não se sabe.
 :::
 
-## 1931–1963: Rêgo Barros e a subida ao interior
+## 1931–1963: Rêgo Barros e a Subida ao Interior
 
 Em **1931**, o pastor **Antonio Rêgo Barros**, que desde 1922 pregava em **Fortaleza**, foi transferido para Maceió e presidiu a igreja alagoana por **32 anos** (morreu em 1966). Foi no tempo dele que a igreja chegou às cidades do interior:
 
@@ -67,7 +67,7 @@ Em **1933**, o evangelista **José Antônio de Almeida** evangelizou o marceneir
 
 Em **dezembro de 1935**, o **sargento José Malta**, da Polícia Militar, evangélico, veio de Maceió para servir na delegacia e foi o primeiro evangelista leigo da cidade. Em janeiro de 1936 converteram-se o comerciante **Antonio Alves** e a esposa **Zefinha**. A oposição que a igreja enfrentou ali está nos [casos de perseguição](/artigo/irmaos-perseguidos). O primeiro templo, em terreno doado por Antonio Alves, é de **1948**.
 
-### Mata Grande, Delmiro Gouveia e o sertão (anos 1920 e 1930)
+### Mata Grande, Delmiro Gouveia e o Sertão (Anos 1920 e 1930)
 
 Os missionários americanos **Virgil Frank Smith** e **Orlando Boyer** evangelizaram o sertão por volta de 1929–1930. Os maus-tratos que sofreram estão nos [casos de perseguição](/artigo/irmaos-perseguidos). Smith também foi parado, a cerca de três quilômetros de Mata Grande, por cangaceiros do bando de Lampião, segundo o seu próprio relato. Pediram 500 contos de réis; ele escreveu um bilhete para que alguém da cidade mandasse o dinheiro, e ele e mais 25 pessoas foram libertados.
 
@@ -81,7 +81,7 @@ O casal **Enoque Cabral de Medeiros e Maria Alves de Medeiros**, da Primeira Igr
 
 Em 1938, as famílias de **Antônio Feitosa** e **Benedito Lopes** deram os primeiros passos. Por causa da perseguição, os irmãos tiveram de entregar o salão onde faziam os cultos. Em **1945**, o pastor Rêgo Barros enviou o evangelista **Pedro Antônio dos Santos** para visitar os irmãos; ele se mudou para Arapiraca e é chamado de fundador da igreja ali. Com a ferrovia entre Palmeira dos Índios e Porto Real do Colégio, surgiram novos crentes entre os operários.
 
-## Os pastores alagoanos
+## Os Pastores Alagoanos
 
 A igreja deixou de ser só de missionários. Alguns dos pastores do interior que a tocaram:
 - **Jovenal Pedro da Silva**, nascido em **Coruripe** em 16 de agosto de 1916, converteu-se em 1936, foi evangelista em 1941 e pastor em 27 de outubro de 1943. Seu primeiro campo foi **Porto de Pedras**; depois, Maragogi, Paulo Afonso (BA), Garanhuns (PE) e Porto Calvo. Presidiu a igreja de Alagoas de 1965 a 1971.
@@ -89,7 +89,7 @@ A igreja deixou de ser só de missionários. Alguns dos pastores do interior que
 - **José Antônio dos Santos**, o “José Neco”, nascido em Santana do Ipanema em 1931, pastoreou Pão de Açúcar, Matriz do Camaragibe, Jacuípe, Palmeira dos Índios, Paulo Afonso e Arapiraca. Assumiu a presidência em 3 de junho de 1986.
 - **Gustav Arne Johansson**, missionário sueco, chegou a Maceió em **20 de fevereiro de 1961**, presidiu a igreja de 1963 a 1965, pastoreou Arapiraca e, em 1976, foi para Teresina, no Piauí.
 
-## Quem presidiu a igreja em Alagoas
+## Quem Presidiu a Igreja em Alagoas
 
 1. **Otto Nelson**, fundador (1915–1930).
 2. **Antonio Rêgo Barros** (1931–1963).

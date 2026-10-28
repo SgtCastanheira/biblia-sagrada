@@ -5,7 +5,7 @@ No extremo oeste do Brasil, a Assembleia de Deus começou em **Cruzeiro do Sul**
 - Luís Firmino Câmara | pioneiro em Rio Branco
 :::
 
-## O começo
+## O Começo
 
 Um estudo da PUC Goiás e as listas da denominação registram que as Assembleias de Deus se estabeleceram no Acre em **1932**, em Cruzeiro do Sul, e atribuem a **Manoel Pirabas dos Santos** a fundação da igreja no estado. A lista do jornal *Mensageiro da Paz* registra também o começo em **Rio Branco**, a capital, em **1943**, com Luís Firmino Câmara.
 

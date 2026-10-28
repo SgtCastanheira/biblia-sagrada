@@ -2,11 +2,11 @@
 
 O templo que Jesus conheceu era um dos edifícios mais impressionantes do mundo antigo. Quase todos os grandes momentos dos Evangelhos e do começo de Atos se passam nele ou ao redor dele.
 
-## 1. Um templo reconstruído
+## 1. Um Templo Reconstruído
 
 O primeiro templo, de Salomão, foi destruído pelos babilônios em 586 a.C. O segundo, construído por Zorobabel em 516 a.C., era bem mais modesto — os idosos que tinham visto o primeiro choraram ao vê-lo [[Ed 3.12]]. Por volta de 20/19 a.C., Herodes, o Grande, começou uma reforma gigantesca, sem interromper os sacrifícios: ampliou a esplanada, revestiu o edifício de mármore e ouro e construiu pórticos e pátios. As obras duraram mais de 80 anos; no início do ministério de Jesus já contavam 46 [[Jo 2.20]]. O conjunto ficou pronto por volta de 63 d.C. — e foi destruído pelos romanos sete anos depois.
 
-## 2. A esplanada e os pátios
+## 2. A Esplanada e os Pátios
 
 A plataforma de Herodes, sustentada por muros de arrimo, media cerca de 480 por 300 metros — o tamanho de vários campos de futebol. O Muro das Lamentações, em Jerusalém, é parte do muro de arrimo ocidental; algumas das suas pedras pesam centenas de toneladas.
 
@@ -29,11 +29,11 @@ Outros lugares do conjunto:
 
 Em 1871, arqueólogos encontraram uma das placas de aviso da barreira, em grego, que diz que o estrangeiro que entrasse seria “responsável pela sua própria morte”. Ela está hoje num museu em Istambul.
 
-## 3. Uma comparação para hoje
+## 3. Uma Comparação para Hoje
 
 Imagine, numa grande cidade, uma área do tamanho de um bairro, cercada de muros altos, com colunatas de mármore, multidões de peregrinos, comércio, guardas, escolas de mestres da Lei e, no centro, um edifício dourado que brilhava ao sol. Nas grandes festas, centenas de milhares de pessoas iam a Jerusalém. O templo era ao mesmo tempo o centro religioso, o banco, o tribunal (o Sinédrio se reunia ali perto) e o símbolo da identidade de um povo.
 
-## 4. O que isso tem a ver com a mensagem
+## 4. O que Isso Tem a Ver com a Mensagem
 
 - **Jesus é maior que o templo.** “Eu vos digo que está aqui quem é maior do que o templo” [[Mt 12.6]]. Ele falou do seu corpo como o santuário que seria destruído e reerguido em três dias [[Jo 2.19-21]].
 - **O caminho foi aberto.** O véu rasgado de alto a baixo mostra que Deus mesmo abriu o acesso ao Santo dos Santos, pelo sangue de Jesus [[Hb 10.19-20]].
@@ -41,7 +41,7 @@ Imagine, numa grande cidade, uma área do tamanho de um bairro, cercada de muros
 - **Agora, o templo somos nós.** A igreja e o corpo do crente são santuário do Espírito Santo [[1Co 3.16]] [[1Co 6.19]].
 - **A profecia se cumpriu.** Jesus anunciou que não ficaria pedra sobre pedra [[Mc 13.2]] — e assim aconteceu em 70 d.C.
 
-## Para aprofundar
+## Para Aprofundar
 
 - A dedicação do primeiro templo: [[1Rs 8.10-13]].
 - A visão do templo de Ezequiel: [[Ez 47.1-12]].

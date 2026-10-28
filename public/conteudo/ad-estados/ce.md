@@ -8,7 +8,7 @@ A história da Assembleia de Deus no Ceará começa com uma mulher que voltou so
 - Antonio Rêgo Barros | pioneiro em Fortaleza
 :::
 
-## De onde saiu
+## De Onde Saiu
 
 **Maria de Jesus Nazaré Araújo** era cearense de **Uruburetama** (hoje Itapajé) e vivia em **Belém**, onde recebeu o batismo no Espírito Santo. Em **1914**, ela viajou sozinha, de navio, para visitar a família.
 
@@ -16,7 +16,7 @@ A história da Assembleia de Deus no Ceará começa com uma mulher que voltou so
 Maria fala aos parentes da experiência que viveu em Belém. A reação é dura: ela é maltratada, a sua Bíblia é jogada no chão e ela é expulsa de casa.
 :::
 
-## Quem a acolheu
+## Quem a Acolheu
 
 Maria encontrou abrigo no **Sítio Santana**, com **Raimundo de Salles Gomes** e o genro, **Vicente de Salles Bastos**, que dirigiam uma congregação presbiteriana independente. Eles ouviram o que ela contava, creram no batismo no Espírito Santo e se tornaram pentecostais.
 

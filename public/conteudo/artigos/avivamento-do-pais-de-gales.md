@@ -7,7 +7,7 @@ Em poucos meses, entre 1904 e 1905, cerca de cem mil pessoas se converteram no P
 - Jessie Penn-Lewis | escritora que acolheu Roberts depois do avivamento
 :::
 
-## Um país de capelas, mas frio
+## Um País de Capelas, mas Frio
 
 O País de Gales tinha uma história de avivamentos e capelas por toda parte, mas, no começo do século XX, muitas igrejas estavam frias, e os vilarejos das minas conheciam a bebedeira e a violência. Em várias regiões, pequenos grupos oravam por um novo derramar do Espírito.
 
@@ -21,7 +21,7 @@ No começo de 1904, em **New Quay**, o pastor Joseph Jenkins viu os jovens da su
 Numa reunião de manhã, o evangelista Seth Joshua ora: “Dobra-nos, ó Senhor”. Evan Roberts cai de joelhos e ora: “Dobra-me, ó Senhor”. Naquele dia, ele sente o amor de Deus e o peso pelas almas do seu país.
 :::
 
-## Loughor: dezessete jovens
+## Loughor: Dezessete Jovens
 
 Em outubro de 1904, Roberts voltou para casa e pediu ao pastor licença para falar aos jovens da capela de Moriah, em Loughor. Na primeira noite, ficaram dezessete pessoas. Ele lhes ensinou **quatro condições** para o avivamento:
 1. Confessar a Deus todo pecado conhecido e acertar tudo com os outros.
@@ -34,7 +34,7 @@ Em outubro de 1904, Roberts voltou para casa e pediu ao pastor licença para fal
 
 Em poucos dias, as reuniões encheram a capela e iam até de madrugada. Os jornais começaram a publicar o que acontecia, e a notícia correu pelos vales das minas.
 
-## Como eram as reuniões
+## Como Eram as Reuniões
 
 As reuniões quase não tinham programa. Havia longos períodos de oração, testemunhos, confissões e, principalmente, **cânticos**: o povo cantava hinos galeses por horas, às vezes em várias partes da capela ao mesmo tempo. Evan Roberts muitas vezes pregava pouco ou nada; ele insistia em que o Espírito Santo dirigisse a reunião, e não ele.
 
@@ -43,7 +43,7 @@ Necessário vos é nascer de novo.
 — [[Jo 3.7]]
 :::
 
-## O que mudou na sociedade
+## O que Mudou na Sociedade
 
 Os relatos da época contam mudanças que chamavam a atenção até dos jornais:
 - **Os bares ficaram vazios** em muitos lugares, e a bebedeira caiu.
@@ -52,18 +52,18 @@ Os relatos da época contam mudanças que chamavam a atenção até dos jornais:
 - **Nas minas**, os mineiros deixaram de xingar e oravam antes de descer; uma história conhecida diz que até os pôneis das minas estranharam, porque estavam acostumados a ser tocados com palavrões.
 - **Famílias** se reconciliaram, e muitos jogadores e torcedores trocaram os jogos pelas reuniões.
 
-## O fogo pelo mundo
+## O Fogo pelo Mundo
 
 As notícias de Gales foram lidas no mundo inteiro. Na Índia, na Missão Mukti de Pandita Ramabai, as moças oraram por um avivamento como aquele, e ele veio em 1905. Na Coreia, missionários e crentes ouviram falar de Gales antes do avivamento de Pyongyang, em 1907. Em Los Angeles, Frank Bartleman escreveu a Evan Roberts pedindo oração — pouco antes do avivamento da Rua Azusa.
 
 :::leia avivamento-da-coreia
 :::
 
-## O fim
+## O Fim
 
 O avivamento durou pouco mais de um ano. Evan Roberts, esgotado por meses de reuniões e criticado por alguns, se retirou em 1906 e passou a viver com o casal Penn-Lewis, na Inglaterra, dedicando-se à oração. Morreu em 1951. Muitos convertidos continuaram firmes; outros se afastaram com o tempo. Os historiadores lembram que o avivamento deixou igrejas cheias por uma geração — e também que algumas igrejas novas, como a Igreja Apostólica, nasceram daquele movimento.
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - 1878 | Evan Roberts | Nasce em Loughor
@@ -75,6 +75,6 @@ O avivamento durou pouco mais de um ano. Evan Roberts, esgotado por meses de reu
 - 1906 | O fim | Roberts se retira, exausto
 :::
 
-## Para a vida
+## Para a Vida
 
 O avivamento de Gales começou com uma oração curta: “Dobra-me, ó Senhor”. Antes de pedir a Deus que mude o mundo, o crente pede que Deus mude o seu coração: “Cria em mim, ó Deus, um coração puro” [[Sl 51.10]].

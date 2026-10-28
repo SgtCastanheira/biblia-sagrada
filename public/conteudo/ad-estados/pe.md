@@ -7,7 +7,7 @@ Em Pernambuco, a igreja começou com um obreiro brasileiro enviado de Belém, qu
 - João e Felipa Ribeiro | abriram a casa para o culto
 :::
 
-## De onde saiu
+## De Onde Saiu
 
 **Adriano Nobre** (1883–1938) era obreiro da igreja de **Belém** e servia de intérprete para Gunnar Vingren. Em **1916**, a igreja de Belém o enviou ao **Recife**.
 
@@ -15,7 +15,7 @@ Em Pernambuco, a igreja começou com um obreiro brasileiro enviado de Belém, qu
 À beira do rio, Adriano Nobre batiza nas águas as duas primeiras pessoas convertidas pela pregação pentecostal no Recife.
 :::
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 Nobre ficou no Recife até **20 de outubro de 1918**, quando entregou o trabalho ao missionário sueco **Joel Carlson**, que tinha chegado com a esposa, **Signe**. A data oficial da fundação, segundo a igreja pernambucana, é **24 de outubro de 1918**, com um culto no bairro da Boa Vista, na casa dos irmãos **João e Felipa Ribeiro**. Em **15 de abril de 1928** foi inaugurado o primeiro templo, na Rua Castro Alves, nº 255, na Encruzilhada. Joel Carlson liderou a igreja até morrer, em 1942.
 

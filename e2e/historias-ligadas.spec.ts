@@ -67,7 +67,7 @@ test('a curiosidade leva ao estudo que a aprofunda, sem repetir o texto', async 
 test('a capa fica só com o título; os tópicos aparecem ao longo do texto, como “Tópico 3 de 5”', async ({ page }) => {
   await page.goto('/artigo/natal-e-os-calendarios');
   const hero = page.locator('.hero');
-  await expect(hero.getByRole('heading', { level: 1, name: 'Jesus nasceu mesmo em 25 de dezembro?' })).toBeVisible();
+  await expect(hero.getByRole('heading', { level: 1, name: 'Jesus Nasceu Mesmo em 25 de Dezembro?' })).toBeVisible();
   await expect(hero.locator('ul, .lead')).toHaveCount(0);
   await expect(page.locator('.toc')).toHaveCount(0);
   const heading = page.getByRole('heading', { level: 2, name: 'Os dez dias que desapareceram' });

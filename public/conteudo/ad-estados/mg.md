@@ -5,7 +5,7 @@ Em Minas Gerais, a igreja começou na casa de um pregador colombiano que já tin
 - Júlia Lima Galvão | esposa de Clímaco
 :::
 
-## Quem levou a mensagem
+## Quem Levou a Mensagem
 
 **Clímaco Bueno Aza** (1874–1950) nasceu na Colômbia e se converteu no Pará. É lembrado como o fundador das Assembleias de Deus em três capitais: **Macapá**, **São Luís** e **Belo Horizonte**. Era casado com **Júlia Lima Galvão**.
 
@@ -13,7 +13,7 @@ Em Minas Gerais, a igreja começou na casa de um pregador colombiano que já tin
 Numa casa alugada no bairro Carlos Prates, um pregador estrangeiro e a esposa abrem a sala para o primeiro culto pentecostal da capital mineira.
 :::
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 A igreja foi fundada em **17 de março de 1927**, com o primeiro culto na casa de Clímaco, na Rua Peçanha. Em **30 de abril de 1927**, foi registrada em cartório como Sociedade Evangélica Assembleia de Deus. De Belo Horizonte, a igreja se espalhou pelo interior de Minas.
 

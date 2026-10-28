@@ -28,7 +28,7 @@ A pioneira que pregava e ensinava em São Cristóvão.
 
 ![Gunnar Vingren](imagens/gunnar-vingren.jpg "Gunnar Vingren em 1908. Foto de autor desconhecido, em domínio público (Wikimedia Commons).")
 
-## A organização: a Convenção Geral (1930)
+## A Organização: A Convenção Geral (1930)
 
 À medida que a igreja crescia, os pastores sentiram necessidade de se organizar. Depois de uma reunião preparatória em Natal, em fevereiro de 1929, a primeira assembleia geral se reuniu de **5 a 10 de setembro de 1930**, com a maioria dos pastores brasileiros e os missionários suecos. Ali começou a **Convenção Geral das Assembleias de Deus no Brasil (CGADB)**, e o jornal *Mensageiro da Paz* se tornou o seu órgão oficial. Em 1946, numa assembleia em Recife, a CGADB foi registrada como pessoa jurídica.
 
@@ -40,13 +40,13 @@ Um trabalho novo começa num bairro do subúrbio carioca. Dali nascerão igrejas
 
 O trabalho em **Madureira** foi aberto por Paulo Leivas Macalão (1903–1982), um gaúcho convertido no Rio em 1924, que congregava com Gunnar Vingren. Em **17 de agosto de 1930**, ele foi separado pastor por Vingren e pelo pastor sueco Lewi Pethrus. Em Bangu foi construído o primeiro templo da Assembleia de Deus no Sudeste, inaugurado em 1º de janeiro de 1933, e o trabalho se espalhou por todas as regiões da cidade, pelo interior do estado e por outros estados. A esse conjunto de igrejas ligadas a Madureira se deu o nome de **Ministério de Madureira**.
 
-O ministério teve também o programa de rádio *Voz das Assembleias de Deus* (1955) e o jornal *O Semeador* (1960). Macalão foi ainda o principal tradutor e adaptador dos hinos da Harpa Cristã (veja [A história da Harpa Cristã](/artigo/harpa-crista)).
+O ministério teve também o programa de rádio *Voz das Assembleias de Deus* (1955) e o jornal *O Semeador* (1960). Macalão foi ainda o principal tradutor e adaptador dos hinos da Harpa Cristã (veja [A História da Harpa Cristã](/artigo/harpa-crista)).
 
-## A convenção de Madureira (1958)
+## A Convenção de Madureira (1958)
 
 As igrejas ligadas a Madureira continuaram crescendo pelo Brasil. Em **2 de maio de 1958**, elas formaram a sua própria convenção — a *Convenção Nacional dos Ministros das Assembleias de Deus em Madureira e Igrejas Filiadas*, hoje **CONAMAD** —, e Macalão foi eleito pastor geral. Ele a presidiu até morrer. Em 1982, o Ministério de Madureira reunia cerca de 600 igrejas e 500 mil membros e congregados.
 
-## A separação (1989)
+## A Separação (1989)
 
 :::cena Salvador · setembro de 1989
 Numa assembleia geral extraordinária, a Convenção Geral aplica as suas regras aos pastores ligados à convenção de Madureira. A partir dali, as duas convenções seguem caminhos separados.
@@ -62,7 +62,7 @@ Em **setembro de 1989**, numa assembleia geral extraordinária em **Salvador**, 
 
 Desde então, a **CONAMAD** seguiu como convenção completamente independente da CGADB.
 
-## A liderança depois de 1982
+## A Liderança Depois de 1982
 
 Depois da morte de Macalão, a igreja-sede de Madureira foi presidida por Orosman Dagoberto (1982–1988), Luiz Francisco Fontes (1988–1990), **Manoel Ferreira** e, desde 2006, **Abner Ferreira**. A CONAMAD é presidida por **Manoel Ferreira desde 1987**; em 1999 a sua sede foi transferida para **Brasília**.
 
@@ -76,7 +76,7 @@ Na igreja onde tudo começou em 1911, milhares de pastores aclamam Samuel Câmar
 
 Em novembro de 2017, os pastores da convenção da igreja-mãe de Belém aprovaram por unanimidade a saída da CGADB; a convenção do Amazonas, de Jônatas Câmara, e líderes do Amapá fizeram o mesmo. Em **2 de dezembro de 2017** foi fundada em Belém a **Convenção da Assembleia de Deus no Brasil (CADB)**, com sede na histórica igreja de São Cristóvão, no Rio. Ela começou dizendo ter cerca de 10 mil pastores em 26 unidades da federação. Entre os motivos lembrados estão a ordenação de mulheres, que a CGADB não admitia, e a falta de alternância na liderança.
 
-## Como cada convenção se organiza
+## Como Cada Convenção se Organiza
 
 As convenções não diferem só no nome:
 - **CGADB (“Missão”):** é uma convenção de ministros. Cada igreja-sede é dirigida por um pastor-presidente, e os ministérios são independentes entre si; segundo a pesquisadora Marina Correa, os bens ficam com as igrejas e os seus pastores-presidentes. Reúne cerca de 63 convenções estaduais e regionais. Não ordena mulheres como pastoras.
@@ -87,7 +87,7 @@ Além delas, há ministérios grandes e independentes, como a Assembleia de Deus
 
 [Veja os ministérios em cada estado](/assembleia-de-deus)
 
-## Quem preside as convenções hoje
+## Quem Preside as Convenções Hoje
 
 Os cargos mudam a cada eleição, e por isso esta lista traz **só o que consegui confirmar**, com a data da conferência: **27 de outubro de 2026**.
 
@@ -97,7 +97,7 @@ Os cargos mudam a cada eleição, e por isso esta lista traz **só o que consegu
 
 
 
-## As Assembleias de Deus hoje
+## As Assembleias de Deus Hoje
 
 :::tempo
 - 1911 | Belém | Missão da Fé Apostólica, que em 1918 passou a se chamar Assembleia de Deus
@@ -120,6 +120,6 @@ Procurando diligentemente guardar a unidade do Espírito no vínculo da paz.
 — [[Ef 4.3]]
 :::
 
-## Para a vida
+## Para a Vida
 
 Jesus orou pela unidade dos seus discípulos: “para que todos sejam um” [[Jo 17.21]]. Paulo e Barnabé, depois de uma forte discordância, seguiram caminhos separados — e o evangelho continuou avançando pelos dois [[At 15.36-41]]. Paulo pede que estejamos “procurando diligentemente guardar a unidade do Espírito no vínculo da paz” [[Ef 4.3]].

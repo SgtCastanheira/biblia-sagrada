@@ -6,11 +6,11 @@ Na Paraíba, a mensagem pentecostal chegou com um filho da terra, que voltou par
 - Manoel Pessoa Leão | evangelista, construiu a primeira sede
 :::
 
-## Quem levou a mensagem
+## Quem Levou a Mensagem
 
 **Manoel Francisco do Bu** (o nome também aparece como Dubu) era paraibano. Segundo a igreja de Campina Grande, ao voltar para a cidade, em **17 de dezembro de 1914**, ele trouxe aos conterrâneos a mensagem do batismo no Espírito Santo. As fontes não dizem onde ele tinha conhecido a fé pentecostal.
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 :::cena Campina Grande · 1922
 Na casa de um alfaiate, os poucos crentes da cidade se reúnem para orar e cantar. Não há templo nem pastor: só a casa aberta de Felipe Nery Fernandes.

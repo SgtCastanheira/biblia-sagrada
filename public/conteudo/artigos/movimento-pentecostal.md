@@ -1,6 +1,6 @@
 O movimento pentecostal é, segundo muitos historiadores, o fenômeno religioso que mais cresceu no século XX. Nasceu de pessoas simples que oravam por um novo Pentecostes — e hoje reúne, com os carismáticos, centenas de milhões de cristãos no mundo, segundo as estimativas.
 
-## As raízes: o movimento de santidade
+## As Raízes: O Movimento de Santidade
 
 No século XIX, herdeiros do metodismo de Wesley ensinavam que, depois da conversão, o crente deve buscar uma “segunda bênção”: uma experiência de santificação e de poder do Espírito Santo. Expressões como “batismo no Espírito Santo” e “batismo de fogo” se tornaram comuns em acampamentos de santidade. Muitos oravam para que Deus restaurasse os dons espirituais da igreja primitiva [[Jl 2.28-29]].
 
@@ -37,7 +37,7 @@ Mas recebereis poder, ao descer sobre vós o Espírito Santo, e ser-me-eis teste
 — [[At 1.8]]
 :::
 
-## Do mundo inteiro, para o mundo inteiro
+## Do Mundo Inteiro, para o Mundo Inteiro
 
 Missionários e visitantes levaram o fogo de Azusa a todos os continentes. O norueguês **Thomas Ball Barratt**, que recebeu o batismo em Nova York em 1906, levou o pentecostalismo para a Escandinávia, onde ele influenciou o sueco **Lewi Pethrus**. Em Chicago, a missão de William Durham reuniu imigrantes europeus — entre eles os suecos e o italiano que trariam o pentecostalismo ao Brasil.
 
@@ -45,7 +45,7 @@ Missionários e visitantes levaram o fogo de Azusa a todos os continentes. O nor
 Do fogo de Azusa e de Chicago aos pioneiros que chegaram ao Brasil em 1910.
 :::
 
-## O que os pentecostais enfatizam
+## O que os Pentecostais Enfatizam
 
 - **O batismo no Espírito Santo** como experiência posterior à conversão, para capacitar para o testemunho [[At 1.8]], com a evidência das línguas.
 - **Os dons espirituais** em operação na igreja: profecia, curas, línguas e interpretação [[1Co 12.7-11]].

@@ -8,7 +8,7 @@ Tudo começou em Belém. Antes de ser a igreja de um país inteiro, a Assembleia
 - Frida Vingren | enviada pela Igreja Filadélfia de Estocolmo | imagens/frida-vingren.jpg
 :::
 
-## De onde vieram os fundadores
+## De Onde Vieram os Fundadores
 
 Gunnar Vingren e Daniel Berg eram suecos que moravam nos Estados Unidos. Depois de uma profecia que falava de um lugar chamado “Pará”, partiram de Nova York e chegaram a Belém em **19 de novembro de 1910**. Foram acolhidos pela Igreja Batista de Belém; Berg trabalhava como fundidor para sustentar os dois, e Vingren estudava português.
 
@@ -16,11 +16,11 @@ Gunnar Vingren e Daniel Berg eram suecos que moravam nos Estados Unidos. Depois 
 Numa casa da Cidade Velha, uma irmã batista ora durante a noite. Celina de Albuquerque é a primeira a receber o batismo no Espírito Santo em Belém.
 :::
 
-## Os primeiros dias
+## Os Primeiros Dias
 
 A experiência pentecostal dividiu a igreja batista. Em **13 de junho de 1911**, os que a aceitaram foram excluídos e, no dia **18 de junho**, um domingo, se reuniram na casa de Celina como **Missão da Fé Apostólica**. Em 1918, a igreja foi registrada como Assembleia de Deus.
 
-## A mensagem se espalha pelo Pará
+## A Mensagem se Espalha pelo Pará
 
 Antes de chegar a outros estados, a fé correu o próprio Pará, levada pelos missionários e por crentes comuns:
 - **1911:** Daniel Berg em Soure e Mosqueiro, na Ilha de Marajó e perto de Belém.
@@ -36,7 +36,7 @@ No entanto os que foram dispersos iam por toda parte, anunciando a palavra.
 — [[At 8.4]]
 :::
 
-## A igreja que enviava
+## A Igreja que Enviava
 
 Belém se tornou uma igreja missionária. Em 1914 chegaram Otto e Adina Nelson; em 1916, Samuel e Lina Nyström, os primeiros missionários enviados oficialmente pela Igreja Filadélfia de Estocolmo; em 1917, Frida Strandberg. Em 1917 a igreja imprimiu o seu primeiro hinário, e em 1919 Vingren lançou o jornal *Boa Semente*. Dali saíram obreiros para o Amapá, o Amazonas, o Ceará, Pernambuco, o Maranhão, o Rio de Janeiro e muitos outros lugares — e crentes que, voltando para a sua terra, levavam a nova fé.
 

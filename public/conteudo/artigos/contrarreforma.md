@@ -1,6 +1,6 @@
 A Reforma Protestante provocou uma resposta da Igreja Católica — ao mesmo tempo uma reforma interna e uma reação contra os protestantes. Os historiadores a chamam de Reforma Católica ou Contrarreforma.
 
-## Um desejo antigo de reforma
+## Um Desejo Antigo de Reforma
 
 Muitos católicos também queriam mudanças: acabar com a venda de cargos, com bispos que nunca visitavam as suas dioceses e com padres sem preparo. Antes mesmo de Lutero, houve movimentos de renovação espiritual na Espanha e na Itália. Mas a divisão da Igreja tornou a reforma urgente.
 
@@ -16,13 +16,13 @@ Reunido em Trento, no norte da Itália, em três etapas ao longo de quase 20 ano
 - **O purgatório, a intercessão dos santos e as indulgências** foram mantidos — mas proibiu-se a sua venda, e em 1567 o papa Pio V aboliu de vez a venda de indulgências.
 - Cada diocese deveria ter um **seminário** para formar os padres, e os bispos deveriam morar nas suas dioceses e pregar.
 
-## Os jesuítas
+## Os Jesuítas
 
 Em 1521, o mesmo ano da Dieta de Worms, o soldado espanhol Inácio de Loyola foi ferido em batalha. Durante a recuperação, leu vidas de Cristo e dos santos e se converteu. Escreveu os *Exercícios Espirituais* e fundou a Companhia de Jesus, aprovada pelo papa em 1540. Os jesuítas se tornaram educadores, pregadores e missionários.
 
 O jesuíta **Francisco Xavier** levou o catolicismo à Índia e ao Japão. No Brasil, os jesuítas chegaram em 1549 com **Manuel da Nóbrega**; em 1554, com **José de Anchieta**, fundaram o colégio que deu origem à cidade de São Paulo. Anchieta escreveu uma gramática da língua tupi e catequizou indígenas.
 
-## A face dura
+## A Face Dura
 
 A Contrarreforma também usou a força:
 
@@ -35,7 +35,7 @@ A Contrarreforma também usou a força:
 
 Em Portugal, a Inquisição funcionou de 1536 a 1821, perseguindo sobretudo os “cristãos-novos” (judeus convertidos à força) e quem tivesse ideias protestantes. Por isso, a Bíblia em português demorou tanto a chegar ao povo — e a primeira tradução completa foi feita por um protestante, João Ferreira de Almeida, longe de Portugal.
 
-## Espiritualidade católica
+## Espiritualidade Católica
 
 O período também teve grandes figuras de oração, como Teresa de Ávila e João da Cruz, na Espanha, que buscaram uma vida de intimidade com Deus.
 

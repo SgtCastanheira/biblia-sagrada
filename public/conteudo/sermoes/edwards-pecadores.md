@@ -2,7 +2,7 @@
 
 Nada impede que os ímpios caiam no inferno a qualquer momento, senão o simples beneplácito de Deus — a sua vontade soberana, que nada obriga e nada impede. Considere estas verdades:
 
-## O que segura o pecador
+## O que Segura o Pecador
 
 **1. Não falta a Deus poder para lançá-los no inferno a qualquer momento.** As mãos dos homens não são fortes quando Deus se levanta. Um rei da terra às vezes tem dificuldade para vencer um rebelde fortificado; com Deus não é assim. Não há fortaleza que defenda do seu poder. Os seus inimigos são como palha leve diante do redemoinho, ou como restolho seco diante das chamas. Assim como é fácil para nós pisar um verme ou cortar um fio fino de que algo está pendurado, é fácil para Deus, quando quiser, lançar os seus inimigos no abismo.
 
@@ -42,13 +42,13 @@ Assim, todos vocês que nunca passaram por uma grande mudança de coração pelo
 
 Ó pecador! Considere o perigo terrível em que está. Você está **pendurado por um fio fino**, com as chamas da ira divina brilhando ao redor, prontas a qualquer momento para queimá-lo — e não tem nada de seu, nada que já tenha feito, nada que possa fazer, para levar Deus a poupá-lo por um momento.
 
-### Considere de quem é essa ira
+### Considere de Quem É Essa Ira
 É a ira do Deus infinito. A ira dos reis da terra é muito temida, mas todos eles, diante de Deus, são como gafanhotos. “Temei aquele que, depois de matar, tem poder para lançar no inferno; sim, vos digo, a esse temei” [[Lc 12.5]].
 
-### Considere que é uma ira eterna
+### Considere que É uma Ira Eterna
 Seria terrível sofrer a ira do Deus todo-poderoso por um momento; mas é para toda a eternidade. Quando você olhar adiante, verá um longo “para sempre”, uma duração sem limites, que engolirá os seus pensamentos.
 
-## O dia da misericórdia
+## O Dia da Misericórdia
 
 E agora você tem uma oportunidade extraordinária: **um dia em que Cristo abriu de par em par a porta da misericórdia**, e está chamando e clamando em alta voz aos pobres pecadores; um dia em que muitos estão correndo para Ele e entrando no Reino de Deus. Muitos que há pouco estavam na mesma condição miserável que você agora estão felizes, com o coração cheio de amor por Aquele que os amou e os lavou dos seus pecados com o próprio sangue, alegrando-se na esperança da glória de Deus. Como é terrível ficar para trás num dia como este! Ver tantos outros em festa enquanto você está definhando e perecendo! Como você pode descansar um momento nessa condição? A sua alma não é tão preciosa quanto a daqueles que, dia após dia, correm para Cristo?
 

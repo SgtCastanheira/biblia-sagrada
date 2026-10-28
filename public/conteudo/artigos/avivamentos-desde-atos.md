@@ -1,6 +1,6 @@
 “Aviva, ó Senhor, a tua obra no meio dos anos” [[Hc 3.2]]. Desde o dia de Pentecostes, a história da Igreja tem tempos de frieza e tempos em que Deus parece “fender os céus e descer” [[Is 64.1]]: multidões se arrependem, a Bíblia é lida com fome, as famílias mudam e até a sociedade sente a diferença. A esses tempos os cristãos chamam de **avivamento**. Aqui estão os grandes avivamentos da história, época por época: como começaram, por quê, por meio de quem, como terminaram, o que mudaram na sociedade — e o que foi pregado. Em cada época, um cartão leva à história completa ou ao sermão daquele tempo.
 
-## O que é um avivamento
+## O que É um Avivamento
 
 A Bíblia fala de “tempos de refrigério, da presença do Senhor”, que vêm depois do arrependimento [[At 3.19]], e dá o caminho: “se o meu povo… se humilhar, e orar, e buscar a minha face, e se desviar dos seus maus caminhos, então eu ouvirei do céu, e perdoarei os seus pecados, e sararei a sua terra” [[2Cr 7.14]].
 
@@ -16,7 +16,7 @@ Os avivamentos da história têm muito em comum:
 Charles Finney explica o que é um avivamento e quando a igreja precisa dele.
 :::
 
-## Pentecostes e a igreja primitiva (30–100)
+## Pentecostes e a Igreja Primitiva (30–100)
 
 :::ficha Pentecostes
 - Como começou | Os discípulos, cerca de cento e vinte, perseveravam em oração em Jerusalém. No dia de Pentecostes, o Espírito Santo desceu e todos falaram em outras línguas [[At 2.1-4]].
@@ -35,7 +35,7 @@ Charles Finney explica o que é um avivamento e quando a igreja precisa dele.
 
 Na Idade Média, a igreja estava rica e distante do povo. Alguns movimentos chamaram os cristãos de volta à simplicidade do evangelho e à Bíblia.
 
-:::ficha Valdenses, franciscanos, lolardos e hussitas
+:::ficha Valdenses, Franciscanos, Lolardos e Hussitas
 - Como começou | Por volta de 1170, o comerciante Pedro Valdo, de Lyon, deu os seus bens aos pobres e mandou traduzir os Evangelhos para a língua do povo. Em 1209, Francisco de Assis começou uma vida de pobreza e pregação.
 - Por quê | A riqueza e a corrupção do clero, e a fome do povo pela Palavra numa língua que entendesse.
 - Por meio de quem | Pedro Valdo e os “pobres de Lyon”; Francisco de Assis; John Wycliffe e os pregadores lolardos, na Inglaterra (c. 1380); Jan Hus, na Boêmia.
@@ -63,7 +63,7 @@ Na Idade Média, a igreja estava rica e distante do povo. Alguns movimentos cham
 :::leia reforma-protestante
 :::
 
-## Escócia e Ulster: os avivamentos dos puritanos (1625–1630)
+## Escócia e Ulster: Os Avivamentos dos Puritanos (1625–1630)
 
 :::ficha Six Mile Water e Kirk o’ Shotts
 - Como começou | Em 1625, em Six Mile Water, no Ulster (norte da Irlanda), pastores escoceses viram o povo se converter em reuniões de oração e pregação. Em 21 de junho de 1630, em Kirk o’ Shotts, na Escócia, depois de uma noite de oração, o jovem John Livingstone pregou numa segunda-feira, ao fim da Ceia.
@@ -77,7 +77,7 @@ Na Idade Média, a igreja estava rica e distante do povo. Alguns movimentos cham
 
 ## Pietismo e Herrnhut (1675–1760)
 
-:::ficha O pietismo e os morávios
+:::ficha O Pietismo e os Morávios
 - Como começou | Em 1675, o pastor Philipp Jakob Spener propôs pequenos grupos de estudo da Bíblia e oração. Em 13 de agosto de 1727, numa Ceia em Herrnhut, na Alemanha, a comunidade dos morávios experimentou uma reconciliação e um derramar do Espírito.
 - Por quê | Uma fé luterana que tinha virado só doutrina e costume; o desejo de uma fé “do coração”.
 - Por meio de quem | Spener, August Hermann Francke e o conde Nikolaus von Zinzendorf.
@@ -90,13 +90,13 @@ Na Idade Média, a igreja estava rica e distante do povo. Alguns movimentos cham
 :::leia pietismo-e-moravios
 :::
 
-## O Grande Despertamento e o avivamento metodista (1734–1790)
+## O Grande Despertamento e o Avivamento Metodista (1734–1790)
 
 :::cena Enfield, Connecticut · 8 de julho de 1741
 Jonathan Edwards lê o seu sermão com voz calma, quase sem gestos. O povo começa a gemer e a clamar “que farei para ser salvo?”, e ele precisa parar.
 :::
 
-:::ficha O Primeiro Grande Despertamento e o metodismo
+:::ficha O Primeiro Grande Despertamento e o Metodismo
 - Como começou | Em 1734–1735, em Northampton, nas colônias americanas, a pregação de Jonathan Edwards levou a cidade ao arrependimento. Na Inglaterra, John Wesley sentiu o coração “estranhamente aquecido” em 24 de maio de 1738, e em 1739 George Whitefield começou a pregar ao ar livre para os mineiros de Bristol.
 - Por quê | Igrejas frias e formais, enquanto o povo pobre das cidades e das minas vivia longe de Deus, na bebida e na violência.
 - Por meio de quem | Jonathan Edwards, George Whitefield, John e Charles Wesley.
@@ -133,9 +133,9 @@ Jonathan Edwards lê o seu sermão com voz calma, quase sem gestos. O povo come�
 :::sermao finney-o-que-e-avivamento
 :::
 
-## O avivamento de oração (1857–1859)
+## O Avivamento de Oração (1857–1859)
 
-:::ficha O avivamento de oração
+:::ficha O Avivamento de Oração
 - Como começou | Em 23 de setembro de 1857, o missionário leigo Jeremiah Lanphier marcou uma reunião de oração ao meio-dia na Rua Fulton, em Nova York. Por meia hora ninguém veio; no fim, eram seis homens.
 - Por quê | Dias depois, uma crise financeira derrubou bancos e empresas; homens de negócios, assustados, encheram as reuniões de oração.
 - Por meio de quem | Leigos, não grandes pregadores: Lanphier e milhares de pessoas comuns que oravam.
@@ -156,7 +156,7 @@ Spurgeon pregava em Londres no tempo desse avivamento, para milhares de pessoas.
 Moody foi um dos frutos daquele tempo de oração.
 :::
 
-## O fogo de 1904–1907: Gales, Índia e Coreia
+## O Fogo de 1904–1907: Gales, Índia e Coreia
 
 :::ficha Gales, Índia e Coreia
 - Como começou | Em 1904, no País de Gales, o jovem mineiro Evan Roberts começou reuniões com dezessete jovens em Loughor. Em 1905, na Índia, as moças da Missão Mukti, de Pandita Ramabai, oravam por avivamento. Em janeiro de 1907, em Pyongyang, na Coreia, uma conferência bíblica terminou em confissão pública de pecados.
@@ -177,7 +177,7 @@ Moody foi um dos frutos daquele tempo de oração.
 :::leia avivamento-da-coreia
 :::
 
-## Azusa e o fogo pentecostal (1906–1913)
+## Azusa e o Fogo Pentecostal (1906–1913)
 
 :::ficha A Rua Azusa
 - Como começou | Em abril de 1906, numa casa da Rua Bonnie Brae, em Los Angeles, um grupo em oração com William Seymour recebeu o batismo no Espírito Santo, com línguas.
@@ -197,7 +197,7 @@ Moody foi um dos frutos daquele tempo de oração.
 
 ## Brasil: Belém (1910–1911)
 
-:::ficha O pentecostalismo chega ao Brasil
+:::ficha O Pentecostalismo Chega ao Brasil
 - Como começou | Em 1910, Luigi Francescon chegou a São Paulo, e Gunnar Vingren e Daniel Berg a Belém. Em junho de 1911, Celina de Albuquerque recebeu o batismo no Espírito.
 - Por quê | Os missionários vieram por uma profecia que os chamava ao “Pará”; os irmãos de Belém oravam pela promessa do Espírito.
 - Por meio de quem | Vingren, Berg, Francescon — e os crentes brasileiros que migravam.
@@ -212,7 +212,7 @@ Moody foi um dos frutos daquele tempo de oração.
 
 ## A África Oriental (1929–1970)
 
-:::ficha O avivamento da África Oriental
+:::ficha O Avivamento da África Oriental
 - Como começou | Em 1929, em Kampala, o médico missionário Joe Church encontrou Simeon Nsibambi, e os dois oraram juntos. Numa convenção em Gahini, em Ruanda, no Natal de 1933, houve confissões e alegria pelo perdão.
 - Por quê | Igrejas grandes, mas nominais, e o desejo de uma vida limpa diante de Deus.
 - Por meio de quem | Leigos africanos, os “balokole” (“os salvos”), com Nsibambi e Joe Church; depois líderes como o bispo Festo Kivengere.
@@ -227,7 +227,7 @@ Moody foi um dos frutos daquele tempo de oração.
 
 ## As Hébridas (1949–1952)
 
-:::ficha O avivamento das Hébridas
+:::ficha O Avivamento das Hébridas
 - Como começou | Na ilha de Lewis, na Escócia, duas irmãs idosas, Peggy e Christine Smith, oravam pela promessa de [[Is 44.3]]. Os líderes da igreja de Barvas passaram a orar três noites por semana; em dezembro de 1949 chegou o pregador Duncan Campbell.
 - Por quê | Os jovens tinham deixado a igreja, e as ilhas viviam um tempo de frieza espiritual.
 - Por meio de quem | As irmãs Smith, o pastor James Murray Mackay, Duncan Campbell e os grupos de oração.
@@ -240,13 +240,13 @@ Moody foi um dos frutos daquele tempo de oração.
 :::leia avivamento-das-hebridas
 :::
 
-## Depois: cruzadas e renovação (1949–hoje)
+## Depois: Cruzadas e Renovação (1949–hoje)
 
 A partir de 1949, as **cruzadas de Billy Graham** levaram o evangelho a estádios do mundo inteiro, inclusive do Brasil. Nos anos 1960, a **renovação carismática** levou a experiência pentecostal a igrejas históricas, e o cristianismo cresceu muito na África, na Ásia e na América Latina. Os historiadores ainda discutem quais desses movimentos foram avivamentos no sentido antigo — mas todos mostram que a oração por avivamento continua.
 
 :::sermao billy-graham
 :::
 
-## Para a vida
+## Para a Vida
 
 Os avivamentos não começaram com estratégias, mas com gente que orava e se arrependia. A promessa continua: “Quanto mais dará o Pai celestial o Espírito Santo àqueles que lho pedirem?” [[Lc 11.13]]. A oração de cada avivamento pode ser a nossa: “Cria em mim, ó Deus, um coração puro” [[Sl 51.10]] — “aviva, ó Senhor, a tua obra” [[Hc 3.2]].

@@ -1,20 +1,20 @@
 “João 3.16” — hoje, qualquer pessoa encontra um versículo em segundos. Mas os autores da Bíblia não escreveram em capítulos e versículos. Essas divisões foram criadas muitos séculos depois, para facilitar a leitura e a citação.
 
-## Antes dos números
+## Antes dos Números
 
 Os judeus já dividiam a Torá em trechos para a leitura semanal na sinagoga (as *parashot*), e os escribas marcavam o fim de cada frase do texto hebraico. Os cristãos antigos também usaram vários sistemas de seções, como os “cânones” de Eusébio (séc. IV), que permitiam comparar passagens paralelas dos Evangelhos. Mas cada sistema era diferente.
 
 Por isso, o Novo Testamento cita o Antigo de um jeito vago: “em certo lugar testificou alguém” [[Hb 2.6]], ou pelo assunto — Jesus falou de Moisés “no livro… no trecho da sarça” [[Mc 12.26]].
 
-## Os capítulos: Stephen Langton (c. 1227)
+## Os Capítulos: Stephen Langton (c. 1227)
 
 A divisão em capítulos que usamos foi criada por volta de 1227 por **Stephen Langton**, professor em Paris e depois arcebispo de Cantuária, na Inglaterra, para a Bíblia latina (a Vulgata). Em 1448, o rabino Isaac Nathan aplicou os mesmos capítulos à Bíblia hebraica, ao preparar uma concordância.
 
-## Os versículos: Robert Estienne (1551)
+## Os Versículos: Robert Estienne (1551)
 
 A numeração dos versículos do Novo Testamento foi feita pelo impressor francês **Robert Estienne** (Stephanus), numa edição do Novo Testamento grego publicada em Genebra em 1551. Segundo o filho dele, Estienne fez boa parte do trabalho durante uma viagem a cavalo de Paris a Lyon — o que, para alguns, explicaria certas divisões estranhas. Em 1553, publicou a Bíblia inteira com versículos numerados. A primeira Bíblia inglesa com versículos foi a Bíblia de Genebra, em 1560.
 
-## Ajuda — e às vezes atrapalha
+## Ajuda — E às Vezes Atrapalha
 
 Os números são ótimos para encontrar e memorizar textos. Mas, como não são inspirados, às vezes cortam o pensamento no meio:
 

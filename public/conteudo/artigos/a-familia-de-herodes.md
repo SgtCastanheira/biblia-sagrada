@@ -1,10 +1,10 @@
 O nome **Herodes** aparece no Novo Testamento para pelo menos cinco governantes diferentes, da mesma família. Confundi-los é muito comum. Entender quem era quem ajuda a ler os Evangelhos e Atos.
 
-## 1. Uma família idumeia no trono dos judeus
+## 1. Uma Família Idumeia no Trono dos Judeus
 
 Herodes, o Grande, era idumeu — descendente dos edomitas, que tinham sido obrigados a se converter ao judaísmo cerca de um século antes. Muitos judeus nunca o aceitaram como rei legítimo. Ele chegou ao poder com o apoio de Roma: o Senado romano o declarou “rei dos judeus” em 40 a.C., e ele tomou Jerusalém em 37 a.C.
 
-## 2. Quem era quem
+## 2. Quem Era Quem
 
 | Nome | Governo | No Novo Testamento |
 |---|---|---|
@@ -17,7 +17,7 @@ Herodes, o Grande, era idumeu — descendente dos edomitas, que tinham sido obri
 
 Também aparecem mulheres da família: **Herodias**, que deixou o marido para se casar com Antipas, e a sua filha (chamada Salomé pelo historiador Josefo), que dançou diante de Antipas [[Mc 6.22]]; **Berenice**, irmã de Agripa II [[At 25.13]]; e **Drusila**, esposa do governador Félix [[At 24.24]].
 
-## 3. Quem mandava em quem: Herodes e Roma
+## 3. Quem Mandava em Quem: Herodes e Roma
 
 Uma dúvida comum: se Herodes era rei, **a quem ele obedecia**? E quem obedecia a ele? A resposta muda de acordo com a época, porque o poder na terra de Israel foi mudando de mãos.
 
@@ -42,7 +42,7 @@ Uma dúvida comum: se Herodes era rei, **a quem ele obedecia**? E quem obedecia 
 
 Foi por isso que, no julgamento de Jesus, havia vários poderes na cena: o **prefeito Pilatos**, que mandava na Judeia ([[Jo 18.28-19.16]]); o **sumo sacerdote Caifás**, nomeado pelos romanos ([[Jo 18.13]]); e, por ser galileu, Jesus foi enviado a **Herodes Antipas**, que estava em Jerusalém ([[Lc 23.6-12]]). Herodes, o Grande, e Pilatos nunca se encontraram: Pilatos só chegou à Judeia mais de trinta anos depois da morte do velho rei.
 
-## 4. Herodes, o Grande: construtor e tirano
+## 4. Herodes, o Grande: Construtor e Tirano
 
 Herodes foi um dos maiores construtores da Antiguidade:
 
@@ -56,15 +56,15 @@ Mas era também cruel e desconfiado: mandou matar uma das esposas, Mariane, e tr
 
 Antipas tomou como esposa Herodias, mulher de seu meio-irmão. João Batista denunciou publicamente o casamento: “Não te é lícito possuir a mulher de teu irmão” [[Mc 6.18]]. O historiador Josefo confirma que Antipas prendeu e matou João na fortaleza de Maqueronte, a leste do mar Morto, por medo da sua influência sobre o povo.
 
-## 6. Uma comparação para hoje
+## 6. Uma Comparação para Hoje
 
 Os Herodes eram como governantes locais de um território ocupado, escolhidos e mantidos no poder por uma potência estrangeira enquanto lhe fossem leais. Roma lhes dava o título de rei, mas podia depô-los a qualquer momento — como fez com Arquelau em 6 d.C. e com Antipas em 39 d.C.
 
-## 7. O que isso tem a ver com a mensagem
+## 7. O que Isso Tem a Ver com a Mensagem
 
 Os Evangelhos contrastam dois reis. Herodes, o Grande, “rei dos judeus” por decreto de Roma, tem medo de um bebê e manda matar inocentes. Jesus, o verdadeiro Rei dos judeus, nasce numa manjedoura e dá a vida pelos culpados. No fim, Antipas e Pilatos zombam de Jesus vestindo-o como rei [[Lc 23.11]] — sem saber que diziam a verdade.
 
-## Para aprofundar
+## Para Aprofundar
 
 - A morte de Agripa I, contada também por Josefo: [[At 12.21-23]].
 - Paulo diante de Agripa II: [[At 26.1-32]].

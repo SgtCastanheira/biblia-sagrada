@@ -71,7 +71,7 @@ import { SourcesBox } from '../../shared/sources-box';
     <p class="source">
       <strong>Como ler a situação.</strong> “Cumprida” quando os cristãos em geral concordam; “Já e ainda não” quando o cumprimento começou e se completa no futuro;
       “Interpretações diferentes” quando estudiosos e tradições divergem; “Futura” quando a maioria entende que ainda vai se cumprir.
-      Veja os princípios em <a routerLink="/artigo/como-interpretar-profecias">Como interpretar as profecias</a>.
+      Veja os princípios em <a routerLink="/artigo/como-interpretar-profecias">Como Interpretar as Profecias</a>.
     </p>
     <app-sources topic="profecias" />
   `,

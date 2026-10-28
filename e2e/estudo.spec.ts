@@ -63,7 +63,7 @@ test('memorial: nazireus e texto-chave carregado', async ({ page }) => {
 
 test('estudo dos cativeiros: referência abre o versículo e o mapa liga ao estudo', async ({ page }) => {
   await page.goto('/artigo/cativeiros-de-israel');
-  await expect(page.getByRole('heading', { name: 'Os cativeiros de Israel' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Os Cativeiros de Israel' })).toBeVisible();
   await page.getByRole('button', { name: '2Rs 17.6' }).first().click();
   await expect(page.locator('.app-sheet app-passage-view blockquote')).toBeVisible();
   await page.keyboard.press('Escape');
@@ -75,11 +75,11 @@ test('estudo dos cativeiros: referência abre o versículo e o mapa liga ao estu
 
 test('sermão histórico abre o texto e passa ao próximo', async ({ page }) => {
   await page.goto('/avivamento');
-  await page.getByText('Pecadores nas mãos de um Deus irado').click();
+  await page.getByText('Pecadores nas Mãos de um Deus Irado').click();
   await expect(page.getByText('teia de aranha', { exact: false })).toBeVisible();
   await expect(page.getByText('Tradução condensada.')).toBeVisible();
   await page.getByRole('link', { name: /Próximo sermão/ }).click();
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('O método da graça');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('O Método da Graça');
 });
 
 test('dicionário: busca e filtro por idioma', async ({ page }) => {
@@ -183,7 +183,7 @@ test('dicionário: a palavra mostra a forma e o sentido daquele versículo', asy
 test('aula de contexto aparece no capítulo e tem índice', async ({ page }) => {
   await page.goto('/ler/MRK/5');
   await page.getByRole('button', { name: /Estudar este capítulo/ }).click();
-  await page.getByRole('link', { name: /Legião: o exército romano/ }).click();
+  await page.getByRole('link', { name: /Legião: O Exército Romano/ }).click();
   await expect(page.getByText('Neste estudo')).toBeVisible();
   await expect(page.locator('table').first()).toBeVisible();
 });
@@ -191,7 +191,7 @@ test('aula de contexto aparece no capítulo e tem índice', async ({ page }) => 
 test('voltar leva para a tela anterior (o caminho feito), e não para uma página fixa', async ({ page }) => {
   await page.goto('/ler/MRK/5');
   await page.getByRole('button', { name: /Estudar este capítulo/ }).click();
-  await page.getByRole('link', { name: /Legião: o exército romano/ }).click();
+  await page.getByRole('link', { name: /Legião: O Exército Romano/ }).click();
   await expect(page).toHaveURL(/\/artigo\/legiao/);
   await page.getByRole('button', { name: 'Voltar' }).click();
   await expect(page).toHaveURL(/\/ler\/MRK\/5/);
@@ -310,14 +310,14 @@ test('Harpa Cristã: busca por número, página do hino com autor e fontes, sem 
 
 test('estudo dos ministérios: na trilha Histórias da Bíblia, ligado ao dicionário e ao leitor', async ({ page }) => {
   await page.goto('/historia?trilha=historias-da-biblia');
-  await page.getByRole('link', { name: /Os ministérios na Bíblia/ }).click();
+  await page.getByRole('link', { name: /Os Ministérios na Bíblia/ }).click();
   await expect(page.getByRole('heading', { name: 'Presbíteros e bispos' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Na igreja hoje' })).toBeVisible();
   await page.getByRole('link', { name: 'Diácono', exact: true }).first().click();
   await expect(page).toHaveURL(/\/dicionario\/diacono/);
   await page.goto('/ler/1TI/3');
   await page.getByRole('button', { name: /Estudar este capítulo/ }).click();
-  await expect(page.getByRole('link', { name: /Os ministérios na Bíblia/ })).toBeVisible();
+  await expect(page.getByRole('link', { name: /Os Ministérios na Bíblia/ })).toBeVisible();
 });
 
 test('história da Igreja: o estudo de Daniel Berg e Gunnar Vingren, ligado ao do pentecostalismo no Brasil', async ({ page }) => {
@@ -354,16 +354,16 @@ test('histórias imersivas: capa, personagens, capítulos, cenas e destaque', as
 
 test('estudos que não são histórias continuam com a leitura simples', async ({ page }) => {
   await page.goto('/artigo/ministerios-na-biblia');
-  await expect(page.getByRole('heading', { level: 1, name: 'Os ministérios na Bíblia' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: 'Os Ministérios na Bíblia' })).toBeVisible();
   await expect(page.locator('.hero')).toHaveCount(0);
   await expect(page.locator('.chapter')).toHaveCount(0);
 });
 
 test('história da Igreja como Atos: o panorama em destaque leva às histórias completas, e elas se cruzam', async ({ page }) => {
   await page.goto('/historia?trilha=igreja');
-  await page.getByRole('link', { name: /A história da Igreja em resumo/ }).click();
+  await page.getByRole('link', { name: /A História da Igreja em Resumo/ }).click();
   await expect(page).toHaveURL(/\/artigo\/panorama-da-igreja/);
-  await page.locator('a.read').filter({ hasText: 'A história da Escola Dominical' }).click();
+  await page.locator('a.read').filter({ hasText: 'A História da Escola Dominical' }).click();
   await expect(page).toHaveURL(/\/artigo\/escola-dominical/);
   await expect(page.locator('.scene').filter({ hasText: '19 de agosto de 1855' })).toHaveCount(1);
   await page.locator('a.read').filter({ hasText: 'Frida Vingren' }).click();

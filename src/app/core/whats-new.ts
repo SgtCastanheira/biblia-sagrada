@@ -24,7 +24,7 @@ export const RELEASES: Release[] = [
   {
     id: 'natal-e-calendarios',
     date: '28 de outubro de 2026',
-    title: 'Jesus nasceu mesmo em 25 de dezembro?',
+    title: 'Jesus Nasceu Mesmo em 25 de Dezembro?',
     items: [
       { icon: 'local_library', title: 'Teologia Sistemático-Carismática', text: 'Síntese da introdução geral e dos dois primeiros capítulos da obra de César Moisés Carvalho e Céfora Carvalho: a pergunta “teologia pode ser pública?”, o conceito de sinergista, a lógica da fé e a lógica grega, o Espírito Santo como locus e o sujeito da teologia.', link: '/artigo/teologia-sistematico-carismatica', tip: 'Também em Histórias › Pentecostalismo.' },
       { icon: 'calendar_month', title: 'O Natal e os calendários', text: 'Uma data que todo mundo conhece e uma pergunta que quase ninguém faz. Siga as pistas do Evangelho, os dois suspeitos do 25 de dezembro e a noite de 1582 em que dez dias desapareceram do calendário.', link: '/artigo/natal-e-os-calendarios', tip: 'Também em Histórias › Contexto histórico.' },
@@ -37,7 +37,7 @@ export const RELEASES: Release[] = [
     items: [
       { icon: 'translate', title: 'A Bíblia em línguas indígenas do Brasil', text: 'A Bíblia inteira em Guarani Mbyá e em Guajajára, e o Novo Testamento em Kaiwá (Guarani Kaiowá), Kayabí, Kaapor, Mundurukú, Sateré-Mawé, Ticuna, Kaingang, Terena e Xavante, das traduções da Wycliffe.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto do capítulo.' },
       { icon: 'change_history', title: 'A Trindade', text: 'Um só Deus, Pai, Filho e Espírito Santo: o que a Bíblia ensina, onde está escrito, os erros mais comuns e por que isso muda a oração e a vida no Espírito.', link: '/artigo/trindade' },
-      { icon: 'shield', title: 'Os deuses pagãos na Bíblia', text: 'Baal, Astarote, Moloque, Dagom, Júpiter, Diana e outros: onde aparecem, os nomes que ganharam, o que pediam e por que a Bíblia manda rejeitá-los. Com os nomes deles que ainda usamos hoje.', link: '/artigo/deuses-pagaos' },
+      { icon: 'shield', title: 'Os Deuses Pagãos na Bíblia', text: 'Baal, Astarote, Moloque, Dagom, Júpiter, Diana e outros: onde aparecem, os nomes que ganharam, o que pediam e por que a Bíblia manda rejeitá-los. Com os nomes deles que ainda usamos hoje.', link: '/artigo/deuses-pagaos' },
       { icon: 'check_circle', title: 'Lições com cores mais leves', text: 'Nas lições da EBD, as aulas que já foram ficam em verde-claro, com um check; as próximas, em marrom-claro; e a da vez pisca em dourado suave.', link: '/ebd/apoio' },
     ],
   },
@@ -73,7 +73,7 @@ export const RELEASES: Release[] = [
       { icon: 'translate', title: 'A Bíblia em hebraico', text: 'Antigo e Novo Testamento em hebraico, da direita para a esquerda, para comparar com a Almeida. Escolha “Bíblia hebraica” na sigla da versão.', link: '/ler/GEN/1', tip: 'Toque na sigla da versão, no alto do capítulo.' },
       { icon: 'menu_book', title: 'A Bíblia judaica', text: 'Como era a Bíblia no tempo de Jesus: rolos, três partes, 24 livros e outra ordem. Veja os livros em estantes e como eles mudam de lugar na nossa Bíblia.', link: '/artigo/biblia-judaica' },
       { icon: 'swipe', title: 'EBD em cartões, com datas', text: 'Cada lição virou cartões que se deslizam, como os stories. A data de cada aula aparece, e o número da lição da semana pisca. Todas as turmas, do Berçário aos Adultos, e as 13 lições de Jovens (Filipenses).', link: '/ebd/apoio/jovens' },
-      { icon: 'account_balance', title: 'Os faraós da Bíblia', text: 'Quem foram, quando governaram, a quem respondiam e quem estava debaixo deles. E, no estudo dos Herodes, quem mandava em quem: o César, o governador da Síria e o prefeito da Judeia.', link: '/artigo/os-faraos-da-biblia' },
+      { icon: 'account_balance', title: 'Os Faraós da Bíblia', text: 'Quem foram, quando governaram, a quem respondiam e quem estava debaixo deles. E, no estudo dos Herodes, quem mandava em quem: o César, o governador da Síria e o prefeito da Judeia.', link: '/artigo/os-faraos-da-biblia' },
       { icon: 'badge', title: 'Os cargos na Assembleia de Deus', text: 'Cooperador, diácono, presbítero, evangelista e pastor: o que a Bíblia pede, o que se encontra por escrito e o que só se ouve dizer. Também: a Congregação Cristã faz parte da Assembleia de Deus?', link: '/artigo/cargos-na-assembleia-de-deus' },
     ],
   },
@@ -87,7 +87,7 @@ export const RELEASES: Release[] = [
       { icon: 'public', title: 'Mapa entre os Testamentos', text: 'De Alexandre a Herodes, época por época, com Israel em destaque no meio dos impérios e as referências de Daniel.', link: '/artigo/entre-os-testamentos' },
       { icon: 'translate', title: 'A Bíblia em espanhol e em alemão', text: 'Reina-Valera 1909, Versión Biblia Libre, Nueva Biblia Viva e outras em espanhol; Lutero 1912, Elberfelder e Schlachter em alemão. Todas funcionam sem internet e podem ser comparadas com a Almeida.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto do capítulo.' },
       { icon: 'menu_book', title: 'A Septuaginta, em detalhe', text: 'A lenda dos 72 sábios, o que se sabe de verdade, a ordem e os nomes dos livros da sua Bíblia, e por que o Novo Testamento cita o Antigo do jeito que cita.', link: '/artigo/septuaginta' },
-      { icon: 'swap_horiz', title: 'Os 400 anos entre os Testamentos', text: 'De Malaquias a Mateus: Alexandre, os Macabeus, a chegada dos romanos, fariseus e saduceus, as sinagogas e a esperança do Messias. A história que explica o mundo em que Jesus nasceu.', link: '/artigo/entre-os-testamentos', tip: 'Também aparece ao ler Malaquias 4 e Mateus 1.' },
+      { icon: 'swap_horiz', title: 'Os 400 Anos entre os Testamentos', text: 'De Malaquias a Mateus: Alexandre, os Macabeus, a chegada dos romanos, fariseus e saduceus, as sinagogas e a esperança do Messias. A história que explica o mundo em que Jesus nasceu.', link: '/artigo/entre-os-testamentos', tip: 'Também aparece ao ler Malaquias 4 e Mateus 1.' },
     ],
   },
   {
@@ -96,7 +96,7 @@ export const RELEASES: Release[] = [
     title: 'A linha do tempo e os irmãos perseguidos',
     items: [
       { icon: 'timeline', title: 'Linha do tempo da Assembleia de Deus', text: 'Ano a ano, em ordem cronológica: a igreja em cada estado ao lado das guerras, secas, epidemias e crises do Brasil e do mundo.', link: '/assembleia-de-deus/linha-do-tempo' },
-      { icon: 'history_edu', title: 'Os irmãos perseguidos', text: 'O cotidiano, quem perseguia, o que a lei dizia e o que não se sabe — contado sem inventar o que as fontes não registram.', link: '/artigo/irmaos-perseguidos' },
+      { icon: 'history_edu', title: 'Os Irmãos Perseguidos', text: 'O cotidiano, quem perseguia, o que a lei dizia e o que não se sabe — contado sem inventar o que as fontes não registram.', link: '/artigo/irmaos-perseguidos' },
       { icon: 'headphones', title: 'Ouvir a Bíblia e as histórias', text: 'Sem poder ler agora? Toque no fone de ouvido e uma voz calma lê o capítulo ou a história para você, trecho por trecho, com pausa, velocidade e o texto destacado na tela. Na Bíblia, ao terminar um capítulo ela segue para o próximo.', link: '/ler/PSA/23', tip: 'O fone fica no alto do capítulo e da história.' },
       { icon: 'bookmark', title: 'A fitinha e a página que vira', text: 'Na Bíblia, arraste a página para o lado e ela vira como uma folha de papel. A fitinha no alto marca onde você parou; toque nela para colocar ou tirar, e ache o caminho de volta na tela inicial.', link: '/ler/JHN/3', tip: 'Toque na fitinha no canto de cima da página.' },
       { icon: 'bubble_chart', title: 'Histórias por assunto, em círculos', text: 'Na tela inicial e em Histórias, um círculo para cada assunto: Histórias da Bíblia, Sobre a Bíblia, Contexto histórico, Profecias, História da Igreja, Pentecostalismo, Evangelho no Brasil e Harpa Cristã.', link: '/historia' },
@@ -128,8 +128,8 @@ export const RELEASES: Release[] = [
     date: '26 de outubro de 2026',
     title: 'Os avivamentos desde Atos e a Assembleia de Deus pelo Brasil',
     items: [
-      { icon: 'local_fire_department', title: 'Os avivamentos desde Atos', text: 'Época por época: como começou cada avivamento, por quem, como terminou, o que mudou na sociedade e os sermões de cada tempo.', link: '/artigo/avivamentos-desde-atos', tip: 'Em Estudo → Avivamentos.' },
-      { icon: 'church', title: 'A história da Assembleia de Deus no Brasil', text: 'Como os obreiros eram separados em cada época, o casamento dos pioneiros, os costumes, o ensino e as mulheres na obra.', link: '/artigo/assembleia-de-deus-no-brasil' },
+      { icon: 'local_fire_department', title: 'Os Avivamentos desde Atos', text: 'Época por época: como começou cada avivamento, por quem, como terminou, o que mudou na sociedade e os sermões de cada tempo.', link: '/artigo/avivamentos-desde-atos', tip: 'Em Estudo → Avivamentos.' },
+      { icon: 'church', title: 'A História da Assembleia de Deus no Brasil', text: 'Como os obreiros eram separados em cada época, o casamento dos pioneiros, os costumes, o ensino e as mulheres na obra.', link: '/artigo/assembleia-de-deus-no-brasil' },
       { icon: 'map', title: 'Mapa interativo: do Pará ao Rio e a São Paulo', text: 'O caminho da igreja, etapa por etapa, com as datas e as distâncias.', link: '/mapas/assembleia-de-deus-estados', tip: 'Toque em “Viver a jornada”.' },
       { icon: 'pin_drop', title: 'Estado por estado', text: 'Quando e por quem a Assembleia de Deus chegou a cada estado, de Belém a Brasília, num mapa.', link: '/mapas/assembleia-de-deus-estados' },
     ],
@@ -139,8 +139,8 @@ export const RELEASES: Release[] = [
     date: '26 de outubro de 2026',
     title: 'A Escola Dominical e a história em resumo',
     items: [
-      { icon: 'school', title: 'A história da Escola Dominical', text: 'De Robert Raikes, na Inglaterra (1780), a Sarah Kalley, em Petrópolis (1855), e às Lições Bíblicas das Assembleias de Deus.', link: '/artigo/escola-dominical', tip: 'Em Estudo → História da Igreja.' },
-      { icon: 'auto_stories', title: 'A história da Igreja em resumo', text: 'Como o livro de Atos: um panorama de dois mil anos, com cartões que levam a cada história completa. As histórias agora se cruzam.', link: '/artigo/panorama-da-igreja' },
+      { icon: 'school', title: 'A História da Escola Dominical', text: 'De Robert Raikes, na Inglaterra (1780), a Sarah Kalley, em Petrópolis (1855), e às Lições Bíblicas das Assembleias de Deus.', link: '/artigo/escola-dominical', tip: 'Em Estudo → História da Igreja.' },
+      { icon: 'auto_stories', title: 'A História da Igreja em Resumo', text: 'Como o livro de Atos: um panorama de dois mil anos, com cartões que levam a cada história completa. As histórias agora se cruzam.', link: '/artigo/panorama-da-igreja' },
     ],
   },
   {
@@ -173,7 +173,7 @@ export const RELEASES: Release[] = [
   {
     id: 'ministerios-na-biblia',
     date: '26 de outubro de 2026',
-    title: 'Os ministérios na Bíblia',
+    title: 'Os Ministérios na Bíblia',
     items: [
       { icon: 'diversity_3', title: 'Apóstolos, profetas, evangelistas, pastores…', text: 'Um estudo de cada ministério: a palavra original, quem foi na Bíblia, o que fazia, as qualificações e como as igrejas se organizam hoje.', link: '/artigo/ministerios-na-biblia', tip: 'Em Estudo, na nova seção Igreja e ministérios.' },
     ],
@@ -181,7 +181,7 @@ export const RELEASES: Release[] = [
   {
     id: 'harpa-crista',
     date: '26 de outubro de 2026',
-    title: 'A história da Harpa Cristã',
+    title: 'A História da Harpa Cristã',
     items: [
       { icon: 'music_note', title: 'Harpa Cristã', text: 'A história do hinário das Assembleias de Deus, de 1921 aos 640 hinos — e de cada hino: quem escreveu, traduziu, quando e por quê.', link: '/harpa', tip: 'Em Estudo, na seção História da Igreja e da Bíblia.' },
       { icon: 'auto_stories', title: 'A origem dos hinos', text: 'Chuvas de Graça, Noite de Paz, Grandioso És Tu, O Pão da Vida e outros, com o hino original e o texto bíblico.', link: '/harpa' },

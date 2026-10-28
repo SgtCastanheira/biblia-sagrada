@@ -10,7 +10,7 @@
 - Samuel Nyström | missionário contrário à pregação feminina
 :::
 
-## Da Suécia ao chamado
+## Da Suécia ao Chamado
 
 **Frida Maria Strandberg** nasceu em **9 de junho de 1891**, em Själevad, no norte da Suécia, numa família luterana. Perdeu a mãe em 1905, aos 14 anos. Em 1914 fez um curso bíblico — as fontes divergem sobre a escola — e depois se formou em **enfermagem** (1915–1917).
 
@@ -44,7 +44,7 @@ De Raikes a Frida: como a Escola Dominical nasceu e chegou às Assembleias de De
 
 Quando os jornais *Boa Semente* e *O Som Alegre* se uniram no **Mensageiro da Paz**, em 1930, Gunnar e Samuel Nyström eram os editores oficiais, mas, segundo o mesmo dicionário, quem fazia o trabalho era Frida.
 
-## A questão do ministério feminino
+## A Questão do Ministério Feminino
 
 :::cena Natal · setembro de 1930
 Missionários suecos e pastores brasileiros estão reunidos. O assunto oficial é passar a liderança da obra aos brasileiros, mas a discussão mais dura é outra: o que as mulheres podem fazer na igreja. Frida defende o seu ministério com textos bíblicos.
@@ -56,7 +56,7 @@ Em **setembro de 1930**, em Natal, missionários e pastores brasileiros se reuni
 **Uma questão que a igreja ainda discute.** Os cristãos leem de maneiras diferentes textos como [[1Tm 2.11-12]] e [[Gl 3.28]]. Hoje, algumas convenções das Assembleias de Deus consagram mulheres ao ministério e outras não. A história de Frida mostra como esse debate esteve presente desde o começo.
 :::
 
-## O fim da vida
+## O Fim da Vida
 
 Em 1932, a filha caçula, Gunvor, morreu aos quatro anos, e a família voltou para a Suécia em setembro. Gunnar morreu nove meses depois, em **29 de junho de 1933**. Viúva, com cinco filhos, Frida tentou voltar ao Brasil, mas foi impedida pelos líderes do movimento.
 
@@ -84,8 +84,8 @@ Porque Deus não é injusto, para se esquecer da vossa obra, e do amor que para 
 — [[Hb 6.10]]
 :::
 
-## Para a vida
+## Para a Vida
 
 Frida serviu com os dons que Deus lhe deu, mesmo quando foi incompreendida e esquecida. A Bíblia lembra muitas mulheres que serviram no Reino — Miriã, Débora, Ana, Priscila, Febe — e diz que Deus não se esquece do trabalho feito por amor ao seu nome [[Hb 6.10]].
 
-Veja também: [Daniel Berg e Gunnar Vingren](/artigo/daniel-berg-e-gunnar-vingren) e [A história da Harpa Cristã](/artigo/harpa-crista).
+Veja também: [Daniel Berg e Gunnar Vingren](/artigo/daniel-berg-e-gunnar-vingren) e [A História da Harpa Cristã](/artigo/harpa-crista).

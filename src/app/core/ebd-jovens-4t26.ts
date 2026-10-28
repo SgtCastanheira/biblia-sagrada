@@ -353,7 +353,7 @@ export const EBD_JOVENS_4T26: IbucLesson[] = [
     ],
     application:
       'Examine o que você ouve e lê. **Escolha um conteúdo** que você acompanha com frequência e faça três perguntas: ele exalta Cristo? Está de acordo com a Bíblia? Me leva à santidade e à humildade?',
-    deepen: 'Veja como o debate sobre a circuncisão aconteceu na igreja primitiva em [A história da Igreja em resumo](/artigo/panorama-da-igreja) e na primeira viagem missionária, no mapa [Primeira viagem de Paulo](/mapas/primeira-viagem-de-paulo).',
+    deepen: 'Veja como o debate sobre a circuncisão aconteceu na igreja primitiva em [A História da Igreja em Resumo](/artigo/panorama-da-igreja) e na primeira viagem missionária, no mapa [Primeira viagem de Paulo](/mapas/primeira-viagem-de-paulo).',
   },
   {
     ...BASE,
@@ -469,7 +469,7 @@ export const EBD_JOVENS_4T26: IbucLesson[] = [
     ],
     application:
       'Há alguém com quem você não conversa direito? **Dê o primeiro passo** esta semana: uma mensagem, um convite, um pedido de desculpas. A paz do grupo começa pela atitude de um.',
-    deepen: 'Veja como as primeiras igrejas lidaram com divisões em [A Igreja nasce](/artigo/igreja-primitiva) e o verbete [paz](/dicionario/paz).',
+    deepen: 'Veja como as primeiras igrejas lidaram com divisões em [A Igreja Nasce](/artigo/igreja-primitiva) e o verbete [paz](/dicionario/paz).',
   },
   {
     ...BASE,
@@ -701,7 +701,7 @@ export const EBD_JOVENS_4T26: IbucLesson[] = [
     ],
     application:
       'Você tem algo que pode dar, mesmo sem ter muito. **Escolha uma ação** de generosidade (um alimento, uma visita, um tempo de serviço) e faça-a esta semana, sem esperar retorno.',
-    deepen: 'Veja como as primeiras igrejas partilhavam em [A Igreja nasce](/artigo/igreja-primitiva) e como o evangelho chegou à Europa no mapa [Segunda viagem de Paulo](/mapas/segunda-viagem-de-paulo).',
+    deepen: 'Veja como as primeiras igrejas partilhavam em [A Igreja Nasce](/artigo/igreja-primitiva) e como o evangelho chegou à Europa no mapa [Segunda viagem de Paulo](/mapas/segunda-viagem-de-paulo).',
   },
   {
     ...BASE,
@@ -759,6 +759,6 @@ export const EBD_JOVENS_4T26: IbucLesson[] = [
     ],
     application:
       'Termine o trimestre com um **compromisso**: escolha o texto de Filipenses que mais falou com você e decore até o fim do ano. Agradeça a Deus pelo grupo e por quem lhe ensinou o evangelho.',
-    deepen: 'Veja o fim da história de Paulo no mapa [Viagem a Roma](/mapas/viagem-a-roma) e leia sobre a igreja em Roma em [A Igreja nasce](/artigo/igreja-primitiva).',
+    deepen: 'Veja o fim da história de Paulo no mapa [Viagem a Roma](/mapas/viagem-a-roma) e leia sobre a igreja em Roma em [A Igreja Nasce](/artigo/igreja-primitiva).',
   },
 ];

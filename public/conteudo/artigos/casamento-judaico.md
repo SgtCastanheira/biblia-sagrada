@@ -2,13 +2,13 @@
 
 Muitos textos da Bíblia só se entendem bem quando conhecemos como era o casamento judaico: o “desposório” de Maria e José, as bodas de Caná, a parábola das dez virgens e as “bodas do Cordeiro” do Apocalipse.
 
-## 1. As palavras originais
+## 1. As Palavras Originais
 
 - **Desposada** (grego *mnēsteúō*): comprometida em casamento por um contrato oficial. Não é o nosso “noivado”: a união já valia legalmente.
 - **Bodas** (grego *gámos*): a festa do casamento, que podia durar vários dias.
 - **Noivo** (*nymphíos*) e **noiva** (*nýmphē*); os **amigos do noivo** (*hoi huioì toû nymphônos*, “os filhos da câmara nupcial”) [[Mc 2.19]].
 
-## 2. As duas etapas do casamento
+## 2. As Duas Etapas do Casamento
 
 | Etapa | Nome | O que acontecia |
 |---|---|---|
@@ -18,11 +18,11 @@ Muitos textos da Bíblia só se entendem bem quando conhecemos como era o casame
 
 Isso explica por que José, ao saber da gravidez de Maria, pensou em **deixá-la secretamente**: como o desposório já era um casamento legal, desfazê-lo exigia um divórcio [[Mt 1.19]]. A lei previa até a morte por apedrejamento para a infidelidade de uma desposada [[Dt 22.23-24]]; José, “sendo justo”, quis protegê-la.
 
-## 3. As bodas de Caná
+## 3. As Bodas de Caná
 
 Faltar vinho numa festa de casamento era uma grande vergonha para a família do noivo, responsável por receber bem os convidados durante todos os dias. Jesus transformou cerca de 600 litros de água em vinho — seis talhas de duas ou três metretas cada uma [[Jo 2.6-10]]. O primeiro sinal de Jesus aconteceu numa festa e livrou uma família da humilhação.
 
-## 4. A parábola das dez virgens
+## 4. A Parábola das Dez Virgens
 
 | Detalhe da parábola | O costume da época |
 |---|---|
@@ -34,11 +34,11 @@ Faltar vinho numa festa de casamento era uma grande vergonha para a família do 
 
 A lição de Jesus: “Vigiai, pois, porque não sabeis o dia nem a hora” [[Mt 25.13]].
 
-## 5. Uma comparação para hoje
+## 5. Uma Comparação para Hoje
 
 O desposório judaico tinha a força legal que hoje damos ao casamento civil, e as bodas eram como a cerimônia e a festa — só que vários meses depois, com a noiva indo morar com o marido. Muitos pregadores comparam a promessa de Jesus em João 14 ao noivo que vai preparar a casa e depois volta para buscar a noiva [[Jo 14.2-3]]; é uma comparação bonita e coerente com a imagem bíblica de Cristo como noivo, embora o texto de João não fale diretamente de casamento.
 
-## 6. O que isso tem a ver com a mensagem
+## 6. O que Isso Tem a Ver com a Mensagem
 
 A Bíblia usa o casamento como imagem do amor de Deus pelo seu povo:
 
@@ -49,7 +49,7 @@ A Bíblia usa o casamento como imagem do amor de Deus pelo seu povo:
 
 Hoje, a igreja vive como a noiva desposada: já pertence a Cristo, mas espera o dia em que Ele virá buscá-la.
 
-## Para aprofundar
+## Para Aprofundar
 
 - Rebeca e Isaque, um casamento combinado pela fé: [[Gn 24.50-67]].
 - Jacó trabalhou sete anos por Raquel: [[Gn 29.18-20]].

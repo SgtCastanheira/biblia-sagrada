@@ -1,6 +1,6 @@
 “Faraó” aparece mais de duzentas vezes na Bíblia, mas quase sempre **sem nome**. Quem era esse rei, quantos foram, quando governaram, a quem obedeciam e quem estava debaixo deles? Este estudo percorre, um por um, os faraós da Bíblia, com o que a história do Egito ajuda a confirmar e com o que ainda é debatido.
 
-## Quem era o faraó
+## Quem Era o Faraó
 
 “Faraó” não é um nome, é um **título**. Vem do egípcio *per-aa*, “a casa grande”, e, a partir do Novo Império (por volta de 1550 a.C.), passou a ser usado para o próprio rei. Para os egípcios, o faraó era **filho do deus Rá e a encarnação do deus Hórus**: governava com poder absoluto, e **ninguém estava acima dele, a não ser os deuses**. Por isso o Faraó do Êxodo pergunta, com orgulho: “Quem é o Senhor, para que eu ouça a sua voz para deixar ir Israel?” ([[Êx 5.2]]).
 
@@ -8,13 +8,13 @@
 
 **Quem estava acima dele?** Em geral, ninguém. Mas houve épocas em que o Egito foi governado por estrangeiros, e o título passou a ser usado também por eles: os **hicsos** (reis de origem asiática, c. 1650–1550 a.C.), os **cuxitas** da Núbia (25ª dinastia, c. 747–656 a.C., como Tiraca), os **persas** (a partir de 525 a.C.), e depois os **Ptolomeus** gregos (a de Cleópatra é a mais famosa) e os romanos (a partir de 30 a.C.).
 
-## Os faraós da era dos patriarcas
+## Os Faraós da Era dos Patriarcas
 
 **O faraó de Abraão** ([[Gn 12.10-20]]) recebeu Abraão e Sara quando a fome levou a família ao Egito. A Bíblia não dá o seu nome. Se Abraão viveu por volta de 2000–1800 a.C., o Egito vivia o seu **Médio Império**, de reis fortes, como os da 12ª dinastia. O que a Bíblia revela é o caráter do rei: ele devolveu Sara quando soube a verdade e tratou Abraão com respeito ([[Gn 12.18-20]]).
 
 **O faraó de José** ([[Gn 41.1-46]]) sonhou com as vacas e as espigas, e fez de José, um estrangeiro, o seu administrador. Também **não tem nome**. Há duas propostas principais: um rei do Médio Império (12ª ou 13ª dinastia) ou um rei dos **hicsos**, estrangeiros no trono, o que explicaria por que um hebreu foi promovido tão depressa. A Bíblia confirma o ambiente: José recebeu um anel, roupas de linho fino e um colar de ouro ([[Gn 41.42]]), e o Egito tinha cavalos e carros de guerra, cereais guardados em celeiros e administradores estrangeiros. Foi esse faraó quem recebeu Jacó e os seus filhos e lhes deu a terra de Gósen ([[Gn 47.5-6]]).
 
-## Os faraós do Êxodo
+## Os Faraós do Êxodo
 
 **O faraó da opressão** é “um novo rei, que não conhecera a José” ([[Êx 1.8]]). Ele mandou os israelitas construírem “cidades armazéns, **Pitom e Ramessés**” ([[Êx 1.11]]). Esse nome é a chave de um dos grandes debates da Bíblia, porque aponta para dois dos períodos possíveis:
 
@@ -28,7 +28,7 @@ Mas, na verdade, para isso te hei mantido com vida, para te mostrar o meu poder,
 — [[Êx 9.16]]
 :::
 
-## Os faraós do tempo dos reis
+## Os Faraós do Tempo dos Reis
 
 **O sogro de Salomão** ([[1Rs 3.1]]) fez de Salomão um genro, dando-lhe a sua filha em casamento, e conquistou a cidade de Gezer, que deu a ela como dote ([[1Rs 9.16]]). Não tem nome na Bíblia. Muitos estudiosos o identificam com **Siamun** (21ª dinastia, c. 986–967 a.C.). Esse mesmo tempo mostra o lado oposto: o edomita **Hadade** fugiu para o Egito, foi bem recebido pelo faraó e casou-se com a cunhada da rainha ([[1Rs 11.14-22]]).
 
@@ -36,7 +36,7 @@ Mas, na verdade, para isso te hei mantido com vida, para te mostrar o meu poder,
 
 **“Sô”, rei do Egito** ([[2Rs 17.4]]): o rei Oseias, de Israel, pediu ajuda a um rei “Sô” contra a Assíria, por volta de 725 a.C. Nunca chegou. A **identidade de “Sô” é debatida** (um dos reis do delta do Nilo, como Osorcon IV ou Tefnakht). O resultado foi a queda de Samaria, em 722 a.C. ([[2Rs 17.5-6]]).
 
-## Os últimos faraós
+## Os Últimos Faraós
 
 **Tiraca** ([[2Rs 19.9]]) era rei de Cuxe (a Núbia), da **25ª dinastia**, e governou o Egito de c. 690 a 664 a.C. Quando o rei Senaqueribe, da Assíria, ameaçava Jerusalém, em 701 a.C., ouviu que Tiraca vinha lutar contra ele, e mandou uma carta ao rei Ezequias. O texto o chama de rei, embora na época ele possa ainda ser um príncipe general: é um rei visto de longe.
 
@@ -44,7 +44,7 @@ Mas, na verdade, para isso te hei mantido com vida, para te mostrar o meu poder,
 
 **Hofra** ([[Jr 44.30]]), em grego Apries, governou de **589 a 570 a.C.**. Foi o faraó em quem o rei Zedequias, de Judá, confiou contra Nabucodonosor, e que não salvou Jerusalém ([[Jr 37.5-7]]). Jeremias e Ezequiel anunciaram o seu fim ([[Jr 44.30]]; [[Ez 29.1-32.32|Ez 29–32]]). Ele foi derrubado pelo seu próprio general, Amásis, em 570 a.C.
 
-## Resumo: os faraós da Bíblia
+## Resumo: Os Faraós da Bíblia
 
 | Faraó | Onde aparece | Quando | Observação |
 |---|---|---|---|

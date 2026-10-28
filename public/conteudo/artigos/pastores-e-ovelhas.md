@@ -2,13 +2,13 @@
 
 Israel nasceu de famílias de pastores. Abraão, Isaque, Jacó, Moisés e Davi cuidaram de rebanhos, e a imagem do pastor atravessa a Bíblia de Gênesis ao Apocalipse. Conhecer o dia a dia de um pastor no Oriente antigo dá cor a textos muito conhecidos.
 
-## 1. As palavras originais
+## 1. As Palavras Originais
 
 - **Pastor**: em hebraico *ro‘eh*, de *ra‘ah*, “apascentar, alimentar” [[Sl 23.1]]; em grego *poimḗn* — a mesma palavra que deu “pastor” na igreja [[Ef 4.11]].
 - **Aprisco** (*aulḗ*): o cercado onde as ovelhas passavam a noite.
 - **Rebanho** (*poímnē*, *poímnion*): “Não temais, ó pequeno rebanho” [[Lc 12.32]].
 
-## 2. A vida do pastor
+## 2. A Vida do Pastor
 
 | Costume | Como era | No texto bíblico |
 |---|---|---|
@@ -23,15 +23,15 @@ Israel nasceu de famílias de pastores. Abraão, Isaque, Jacó, Moisés e Davi c
 
 Um rebanho de cem ovelhas, como o da parábola [[Lc 15.4]], era o de uma família de posses moderadas. Deixar as 99 em segurança (provavelmente com outros pastores) e procurar uma só mostra o valor de cada ovelha.
 
-## 3. Os pastores na sociedade
+## 3. Os Pastores na Sociedade
 
 Na época de Jesus, os pastores eram gente simples e mal vista. Passavam semanas fora, não conseguiam cumprir todas as regras de pureza e eram suspeitos de deixar os rebanhos pastar em terras alheias. Escritos rabínicos posteriores chegam a dizer que o testemunho deles não valia no tribunal. Foi a esses homens que os anjos anunciaram primeiro o nascimento do Salvador [[Lc 2.8-11]].
 
-## 4. Uma comparação para hoje
+## 4. Uma Comparação para Hoje
 
 O pastor era, ao mesmo tempo, guia, provedor, segurança e médico do rebanho — e quase um membro da família das ovelhas. Hoje, a figura mais próxima talvez seja a de quem cuida de alguém totalmente dependente: dia e noite, sem horário, conhecendo cada necessidade pelo nome.
 
-## 5. O que isso tem a ver com a mensagem
+## 5. O que Isso Tem a Ver com a Mensagem
 
 - **Deus é o Pastor do seu povo.** “O Senhor é o meu pastor; nada me faltará” [[Sl 23.1]]; “como pastor apascentará o seu rebanho” [[Is 40.11]].
 - **Deus julga os maus pastores.** Ezequiel denuncia os líderes que se alimentavam do rebanho em vez de alimentá-lo, e promete: “eu mesmo procurarei as minhas ovelhas” [[Ez 34.2-16]].
@@ -39,7 +39,7 @@ O pastor era, ao mesmo tempo, guia, provedor, segurança e médico do rebanho �
 - **O Pastor também é o Cordeiro.** No Apocalipse, “o Cordeiro que está no meio do trono os apascentará” [[Ap 7.17]].
 - **Os líderes da igreja são pastores sob o Supremo Pastor** [[1Pe 5.2-4]].
 
-## Para aprofundar
+## Para Aprofundar
 
 - “Apascenta as minhas ovelhas”: [[Jo 21.15-17]].
 - A parábola da ovelha perdida: [[Lc 15.3-7]].

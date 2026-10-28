@@ -22,27 +22,27 @@ Jesus fala assim. Depois de ressuscitar, ele explica que tudo o que estava escri
 A Bíblia hebraica em 24 rolos, em três partes. Toque no outro botão para ver como os mesmos livros ficaram na ordem da nossa Bíblia.
 :::
 
-## 24 livros, e não 39
+## 24 Livros, e Não 39
 
 Nossa Bíblia tem 39 livros no Antigo Testamento; a dos judeus, 24. **O conteúdo é o mesmo.** A diferença é que os judeus juntam em **um só rolo** o que nós separamos: 1 e 2 Samuel, 1 e 2 Reis, 1 e 2 Crônicas, Esdras e Neemias, e os **Doze Profetas** (de Oseias a Malaquias) formam cinco rolos. A divisão em dois livros veio depois, da tradução grega, e só entrou nas edições hebraicas impressas no século XVI.
 
 Outros povos e épocas contavam de outro jeito. O historiador judeu **Josefo**, do século I, diz que os judeus tinham **22 livros**: 5 de Moisés, 13 dos profetas e 4 de hinos e conselhos, o mesmo número das **letras do alfabeto hebraico**. É o mesmo conteúdo, contado de outro modo (*A formação do Antigo Testamento*).
 
-## Como era a Bíblia no tempo de Jesus
+## Como Era a Bíblia no Tempo de Jesus
 
 - **Rolos, e não livro.** Cada livro era um rolo de pergaminho (ou de papiro) enrolado em duas varas. O **Grande Rolo de Isaías**, achado perto do Mar Morto em 1947, tem mais de **sete metros** de comprimento e é um dos rolos mais antigos que se conhece, do século II a.C. Uma Bíblia inteira ocuparia uma estante, não a mão de alguém: foram os cristãos que, nos primeiros séculos, popularizaram o **livro encadernado** (o códice).
-- **Sem capítulos nem versículos.** Para achar um trecho era preciso conhecer o rolo. Jesus “achou o lugar” em Isaías ([[Lc 4.17]]). Os capítulos só vieram em 1227, e os versículos, no século XVI ([Quem dividiu a Bíblia em capítulos e versículos?](/artigo/capitulos-e-versiculos)).
+- **Sem capítulos nem versículos.** Para achar um trecho era preciso conhecer o rolo. Jesus “achou o lugar” em Isaías ([[Lc 4.17]]). Os capítulos só vieram em 1227, e os versículos, no século XVI ([Quem Dividiu a Bíblia em Capítulos e Versículos?](/artigo/capitulos-e-versiculos)).
 - **Sem vogais.** O hebraico antigo era escrito **só com consoantes**. Quem lia conhecia o texto e completava as vogais. Só entre os séculos VI e X os estudiosos judeus chamados **massoretas** acrescentaram sinais de vogais e de entonação. Os manuscritos mais conhecidos são o **Códice de Aleppo** (c. 930) e o **Códice de Leningrado** (1008), base das Bíblias de hoje.
 - **Lida em hebraico, explicada em aramaico.** Os judeus da Galileia falavam **aramaico** no dia a dia. A leitura na sinagoga era em hebraico, acompanhada de uma explicação ou paráfrase em aramaico, o *targum*. Entre os rolos do Mar Morto há até um targum de Jó.
 - **Lei e Profetas no culto.** O culto da sinagoga incluía a leitura da Torá em sequência e uma leitura dos Profetas ([[At 13.15]]). Foi o que Jesus fez em Nazaré.
 
-## A ordem original: de Abel a Zacarias
+## A Ordem Original: De Abel a Zacarias
 
 Por que a ordem dos livros importa? Jesus mostra uma pista. Ele disse aos fariseus que viria sobre aquela geração o sangue de todos os profetas, “desde o sangue de Abel, até o sangue de Zacarias” ([[Lc 11.51]]). Abel é o primeiro morto no começo da Bíblia ([[Gn 4.8]]), e Zacarias, o filho do sacerdote Joiada, apedrejado no pátio do Templo, aparece em **2 Crônicas** ([[2Cr 24.20-22]]). Na ordem **hebraica**, 2 Crônicas é o **último** livro. Segundo muitos estudiosos, a frase de Jesus quer dizer de Gênesis a Crônicas, isto é, de ponta a ponta da Bíblia. Essa leitura é a mais comum, mas não é a única.
 
-## Qual seria a ordem se não fosse a Septuaginta?
+## Qual Seria a Ordem se Não Fosse a Septuaginta?
 
-Quando os judeus de Alexandria traduziram a Bíblia para o grego (veja *A Septuaginta, a Bíblia grega*), os livros foram **reagrupados por assunto**: a Lei, os livros históricos, os poéticos e os proféticos. É essa a ordem que a Igreja herdou e que está na nossa Bíblia.
+Quando os judeus de Alexandria traduziram a Bíblia para o grego (veja *A Septuaginta, a Bíblia Grega*), os livros foram **reagrupados por assunto**: a Lei, os livros históricos, os poéticos e os proféticos. É essa a ordem que a Igreja herdou e que está na nossa Bíblia.
 
 **A ordem da Bíblia hebraica**, que não passou pela Septuaginta, é esta:
 
@@ -65,7 +65,7 @@ O que muda na nossa ordem:
 **Existe uma ordem “correta”?** No tempo de Jesus, as três partes (Lei, Profetas e Escritos) já eram conhecidas, mas **a ordem dos livros dentro delas variava**. O Talmude, por exemplo, lista os Profetas como Josué, Juízes, Samuel, Reis, Jeremias, Ezequiel, Isaías e os Doze, e os Escritos começando por Rute, Salmos e Jó. Os rolos eram guardados separados, e a ordem fixa só veio com os livros encadernados. A ordem de hoje, usada nas edições judaicas, vem da tradição dos massoretas.
 :::
 
-## A Bíblia hebraica no app
+## A Bíblia Hebraica no App
 
 Agora você pode ler o texto em hebraico. No leitor, toque na **sigla da versão**, no alto do capítulo, e escolha **Bíblia hebraica (Delitzsch)**. É uma Bíblia completa em hebraico, de domínio público: o Antigo Testamento, só com consoantes, como nos rolos do tempo de Jesus, e o Novo Testamento, traduzido para o hebraico por Franz Delitzsch no século XIX. O texto aparece da **direita para a esquerda**. Dá para comparar com a Almeida pelo botão de comparação.
 

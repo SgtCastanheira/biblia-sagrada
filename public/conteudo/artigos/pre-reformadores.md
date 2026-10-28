@@ -1,6 +1,6 @@
 A Reforma não começou do nada em 1517. Por mais de três séculos, vozes isoladas pediram que a Igreja voltasse à Bíblia e que o povo pudesse lê-la na sua própria língua. Muitos pagaram com a vida.
 
-## Pedro Valdo e os valdenses (c. 1170)
+## Pedro Valdo e os Valdenses (c. 1170)
 
 Valdo era um comerciante rico de Lyon, na França. Por volta de 1173, impressionado com a história de um santo que deixou tudo por Cristo e com as palavras de Jesus ao jovem rico [[Mt 19.21]], deu os seus bens aos pobres e passou a pregar nas ruas. Pagou para que partes da Bíblia fossem traduzidas do latim para a língua do povo.
 
@@ -22,7 +22,7 @@ Convocado ao Concílio de Constança com um salvo-conduto do imperador, foi pres
 
 Conta uma tradição que Hus — cujo nome quer dizer “ganso” em tcheco — teria dito: “hoje vocês assam um ganso, mas daqui a cem anos virá um cisne que não poderão calar”. Lutero, que publicaria as suas teses 102 anos depois, via-se como herdeiro de Hus. Os seguidores de Hus deram origem à Unidade dos Irmãos — os futuros morávios.
 
-## Duas ferramentas para a Reforma
+## Duas Ferramentas para a Reforma
 
 :::tempo
 - c. 1455 | A imprensa | Johannes Gutenberg, em Mainz, imprime a Bíblia em latim com tipos móveis. Um livro que levava meses para ser copiado à mão passa a ser produzido às centenas.

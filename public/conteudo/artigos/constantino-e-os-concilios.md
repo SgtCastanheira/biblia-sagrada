@@ -8,10 +8,10 @@ No ano seguinte, com Licínio, publicou o **Edito de Milão (313)**: liberdade d
 
 Em 380, o imperador Teodósio foi além: pelo Edito de Tessalônica, o cristianismo niceno se tornou a religião oficial do império.
 
-### Uma bênção com riscos
+### Uma Bênção com Riscos
 A liberdade foi uma bênção depois de séculos de sangue. Mas ser cristão passou a ser vantajoso, e muitos entraram na Igreja sem conversão verdadeira. A Igreja se aproximou do poder político. Em reação a essa “mundanização”, homens e mulheres foram para o deserto buscar a Deus em oração e simplicidade — como Antão, no Egito. Foi o início do monasticismo.
 
-## A crise de Ário
+## A Crise de Ário
 
 Por volta de 318, em Alexandria, um presbítero chamado Ário começou a ensinar que o Filho de Deus foi a primeira e mais alta criatura do Pai: “houve um tempo em que o Filho não existia”. Jesus seria divino, mas não Deus no mesmo sentido do Pai. As ideias de Ário se espalharam até em canções populares.
 
@@ -23,7 +23,7 @@ Constantino, preocupado com a unidade do império, convocou o primeiro concílio
 
 A luta não acabou ali. Imperadores seguintes favoreceram os arianos, e Atanásio, já bispo de Alexandria, foi exilado cinco vezes. Daí a expressão *Athanasius contra mundum* — Atanásio contra o mundo.
 
-## Os concílios seguintes
+## Os Concílios Seguintes
 
 :::tempo
 - 325 | Niceia | Jesus é Deus, da mesma substância do Pai.
@@ -34,7 +34,7 @@ A luta não acabou ali. Imperadores seguintes favoreceram os arianos, e Atanási
 
 Esses concílios não “inventaram” a divindade de Cristo nem a Trindade: procuraram palavras precisas para defender o que a Igreja já cria e adorava a partir das Escrituras [[Mt 28.19]], [[2Co 13.13]].
 
-## Dois gigantes: Jerônimo e Agostinho
+## Dois Gigantes: Jerônimo e Agostinho
 
 **Jerônimo** (c. 347–420) estudou hebraico com judeus em Belém e traduziu a Bíblia para o latim — a *Vulgata*, que seria a Bíblia do Ocidente por mais de mil anos.
 

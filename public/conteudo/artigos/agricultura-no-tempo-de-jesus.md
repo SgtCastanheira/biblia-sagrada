@@ -2,7 +2,7 @@
 
 A maioria dos ouvintes de Jesus vivia da terra. Por isso tantas parábolas falam de semente, colheita, vinha, joio, figueira e eira. Conhecer o calendário e as práticas agrícolas de Israel ilumina esses textos.
 
-## 1. O ano agrícola de Israel
+## 1. O Ano Agrícola de Israel
 
 Israel depende da chuva, e não de rios, como o Egito [[Dt 11.10-14]]. O ano se organizava em torno das chuvas e das colheitas — e as três grandes festas coincidiam com elas.
 
@@ -17,7 +17,7 @@ Israel depende da chuva, e não de rios, como o Egito [[Dt 11.10-14]]. O ano se 
 
 Tiago usa essa imagem: “o lavrador espera o precioso fruto da terra, aguardando-o com paciência, até que receba a chuva temporã e serôdia” [[Tg 5.7]].
 
-## 2. A parábola do semeador
+## 2. A Parábola do Semeador
 
 O semeador espalhava a semente com a mão, andando pelo campo. Por isso parte dela caía em lugares diferentes:
 
@@ -30,26 +30,26 @@ O semeador espalhava a semente com a mão, andando pelo campo. Por isso parte de
 
 Uma colheita normal rendia algumas vezes a semente plantada. Render **trinta, sessenta e cem por um** era extraordinário — Gênesis registra os cem por um de Isaque como sinal da bênção de Deus [[Gn 26.12]].
 
-## 3. O joio, a mostarda e a figueira
+## 3. O Joio, a Mostarda e a Figueira
 
 - **O joio** (provavelmente *Lolium temulentum*) é uma erva quase idêntica ao trigo enquanto cresce, e só se distingue na espiga. Os seus grãos podem estar contaminados por um fungo tóxico. Arrancá-lo cedo seria arrancar o trigo junto [[Mt 13.24-30]].
 - **A semente de mostarda** era proverbialmente a menor semente que os lavradores da Galileia semeavam, e a planta chega a dois ou três metros [[Mt 13.31-32]].
 - **A figueira** dá os primeiros brotos de figo junto com as folhas. Uma figueira cheia de folhas e sem nenhum fruto prometia o que não tinha [[Mc 11.13-14]].
 
-## 4. A vinha e o lagar
+## 4. A Vinha e o Lagar
 
 Uma vinha bem cuidada tinha muro ou cerca, uma torre de vigia e um lagar escavado na rocha para pisar as uvas — exatamente como Isaías descreve o cuidado de Deus com Israel [[Is 5.1-2]] e Jesus repete na parábola dos lavradores maus [[Mc 12.1-9]]. A poda era essencial: os ramos sem fruto eram cortados e os que davam fruto eram limpos para darem mais [[Jo 15.1-2]].
 
-## 5. A eira e o jugo
+## 5. A Eira e o Jugo
 
 - **A eira** era uma área de chão firme, no alto, onde o trigo era debulhado (com bois ou trilhos de madeira) e depois lançado ao vento com uma pá: o grão caía, e a palha voava. Boaz dormiu na eira para guardar a colheita [[Rt 3.2-7]]. João Batista usou a imagem: “em sua mão tem a pá, e limpará a sua eira” [[Mt 3.12]].
 - **O jugo** era a peça de madeira que unia dois bois para puxar o arado. Feito sob medida, não machucava o animal. Jesus, carpinteiro, conhecia bem o ofício: “o meu jugo é suave e o meu fardo é leve” [[Mt 11.29-30]].
 
-## 6. Uma comparação para hoje
+## 6. Uma Comparação para Hoje
 
 Para um agricultor de hoje, com irrigação, adubo e previsão do tempo, é difícil imaginar a total dependência da chuva. Um ano sem as primeiras ou as últimas chuvas significava fome. Por isso a oração por chuva era tão séria [[Tg 5.17-18]], e a colheita, motivo de festa e gratidão.
 
-## 7. O que isso tem a ver com a mensagem
+## 7. O que Isso Tem a Ver com a Mensagem
 
 - **A Palavra é semente**: o resultado depende do coração que a recebe [[Lc 8.11-15]].
 - **O Reino cresce devagar e de forma surpreendente**, como a semente que brota “sem que o lavrador saiba como” [[Mc 4.26-29]].
@@ -57,7 +57,7 @@ Para um agricultor de hoje, com irrigação, adubo e previsão do tempo, é dif�
 - **Permanecer em Cristo é a condição para dar fruto** [[Jo 15.4-5]].
 - **A seara é grande**: “Rogai ao Senhor da seara que mande trabalhadores” [[Mt 9.37-38]].
 
-## Para aprofundar
+## Para Aprofundar
 
 - As primícias e Pentecostes: [[Lv 23.9-21]].
 - “Semeai em justiça… lavrai o campo de lavoura”: [[Os 10.12]].

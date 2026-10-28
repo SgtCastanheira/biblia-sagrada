@@ -1,6 +1,6 @@
 Os mil anos entre a queda de Roma e a Reforma — a Idade Média — foram de luzes e sombras. A Igreja preservou a Bíblia, a cultura e a assistência aos pobres num mundo em ruínas. Mas também se envolveu com o poder, a riqueza e a violência, e o povo ficou cada vez mais longe das Escrituras.
 
-## Mosteiros: guardiões da fé e dos livros
+## Mosteiros: Guardiões da Fé e dos Livros
 
 Quando o Império Romano do Ocidente caiu, em 476, invadido pelos povos germânicos, as cidades encolheram e as escolas fecharam. Os mosteiros se tornaram ilhas de oração, trabalho e estudo. Por volta de 529, **Bento de Núrsia** fundou o mosteiro de Monte Cassino, na Itália, e escreveu uma regra de vida resumida no lema *ora et labora* — “ora e trabalha”. Os monges copiavam à mão a Bíblia e os livros antigos; sem eles, grande parte desse patrimônio teria se perdido.
 
@@ -11,11 +11,11 @@ Quando o Império Romano do Ocidente caiu, em 476, invadido pelos povos germâni
 - **Bonifácio** (séc. VIII), inglês, evangelizou a Germânia — conta-se que derrubou o carvalho sagrado do deus Thor diante dos pagãos.
 - **Cirilo e Metódio** (séc. IX) levaram o Evangelho aos povos eslavos e criaram um alfabeto para traduzir a Bíblia para a língua deles.
 
-## O papado e o império
+## O Papado e o Império
 
 O bispo de Roma, sucessor de uma igreja fundada pelo testemunho de Pedro e Paulo, foi ganhando autoridade sobre as igrejas do Ocidente. **Gregório Magno** (590–604) organizou a assistência aos pobres de Roma, enviou missionários à Inglaterra e se tornou, na prática, também líder político. No Natal do ano 800, o papa Leão III coroou **Carlos Magno** imperador. Igreja e Estado se entrelaçaram por séculos — com disputas frequentes sobre quem mandava em quem.
 
-## O islã
+## O Islã
 
 Depois da morte de Maomé, em 632, os exércitos árabes conquistaram rapidamente a Síria, Jerusalém (638), o Egito, o norte da África — terra de Agostinho — e, em 711, a Península Ibérica. Regiões que tinham sido o coração do cristianismo antigo passaram ao domínio muçulmano. Portugal e Espanha só seriam totalmente retomados séculos depois, na Reconquista.
 
@@ -34,7 +34,7 @@ Em 1095, o papa Urbano II convocou os cavaleiros da Europa a libertar Jerusalém
 - **Anselmo** e **Tomás de Aquino** buscaram unir fé e razão. O *Cur Deus Homo* (“Por que Deus se fez homem”), de Anselmo, é uma reflexão clássica sobre a cruz.
 - Hospitais, orfanatos e albergues para peregrinos eram mantidos por ordens religiosas.
 
-## Sombras que pediam reforma
+## Sombras que Pediam Reforma
 
 :::tempo
 - séc. XI–XIII | Indulgências | A Igreja passa a conceder o perdão de penas do purgatório em troca de boas obras, peregrinações — e depois de dinheiro.

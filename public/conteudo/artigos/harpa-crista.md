@@ -10,7 +10,7 @@ Os Kalley, que fizeram o Salmos e Hinos, também começaram a primeira Escola Do
 
 Em **1921**, em Belém do Pará, saiu o **Cantor Pentecostal**, editado sob a direção de **Almeida Sobrinho**: 44 hinos e 10 corinhos, impressos na tipografia Guajarina. Foi o primeiro passo de um hinário pentecostal brasileiro.
 
-## A primeira Harpa (1922)
+## A Primeira Harpa (1922)
 
 :::cena Recife · 1922
 Mil exemplares de um hinário novo, a Harpa Cristã, ficam prontos. O missionário Samuel Nyström os leva pelo Brasil, e o hinário começa a chegar às igrejas.
@@ -28,7 +28,7 @@ Mil exemplares de um hinário novo, a Harpa Cristã, ficam prontos. O missionár
 
 Do pastor Adriano Nobre (1883–1938), que serviu de intérprete para Gunnar Vingren e foi ordenado por ele em 1916, a Harpa de hoje traz as versões dos hinos **2, 3, 10 e 413**.
 
-## Quem traduziu e escreveu
+## Quem Traduziu e Escreveu
 
 :::pessoas
 - Paulo Leivas Macalão | principal tradutor e adaptador (P.L.M.) | imagens/paulo-leivas-macalao.jpg
@@ -47,13 +47,13 @@ Cantai ao Senhor um cântico novo, cantai ao Senhor, todos os moradores da terra
 — [[Sl 96.1]]
 :::
 
-## A Harpa com música
+## A Harpa com Música
 
 Em **1937**, a Convenção Geral das Assembleias de Deus, reunida em São Paulo, nomeou uma comissão para preparar a primeira Harpa com letra e música. Dela faziam parte Emílio Conde, Samuel Nyström, Paulo Leivas Macalão, o músico norueguês Jahn Sörheim e Nils Kastberg, que tomou a iniciativa; o Dr. Carlos Brito também participou. O trabalho, coordenado por Macalão, saiu em **janeiro de 1941**, já com 524 hinos, como propriedade da Casa Publicadora das Assembleias de Deus (CPAD).
 
 Antes disso, em 1929, Nyström e Julião Silva publicaram em Belém um caderno só com as músicas — a gráfica ainda não conseguia imprimir letra e partitura juntas.
 
-## As revisões e os 640 hinos
+## As Revisões e os 640 Hinos
 
 Em **1979**, a Convenção reunida em Porto Alegre pediu uma revisão da Harpa, e até 1981 quase todos os hinos tinham sido revisados; o trabalho, que tinha parado, foi retomado por Nemuel Kessler em 1984. Em **1992** saiu a *Harpa Cristã Atualizada*, com nova numeração — mas a maioria das igrejas continuou usando a tradicional.
 
@@ -63,6 +63,6 @@ A solução foi juntar as duas: a **Harpa ampliada**, apresentada na Convenção
 **As datas variam entre as fontes.** O número de hinos de cada edição e alguns anos aparecem de formas diferentes até nas páginas da CPAD. Aqui ficaram os dados que as fontes repetem; onde há divergência, ela está indicada.
 :::
 
-## Por que a Harpa importa
+## Por que a Harpa Importa
 
 A Harpa ensina doutrina pelo canto: o batismo no Espírito Santo, a cura divina, a volta de Jesus, a santidade, a esperança do céu. Cada hino conta também a história de quem o escreveu ou traduziu — e de uma igreja que aprendeu a louvar em português.

@@ -4,7 +4,7 @@ Roraima foi um dos primeiros lugares fora do Pará a receber a mensagem pentecos
 - Cordolino Teixeira Bastos | conheceu a fé pentecostal em Belém
 :::
 
-## De onde saiu
+## De Onde Saiu
 
 **Cordolino Teixeira Bastos** — o nome também aparece como Cordulino — conheceu a doutrina pentecostal em **Belém**. Em **1915**, mudou-se com a família, onze pessoas ao todo, para a região do **rio Branco**, onde fica hoje Boa Vista.
 
@@ -12,7 +12,7 @@ Roraima foi um dos primeiros lugares fora do Pará a receber a mensagem pentecos
 Depois de uma longa viagem pelos rios desde Belém, uma família de onze pessoas chega à região do rio Branco. Na bagagem, a Bíblia e a fé que tinham conhecido na capital do Pará.
 :::
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 Os primeiros cultos foram feitos pela própria família, em casa, numa região isolada e de poucos moradores. Uma das histórias locais marca **28 de agosto de 1915** como a data em que a igreja se estabeleceu em Roraima — o que a tornaria, provavelmente, a igreja evangélica mais antiga do estado. A igreja foi constituída juridicamente em **1948**, com o estatuto publicado no Diário Oficial.
 

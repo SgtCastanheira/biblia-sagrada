@@ -1,17 +1,17 @@
 Daniel é o livro profético mais detalhado do Antigo Testamento sobre a sucessão dos impérios. Escrito em parte em hebraico e em parte em aramaico, mistura histórias de fidelidade na corte da Babilônia (capítulos 1–6) com visões sobre o futuro (capítulos 7–12). A sua mensagem central está numa frase de Nabucodonosor: “o Altíssimo tem domínio sobre o reino dos homens” [[Dn 4.32]].
 
 :::nota
-Este estudo mostra o que o próprio texto diz, as identificações históricas mais aceitas e as principais interpretações onde há divergência. Para os princípios gerais, leia antes [Como interpretar as profecias](/artigo/como-interpretar-profecias).
+Este estudo mostra o que o próprio texto diz, as identificações históricas mais aceitas e as principais interpretações onde há divergência. Para os princípios gerais, leia antes [Como Interpretar as Profecias](/artigo/como-interpretar-profecias).
 :::
 
-## O contexto
+## O Contexto
 
 Daniel foi levado para a Babilônia em 605 a.C., ainda jovem, e viveu até o reinado de Ciro, rei da Pérsia (536 a.C.). Viu de perto a queda de um império e a ascensão de outro. As suas visões respondem a uma pergunta que o povo exilado fazia: se os impérios pagãos dominam o mundo, onde está o Reino de Deus?
 
-### Quando foi escrito?
+### Quando Foi Escrito?
 A tradição judaica e cristã, e Jesus [[Mt 24.15]], atribuem o livro ao profeta Daniel, no século VI a.C. Muitos estudiosos críticos, a partir do filósofo Porfírio (séc. III d.C.), datam a versão final no século II a.C., por causa da precisão das profecias sobre Antíoco IV. Os manuscritos de Daniel encontrados em Qumran, do século II a.C., mostram que o livro já era copiado e respeitado como Escritura naquela época.
 
-## Daniel 2 — A estátua dos quatro metais
+## Daniel 2 — A Estátua dos Quatro Metais
 
 Nabucodonosor sonhou com uma grande estátua e exigiu que os sábios contassem o sonho e a interpretação. Deus revelou tudo a Daniel [[Dn 2.19-23]].
 
@@ -26,7 +26,7 @@ Nabucodonosor sonhou com uma grande estátua e exigiu que os sábios contassem o
 
 A pedra “cortada sem auxílio de mãos” é o Reino que Deus estabelece, e não um império humano. Jesus se referiu a si mesmo como a pedra [[Lc 20.17-18]]. Os metais vão perdendo valor e ganhando dureza: a história humana não é uma evolução para o melhor, e só o Reino de Deus é eterno.
 
-## Daniel 7 — Os quatro animais e o Filho do homem
+## Daniel 7 — Os Quatro Animais e o Filho do Homem
 
 Cinquenta anos depois, o próprio Daniel tem uma visão paralela à do capítulo 2, mas do ponto de vista de Deus: os impérios não são estátuas brilhantes, mas feras.
 
@@ -39,7 +39,7 @@ Cinquenta anos depois, o próprio Daniel tem uma visão paralela à do capítulo
 
 Então a cena muda para o céu: o **Ancião de Dias** se assenta, os livros são abertos, e vem “um como o filho do homem” com as nuvens do céu, que recebe domínio eterno sobre todos os povos [[Dn 7.13-14]]. “Filho do homem” foi o título que Jesus mais usou para si mesmo, e diante do sumo sacerdote Ele citou exatamente este texto [[Mc 14.61-62]].
 
-## Daniel 8 — O carneiro e o bode
+## Daniel 8 — O Carneiro e o Bode
 
 Aqui o texto identifica os reinos pelo nome [[Dn 8.20-21]]:
 
@@ -53,7 +53,7 @@ Aqui o texto identifica os reinos pelo nome [[Dn 8.20-21]]:
 
 As “2.300 tardes e manhãs” [[Dn 8.14]] são entendidas por muitos como 1.150 dias (2.300 sacrifícios da tarde e da manhã) — aproximadamente o tempo da profanação de Antíoco até a purificação do templo pelos Macabeus, em 164 a.C. Muitos intérpretes cristãos veem em Antíoco também uma prefiguração do Anticristo final [[Dn 8.17]].
 
-## Daniel 9 — As setenta semanas
+## Daniel 9 — As Setenta Semanas
 
 Lendo a profecia de Jeremias sobre os 70 anos, Daniel confessa os pecados do povo [[Dn 9.1-19]]. O anjo Gabriel responde com uma profecia de “setenta semanas” (literalmente “setenta setes”) [[Dn 9.24-27]]:
 
@@ -70,7 +70,7 @@ Contando 483 anos (69 semanas) a partir de um decreto persa para reconstruir Jer
 | Cristológica | Contínua: cumprida no ministério de Cristo, que confirma a nova aliança e põe fim aos sacrifícios | Jesus |
 | Crítica | Os anos de Antíoco IV (171–164 a.C.) | O sumo sacerdote Onias III |
 
-## Daniel 10–12 — Os reis do Norte e do Sul
+## Daniel 10–12 — Os Reis do Norte e do Sul
 
 A última visão é a mais detalhada da Bíblia. O capítulo 10 mostra uma batalha espiritual por trás da política: o anjo foi impedido por 21 dias pelo “príncipe do reino da Pérsia”, até que Miguel veio ajudá-lo [[Dn 10.12-13]].
 
@@ -89,7 +89,7 @@ A partir do versículo 36, muitos intérpretes entendem que a profecia passa de 
 | Os livros abertos no juízo [[Dn 7.10]] | O grande trono branco [[Ap 20.12]] |
 | A ressurreição dos mortos [[Dn 12.2]] | Jesus: os que estão nos sepulcros ouvirão a sua voz [[Jo 5.28-29]] |
 
-## O que Daniel nos ensina hoje
+## O que Daniel nos Ensina Hoje
 
 - **Deus governa a história.** Os impérios passam; o Reino de Deus permanece.
 - **É possível ser fiel em terra estranha.** Daniel serviu com excelência a reis pagãos sem negociar a fé.

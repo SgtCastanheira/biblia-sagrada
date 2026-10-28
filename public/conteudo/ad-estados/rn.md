@@ -6,7 +6,7 @@ Em Natal, os crentes começaram sozinhos, na casa de um soldado, e pediram um pr
 - Adriano Nobre | pregador enviado pelos missionários
 :::
 
-## O começo
+## O Começo
 
 :::cena Rua do Arame, Natal · 13 de janeiro de 1918
 Na casa do soldado Luiz de França, um pequeno grupo se reúne para o primeiro culto pentecostal da cidade, dirigido pelo irmão Francisco Cézar.

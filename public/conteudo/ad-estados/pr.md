@@ -4,7 +4,7 @@ Em Curitiba, a Assembleia de Deus começou com um pastor que pregava aos imigran
 - Bruno Skolimowski | pastor, um dos primeiros separados em Belém
 :::
 
-## Quem levou a mensagem
+## Quem Levou a Mensagem
 
 **Bruno Skolimowski** aparece entre os primeiros pastores separados pela igreja de **Belém**, em **1921**. Em **19 de outubro de 1928**, ele chegou a **Curitiba**.
 
@@ -12,7 +12,7 @@ Em Curitiba, a Assembleia de Deus começou com um pastor que pregava aos imigran
 Numa cidade cheia de imigrantes europeus, muitos poloneses ainda não falam português. Um pastor recém-chegado começa a pregar a eles em polonês.
 :::
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 Curitiba tinha muitos imigrantes poloneses que não falavam português, e Skolimowski pregava a eles na própria língua. A partir de Curitiba, a igreja se espalhou pelo Paraná.
 

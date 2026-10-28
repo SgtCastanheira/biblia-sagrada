@@ -5,11 +5,11 @@ A Assembleia de Deus foi a **primeira igreja evangélica do Amapá**. A sua hist
 - José de Matos Caravela | fundador da igreja em Macapá
 :::
 
-## De onde saiu
+## De Onde Saiu
 
 **Clímaco Bueno Aza** (1874–1950) nasceu na **Colômbia** e se converteu no **Pará**, por volta de 1912–1913. Ele foi um dos pregadores da igreja de Belém ao longo da Estrada de Ferro Belém–Bragança e recebeu a missão de levar o evangelho a Macapá. Mais tarde, fundaria também as igrejas de São Luís e de Belo Horizonte.
 
-## A perseguição
+## A Perseguição
 
 :::cena Macapá · 1916
 Um estrangeiro vende Bíblias de casa em casa e fala de Jesus. Religiosos e autoridades da cidade reagem: ele é preso, e as Bíblias e os folhetos que levava são confiscados e queimados.
@@ -26,7 +26,7 @@ Mas a palavra de Deus não está presa.
 — [[2Tm 2.9]]
 :::
 
-## A fundação
+## A Fundação
 
 Em **27 de junho de 1917**, com **José de Matos Caravela** (ou Caravella), a igreja foi fundada em Macapá, com um grupo de seis pessoas. O centenário foi celebrado em 2017.
 

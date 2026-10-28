@@ -67,6 +67,8 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
   - Also `maps.ts`, `atlas.ts`, `genealogy.ts`, `curiosities.ts` and `credits.ts`.
   - Types for the JSON files live in `dictionary.ts`, `memorial.ts`, `prophecy.ts` and `content.service.ts`.
 
+**Titles** (`core/title-case.ts`, `logica/titulos.spec.ts`): every content title uses a capital initial on each word except articles, prepositions and conjunctions ("A Lógica da Fé e a Lógica Grega", "Jesus Nasceu Mesmo em 25 de Dezembro?"; the optional norma culta rule for titles of works). It covers `title` of articles and sermons in `library.ts`, each `topics` entry, trail `name`/`short`/branch `title` in `trails.ts`, every `##`/`###` heading and `:::ficha` title in the Markdown of `artigos/`, `sermoes/` and `ad-estados/` (a `:::ficha Lugar · data · fato` label is exempt). Not covered: subtitles, descriptions, UI labels and tool names (e.g. "Linha do tempo", "Meu espaço"), dictionary, memorial, prophecies and hymn data. Run the spec after adding content; it prints the expected form of each title. When an inline mention names a story (`*Título*` or `[Título](/artigo/id)`), write it exactly like the story's title. Heading lookups (`SPECIAL_SECTIONS`) ignore case.
+
 **Linking content to the text:**
 - `reference-parser.ts` parses Brazilian-style references (`Js 6.1-20`, `At 16.9,10`, `I Coríntios 13`, `Jó` vs `Jo`). It also handles chapter-spanning ranges, using `END_OF_CHAPTER = 999` internally.
 - `rich-text-parser.ts` and `shared/rich-text.ts` render the content Markdown:

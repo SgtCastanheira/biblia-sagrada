@@ -224,7 +224,7 @@ const L: CompactLesson[] = [
     ],
     qs: [['O que Jesus prometeu em At 1.8?', 'At 1.8'], ['O que aconteceu em At 2.4?', 'At 2.4'], ['Para quem é a promessa?', 'At 2.39'], 'Que dúvidas você tem sobre o tema?', 'Por que precisamos de poder para testemunhar?'],
     life: 'Se você **deseja** o batismo no Espírito Santo, ore por isso todos os dias esta semana, usando [[Lc 11.13]], e converse com o seu líder. Se já recebeu, agradeça e use o poder para servir.',
-    more: 'Veja o Pentecostes no estudo [O pentecostalismo no Brasil](/artigo/pentecostes-no-brasil) e em [Azusa Street e o movimento pentecostal](/artigo/movimento-pentecostal).',
+    more: 'Veja o Pentecostes no estudo [O Pentecostalismo no Brasil](/artigo/pentecostes-no-brasil) e em [Azusa Street e o Movimento Pentecostal](/artigo/movimento-pentecostal).',
   },
   {
     n: 9,

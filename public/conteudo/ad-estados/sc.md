@@ -5,7 +5,7 @@ Em Santa Catarina, a igreja começou com um jovem convertido no Rio de Janeiro, 
 - Gunnar Vingren | consagrou o pioneiro | imagens/gunnar-vingren.jpg
 :::
 
-## De onde saiu
+## De Onde Saiu
 
 **André Bernardino da Silva** se converteu na igreja de **São Cristóvão**, no **Rio de Janeiro**, onde Gunnar Vingren era pastor. Ele foi para **Itajaí**, e ali começou o trabalho em **15 de março de 1931**.
 
@@ -13,7 +13,7 @@ Em Santa Catarina, a igreja começou com um jovem convertido no Rio de Janeiro, 
 Na casa de uma tia, um rapaz vindo do Rio reúne os primeiros ouvintes. Ele é jovem na fé, mas não para de pregar.
 :::
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 Ainda em 1931, André Bernardino organizou congregações em **Blumenau** e **São Francisco do Sul**. Em **1932**, Gunnar Vingren o consagrou ao pastorado em Itajaí — e notou que ele ainda era jovem na fé. Ele organizou igrejas no estado por cerca de doze anos; depois, a liderança passou a missionários como Albert Widmer e John Peter Kolenda.
 

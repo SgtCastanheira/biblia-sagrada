@@ -4,7 +4,7 @@ O Tocantins só se tornou estado em 1988; antes, era o norte de Goiás. Ali, o e
 - Armando Chaves Cohen | lembrado como fundador do SETA
 :::
 
-## O SETA: evangelização pelos rios
+## O SETA: Evangelização pelos Rios
 
 O **Serviço de Evangelização dos Rios Araguaia e Tocantins (SETA)** levava o evangelho às cidades e povoados das margens dos dois rios. A convenção que nasceu dele celebrou **75 anos em 2023** — o que põe o começo por volta de **1948**. Uma fonte local atribui a organização do serviço a **Armando Chaves Cohen**, em **1952**.
 
@@ -12,7 +12,7 @@ O **Serviço de Evangelização dos Rios Araguaia e Tocantins (SETA)** levava o 
 Um barco sobe o rio e para em cada povoado da margem. Os evangelistas descem, pregam, cantam e seguem viagem para a próxima vila.
 :::
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 O SETA virou a **CIADSETA**, a convenção das Assembleias de Deus do SETA, ligada à CGADB e hoje com sede em **Palmas**: em 2023, eram mais de 1.200 ministros, mais de 200 campos e cerca de 70 mil membros e congregados. Do SETA nasceram outras convenções — no sul do Maranhão, no Pará e em Mato Grosso, e em Goiás e Brasília. Desde 1993, Palmas recebe todo ano, no Carnaval, o COMADEC, um dos maiores congressos de missões do Norte do país.
 

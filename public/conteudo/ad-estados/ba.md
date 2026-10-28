@@ -7,7 +7,7 @@ Na Bahia, a pioneira foi uma mulher de Canavieiras que conheceu a fé pentecosta
 - Otto Nelson | missionário sueco
 :::
 
-## De onde saiu
+## De Onde Saiu
 
 **Joaquina de Souza Carvalho** era de **Canavieiras**, no sul da Bahia. Ela e o marido eram batistas e aceitaram a mensagem pentecostal no **Pará**. Segundo um relato local, ela aproveitou uma viagem do missionário Otto Nelson e voltou com ele para levar a mensagem aos parentes.
 
@@ -15,7 +15,7 @@ Na Bahia, a pioneira foi uma mulher de Canavieiras que conheceu a fé pentecosta
 Uma mulher volta para a sua cidade depois de anos no Pará. Reúne os parentes e conta da experiência com o Espírito Santo. Entre os que ouvem, há membros da igreja batista local.
 :::
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 Joaquina pediu ajuda a Belém, e a igreja enviou, em **1927**, o pastor **João Pedro da Silva**, que celebrou os primeiros batismos nas águas em Canavieiras. Um diácono batista, **Teodoro Feliciano Santana**, aceitou a mensagem pentecostal e foi desligado da sua igreja. Em **12 de outubro de 1929**, numa grande festa em Canavieiras, Otto Nelson o consagrou como o primeiro pastor da Assembleia de Deus na Bahia. Em **1930**, João Pedro começou a evangelizar **Salvador**, onde Otto Nelson já morava.
 

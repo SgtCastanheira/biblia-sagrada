@@ -1,10 +1,10 @@
 Cooperador, diácono, presbítero, evangelista e pastor: como alguém chega a cada cargo numa Assembleia de Deus? E é verdade que, em algumas convenções, o pastor precisa ser casado, não pode ser divorciado e tem de estar com o “nome limpo” no SPC e no Serasa? Este estudo separa três coisas: **o que a Bíblia pede**, **o que se encontra por escrito** e **o que apenas se ouve dizer**. Onde não há documento público, o texto diz isso, em vez de afirmar.
 
-## Primeiro, um aviso
+## Primeiro, um Aviso
 
-A Assembleia de Deus **não tem uma regra única**. A CGADB, a CONAMAD e a CADB são convenções diferentes, e dentro de cada uma, cada ministério e cada igreja-sede tem o seu estatuto e o seu regimento. Quem consagra é o pastor-presidente com o seu ministério (o grupo de pastores, evangelistas e presbíteros), segundo o regimento de cada um. Na CGADB, os ministérios são independentes entre si; na CONAMAD, o governo é mais centralizado (*As convenções das Assembleias de Deus*). Por isso, **a regra que vale para a sua igreja é a que está no regimento dela**, e não uma regra nacional.
+A Assembleia de Deus **não tem uma regra única**. A CGADB, a CONAMAD e a CADB são convenções diferentes, e dentro de cada uma, cada ministério e cada igreja-sede tem o seu estatuto e o seu regimento. Quem consagra é o pastor-presidente com o seu ministério (o grupo de pastores, evangelistas e presbíteros), segundo o regimento de cada um. Na CGADB, os ministérios são independentes entre si; na CONAMAD, o governo é mais centralizado (*As Convenções das Assembleias de Deus*). Por isso, **a regra que vale para a sua igreja é a que está no regimento dela**, e não uma regra nacional.
 
-## A escada do ministério
+## A Escada do Ministério
 
 A ordem mais comum, descrita nos estudos sobre a Assembleia de Deus, é esta:
 
@@ -18,7 +18,7 @@ A ordem mais comum, descrita nos estudos sobre a Assembleia de Deus, é esta:
 
 Em muitos ministérios, o **caminho** vai de cooperador a diácono, e depois a presbítero ou evangelista, e por fim a pastor. Mas há diferenças: algumas igrejas não têm todas as funções, e o tempo de cada etapa varia.
 
-## O que a Bíblia pede de quem lidera
+## O que a Bíblia Pede de Quem Lidera
 
 Os critérios mais citados vêm de três textos: [[At 6.3]], [[1Tm 3.1-13]] e [[Tt 1.5-9]]. Resumindo:
 
@@ -33,7 +33,7 @@ Os critérios mais citados vêm de três textos: [[At 6.3]], [[1Tm 3.1-13]] e [[
 
 É sobre essas palavras que as convenções e os ministérios escrevem as suas regras. A diferença está em **como interpretam** cada uma, principalmente “marido de uma só mulher” e “bom testemunho”.
 
-## O que encontrei por escrito
+## O que Encontrei por Escrito
 
 Não achei um texto oficial, público e nacional da CGADB, da CONAMAD ou da CADB com os requisitos de cada cargo. O que apareceu foi:
 
@@ -41,7 +41,7 @@ Não achei um texto oficial, público e nacional da CGADB, da CONAMAD ou da CADB
 - **Mulheres.** A CGADB **não consagra mulheres ao pastorado**; a CONAMAD e a CADB consagram. Em 2011, a Convenção das Assembleias de Deus do Distrito Federal aprovou a possibilidade de consagrar mulheres pastoras. É um exemplo de como as regras mudam de uma convenção para outra.
 - **Curso bíblico.** Um estudo sobre a Assembleia de Deus registra que uma convenção instituiu, em 1978, a **obrigatoriedade do curso bíblico** para o pastorado, o que levou à criação de institutos bíblicos nas igrejas-sede. Hoje, a formação é cobrada em graus diferentes, de acordo com cada ministério.
 
-## “Dizem que...”: o casamento, o divórcio e o nome limpo
+## “Dizem que...”: O Casamento, o Divórcio e o Nome Limpo
 
 Você ouviu que, em algumas convenções, o pastor precisa ser casado, não pode ser divorciado e não pode ter o nome sujo no SPC e no Serasa. O que dá para dizer com honestidade:
 
@@ -53,7 +53,7 @@ Você ouviu que, em algumas convenções, o pastor precisa ser casado, não pode
 **Como saber a regra da sua convenção.** Peça ao seu pastor ou ao secretário da igreja os documentos que valem para ela: (1) o **estatuto** e o **regimento interno** da convenção estadual a que a igreja é filiada; (2) o regimento do **ministério** da igreja-sede; e (3) as **resoluções** da assembleia geral da convenção. Pergunte também ao pastor-presidente, porque é ele, com o ministério, quem aplica as regras.
 :::
 
-## Para refletir
+## Para Refletir
 
 Quem lê [[1Tm 3]] e [[Tt 1]] percebe que quase todos os critérios são sobre o **caráter**, e não sobre a posição ou o dinheiro. As convenções interpretam esses textos de modos diferentes, mas o alvo é o mesmo que o apóstolo tinha: que quem lidera sirva de exemplo ao rebanho ([[1Pe 5.3]]). E há um perigo nos dois sentidos: afrouxar o que a Bíblia pede, ou **acrescentar** exigências que ela não faz e deixar sem cuidado quem precisa de acolhimento.
 

@@ -1,19 +1,19 @@
 O Apocalipse é o último livro da Bíblia e talvez o mais difícil de ler. Mas ele começa com uma promessa: “Bem-aventurado aquele que lê, e os que ouvem as palavras desta profecia” [[Ap 1.3]]. A palavra grega *apokálypsis* quer dizer “revelação”, “tirar o véu”. E o livro diz logo de quem é a revelação: “Revelação de Jesus Cristo” [[Ap 1.1]]. Antes de ser um mapa do futuro, o Apocalipse é uma revelação de Jesus.
 
-## O contexto: Patmos, por volta de 95 d.C.
+## O Contexto: Patmos, por Volta de 95 d.C.
 
 João, o último apóstolo vivo, estava exilado na ilha de Patmos, “por causa da palavra de Deus e do testemunho de Jesus” [[Ap 1.9]]. O imperador Domiciano exigia ser chamado de “Senhor e Deus”, e nas cidades da Ásia Menor havia templos dedicados ao imperador. Quem não participasse do culto imperial podia perder o trabalho, ser excluído das associações de comércio ou ser morto — como Antipas, em Pérgamo [[Ap 2.13]].
 
 As sete igrejas que recebem o livro ficavam num circuito de estradas na atual Turquia: Éfeso, Esmirna, Pérgamo, Tiatira, Sardes, Filadélfia e Laodiceia. Algumas sofriam perseguição; outras estavam acomodadas e ricas. O Apocalipse falava a elas — e fala a nós.
 
-## Como ler o livro
+## Como Ler o Livro
 
 - **É cheio do Antigo Testamento.** Dos 404 versículos, a maioria faz alusão ao Antigo Testamento — sobretudo Daniel, Ezequiel, Isaías, Zacarias e Êxodo —, embora quase nunca o cite diretamente.
 - **Os números são simbólicos.** 7 = plenitude; 12 = o povo de Deus (12 tribos, 12 apóstolos); 3 e meio = tempo limitado de sofrimento (metade de 7); 666 = o número de um homem, que nunca chega à perfeição.
 - **As cenas se alternam entre a terra e o céu.** Quando a terra parece caótica, João é levado ao trono de Deus para ver quem está no controle.
 - **O livro se repete em ciclos.** Selos, trombetas e taças descrevem juízos em intensidade crescente, e muitos intérpretes entendem que retratam o mesmo período de ângulos diferentes.
 
-## O livro em oito partes
+## O Livro em Oito Partes
 
 :::tempo
 - Cap. 1 | A visão do Cristo glorificado | Jesus anda entre os sete candelabros: Ele está no meio da sua igreja [[Ap 1.12-18]].
@@ -26,7 +26,7 @@ As sete igrejas que recebem o livro ficavam num circuito de estradas na atual Tu
 - Cap. 20–22 | O milênio, o juízo final e a nova criação | “Eis que faço novas todas as coisas” [[Ap 21.5]].
 :::
 
-## As cartas às sete igrejas
+## As Cartas às Sete Igrejas
 
 | Igreja | Elogio | Repreensão | Promessa |
 |---|---|---|---|
@@ -40,7 +40,7 @@ As sete igrejas que recebem o livro ficavam num circuito de estradas na atual Tu
 
 Cada carta tem detalhes da cidade. Laodiceia era famosa pelos bancos, por uma escola de medicina que produzia colírio e pela lã negra — e Jesus lhe oferece ouro, colírio e vestes brancas [[Ap 3.17-18]]. A sua água chegava morna por aquedutos, diferente das águas termais de Hierápolis e das águas frias de Colossos, cidades vizinhas [[Ap 3.15-16]].
 
-## Os principais símbolos
+## Os Principais Símbolos
 
 | Símbolo | O que o próprio livro diz | Ligação com o Antigo Testamento |
 |---|---|---|
@@ -58,7 +58,7 @@ Cada carta tem detalhes da cidade. Laodiceia era famosa pelos bancos, por uma es
 ### E o 666?
 “Aqui há sabedoria. Aquele que tem entendimento calcule o número da besta; porque é o número de um homem” [[Ap 13.18]]. No mundo antigo, as letras tinham valor numérico. Muitos estudiosos observam que “Nero César”, escrito em letras hebraicas, soma 666 — e alguns manuscritos antigos trazem 616, que é o valor da forma latina do nome. Outros entendem o número como símbolo do ser humano que se faz deus e nunca chega a 7. Ao longo da história, muitos nomes foram “calculados” como 666, e todos falharam.
 
-## As quatro maneiras de ler o Apocalipse
+## As Quatro Maneiras de Ler o Apocalipse
 
 | Escola | Como lê os capítulos 4–19 |
 |---|---|
@@ -69,7 +69,7 @@ Cada carta tem detalhes da cidade. Laodiceia era famosa pelos bancos, por uma es
 
 Muitos intérpretes combinam essas leituras: as imagens falaram primeiro às igrejas perseguidas por Roma, mostram padrões que se repetem em toda a história e apontam para a consumação final.
 
-## Diferenciar o histórico do futuro
+## Diferenciar o Histórico do Futuro
 
 | Elementos com referência histórica clara | Elementos que a maioria entende como futuros |
 |---|---|
@@ -93,7 +93,7 @@ A identificação de selos, trombetas, taças e da besta com acontecimentos espe
 
 Daniel recebeu ordem de selar o livro; João, de não selar. O que era mistério no Antigo Testamento é revelado em Cristo.
 
-## A mensagem central
+## A Mensagem Central
 
 Se o leitor esquecer todos os detalhes, deve lembrar isto: **o Cordeiro vence**. “Estes combaterão contra o Cordeiro, e o Cordeiro os vencerá, porque é o Senhor dos senhores e o Rei dos reis” [[Ap 17.14]]. Os que sofrem por Cristo não estão perdendo: “eles o venceram pelo sangue do Cordeiro e pela palavra do seu testemunho” [[Ap 12.11]].
 

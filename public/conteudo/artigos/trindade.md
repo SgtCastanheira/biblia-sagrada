@@ -7,38 +7,38 @@ Ouve, ó Israel; o Senhor nosso Deus é o único Senhor.
 
 A Igreja deu a esse mistério um nome: **Trindade**. A palavra não aparece na Bíblia, assim como a palavra “Bíblia” também não; ela é um resumo do que a Bíblia ensina. Por volta do ano 180, o bispo Teófilo de Antioquia usou a palavra grega *trías*, “tríade”, para falar de Deus. Por volta de 213, o escritor cristão Tertuliano, de Cartago, escreveu em latim *trinitas* e resumiu o ensino numa frase que ficou: **uma só substância, três pessoas**.
 
-## Um só Deus, e três nomes no mesmo batismo
+## Um Só Deus, e Três Nomes no Mesmo Batismo
 
-### Três verdades ao mesmo tempo
+### Três Verdades ao Mesmo Tempo
 
 A doutrina da Trindade não é uma conta difícil. É o cuidado de dizer, juntas, três coisas que a Bíblia diz, sem deixar nenhuma de fora.
 
-:::ficha As três verdades
+:::ficha As Três Verdades
 - Há um só Deus | “O Senhor nosso Deus é o único Senhor” ([[Dt 6.4]]); “fora de mim não há Deus” ([[Is 44.6]]); “não há outro Deus, senão um só” ([[1Co 8.4]]).
 - O Pai, o Filho e o Espírito Santo são Deus | O Pai é Deus ([[1Co 8.6]]); o Verbo “era Deus” ([[Jo 1.1]]); mentir ao Espírito Santo é mentir “a Deus” ([[At 5.3-4]]).
 - Os três são distintos | O Pai envia o Filho ([[Jo 3.17]]); o Filho ora ao Pai ([[Jo 17.5]]); o Pai e o Filho enviam o Espírito ([[Jo 14.26]]; [[Jo 15.26]]).
 - O que acontece quando se tira uma | Sem a primeira, viram três deuses. Sem a segunda, Jesus e o Espírito deixam de ser Deus. Sem a terceira, os três viram um só, com três nomes. A história da Igreja conheceu os três erros.
 :::
 
-### Um só Deus
+### Um Só Deus
 
 Israel vivia cercado de povos com muitos deuses, e a primeira coisa que Deus ensinou ao seu povo foi que **só ele é Deus**: “Eu sou o Senhor, e não há outro; fora de mim não há Deus” ([[Is 45.5]]). Jesus repetiu o mesmo texto quando lhe perguntaram qual era o primeiro mandamento: “Ouve, Israel, o Senhor nosso Deus é o único Senhor” ([[Mc 12.29]]).
 
 Os cristãos nunca deixaram de crer nisso. Paulo, que escreveu sobre o Pai, o Filho e o Espírito, escreveu também: “para nós há um só Deus, o Pai, de quem são todas as coisas e para quem nós vivemos; e um só Senhor, Jesus Cristo” ([[1Co 8.6]]). E Tiago lembra que crer num só Deus é o começo, não o fim: “Crês tu que Deus é um só? Fazes bem; os demônios também o creem, e estremecem” ([[Tg 2.19]]).
 
-### O Pai é Deus
+### O Pai É Deus
 
 Ninguém discute que o Pai é Deus. Jesus ensinou a orar “Pai nosso que estás nos céus” ([[Mt 6.9]]), e Paulo abre quase todas as cartas assim: “Graça seja convosco, e paz, da parte de Deus nosso Pai” ([[1Co 1.3]]). O que o Novo Testamento acrescenta é que o Pai não está sozinho: desde sempre ele tem o Filho, e o ama “antes da fundação do mundo” ([[Jo 17.24]]).
 
 Ninguém discute o Pai. A pergunta que dividiu os cristãos foi outra: e o Filho? E o Espírito?
 
-## Quem é o Filho? Quem é o Espírito?
+## Quem É o Filho? Quem É o Espírito?
 
-### O Filho é Deus
+### O Filho É Deus
 
 João começa o seu Evangelho assim: “No princípio era o Verbo, e o Verbo estava com Deus, e o Verbo era Deus” ([[Jo 1.1]]). Na mesma frase, o [Verbo](/dicionario/verbo) está *com* Deus (é outro, distinto do Pai) e *é* Deus. Depois: “o Verbo se fez carne, e habitou entre nós” ([[Jo 1.14]]).
 
-:::ficha O que a Bíblia diz do Filho
+:::ficha O que a Bíblia Diz do Filho
 - Ele é chamado de Deus | Tomé, diante de Jesus ressuscitado: “Senhor meu, e Deus meu!” ([[Jo 20.28]]). Paulo: Cristo “é sobre todas as coisas, Deus bendito eternamente” ([[Rm 9.5]]) e “o nosso grande Deus e Salvador” ([[Tt 2.13]]). Hebreus aplica a ele o Salmo 45: “O teu trono, ó Deus, subsiste pelos séculos dos séculos” ([[Hb 1.8]]).
 - Ele existia antes de nascer | “Antes que Abraão existisse, eu sou” ([[Jo 8.58]]), palavras que lembram o nome que Deus revelou a Moisés, “EU SOU O QUE SOU” ([[Êx 3.14]]). Ele pediu ao Pai a glória “que eu tinha contigo antes que o mundo existisse” ([[Jo 17.5]]).
 - Ele tem o que só Deus tem | Perdoa pecados, e os escribas perguntaram: “Quem pode perdoar pecados senão um só, que é Deus?” ([[Mc 2.5-7]]). Nele “habita corporalmente toda a plenitude da divindade” ([[Cl 2.9]]).
@@ -48,7 +48,7 @@ João começa o seu Evangelho assim: “No princípio era o Verbo, e o Verbo est
 
 Paulo resume o mistério da encarnação: Cristo, “subsistindo em forma de Deus, não considerou o ser igual a Deus coisa a que se devia aferrar, mas esvaziou-se a si mesmo, tomando a forma de servo” ([[Fp 2.6-7]]). Ele não deixou de ser Deus para ser homem; sendo Deus, tornou-se também homem.
 
-### O Espírito Santo é Deus, e é alguém
+### O Espírito Santo É Deus, e É Alguém
 
 Para muitos crentes, o [Espírito Santo](/dicionario/espirito-santo) é uma força, um poder. A Bíblia mostra mais: ele é **Deus** e é **uma pessoa**.
 
@@ -63,7 +63,7 @@ Para muitos crentes, o [Espírito Santo](/dicionario/espirito-santo) é uma for�
 
 O Pentecostes é uma cena da Trindade. Pedro explicou o que o povo via: Jesus, “exaltado pela dextra de Deus, e tendo recebido do Pai a promessa do Espírito Santo, derramou isto que vós agora vedes e ouvis” ([[At 2.33]]). O batismo no Espírito Santo é a promessa do Pai ([[At 1.4]]), derramada pelo Filho.
 
-### Os três juntos
+### Os Três Juntos
 
 Muitas vezes o Novo Testamento fala dos três na mesma cena ou na mesma frase:
 
@@ -87,30 +87,30 @@ O Antigo Testamento insiste em que Deus é um só, porque Israel vivia no meio d
 
 Parece simples dito assim. Mas houve quem tirasse uma dessas peças do lugar, e o estrago foi grande.
 
-## Os erros que quase dividiram a Igreja
+## Os Erros que Quase Dividiram a Igreja
 
 Quase todo erro sobre a Trindade é uma dessas três verdades deixada de lado. A Igreja deu nome a eles:
 
-:::ficha Modalismo (um só, com três máscaras)
+:::ficha Modalismo (Um Só, com Três Máscaras)
 - O que ensina | Que Deus é uma só pessoa, que aparece de três modos: como Pai no Antigo Testamento, como Filho nos Evangelhos e como Espírito hoje.
 - Quem ensinou | Práxeas e Noeto, por volta do ano 200, e Sabélio, em Roma, por volta de 220. Por isso também se chama sabelianismo.
 - Por que não serve | No batismo de Jesus, os três estão presentes ao mesmo tempo. O Filho ora ao Pai, e o Pai responde do céu. Jesus fala do Espírito como “outro Ajudador”.
 - Hoje | No começo do movimento pentecostal, nos Estados Unidos, entre 1913 e 1916, surgiu o ensino de que só se deve batizar “em nome de Jesus” e de que o Pai e o Espírito são só títulos de Jesus. As Assembleias de Deus americanas responderam em 1916 com uma declaração de fé que confessa a Trindade, e os pastores que pensavam diferente saíram. As igrejas unicistas existem até hoje.
 :::
 
-:::ficha Arianismo (o Filho como criatura)
+:::ficha Arianismo (O Filho Como Criatura)
 - O que ensina | Que o Filho foi a primeira e a mais alta criatura de Deus: divino, mas não Deus como o Pai.
 - Quem ensinou | Ário, presbítero de Alexandria, por volta de 318. O Concílio de Niceia (325) respondeu que o Filho é “gerado, não feito”, da mesma substância do Pai.
 - Por que não serve | O Filho existia antes de tudo ([[Jo 1.1-3]]; [[Jo 17.5]]), recebe adoração ([[Hb 1.6]]) e é chamado de Deus ([[Jo 20.28]]). Se fosse criatura, adorá-lo seria idolatria.
 - Hoje | Há grupos que ensinam que Jesus foi criado, como as Testemunhas de Jeová.
 :::
 
-:::ficha Triteísmo (três deuses)
+:::ficha Triteísmo (Três Deuses)
 - O que ensina | Que o Pai, o Filho e o Espírito são três deuses, unidos só no propósito.
 - Por que não serve | A Bíblia inteira repete que há um só Deus ([[Dt 6.4]]; [[1Co 8.4]]). As três pessoas não são três partes nem três deuses: cada uma é plenamente o único Deus.
 :::
 
-:::ficha O Espírito como força
+:::ficha O Espírito Como Força
 - O que ensina | Que o Espírito Santo é só uma energia ou um poder de Deus, e não uma pessoa.
 - Quem ensinou | No século IV, um grupo chamado pelos adversários de “os que lutam contra o Espírito”. O Concílio de Constantinopla (381) confessou o Espírito Santo como Senhor, que é adorado com o Pai e o Filho.
 - Por que não serve | O Espírito fala, ensina, decide, ora e se entristece (veja acima). Ninguém mente a uma força.
@@ -120,11 +120,11 @@ Quase todo erro sobre a Trindade é uma dessas três verdades deixada de lado. A
 Como a Igreja respondeu a Ário: Atanásio, o Concílio de Niceia (325) e o credo que ainda hoje se recita.
 :::
 
-### As comparações e os seus limites
+### As Comparações e os Seus Limites
 
 Para ensinar, muita gente usa comparações. Todas ajudam um pouco, e todas falham em algum ponto:
 
-:::ficha As comparações
+:::ficha As Comparações
 - A água: gelo, líquido e vapor | Ajuda a ver uma só substância em três formas. Falha porque a água é uma coisa de cada vez: é o modalismo.
 - O ovo: casca, clara e gema | Ajuda a ver três que formam um. Falha porque cada parte seria um terço de Deus, e cada pessoa é Deus por inteiro ([[Cl 2.9]]).
 - O sol: o astro, a luz e o calor | Ajuda a ver um que se dá a conhecer. Falha porque a luz e o calor não são pessoas.
@@ -137,7 +137,7 @@ Deus é maior do que as nossas comparações: “os meus pensamentos não são o
 
 A Igreja precisou, então, dizer a sua fé em poucas linhas, para ninguém esquecer.
 
-## O que os credos guardaram em poucas linhas
+## O que os Credos Guardaram em Poucas Linhas
 
 Depois de Niceia (325) e de Constantinopla (381), as igrejas passaram a confessar a fé com o credo que reúne os dois concílios. A parte sobre o Filho e o Espírito diz:
 
@@ -154,7 +154,7 @@ As Assembleias de Deus no Brasil confessam a mesma fé. O primeiro artigo do “
 
 Tudo isso parece longe da vida de todo dia? Espere até ver o que acontece quando você ora.
 
-## E o que isso muda na sua oração?
+## E o que Isso Muda na Sua Oração?
 
 **Deus é amor desde sempre.** “Deus é amor” ([[1Jo 4.8]]). Antes de existir o mundo, já havia amor: o Pai amava o Filho “antes da fundação do mundo” ([[Jo 17.24]]). Um deus solitário precisaria de criaturas para poder amar; o Deus da Bíblia criou porque o seu amor transborda.
 
@@ -164,7 +164,7 @@ Tudo isso parece longe da vida de todo dia? Espere até ver o que acontece quand
 
 **O batismo no Espírito Santo** é a promessa do Pai, derramada pelo Filho ([[At 2.33]]). Quem recebe o Espírito não recebe uma força, mas a presença do próprio Deus: “sois santuário de Deus, e que o Espírito de Deus habita em vós” ([[1Co 3.16]]).
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - c. 180 | Teófilo de Antioquia | Usa a palavra grega “tríade” para falar de Deus

@@ -11,7 +11,7 @@ O Maranhão recebeu a mensagem pentecostal pelo mar: um pregador colombiano saiu
 - Estevam Ângelo de Souza | presidente por quase quarenta anos (1957–1996)
 :::
 
-## De onde saiu
+## De Onde Saiu
 
 **Clímaco Bueno Aza** (1874–1950), colombiano convertido no Pará, já tinha aberto o trabalho em Macapá. Segundo a igreja de São Luís, ele partiu do porto de **Belém** em **3 de junho de 1920**, “sob as bênçãos de Deus e dos líderes da Assembleia de Deus, Daniel Berg e Gunnar Vingren”. Belém sustentava a obra com ofertas das igrejas.
 
@@ -19,15 +19,15 @@ O Maranhão recebeu a mensagem pentecostal pelo mar: um pregador colombiano saiu
 Depois de dois dias no mar, Clímaco desembarca de madrugada na Rampa Campos Melo e vai para o centro da cidade. Começa a bater de porta em porta para falar de Jesus.
 :::
 
-## O tempo em que isso aconteceu
+## O Tempo em que Isso Aconteceu
 
 Em 1920, o Brasil saía da guerra mundial e da gripe espanhola. Quando a igreja de São Luís nasceu, o país já vivia a agitação política dos anos 1920, e logo viria a Revolução de 1930. Os estudos registram que, no Maranhão, os católicos “agiram violentamente” contra os pentecostais — um tempo de muita pedra e de muita coragem.
 
-## 1920–1924: o primeiro presidente
+## 1920–1924: O Primeiro Presidente
 
 As atividades começaram de forma não oficial em **1921**. Em **15 de janeiro de 1922**, na casa de **Propécio Lázaro Lobato e Ana Almeida Lobato**, na Rua Sete de Setembro, nº 149, a igreja foi oficializada — no mesmo dia foram celebrados o primeiro batismo nas águas e a primeira Santa Ceia. Depois de quatro anos, Clímaco foi ajudar Gunnar Vingren no Rio de Janeiro.
 
-## 1924–1932: pedras e estrada para o interior
+## 1924–1932: Pedras e Estrada para o Interior
 
 O segundo presidente, **Manoel José da Penha** (outubro de 1924 a agosto de 1927, quando morreu, aos 35 anos), batizou o casal **Paulino Flávio Rodrigues e Isabel Florestal Rodrigues**. Paulino era militar e se tornou um dos pioneiros da evangelização em Viana, Pedreiras, Grajaú e Pindaré. No tempo de Penha foram fundados trabalhos em **Viana, Rosário, Itapecuru-Mirim e Coroatá**.
 
@@ -39,7 +39,7 @@ Depois de um período interino do missionário sueco **Nels Julius Nelson**, env
 Os casos de perseguição no Maranhão, em Alagoas e em outros estados, o que a lei dizia e o que não se sabe.
 :::
 
-## 1933–1953: os primeiros pastores maranhenses
+## 1933–1953: Os Primeiros Pastores Maranhenses
 
 Em **fevereiro de 1936** chegou a São Luís **Januário Norberto Soares**, ordenado em **2 de março de 1930** por Nels Julius Nelson e Samuel Nyström, depois de passar por Rondônia. Em 1930 ele tinha assumido a igreja de **Grajaú**; depois, pastoreou Pedreiras e fez uma “cruzada evangelística” nos povoados em volta. Em **Lagoa Nova** (hoje Santo Antônio dos Lopes), converteu-se um jovem: **Alcebíades Pereira Vasconcelos**, que chegaria a presidente da igreja de São Luís.
 
@@ -47,7 +47,7 @@ Nels Julius Nelson foi o “organizador dos trabalhos” no Maranhão: enquanto 
 
 Outro presidente, **José Pinto de Menezes** (1948–1952), fez viagens ao interior para fortalecer os irmãos e enfrentou perseguições em **Barreirinhas, Vitorino Freire e Vitória do Mearim**.
 
-## 1953–hoje: o interior vira estado
+## 1953–hoje: O Interior Vira Estado
 
 **Alcebíades Pereira Vasconcelos** assumiu em 1953, empossado por Nels Julius Nelson “para liderar os trabalhos no Maranhão e no Piauí”. Trouxe **Estevam Ângelo de Souza** e **Raimundo Prudente de Almeida** — este para organizar o trabalho em São José de Ribamar. Construiu o templo central (1954–1956). Em 1957, foi chamado a São Cristóvão, no Rio de Janeiro.
 

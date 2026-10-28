@@ -1,6 +1,6 @@
 Por quase 250 anos, ser cristão no Império Romano podia custar a vida. A perseguição não era constante nem em todo lugar ao mesmo tempo, mas vinha em ondas — algumas locais, outras em todo o império. E, em vez de acabar com a Igreja, fez com que ela crescesse.
 
-## Por que Roma perseguia os cristãos?
+## Por que Roma Perseguia os Cristãos?
 
 Roma tolerava quase todas as religiões, desde que os seus fiéis também honrassem os deuses do Estado e o imperador. Os cristãos se recusavam. Para os romanos, isso era ateísmo, deslealdade e perigo: se os deuses ficassem irados, viriam secas, pestes e derrotas. Os cristãos também eram acusados — por boatos — de canibalismo (por “comerem o corpo” na Ceia) e de incesto (por chamarem uns aos outros de “irmãos” e se amarem).
 
@@ -14,7 +14,7 @@ No fim do século I, o imperador Domiciano exigia ser chamado “Senhor e Deus�
 
 Por volta de 112, Plínio, o Jovem, governador da Bitínia, escreveu ao imperador Trajano perguntando o que fazer com os cristãos. A carta sobreviveu: ele diz que eles se reuniam antes do amanhecer “para cantar um hino a Cristo como a um deus” e juravam não roubar, não adulterar e não mentir. Trajano respondeu: não procurem os cristãos; mas, se forem acusados e não negarem a fé, sejam punidos.
 
-## Os mártires
+## Os Mártires
 
 ### Inácio de Antioquia (c. 110)
 Bispo de Antioquia, foi levado acorrentado a Roma para morrer nas arenas. No caminho, escreveu sete cartas às igrejas. Pediu aos irmãos de Roma que não tentassem livrá-lo: “Sou trigo de Deus, e serei moído pelos dentes das feras, para me tornar pão puro de Cristo”.
@@ -28,7 +28,7 @@ Filósofo convertido, escreveu defesas da fé dirigidas ao imperador. Foi decapi
 ### Perpétua e Felicidade (203)
 Em Cartago, no norte da África, uma jovem nobre de 22 anos, mãe de um bebê, e a sua escrava Felicidade, grávida, foram presas por serem catecúmenas (em preparação para o batismo). Perpétua escreveu um diário na prisão. As duas morreram juntas na arena, de mãos dadas.
 
-## As grandes perseguições
+## As Grandes Perseguições
 
 :::tempo
 - 250 | Décio | Pela primeira vez, uma perseguição em todo o império: cada cidadão devia sacrificar aos deuses e receber um certificado (*libellus*). Muitos cederam; depois, a igreja discutiu se os que caíram (*lapsi*) podiam voltar.
@@ -40,7 +40,7 @@ Em Cartago, no norte da África, uma jovem nobre de 22 anos, mãe de um bebê, e
 
 Os que entregavam as Escrituras para serem queimadas eram chamados *traditores* — “entregadores”, de onde vem a palavra “traidor”.
 
-## A semente da Igreja
+## A Semente da Igreja
 
 Por volta do ano 197, Tertuliano, advogado convertido de Cartago, escreveu aos governantes romanos: “Quanto mais vocês nos ceifam, mais nos multiplicamos: o sangue dos cristãos é semente”. A coragem dos mártires — homens e mulheres, ricos e escravos, que morriam orando pelos carrascos — impressionava os pagãos. Muitos se perguntavam que fé era aquela, mais forte do que a morte.
 

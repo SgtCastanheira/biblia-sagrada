@@ -200,7 +200,7 @@ export function parseBlocks(source: string): Block[] {
   return blocks;
 }
 
-/** Seções que fecham a história recebem um nome em vez de número de capítulo. */
+/** Seções que fecham a história recebem um nome em vez de número de capítulo (a comparação ignora maiúsculas e acentos). */
 export const SPECIAL_SECTIONS: Record<string, string> = {
   'Para a vida': 'Reflexão',
   'Linha do tempo': 'Em resumo',
@@ -212,6 +212,8 @@ export const SPECIAL_SECTIONS: Record<string, string> = {
 /** Texto comparável de um título: sem acentos, sem pontuação e em minúsculas. */
 export const headingKey = (text: string) =>
   text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+const SPECIAL_BY_KEY = new Map(Object.entries(SPECIAL_SECTIONS).map(([title, name]) => [headingKey(title), name]));
 
 /**
  * Rótulo de cada título de seção (por posição no texto): "Capítulo 1", "Capítulo 2"… ou um nome especial.
@@ -225,7 +227,7 @@ export function sectionLabels(blocks: Block[], topics: string[] = []): string[] 
     const text = b.inlines!.map((x) => x.text).join('');
     const topic = keys.indexOf(headingKey(text));
     if (topic >= 0) return `Tópico ${topic + 1} de ${topics.length}`;
-    return SPECIAL_SECTIONS[text] ?? (topics.length ? '' : `Capítulo ${++n}`);
+    return SPECIAL_BY_KEY.get(headingKey(text)) ?? (topics.length ? '' : `Capítulo ${++n}`);
   });
 }
 

@@ -8,13 +8,13 @@ No Piauí, a igreja chegou de São Luís: foi a igreja do Maranhão que enviou o
 - Gustav Arne Johansson | missionário sueco, foi de Alagoas a Teresina (1976)
 :::
 
-## De onde saíram
+## De Onde Saíram
 
 A lista do jornal *Mensageiro da Paz* registra **Raimundo Prudente de Almeida** em Teresina, em **1927**. A linha do tempo da igreja de São Luís dá o mesmo nome entre os pastores que ajudaram a evangelização a partir do Maranhão — e diz que, em **1953**, ele foi trazido pelo pastor Alcebíades para organizar o trabalho em **São José de Ribamar**. Pode ser o mesmo pastor, em dois tempos, mas as fontes não dizem.
 
 A mesma linha do tempo conta que, em **fevereiro de 1937**, o pastor **José Bezerra Cavalcante** “chegava de Teresina” a São Luís, e que **Januário Norberto Soares** deixou São Luís “para organizar o trabalho das Assembleias de Deus em Teresina e em todo o estado do Piauí”. Os dois movimentos aparecem no mesmo mês, como uma troca entre as duas igrejas.
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 A página da igreja de Teresina registra que ela foi fundada e organizada em **7 de agosto de 1936**. Em **1953**, o pastor **Alcebíades Pereira Vasconcelos** foi empossado pelo missionário Nels Julius Nelson “para liderar os trabalhos no Maranhão e no Piauí”.
 

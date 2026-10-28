@@ -114,7 +114,7 @@ const L: CompactLesson[] = [
     ],
     qs: [['O que Daniel propôs no coração?', 'Dn 1.8'], ['Quem dá sabedoria a quem pede?', 'Tg 1.5'], ['O que Moisés pediu ao povo que escolhesse?', 'Dt 30.19'], 'Como saber se uma escolha agrada a Deus?', 'Qual decisão você precisa tomar agora?'],
     life: 'Pense numa **decisão importante** desta semana e use as quatro perguntas da aula. Se puder, converse com um adulto de confiança antes de decidir.',
-    more: 'Leia a história de Daniel em [Daniel 1](/ler/DAN/1) e veja o contexto no mapa de [Os cativeiros de Israel](/artigo/cativeiros-de-israel).',
+    more: 'Leia a história de Daniel em [Daniel 1](/ler/DAN/1) e veja o contexto no mapa de [Os Cativeiros de Israel](/artigo/cativeiros-de-israel).',
   },
   {
     n: 5,
@@ -279,7 +279,7 @@ const L: CompactLesson[] = [
     ],
     qs: [['Como Paulo descreve a igreja?', '1Co 12.12'], ['Quem é necessário no corpo?', '1Co 12.22'], ['O que a primeira igreja fazia?', 'At 2.42'], 'Que lugar você ocupa na igreja hoje?', 'Como sua igreja pode acolher melhor os adolescentes?'],
     life: 'Escolha **uma forma de servir** na igreja (ajudar na recepção, no louvor, nas crianças) e converse com o líder para começar nas próximas semanas.',
-    more: 'Leia como a igreja nasceu em [A Igreja nasce](/artigo/igreja-primitiva).',
+    more: 'Leia como a igreja nasceu em [A Igreja Nasce](/artigo/igreja-primitiva).',
   },
   {
     n: 11,

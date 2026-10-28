@@ -9,7 +9,7 @@ Quem lê a Bíblia do começo ao fim passa da última página de Malaquias para 
 - Herodes, o Grande | o rei que Roma escolheu (40–4 a.C.)
 :::
 
-## O silêncio que não foi vazio
+## O Silêncio que Não Foi Vazio
 
 A tradição judaica dizia que, depois de Malaquias, **a voz dos profetas se calou**. O livro de 1 Macabeus, escrito no século II a.C., fala de uma grande aflição em Israel, “qual nunca houve desde o dia em que deixou de aparecer profeta entre eles” (9.27). O historiador judeu Flávio Josefo, do século I, também conta que a sucessão exata dos profetas terminou no tempo do rei persa Artaxerxes.
 
@@ -25,13 +25,13 @@ Antes de ler, vale ver o mapa. Ele mostra, época por época, quem mandava em ca
 :::mapa-epocas persia,alexandre,sucessores,macabeus,asmoneus,herodes
 :::
 
-## Por volta de 430 a.C.: o último profeta e o fim de um mundo
+## Por Volta de 430 a.C.: O Último Profeta e o Fim de um Mundo
 
 Quando Malaquias profetizou, os judeus já tinham voltado do cativeiro na Babilônia. O Templo estava reconstruído, Neemias tinha levantado os muros de Jerusalém, e a terra era uma pequena província do **Império Persa**, que mandava em tudo, do Egito à Índia. Os judeus tinham liberdade para adorar, mas não um rei: obedeciam a governadores persas e aos sacerdotes.
 
 Malaquias termina com duas promessas. Uma é a vinda de um mensageiro que prepararia o caminho do Senhor ([[Ml 3.1]]); a outra, a volta de Elias antes do grande dia ([[Ml 4.5-6]]). Quatrocentos anos depois, é exatamente com isso que o Novo Testamento começa: João Batista aparece “no espírito e poder de Elias” ([[Lc 1.17]]), e Jesus diz que ele é o mensageiro de que o profeta falou ([[Mt 11.10-14]]).
 
-## 333 a.C.: Alexandre muda o mundo
+## 333 a.C.: Alexandre Muda o Mundo
 
 Em 334 a.C., um rei de vinte e dois anos atravessou o mar com um exército pequeno e disciplinado. **Alexandre, o Grande**, da Macedônia (Grécia), derrotou os persas em batalhas sucessivas — em 333 a.C., em Isso; em 332, tomou Tiro — e em poucos anos dominou o território que ia do Egito ao rio Indo. Josefo conta que, ao chegar perto de Jerusalém, Alexandre foi recebido pelo sumo sacerdote e poupou a cidade. Os historiadores têm dúvidas sobre essa história, mas é certo que a Judeia passou para o domínio grego sem ser destruída.
 
@@ -43,11 +43,11 @@ O que Alexandre deixou foi mais importante que as vitórias: o **mundo grego**. 
 
 Dos generais de Alexandre, dois nos interessam: **Ptolomeu**, que ficou com o Egito, e **Seleuco**, que ficou com a Síria e a Mesopotâmia. A Judeia ficava entre os dois, e foi disputada por ambos por mais de cem anos.
 
-Por volta de 301 a.C., passou para os **Ptolomeus**, do Egito. Foi um tempo relativamente calmo. Em Alexandria, formou-se uma enorme comunidade judaica que falava grego, e ali, no século III a.C., começou a **tradução do Antigo Testamento para o grego** — a Septuaginta, que os apóstolos citariam depois. (A história completa está em *A Septuaginta, a Bíblia grega*.)
+Por volta de 301 a.C., passou para os **Ptolomeus**, do Egito. Foi um tempo relativamente calmo. Em Alexandria, formou-se uma enorme comunidade judaica que falava grego, e ali, no século III a.C., começou a **tradução do Antigo Testamento para o grego** — a Septuaginta, que os apóstolos citariam depois. (A história completa está em *A Septuaginta, a Bíblia Grega*.)
 
 Por volta de 200 a.C., o rei sírio Antíoco III venceu os egípcios e a Judeia passou para os **Selêucidas**, da Síria. No começo, eles respeitaram as leis dos judeus. Mas dentro de Jerusalém havia um grupo de sacerdotes e ricos que **queria ser grego**: construíram um ginásio, onde se fazia esporte sem roupa, e alguns tentaram esconder a circuncisão (1 Macabeus 1.11-15). Alguns compravam o cargo de sumo sacerdote. A fé do povo estava dividida.
 
-## 167 a.C.: a abominação no Templo
+## 167 a.C.: A Abominação no Templo
 
 Em 175 a.C., subiu ao trono da Síria **Antíoco IV**, que se chamava “Epifânio” (“Deus manifesto”). Em 168 a.C., estava a ponto de conquistar o Egito quando um enviado de Roma lhe entregou um ultimato do Senado: sair do Egito, ou ter guerra contra Roma. Antíoco obedeceu. Humilhado, voltou pelo caminho da Judeia — e, segundo os livros dos Macabeus, descarregou a sua fúria em Jerusalém.
 
@@ -57,7 +57,7 @@ Os soldados sírios entram no Templo. Em cima do altar dos holocaustos, ergue-se
 
 O decreto de Antíoco é contado em 1 Macabeus 1.41-64 e em 2 Macabeus 6: quem fosse achado com um livro da Lei, ou circuncidasse o filho, morria. Era uma perseguição de um tipo novo: o governo proibia a própria religião de Israel. É a “abominação da desolação” de que o livro de Daniel falava ([[Dn 11.31]]) — texto que muitos leem como cumprido nesse tempo. Séculos depois, Jesus voltaria a esse mesmo texto ao falar do futuro ([[Mt 24.15]]).
 
-## Os Macabeus e a festa da Dedicação
+## Os Macabeus e a Festa da Dedicação
 
 A revolta começou numa aldeia, **Modin**, quando um velho sacerdote chamado **Matatias** matou um judeu que ia oferecer sacrifício pagão e fugiu para as montanhas com os cinco filhos (1 Macabeus 2.15-28). Morreu logo depois, e o comando passou ao terceiro filho, **Judas, apelidado de “Macabeu”**, que se tornou o grande líder da guerrilha.
 
@@ -65,7 +65,7 @@ Em três anos, os rebeldes retomaram o Templo. Em **25 de Quisleu de 164 a.C.**,
 
 A família ficou conhecida como a dos **Macabeus** ou **Asmoneus**.
 
-## Os reis-sacerdotes
+## Os Reis-Sacerdotes
 
 Depois de Judas, os irmãos continuaram a luta, e em 142 a.C. o povo ganhou a independência de fato, a primeira em mais de quatrocentos anos. Por cerca de oitenta anos, a Judeia foi governada pelos **Asmoneus**, que eram ao mesmo tempo **sumos sacerdotes e reis** — algo que a Lei de Moisés não previa, já que o rei devia ser da linhagem de Davi e o sacerdote, da de Levi. Muitos judeus acharam isso um escândalo.
 
@@ -73,21 +73,21 @@ O reino cresceu, mas a que preço. **João Hircano** (134–104 a.C.) obrigou os
 
 E foi aí que a história virou.
 
-## 63 a.C.: os romanos chegam
+## 63 a.C.: Os Romanos Chegam
 
 A Roma que apareceu em Jerusalém em 63 a.C. **não tinha surgido do nada**. Ela já vinha crescendo havia séculos. No tempo de Judas Macabeu, por volta de 161 a.C., ele mandou embaixadores a Roma para fazer uma aliança, porque tinha ouvido falar da sua força (1 Macabeus 8.1-32). Roma já tinha derrotado Cartago, a Macedônia e até o rei sírio Antíoco III; em 168 a.C., foi um enviado seu que fez o poderoso Antíoco IV recuar. No tempo de Jesus, a Judeia era apenas uma das últimas peças a cair.
 
 Em 63 a.C., os dois irmãos pediram ajuda ao general romano **Pompeu**, que estava na Síria. Pompeu escolheu um lado, cercou Jerusalém e a tomou depois de três meses de sítio. Entrou no Templo e, segundo Josefo, até no Santo dos Santos — mas, por respeito, não tocou nos tesouros. A independência dos judeus tinha durado menos de oitenta anos. A Judeia passou a pagar tributo a Roma, e um sumo sacerdote, sem coroa, governava debaixo dela.
 
-Quem quiser entender como era esse exército que passou a mandar na terra, pode ler [Legião: o exército romano no Novo Testamento](/artigo/legiao-e-o-exercito-romano).
+Quem quiser entender como era esse exército que passou a mandar na terra, pode ler [Legião: O Exército Romano no Novo Testamento](/artigo/legiao-e-o-exercito-romano).
 
-## Herodes: o rei que Roma escolheu
+## Herodes: O Rei que Roma Escolheu
 
 Depois de décadas de intrigas, quem ficou com o poder foi **Herodes**, filho de um idumeu aliado de Roma. Em 40 a.C., o Senado romano o proclamou “rei dos judeus”; em 37 a.C., ele tomou Jerusalém à força. Reinou até 4 a.C., com mão de ferro e grande habilidade política. Para ganhar a simpatia do povo, começou por volta de 20 a.C. a **reconstruir o Templo** em tamanho muito maior — o Templo que Jesus conheceu.
 
-Foi esse rei, no fim do seu reinado, que recebeu os magos e mandou matar os meninos de Belém ([[Mt 2.1-16]]). Jesus nasceu no tempo dele. Para conhecer a família toda, veja *Quem eram os Herodes?* e [O templo que Jesus conheceu](/artigo/o-templo-de-herodes).
+Foi esse rei, no fim do seu reinado, que recebeu os magos e mandou matar os meninos de Belém ([[Mt 2.1-16]]). Jesus nasceu no tempo dele. Para conhecer a família toda, veja *Quem Eram os Herodes?* e [O Templo que Jesus Conheceu](/artigo/o-templo-de-herodes).
 
-## Quem era quem quando Jesus nasceu
+## Quem Era Quem Quando Jesus Nasceu
 
 Dos Macabeus aos Herodes, a vida religiosa também mudou. Surgiram grupos que o Novo Testamento supõe que o leitor já conheça:
 
@@ -102,7 +102,7 @@ Dos Macabeus aos Herodes, a vida religiosa também mudou. Surgiram grupos que o 
 
 Como e por que cada um desses grupos nasceu é a história seguinte desta trilha: *Fariseus, saduceus e os outros grupos*.
 
-## As sinagogas, o grego e a esperança
+## As Sinagogas, o Grego e a Esperança
 
 Três mudanças moldaram a fé do povo nesses séculos.
 
@@ -112,7 +112,7 @@ Três mudanças moldaram a fé do povo nesses séculos.
 
 **A esperança do Messias.** Sob o domínio estrangeiro, cresceu a espera por um rei da linhagem de Davi que libertasse o povo. Os escritos da época — como os Salmos de Salomão, do século I a.C. — falam desse rei. No Novo Testamento, isso aparece em toda parte: Simeão esperava “a consolação de Israel” ([[Lc 2.25]]), “o povo estava em expectativa” em relação a João ([[Lc 3.15]]), e os sacerdotes perguntaram ao Batista se ele era Elias ou o profeta ([[Jo 1.19-21]]).
 
-## A plenitude do tempo
+## A Plenitude do Tempo
 
 Foi nesse mundo que Jesus nasceu. Paulo disse: “vindo, porém, a plenitude do tempo, Deus enviou seu Filho” ([[Gl 4.4]]). Olhando o que aconteceu antes, dá para ver por que o tempo estava “pronto”:
 

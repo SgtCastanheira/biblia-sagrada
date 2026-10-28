@@ -72,7 +72,7 @@ export const ARTICLES: Article[] = [
     id: 'ministerios-na-biblia',
     collection: 'estudos',
     passages: ['EPH 4', '1TI 3', 'TIT 1', 'ACT 6', 'ACT 13', 'ACT 14', 'ACT 20', 'ACT 21', '1CO 12', '1CO 14', '2TI 4', 'JAS 5', '1TI 5', '1PE 5'],
-    title: 'Os ministérios na Bíblia',
+    title: 'Os Ministérios na Bíblia',
     subtitle: 'Apóstolos, profetas, evangelistas, pastores, mestres, presbíteros e diáconos: o que cada um fazia, as qualificações e como as igrejas se organizam hoje.',
     period: 'Antigo e Novo Testamento',
     icon: 'diversity_3',
@@ -83,7 +83,7 @@ export const ARTICLES: Article[] = [
     collection: 'estudos',
     story: true,
     passages: ['MAL 4', 'MAT 1', 'LUK 3'],
-    title: 'Os 400 anos entre os Testamentos',
+    title: 'Os 400 Anos entre os Testamentos',
     subtitle: 'De Malaquias a Mateus: Alexandre, os Macabeus e como os romanos chegaram. A ponte que explica o mundo em que Jesus nasceu.',
     period: 'c. 430 a.C. – 4 a.C.',
     icon: 'swap_horiz',
@@ -111,14 +111,14 @@ export const ARTICLES: Article[] = [
     collection: 'estudos',
     story: true,
     passages: ['GEN 1', 'DEU 6', 'ISA 6', 'MAT 3', 'MAT 28', 'JHN 1', 'JHN 14', 'JHN 16', 'JHN 17', 'ACT 2', 'ACT 5', '2CO 13', 'EPH 2', 'PHP 2', 'COL 2', 'HEB 1'],
-    title: 'A Trindade: um só Deus, Pai, Filho e Espírito Santo',
+    title: 'A Trindade: Um Só Deus, Pai, Filho e Espírito Santo',
     subtitle: 'Um só Deus, três nomes no batismo. Como pode? A Bíblia responde, e a história mostra o que acontece quando se erra a resposta.',
     topics: [
-      'Um só Deus, e três nomes no mesmo batismo',
-      'Quem é o Filho? Quem é o Espírito?',
-      'Os erros que quase dividiram a Igreja',
-      'O que os credos guardaram em poucas linhas',
-      'E o que isso muda na sua oração?',
+      'Um Só Deus, e Três Nomes no Mesmo Batismo',
+      'Quem É o Filho? Quem É o Espírito?',
+      'Os Erros que Quase Dividiram a Igreja',
+      'O que os Credos Guardaram em Poucas Linhas',
+      'E o que Isso Muda na Sua Oração?',
     ],
     period: 'Toda a Bíblia',
     icon: 'change_history',
@@ -129,13 +129,13 @@ export const ARTICLES: Article[] = [
     collection: 'estudos',
     story: true,
     passages: ['EXO 12', 'EXO 20', 'EXO 32', 'NUM 25', 'JDG 2', 'JDG 6', 'JDG 16', '1SA 5', '1KI 11', '1KI 18', '2KI 1', '2KI 17', '2KI 23', 'ISA 46', 'JER 7', 'JER 44', 'EZK 8', 'ACT 14', 'ACT 17', 'ACT 19', '1CO 10'],
-    title: 'Os deuses pagãos na Bíblia',
+    title: 'Os Deuses Pagãos na Bíblia',
     subtitle: 'Baal, Astarote, Moloque, Júpiter, Diana: os deuses que disputaram o coração de Israel, e o preço que cobravam.',
     topics: [
-      'Os deuses que disputaram o coração de Israel',
-      'O preço que eles cobravam',
-      'Por que a Bíblia diz não',
-      'Eles ainda estão entre nós?',
+      'Os Deuses que Disputaram o Coração de Israel',
+      'O Preço que Eles Cobravam',
+      'Por que a Bíblia Diz Não',
+      'Eles Ainda Estão entre Nós?',
     ],
     period: 'Do Êxodo aos Atos dos Apóstolos',
     icon: 'shield',
@@ -146,14 +146,14 @@ export const ARTICLES: Article[] = [
     collection: 'contexto',
     story: true,
     passages: ['LUK 2', 'MAT 2', 'GAL 4', 'EXO 12', 'ROM 14'],
-    title: 'Jesus nasceu mesmo em 25 de dezembro?',
+    title: 'Jesus Nasceu Mesmo em 25 de Dezembro?',
     subtitle: 'Uma data que todo mundo conhece e uma pergunta que quase ninguém faz. A resposta passa por imperadores, astrônomos e dez dias que sumiram do calendário.',
     topics: [
-      'As pistas escondidas no Evangelho',
-      'Quem escolheu o 25 de dezembro?',
-      'Os dez dias que desapareceram',
-      'O Natal que chega em janeiro',
-      'Em que ano estamos? Depende de quem responde',
+      'As Pistas Escondidas no Evangelho',
+      'Quem Escolheu o 25 de Dezembro?',
+      'Os Dez Dias que Desapareceram',
+      'O Natal que Chega em Janeiro',
+      'Em que Ano Estamos? Depende de Quem Responde',
     ],
     period: '46 a.C. – hoje',
     icon: 'calendar_month',
@@ -164,7 +164,7 @@ export const ARTICLES: Article[] = [
     collection: 'estudos',
     story: true,
     passages: ['EZR 7', 'NEH 8', 'MRK 3', 'MRK 7', 'MRK 12', 'MAT 22', 'MAT 23', 'LUK 6', 'ACT 5', 'ACT 23', 'PHP 3'],
-    title: 'Fariseus, saduceus e os outros grupos: como nasceram',
+    title: 'Fariseus, Saduceus e os Outros Grupos: Como Nasceram',
     subtitle: 'Escribas, fariseus, saduceus, essênios, zelotes e herodianos: quando e por que cada grupo surgiu, de Esdras à guerra contra Roma.',
     period: 'c. 458 a.C. – 70 d.C.',
     icon: 'groups',
@@ -175,7 +175,7 @@ export const ARTICLES: Article[] = [
     collection: 'estudos',
     story: true,
     passages: ['GEN 41', 'EXO 5', '1KI 14', '2KI 19', '2KI 23', 'JER 44'],
-    title: 'Os faraós da Bíblia',
+    title: 'Os Faraós da Bíblia',
     subtitle: 'Quem foram, quando governaram, a quem respondiam e quem estava debaixo deles: de Abraão a Hofra.',
     period: 'c. 2000 – 570 a.C.',
     icon: 'account_balance',
@@ -185,7 +185,7 @@ export const ARTICLES: Article[] = [
     id: 'cativeiros-de-israel',
     collection: 'estudos',
     passages: ['2KI 17', '2KI 24', '2KI 25', 'JER 29', 'PSA 137', 'EZR 1', 'NEH 1', 'DAN 1'],
-    title: 'Os cativeiros de Israel',
+    title: 'Os Cativeiros de Israel',
     subtitle: 'Egito, Assíria, Babilônia e o retorno: para onde o povo foi levado, por quê e o que Deus fez em cada cativeiro.',
     period: 'c. 1700 a.C. – 445 a.C.',
     icon: 'link_off',
@@ -196,7 +196,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'legiao-e-o-exercito-romano',
     collection: 'contexto',
-    title: 'Legião: o exército romano no Novo Testamento',
+    title: 'Legião: O Exército Romano no Novo Testamento',
     subtitle: 'O que era uma legião, como o exército se organizava, a comparação com hoje — e o endemoninhado gadareno.',
     period: 'séc. I',
     icon: 'shield',
@@ -206,7 +206,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'crucificacao-romana',
     collection: 'contexto',
-    title: 'A crucificação romana',
+    title: 'A Crucificação Romana',
     subtitle: 'Como era a execução mais temida do Império, o que diz a arqueologia e por que a cruz era escândalo.',
     period: 'séc. I',
     icon: 'church',
@@ -216,7 +216,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'casamento-judaico',
     collection: 'contexto',
-    title: 'O casamento judaico',
+    title: 'O Casamento Judaico',
     subtitle: 'O desposório de Maria e José, as bodas de Caná, as dez virgens e as bodas do Cordeiro.',
     period: 'séc. I',
     icon: 'favorite',
@@ -226,7 +226,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'a-familia-de-herodes',
     collection: 'contexto',
-    title: 'Quem eram os Herodes?',
+    title: 'Quem Eram os Herodes?',
     subtitle: 'Cinco governantes com o mesmo nome: do massacre de Belém ao julgamento de Paulo.',
     period: '37 a.C. – 100 d.C.',
     icon: 'crown',
@@ -236,7 +236,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'dinheiro-e-salarios',
     collection: 'contexto',
-    title: 'Moedas, salários e dívidas',
+    title: 'Moedas, Salários e Dívidas',
     subtitle: 'Quanto valiam o denário, o talento e a oferta da viúva — em dias de trabalho.',
     period: 'séc. I',
     icon: 'payments',
@@ -246,7 +246,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'o-templo-de-herodes',
     collection: 'contexto',
-    title: 'O templo que Jesus conheceu',
+    title: 'O Templo que Jesus Conheceu',
     subtitle: 'A esplanada, os pátios, a barreira dos gentios e o véu rasgado.',
     period: '20 a.C. – 70 d.C.',
     icon: 'temple_buddhist',
@@ -256,7 +256,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'pastores-e-ovelhas',
     collection: 'contexto',
-    title: 'Pastores e ovelhas',
+    title: 'Pastores e Ovelhas',
     subtitle: 'O aprisco, a porta, a voz do pastor e o Salmo 23 no dia a dia do Oriente.',
     period: 'Toda a Bíblia',
     icon: 'pets',
@@ -266,7 +266,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'agricultura-no-tempo-de-jesus',
     collection: 'contexto',
-    title: 'O campo nas parábolas',
+    title: 'O Campo nas Parábolas',
     subtitle: 'O calendário das chuvas e das festas, o semeador, o joio, a vinha e a eira.',
     period: 'Toda a Bíblia',
     icon: 'grass',
@@ -277,7 +277,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'como-interpretar-profecias',
     collection: 'profecias',
-    title: 'Como interpretar as profecias',
+    title: 'Como Interpretar as Profecias',
     subtitle: 'Princípios de leitura, tipos de cumprimento, as escolas do Apocalipse e as visões do milênio.',
     period: 'Toda a Bíblia',
     icon: 'explore',
@@ -286,7 +286,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'profecias-de-daniel',
     collection: 'profecias',
-    title: 'As profecias de Daniel',
+    title: 'As Profecias de Daniel',
     subtitle: 'A estátua, os quatro animais, o carneiro e o bode, as setenta semanas e os reis do Norte e do Sul.',
     period: '605–536 a.C.',
     icon: 'visibility',
@@ -307,7 +307,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'panorama-da-igreja',
     collection: 'igreja',
-    title: 'A história da Igreja em resumo',
+    title: 'A História da Igreja em Resumo',
     subtitle: 'Como o livro de Atos: dois mil anos contados de leve, de Pentecostes às Assembleias de Deus no Brasil — com o caminho para cada história completa.',
     period: '30–hoje',
     icon: 'auto_stories',
@@ -317,7 +317,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'igreja-primitiva',
     collection: 'igreja',
-    title: 'A Igreja nasce',
+    title: 'A Igreja Nasce',
     subtitle: 'De Pentecostes ao fim do primeiro século: Jerusalém, Antioquia e as viagens de Paulo.',
     period: '30–100 d.C.',
     icon: 'local_fire_department',
@@ -326,7 +326,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'perseguicoes',
     collection: 'igreja',
-    title: 'O sangue dos mártires',
+    title: 'O Sangue dos Mártires',
     subtitle: 'De Nero a Diocleciano: como a Igreja cresceu debaixo de perseguição.',
     period: '64–313',
     icon: 'heart_broken',
@@ -335,7 +335,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'constantino-e-os-concilios',
     collection: 'igreja',
-    title: 'Constantino, Niceia e os credos',
+    title: 'Constantino, Niceia e os Credos',
     subtitle: 'A liberdade de culto, os grandes concílios e a defesa da divindade de Cristo.',
     period: '313–451',
     icon: 'account_balance',
@@ -371,7 +371,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'reformadores',
     collection: 'igreja',
-    title: 'Zuínglio, Calvino e os anabatistas',
+    title: 'Zuínglio, Calvino e os Anabatistas',
     subtitle: 'A Reforma na Suíça, em Genebra e entre os que pediam o batismo de crentes.',
     period: '1519–1564',
     icon: 'diversity_3',
@@ -380,7 +380,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'reforma-inglesa',
     collection: 'igreja',
-    title: 'A Reforma inglesa e os puritanos',
+    title: 'A Reforma Inglesa e os Puritanos',
     subtitle: 'Tyndale, a Bíblia King James e os peregrinos do Mayflower.',
     period: '1526–1689',
     icon: 'sailing',
@@ -398,7 +398,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'pietismo-e-moravios',
     collection: 'igreja',
-    title: 'Pietismo e morávios',
+    title: 'Pietismo e Morávios',
     subtitle: 'Uma fé do coração: Spener, Zinzendorf e a reunião de oração que durou cem anos.',
     period: '1675–1760',
     icon: 'self_improvement',
@@ -416,7 +416,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'escola-dominical',
     collection: 'igreja',
-    title: 'A história da Escola Dominical',
+    title: 'A História da Escola Dominical',
     subtitle: 'De Robert Raikes, em Gloucester (1780), a Sarah Kalley, em Petrópolis (1855), e às Lições Bíblicas das Assembleias de Deus.',
     period: '1780–hoje',
     icon: 'school',
@@ -426,7 +426,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'missoes-modernas',
     collection: 'igreja',
-    title: 'O século das missões',
+    title: 'O Século das Missões',
     subtitle: 'Carey, Hudson Taylor, Livingstone — e os primeiros missionários protestantes no Brasil.',
     period: '1792–1900',
     icon: 'public',
@@ -435,7 +435,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'movimento-pentecostal',
     collection: 'igreja',
-    title: 'Azusa Street e o movimento pentecostal',
+    title: 'Azusa Street e o Movimento Pentecostal',
     subtitle: 'Topeka, Los Angeles e o batismo no Espírito Santo que se espalhou pelo mundo.',
     period: '1901–1915',
     icon: 'air',
@@ -444,7 +444,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'pentecostes-no-brasil',
     collection: 'igreja',
-    title: 'O pentecostalismo no Brasil',
+    title: 'O Pentecostalismo no Brasil',
     subtitle: 'De Belém do Pará, em 1911, às igrejas de todo o país.',
     period: '1910–hoje',
     icon: 'flag',
@@ -473,7 +473,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'irmaos-perseguidos',
     collection: 'igreja',
-    title: 'Os irmãos perseguidos',
+    title: 'Os Irmãos Perseguidos',
     subtitle: 'Quem eram os pioneiros, como viviam, quem se opôs a eles, o que a lei dizia e o que ninguém registrou: Bíblias queimadas, casas apedrejadas, uma prisão e um enterro à noite.',
     period: '1914–1937',
     icon: 'shield',
@@ -482,7 +482,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'assembleia-de-deus-no-brasil',
     collection: 'igreja',
-    title: 'A história da Assembleia de Deus no Brasil',
+    title: 'A História da Assembleia de Deus no Brasil',
     subtitle: 'De Belém para todo o país, com o mapa interativo: como os obreiros eram separados em cada época, o casamento dos ministros, os costumes, o ensino e o papel das mulheres.',
     period: '1910–hoje',
     icon: 'church',
@@ -493,7 +493,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'madureira-e-a-separacao',
     collection: 'igreja',
-    title: 'As convenções das Assembleias de Deus',
+    title: 'As Convenções das Assembleias de Deus',
     subtitle: 'Da Convenção Geral de 1930 ao Ministério de Madureira e à separação de 1989: como as Assembleias de Deus se organizaram — com a árvore das convenções.',
     period: '1922–hoje',
     icon: 'account_tree',
@@ -502,7 +502,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'cargos-na-assembleia-de-deus',
     collection: 'igreja',
-    title: 'Cooperador, diácono, presbítero, evangelista e pastor: como se chega a cada cargo',
+    title: 'Cooperador, Diácono, Presbítero, Evangelista e Pastor: Como se Chega a Cada Cargo',
     subtitle: 'O que a Bíblia pede, o que se encontra por escrito e o que só se ouve dizer, convenção por convenção.',
     period: 'hoje',
     icon: 'badge',
@@ -511,7 +511,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'harpa-crista',
     collection: 'igreja',
-    title: 'A história da Harpa Cristã',
+    title: 'A História da Harpa Cristã',
     subtitle: 'Do Cantor Pentecostal de 1921 aos 640 hinos: quem organizou, traduziu e escreveu o hinário das Assembleias de Deus.',
     period: '1921–hoje',
     icon: 'music_note',
@@ -521,7 +521,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamentos-desde-atos',
     collection: 'avivamentos',
-    title: 'Os avivamentos desde Atos',
+    title: 'Os Avivamentos desde Atos',
     subtitle: 'Como Atos: os grandes avivamentos da história, época por época — como começaram, por quem, o fim, o impacto na sociedade e os sermões de cada tempo.',
     period: '30–hoje',
     icon: 'local_fire_department',
@@ -531,7 +531,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamento-de-oracao-1857',
     collection: 'avivamentos',
-    title: 'O avivamento de oração',
+    title: 'O Avivamento de Oração',
     subtitle: 'Uma reunião ao meio-dia em Nova York, uma crise financeira e um milhão de convertidos: de 1857 ao Ulster de 1859.',
     period: '1857–1860',
     icon: 'schedule',
@@ -540,7 +540,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamento-do-pais-de-gales',
     collection: 'avivamentos',
-    title: 'O avivamento do País de Gales',
+    title: 'O Avivamento do País de Gales',
     subtitle: 'Evan Roberts, as quatro condições e cem mil convertidos em poucos meses — o fogo que correu o mundo.',
     period: '1904–1906',
     icon: 'whatshot',
@@ -549,7 +549,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamento-da-coreia',
     collection: 'avivamentos',
-    title: 'O grande avivamento da Coreia',
+    title: 'O Grande Avivamento da Coreia',
     subtitle: 'Da confissão de um missionário em Wonsan às confissões de Pyongyang: a origem das orações de madrugada.',
     period: '1903–1910',
     icon: 'wb_twilight',
@@ -558,7 +558,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamento-da-africa-oriental',
     collection: 'avivamentos',
-    title: 'O avivamento da África Oriental',
+    title: 'O Avivamento da África Oriental',
     subtitle: 'Os balokole, “os salvos”: confissão, perdão e reconciliação de Ruanda a Uganda, ao Quênia e à Tanzânia.',
     period: '1929–1970',
     icon: 'diversity_3',
@@ -567,7 +567,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamento-das-hebridas',
     collection: 'avivamentos',
-    title: 'O avivamento das Hébridas',
+    title: 'O Avivamento das Hébridas',
     subtitle: 'Duas irmãs idosas oram, e uma ilha da Escócia é visitada por Deus: Lewis, 1949–1952.',
     period: '1949–1952',
     icon: 'water_drop',
@@ -577,7 +577,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'formacao-do-antigo-testamento',
     collection: 'biblia',
-    title: 'Como se formou o Antigo Testamento',
+    title: 'Como se Formou o Antigo Testamento',
     subtitle: 'A Lei, os Profetas e os Escritos: os 39 livros da Bíblia hebraica.',
     period: 'c. 1400–400 a.C.',
     icon: 'history_edu',
@@ -586,7 +586,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'biblia-judaica',
     collection: 'biblia',
-    title: 'A Bíblia judaica: como era a Bíblia no tempo de Jesus',
+    title: 'A Bíblia Judaica: Como Era a Bíblia no Tempo de Jesus',
     subtitle: 'Rolos em hebraico, três partes, 24 livros e outra ordem: como os judeus leem a Escritura que Jesus leu em Nazaré.',
     period: 'séc. III a.C. – séc. X d.C.',
     icon: 'menu_book',
@@ -595,7 +595,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'septuaginta',
     collection: 'biblia',
-    title: 'A Septuaginta, a Bíblia grega',
+    title: 'A Septuaginta, a Bíblia Grega',
     subtitle: 'A lenda dos 72 sábios, o que se sabe de verdade, a ordem e os nomes dos livros, e a Bíblia que os apóstolos citavam.',
     period: 'séc. III a.C. – hoje',
     icon: 'translate',
@@ -604,7 +604,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'formacao-do-novo-testamento',
     collection: 'biblia',
-    title: 'Como se formou o Novo Testamento',
+    title: 'Como se Formou o Novo Testamento',
     subtitle: 'Das cartas de Paulo à lista de Atanásio, em 367: os 27 livros.',
     period: '50–397 d.C.',
     icon: 'mail',
@@ -613,7 +613,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'manuscritos',
     collection: 'biblia',
-    title: 'Os manuscritos da Bíblia',
+    title: 'Os Manuscritos da Bíblia',
     subtitle: 'Dos rolos do Mar Morto ao Códice Sinaítico: como sabemos que o texto foi preservado.',
     period: 'séc. III a.C. – séc. IV d.C.',
     icon: 'description',
@@ -622,7 +622,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'apocrifos',
     collection: 'biblia',
-    title: 'Por que a Bíblia católica tem mais livros?',
+    title: 'Por que a Bíblia Católica Tem Mais Livros?',
     subtitle: 'Os deuterocanônicos (apócrifos), a Septuaginta e o Concílio de Trento.',
     period: 'séc. II a.C. – 1546',
     icon: 'library_books',
@@ -640,7 +640,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'biblia-em-portugues',
     collection: 'biblia',
-    title: 'A Bíblia em português',
+    title: 'A Bíblia em Português',
     subtitle: 'A história de João Ferreira de Almeida e das traduções que vieram depois.',
     period: '1681–hoje',
     icon: 'menu_book',
@@ -649,7 +649,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'idiomas-da-biblia',
     collection: 'biblia',
-    title: 'Hebraico, aramaico e grego',
+    title: 'Hebraico, Aramaico e Grego',
     subtitle: 'Como ler as palavras originais: alfabetos, raízes, tempos verbais e o que eles acrescentam ao sentido.',
     period: 'Toda a Bíblia',
     icon: 'translate',
@@ -658,7 +658,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'capitulos-e-versiculos',
     collection: 'biblia',
-    title: 'Quem dividiu a Bíblia em capítulos e versículos?',
+    title: 'Quem Dividiu a Bíblia em Capítulos e Versículos?',
     subtitle: 'Stephen Langton, Robert Estienne — e por que as divisões não são inspiradas.',
     period: '1227–1560',
     icon: 'format_list_numbered',
@@ -726,7 +726,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   {
     id: 'wesley-salvacao-pela-fe',
     revival: 'grandes-despertamentos',
-    title: 'Salvação pela fé',
+    title: 'Salvação pela Fé',
     originalTitle: 'Salvation by Faith',
     preacher: 'John Wesley',
     lived: '1703–1791',
@@ -742,7 +742,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   {
     id: 'edwards-pecadores',
     revival: 'grandes-despertamentos',
-    title: 'Pecadores nas mãos de um Deus irado',
+    title: 'Pecadores nas Mãos de um Deus Irado',
     originalTitle: 'Sinners in the Hands of an Angry God',
     preacher: 'Jonathan Edwards',
     lived: '1703–1758',
@@ -758,7 +758,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   {
     id: 'whitefield-metodo-da-graca',
     revival: 'grandes-despertamentos',
-    title: 'O método da graça',
+    title: 'O Método da Graça',
     originalTitle: 'The Method of Grace',
     preacher: 'George Whitefield',
     lived: '1714–1770',
@@ -774,7 +774,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   {
     id: 'finney-o-que-e-avivamento',
     revival: 'grandes-despertamentos',
-    title: 'O que é um avivamento',
+    title: 'O que É um Avivamento',
     originalTitle: 'What a Revival of Religion Is',
     preacher: 'Charles G. Finney',
     lived: '1792–1875',
@@ -789,7 +789,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   {
     id: 'spurgeon-olhai-para-mim',
     revival: 'avivamento-de-oracao-1857',
-    title: 'Olhai para mim e sede salvos',
+    title: 'Olhai para Mim e Sede Salvos',
     originalTitle: 'Sovereignty and Salvation',
     preacher: 'Charles H. Spurgeon',
     lived: '1834–1892',
@@ -805,7 +805,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   {
     id: 'moody-novo-nascimento',
     revival: 'avivamento-de-oracao-1857',
-    title: 'A porta de entrada do Reino',
+    title: 'A Porta de Entrada do Reino',
     originalTitle: 'The Gateway into the Kingdom',
     preacher: 'Dwight L. Moody',
     lived: '1837–1899',
@@ -821,7 +821,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   {
     id: 'evan-roberts-quatro-condicoes',
     revival: 'avivamento-do-pais-de-gales',
-    title: 'As quatro condições do avivamento',
+    title: 'As Quatro Condições do Avivamento',
     preacher: 'Evan Roberts',
     lived: '1878–1951',
     year: '1904',
@@ -835,7 +835,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   {
     id: 'seymour-batismo-no-espirito',
     revival: 'movimento-pentecostal',
-    title: 'O batismo com o Espírito Santo',
+    title: 'O Batismo com o Espírito Santo',
     preacher: 'William J. Seymour',
     lived: '1870–1922',
     year: '1906–1908',
@@ -849,7 +849,7 @@ export const CLASSIC_SERMONS: ClassicSermon[] = [
   {
     id: 'billy-graham',
     revival: 'avivamentos-desde-atos',
-    title: 'A mensagem de Billy Graham',
+    title: 'A Mensagem de Billy Graham',
     preacher: 'Billy Graham',
     lived: '1918–2018',
     year: '1949–2005',
@@ -884,14 +884,14 @@ const RECOMMENDED: RecommendedSermon[] = [
   { preacher: 'Nelson Abreu Júnior', title: 'Sermão sobre Jacó', where: { label: 'A história de Jacó (Gênesis 25–35)', ref: 'Gn 25.19' }, theme: 'Sermão temático', note: 'Pastor em Cuiabá. Indicado como um sermão temático marcante.', search: 'Nelson Abreu Júnior sermão Jacó' },
   { preacher: 'Paulo Brasil', title: 'Sermão sobre Ester', where: { label: 'De Juízes a Ester', ref: 'Et 1.1' }, theme: 'Exposição', note: 'Pregado numa conferência: começa no livro de Juízes e faz a ponte até Ester.', search: 'Paulo Brasil sermão Ester' },
   { preacher: 'Caio Fábio', title: 'Sermão sobre Absalão', where: { label: 'Davi e Absalão (2 Samuel 13–18)', ref: '2Sm 13.1' }, theme: 'Paternidade', note: 'Pregado nos anos 1980. Leva a pensar em que tipo de pai você quer ser.', search: 'Caio Fábio sermão Absalão' },
-  { preacher: 'Yago Martins', title: 'A fé num caco de telha', where: { label: 'O livro de Jó', ref: 'Jó 2.8' }, theme: 'Fé no sofrimento', note: 'O título lembra Jó, que se raspava com um caco de telha no meio da dor.', search: 'Yago Martins a fé num caco de telha' },
+  { preacher: 'Yago Martins', title: 'A Fé num Caco de Telha', where: { label: 'O livro de Jó', ref: 'Jó 2.8' }, theme: 'Fé no sofrimento', note: 'O título lembra Jó, que se raspava com um caco de telha no meio da dor.', search: 'Yago Martins a fé num caco de telha' },
   { preacher: 'Augustus Nicodemus', title: 'Romanos 8', where: { label: 'Romanos 8', ref: 'Rm 8.1' }, theme: 'Exposição', note: 'A vida no Espírito e a segurança de quem está em Cristo.', search: 'Augustus Nicodemus Romanos 8' },
   { preacher: 'Martyn Lloyd-Jones', title: 'Sermões em Romanos', where: { label: 'A carta aos Romanos', ref: 'Rm 1.1' }, theme: 'Exposição', note: 'Série pregada na Westminster Chapel, em Londres, entre 1955 e 1968, e publicada em vários volumes. Qualquer um deles vale a pena.', search: 'Lloyd-Jones Romanos sermão' },
-  { preacher: 'Paul Washer', title: 'Pregação chocante (Shocking Youth Message)', theme: 'O verdadeiro evangelho', note: 'Pregada a jovens nos Estados Unidos, em 2002, tornou-se uma das pregações mais vistas na internet. Há versões legendadas em português.', search: 'Paul Washer pregação chocante legendado' },
-  { preacher: 'John Piper', title: 'Sermão sobre o sofrimento', theme: 'Sermão temático', note: 'Indicado como “Você vai sofrer”: trata o sofrimento cristão a partir de muitos textos e ângulos.', search: 'John Piper sermão sofrimento legendado' },
-  { preacher: 'Emilio Garofalo Neto', title: 'Isto é protetor solar (partes 1 e 2)', theme: 'Vida cristã', note: 'Ministério Fiel. Indicado pela comunicação e pela edificação.', search: 'Emilio Garofalo isto é protetor solar' },
-  { preacher: 'Heber Campos', title: 'Os atributos de Deus', theme: 'Quem é Deus', note: 'Ensino sobre os atributos de Deus.', search: 'Heber Campos atributos de Deus' },
-  { preacher: 'Jonas Madureira', title: 'Pregações e palestras', theme: 'Fé e pensamento cristão', note: 'Indicado como pregador e professor.', search: 'Jonas Madureira pregação' },
+  { preacher: 'Paul Washer', title: 'Pregação Chocante (Shocking Youth Message)', theme: 'O verdadeiro evangelho', note: 'Pregada a jovens nos Estados Unidos, em 2002, tornou-se uma das pregações mais vistas na internet. Há versões legendadas em português.', search: 'Paul Washer pregação chocante legendado' },
+  { preacher: 'John Piper', title: 'Sermão sobre o Sofrimento', theme: 'Sermão temático', note: 'Indicado como “Você vai sofrer”: trata o sofrimento cristão a partir de muitos textos e ângulos.', search: 'John Piper sermão sofrimento legendado' },
+  { preacher: 'Emilio Garofalo Neto', title: 'Isto É Protetor Solar (Partes 1 e 2)', theme: 'Vida cristã', note: 'Ministério Fiel. Indicado pela comunicação e pela edificação.', search: 'Emilio Garofalo isto é protetor solar' },
+  { preacher: 'Heber Campos', title: 'Os Atributos de Deus', theme: 'Quem é Deus', note: 'Ensino sobre os atributos de Deus.', search: 'Heber Campos atributos de Deus' },
+  { preacher: 'Jonas Madureira', title: 'Pregações e Palestras', theme: 'Fé e pensamento cristão', note: 'Indicado como pregador e professor.', search: 'Jonas Madureira pregação' },
 ];
 
 /** Na ordem da Bíblia (pelo texto); as temáticas, sem texto principal, no fim. */

@@ -5,7 +5,7 @@ Portanto, nós também, pois estamos rodeados de tão grande nuvem de testemunha
 — [[Hb 12.1]]
 :::
 
-## A Igreja nasce e é provada
+## A Igreja Nasce e É Provada
 
 :::cena Jerusalém · dia de Pentecostes
 Os discípulos estão reunidos quando o Espírito Santo é derramado. Pedro prega, e naquele dia quase três mil pessoas são batizadas.
@@ -22,7 +22,7 @@ De Jerusalém, o evangelho chegou a Antioquia e, pelas viagens de Paulo, a todo 
 :::leia constantino-e-os-concilios
 :::
 
-## A Idade Média e as vozes antes da Reforma
+## A Idade Média e as Vozes Antes da Reforma
 
 Por mil anos, mosteiros guardaram e copiaram a Bíblia, o papado cresceu em poder e, em 1054, as igrejas do Oriente e do Ocidente se separaram. No fim desse período, homens como Valdo, Wycliffe e Hus pediram uma igreja mais fiel às Escrituras e a Bíblia na língua do povo — e pagaram caro por isso.
 
@@ -48,7 +48,7 @@ Em 1517, as 95 teses de Martinho Lutero abriram um tempo novo: a salvação pela
 :::leia contrarreforma
 :::
 
-## Avivamentos, escolas e missões
+## Avivamentos, Escolas e Missões
 
 Nos séculos XVIII e XIX, uma fé do coração renovou as igrejas: os morávios oraram sem parar por cem anos, e Wesley, Whitefield e Edwards viram multidões se converterem. Na mesma época, em 1780, nasceu na Inglaterra a Escola Dominical. Depois vieram as grandes missões, que levaram o evangelho à Índia, à China, à África — e ao Brasil, onde a Escola Dominical chegou em 1855 com os Kalley.
 
@@ -64,7 +64,7 @@ Nos séculos XVIII e XIX, uma fé do coração renovou as igrejas: os morávios 
 :::leia missoes-modernas
 :::
 
-## O fogo pentecostal
+## O Fogo Pentecostal
 
 :::cena Los Angeles · 1906
 Num velho prédio de madeira da Rua Azusa, brancos, negros, latinos e asiáticos oram juntos. Os cultos duram três anos, e os visitantes levam a mensagem pentecostal ao mundo inteiro.
@@ -104,6 +104,6 @@ Como se chega a cooperador, diácono, presbítero, evangelista e pastor, e o que
 :::leia madureira-e-a-separacao
 :::
 
-## Para a vida
+## Para a Vida
 
 A história da Igreja é a continuação de Atos: o Espírito que desceu em Pentecostes continua levando o evangelho “até os confins da terra” [[At 1.8]]. Cada geração recebe a fé de quem veio antes e a passa adiante — “não os encobriremos aos seus filhos, cantaremos às gerações vindouras os louvores do Senhor” [[Sl 78.4]].

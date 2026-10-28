@@ -1,6 +1,6 @@
 Na Inglaterra, a Reforma teve um caminho próprio: começou com a Bíblia de um tradutor perseguido, passou pela política de reis e rainhas, e floresceu no movimento puritano — de onde vieram muitos dos batistas, congregacionais e presbiterianos de hoje.
 
-## William Tyndale: a Bíblia para o menino do arado
+## William Tyndale: A Bíblia para o Menino do Arado
 
 Tyndale (c. 1494–1536) estudou em Oxford e Cambridge e dominava várias línguas. Numa discussão, ouviu de um clérigo que era melhor ficar sem as leis de Deus do que sem as do papa. Respondeu: “Se Deus me poupar a vida, antes de muitos anos farei que o menino que guia o arado saiba mais das Escrituras do que o senhor”.
 
@@ -8,7 +8,7 @@ Na Inglaterra era proibido traduzir a Bíblia sem autorização. Tyndale fugiu p
 
 Traído por um falso amigo, Tyndale foi preso em Antuérpia e executado em Vilvoorde, na atual Bélgica, em 6 de outubro de 1536: estrangulado e queimado. As suas últimas palavras foram uma oração: “Senhor, abre os olhos do rei da Inglaterra”. Três anos depois, o próprio rei autorizava uma Bíblia em inglês, baseada em grande parte no trabalho dele.
 
-## Reis, rainhas e mártires
+## Reis, Rainhas e Mártires
 
 :::tempo
 - 1534 | Henrique VIII | Rompe com Roma, sobretudo porque o papa não anulou o seu casamento, e se declara chefe da Igreja da Inglaterra. A doutrina muda pouco.
@@ -25,7 +25,7 @@ Em 1555, os bispos Hugh Latimer e Nicholas Ridley foram queimados juntos em Oxfo
 
 Muitos protestantes fugiram para Genebra no tempo de Maria. Ali produziram a **Bíblia de Genebra** (1560), com notas explicativas, mapas e, pela primeira vez numa Bíblia inglesa, os versículos numerados. Foi a Bíblia de Shakespeare, de John Bunyan e dos peregrinos do Mayflower.
 
-## Os puritanos
+## Os Puritanos
 
 Para muitos, a Reforma inglesa tinha ficado pela metade. Eles queriam “purificar” a igreja de tudo o que não tivesse base bíblica — por isso foram chamados puritanos. Valorizavam a pregação expositiva, a santidade da vida diária, o domingo dedicado a Deus, o culto em família e a leitura da Bíblia em casa.
 
@@ -35,7 +35,7 @@ Alguns nomes que marcaram:
 - **John Owen** e **Richard Baxter**, pastores e escritores cuja obra é lida até hoje.
 - A **Assembleia de Westminster** (1643–1649) produziu a Confissão de Fé e os Catecismos de Westminster. A primeira pergunta do Breve Catecismo é famosa: “Qual é o fim principal do homem? Glorificar a Deus e gozá-lo para sempre”.
 
-## O nascimento dos batistas
+## O Nascimento dos Batistas
 
 Em 1609, um grupo de separatistas ingleses refugiados em Amsterdã, liderado por John Smyth e Thomas Helwys, concluiu que o batismo é só para quem crê, e formou uma igreja de crentes batizados. Em 1612, Helwys voltou à Inglaterra e fundou perto de Londres a primeira igreja batista em solo inglês. Escreveu ao rei Jaime I defendendo liberdade religiosa para todos — “sejam hereges, turcos, judeus ou o que for” — e morreu na prisão.
 

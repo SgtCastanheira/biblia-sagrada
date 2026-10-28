@@ -6,7 +6,7 @@ No Espírito Santo, a igreja começou com um casal enviado de Belém e ganhou a 
 - Sara Berg | missionária sueca
 :::
 
-## De onde saíram
+## De Onde Saíram
 
 Em **1922**, **Francisco Galdino Sobrinho e a esposa** deixaram **Belém** e foram morar em **Vitória**, enviados para começar a pregação pentecostal na cidade. **Daniel Berg e a esposa, Sara** — que tinham se casado na Suécia em 1920 e chegado ao Brasil em 1921 — também trabalharam ali.
 
@@ -14,7 +14,7 @@ Em **1922**, **Francisco Galdino Sobrinho e a esposa** deixaram **Belém** e for
 Um casal vindo do Pará aluga uma casa na capital capixaba e começa a convidar os vizinhos para orar. Pouco depois, um missionário sueco e a esposa chegam para ajudar.
 :::
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 Segundo a maioria das fontes, Daniel Berg ficou em Vitória até **1924**, quando seguiu para Santos. Uma igreja do bairro Santo Antônio lembra que, em 1924, Berg fez os primeiros cultos evangelísticos na Avenida Santo Antônio.
 

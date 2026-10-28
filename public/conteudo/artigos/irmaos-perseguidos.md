@@ -13,7 +13,7 @@ Quem levou a Assembleia de Deus aos estados do Brasil não andou sobre tapetes. 
 - Esperidião de Almeida | pastor atingido na feira de Penedo
 :::
 
-## Quem eram os perseguidos
+## Quem Eram os Perseguidos
 
 A primeira coisa que as fontes mostram é que **não eram pastores de gabinete**. Eram gente comum, quase sempre pobre, que pregava depois do trabalho:
 - **Operários e artesãos:** Daniel Berg, fundidor, vendia Bíblias de vila em vila; Augusto Sertão, marceneiro, em São Miguel dos Campos (AL); o alfaiate Felipe Nery Fernandes, em Campina Grande (PB); o pedreiro Antônio Moreira, em Goiânia.
@@ -23,7 +23,7 @@ A primeira coisa que as fontes mostram é que **não eram pastores de gabinete**
 - **Mulheres:** Maria de Jesus Nazaré Araújo, no Ceará; Joaquina de Souza Carvalho, na Bahia; Olivia, esposa de Augusto Sertão; Francelina Batinga dos Santos, em Matriz do Camaragibe.
 - **Estrangeiros:** os suecos Vingren, Berg, Nelson e os Nyström; o colombiano Clímaco Bueno Aza; os americanos Virgil Smith, Orlando Boyer e Paul Aenis. Um estudo lembra que eles foram vítimas de preconceito por serem estrangeiros.
 
-## O dia a dia de quem pregava
+## O Dia a Dia de Quem Pregava
 
 As fontes deixam ver como era a vida:
 - **A igreja era a casa de alguém.** O primeiro culto de Natal foi na casa de um soldado; o de Maceió, na casa de um pescador; o de Recife, na casa de João e Felipa Ribeiro; o de Aracaju, numa casa da Avenida Maranhão. Só depois de anos vinha o salão alugado e, muito depois, o templo.
@@ -34,7 +34,7 @@ As fontes deixam ver como era a vida:
 - **Os cultos ao ar livre tinham música.** Um missionário levava o seu violino a esses cultos.
 - **A família corria o mesmo risco.** Quando o filho de Otto Nelson morreu, o luto virou mais uma batalha.
 
-## Quem perseguiu
+## Quem Perseguiu
 
 As fontes apontam, sempre, **três tipos de gente**. Elas não dizem que todos os católicos agiram assim: dizem que alguns padres e algumas multidões agiram.
 
@@ -44,7 +44,7 @@ As fontes apontam, sempre, **três tipos de gente**. Elas não dizem que todos o
 
 Outro tipo de oposição vinha das **autoridades locais**: Otto Nelson foi preso em Maceió, durante a Primeira Guerra, acusado de ser “espião de guerra”. E houve o **desacordo entre os próprios cristãos**: em Maceió, Vingren travou uma “luta terrível” de palavras com dois evangelistas batistas.
 
-## Os casos, um por um
+## Os Casos, um por um
 
 :::ficha Macapá (AP) · 1916 · As Bíblias queimadas
 - Quem | Clímaco Bueno Aza, pregador colombiano que vendia Bíblias, Novos Testamentos e folhetos
@@ -130,7 +130,7 @@ Outro tipo de oposição vinha das **autoridades locais**: Otto Nelson foi preso
 - Fonte | Projeto de lei 368/2021 da Assembleia Legislativa do Ceará
 :::
 
-## O que a lei dizia
+## O que a Lei Dizia
 
 A lei estava **do lado dos perseguidos**, no papel. Desde 1890 o Brasil separou a Igreja do Estado. O [Código Penal daquele ano](https://www2.camara.leg.br/legin/fed/decret/1824-1899/decreto-847-11-outubro-1890-503086-publicacaooriginal-1-pe.html) (Decreto nº 847, texto original no site da Câmara) tinha um capítulo sobre os crimes contra o livre exercício dos cultos:
 - **Art. 186:** “Impedir, por qualquer modo, a celebração de cerimônias religiosas, solenidades e ritos de qualquer confissão religiosa, ou perturbá-la no exercício de seu culto” — prisão de dois meses a um ano.
@@ -139,13 +139,13 @@ A lei estava **do lado dos perseguidos**, no papel. Desde 1890 o Brasil separou 
 
 Quanto ao sepultamento, a Constituição de 1891 tornou os **cemitérios públicos laicos e administrados pelos municípios**, “ficando livre a todos os cultos religiosos a prática dos respectivos ritos”. Mas os cemitérios de irmandades e outros cemitérios confessionais continuaram a ter regras próprias, e em alguns lugares o cemitério da cidade era tratado como se fosse da Igreja.
 
-## E os tribunais?
+## E os Tribunais?
 
 Aqui está a parte mais difícil: **não achei nenhum caso em que alguém tenha sido julgado e condenado** por perseguir os pentecostais. O que as fontes registram é outra coisa: um delegado que mandou soldados escoltar um enterro, militares crentes que “foram às autoridades”, um prisioneiro solto no dia seguinte, a polícia que amparou a pregação em Juazeiro.
 
 Por que tantos casos ficaram sem processo? As fontes não explicam, mas dá para entender o quadro: eram pessoas pobres, muitas vezes estrangeiros ou migrantes, em cidades pequenas onde o padre e os poderosos locais mandavam; a notícia do crime raramente chegava a um juiz; e muitos nem pensavam em ir à justiça.
 
-## E os que morreram?
+## E os que Morreram?
 
 É preciso separar duas coisas.
 
@@ -157,13 +157,13 @@ Por que tantos casos ficaram sem processo? As fontes não explicam, mas dá para
 - **Frida Vingren** quase morreu de malária, em 1920, e passou anos de saúde frágil.
 - Em 1918 chegou a **gripe espanhola**, que matou muita gente nas cidades do país.
 
-## Os dois lados
+## Os Dois Lados
 
 Um estudo de Ciências da Religião (PUC Goiás, 2012) pede um olhar atento aos dois lados. Segundo o autor, a oposição de muitos padres tinha a ver com a disputa pelo campo religioso, e a intolerância era comum **a ambos os universos**: os pentecostais, na época, também costumavam demonizar a fé católica e ver os não convertidos como destinados ao inferno. Isso não desculpa o apedrejamento nem a prisão, mas ajuda a entender por que as relações eram tão duras.
 
 Era também um tempo em que a Igreja Católica, separada do Estado desde 1890, se reorganizava para recuperar influência, sob a liderança do cardeal Dom Sebastião Leme. Hoje as relações mudaram muito: a Constituição de 1988 garante a liberdade de crença e de culto a todos, e católicos e evangélicos convivem na maioria das cidades.
 
-## O tempo em que isso aconteceu
+## O Tempo em que Isso Aconteceu
 
 Não eram tempos fáceis para ninguém:
 - **1910:** a Revolta da Chibata, no Rio, dias depois da chegada de Vingren e Berg a Belém.
@@ -175,7 +175,7 @@ Não eram tempos fáceis para ninguém:
 
 Veja a [linha do tempo nacional](/assembleia-de-deus/linha-do-tempo), com o que acontecia na igreja e no Brasil, ano a ano.
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - 1914 | Uruburetama (CE) | Maria de Jesus Nazaré Araújo é expulsa pela família
@@ -189,7 +189,7 @@ Veja a [linha do tempo nacional](/assembleia-de-deus/linha-do-tempo), com o que 
 - 1936 | Cuiabá (MT) | O padre queima Bíblias e folhetos na praça
 :::
 
-## Para a vida
+## Para a Vida
 
 Jesus avisou: “Bem-aventurados sois quando vos injuriarem, e vos perseguirem, e, mentindo, disserem todo o mal contra vós por minha causa” [[Mt 5.11]]. Os apóstolos saíram do sinédrio “regozijando-se de terem sido julgados dignos de sofrer afronta pelo nome de Jesus” [[At 5.41]]. E Paulo, preso, escreveu: “a palavra de Deus não está presa” [[2Tm 2.9]].
 

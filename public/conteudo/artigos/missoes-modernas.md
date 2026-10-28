@@ -1,6 +1,6 @@
 O século XIX é chamado de “o grande século das missões”. Inspirados pelos avivamentos, milhares de homens e mulheres deixaram tudo para levar o Evangelho à Índia, à China, à África, às ilhas do Pacífico — e à América do Sul.
 
-## William Carey, o pai das missões modernas
+## William Carey, o Pai das Missões Modernas
 
 Carey (1761–1834) era um sapateiro inglês pobre, que aprendeu sozinho latim, grego, hebraico e holandês. Na parede da oficina, pendurou um mapa-múndi feito à mão, com anotações sobre a população e a religião de cada país. Quando propôs a pastores batistas enviar missionários aos povos que nunca tinham ouvido falar de Cristo, um deles teria respondido: “Sente-se, jovem! Quando Deus quiser converter os pagãos, Ele o fará sem a sua ajuda nem a minha”.
 
@@ -8,14 +8,14 @@ Carey não se sentou. Em 1792 publicou um livro sobre a obrigação de evangeliz
 
 Ficou ali 41 anos, sem nunca voltar à Inglaterra. Perdeu um filho, e a esposa adoeceu mentalmente. Passou sete anos sem ver nenhum indiano convertido. Com a equipe de Serampore, traduziu e imprimiu a Bíblia, ou partes dela, em cerca de 40 línguas e dialetos, fundou escolas e uma faculdade, e lutou contra o costume de queimar as viúvas com o marido morto (*sati*), proibido em 1829.
 
-## Outros pioneiros
+## Outros Pioneiros
 
 - **Adoniram e Ann Judson** (EUA) chegaram à Birmânia em 1813. Adoniram passou quase dois anos numa prisão terrível durante uma guerra; Ann o manteve vivo levando comida. A Bíblia que ele traduziu para o birmanês é usada até hoje.
 - **Hudson Taylor** (1832–1905), inglês, fundou em 1865 a Missão para o Interior da China. Os seus missionários se vestiam e viviam como os chineses — algo escandaloso para a época — e iam às províncias onde ninguém tinha ido.
 - **David Livingstone** (1813–1873), médico escocês, atravessou a África de costa a costa e denunciou o tráfico de escravos. Quando morreu, os seus ajudantes africanos enterraram o seu coração na África e carregaram o corpo por meses até a costa.
 - **Mulheres missionárias** como **Lottie Moon**, na China, e **Amy Carmichael**, na Índia — que resgatava meninas vendidas aos templos — mostraram que a missão também era delas.
 
-## Os protestantes chegam ao Brasil
+## Os Protestantes Chegam ao Brasil
 
 No Brasil colonial e imperial, a religião oficial era a católica e o culto protestante público era proibido para brasileiros. Abriu-se espaço aos poucos:
 

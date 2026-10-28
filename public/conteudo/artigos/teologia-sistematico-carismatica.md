@@ -6,7 +6,7 @@ A *Teologia Sistemático-Carismática*, de César Moisés Carvalho e Céfora Car
 
 Uma teologia pode ser **confessional**, isto é, feita por quem crê, e ao mesmo tempo dialogar com as outras ciências? A resposta é afirmativa, desde que o estudo reúna conhecimento e piedade. Daí o propósito: oferecer uma teologia séria, escrita da perspectiva carismático-pentecostal, para um mundo que, longe de ser apenas secular e materialista, continua a pedir espiritualidade.
 
-### Método: três passos em cada doutrina
+### Método: Três Passos em Cada Doutrina
 
 Cada doutrina é estudada em três passos: a **parte bíblica** (os textos, com atenção aos termos nas línguas originais), a **parte histórica** (a maneira como a ideia foi discutida pelos pais da Igreja e nos debates posteriores) e a **parte teológica**, que reúne os resultados. Os passos podem entrelaçar-se.
 
@@ -14,13 +14,13 @@ Essa ordem decorre de uma convicção: a Escritura não é apenas a fonte da ref
 
 Pretende-se, ainda, que o estudante aprenda a “fazer teologia”, e não apenas a repetir o que leu. Isso combina com a tradição carismático-pentecostal: uma teologia do Espírito não se contenta com o imobilismo, pois o cristão é chamado a renovar a mente ([[Rm 12.2]]); e, por ser obra humana, a teologia está sempre a caminho, “nunca pronta e acabada”.
 
-### Estrutura: dez capítulos em duas partes
+### Estrutura: Dez Capítulos em Duas Partes
 
 :::figura tsc-plano
 A estrutura do livro: dois capítulos de método e oito de doutrina. Em dourado, a pneumatologia, o estudo do Espírito Santo, que vem logo depois da doutrina de Deus.
 :::
 
-:::ficha As oito doutrinas, como a introdução as anuncia
+:::ficha As Oito Doutrinas, Segundo a Introdução
 - 3 · Teologia (Deus) | Em vez de provar Deus pela lógica filosófica grega, parte-se da revelação. Ao falar de Deus, fica-se sempre aquém, cognitiva e linguisticamente; por isso se recorre ao símbolo e se aceita o paradoxo. Sustenta-se também que Deus continua a falar hoje, sem prejuízo da suficiência das Escrituras.
 - 4 · Pneumatologia (Espírito Santo) | Vem logo depois da doutrina de Deus, sem hierarquia na Trindade: são três pessoas distintas, e não três deuses.
 - 5 · Cristologia | Distingue cristocentrismo (Cristo no centro) de cristomonismo (só Cristo, como se as demais pessoas da Trindade não importassem). Apresenta o Filho em cooperação com o Pai e com o Espírito e propõe essa comunhão, a pericorese, como modelo para o Corpo de Cristo.
@@ -31,7 +31,7 @@ A estrutura do livro: dois capítulos de método e oito de doutrina. Em dourado,
 - 10 · Escatologia (últimas coisas) | Diferentes escatologias (da pessoa, do mundo e do futuro) e a ação do Espírito vinculada aos tempos do fim, como em Atos 1 e 2 e na profecia de Joel.
 :::
 
-### A posição da pneumatologia
+### A Posição da Pneumatologia
 
 A pneumatologia ocupa um lugar incomum: vem logo depois da doutrina de Deus, e não depois da de Cristo, como acontece em muitos manuais. Não se trata de capricho, mas de fidelidade à “lógica da fé”: partir sempre das Escrituras e seguir a ordem em que o Espírito nelas aparece. Ele surge já no primeiro capítulo da Bíblia ([[Gn 1.2]]), responde pela inspiração dos escritores ([[2Pe 1.21]]) e capacita Jesus para o seu ministério terreno. Na Trindade não há hierarquia nem subordinação: cada pessoa tem importância própria, e as três não são três deuses.
 
@@ -45,7 +45,7 @@ A introdução dá o nome de **sinergista** ao processo que descreve e que, segu
 
 A concepção sinergista reconhece que a convivência do ser humano com Deus não anula o arbítrio nem a vontade que o próprio Deus lhe concedeu. Essas capacidades foram distorcidas pela Queda, mas, em algum nível, foram preservadas. Para decidir com segurança, contudo, o ser humano precisa da iluminação e da orientação do Espírito Santo ([[Gl 5.16-25]]; [[Ef 5.18]]). O mesmo vale para o trabalho teológico: o teólogo estuda e escreve, e o Espírito o auxilia. Como no exercício profético, porém, **a assistência do Espírito não garante a ausência de erro**: somos “vasos de barro” que carregam um tesouro ([[2Co 4.7]]).
 
-### Sinergismo: sentido técnico e sentido amplo
+### Sinergismo: Sentido Técnico e Sentido Amplo
 
 Na história da teologia, “sinergismo” é termo técnico do debate sobre a salvação: a conversão é obra exclusiva de Deus (**monergismo**) ou o ser humano coopera com a graça (**sinergismo**)? No século XVI, a discussão agitou os luteranos e, até hoje, separa calvinistas e arminianos.
 
@@ -82,7 +82,7 @@ Na Idade Média, a **escolástica** (o método das escolas medievais) levou essa
 
 Diante desse histórico, onde recomeçar? A palavra latina *locus*, “lugar”, designa o ponto de partida da teologia, e a resposta proposta é o Espírito Santo em ação constante ao longo de toda a Escritura, que se lê de modo “sobrenaturalista” e conforme a sua dinâmica própria, a “lógica da fé”. O termo “carismático” é tomado no sentido do teólogo Craig Keener: quem defende que os dons espirituais continuam hoje e os pratica, ainda que não pertença a uma igreja pentecostal. E, como todo membro do Corpo de Cristo tem ao menos um dom ([[Rm 12.4-6]]; [[1Co 12.12-30]]), todo cristão é, nesse sentido, carismático.
 
-### Argumentos contra o cessacionismo
+### Argumentos contra o Cessacionismo
 
 Dessa premissa decorre uma crítica ao **cessacionismo**, a ideia de que dons como línguas, profecia e curas terminaram com os apóstolos. Cinco argumentos a sustentam:
 
@@ -100,7 +100,7 @@ A experiência com o Espírito ao longo da história, como a proposta a descreve
 De onde veio o movimento pentecostal que essa teologia quer explicar: Topeka, a rua Azusa e a chegada ao Brasil.
 :::
 
-### Biblicismo crítico
+### Biblicismo Crítico
 
 Uma posição assim pode parecer entusiasmo sem controle. Por isso se adota, com o teólogo Kevin Vanhoozer, o chamado **biblicismo crítico**: *sola Scriptura* significa que somente a Escritura é a autoridade suprema, e não que cada leitor deva interpretá-la sozinho. A Escritura interpreta a si mesma, mas nenhum intérprete tem garantia de que a sua leitura coincide com o texto; por isso as interpretações humanas, da tradição e dos concílios, possuem autoridade secundária (“ministerial”) e podem errar. O “biblicismo ingênuo”, que ignora o auxílio das leituras anteriores, é exatamente o que se quer evitar.
 
@@ -110,19 +110,19 @@ Um quadro de Paul Pomerville contrapõe duas concepções reformadas da Escritur
 
 A quem pertence o trabalho teológico: à igreja, à academia ou a ambas? A resposta começa pela origem da própria teologia.
 
-### A educação cristã como primeira forma de teologia
+### A Educação Cristã Como Primeira Forma de Teologia
 
 A teologia nasceu da vida da igreja. Antes de existirem tratados e credos longos, os cristãos já ensinavam: Jesus ensinou os discípulos e, depois de Pentecostes, os discípulos, cheios do Espírito, passaram a anunciar e a ensinar ([[At 1.8]]; [[At 2.1-12]]). Por isso a **educação cristã** é a primeira forma de trabalho teológico, e a teologia deve ser feita *pela* comunidade de fé, não apenas entregue *a ela* por especialistas que vivem “acima e fora” dela. Nas palavras de A. W. Tozer, a teologia deve ser pregada nos púlpitos, cantada nos hinos, ensinada aos filhos e conversada entre amigos cristãos.
 
 Aplicado aos pentecostais, o princípio significa que a experiência pessoal com Deus não é norma para os outros nem se iguala à Escritura: serve como evidência da fé, não como juíza da fé.
 
-### Fé, crença e desenvolvimento da doutrina
+### Fé, Crença e Desenvolvimento da Doutrina
 
 Convém distinguir **fé**, a relação de confiança e amor com Deus, de **crenças**, as tentativas de verter essa fé em palavras, distinção que se deve ao teólogo Alister McGrath. A teologia clássica conhece uma distinção semelhante, entre *fides qua* (a fé com que se crê) e *fides quae* (a fé que se crê). Os primeiros credos eram breves, como a confissão de que Jesus é Senhor ([[Rm 10.9]]; [[1Co 12.3]]).
 
 As doutrinas têm história. No esquema do teólogo canadense Bernard Lonergan, passa-se da mensagem original às decisões da igreja (como a do concílio de Jerusalém, em [[At 15]]), depois às teorias dos teólogos e, por fim, à reflexão sobre o método. Cada concílio respondeu a uma pergunta de seu tempo: Niceia (325) empregou a palavra *homoousios*, “da mesma substância”, para afirmar a divindade do Filho; Constantinopla (381) afirmou a divindade do Espírito Santo; Éfeso (431) e Calcedônia (451) trataram da unidade da pessoa de Cristo e de suas duas naturezas. Conclui-se que as doutrinas não surgem do nada nem caem do céu, e que isso não relativiza a verdade, mas exige que a linguagem seja revista para que cada geração a compreenda: o que uma geração transmite à outra não é, primeiro, uma doutrina, e sim uma fé viva em Jesus Cristo como Salvador.
 
-### Elitização e teologia manualista
+### Elitização e Teologia Manualista
 
 Com a especialização e com a tradução da fé para a cultura greco-romana, a teologia passou às mãos de especialistas, e quem era protagonista, o povo, tornou-se “assistente”. A teologia da igreja e a da academia deveriam convergir, e não se excluir: todo cristão que pensa é teólogo; os profissionais servem à comunidade, e não lhe ditam as crenças; e a teologia, como lembrou Karl Barth, é assunto da igreja inteira.
 

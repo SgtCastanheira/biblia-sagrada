@@ -10,7 +10,7 @@ Quando Jesus começa a pregar, os Evangelhos falam de fariseus, saduceus, escrib
 
 O que cada palavra quer dizer está no dicionário ([fariseus](/dicionario/fariseus), [saduceus](/dicionario/saduceus) e [escribas](/dicionario/escribas)). Aqui a pergunta é outra: **de onde veio cada grupo, e por quê.**
 
-## A raiz: um povo que voltou com um livro
+## A Raiz: Um Povo que Voltou com um Livro
 
 Quando os judeus voltaram do exílio na Babilônia, não havia mais rei da família de Davi, e o Templo reconstruído era modesto. O que unia o povo era a **Lei de Moisés**. O homem que a pôs no centro foi **Esdras**, sacerdote e “escriba hábil na lei de Moisés” ([[Ed 7.6]]), que tinha preparado o coração “para ensinar em Israel os seus estatutos e as suas ordenanças” ([[Ed 7.10]]).
 
@@ -33,15 +33,15 @@ Ler e explicar: é aí que tudo começa. Um povo que vive de um livro precisa de
 - Depois | Depois do ano 70 d.C., os mestres da Lei passaram a ser chamados de **rabinos**. O que eles ensinavam foi reunido na **Mishná**, por volta de 200 d.C.
 :::
 
-## 167 a.C.: os piedosos
+## 167 a.C.: Os Piedosos
 
-Quando o rei sírio Antíoco IV proibiu a religião de Israel e os Macabeus pegaram em armas (a história está em *Os 400 anos entre os Testamentos*), um grupo se juntou a eles: os **assideus**, do hebraico *hasidim*, “piedosos”. O livro de 1 Macabeus os chama de homens valentes de Israel, todos dedicados à Lei (1 Macabeus 2.42).
+Quando o rei sírio Antíoco IV proibiu a religião de Israel e os Macabeus pegaram em armas (a história está em *Os 400 Anos entre os Testamentos*), um grupo se juntou a eles: os **assideus**, do hebraico *hasidim*, “piedosos”. O livro de 1 Macabeus os chama de homens valentes de Israel, todos dedicados à Lei (1 Macabeus 2.42).
 
 Eles lutavam pela Lei, não pelo poder. Quando os sírios puseram como sumo sacerdote um descendente de Arão chamado Alcimo, os assideus foram os primeiros a aceitar a paz com ele, e ele mandou matar sessenta deles num só dia (1 Macabeus 7.12-16).
 
 Muitos estudiosos pensam que os **fariseus** e os **essênios** vêm desses piedosos. As fontes antigas não dizem isso com todas as letras; é uma hipótese, mas explica bem o que veio depois. Os Macabeus venceram, e os seus descendentes, os Asmoneus, passaram a ser **reis e sumos sacerdotes ao mesmo tempo**. Para muitos judeus fiéis, isso era um escândalo. A partir daí, cada grupo tomou um caminho.
 
-## Os fariseus: a Lei em tudo, para todos
+## Os Fariseus: A Lei em Tudo, para Todos
 
 :::ficha Fariseus
 - O nome | Quase certamente do hebraico *perushim*, “separados”: os que se separavam do que era impuro.
@@ -54,7 +54,7 @@ Muitos estudiosos pensam que os **fariseus** e os **essênios** vêm desses pied
 
 A ideia de tradição está resumida no começo do tratado *Avot*, da Mishná: Moisés recebeu a Lei no Sinai e a passou a Josué, Josué aos anciãos, os anciãos aos profetas, e os profetas aos homens da Grande Assembleia. Para os fariseus, a Lei vinha com um jeito de entendê-la, passado de mestre a discípulo. Jesus não rejeitou a Lei, mas criticou as tradições que, na prática, a anulavam: “invalidando assim a palavra de Deus pela vossa tradição” ([[Mc 7.8-13]]).
 
-## Os saduceus: os sacerdotes e o Templo
+## Os Saduceus: Os Sacerdotes e o Templo
 
 :::ficha Saduceus
 - O nome | Provavelmente de **Zadoque**, o sacerdote que Salomão pôs no lugar de Abiatar ([[1Rs 2.35]]). Ezequiel chama os sacerdotes fiéis de “filhos de Zadoque” ([[Ez 44.15]]).
@@ -67,7 +67,7 @@ A ideia de tradição está resumida no começo do tratado *Avot*, da Mishná: M
 
 Paulo conhecia bem essa divisão. Diante do Sinédrio, parte saduceus e parte fariseus, ele disse: “eu sou fariseu, filho de fariseus; é por causa da esperança da ressurreição dos mortos que estou sendo julgado”, e a assembleia se dividiu ([[At 23.6-9]]).
 
-## Os essênios: a separação
+## Os Essênios: A Separação
 
 :::ficha Essênios
 - O nome | A origem é incerta; talvez venha de uma palavra aramaica para “piedosos”.
@@ -81,7 +81,7 @@ Paulo conhecia bem essa divisão. Diante do Sinédrio, parte saduceus e parte fa
 Como os rolos de Qumran foram achados, em 1947, e o que eles mostram sobre o texto da Bíblia.
 :::
 
-## Os zelotes: a espada
+## Os Zelotes: A Espada
 
 :::ficha Zelotes
 - O nome | De “zelo”: o de Fineias, que “foi zeloso com o meu zelo”, disse o Senhor ([[Nm 25.10-13]]), e o de Matatias, que começou a revolta dos Macabeus por zelo pela Lei (1 Macabeus 2.24-27).
@@ -91,7 +91,7 @@ Como os rolos de Qumran foram achados, em 1947, e o que eles mostram sobre o tex
 - Depois | A guerra terminou com Jerusalém e o Templo destruídos, em 70 d.C. Os últimos sicários resistiram na fortaleza de Massada até 73 ou 74 d.C.
 :::
 
-## Os herodianos: o apoio ao governo
+## Os Herodianos: O Apoio ao Governo
 
 :::ficha Herodianos
 - Quem eram | Só os Evangelhos usam esse nome. O mais provável é que fossem judeus que apoiavam a família de Herodes e, com ela, o domínio romano. No tempo de Jesus, Herodes Antipas governava a Galileia.
@@ -104,13 +104,13 @@ Como os rolos de Qumran foram achados, em 1947, e o que eles mostram sobre o tex
 Quem eram os Herodes que os herodianos apoiavam, e quem mandava em quem: o César, o governador da Síria e o prefeito da Judeia.
 :::
 
-## Cinco respostas para a mesma pergunta
+## Cinco Respostas para a Mesma Pergunta
 
 Diante do domínio estrangeiro, cada grupo escolheu um caminho: os fariseus, guardar a Lei em tudo, no dia a dia de todo o povo; os saduceus, cuidar do Templo e fazer acordo com quem governava; os essênios, separar-se; os zelotes, pegar em armas; os herodianos, apoiar o governo.
 
 Jesus conversou e discutiu com todos eles. Quando os fariseus e os herodianos lhe perguntaram sobre o tributo, respondeu: “Dai, pois, a César o que é de César, e a Deus o que é de Deus” ([[Mc 12.17]]). E escolheu, entre os doze, “Simão, chamado Zelote” e “Mateus, o publicano” ([[Mt 10.3]]), um cobrador de impostos para Roma: dois homens de lados opostos, que passaram a seguir o mesmo Mestre.
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - c. 458 a.C. | Esdras chega a Jerusalém | “Escriba hábil na lei de Moisés” ([[Ed 7.6]])

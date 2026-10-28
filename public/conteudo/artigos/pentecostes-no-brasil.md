@@ -22,7 +22,7 @@ Partiram sem sustento de nenhuma missão. Chegaram a **Belém** em **19 de novem
 A vida, o chamado e o trabalho dos dois pioneiros, em detalhes.
 :::
 
-## O nascimento da Assembleia de Deus (1911)
+## O Nascimento da Assembleia de Deus (1911)
 
 Em junho de 1911, depois de semanas de oração, a irmã **Celina de Albuquerque** foi a primeira a ser batizada no Espírito Santo, falando em outras línguas. Logo outros receberam a mesma experiência. A doutrina dividiu a igreja batista, e o grupo pentecostal — 18 pessoas, além dos missionários — foi desligado.
 
@@ -47,7 +47,7 @@ Dois meses depois da fundação, em agosto de 1911, já havia Escola Dominical e
 A expansão estado por estado, os obreiros, os costumes e o ensino, com o mapa interativo.
 :::
 
-## Como cresceu tão rápido
+## Como Cresceu Tão Rápido
 
 - **Cada crente, um evangelista.** Os novos convertidos testemunhavam nas ruas, nos trabalhos, nas viagens.
 - **Migrantes nordestinos**, que iam e voltavam da Amazônia e depois migraram para o Sudeste, levaram a igreja para todo o país.
@@ -56,7 +56,7 @@ A expansão estado por estado, os obreiros, os costumes e o ensino, com o mapa i
 
 Gunnar Vingren adoeceu e voltou à Suécia, onde morreu em 1933. Daniel Berg passou boa parte da vida viajando pelo Brasil como evangelista e colportor, vendendo Bíblias, e morreu na Suécia em 1963.
 
-## As outras ondas
+## As Outras Ondas
 
 Nas décadas seguintes, novas igrejas pentecostais surgiram no Brasil, com ênfases próprias: nos anos 1950, a Igreja do Evangelho Quadrangular, com as tendas da Cruzada Nacional de Evangelização, e O Brasil para Cristo, de Manoel de Mello; em 1962, a Igreja Pentecostal Deus é Amor. A partir dos anos 1970, surgiram as igrejas chamadas de neopentecostais. No Censo de 2010, cerca de 22% dos brasileiros se declararam evangélicos — a maioria deles, pentecostais —, e as Assembleias de Deus eram a maior igreja evangélica do país.
 

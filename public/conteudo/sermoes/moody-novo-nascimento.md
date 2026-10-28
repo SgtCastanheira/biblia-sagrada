@@ -2,13 +2,13 @@
 
 Não há talvez nenhuma passagem da Palavra de Deus tão conhecida quanto esta. Se eu perguntasse numa reunião se Jesus ensinou a doutrina do novo nascimento, nove em cada dez diriam: “Sim, ensinou”. Mas, se estas palavras são verdadeiras, trazem uma das perguntas mais sérias que existem. Podemos nos enganar sobre muitas coisas, mas não sobre esta. Jesus diz que, sem o novo nascimento, ninguém pode sequer **ver** o reino de Deus — quanto mais herdá-lo. É o abecê do cristianismo.
 
-## Por que Jesus disse isso a Nicodemos
+## Por que Jesus Disse Isso a Nicodemos
 
 Sou muito grato por Jesus ter falado do novo nascimento a Nicodemos, um príncipe dos judeus e mestre da Lei, e não à mulher samaritana, a Mateus, o publicano, ou a Zaqueu. Se tivesse falado só a eles, as pessoas diriam: “Esses publicanos e pecadores precisam se converter; mas eu sou um homem correto”.
 
 Nicodemos era um dos melhores homens de Jerusalém: membro do Sinédrio, ortodoxo, sem nada que o desabonasse. E foi a ele que Jesus disse: “Necessário vos é nascer de novo”.
 
-## O que o novo nascimento não é
+## O que o Novo Nascimento Não É
 
 - **Não é ir à igreja.** Pergunto a muitos se são cristãos, e respondem: “Claro, vou à igreja todo domingo”. Isso não é regeneração.
 - **Não é tentar fazer o que é certo**, nem “virar a página” e tomar uma boa resolução.
@@ -18,7 +18,7 @@ Nicodemos era um dos melhores homens de Jerusalém: membro do Sinédrio, ortodox
 
 Que cada leitor se pergunte, com sinceridade: “Eu nasci de novo? Nasci do Espírito? Passei da morte para a vida?”.
 
-## É obra de Deus
+## É Obra de Deus
 
 “Mas o que posso fazer? Não consigo criar vida em mim.” Claro que não, e não dizemos que consegue. É impossível tornar alguém melhor sem Cristo — e é o que muitos tentam: remendar a velha natureza de Adão. **É preciso uma nova criação.** E, se é criação, é obra de Deus. No primeiro capítulo de Gênesis, o homem não aparece para ajudar: Deus estava sozinho. Quando Cristo redimiu o mundo, também estava sozinho.
 
@@ -26,13 +26,13 @@ Que cada leitor se pergunte, com sinceridade: “Eu nasci de novo? Nasci do Esp�
 
 Não entramos no Reino pelas nossas obras. **Trabalhamos porque somos salvos, e não para sermos salvos.** Trabalhamos a partir da cruz, não em direção a ela. Quando saí de casa e fui para Boston, a minha irmãzinha me escreveu pedindo cuidado com os batedores de carteira. Mas, para ter a carteira batida, eu precisava ter algo no bolso! Assim também: é preciso ter a salvação antes de “desenvolvê-la com temor e tremor” [[Fp 2.12]]. Quando Cristo clamou no Calvário “Está consumado”, falava sério.
 
-## “Como pode ser isso?”
+## “Como Pode Ser Isso?”
 
 Nicodemos perguntou: “Como pode ser isso?”. Muitos dizem: “Explique-me, senão não creio”. Eu não consigo explicar. Jesus disse: “O vento sopra onde quer, e ouves a sua voz, mas não sabes de onde vem nem para onde vai; assim é todo aquele que é nascido do Espírito” [[Jo 3.8]]. Eu não entendo tudo sobre o vento; mas uma menina sabe que ele existe, porque já o sentiu no rosto e viu levar o chapéu de um homem na rua. Eu senti o Espírito de Deus agindo no meu coração tão real e verdadeiramente quanto já senti o vento no rosto.
 
 E vejo homens transformados. Lá numa viela escura de uma grande cidade mora um pobre bêbado. Quando ele chega em casa, os filhos correm a se esconder, e a esposa espera os xingamentos e os golpes. Um dia ele chega e diz: “Fui à reunião e ouvi que, se eu quiser, posso ser convertido. Creio que Deus pode me salvar”. Volte àquela casa algumas semanas depois. Você ouve alguém cantando — não uma canção de bebedeira, mas o velho hino “Rocha eterna”. As crianças se juntam em volta dos joelhos dele, e o rosto da esposa brilha. Não é isso um retrato da regeneração?
 
-## Olhe e viva
+## Olhe e Viva
 
 “Como Moisés levantou a serpente no deserto, assim importa que o Filho do homem seja levantado, para que todo aquele que nele crê não pereça, mas tenha a vida eterna” [[Jo 3.14-15]]. **“Todo aquele”** — repare nisso!
 
@@ -44,7 +44,7 @@ Muitos, hoje, olham para a haste — a igreja. A igreja é boa, mas não salva. 
 
 Um cirurgião de Belfast costumava dizer aos pacientes antes de uma operação: “Olhe bem para a ferida e depois fixe os olhos em mim; não os tire de mim até eu terminar”. Pecador, olhe bem para a sua ferida — e depois fixe os olhos em Cristo e não os tire dele.
 
-## O soldado em Murfreesboro
+## O Soldado em Murfreesboro
 
 Depois de uma batalha da Guerra Civil, eu estava num hospital militar. No meio da noite, um soldado ferido pediu que eu o ajudasse a morrer. Eu disse: “Se pudesse, eu o levaria nos braços para o reino de Deus, mas não posso”. “Quem pode?”, perguntou. “O Senhor Jesus Cristo; Ele veio para isso.” “Ele não pode me salvar; pequei a vida toda.” “Mas Ele veio salvar pecadores.”
 

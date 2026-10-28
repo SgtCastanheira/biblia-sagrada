@@ -1,16 +1,16 @@
 Os 27 livros do Novo Testamento foram escritos em cerca de 50 anos, mas a lista completa, exatamente como a temos, só aparece por escrito no ano 367. O que aconteceu nesse meio-tempo?
 
-## Primeiro vieram as cartas
+## Primeiro Vieram as Cartas
 
 Os primeiros livros do Novo Testamento a serem escritos não foram os Evangelhos, mas cartas: Tiago, Gálatas e 1 Tessalonicenses, por volta de 48–51 d.C. Os apóstolos escreviam para resolver problemas, ensinar e encorajar igrejas. As cartas eram lidas em voz alta no culto e trocadas entre as igrejas: “quando esta carta tiver sido lida entre vós, fazei que também o seja na igreja dos laodicenses” [[Cl 4.16]].
 
 Os Evangelhos foram escritos entre 55 e 95 d.C., para registrar o testemunho dos que conviveram com Jesus antes que eles morressem [[Lc 1.1-4]].
 
-## Escritura desde cedo
+## Escritura desde Cedo
 
 Muito antes de qualquer lista oficial, os escritos apostólicos já eram tratados como Escritura. Pedro coloca as cartas de Paulo ao lado “das outras Escrituras” [[2Pe 3.15-16]]. Paulo cita uma palavra de Jesus registrada em Lucas como “Escritura”, junto com Deuteronômio [[1Tm 5.18]].
 
-## Por que foi preciso fazer uma lista?
+## Por que Foi Preciso Fazer uma Lista?
 
 Três ameaças forçaram a Igreja a definir quais livros eram autoridade:
 
@@ -18,7 +18,7 @@ Três ameaças forçaram a Igreja a definir quais livros eram autoridade:
 - **Os gnósticos** escreviam “evangelhos” secretos com o nome de apóstolos, como o Evangelho de Tomé e o de Judas, cheios de ensinos estranhos.
 - **A perseguição**: quando o imperador Diocleciano mandou queimar as Escrituras (303), os cristãos precisavam saber quais livros valiam a vida.
 
-## Como a Igreja reconheceu os livros
+## Como a Igreja Reconheceu os Livros
 
 A Igreja perguntava, sobre cada livro:
 
@@ -26,7 +26,7 @@ A Igreja perguntava, sobre cada livro:
 - **É ortodoxo?** Está de acordo com a fé ensinada pelos apóstolos?
 - **É usado por toda a Igreja?** É lido no culto nas igrejas de todas as regiões, desde o princípio?
 
-## As etapas
+## As Etapas
 
 :::tempo
 - c. 48–95 | Os livros são escritos | Cartas, Evangelhos, Atos e Apocalipse.
@@ -39,7 +39,7 @@ A Igreja perguntava, sobre cada livro:
 
 Hebreus (autor desconhecido) e Apocalipse foram os mais discutidos, mas acabaram aceitos em toda a Igreja. Livros muito estimados, como a *Didaquê* e o *Pastor de Hermas*, eram lidos com proveito, mas não como Escritura.
 
-## A Igreja não criou o cânon
+## A Igreja Não Criou o Cânon
 
 Os concílios não deram autoridade a livros que não a tinham: reconheceram a autoridade que os livros já tinham, porque vinham dos apóstolos e o Espírito Santo os havia inspirado [[2Pe 1.20-21]]. Como disse um estudioso, a Igreja não fez o cânon; o cânon é que fez a Igreja.
 

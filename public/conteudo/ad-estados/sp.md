@@ -7,7 +7,7 @@ A Assembleia de Deus chegou a São Paulo pelo porto de Santos, levada por pentec
 - Simon e Linnea Lundgren | missionários suecos
 :::
 
-## De onde saíram
+## De Onde Saíram
 
 Em **1924**, um grupo de pentecostais vindos do **Recife** começou a evangelizar no bairro da **Ponta da Praia**, em Santos: os casais **Vicente e Hermínia Lameira** e **Manoel Garcês** e a esposa. A lista do *Mensageiro da Paz* fala de “crentes de Pernambuco” já em 1923.
 
@@ -15,7 +15,7 @@ Em **1924**, um grupo de pentecostais vindos do **Recife** começou a evangeliza
 Numa casa perto do porto, dois casais nordestinos reúnem os primeiros interessados para um culto pentecostal. Dias depois, dois missionários suecos chegam para visitá-los.
 :::
 
-## Como a igreja foi construída
+## Como a Igreja Foi Construída
 
 Dias depois, chegaram **Daniel Berg e Gunnar Vingren**, e Berg ficou para organizar oficialmente a igreja — a primeira Assembleia de Deus do estado de São Paulo. Em **15 de novembro de 1927**, numa casa alugada na **Vila Carrão**, na zona leste da capital, Daniel e Sara Berg e os missionários **Simon e Linnea Lundgren** fizeram o primeiro culto da igreja na cidade de São Paulo.
 

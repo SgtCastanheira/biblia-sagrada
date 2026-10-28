@@ -18,7 +18,7 @@ import { Sheets } from '../../shared/sheets';
 
     <a class="card history" matRipple [routerLink]="['/artigo', 'avivamentos-desde-atos']">
       <mat-icon>local_fire_department</mat-icon>
-      <span><small>A história</small>Os avivamentos desde Atos: como começou cada um, o que mudou e o que foi pregado</span>
+      <span><small>A história</small>Os Avivamentos desde Atos: como começou cada um, o que mudou e o que foi pregado</span>
       <mat-icon class="go">chevron_right</mat-icon>
     </a>
 

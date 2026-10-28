@@ -41,7 +41,7 @@ A palavra aparece só três vezes no Novo Testamento:
 
 **O que faziam:** anunciavam o evangelho a quem ainda não cria, muitas vezes abrindo trabalho em lugares novos, com sinais que confirmavam a Palavra [[At 8.6-7]].
 
-## Pastores e mestres
+## Pastores e Mestres
 
 **Grego:** *poimḗn* — pastor de ovelhas; *didáskalos* — mestre, quem ensina.
 
@@ -49,9 +49,9 @@ Jesus é o modelo: “Eu sou o bom pastor; o bom pastor dá a sua vida pelas ove
 
 Como nome de ministério, “pastores” aparece só em [[Ef 4.11]]. Mas o verbo *apascentar* é a tarefa dos presbíteros: “apascentai o rebanho de Deus” [[1Pe 5.2]] [[At 20.28]].
 
-**Pastores e mestres:** pelo modo como a frase está construída em grego, muitos entendem que é um só ministério — o pastor que ensina; outros veem dois ministérios próximos. Os mestres aparecem também em [[At 13.1]] e [[1Co 12.28]], e Tiago adverte: “não sejais muitos de vós mestres, sabendo que receberemos um juízo mais severo” [[Tg 3.1]]. Veja também a aula [Pastores e ovelhas](/artigo/pastores-e-ovelhas).
+**Pastores e mestres:** pelo modo como a frase está construída em grego, muitos entendem que é um só ministério — o pastor que ensina; outros veem dois ministérios próximos. Os mestres aparecem também em [[At 13.1]] e [[1Co 12.28]], e Tiago adverte: “não sejais muitos de vós mestres, sabendo que receberemos um juízo mais severo” [[Tg 3.1]]. Veja também a aula [Pastores e Ovelhas](/artigo/pastores-e-ovelhas).
 
-## Presbíteros e bispos
+## Presbíteros e Bispos
 
 **Grego:** *presbýteros* — “ancião”, homem mais velho e respeitado; *epískopos* — “supervisor”, quem cuida e vigia.
 
@@ -87,7 +87,7 @@ Paulo saúda “os bispos e diáconos” de Filipos [[Fp 1.1]] e dá as qualific
 
 O povo de Deus sempre teve quem servisse e liderasse: os **sacerdotes**, filhos de Arão, e os **levitas** no culto [[Êx 28.1]] [[Nm 3.5-10]] (veja a tribo de [Levi](/tribos/levi)); os **profetas**; e os **anciãos de Israel**, como os setenta que receberam do Espírito para ajudar Moisés [[Nm 11.16-17]]. Jetro também aconselhou Moisés a repartir o trabalho com “homens de capacidade, tementes a Deus” [[Êx 18.21]]. A tradição dos anciãos passou para as sinagogas e daí para a igreja.
 
-## Na igreja hoje
+## Na Igreja Hoje
 
 :::nota
 **A Bíblia dá os princípios; cada igreja se organiza.** O que está acima é o que o texto bíblico diz. A forma de organizar os ministérios — os nomes, a ordem e a consagração — varia entre as igrejas, e todas procuram ser fiéis às Escrituras.
@@ -109,6 +109,6 @@ O povo de Deus sempre teve quem servisse e liderasse: os **sacerdotes**, filhos 
 | **Presbítero ou bispo** (*presbýteros*, *epískopos*): ancião, supervisor | [[At 20.17]] [[At 20.28]] [[1Tm 3.1-7]] [[Tt 1.5-9]] |
 | **Diácono** (*diákonos*): servo | [[At 6.1-6]] [[Fp 1.1]] [[1Tm 3.8-13]] |
 
-## Para a vida
+## Para a Vida
 
 Todo ministério é serviço, e todo crente tem um lugar no corpo de Cristo [[1Co 12.27]]. Aos que lideram, a Bíblia pede caráter antes de capacidade e exemplo antes de autoridade [[1Pe 5.3]]. Aos que são liderados, pede reconhecimento e oração: “obedecei a vossos guias… porque velam por vossas almas” [[Hb 13.17]].

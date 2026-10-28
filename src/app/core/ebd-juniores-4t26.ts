@@ -87,7 +87,7 @@ const L: CompactLesson[] = [
     ],
     qs: [['O que o povo pediu a Roboão?', '1Rs 12.4'], ['Quem deu o bom conselho?', '1Rs 12.6-7'], ['Quantas tribos ficaram com Jeroboão?', '1Rs 12.20'], 'Por que Roboão ouviu os jovens?', 'Quem são os seus bons conselheiros?'],
     life: 'Antes de uma decisão importante, **peça conselho** a pelo menos uma pessoa sábia (pai, mãe, professor, líder) e ore.',
-    more: 'Veja a divisão do reino em [Os cativeiros de Israel](/artigo/cativeiros-de-israel).',
+    more: 'Veja a divisão do reino em [Os Cativeiros de Israel](/artigo/cativeiros-de-israel).',
   },
   {
     n: 4,
@@ -278,7 +278,7 @@ const L: CompactLesson[] = [
     ],
     qs: [['Quem foi o último rei de Israel?', '2Rs 17.1'], ['Quem conquistou Samaria?', '2Rs 17.5-6'], ['Por que Israel foi levado cativo?', '2Rs 17.7'], 'Quem avisou o povo?', 'Que aviso de Deus você tem ignorado?'],
     life: 'Quando ouvir um **aviso** da Bíblia, dos pais ou de um líder, pare e pense antes de continuar. Anote um aviso que você vai levar a sério.',
-    more: 'Veja o cativeiro no mapa e no estudo [Os cativeiros de Israel](/artigo/cativeiros-de-israel).',
+    more: 'Veja o cativeiro no mapa e no estudo [Os Cativeiros de Israel](/artigo/cativeiros-de-israel).',
   },
   {
     n: 11,
@@ -306,7 +306,7 @@ const L: CompactLesson[] = [
     ],
     qs: [['O que Senaqueribe escreveu a Ezequias?', '2Rs 19.10'], ['O que Ezequias fez com a carta?', '2Rs 19.14'], ['O que ele pediu a Deus?', '2Rs 19.19'], 'Como Deus respondeu?', 'Que “carta” você precisa entregar a Deus?'],
     life: 'Todos os dias desta semana, **leve a Deus** um problema real em oração e anote como ele responde.',
-    more: 'Leia [2 Reis 19](/ler/2KI/19) e veja o contexto assírio em [Os cativeiros de Israel](/artigo/cativeiros-de-israel).',
+    more: 'Leia [2 Reis 19](/ler/2KI/19) e veja o contexto assírio em [Os Cativeiros de Israel](/artigo/cativeiros-de-israel).',
   },
   {
     n: 12,
@@ -361,7 +361,7 @@ const L: CompactLesson[] = [
     ],
     qs: [['Quantos anos Josias tinha ao reinar?', '2Rs 22.1'], ['O que acharam no templo?', '2Rs 22.8'], ['O que o rei fez ao ouvir a Lei?', '2Rs 22.11'], 'O que fez de Josias um rei diferente?', 'O que a Bíblia pede de você esta semana?'],
     life: 'Leia **um trecho da Bíblia por dia**, em voz alta, com um familiar. Combine um horário e anote o que descobriu.',
-    more: 'Leia [2 Reis 22](/ler/2KI/22) e veja o cativeiro que veio depois em [Os cativeiros de Israel](/artigo/cativeiros-de-israel).',
+    more: 'Leia [2 Reis 22](/ler/2KI/22) e veja o cativeiro que veio depois em [Os Cativeiros de Israel](/artigo/cativeiros-de-israel).',
   },
 ];
 

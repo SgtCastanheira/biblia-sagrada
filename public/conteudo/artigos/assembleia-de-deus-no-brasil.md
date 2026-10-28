@@ -28,13 +28,13 @@ O mapa interativo mostra o caminho, etapa por etapa:
 **O jeito sueco-nordestino.** O sociólogo Paul Freston descreve o jeito das primeiras Assembleias de Deus como um “ethos sueco-nordestino”: a piedade simples e rigorosa dos missionários suecos misturada com a cultura patriarcal do Nordeste, de onde vinha grande parte dos membros. Isso marcou a igreja por décadas: a liturgia, os costumes e a liderança.
 :::
 
-## Estado por estado
+## Estado por Estado
 
 [Abra a história completa de cada estado](/assembleia-de-deus) e veja tudo [ano a ano na linha do tempo](/assembleia-de-deus/linha-do-tempo) — escolha o estado e veja no mapa de onde saíram os pioneiros e como a igreja foi construída ali. Abaixo, o resumo.
 
 O jornal *Mensageiro da Paz* publicou a lista dos primeiros passos da igreja em cada estado, e as igrejas estaduais guardam as suas próprias histórias. Elas mostram um padrão: a maioria dos pioneiros **saiu de Belém** — missionários enviados, obreiros e, muitas vezes, crentes comuns que voltavam para a sua terra. As fontes nem sempre concordam; onde há divergência, isso aparece. No [mapa estado por estado](/mapas/assembleia-de-deus-estados), linhas douradas ligam a cidade de onde cada pessoa saiu à cidade aonde chegou.
 
-### Os que vieram de fora do Brasil
+### Os que Vieram de Fora do Brasil
 - **Gunnar Vingren e Daniel Berg** (1910) e **Otto e Adina Nelson** (1914) vieram dos Estados Unidos, onde moravam.
 - **Samuel e Lina Nyström** (1916) e **Frida Strandberg** (1917) foram os primeiros missionários enviados oficialmente pela **Igreja Filadélfia de Estocolmo**, na Suécia. Depois vieram outros suecos, como **Joel e Signe Carlson** (1918) e **Gustav Nordlund**.
 
@@ -74,13 +74,13 @@ O jornal *Mensageiro da Paz* publicou a lista dos primeiros passos da igreja em 
 - **Mato Grosso do Sul (1944):** Juvenal Roque de Andrade começou a igreja em Campo Grande — que, na época, ainda fazia parte de Mato Grosso (veja abaixo por que as datas divergem).
 - **Distrito Federal (1957–1959):** irmãos de vários estados chegaram em 1957 para trabalhar na construção de Brasília; a igreja foi fundada em Taguatinga, em maio de 1959.
 
-### Quem sofreu para a igreja chegar
+### Quem Sofreu para a Igreja Chegar
 
 :::leia irmaos-perseguidos
 Bíblias queimadas, casas apedrejadas, uma prisão e o que a lei dizia: os irmãos perseguidos.
 :::
 
-### Por que as histórias divergem
+### Por que as Histórias Divergem
 
 Quem compara as fontes encontra datas e nomes diferentes para o mesmo lugar. Quase sempre não é que alguém mentiu: as fontes estão contando **coisas diferentes**, ou contando **do ponto de vista de quem escreveu**.
 
@@ -101,15 +101,15 @@ Por isso, neste estudo, quando as fontes discordam, as versões aparecem lado a 
 **E a sua cidade?** A história de cada cidade está guardada nas igrejas locais: nas atas, nos livros de batismo e na memória dos irmãos mais antigos. Vale a pena perguntar a eles de onde veio quem pregou primeiro — e registrar.
 :::
 
-## Como os obreiros eram separados
+## Como os Obreiros Eram Separados
 
 A palavra que a igreja usa vem da Bíblia. Em Antioquia, “disse o Espírito Santo: **Separai-me** a Barnabé e a Saulo para a obra a que os tenho chamado. Então, depois que jejuaram, oraram e lhes impuseram as mãos, os despediram” [[At 13.2-3]]. Por isso, nas Assembleias de Deus, consagrar um obreiro é **separá-lo**: a igreja reconhece um chamado, ora e impõe as mãos [[1Tm 4.14]]. E Paulo adverte: “a ninguém imponhas precipitadamente as mãos” [[1Tm 5.22]] — por isso o obreiro é “primeiro provado” [[1Tm 3.10]].
 
-### Nos primeiros anos (1911–1930): missionários e obreiros leigos
+### Nos Primeiros Anos (1911–1930): Missionários e Obreiros Leigos
 
 No começo, não havia escada de cargos. Os missionários suecos eram os pastores e decidiam quase tudo; os irmãos brasileiros pregavam nas casas, nas ruas e nas vilas, abriam pontos de pregação e dirigiam cultos. Segundo a história da denominação, os primeiros pastores brasileiros foram **Isidoro Filho**, separado em 1912, e **Absalão Piano**, em 1913.
 
-### Eram casados antes de ser pastores?
+### Eram Casados Antes de Ser Pastores?
 
 Os próprios pioneiros mostram que, no começo, o casamento **não era condição** para o ministério:
 
@@ -122,7 +122,7 @@ Os próprios pioneiros mostram que, no começo, o casamento **não era condiçã
 
 Com o tempo, as igrejas passaram a dar mais peso às qualificações de [[1Tm 3.2-5]]: o obreiro deve ser “marido de uma só mulher” e governar “bem a sua própria casa (pois, se alguém não sabe governar a sua própria casa, como cuidará da igreja de Deus?)”. Hoje, em muitos ministérios, ser casado é um dos requisitos para a separação a cargos como presbítero, evangelista e pastor, junto com anos de membresia, bom testemunho, um curso de teologia e a aprovação da igreja. **Não há uma regra única:** os critérios variam de um ministério e de uma convenção para outra.
 
-### A virada de 1930: os brasileiros assumem
+### A Virada de 1930: Os Brasileiros Assumem
 
 A tensão entre missionários e pastores brasileiros foi crescendo. Em **1926**, uma conferência no Rio de Janeiro reuniu só missionários suecos, sem nenhum obreiro brasileiro — e, segundo os pesquisadores, a partir daí o descontentamento aumentou. Depois de uma reunião preparatória em Natal, em fevereiro de 1929, a primeira **Convenção Geral** se reuniu em **setembro de 1930**, com onze missionários suecos e vinte e três líderes brasileiros. Ali os missionários passaram a liderança das Assembleias de Deus aos pastores brasileiros.
 
@@ -130,11 +130,11 @@ A tensão entre missionários e pastores brasileiros foi crescendo. Em **1926**,
 Missionários suecos e pastores brasileiros discutem o futuro da obra. Ao final, a liderança passa aos brasileiros — mas a mesma reunião limita o que as mulheres podem fazer na igreja.
 :::
 
-### O pastor-presidente e os ministérios
+### O Pastor-Presidente e os Ministérios
 
-Com a igreja crescendo, cada **ministério** (ou **campo**) passou a ser liderado por um **pastor-presidente**, com uma igreja-sede, as congregações e os pontos de pregação. Os obreiros são separados em etapas — auxiliar (ou cooperador), diácono, presbítero, evangelista e pastor —, com a aprovação da igreja local e da convenção. Pesquisadores comparam o pastor-presidente a um bispo regional: ele cuida de todas as congregações do seu campo. Veja o estudo [Os ministérios na Bíblia](/artigo/ministerios-na-biblia).
+Com a igreja crescendo, cada **ministério** (ou **campo**) passou a ser liderado por um **pastor-presidente**, com uma igreja-sede, as congregações e os pontos de pregação. Os obreiros são separados em etapas — auxiliar (ou cooperador), diácono, presbítero, evangelista e pastor —, com a aprovação da igreja local e da convenção. Pesquisadores comparam o pastor-presidente a um bispo regional: ele cuida de todas as congregações do seu campo. Veja o estudo [Os Ministérios na Bíblia](/artigo/ministerios-na-biblia).
 
-## As mulheres na obra
+## As Mulheres na Obra
 
 Desde o começo, as mulheres estiveram no centro da obra: **Celina de Albuquerque** foi a primeira a receber o batismo no Espírito, e **Frida Vingren** pregava, ensinava e escrevia. Em 1930, porém, a Convenção restringiu o ministério feminino. Até hoje as convenções tratam o assunto de forma diferente: a **CGADB** não ordena mulheres como pastoras, enquanto a **CONAMAD** e a **CADB** ordenam mulheres.
 
@@ -142,7 +142,7 @@ Desde o começo, as mulheres estiveram no centro da obra: **Celina de Albuquerqu
 A pioneira que defendeu o seu ministério com a Bíblia na Convenção de 1930.
 :::
 
-## Os usos e costumes
+## Os Usos e Costumes
 
 Entre **1930 e 1938**, as Assembleias Gerais da Convenção discutiram longamente a identidade da igreja: a conduta dos obreiros e o que hoje se chama de **usos e costumes** — o jeito de se vestir, a aparência e o que o crente deve evitar. O rigor vinha da piedade dos missionários e da cultura da época, e buscava aplicar textos como [[1Pe 3.3-4]]. Por causa da Segunda Guerra Mundial, não houve assembleias em 1939 e em 1945.
 
@@ -152,7 +152,7 @@ Com o tempo, as igrejas mudaram muito. Em **2011**, a CGADB reformou o seu estat
 **Costume e doutrina.** As Assembleias de Deus distinguem a **doutrina**, que vem da Bíblia e não muda, dos **costumes**, que procuram aplicar a Bíblia a cada tempo. Paulo ensina a fazer tudo “para glória de Deus” [[1Co 10.31]] e a respeitar a consciência do irmão: “cada um esteja inteiramente convicto em sua própria mente” [[Rm 14.5]].
 :::
 
-## O ensino: do jornal às faculdades
+## O Ensino: Do Jornal às Faculdades
 
 A Escola Dominical veio junto com a igreja, em 1911. As primeiras lições saíram no jornal *Boa Semente*; em 1930 nasceram as *Lições Bíblicas* e o jornal *Mensageiro da Paz*, dirigido no começo por Gunnar Vingren; em 1940 veio a CPAD, a editora da igreja.
 
@@ -162,7 +162,7 @@ Para preparar os obreiros, o casal de missionários **João Kolenda Lemos** e **
 Como a Escola Dominical nasceu e chegou às Assembleias de Deus.
 :::
 
-## A organização e as convenções
+## A Organização e as Convenções
 
 Em 1946, numa assembleia no Recife, a Convenção Geral foi registrada como pessoa jurídica. Os ministérios cresceram com autonomia, e com o tempo surgiram outras convenções: a de Madureira, em 1958, que se separou da CGADB em 1989, e outras depois. Todas reconhecem a mesma origem em Belém e a mesma fé.
 
@@ -170,7 +170,7 @@ Em 1946, numa assembleia no Recife, a Convenção Geral foi registrada como pess
 A Convenção Geral, as convenções que vieram depois e a separação de 1989, com a árvore das Assembleias de Deus.
 :::
 
-## Os números
+## Os Números
 
 | Ano | Membros (censo do IBGE) |
 |---|---|
@@ -179,7 +179,7 @@ A Convenção Geral, as convenções que vieram depois e a separação de 1989, 
 
 A própria denominação falava em cerca de 22 milhões de membros em 2021, somando as convenções.
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - 1910 | Belém | Chegam Gunnar Vingren e Daniel Berg (19 de novembro)
@@ -198,6 +198,6 @@ A própria denominação falava em cerca de 22 milhões de membros em 2021, soma
 - 2011 | Estatuto da CGADB | Menos itens de usos e costumes
 :::
 
-## Para a vida
+## Para a Vida
 
 A Assembleia de Deus cresceu porque gente comum levou o evangelho para onde ia, e porque a igreja separava obreiros com oração e cuidado, como em Antioquia [[At 13.2-3]]. “Quem despreza o dia das coisas pequenas?” [[Zc 4.10]] — um pequeno grupo em Belém se tornou milhões em todo o Brasil.

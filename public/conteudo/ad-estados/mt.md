@@ -12,7 +12,7 @@ Em Mato Grosso, a Assembleia de Deus nasceu em duas pontas do estado e de dois j
 - Sebastião Rodrigues de Souza | pastor de Cuiabá de 1974 a 2020
 :::
 
-## Cuiabá em 1936: a cidade do rio
+## Cuiabá em 1936: A Cidade do Rio
 
 Em 1936, Cuiabá era uma cidade de beira de rio. Segundo o documento da Assembleia Legislativa, a economia girava em torno das margens do rio Cuiabá, e era ali que se concentrava a população. No ano seguinte, em novembro de 1937, Getúlio Vargas fechou o Congresso e começou o Estado Novo; e, em 1938, o governo lançou a Marcha para o Oeste, que mandava gente para o interior.
 
@@ -30,7 +30,7 @@ O primeiro a “semear a semente da salvação” em Cuiabá foi **Eduardo Pablo
 **Sobre o nome.** O documento da Assembleia Legislativa escreve “Eduardo Pablo Joerke” (e “Pabloe”); a lista do jornal *Mensageiro da Paz* escreve “Joerck”. Pode ser a mesma pessoa com grafias diferentes.
 :::
 
-## O padre e o medo
+## O Padre e o Medo
 
 **Quem se opôs a ele?** Segundo o documento, **um padre local**, que não é nomeado. O texto conta que “o início do movimento pentecostal na cidade de Cuiabá foi marcado por perseguição e intolerância”:
 - o padre ficou irritado ao saber dos trabalhos do pastor e **queimou em praça pública as Bíblias e os folhetos** que ele tinha dado;
@@ -45,7 +45,7 @@ Joerke continuou. O texto diz que ele persistiu “pacientemente” e que, “ao
 Os casos de perseguição aos pioneiros em todo o Brasil, o que a lei dizia e o que não se sabe.
 :::
 
-## 1941–1944: do pequeno grupo à igreja
+## 1941–1944: Do Pequeno Grupo à Igreja
 
 Em **1941**, Joerke voltou a Londrina, deixando em Cuiabá um pequeno grupo de crentes e o irmão **Rodrigues Alves** à frente dos trabalhos. Uma dissertação da PUC Goiás conta que o casal **Rodrigues Alves Ferreira** e a esposa eram presbiterianos que visitaram a Assembleia de Deus em Goiânia, converteram-se ao pentecostalismo e depois, mesmo morando em Cuiabá, se tornaram membros da igreja de Ribeirão Preto (SP).
 
@@ -65,7 +65,7 @@ Foi só em **7 de maio de 1944** que a igreja foi oficialmente fundada, na casa 
 - Cuiabá | Votuporanga (SP) | Eduardo Pablo Joerke | 1974 | foi para a igreja de onde veio Sebastião
 :::
 
-## 1948–1954: Castelo, Joerke e o primeiro templo
+## 1948–1954: Castelo, Joerke e o Primeiro Templo
 
 Em **1948**, o pastor **Oscar Castelo** assumiu a igreja, e a congregação passou para o bairro Quilombo, num salão cedido pelo irmão Máximo, comandante da Polícia Militar. Joaquim Honório Tostes voltou a Cuiabá e batizou mais trinta crentes. Joerke estava em Londrina e só voltou em **1950**. Em **1952**, Castelo mudou-se para São Paulo; seu sucessor, **Antonio Domingues**, não se adaptou à cidade e pediu a Joerke que cuidasse da igreja.
 
@@ -75,7 +75,7 @@ A partir de Cuiabá, ele levou a pregação a São Gonçalo, Bom Sucesso, Barran
 
 Nessa época, as irmãs organizaram o primeiro **círculo de oração** da cidade, com **Umbelina Gomes** como dirigente. O documento conta que, em 1956, ela profetizou que Deus daria “um grande templo a esta cidade”.
 
-## 1974: a troca de igrejas
+## 1974: A Troca de Igrejas
 
 :::cena Votuporanga (SP) · 1974
 Um pastor evangelista volta de São Paulo, onde ajudou na Escola Bíblica do pastor Cícero Canuto de Lima. Pelo caminho, para em Votuporanga e encontra um pastor que entende de construção civil. A igreja de Cuiabá estava pequena demais para os novos crentes.
@@ -97,7 +97,7 @@ Em **12 de dezembro de 1974**, Sebastião assumiu a igreja de Cuiabá, na presen
 
 **A morte.** O pastor Sebastião morreu em **8 de julho de 2020**, aos 88 anos, de Covid-19, poucos dias depois do filho, Rubens Siro de Souza.
 
-## O norte e o interior: a igreja acompanha a marcha
+## O Norte e o Interior: A Igreja Acompanha a Marcha
 
 O interior de Mato Grosso mudou de rosto depois dos anos 1970:
 - **Norte, 1923–1924.** Antes de tudo isso, o avivamento já estava no noroeste do estado, hoje Rondônia: em **1923**, **Elói Bispo de Sena**, batizado por Paul Aenis, pregou sete dias em Generoso Ponce; em **1924**, voltou e encontrou **60 crentes, 25 batizados no Espírito Santo**, segundo o jornal *Boa Semente*, de Belém.

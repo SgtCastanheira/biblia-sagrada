@@ -8,7 +8,7 @@ Em 1522, alguns amigos comeram salsichas na Quaresma, desafiando o jejum obrigat
 
 Em 1529, Lutero e Zuínglio se encontraram em Marburgo para unir os protestantes. Concordaram em 14 de 15 pontos, mas não na Ceia: Lutero defendia a presença real de Cristo no pão e no vinho (“isto é o meu corpo”), e Zuínglio, que a Ceia é um memorial [[Lc 22.19]]. Saíram sem acordo. Zuínglio morreu em 1531, na batalha de Kappel, acompanhando como capelão as tropas de Zurique.
 
-## Os anabatistas: igreja de crentes
+## Os Anabatistas: Igreja de Crentes
 
 Alguns jovens discípulos de Zuínglio, como Conrad Grebel e Félix Manz, acharam que a Reforma devia ir mais longe. Lendo o Novo Testamento, concluíram que o batismo é para quem crê e confessa a fé [[At 2.38]], [[At 8.36-38]], e não para bebês. Em 21 de janeiro de 1525, numa casa em Zurique, Georg Blaurock pediu a Grebel que o batizasse — o primeiro “rebatismo” de adultos. Por isso foram chamados de anabatistas (“rebatizadores”).
 
@@ -26,13 +26,13 @@ Calvino pregava quase todos os dias, escreveu comentários sobre quase toda a B�
 
 Um episódio sombrio marcou o seu tempo: em 1553, Miguel Servet, que negava a Trindade, foi queimado em Genebra, com o apoio de Calvino — algo que hoje os próprios reformados lamentam. Calvino pediu para ser enterrado sem lápide, num túmulo comum.
 
-## A Reforma chega ao Brasil (1557)
+## A Reforma Chega ao Brasil (1557)
 
 Pouca gente sabe: o primeiro culto protestante das Américas foi celebrado no Brasil. Em 1555, o francês Nicolau Durand de Villegagnon fundou a França Antártica numa ilha da baía de Guanabara, no Rio de Janeiro, e pediu pastores a Calvino. Em 10 de março de 1557, chegaram pastores e colonos de Genebra, que celebraram ali a primeira Ceia protestante do continente.
 
 Villegagnon logo se voltou contra eles. Expulsos, alguns tentaram voltar e foram presos. Exigiu-se que escrevessem a sua fé: em doze horas, redigiram a **Confissão de Fé da Guanabara** (1558). Por causa dela, três deles — Jean du Bourdel, Matthieu Verneuil e Pierre Bourdon — foram estrangulados e lançados ao mar. São considerados os primeiros mártires protestantes das Américas.
 
-## Na França e além
+## Na França e Além
 
 Os protestantes franceses, os **huguenotes**, chegaram a ser cerca de 10% da população. Sofreram guerras e massacres — o pior foi o da noite de São Bartolomeu (1572), quando milhares foram mortos em Paris e em outras cidades. A fé reformada se espalhou pela Holanda, pela Escócia (com John Knox), pela Hungria e, depois, pela América do Norte.
 

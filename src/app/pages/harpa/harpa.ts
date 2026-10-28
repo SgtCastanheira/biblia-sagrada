@@ -21,7 +21,7 @@ import { SourcesBox } from '../../shared/sources-box';
 
     <a class="card row" matRipple routerLink="/artigo/harpa-crista">
       <span class="badge"><mat-icon>history_edu</mat-icon></span>
-      <span class="texts"><span class="meta">1921–hoje</span><span class="name">A história da Harpa Cristã</span><span class="desc">Do Cantor Pentecostal aos 640 hinos: quem organizou, traduziu e escreveu.</span></span>
+      <span class="texts"><span class="meta">1921–hoje</span><span class="name">A História da Harpa Cristã</span><span class="desc">Do Cantor Pentecostal aos 640 hinos: quem organizou, traduziu e escreveu.</span></span>
       <mat-icon class="go">chevron_right</mat-icon>
     </a>
 

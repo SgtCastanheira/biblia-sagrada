@@ -22,7 +22,7 @@ Com apenas 16 anos, começou a traduzir o Novo Testamento para o português, a p
 
 A primeira Bíblia completa em português foi, portanto, publicada mais de 60 anos depois da morte de Almeida.
 
-## As revisões de Almeida
+## As Revisões de Almeida
 
 A língua muda, e a tradução de Almeida foi sendo revisada para acompanhar o português. As edições mais conhecidas são:
 
@@ -33,7 +33,7 @@ A língua muda, e a tradução de Almeida foi sendo revisada para acompanhar o p
 
 A versão Almeida que acompanha este aplicativo é uma revisão em domínio público.
 
-## Outras traduções
+## Outras Traduções
 
 - **Padre Antônio Pereira de Figueiredo** traduziu a Bíblia da Vulgata para o português entre 1778 e 1790 — a primeira tradução católica completa.
 - No século XX vieram traduções católicas como a **Ave-Maria** (1959) e a **Bíblia de Jerusalém** (edição brasileira de 1981), e evangélicas como a **Nova Tradução na Linguagem de Hoje** (2000) e a **Nova Versão Internacional** (2001).

@@ -7,7 +7,7 @@ Mas, vindo a plenitude dos tempos, Deus enviou seu Filho, nascido de mulher, nas
 — [[Gl 4.4]]
 :::
 
-## As pistas escondidas no Evangelho
+## As Pistas Escondidas no Evangelho
 
 Os Evangelhos não marcam um dia no calendário, mas deixam pistas. A primeira é o ano. Jesus nasceu no tempo de César Augusto, quando saiu o decreto de um recenseamento, e Quirínio era governador da Síria ([[Lc 2.1-3]]); e foi “no tempo do rei Herodes” ([[Mt 2.1]]). Como Herodes morreu no ano 4 a.C., Jesus nasceu antes disso, provavelmente entre 6 e 4 a.C. (por que a conta dos anos ficou “errada” está no verbete [Anno Domini](/dicionario/anno-domini)). A data do recenseamento de Quirínio é um enigma que os historiadores ainda discutem.
 
@@ -24,9 +24,9 @@ Quem eram os pastores que receberam a notícia naquela noite, e por que Deus a d
 
 Se o Evangelho não marcou o dia, alguém marcou. Quem foi, e por quê?
 
-## Quem escolheu o 25 de dezembro?
+## Quem Escolheu o 25 de Dezembro?
 
-### Maio, abril ou janeiro?
+### Maio, Abril ou Janeiro?
 
 Nos primeiros séculos, os cristãos não tinham uma festa do nascimento de Jesus; a grande festa era a Páscoa. Quando começaram a perguntar pela data, as respostas foram várias:
 
@@ -37,17 +37,17 @@ Nos primeiros séculos, os cristãos não tinham uma festa do nascimento de Jesu
 
 ![O mês de dezembro desenhado no Cronógrafo de 354](imagens/calendario-cronografo.jpg "O mês de dezembro no Cronógrafo de 354, o calendário romano que traz a primeira data segura do Natal, numa cópia feita séculos depois. A figura lembra as Saturnais, com os dados do jogo e uma tocha. Domínio público, via Wikimedia Commons.")
 
-### Os dois suspeitos
+### Os Dois Suspeitos
 
 Por que justo o 25 de dezembro? Os historiadores têm dois suspeitos, e cada um tem os seus defensores.
 
-:::ficha Suspeito 1: a festa do Sol
+:::ficha Suspeito 1: A Festa do Sol
 - O que diz | No Império Romano, o 25 de dezembro era o “nascimento do Sol Invicto”, perto do solstício de inverno, quando os dias voltam a crescer no hemisfério norte, e logo depois das Saturnais, a festa romana de 17 a 23 de dezembro. A Igreja teria escolhido a data para dar sentido cristão a uma festa que o povo já celebrava, lembrando que Cristo é “o sol da justiça” ([[Ml 4.2]]).
 - O que pesa a favor | O mesmo calendário de 354 que traz o Natal registra, no 25 de dezembro, a festa do “Invicto”. E pregadores cristãos dos séculos seguintes compararam o nascimento de Cristo ao nascer do sol, para tirar o povo do culto ao astro.
 - O que pesa contra | Não há prova de que a festa do Sol no dia 25 seja mais antiga que a cristã. O imperador Aureliano deu destaque ao culto do Sol em 274, mas os documentos não mostram em que dia era a festa.
 :::
 
-:::ficha Suspeito 2: a conta da cruz
+:::ficha Suspeito 2: A Conta da Cruz
 - O que diz | Muitos cristãos antigos criam que Jesus tinha sido concebido no mesmo dia do ano em que morreu. No Ocidente, a morte era datada em 25 de março; nove meses depois da concepção, o nascimento cai em 25 de dezembro. No Oriente, quem datava a morte em 6 de abril chegava ao 6 de janeiro.
 - O que pesa a favor | Um tratado do século IV, *Sobre os solstícios e os equinócios*, faz essa conta, e Agostinho escreve que Jesus foi concebido e morreu num 25 de março (*A Trindade* 4.5). A explicação também dá conta do 6 de janeiro do Oriente.
 - O que pesa contra | É uma conta simbólica, feita séculos depois, e não um registro do dia do nascimento.
@@ -59,15 +59,15 @@ O que não está em discussão é o fato: “vos nasceu hoje, na cidade de Davi,
 
 Mas o 25 de dezembro não cai no mesmo dia para todos os cristãos. A culpa é de um erro de onze minutos, que levou séculos para aparecer.
 
-## Os dez dias que desapareceram
+## Os Dez Dias que Desapareceram
 
-### Os meses que mudaram de nome
+### Os Meses que Mudaram de Nome
 
 Deus fez os luminares do céu “para sinais e para estações, e para dias e anos” ([[Gn 1.14]]). Israel contava os meses pela lua: cada mês começava com a lua nova e tinha 29 ou 30 dias. Na saída do Egito, Deus disse: “Este mês será para vós o princípio dos meses” ([[Êx 12.2]]). Era o mês de abibe ([[Êx 13.4]]), nome que quer dizer “espigas”, porque caía na primavera de lá, quando o trigo e a cevada espigam.
 
 Os nomes dos meses mudaram com a história do povo:
 
-:::ficha Os meses na Bíblia
+:::ficha Os Meses na Bíblia
 - Os nomes antigos | Abibe ([[Êx 13.4]]), zive, o segundo mês ([[1Rs 6.1]]), etanim, o sétimo ([[1Rs 8.2]]), e bul, o oitavo ([[1Rs 6.38]]). São nomes cananeus, ligados às estações do campo.
 - Os nomes do exílio | Depois do cativeiro na Babilônia, os judeus passaram a usar os nomes babilônicos: nisã ([[Ne 2.1]]), sivã ([[Et 8.9]]), elul ([[Ne 6.15]]), quisleu ([[Ne 1.1]]), tebete ([[Et 2.16]]), sebate ([[Zc 1.7]]) e adar ([[Ed 6.15]]). São os nomes que o calendário judaico usa até hoje.
 - O mês a mais | Doze meses lunares dão só 354 dias, e as festas iam escapar da sua estação (a Páscoa precisa cair na colheita da cevada). Por isso, de tempos em tempos, se acrescenta um décimo terceiro mês, o segundo adar. Hoje isso acontece sete vezes a cada dezenove anos.
@@ -79,7 +79,7 @@ Os nomes dos meses mudaram com a história do povo:
 O ano judaico de hoje: doze meses lunares, com o mês aproximado do nosso calendário. Em dourado, os meses das festas bíblicas: Páscoa (nisã), Pentecostes (sivã), Trombetas, Expiação e Tabernáculos (tishri), Dedicação (quisleu) e Purim (adar).
 :::
 
-### Por que setembro não é o sétimo mês
+### Por que Setembro Não É o Sétimo Mês
 
 O calendário romano mais antigo começava em março. É por isso que **setembro, outubro, novembro e dezembro** querem dizer sétimo, oitavo, nono e décimo mês: eram mesmo. Janeiro e fevereiro vieram depois. Os sacerdotes romanos acrescentavam um mês extra quando achavam necessário, muitas vezes por interesse político, e no tempo de Júlio César o calendário estava cerca de três meses fora das estações.
 
@@ -91,13 +91,13 @@ Os números escondidos nos nomes dos meses: julho e agosto se chamavam “quinto
 
 Em **46 a.C.**, Júlio César, orientado pelo astrônomo Sosígenes de Alexandria, criou o **calendário juliano**: um ano de 365 dias, com um dia a mais a cada quatro anos, o ano bissexto. Para acertar as estações, o ano de 46 a.C. teve 445 dias e ficou conhecido como “o ano da confusão”. O mês de julho ganhou o nome de Júlio, e agosto, o do imperador Augusto. Foi nesse calendário que Jesus nasceu e que os apóstolos viveram.
 
-### Onze minutos que bagunçaram a Páscoa
+### Onze Minutos que Bagunçaram a Páscoa
 
 O ano do calendário juliano tem 365 dias e 6 horas. Mas o ano do sol, de um equinócio ao outro, tem cerca de 365 dias, 5 horas e 49 minutos: uns **onze minutos a menos**. Parece pouco, mas soma um dia inteiro a cada 128 anos.
 
 Isso importava para a Igreja por causa da Páscoa. Depois do Concílio de Niceia (325), firmou-se a regra de celebrá-la no domingo depois da primeira lua cheia da primavera do hemisfério norte, contando o equinócio em 21 de março. Com o erro acumulado, no século XVI o equinócio de verdade já acontecia por volta de 11 de março, e a Páscoa ia se afastando da estação certa.
 
-### 1582: o salto no calendário
+### 1582: O Salto no Calendário
 
 O papa **Gregório XIII** publicou, em 24 de fevereiro de 1582, a bula *Inter gravissimas*, com base na proposta do médico italiano Luigi Lilio e nos cálculos do astrônomo Cristóvão Clávio. Duas mudanças:
 
@@ -116,7 +116,7 @@ Os países protestantes e os ortodoxos demoraram, porque a reforma vinha do papa
 
 O papa mandou, mas nem todos obedeceram. E, em parte do mundo cristão, o Natal foi parar em janeiro.
 
-## O Natal que chega em janeiro
+## O Natal que Chega em Janeiro
 
 Muitas igrejas ortodoxas, como as da Rússia, da Sérvia e da Geórgia, e o Patriarcado de Jerusalém, continuaram a usar o **calendário juliano** nas festas. Elas comemoram o Natal no 25 de dezembro, mas o 25 de dezembro do calendário juliano: hoje, a diferença entre os dois calendários é de 13 dias, e esse dia cai em **7 de janeiro** do nosso calendário. A partir de 2100, a diferença será de 14 dias.
 
@@ -130,7 +130,7 @@ Para a Páscoa, quase todas as igrejas ortodoxas seguem a conta do calendário j
 
 E se você perguntar a um judeu, a um muçulmano ou a um etíope em que ano estamos? Nenhum deles vai responder 2026.
 
-## Em que ano estamos? Depende de quem responde
+## Em que Ano Estamos? Depende de Quem Responde
 
 O gregoriano é o calendário civil de quase todo o mundo e o padrão internacional das datas. Mas muitos povos usam outros calendários, para as festas religiosas ou até no governo:
 
@@ -138,7 +138,7 @@ O gregoriano é o calendário civil de quase todo o mundo e o padrão internacio
 O fim de 2026 em nove calendários. Cada um começa a contar os anos de um acontecimento diferente.
 :::
 
-:::ficha Os calendários de hoje
+:::ficha Os Calendários de Hoje
 - Judaico | Lunissolar: meses de 29 ou 30 dias e o segundo adar sete vezes a cada 19 anos. Conta os anos desde a criação, segundo a tradição judaica: em setembro de 2026 começou o ano 5787. Oficial em Israel, junto com o gregoriano, e seguido nas festas judaicas no mundo inteiro.
 - Islâmico | Puramente lunar: o ano tem 354 ou 355 dias, por isso o mês do Ramadã chega uns 11 dias mais cedo a cada ano. Conta os anos desde a Hégira, a ida de Maomé para Medina, em 622: em junho de 2026 começou o ano 1448. Usado pelos muçulmanos nas datas religiosas e, em alguns países, também no Estado.
 - Persa | Solar, começa no equinócio de março, com a festa do Nowruz. Oficial no Irã e no Afeganistão. Em março de 2026 começou o ano 1405.
@@ -154,7 +154,7 @@ O fim de 2026 em nove calendários. Cada um começa a contar os anos de um acont
 O tempo é de Deus, qualquer que seja o calendário: “Ele muda os tempos e as estações” ([[Dn 2.21]]). E a oração que vale para todos é a do salmo: “Ensina-nos a contar os nossos dias de tal maneira que alcancemos corações sábios” ([[Sl 90.12]]).
 :::
 
-## Linha do tempo
+## Linha do Tempo
 
 :::tempo
 - 46 a.C. | Júlio César | Cria o calendário juliano; o ano de 46 a.C. tem 445 dias

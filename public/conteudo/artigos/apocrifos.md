@@ -1,6 +1,6 @@
 Quem compara uma Bíblia evangélica com uma católica percebe que a católica tem mais livros no Antigo Testamento: 46 em vez de 39. De onde vêm esses livros, e por que os evangélicos não os consideram parte das Escrituras?
 
-## Quais são os livros
+## Quais São os Livros
 
 São sete livros e alguns acréscimos:
 
@@ -12,11 +12,11 @@ São sete livros e alguns acréscimos:
 
 Os católicos os chamam de **deuterocanônicos** (do “segundo cânon”); os evangélicos, em geral, de **apócrifos** (“ocultos”). A Igreja Ortodoxa aceita ainda alguns outros.
 
-## Por que estão em algumas Bíblias
+## Por que Estão em Algumas Bíblias
 
 Esses livros foram escritos entre os séculos III e I a.C. — no período entre Malaquias e João Batista —, alguns em hebraico e outros em grego. Eles circulavam junto com a **Septuaginta**, a tradução grega usada pelos judeus de Alexandria e por muitos cristãos.
 
-## Por que os evangélicos não os aceitam como Escritura
+## Por que os Evangélicos Não os Aceitam Como Escritura
 
 - **Não faziam parte da Bíblia hebraica.** Os judeus da Palestina, a quem “foram confiados os oráculos de Deus” [[Rm 3.2]], não os tinham entre os livros sagrados, como testemunha Josefo.
 - **Jesus e os apóstolos nunca os citam como Escritura**, embora citem quase todos os livros do Antigo Testamento.
@@ -24,15 +24,15 @@ Esses livros foram escritos entre os séculos III e I a.C. — no período entre
 - **Muitos pais da Igreja os distinguiram.** Jerônimo, o tradutor da Vulgata, disse que podiam ser lidos “para a edificação do povo, mas não para confirmar doutrinas”.
 - **Alguns ensinos não combinam com o restante da Bíblia**, como a oração e o sacrifício pelos mortos (2 Macabeus 12) e a esmola que apaga pecados (Tobias 12).
 
-## Lutero, Trento e as Bíblias de hoje
+## Lutero, Trento e as Bíblias de Hoje
 
 Lutero traduziu esses livros e os colocou num bloco separado, entre os dois Testamentos, com o título: “livros que não se igualam às Sagradas Escrituras, mas são úteis e bons para ler”. A Bíblia King James de 1611 fez o mesmo. Em resposta, o **Concílio de Trento**, em 1546, declarou-os canônicos, com a mesma autoridade dos outros. Com o tempo, as sociedades bíblicas protestantes deixaram de imprimi-los.
 
-## Vale a pena ler?
+## Vale a Pena Ler?
 
 Como livros históricos, sim — sobretudo **1 Macabeus**, que conta a coragem dos judeus que se recusaram a sacrificar a Zeus. Depois da vitória, eles purificaram o templo, e esse acontecimento deu origem à festa da Dedicação (Hanucá), que Jesus celebrou em Jerusalém [[Jo 10.22-23]].
 
-## Não confunda
+## Não Confunda
 
 Os **apócrifos do Novo Testamento** são outra coisa: “evangelhos” como os de Tomé, de Pedro e de Judas, escritos no século II ou depois, muitos com ideias gnósticas. Nenhuma igreja — católica, ortodoxa ou evangélica — os aceita como Escritura.
 

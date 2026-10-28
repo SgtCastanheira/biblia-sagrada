@@ -51,6 +51,7 @@ O vigia também:
 | `navegacao.spec.ts` | Todas as telas (40 rotas) abrem sem erros e **sem rolagem lateral**; barra de navegação; rota inexistente |
 | `varredura.spec.ts` | **Toda tela gerada pelos dados** (cada estudo, estado da Assembleia de Deus, mapa, sermão, tribo e curiosidade) abre sem erro no console nem requisição falha, sem rolagem lateral, com texto ≥ 13px e **fotos carregando** |
 | `logica/links-internos.spec.ts` | Todo **link interno** escrito nos textos (`[texto](/artigo/x)`) e nos dados (novidades, mapas) leva a uma tela que existe; toda foto citada existe |
+| `logica/titulos.spec.ts` | **Padrão dos títulos** (norma culta para títulos de obras): inicial maiúscula em cada palavra, menos artigos, preposições e conjunções. Confere os títulos de histórias e sermões, os tópicos, as trilhas e todo `##`, `###` e `:::ficha` dos textos; mostra a forma esperada de cada título errado |
 | `leitor.spec.ts` | Um versículo por linha; texto corrido; **sem 404 de arquivos locais**; destacar/favoritar; próximo capítulo; comparação; cartão de mapa |
 | `busca.spec.ts` | "Ir para" por referência; busca por palavra (quando a Almeida embutida existir) |
 | `ebd.spec.ts` | Criar trimestre; colar lição; conferir que o texto da revista **não é salvo**; mapas da lição |

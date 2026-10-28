@@ -1,6 +1,6 @@
 Um século depois de Lutero, muitas igrejas protestantes tinham doutrina correta, mas pouca vida. Discutia-se teologia com precisão, enquanto a fé de muitos se tornava fria e formal. O pietismo foi um movimento para levar a fé da cabeça ao coração — e dele nasceram as missões modernas e o avivamento metodista.
 
-## Spener e os “desejos piedosos” (1675)
+## Spener e os “Desejos Piedosos” (1675)
 
 Philipp Jakob Spener, pastor luterano em Frankfurt, publicou em 1675 o livro *Pia Desideria* (“Desejos piedosos”). Propôs:
 
@@ -11,17 +11,17 @@ Philipp Jakob Spener, pastor luterano em Frankfurt, publicou em 1675 o livro *Pi
 
 O seu discípulo **August Hermann Francke** fez de Halle um centro de fé em ação: fundou um orfanato, escolas, uma farmácia e uma gráfica que imprimia Bíblias baratas. Em 1706, de Halle partiram os primeiros missionários protestantes para a Índia, Bartolomeu Ziegenbalg e Heinrich Plütschau.
 
-## Os morávios e Herrnhut
+## Os Morávios e Herrnhut
 
 Os herdeiros de Jan Hus, a Unidade dos Irmãos, viviam perseguidos na Morávia e na Boêmia. Em 1722, um grupo de refugiados pediu abrigo nas terras de um jovem nobre alemão de família pietista, o conde **Nicolau Luís de Zinzendorf** (1700–1760). Ali construíram uma aldeia chamada **Herrnhut** — “a guarda do Senhor”.
 
 A comunidade cresceu, mas também as brigas. Zinzendorf passou a visitar casa por casa, estudando a Bíblia com eles. Em 13 de agosto de 1727, numa celebração da Ceia, o Espírito Santo foi derramado de forma extraordinária: brigas foram perdoadas e todos saíram “mal sabendo se ainda estavam na terra ou já no céu”. Ficou conhecido como o “Pentecostes morávio”.
 
-## A reunião de oração de cem anos
+## A Reunião de Oração de Cem Anos
 
 Poucos dias depois, 24 homens e 24 mulheres se comprometeram a orar em turnos de uma hora, de modo que a oração nunca parasse, dia e noite. A corrente de intercessão durou mais de cem anos [[Lv 6.13]].
 
-## Missionários dispostos a tudo
+## Missionários Dispostos a Tudo
 
 Em 1732, Leonard Dober e David Nitschmann partiram de Herrnhut para a ilha de São Tomás, no Caribe, para levar o Evangelho aos escravos africanos. Conta-se que estavam dispostos a se vender como escravos para poder alcançá-los. No ano seguinte, outros foram para a Groenlândia. Em poucas décadas, uma pequena aldeia enviou centenas de missionários para os cinco continentes. O lema deles era: “O nosso Cordeiro venceu; sigamo-lo”.
 
@@ -35,7 +35,7 @@ Em 1732, Leonard Dober e David Nitschmann partiram de Herrnhut para a ilha de S�
 - 1738 | Aldersgate | O “coração estranhamente aquecido” de Wesley.
 :::
 
-## O encontro com John Wesley
+## O Encontro com John Wesley
 
 Em 1736, John Wesley, um jovem sacerdote anglicano, viajava como missionário para a colônia da Geórgia. No navio, uma tempestade quebrou o mastro e os ingleses gritavam de pavor. Os morávios, homens, mulheres e crianças, continuaram cantando hinos com calma. Wesley perguntou a um deles se não tinha medo. Ele respondeu: “Graças a Deus, não”. Wesley percebeu que eles tinham uma fé que ele mesmo não tinha.
 
