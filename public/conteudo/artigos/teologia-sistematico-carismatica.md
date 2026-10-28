@@ -6,7 +6,7 @@ Este módulo é um **resumo comentado** da introdução geral e dos capítulos 1
 
 ## Teologia Pode Ser Pública?
 
-A introdução geral abre com uma pergunta: a teologia pode ser pública? Os autores notam que ela ganhou espaço na sociedade, mas ainda desperta desconfiança, inclusive dentro das igrejas e, segundo eles, sobretudo na tradição carismático-pentecostal. A dúvida é se uma teologia pode ser **confessional**, isto é, feita por quem crê, e ao mesmo tempo dialogar com as outras ciências. A resposta deles é que sim, desde que o estudo una conhecimento e piedade. Por isso o livro quer oferecer uma teologia séria, escrita da perspectiva carismático-pentecostal, para um mundo que, longe de ser apenas secular e materialista, continua pedindo espiritualidade.
+Uma teologia pode ser **confessional**, isto é, feita por quem crê, e ao mesmo tempo dialogar com as outras ciências? A resposta dos autores é que sim, desde que o estudo una conhecimento e piedade. Por isso o livro quer oferecer uma teologia séria, escrita da perspectiva carismático-pentecostal, para um mundo que, longe de ser apenas secular e materialista, continua pedindo espiritualidade.
 
 ### Método: três passos em cada doutrina
 
