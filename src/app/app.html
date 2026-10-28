@@ -1,5 +1,5 @@
 @if (!isReader()) {
-  <header class="top-bar">
+  <header class="top-bar" [class.hidden]="isArticle() && ui.barsHidden()">
     <a routerLink="/" class="brand">
       <mat-icon class="logo">menu_book</mat-icon>
       <span class="brand-name">Bíblia<span class="wide-only"> Sagrada</span></span>
@@ -22,7 +22,7 @@
   </header>
 }
 
-<nav class="nav" [class.hidden]="isReader() && ui.barsHidden()" aria-label="Navegação principal">
+<nav class="nav" [class.hidden]="(isReader() || isArticle()) && ui.barsHidden()" aria-label="Navegação principal">
   <a class="rail-logo" routerLink="/" aria-label="Início"><mat-icon>menu_book</mat-icon></a>
 
   <a class="nav-item" routerLink="/" [class.active]="tab() === 'inicio'">

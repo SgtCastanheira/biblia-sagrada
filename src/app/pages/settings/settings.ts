@@ -8,6 +8,7 @@ import { RouterLink } from '@angular/router';
 import { BOOKS } from '../../core/books';
 import { BackupService } from '../../core/backup.service';
 import { NotifyService } from '../../core/notify.service';
+import { ReminderService } from '../../core/reminders.service';
 import { PwaService } from '../../core/pwa.service';
 import { FavoritesService } from '../../core/favorites.service';
 import { SettingsService } from '../../core/settings.service';
@@ -68,6 +69,14 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
         <mat-icon>chevron_right</mat-icon>
       </a>
       <div class="row toggle-row">
+        <span class="badge gold"><mat-icon>self_improvement</mat-icon></span>
+        <span class="row-text">
+          <strong>Lembretes do dia</strong>
+          <small>Três chamados por dia para orar, ler e pensar em Deus, cada dia em horários diferentes@if (reminders.enabled()) {. Hoje: {{ todayTimes() }}}</small>
+        </span>
+        <mat-slide-toggle [checked]="reminders.enabled()" (change)="reminders.enabled.set($event.checked)" aria-label="Lembretes do dia" />
+      </div>
+      <div class="row toggle-row">
         <span class="badge"><mat-icon>notifications_active</mat-icon></span>
         <span class="row-text">
           <strong>Avisar no sistema</strong>
@@ -75,7 +84,7 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
             @switch (notify.permission()) {
               @case ('unsupported') { Este navegador não suporta notificações }
               @case ('denied') { Bloqueado no navegador — libere nas permissões do site }
-              @default { Curiosidade do dia e lembrete da EBD como notificação do aparelho }
+              @default { Os lembretes do dia, a curiosidade e a EBD aparecem na tela do celular ou do computador. Com o app aberto, chegam na hora; fechado, o Android e o computador com o app instalado avisam quando o sistema permitir }
             }
           </small>
         </span>
@@ -174,6 +183,12 @@ export class SettingsPage {
   protected readonly settings = inject(SettingsService);
   protected readonly favorites = inject(FavoritesService);
   protected readonly notify = inject(NotifyService);
+  protected readonly reminders = inject(ReminderService);
+  /** Os três horários de hoje ("08:17, 14:42 e 21:05"). */
+  protected readonly todayTimes = computed(() => {
+    const times = this.reminders.today().map((r) => r.at);
+    return `${times.slice(0, -1).join(', ')} e ${times.at(-1)}`;
+  });
   protected readonly backup = inject(BackupService);
   protected readonly pwa = inject(PwaService);
   private readonly sheets = inject(Sheets);
@@ -219,7 +234,7 @@ export class SettingsPage {
     }
     const granted = await this.notify.enableSystem();
     if (granted) {
-      this.notify.system('Notificações ativadas', 'Você receberá a curiosidade do dia e os lembretes da EBD.', '/curiosidades');
+      this.notify.system('Notificações ativadas', 'Você receberá os lembretes do dia, a curiosidade e os avisos da EBD.', '/ajustes');
     } else {
       this.snackBar.open('Permissão de notificação não concedida', undefined, { duration: 3000 });
     }

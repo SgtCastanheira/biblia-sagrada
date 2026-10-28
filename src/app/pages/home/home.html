@@ -37,6 +37,9 @@
   </div>
 </article>
 
+<!-- O chamado da vez (lembretes do dia) -->
+<app-reminder-card />
+
 <!-- Devocional -->
 <a class="devotional card" matRipple routerLink="/devocional/hoje" [class.done]="devotional.todayEntry()?.done">
   <span class="dev-icon"><mat-icon>{{ devotional.todayEntry()?.done ? 'check' : 'self_improvement' }}</mat-icon></span>

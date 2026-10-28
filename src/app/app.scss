@@ -18,6 +18,14 @@
   background: color-mix(in srgb, var(--mat-sys-surface) 92%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  transition: transform 250ms ease;
+}
+
+/* Lendo um estudo no celular, a barra de cima sai da frente do texto ao descer e volta ao subir */
+@media (max-width: 839px) {
+  .top-bar.hidden {
+    transform: translateY(-100%);
+  }
 }
 
 .brand {

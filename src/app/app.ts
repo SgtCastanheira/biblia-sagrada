@@ -1,5 +1,5 @@
 import { NavigationService } from './core/navigation.service';
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, effect, inject, untracked } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
@@ -9,6 +9,7 @@ import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router
 import { filter, map } from 'rxjs';
 import { CuriositiesService } from './core/curiosities.service';
 import { DevotionalService } from './core/devotional.service';
+import { ReminderService } from './core/reminders.service';
 import { WhatsNewService } from './core/whats-new.service';
 import { EbdService } from './core/ebd.service';
 import { PwaService } from './core/pwa.service';
@@ -47,6 +48,8 @@ export class App {
     { initialValue: this.router.url },
   );
   protected readonly isReader = computed(() => this.url().startsWith('/ler/'));
+  /** Estudos e histórias: lidos como o capítulo da Bíblia, com as barras saindo da frente do texto. */
+  protected readonly isArticle = computed(() => this.url().startsWith('/artigo/'));
   /** Aba do menu de cada tela: cada coisa mora em um só lugar. */
   protected readonly tab = computed<NavTab | null>(() => {
     const url = this.url();
@@ -70,14 +73,21 @@ export class App {
 
   constructor() {
     inject(MatIconRegistry).setDefaultFontSetClass('material-symbols-outlined');
+    // Cada tela nova começa com as barras à vista
+    effect(() => {
+      this.url();
+      untracked(() => this.ui.barsHidden.set(false));
+    });
 
-    // Lembretes (cada um no máximo uma vez por dia): EBD, devocional e curiosidade do dia
+    // Lembretes (cada um no máximo uma vez por dia): EBD, devocional, curiosidade do dia e os três chamados do dia
     const ebd = inject(EbdService);
     const devotional = inject(DevotionalService);
+    const reminders = inject(ReminderService);
     const check = () => {
       ebd.check();
       devotional.check();
       this.curiosities.check();
+      void reminders.check();
     };
     // Depois de uma atualização, as novidades aparecem sozinhas; os lembretes esperam a próxima verificação
     const whatsNew = this.whatsNew;

@@ -68,3 +68,82 @@ test('o conteúdo de estudo funciona sem internet', async ({ page, context }) =>
   await expect(page.locator('.word').first()).toBeVisible();
   await context.setOffline(false);
 });
+
+test('o service worker é o sw.js: o do Angular e, junto, os lembretes com o app fechado', async ({ page }) => {
+  await page.goto('/');
+  const worker = await page.evaluate(async () => (await navigator.serviceWorker.ready).active?.scriptURL ?? '');
+  expect(new URL(worker).pathname).toBe('/sw.js');
+  // A agenda que o app guarda para o service worker fica no cache dos lembretes, e o sw.js sabe lê-la
+  const script = await (await page.request.get('/sw.js')).text();
+  expect(script).toContain("importScripts('ngsw-worker.js')");
+  expect(script).toContain('periodicsync');
+  expect(script).toContain('biblia-lembretes');
+});
+
+test('com a notificação ligada, o app deixa a agenda dos lembretes dos próximos dias para o service worker', async ({ page, context }) => {
+  await context.grantPermissions(['notifications']);
+  await page.addInitScript(() => {
+    localStorage.setItem('biblia.lembretes', 'true');
+    localStorage.setItem('biblia.notify.systemEnabled', 'true');
+  });
+  await page.goto('/');
+  await page.evaluate(async () => { await navigator.serviceWorker.ready; });
+  const agenda = async () => page.evaluate(async () => {
+    const response = await (await caches.open('biblia-lembretes')).match(new URL('lembretes/agenda.json', document.baseURI).href);
+    return response ? ((await response.json()) as { id: string; at: number; url: string }[]) : [];
+  });
+  await expect.poll(async () => (await agenda()).length).toBe(12);
+  const items = await agenda();
+  // Endereços relativos ao app (no site, dentro de /biblia-sagrada/) e em ordem de horário
+  expect(items.every((r) => !r.url.startsWith('/'))).toBe(true);
+  expect(items.map((r) => r.at)).toEqual([...items.map((r) => r.at)].sort((a, b) => a - b));
+});
+
+test('com o app fechado, o service worker mostra o lembrete da vez quando o sistema o acorda', async ({ page, context, problems }) => {
+  // about:blank faz o papel do app fechado; lá os scripts dos testes não têm sessionStorage nem localStorage
+  problems.allow(/'(session|local)Storage' property/);
+  await context.grantPermissions(['notifications']);
+  await page.addInitScript(() => {
+    // Notificação ligada, como para quem ativou; os avisos de hoje já foram vistos (a página não notifica nada)
+    const d = new Date();
+    const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    localStorage.setItem('biblia.lembretes', 'true');
+    localStorage.setItem('biblia.notify.systemEnabled', 'true');
+    localStorage.setItem('biblia.notify.done', JSON.stringify([`curiosidade-${key}`, `devocional-${key}`, ...[0, 1, 2].map((n) => `lembrete-${key}-${n}`)]));
+  });
+  await page.goto('/');
+  await page.evaluate(async () => { await navigator.serviceWorker.ready; });
+  await page.waitForTimeout(1500);
+  // Agenda com um lembrete que venceu há um minuto e ainda não apareceu
+  const origin = await page.evaluate(async () => {
+    const cache = await caches.open('biblia-lembretes');
+    await cache.put(new URL('lembretes/agenda.json', document.baseURI).href, new Response(JSON.stringify([
+      { id: 'teste-2', at: Date.now() - 60_000, title: 'E se Jesus voltar hoje, você sobe?', body: 'Teste', url: 'devocional/hoje' },
+    ])));
+    await cache.delete(new URL('lembretes/mostrados.json', document.baseURI).href);
+    return location.origin;
+  });
+  const cdp = await context.newCDPSession(page);
+  const registration = new Promise<string>((resolve) => {
+    cdp.on('ServiceWorker.workerRegistrationUpdated', ({ registrations }) => {
+      const r = registrations.find((x: { scopeURL: string; isDeleted: boolean }) => x.scopeURL.startsWith(origin) && !x.isDeleted);
+      if (r) resolve(r.registrationId);
+    });
+  });
+  await cdp.send('ServiceWorker.enable');
+  const registrationId = await registration;
+  // "Fecha" o app: nenhuma janela do site aberta quando o sistema acorda o service worker
+  await page.goto('about:blank');
+  await cdp.send('ServiceWorker.dispatchPeriodicSyncEvent', { origin, registrationId, tag: 'lembretes' });
+  await page.goto('/');
+  await expect
+    .poll(() => page.evaluate(async () => (await (await navigator.serviceWorker.ready).getNotifications({ tag: 'lembrete' })).map((n) => n.title)))
+    .toContain('E se Jesus voltar hoje, você sobe?');
+  // E não repete: ficou anotado como mostrado
+  await expect
+    .poll(() => page.evaluate(async () => {
+      const r = await (await caches.open('biblia-lembretes')).match(new URL('lembretes/mostrados.json', document.baseURI).href);
+      return r ? ((await r.json()) as string[]) : [];
+    }))
+    .toContain('teste-2');
+});

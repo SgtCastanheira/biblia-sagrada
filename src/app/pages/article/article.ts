@@ -11,6 +11,7 @@ import { map, startWith, switchMap } from 'rxjs';
 import { ContentService } from '../../core/content.service';
 import { articlesOf, COLLECTIONS, findArticle, STORY_COLLECTIONS } from '../../core/library';
 import { ListenService } from '../../core/listen.service';
+import { UiService } from '../../core/ui.service';
 import { storyItems } from '../../shared/listen-dom';
 import { QuizPrompt } from '../../shared/quiz-prompt';
 import { trailOfArticle } from '../../core/trails';
@@ -41,15 +42,19 @@ import { SourcesBox } from '../../shared/sources-box';
         </div>
         @if (story()) {
           <div class="progress" aria-hidden="true"></div>
-          <div class="now" [class.on]="!!chapter()" aria-hidden="true">
+          <div class="now" [class.on]="!!chapter()" [class.low]="ui.barsHidden()" aria-hidden="true">
             @if (chapter(); as c) {
               <span class="now-n">{{ c.tag }}</span>
               <span class="now-t">{{ c.title }}</span>
               <span class="now-left">faltam {{ c.left }} min</span>
             }
           </div>
-          <header class="hero">
-            <mat-icon class="watermark" aria-hidden="true">{{ a.icon }}</mat-icon>
+          <header class="hero" [class.has-cover]="!!a.cover">
+            @if (a.cover) {
+              <img class="cover-img" [src]="'conteudo/' + a.cover" alt="" />
+            } @else {
+              <mat-icon class="watermark" aria-hidden="true">{{ a.icon }}</mat-icon>
+            }
             <span class="hero-over">{{ step()?.trail?.name ?? collection()?.name }}@if (step(); as st) { · história {{ st.index + 1 }} de {{ st.total }} }</span>
             @if (a.period) { <span class="era">{{ a.period }}</span> }
             @if (a.portraits?.length) {
@@ -59,7 +64,13 @@ import { SourcesBox } from '../../shared/sources-box';
             }
             <h1 class="title">{{ a.title }}</h1>
             @if (!a.topics?.length) { <p class="lead">{{ a.subtitle }}</p> }
-            <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
+            <div class="hero-row">
+              <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
+              <button type="button" class="hero-listen" (click)="listenArticle()">
+                <mat-icon>{{ listen.state() === 'idle' ? 'headphones' : 'stop_circle' }}</mat-icon>
+                {{ listen.state() === 'idle' ? 'Ouvir a história' : 'Parar a narração' }}
+              </button>
+            </div>
             @if (overview(); as o) {
               <a class="part-of" [routerLink]="['/artigo', o.id]"><mat-icon>auto_stories</mat-icon> Parte do panorama: {{ o.title }}</a>
             }
@@ -164,9 +175,27 @@ import { SourcesBox } from '../../shared/sources-box';
       position: absolute; right: -24px; bottom: -36px; width: 220px; height: 220px; font-size: 220px;
       color: rgba(226, 194, 140, .1); pointer-events: none;
     }
-    .hero-over { font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 2px; color: #e2c28c; }
-    .era { margin: 6px 0 14px; font: 600 40px/1 var(--heading-font); letter-spacing: -.5px; color: #e2c28c; }
-    .portraits { display: flex; margin-bottom: 16px; }
+    .hero-over { position: relative; font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 2px; color: #e2c28c; }
+    .era { position: relative; margin: 6px 0 14px; font: 600 40px/1 var(--heading-font); letter-spacing: -.5px; color: #e2c28c; }
+    /* Com quadro ao fundo: a imagem em cima, escurecendo para o texto embaixo, como a abertura de um filme */
+    .hero.has-cover { box-sizing: border-box; min-height: min(70vh, 540px); justify-content: flex-end; padding-top: 150px; background: #21180f; }
+    @media (min-width: 840px) { .hero.has-cover { min-height: 460px; } }
+    .cover-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: sepia(.3) saturate(.85); animation: cover-in 16s ease-out both; }
+    .hero.has-cover::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(33, 24, 15, .1) 0%, rgba(33, 24, 15, .5) 38%, rgba(33, 24, 15, .9) 68%, #21180f 100%);
+    }
+    .hero.has-cover > :not(.cover-img) { z-index: 1; }
+    @keyframes cover-in { from { transform: scale(1.14); } }
+    @media (prefers-reduced-motion: reduce) { .cover-img { animation: none; } }
+    .hero-row { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+    .hero-listen {
+      display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 16px; border-radius: 20px; cursor: pointer;
+      border: 1px solid rgba(226, 194, 140, .55); background: rgba(33, 24, 15, .4); color: #fbf4e6; font: 600 14px Inter, sans-serif;
+    }
+    .hero-listen mat-icon { font-size: 20px; width: 20px; height: 20px; color: #e2c28c; }
+    .hero-listen:focus-visible { outline: 2px solid #f1d9a8; outline-offset: 2px; }
+    .portraits { position: relative; display: flex; margin-bottom: 16px; }
     .portraits img {
       width: 84px; height: 84px; border-radius: 50%; object-fit: cover; object-position: top; filter: sepia(.4) contrast(1.05);
       box-shadow: 0 0 0 3px #21180f, 0 0 0 5px #e2c28c;
@@ -203,9 +232,10 @@ import { SourcesBox } from '../../shared/sources-box';
       display: flex; align-items: center; gap: 8px; width: max-content; max-width: min(520px, calc(100vw - 32px)); padding: 8px 14px; border-radius: 20px; box-sizing: border-box;
       background: var(--mat-sys-surface-container-highest); color: var(--mat-sys-on-surface); border: 1px solid var(--mat-sys-outline-variant);
       box-shadow: 0 4px 16px rgba(0, 0, 0, .18); font: 500 13px Inter, sans-serif;
-      transform: translateY(140%); opacity: 0; transition: transform .25s, opacity .25s; pointer-events: none;
+      transform: translateY(140%); opacity: 0; transition: transform .25s, opacity .25s, bottom .25s; pointer-events: none;
     }
     .now.on { transform: none; opacity: 1; }
+    @media (max-width: 839px) { .now.low { bottom: calc(14px + env(safe-area-inset-bottom)); } }
     @media (min-width: 840px) { .now { bottom: 20px; } }
     @media (prefers-reduced-motion: reduce) { .now { transition: none; } }
     .now-n { flex: none; font-weight: 700; color: var(--accent-gold); }
@@ -217,6 +247,7 @@ export class ArticlePage {
   readonly id = input.required<string>();
   private readonly content = inject(ContentService);
   protected readonly listen = inject(ListenService);
+  protected readonly ui = inject(UiService);
   private readonly snackBar = inject(MatSnackBar);
 
   /** Ouvir a história: título, resumo e cada parágrafo, um de cada vez, destacado na tela. */

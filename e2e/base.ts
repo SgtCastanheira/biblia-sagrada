@@ -70,6 +70,8 @@ export const test = base.extend<Fixtures>({
         localStorage.setItem('biblia.notify.done', JSON.stringify([`curiosidade-${key}`, `devocional-${key}`]));
         // As novidades da atualização também não aparecem sozinhas (veja novidades.spec.ts)
         localStorage.setItem('biblia.novidades.visto', latest);
+        // Nem os lembretes do dia, que dependem da hora (veja lembretes.spec.ts)
+        localStorage.setItem('biblia.lembretes', 'false');
       }, LATEST_RELEASE.id);
 
       await use({ errors, allow: (pattern) => allowed.push(pattern) });

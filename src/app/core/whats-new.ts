@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'lembretes-e-leitura-imersiva',
+    date: '28 de outubro de 2026',
+    title: 'Lembretes do Dia e Histórias para Mergulhar',
+    items: [
+      { icon: 'self_improvement', title: 'Lembretes do dia', text: 'Três vezes por dia, em horários diferentes, o app chama você: “Já orou hoje?”, “Vamos orar pela sua família?”, “E se Jesus voltar hoje, você sobe?”. O chamado da vez fica na tela inicial; ative a notificação para vê-lo na tela do celular ou do computador.', link: '/ajustes', tip: 'Em Ajustes › Lembretes do dia.' },
+      { icon: 'headphones', title: 'Histórias para mergulhar', text: 'Capa com o quadro da história, menu que sai da frente enquanto você lê no celular, fotos que ampliam com um toque, o botão “Ouvir a história” na capa e um aviso quando você termina de ler.', link: '/artigo/igreja-e-estado' },
+    ],
+  },
+  {
     id: 'igreja-e-estado-teologia-natal',
     date: '28 de outubro de 2026',
     title: 'A Igreja e o Estado, a Teologia e o Natal',

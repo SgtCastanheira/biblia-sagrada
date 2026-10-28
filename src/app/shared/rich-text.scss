@@ -548,6 +548,20 @@ figcaption {
   }
 }
 
+// Um toque na foto abre em tela cheia (photo-viewer.ts)
+.photo {
+  position: relative;
+
+  img { cursor: zoom-in; }
+
+  .zoom {
+    position: absolute; top: 10px; right: 10px; display: grid; place-items: center; width: 40px; height: 40px; padding: 0;
+    border: 0; border-radius: 50%; cursor: pointer; background: rgba(20, 14, 8, .55); color: #fff8ec;
+
+    mat-icon { font-size: 20px; width: 20px; height: 20px; }
+  }
+}
+
 // Quadros e paisagens: largura toda, sem inclinar
 .photo.wide img {
   width: 100%;

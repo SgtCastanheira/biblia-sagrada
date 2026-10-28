@@ -51,6 +51,9 @@ O vigia também:
 | `navegacao.spec.ts` | Todas as telas (40 rotas) abrem sem erros e **sem rolagem lateral**; barra de navegação; rota inexistente |
 | `varredura.spec.ts` | **Toda tela gerada pelos dados** (cada estudo, estado da Assembleia de Deus, mapa, sermão, tribo e curiosidade) abre sem erro no console nem requisição falha, sem rolagem lateral, com texto ≥ 13px e **fotos carregando** |
 | `logica/links-internos.spec.ts` | Todo **link interno** escrito nos textos (`[texto](/artigo/x)`) e nos dados (novidades, mapas) leva a uma tela que existe; toda foto citada existe |
+| `logica/lembretes.spec.ts` | **Lembretes do dia**: três por dia, cada um na sua faixa, iguais para a mesma data, sem repetir a mensagem no dia seguinte; as frases pedidas estão lá, cabem na notificação, e toda citação é o texto da Almeida |
+| `lembretes.spec.ts` | Com o relógio fixo: o chamado da vez aparece na tela inicial e como aviso uma vez só, "Já fiz" esconde, o que passou sem aviso não volta; Ajustes mostram os horários de hoje e desligam |
+| `leitura-historia.spec.ts` | Página da história: capa com quadro e botão de ouvir, barras que saem ao descer no celular, foto em tela cheia (amplia, fecha com Esc), "História concluída" no fim |
 | `logica/titulos.spec.ts` | **Padrão dos títulos** (norma culta para títulos de obras): inicial maiúscula em cada palavra, menos artigos, preposições e conjunções. Confere os títulos de histórias e sermões, os tópicos, as trilhas e todo `##`, `###` e `:::ficha` dos textos; mostra a forma esperada de cada título errado |
 | `leitor.spec.ts` | Um versículo por linha; texto corrido; **sem 404 de arquivos locais**; destacar/favoritar; próximo capítulo; comparação; cartão de mapa |
 | `busca.spec.ts` | "Ir para" por referência; busca por palavra (quando a Almeida embutida existir) |

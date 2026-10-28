@@ -1,10 +1,11 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { CLASSIC_SERMONS, findArticle } from '../core/library';
 import { Block, parseBlocks, sectionLabels } from '../core/rich-text-parser';
 import { Figure } from './figure';
+import { PhotoViewer, ViewedPhoto } from './photo-viewer';
 import { EraMap } from './era-map';
 import { SendChain } from './send-chain';
 import { Sheets } from './sheets';
@@ -16,7 +17,7 @@ import { Sheets } from './sheets';
  */
 @Component({
   selector: 'app-rich-text',
-  imports: [NgTemplateOutlet, RouterLink, MatIconModule, Figure, SendChain, EraMap],
+  imports: [NgTemplateOutlet, RouterLink, MatIconModule, Figure, SendChain, EraMap, PhotoViewer],
   host: { '[class.story]': 'story()' },
   template: `
     <ng-template #line let-parts>@for (p of parts; track $index) {@switch (p.t) {@case ('b') {<strong>{{ p.text }}</strong>}@case ('i') {<em>{{ p.text }}</em>}@case ('ref') {<button type="button" class="ref" (click)="openRef(p.href)">{{ p.text }}</button>}@case ('link') {<a class="link" [routerLink]="p.href">{{ p.text }}</a>}@case ('ext') {<a class="link" [href]="p.href" target="_blank" rel="noopener noreferrer">{{ p.text }}</a>}@default {{{ p.text }}}}}</ng-template>
@@ -139,7 +140,8 @@ import { Sheets } from './sheets';
         }
         @case ('image') {
           <figure class="photo" [class.left]="photoSide()[i]" [class.wide]="b.wide">
-            <img [src]="'conteudo/' + b.src" [alt]="b.alt" loading="lazy" />
+            <img [src]="'conteudo/' + b.src" [alt]="b.alt" loading="lazy" (click)="view(b)" />
+            <button type="button" class="zoom" (click)="view(b)" aria-label="Ampliar a imagem"><mat-icon>zoom_out_map</mat-icon></button>
             @if (b.caption) { <figcaption><ng-container *ngTemplateOutlet="line; context: { $implicit: b.caption }" /></figcaption> }
           </figure>
         }
@@ -152,6 +154,7 @@ import { Sheets } from './sheets';
         @default { <p [class.opening]="i === opening()"><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></p> }
       }
     }
+    <app-photo-viewer [photo]="viewing()" (close)="viewing.set(null)" />
   `,
   styleUrl: './rich-text.scss',
 })
@@ -175,6 +178,13 @@ export class RichText {
     let n = 0;
     return this.blocks().map((b) => b.type === 'image' && !b.wide && n++ % 2 === 1);
   });
+
+  /** Foto aberta em tela cheia (um toque na imagem). */
+  protected readonly viewing = signal<ViewedPhoto | null>(null);
+
+  protected view(b: Block): void {
+    this.viewing.set({ src: b.src!, alt: b.alt ?? '', caption: (b.caption ?? []).map((x) => x.text).join('') });
+  }
 
   protected sermonOf(id: string | undefined) {
     return CLASSIC_SERMONS.find((s) => s.id === id);

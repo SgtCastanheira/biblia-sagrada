@@ -2,6 +2,7 @@ import { Component, computed, inject, input } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
+import { ARTICLES } from '../core/library';
 import { sameEra, trailStep } from '../core/story-graph';
 import { StoryProgressService } from '../core/story-progress.service';
 
@@ -16,6 +17,12 @@ import { StoryProgressService } from '../core/story-progress.service';
     @if (step(); as s) {
       <section class="journey" aria-labelledby="journey-title">
         <div class="head">
+          @if (progress.isDone(articleId())) {
+            <p class="finished" role="status">
+              <mat-icon>check_circle</mat-icon>
+              <span><strong>História concluída.</strong> Você já leu {{ readCount() }} {{ readCount() === 1 ? 'história' : 'histórias' }} do app.</span>
+            </p>
+          }
           <span class="over"><mat-icon>route</mat-icon> Trilha · {{ s.trail.name }}</span>
           <h2 id="journey-title">História {{ s.index + 1 }} de {{ s.total }}</h2>
           <div class="dots" aria-hidden="true">
@@ -66,6 +73,15 @@ import { StoryProgressService } from '../core/story-progress.service';
   styles: `
     :host { display: block; }
     .journey { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--mat-sys-outline-variant); }
+    /* O fim da leitura merece um momento: a história fica marcada como lida */
+    .finished {
+      display: flex; align-items: center; gap: 12px; margin: 0 0 18px; padding: 12px 16px; border-radius: 16px;
+      background: color-mix(in srgb, var(--mat-sys-primary) 12%, var(--mat-sys-surface)); color: var(--mat-sys-on-surface);
+      font: 500 15px/1.4 Inter, sans-serif; animation: finished-in .5s cubic-bezier(.2, .9, .3, 1.3) both;
+    }
+    .finished mat-icon { flex: none; width: 30px; height: 30px; font-size: 30px; color: var(--mat-sys-primary); }
+    @keyframes finished-in { from { transform: scale(.85); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .finished { animation: none; } }
     .over { display: inline-flex; align-items: center; gap: 6px; font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold); }
     .over mat-icon { font-size: 18px; width: 18px; height: 18px; }
     h2 { margin: 6px 0 10px; font: 600 24px/1.2 var(--heading-font); }
@@ -113,4 +129,6 @@ export class StoryJourney {
   protected readonly step = computed(() => trailStep(this.articleId()));
   protected readonly era = computed(() => sameEra(this.articleId(), this.linked()));
   protected readonly trailDone = computed(() => this.step()?.ids.filter((id) => this.progress.isDone(id)).length ?? 0);
+  /** Quantas histórias a pessoa já terminou no app inteiro. */
+  protected readonly readCount = computed(() => ARTICLES.filter((a) => this.progress.isDone(a.id)).length);
 }

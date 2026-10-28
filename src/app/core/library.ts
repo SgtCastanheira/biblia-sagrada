@@ -25,6 +25,8 @@ export interface Article {
   passages?: string[];
   /** Retratos na capa da história (fotos em public/conteudo/imagens). */
   portraits?: string[];
+  /** Quadro ou paisagem ao fundo da capa (em public/conteudo/imagens), também mostrado no texto com o crédito. */
+  cover?: string;
   /** Lê como história (capa, capítulos e cenas), mesmo fora das coleções narrativas. */
   story?: boolean;
   /** Panorama da coleção (como o livro de Atos): aparece em destaque, antes das histórias completas. */
@@ -156,6 +158,7 @@ export const ARTICLES: Article[] = [
       'Em que Ano Estamos? Depende de Quem Responde',
     ],
     period: '46 a.C. – hoje',
+    cover: 'imagens/calendario-fasti.jpg',
     icon: 'calendar_month',
     minutes: 15,
   },
@@ -438,6 +441,7 @@ export const ARTICLES: Article[] = [
     title: 'A Igreja e o Estado no Brasil',
     subtitle: 'Da primeira missa às cidades novas do interior: como a fé reuniu o povo, o governo levou a estrutura e as cidades nasceram em volta da igreja.',
     period: '1500–hoje',
+    cover: 'imagens/primeira-missa-meirelles.jpg',
     icon: 'location_city',
     minutes: 12,
   },

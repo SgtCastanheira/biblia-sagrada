@@ -11,8 +11,9 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     provideRouter(routes, withComponentInputBinding(), withInMemoryScrolling({ scrollPositionRestoration: 'top' })),
     { provide: LOCALE_ID, useValue: 'pt-BR' },
-    // Offline e instalação (ativo só no build de produção)
-    provideServiceWorker('ngsw-worker.js', {
+    // Offline e instalação (ativo só no build de produção). public/sw.js carrega o ngsw-worker.js e acrescenta
+    // os lembretes do dia com o app fechado.
+    provideServiceWorker('sw.js', {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000',
     }),

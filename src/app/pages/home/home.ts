@@ -17,6 +17,7 @@ import { findVersion, VERSIONS } from '../../core/versions';
 import { Sheets } from '../../shared/sheets';
 import { StoryProgressService } from '../../core/story-progress.service';
 import { StoryRings } from '../../shared/story-rings';
+import { ReminderCard } from '../../shared/reminder-card';
 
 /** Versículos sorteados na tela inicial: um diferente a cada vez que ela é aberta. */
 const HIGHLIGHTS = [
@@ -119,7 +120,7 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, StoryRings],
+  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, StoryRings, ReminderCard],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

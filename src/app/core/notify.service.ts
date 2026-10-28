@@ -40,14 +40,16 @@ export class NotifyService {
     this.next();
   }
 
-  async system(title: string, body: string, url: string): Promise<void> {
+  /** `tag`: notificações com a mesma marca se substituem (os lembretes do dia usam uma só). */
+  async system(title: string, body: string, url: string, tag = url): Promise<void> {
     if (!this.systemEnabled() || this.permission() !== 'granted') return;
     const options: NotificationOptions = {
       body,
       icon: 'icons/icon-192x192.png',
       badge: 'icons/icon-96x96.png',
-      tag: url,
-      data: { url, onActionClick: { default: { operation: 'navigateLastFocusedOrOpen', url } } },
+      tag,
+      // O service worker abre o endereço relativo ao app: com "/" na frente, no site ele sairia de /biblia-sagrada/
+      data: { url, onActionClick: { default: { operation: 'navigateLastFocusedOrOpen', url: url.replace(/^\//, '') } } },
     };
     try {
       // No Android o Chrome só permite notificações via service worker.
