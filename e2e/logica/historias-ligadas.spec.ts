@@ -20,7 +20,7 @@ test('períodos: lê séculos, a.C., "c." e "hoje"', () => {
   expect(eraOverlap([1904, 1906], [1903, 1910])).toBeGreaterThan(0);
   expect(eraOverlap([1904, 1906], [1910, 2026])).toBe(0);
   // Todo período com número tem de virar anos
-  const unread = ARTICLES.filter((a) => /\d|séc/.test(a.period) && !periodYears(a.period)).map((a) => `${a.id}: ${a.period}`);
+  const unread = ARTICLES.filter((a) => a.period && /\d|séc/.test(a.period) && !periodYears(a.period)).map((a) => `${a.id}: ${a.period}`);
   expect(unread).toEqual([]);
 });
 

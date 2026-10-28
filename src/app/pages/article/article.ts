@@ -51,7 +51,7 @@ import { SourcesBox } from '../../shared/sources-box';
           <header class="hero">
             <mat-icon class="watermark" aria-hidden="true">{{ a.icon }}</mat-icon>
             <span class="hero-over">{{ step()?.trail?.name ?? collection()?.name }}@if (step(); as st) { · história {{ st.index + 1 }} de {{ st.total }} }</span>
-            <span class="era">{{ a.period }}</span>
+            @if (a.period) { <span class="era">{{ a.period }}</span> }
             @if (a.portraits?.length) {
               <div class="portraits" aria-hidden="true">
                 @for (src of a.portraits; track src) { <img [src]="'conteudo/' + src" alt="" /> }
@@ -65,7 +65,7 @@ import { SourcesBox } from '../../shared/sources-box';
             }
           </header>
         } @else {
-          <span class="overline">{{ step()?.trail?.name ?? collection()?.name }} · {{ a.period }}</span>
+          <span class="overline">{{ step()?.trail?.name ?? collection()?.name }}@if (a.period) { · {{ a.period }} }</span>
           <h1 class="title">{{ a.title }}</h1>
           @if (!a.topics?.length) { <p class="lead">{{ a.subtitle }}</p> }
           <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
@@ -173,6 +173,7 @@ import { SourcesBox } from '../../shared/sources-box';
     }
     .portraits img + img { margin-left: -14px; }
     .hero .title { position: relative; margin: 0 0 10px; font-size: 34px; color: #fff8ec; }
+    .hero-over + .title, .hero-over + .portraits { margin-top: 12px; }
     .hero .lead { position: relative; margin: 0 0 16px; color: #eadfcb; }
     .hero .time { position: relative; margin: 0; color: #d9c9ad; }
     .part-of {

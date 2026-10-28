@@ -112,7 +112,7 @@ export interface EraMatch {
  */
 export function sameEra(articleId: string, exclude: Iterable<string> = [], limit = 3): EraMatch[] {
   const self = findArticle(articleId);
-  const years = self && periodYears(self.period);
+  const years = self?.period ? periodYears(self.period) : null;
   const trail = trailOfArticle(articleId);
   if (!self || !years || !trail) return [];
   const step = trailStep(articleId);
@@ -122,7 +122,7 @@ export function sameEra(articleId: string, exclude: Iterable<string> = [], limit
     if (skip.has(a.id) || a.overview) continue;
     const t = trailOfArticle(a.id);
     if (!t || t === trail) continue;
-    const other = periodYears(a.period);
+    const other = a.period ? periodYears(a.period) : null;
     if (!other || eraOverlap(years, other) === 0) continue;
     // Perto no começo: 1 no mesmo ano, 0,5 a 50 anos, 0,1 a 450 anos
     const score = 1 / (1 + Math.abs(other[0] - years[0]) / 50);

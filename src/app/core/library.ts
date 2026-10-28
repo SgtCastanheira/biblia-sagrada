@@ -15,7 +15,8 @@ export interface Article {
    * Escritos como perguntas e pistas, para despertar a curiosidade. A capa fica só com o título.
    */
   topics?: string[];
-  period: string;
+  /** Anos ou época da história (nos módulos de livro não há). */
+  period?: string;
   icon: string;
   minutes: number;
   /** Mapa ligado ao artigo. */
@@ -105,7 +106,6 @@ export const ARTICLES: Article[] = [
       'Antevisão da segunda parte: a busca pelo transcendente',
       'Como adquirir a obra',
     ],
-    period: '2022',
     icon: 'local_library',
     minutes: 15,
   },

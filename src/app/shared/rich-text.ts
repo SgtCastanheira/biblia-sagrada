@@ -72,7 +72,7 @@ import { Sheets } from './sheets';
             <a class="read" [routerLink]="['/artigo', a.id]">
               <span class="read-icon"><mat-icon>{{ a.icon }}</mat-icon></span>
               <span class="read-texts">
-                <span class="read-over">História completa · {{ a.period }}</span>
+                <span class="read-over">História completa@if (a.period) { · {{ a.period }} }</span>
                 <span class="read-title">{{ a.title }}</span>
                 <span class="read-desc">@if (b.inlines) {<ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" />} @else {{{ a.subtitle }}}</span>
               </span>

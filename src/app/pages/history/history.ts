@@ -52,7 +52,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
             <a class="card row" matRipple [routerLink]="['/artigo', a.id]">
               <span class="badge"><mat-icon>{{ a.icon }}</mat-icon></span>
               <span class="texts">
-                <span class="meta">{{ a.period }}@if (progress.isDone(a.id)) { · lida } @else if (progress.fraction(a.id) >= 0.05) { · {{ percent(a.id) }}% lida }</span>
+                @if (meta(a); as m) { <span class="meta">{{ m }}</span> }
                 <span class="name">{{ a.title }}</span>
                 <span class="desc">{{ a.subtitle }}</span>
               </span>
@@ -165,6 +165,12 @@ export class HistoryPage {
 
   protected article(id: string) {
     return findArticle(id);
+  }
+
+  /** Linha pequena sobre a história: a época (quando há) e se já foi lida. */
+  protected meta(a: { id: string; period?: string }): string {
+    const status = this.progress.isDone(a.id) ? 'lida' : this.progress.fraction(a.id) >= 0.05 ? `${this.percent(a.id)}% lida` : '';
+    return [a.period, status].filter(Boolean).join(' · ');
   }
 
   protected percent(id: string): number {

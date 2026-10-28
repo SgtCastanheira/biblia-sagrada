@@ -130,7 +130,7 @@
         <span class="overline">Continuar a história</span>
         <span class="title">{{ u.article.title }}</span>
         <span class="progress"><span [style.width.%]="u.fraction * 100"></span></span>
-        <span class="caption">{{ percent(u.fraction) }}% lida · {{ u.article.period }}</span>
+        <span class="caption">{{ percent(u.fraction) }}% lida@if (u.article.period) { · {{ u.article.period }} }</span>
       </span>
       <mat-icon class="go">arrow_forward</mat-icon>
     </a>

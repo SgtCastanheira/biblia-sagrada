@@ -29,7 +29,7 @@ import { StoryProgressService } from '../core/story-progress.service';
         @if (s.next; as n) {
           <a class="up-next" matRipple [routerLink]="['/artigo', n.id]">
             <mat-icon class="mark" aria-hidden="true">{{ n.icon }}</mat-icon>
-            <span class="u-over">A seguir · {{ n.period }}</span>
+            <span class="u-over">A seguir@if (n.period) { · {{ n.period }} }</span>
             <span class="u-title">{{ n.title }}</span>
             <span class="u-sub">{{ n.subtitle }}</span>
             <span class="u-go">{{ n.minutes }} min · Ler a próxima história <mat-icon>arrow_forward</mat-icon></span>
