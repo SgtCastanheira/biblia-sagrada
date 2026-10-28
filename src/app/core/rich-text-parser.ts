@@ -8,7 +8,7 @@ export interface Inline {
 }
 
 export interface Block {
-  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon' | 'sends' | 'eramap';
+  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon' | 'sends' | 'eramap' | 'buy';
   inlines?: Inline[];
   items?: Inline[][];
   events?: { date: string; title: string; text: Inline[] }[];
@@ -39,6 +39,9 @@ export interface Block {
   sends?: { from: string; to: string; who: string; year: string; note?: string }[];
   /** Mapa das épocas (":::mapa-epocas id1,id2,…"): ids de épocas do atlas, em ordem. */
   eras?: string[];
+  /** Onde comprar (":::comprar https://… | texto do botão"): o endereço da loja e o texto do cartão. */
+  href?: string;
+  label?: string;
 }
 
 const cells = (line: string) =>
@@ -95,7 +98,7 @@ export function parseBlocks(source: string): Block[] {
       blocks.push({ type: 'image', alt: image[1], src: image[2], caption: image[3] ? parseInline(image[3]) : undefined });
       continue;
     }
-    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao|envio|mapa-epocas)(?:\s+(.+))?$/);
+    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao|envio|mapa-epocas|comprar)(?:\s+(.+))?$/);
     if (fence) {
       flush();
       const body: string[] = [];
@@ -121,6 +124,9 @@ export function parseBlocks(source: string): Block[] {
         blocks.push({ type: 'facts', place: fence[2]?.trim(), facts });
       } else if (fence[1] === 'sermao') {
         blocks.push({ type: 'sermon', sermon: fence[2]?.trim(), inlines: text.length ? parseInline(text.join(' ')) : undefined });
+      } else if (fence[1] === 'comprar') {
+        const [href, label] = (fence[2] ?? '').split('|').map((x) => x.trim());
+        blocks.push({ type: 'buy', href, label: label || undefined, inlines: text.length ? parseInline(text.join(' ')) : undefined });
       } else if (fence[1] === 'leia') {
         blocks.push({ type: 'read', article: fence[2]?.trim(), inlines: text.length ? parseInline(text.join(' ')) : undefined });
       } else if (fence[1] === 'cena') {

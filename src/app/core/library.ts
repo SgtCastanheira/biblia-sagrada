@@ -89,6 +89,17 @@ export const ARTICLES: Article[] = [
     minutes: 14,
   },
   {
+    id: 'teologia-sistematico-carismatica',
+    collection: 'estudos',
+    story: true,
+    title: 'Teologia Sistemático-Carismática',
+    subtitle: 'Um pastor da Assembleia de Deus e a filha jornalista escreveram, em dois volumes, uma teologia com o Espírito Santo no centro.',
+    topics: ['Pentecostal faz teologia?', 'Um pai, uma filha e uma pandemia', 'O que há dentro dos dois volumes', 'Por que ler', 'Onde encontrar'],
+    period: '2022',
+    icon: 'local_library',
+    minutes: 5,
+  },
+  {
     id: 'trindade',
     collection: 'estudos',
     story: true,

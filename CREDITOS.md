@@ -22,6 +22,10 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Kaingang: Topẽ vĩ rá (Novo Testamento) | `public/bible/` (kgpNT, do eBible.org), sem nenhuma mudança no texto ou na pontuação. © 2011 Wycliffe Bible Translators, Inc. | CC BY-NC-ND 3.0 (sem fins comerciais) |
 | Terêna: Emo’u Itukó’oviti (Novo Testamento) | `public/bible/` (terNT, do eBible.org), sem nenhuma mudança no texto ou na pontuação. © 2012 Wycliffe Bible Translators, Inc. | CC BY-NC-ND 3.0 (sem fins comerciais) |
 | Xavánte: ’Re ĩhâimana u’âsi mono zadawa wasu’u (Novo Testamento) | `public/bible/` (xavNT, do eBible.org), sem nenhuma mudança no texto ou na pontuação. © 2004 Wycliffe Bible Translators, Inc. | CC BY-NC-ND 3.0 (sem fins comerciais) |
+| Cronógrafo de 354, o mês de dezembro | `public/conteudo/imagens/calendario-cronografo.jpg`, do Wikimedia Commons | Domínio público |
+| Calendário de Gezer (foto de Ana al’ain) | `public/conteudo/imagens/calendario-gezer.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
+| Fasti Antiates (foto de Juliana Bastos Marques) | `public/conteudo/imagens/calendario-fasti.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
+| Bula Inter gravissimas (1582), primeira página | `public/conteudo/imagens/calendario-inter.jpg`, do Wikimedia Commons | Domínio público |
 | Foto de Gunnar Vingren (1908) | `public/conteudo/imagens/gunnar-vingren.jpg`, do Wikimedia Commons | Domínio público |
 | Foto de Paulo Leivas Macalão | `public/conteudo/imagens/paulo-leivas-macalao.jpg`, do Wikimedia Commons | Domínio público |
 | Foto de Frida Vingren — acervo do Centro de Estudos Pentecostais da CPAD | `public/conteudo/imagens/frida-vingren.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |

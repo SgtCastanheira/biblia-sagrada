@@ -35,6 +35,8 @@ Nos primeiros séculos, os cristãos não tinham uma festa do nascimento de Jesu
 - **Em Roma,** a primeira prova segura do **25 de dezembro** está num calendário romano de 354, que registra numa lista do ano 336: “nasceu Cristo em Belém da Judeia”. Um comentário de Hipólito de Roma (c. 204) também cita o 25 de dezembro, mas muitos estudiosos acham que essa frase foi acrescentada depois.
 - **Em Antioquia,** em 386, João Crisóstomo pregou num 25 de dezembro e disse que aquela festa tinha chegado à cidade havia menos de dez anos, vinda do Ocidente.
 
+![O mês de dezembro desenhado no Cronógrafo de 354](imagens/calendario-cronografo.jpg "O mês de dezembro no Cronógrafo de 354, o calendário romano que traz a primeira data segura do Natal, numa cópia feita séculos depois. A figura lembra as Saturnais, com os dados do jogo e uma tocha. Domínio público, via Wikimedia Commons.")
+
 ### Os dois suspeitos
 
 Por que justo o 25 de dezembro? Os historiadores têm dois suspeitos, e cada um tem os seus defensores.
@@ -71,9 +73,21 @@ Os nomes dos meses mudaram com a história do povo:
 - O mês a mais | Doze meses lunares dão só 354 dias, e as festas iam escapar da sua estação (a Páscoa precisa cair na colheita da cevada). Por isso, de tempos em tempos, se acrescenta um décimo terceiro mês, o segundo adar. Hoje isso acontece sete vezes a cada dezenove anos.
 :::
 
+![O Calendário de Gezer, uma pequena placa de calcário com letras hebraicas antigas](imagens/calendario-gezer.jpg "O Calendário de Gezer (século X a.C.), uma das inscrições hebraicas mais antigas: marca os meses pelos trabalhos do campo, como a colheita da cevada. Museu Arqueológico de Istambul. Foto: Ana al'ain, CC BY-SA 3.0, via Wikimedia Commons.")
+
+:::figura calendario-ano-judaico
+O ano judaico de hoje: doze meses lunares, com o mês aproximado do nosso calendário. Em dourado, os meses das festas bíblicas: Páscoa (nisã), Pentecostes (sivã), Trombetas, Expiação e Tabernáculos (tishri), Dedicação (quisleu) e Purim (adar).
+:::
+
 ### Por que setembro não é o sétimo mês
 
 O calendário romano mais antigo começava em março. É por isso que **setembro, outubro, novembro e dezembro** querem dizer sétimo, oitavo, nono e décimo mês: eram mesmo. Janeiro e fevereiro vieram depois. Os sacerdotes romanos acrescentavam um mês extra quando achavam necessário, muitas vezes por interesse político, e no tempo de Júlio César o calendário estava cerca de três meses fora das estações.
+
+:::figura calendario-meses-romanos
+Os números escondidos nos nomes dos meses: julho e agosto se chamavam “quinto” e “sexto”, até ganharem os nomes de Júlio César e de Augusto.
+:::
+
+![Os Fasti Antiates, um calendário romano pintado numa parede, com colunas de letras](imagens/calendario-fasti.jpg "Os Fasti Antiates, um calendário romano pintado entre 88 e 55 a.C., antes da reforma de Júlio César. Museu Nacional Romano, Palazzo Massimo. Foto: Juliana Bastos Marques, CC BY-SA 3.0, via Wikimedia Commons.")
 
 Em **46 a.C.**, Júlio César, orientado pelo astrônomo Sosígenes de Alexandria, criou o **calendário juliano**: um ano de 365 dias, com um dia a mais a cada quatro anos, o ano bissexto. Para acertar as estações, o ano de 46 a.C. teve 445 dias e ficou conhecido como “o ano da confusão”. O mês de julho ganhou o nome de Júlio, e agosto, o do imperador Augusto. Foi nesse calendário que Jesus nasceu e que os apóstolos viveram.
 
@@ -90,6 +104,12 @@ O papa **Gregório XIII** publicou, em 24 de fevereiro de 1582, a bula *Inter gr
 - **Tirar dez dias.** Depois da quinta-feira, **4 de outubro de 1582**, veio a sexta-feira, **15 de outubro**. Teresa de Ávila morreu justamente na noite dessa passagem: morreu no dia 4 e foi sepultada no dia seguinte, que já era 15.
 - **Mudar a regra do bissexto.** Os anos de virada de século só são bissextos se forem divisíveis por 400. Por isso 1600 e 2000 foram bissextos, mas 1700, 1800 e 1900 não. Com isso, o erro caiu para cerca de um dia a cada três mil anos.
 
+:::figura calendario-outubro-1582
+Outubro de 1582 nos países que adotaram logo o novo calendário: depois de quinta-feira, dia 4, veio sexta-feira, dia 15.
+:::
+
+![A primeira página da bula Inter gravissimas, impressa em latim em 1582](imagens/calendario-inter.jpg "A primeira página da bula Inter gravissimas, de Gregório XIII (1582), que criou o calendário gregoriano. Domínio público, via Wikimedia Commons.")
+
 Itália, Espanha, Portugal e Polônia mudaram na hora. **No Brasil, o calendário gregoriano vale desde 1582**, quando o país era colônia de Portugal.
 
 Os países protestantes e os ortodoxos demoraram, porque a reforma vinha do papa. A Inglaterra e as suas colônias, entre elas os futuros Estados Unidos, só mudaram em 1752: depois de 2 de setembro veio o dia 14. A Suécia tentou mudar aos poucos, se atrapalhou e chegou a ter um **30 de fevereiro**, em 1712, antes de adotar o novo calendário de uma vez, em 1753. A Rússia só mudou em 1918, depois da Revolução; por isso a “Revolução de Outubro”, de 1917, aconteceu em novembro pelo calendário novo. A Grécia foi o último país da Europa a mudar no uso civil, em 1923.
@@ -100,6 +120,10 @@ O papa mandou, mas nem todos obedeceram. E, em parte do mundo cristão, o Natal 
 
 Muitas igrejas ortodoxas, como as da Rússia, da Sérvia e da Geórgia, e o Patriarcado de Jerusalém, continuaram a usar o **calendário juliano** nas festas. Elas comemoram o Natal no 25 de dezembro, mas o 25 de dezembro do calendário juliano: hoje, a diferença entre os dois calendários é de 13 dias, e esse dia cai em **7 de janeiro** do nosso calendário. A partir de 2100, a diferença será de 14 dias.
 
+:::figura calendario-natal-13-dias
+O mesmo dia em dois calendários: entre 1900 e 2100, o 25 de dezembro do calendário juliano cai em 7 de janeiro do nosso. A partir de 2100, a diferença passa a ser de 14 dias.
+:::
+
 A partir de 1923, outras igrejas ortodoxas, como as de Constantinopla, da Grécia e da Romênia, adotaram um “calendário juliano revisado”, que coincide com o gregoriano nas festas de data fixa: elas comemoram o Natal em 25 de dezembro, como nós. Na Ucrânia, a Igreja Ortodoxa e o governo passaram o Natal para 25 de dezembro em 2023. As igrejas copta, do Egito, e etíope, que têm calendários próprios, também comemoram em 7 de janeiro; a armênia, como se viu, em 6 de janeiro.
 
 Para a Páscoa, quase todas as igrejas ortodoxas seguem a conta do calendário juliano, e por isso a Páscoa delas costuma cair depois da nossa. Às vezes as duas coincidem: em 2025, ano em que se lembraram os 1.700 anos do Concílio de Niceia, todas as igrejas celebraram a Páscoa no mesmo dia, 20 de abril.
@@ -109,6 +133,10 @@ E se você perguntar a um judeu, a um muçulmano ou a um etíope em que ano esta
 ## Em que ano estamos? Depende de quem responde
 
 O gregoriano é o calendário civil de quase todo o mundo e o padrão internacional das datas. Mas muitos povos usam outros calendários, para as festas religiosas ou até no governo:
+
+:::figura calendario-ano-2026
+O fim de 2026 em nove calendários. Cada um começa a contar os anos de um acontecimento diferente.
+:::
 
 :::ficha Os calendários de hoje
 - Judaico | Lunissolar: meses de 29 ou 30 dias e o segundo adar sete vezes a cada 19 anos. Conta os anos desde a criação, segundo a tradição judaica: em setembro de 2026 começou o ano 5787. Oficial em Israel, junto com o gregoriano, e seguido nas festas judaicas no mundo inteiro.
@@ -140,7 +168,3 @@ O tempo é de Deus, qualquer que seja o calendário: “Ele muda os tempos e as 
 - 1918 | Rússia | Adota o gregoriano; a Igreja Ortodoxa Russa continua com o juliano
 - 1923 | Igrejas ortodoxas | O calendário juliano revisado; a Grécia muda no uso civil
 :::
-
-## Para aprofundar
-
-Para estudar a teologia cristã com um olhar pentecostal, uma leitura indicada é a *Teologia Sistemático-Carismática*, do pastor César Moisés Carvalho e de Céfora Carvalho (Thomas Nelson Brasil, 2022, em dois volumes), que mostra a experiência carismática ao longo da história do povo de Deus, do Antigo Testamento aos primeiros séculos da Igreja.

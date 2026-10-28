@@ -119,6 +119,7 @@ export const TRAILS: Trail[] = [
     branches: [
       { title: 'O movimento pentecostal', ids: ['movimento-pentecostal'] },
       { title: 'Os grandes avivamentos', ids: ['avivamentos-desde-atos', 'avivamento-de-oracao-1857', 'avivamento-do-pais-de-gales', 'avivamento-da-coreia', 'avivamento-da-africa-oriental', 'avivamento-das-hebridas'] },
+      { title: 'A teologia pentecostal', ids: ['teologia-sistematico-carismatica'] },
     ],
   },
   {

@@ -56,6 +56,17 @@ import { Sheets } from './sheets';
             }
           </ul>
         }
+        @case ('buy') {
+          <a class="read buy" [href]="b.href" target="_blank" rel="noopener">
+            <span class="read-icon"><mat-icon>shopping_bag</mat-icon></span>
+            <span class="read-texts">
+              <span class="read-over">Onde comprar</span>
+              <span class="read-title">{{ b.label ?? 'Ver na loja' }}</span>
+              @if (b.inlines) { <span class="read-desc"><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></span> }
+            </span>
+            <mat-icon class="read-go">open_in_new</mat-icon>
+          </a>
+        }
         @case ('read') {
           @if (articleOf(b.article); as a) {
             <a class="read" [routerLink]="['/artigo', a.id]">

@@ -186,6 +186,14 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ],
     works: ['schurer', 'grabbe', 'russell', 'bruce-nt-history', 'ferguson', 'keener-nt'],
   },
+  'teologia-sistematico-carismatica': {
+    ancientLabel: 'Documentos consultados',
+    ancient: [
+      'Entrevista de César Moisés Carvalho e Céfora Carvalho à revista Comunhão: “Pai e filha escrevem manual teológico inédito na literatura pentecostal” (27 de junho de 2022)',
+      'Página da obra na editora Thomas Nelson Brasil e a descrição da obra nas livrarias',
+    ],
+    works: ['carvalho-tsc'],
+  },
   'natal-e-os-calendarios': {
     ancient: [
       'Clemente de Alexandria, Stromata 1.21 (as datas propostas para o nascimento, c. 200)',
@@ -193,8 +201,9 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'João Crisóstomo, Sermão no dia do Natal (Antioquia, 386); Agostinho, A Trindade 4.5; o tratado Sobre os solstícios e os equinócios (séc. IV)',
       'Macróbio, Saturnais 1.14, e Censorino, Sobre o dia do nascimento 20 (a reforma de Júlio César)',
       'Gregório XIII, bula Inter gravissimas (24 de fevereiro de 1582)',
+      'Calendário de Gezer (séc. X a.C., Museu Arqueológico de Istambul) e Fasti Antiates (88–55 a.C., Museu Nacional Romano)',
     ],
-    works: ['talley', 'bradshaw-johnson', 'finegan', 'richards-calendar', 'carvalho-tsc'],
+    works: ['talley', 'bradshaw-johnson', 'finegan', 'richards-calendar'],
   },
   trindade: {
     ancient: [

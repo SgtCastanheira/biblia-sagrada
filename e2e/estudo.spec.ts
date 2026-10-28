@@ -415,3 +415,18 @@ test('entre os Testamentos: o mapa passa de uma época a outra e mostra onde est
   await expect(mapa.getByText('Dn 11.31')).toBeVisible();
   await expect(mapa.getByRole('link', { name: /Ver no atlas completo/ })).toHaveAttribute('href', /atlas\?epoca=macabeus/);
 });
+
+test('módulo Teologia Sistemático-Carismática: texto ilustrado e o cartão para comprar na editora', async ({ page }) => {
+  await page.goto('/historia?trilha=pentecostalismo');
+  await page.getByRole('link', { name: /Teologia Sistemático-Carismática/ }).click();
+  await expect(page.getByRole('heading', { level: 1, name: 'Teologia Sistemático-Carismática' })).toBeVisible();
+  await expect(page.getByRole('img', { name: /Desenho dos dois volumes/ })).toBeAttached();
+  const buy = page.locator('a.buy');
+  await expect(buy).toContainText('Onde comprar');
+  await expect(buy).toHaveAttribute('href', /thomasnelson\.com\.br\/products\/box-teologia-sistematico-carismatica/);
+  await expect(buy).toHaveAttribute('target', '_blank');
+  // O estudo do Natal não traz mais a indicação do livro
+  await page.goto('/artigo/natal-e-os-calendarios');
+  await expect(page.getByRole('heading', { name: 'Para aprofundar' })).toHaveCount(0);
+  await expect(page.locator('app-calendar-art')).toHaveCount(5);
+});
