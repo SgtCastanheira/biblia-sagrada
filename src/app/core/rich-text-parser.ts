@@ -200,22 +200,33 @@ export const SPECIAL_SECTIONS: Record<string, string> = {
   'Linha do tempo': 'Em resumo',
   Resumo: 'Em resumo',
   Redescoberta: 'Epílogo',
+  'Para aprofundar': 'Leitura recomendada',
 };
 
-/** Rótulo de cada título de seção (por posição no texto): "Capítulo 1", "Capítulo 2"… ou um nome especial. */
-export function sectionLabels(blocks: Block[]): string[] {
+/** Texto comparável de um título: sem acentos, sem pontuação e em minúsculas. */
+export const headingKey = (text: string) =>
+  text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+/**
+ * Rótulo de cada título de seção (por posição no texto): "Capítulo 1", "Capítulo 2"… ou um nome especial.
+ * Quando a história tem tópicos na capa, os títulos que são tópicos viram "Tópico 1 de 5", e os outros ficam sem número.
+ */
+export function sectionLabels(blocks: Block[], topics: string[] = []): string[] {
+  const keys = topics.map(headingKey);
   let n = 0;
   return blocks.map((b) => {
     if (b.type !== 'h2') return '';
     const text = b.inlines!.map((x) => x.text).join('');
-    return SPECIAL_SECTIONS[text] ?? `Capítulo ${++n}`;
+    const topic = keys.indexOf(headingKey(text));
+    if (topic >= 0) return `Tópico ${topic + 1} de ${topics.length}`;
+    return SPECIAL_SECTIONS[text] ?? (topics.length ? '' : `Capítulo ${++n}`);
   });
 }
 
 /** Títulos de seção de um texto, para montar o índice (com o número do capítulo, quando é capítulo). */
-export function outline(source: string): { anchor: string; text: string; chapter?: number; label: string }[] {
+export function outline(source: string, topics: string[] = []): { anchor: string; text: string; chapter?: number; label: string }[] {
   const blocks = parseBlocks(source);
-  const labels = sectionLabels(blocks);
+  const labels = sectionLabels(blocks, topics);
   return blocks.flatMap((b, i) => {
     if (b.type !== 'h2') return [];
     const label = labels[i];

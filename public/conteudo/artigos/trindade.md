@@ -1,13 +1,15 @@
-Quando Jesus mandou os discípulos fazer discípulos de todas as nações, deu a ordem de batizá-los “em nome do Pai, e do Filho, e do Espírito Santo” ([[Mt 28.19]]). Um só nome, três que o levam. É isso que a Igreja chama de **Trindade**: há um só Deus, que existe eternamente como três pessoas, o Pai, o Filho e o Espírito Santo.
+Quando Jesus mandou os discípulos fazer discípulos de todas as nações, deu a ordem de batizá-los “em nome do Pai, e do Filho, e do Espírito Santo” ([[Mt 28.19]]). Um só nome, três que o levam. Como pode? Os judeus repetiam todos os dias que Deus é um só, e os apóstolos, que eram judeus, adoravam Jesus e falavam do Espírito como Deus. Levou séculos para pôr em palavras o que a Bíblia mostra, e no caminho houve quem errasse feio.
 
 :::destaque
 Ouve, ó Israel; o Senhor nosso Deus é o único Senhor.
 — [[Dt 6.4]]
 :::
 
-A palavra “Trindade” não aparece na Bíblia, assim como a palavra “Bíblia” também não. Ela é um resumo do que a Bíblia ensina. Por volta do ano 180, o bispo Teófilo de Antioquia usou a palavra grega *trías*, “tríade”, para falar de Deus. Por volta de 213, o escritor cristão Tertuliano, de Cartago, escreveu em latim *trinitas* e resumiu o ensino numa frase que ficou: **uma só substância, três pessoas**.
+A Igreja deu a esse mistério um nome: **Trindade**. A palavra não aparece na Bíblia, assim como a palavra “Bíblia” também não; ela é um resumo do que a Bíblia ensina. Por volta do ano 180, o bispo Teófilo de Antioquia usou a palavra grega *trías*, “tríade”, para falar de Deus. Por volta de 213, o escritor cristão Tertuliano, de Cartago, escreveu em latim *trinitas* e resumiu o ensino numa frase que ficou: **uma só substância, três pessoas**.
 
-## Três verdades ao mesmo tempo
+## Um só Deus, e três nomes no mesmo batismo
+
+### Três verdades ao mesmo tempo
 
 A doutrina da Trindade não é uma conta difícil. É o cuidado de dizer, juntas, três coisas que a Bíblia diz, sem deixar nenhuma de fora.
 
@@ -18,17 +20,21 @@ A doutrina da Trindade não é uma conta difícil. É o cuidado de dizer, juntas
 - O que acontece quando se tira uma | Sem a primeira, viram três deuses. Sem a segunda, Jesus e o Espírito deixam de ser Deus. Sem a terceira, os três viram um só, com três nomes. A história da Igreja conheceu os três erros.
 :::
 
-## Um só Deus
+### Um só Deus
 
 Israel vivia cercado de povos com muitos deuses, e a primeira coisa que Deus ensinou ao seu povo foi que **só ele é Deus**: “Eu sou o Senhor, e não há outro; fora de mim não há Deus” ([[Is 45.5]]). Jesus repetiu o mesmo texto quando lhe perguntaram qual era o primeiro mandamento: “Ouve, Israel, o Senhor nosso Deus é o único Senhor” ([[Mc 12.29]]).
 
 Os cristãos nunca deixaram de crer nisso. Paulo, que escreveu sobre o Pai, o Filho e o Espírito, escreveu também: “para nós há um só Deus, o Pai, de quem são todas as coisas e para quem nós vivemos; e um só Senhor, Jesus Cristo” ([[1Co 8.6]]). E Tiago lembra que crer num só Deus é o começo, não o fim: “Crês tu que Deus é um só? Fazes bem; os demônios também o creem, e estremecem” ([[Tg 2.19]]).
 
-## O Pai é Deus
+### O Pai é Deus
 
 Ninguém discute que o Pai é Deus. Jesus ensinou a orar “Pai nosso que estás nos céus” ([[Mt 6.9]]), e Paulo abre quase todas as cartas assim: “Graça seja convosco, e paz, da parte de Deus nosso Pai” ([[1Co 1.3]]). O que o Novo Testamento acrescenta é que o Pai não está sozinho: desde sempre ele tem o Filho, e o ama “antes da fundação do mundo” ([[Jo 17.24]]).
 
-## O Filho é Deus
+Ninguém discute o Pai. A pergunta que dividiu os cristãos foi outra: e o Filho? E o Espírito?
+
+## Quem é o Filho? Quem é o Espírito?
+
+### O Filho é Deus
 
 João começa o seu Evangelho assim: “No princípio era o Verbo, e o Verbo estava com Deus, e o Verbo era Deus” ([[Jo 1.1]]). Na mesma frase, o [Verbo](/dicionario/verbo) está *com* Deus (é outro, distinto do Pai) e *é* Deus. Depois: “o Verbo se fez carne, e habitou entre nós” ([[Jo 1.14]]).
 
@@ -42,7 +48,7 @@ João começa o seu Evangelho assim: “No princípio era o Verbo, e o Verbo est
 
 Paulo resume o mistério da encarnação: Cristo, “subsistindo em forma de Deus, não considerou o ser igual a Deus coisa a que se devia aferrar, mas esvaziou-se a si mesmo, tomando a forma de servo” ([[Fp 2.6-7]]). Ele não deixou de ser Deus para ser homem; sendo Deus, tornou-se também homem.
 
-## O Espírito Santo é Deus, e é alguém
+### O Espírito Santo é Deus, e é alguém
 
 Para muitos crentes, o [Espírito Santo](/dicionario/espirito-santo) é uma força, um poder. A Bíblia mostra mais: ele é **Deus** e é **uma pessoa**.
 
@@ -57,7 +63,7 @@ Para muitos crentes, o [Espírito Santo](/dicionario/espirito-santo) é uma for�
 
 O Pentecostes é uma cena da Trindade. Pedro explicou o que o povo via: Jesus, “exaltado pela dextra de Deus, e tendo recebido do Pai a promessa do Espírito Santo, derramou isto que vós agora vedes e ouvis” ([[At 2.33]]). O batismo no Espírito Santo é a promessa do Pai ([[At 1.4]]), derramada pelo Filho.
 
-## Os três juntos
+### Os três juntos
 
 Muitas vezes o Novo Testamento fala dos três na mesma cena ou na mesma frase:
 
@@ -68,7 +74,7 @@ Muitas vezes o Novo Testamento fala dos três na mesma cena ou na mesma frase:
 - **Na oração**: “por ele ambos temos acesso ao Pai em um mesmo Espírito” ([[Ef 2.18]]); “Deus enviou aos nossos corações o Espírito de seu Filho, que clama: Aba, Pai” ([[Gl 4.6]]).
 - **Na salvação**: eleitos “segundo a presciência de Deus Pai, na santificação do Espírito, para a obediência e aspersão do sangue de Jesus Cristo” ([[1Pe 1.2]]).
 
-## E no Antigo Testamento?
+### E no Antigo Testamento?
 
 O Antigo Testamento insiste em que Deus é um só, porque Israel vivia no meio da idolatria. Mas deixa sinais de que esse Deus único não é solitário:
 
@@ -79,7 +85,9 @@ O Antigo Testamento insiste em que Deus é um só, porque Israel vivia no meio d
 
 É preciso ser honesto: os judeus não liam esses textos assim, e alguns têm outras explicações (o plural de “Façamos”, por exemplo, pode ser o de um rei que fala). Sozinhos, eles não provam a Trindade. Mas, depois que o Filho veio e o Espírito foi derramado, os cristãos passaram a ler o Antigo Testamento com outros olhos. Agostinho resumiu: o Novo Testamento está escondido no Antigo, e o Antigo se revela no Novo.
 
-## O que a Trindade não é
+Parece simples dito assim. Mas houve quem tirasse uma dessas peças do lugar, e o estrago foi grande.
+
+## Os erros que quase dividiram a Igreja
 
 Quase todo erro sobre a Trindade é uma dessas três verdades deixada de lado. A Igreja deu nome a eles:
 
@@ -112,22 +120,7 @@ Quase todo erro sobre a Trindade é uma dessas três verdades deixada de lado. A
 Como a Igreja respondeu a Ário: Atanásio, o Concílio de Niceia (325) e o credo que ainda hoje se recita.
 :::
 
-## Como a Igreja confessa
-
-Depois de Niceia (325) e de Constantinopla (381), as igrejas passaram a confessar a fé com o credo que reúne os dois concílios. A parte sobre o Filho e o Espírito diz:
-
-:::destaque
-Cremos em um só Senhor, Jesus Cristo, Filho unigênito de Deus, gerado do Pai antes de todos os séculos, Luz de Luz, Deus verdadeiro de Deus verdadeiro, gerado, não feito, da mesma substância do Pai. E no Espírito Santo, Senhor e que dá a vida, que procede do Pai, que com o Pai e o Filho é adorado e glorificado, que falou pelos profetas.
-— Credo Niceno-Constantinopolitano (381), traduzido para o app
-:::
-
-Mais tarde, as igrejas do Ocidente acrescentaram que o Espírito procede do Pai “e do Filho”. A diferença foi uma das causas da separação entre as igrejas do Oriente e do Ocidente, em 1054.
-
-Outro texto antigo, o chamado Credo Atanasiano (que não é de Atanásio, mas dos séculos V ou VI), resume a regra de ouro: adoramos **um só Deus na Trindade, e a Trindade na unidade, sem confundir as pessoas nem dividir a substância**.
-
-As Assembleias de Deus no Brasil confessam a mesma fé. O primeiro artigo do “Cremos” das Assembleias de Deus fala de um só Deus, que subsiste eternamente em três pessoas: o Pai, o Filho e o Espírito Santo.
-
-## As comparações e os seus limites
+### As comparações e os seus limites
 
 Para ensinar, muita gente usa comparações. Todas ajudam um pouco, e todas falham em algum ponto:
 
@@ -142,7 +135,26 @@ Para ensinar, muita gente usa comparações. Todas ajudam um pouco, e todas falh
 Deus é maior do que as nossas comparações: “os meus pensamentos não são os vossos pensamentos” ([[Is 55.8-9]]). A Trindade não é uma contradição, porque não diz que Deus é um e três na mesma coisa: ele é **um só Deus** (um só “o quê”) em **três pessoas** (três “quem”). É um mistério que a Bíblia revela, não uma ideia que alguém inventou.
 :::
 
-## Por que isso importa
+A Igreja precisou, então, dizer a sua fé em poucas linhas, para ninguém esquecer.
+
+## O que os credos guardaram em poucas linhas
+
+Depois de Niceia (325) e de Constantinopla (381), as igrejas passaram a confessar a fé com o credo que reúne os dois concílios. A parte sobre o Filho e o Espírito diz:
+
+:::destaque
+Cremos em um só Senhor, Jesus Cristo, Filho unigênito de Deus, gerado do Pai antes de todos os séculos, Luz de Luz, Deus verdadeiro de Deus verdadeiro, gerado, não feito, da mesma substância do Pai. E no Espírito Santo, Senhor e que dá a vida, que procede do Pai, que com o Pai e o Filho é adorado e glorificado, que falou pelos profetas.
+— Credo Niceno-Constantinopolitano (381), traduzido para o app
+:::
+
+Mais tarde, as igrejas do Ocidente acrescentaram que o Espírito procede do Pai “e do Filho”. A diferença foi uma das causas da separação entre as igrejas do Oriente e do Ocidente, em 1054.
+
+Outro texto antigo, o chamado Credo Atanasiano (que não é de Atanásio, mas dos séculos V ou VI), resume a regra de ouro: adoramos **um só Deus na Trindade, e a Trindade na unidade, sem confundir as pessoas nem dividir a substância**.
+
+As Assembleias de Deus no Brasil confessam a mesma fé. O primeiro artigo do “Cremos” das Assembleias de Deus fala de um só Deus, que subsiste eternamente em três pessoas: o Pai, o Filho e o Espírito Santo.
+
+Tudo isso parece longe da vida de todo dia? Espere até ver o que acontece quando você ora.
+
+## E o que isso muda na sua oração?
 
 **Deus é amor desde sempre.** “Deus é amor” ([[1Jo 4.8]]). Antes de existir o mundo, já havia amor: o Pai amava o Filho “antes da fundação do mundo” ([[Jo 17.24]]). Um deus solitário precisaria de criaturas para poder amar; o Deus da Bíblia criou porque o seu amor transborda.
 

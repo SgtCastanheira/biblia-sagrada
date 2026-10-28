@@ -24,7 +24,7 @@ import { Sheets } from './sheets';
     @for (b of blocks(); track $index; let i = $index) {
       @switch (b.type) {
         @case ('h2') {
-          @if (story()) { <span class="chapter" aria-hidden="true">{{ labels()[i] }}</span> }
+          @if (story() && labels()[i]) { <span class="chapter" aria-hidden="true">{{ labels()[i] }}</span> }
           <h2 [id]="b.anchor"><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></h2>
         }
         @case ('h3') { <h3><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></h3> }
@@ -148,11 +148,13 @@ export class RichText {
   readonly source = input.required<string>();
   /** Modo história: capítulos, letra capitular, retratos e animações ao rolar. */
   readonly story = input(false);
+  /** Tópicos da capa: os títulos que são tópicos ganham o rótulo "Tópico 1 de 5". */
+  readonly topics = input<string[]>([]);
   private readonly sheets = inject(Sheets);
   protected readonly blocks = computed(() => parseBlocks(this.source()));
 
   /** Rótulo de cada título de seção: "Capítulo 1", "Capítulo 2"… ou um nome especial. */
-  protected readonly labels = computed(() => sectionLabels(this.blocks()));
+  protected readonly labels = computed(() => sectionLabels(this.blocks(), this.topics()));
 
   /** O primeiro parágrafo ganha a letra capitular. */
   protected readonly opening = computed(() => (this.story() ? this.blocks().findIndex((b: Block) => b.type === 'p') : -1));

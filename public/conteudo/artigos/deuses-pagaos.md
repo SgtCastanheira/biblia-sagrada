@@ -1,17 +1,19 @@
-Baal, Astarote, Moloque, Dagom, Quemós; e, no livro de Atos, Júpiter, Mercúrio e Diana. Os deuses que a Bíblia cita não eram lendas distantes: tinham templos, sacerdotes, festas e sacrifícios, e disputaram o coração de Israel por mais de mil anos. Este estudo mostra **quem eram, onde aparecem, que nomes ganharam ao longo do tempo** e **por que a Bíblia manda rejeitá-los**. E também como os seus nomes chegaram até hoje.
+Baal, Astarote, Moloque, Dagom, Quemós; e, no livro de Atos, Júpiter, Mercúrio e Diana. Os deuses que a Bíblia cita não eram lendas distantes: tinham templos, sacerdotes, festas e sacrifícios, e disputaram o coração de Israel por mais de mil anos. Quem eram esses deuses? Por que Israel voltava a eles, mesmo depois de tantos avisos? E o que eles pediam em troca? Alguns nomes você vai reconhecer, porque continuam por aí, no céu e no calendário.
 
 :::destaque
 Não terás outros deuses diante de mim.
 — [[Êx 20.3]]
 :::
 
-## O que a Bíblia diz desses deuses
+## Os deuses que disputaram o coração de Israel
+
+### O que a Bíblia diz desses deuses
 
 A Bíblia diz duas coisas ao mesmo tempo. A primeira: **o ídolo não é nada**. Paulo escreve que “o ídolo nada é no mundo, e que não há outro Deus, senão um só” ([[1Co 8.4]]). A estátua é madeira, pedra ou metal, e não pode ajudar ninguém.
 
 A segunda: **por trás do culto havia demônios**. Moisés diz do povo: “Ofereceram sacrifícios aos demônios, não a Deus” ([[Dt 32.17]]), e Paulo explica: “as coisas que eles sacrificam, sacrificam-nas a demônios, e não a Deus” ([[1Co 10.20]]). O ídolo é vazio, mas a adoração não fica no vazio.
 
-## Os deuses de Canaã
+### Os deuses de Canaã
 
 :::ficha Baal
 - Quem era | O principal deus dos cananeus, senhor da chuva, da tempestade e da fertilidade. “Baal” quer dizer “senhor” ou “dono”. Nos textos achados em Ugarit, na Síria (séculos XIV e XIII a.C.), ele é o deus da tempestade, também chamado Hadade.
@@ -46,7 +48,7 @@ A segunda: **por trás do culto havia demônios**. Moisés diz do povo: “Ofere
 - Onde aparece | Os filisteus festejavam a prisão de Sansão no templo de Dagom, em Gaza, quando o templo caiu sobre eles ([[Jz 16.23-30]]). Quando levaram a arca de Deus ao templo de Dagom, em Asdode, a estátua amanheceu “caído com o rosto em terra diante da arca do Senhor” e, no dia seguinte, com a cabeça e as mãos cortadas ([[1Sm 5.2-4]]).
 :::
 
-## O Egito, a Assíria e a Babilônia
+### O Egito, a Assíria e a Babilônia
 
 :::ficha Os deuses do Egito
 - Na Bíblia | Na noite da Páscoa, Deus disse: “sobre todos os deuses do Egito executarei juízos” ([[Êx 12.12]]).
@@ -67,7 +69,7 @@ Os reis do Egito que a Bíblia cita: quem foram, quando governaram e a quem resp
 - Os deuses dos povos levados a Samaria | Cada povo fez o seu deus: Sucote-Benote, Nergal, Asima, Nibaz, Tartaque, e Adrameleque e Anameleque, a quem os sefarvitas queimavam os filhos ([[2Rs 17.29-31]]). O rei Senaqueribe foi morto pelos filhos enquanto adorava na casa de Nisroque, o seu deus ([[2Rs 19.37]]).
 :::
 
-## Os deuses gregos e romanos, no livro de Atos
+### Os deuses gregos e romanos, no livro de Atos
 
 :::ficha Júpiter e Mercúrio, em Listra
 - O que aconteceu | Paulo curou um homem que nunca tinha andado, e a multidão gritou: “Fizeram-se os deuses semelhantes aos homens e desceram até nós”. Chamavam Barnabé de Júpiter e Paulo de Mercúrio, e o sacerdote de Júpiter trouxe touros para lhes oferecer sacrifícios ([[At 14.8-13]]).
@@ -85,7 +87,9 @@ Os reis do Egito que a Bíblia cita: quem foram, quando governaram e a quem resp
 - O navio | Na viagem a Roma, Paulo embarcou num navio que “tinha por insígnia Castor e Pólux” ([[At 28.11]]), os gêmeos que os marinheiros invocavam como protetores.
 :::
 
-## O que esses deuses pediam
+Cada um desses deuses tinha um preço. Alguns cobravam o que havia de mais precioso numa casa.
+
+## O preço que eles cobravam
 
 :::ficha Os sacrifícios
 - Os filhos | A Moloque e a Baal, crianças queimadas ([[Lv 18.21]]; [[Jr 19.5]]; [[2Rs 3.27]]). O salmista resume: “derramaram sangue inocente, o sangue de seus filhos e de suas filhas” ([[Sl 106.38]]).
@@ -97,7 +101,7 @@ Os reis do Egito que a Bíblia cita: quem foram, quando governaram e a quem resp
 
 O contraste é enorme. Os deuses pediam os filhos dos homens; o Deus da Bíblia disse que isso nunca lhe tinha vindo à mente ([[Jr 7.31]]) e, em vez de pedir os nossos filhos, deu o seu: “Deus amou o mundo de tal maneira que deu o seu Filho unigênito” ([[Jo 3.16]]).
 
-## Por que rejeitá-los
+## Por que a Bíblia diz não
 
 **Porque só o Senhor é Deus.** “Todos os deuses dos povos são ídolos; mas o Senhor fez os céus” ([[Sl 96.5]]).
 
@@ -109,7 +113,9 @@ O contraste é enorme. Os deuses pediam os filhos dos homens; o Deus da Bíblia 
 
 **Porque Deus quer o coração inteiro.** Elias perguntou ao povo: “Até quando coxeareis entre dois pensamentos? Se o Senhor é Deus, segui-o” ([[1Rs 18.21]]).
 
-## E hoje?
+Os templos caíram. Mas será que esses deuses sumiram mesmo?
+
+## Eles ainda estão entre nós?
 
 ### Os nomes que ficaram
 

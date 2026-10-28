@@ -79,3 +79,17 @@ test('sem repetir: nenhum artigo leva duas vezes à mesma história, e nenhum te
   }
   expect(problems).toEqual([]);
 });
+
+test('tópicos da capa: cada um é uma seção do texto, com o mesmo título e na mesma ordem', async () => {
+  const { headingKey, outline } = await import('../../src/app/core/rich-text-parser');
+  const problems: string[] = [];
+  for (const a of ARTICLES.filter((x) => x.topics?.length)) {
+    const sections = outline(md(a.id), a.topics).map((s) => headingKey(s.text));
+    const found = a.topics!.map((t) => sections.indexOf(headingKey(t)));
+    a.topics!.forEach((t, i) => { if (found[i] < 0) problems.push(`${a.id}: o tópico “${t}” não é um título do texto`); });
+    if (found.some((x, i) => i > 0 && x < found[i - 1])) problems.push(`${a.id}: os tópicos estão fora da ordem do texto`);
+    const labels = outline(md(a.id), a.topics).filter((s) => s.label.startsWith('Tópico')).length;
+    if (labels !== a.topics!.length) problems.push(`${a.id}: ${labels} seções com rótulo de tópico, ${a.topics!.length} tópicos`);
+  }
+  expect(problems).toEqual([]);
+});

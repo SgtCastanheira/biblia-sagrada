@@ -26,7 +26,7 @@ export const RELEASES: Release[] = [
     date: '28 de outubro de 2026',
     title: 'Jesus nasceu mesmo em 25 de dezembro?',
     items: [
-      { icon: 'calendar_month', title: 'O Natal e os calendários', text: 'A Bíblia não diz o dia em que Jesus nasceu. Veja de onde veio o 25 de dezembro, por que há cristãos que comemoram em 7 de janeiro, como surgiu o calendário que usamos hoje e quais calendários outros povos usam.', link: '/artigo/natal-e-os-calendarios', tip: 'Também em Histórias › Contexto histórico.' },
+      { icon: 'calendar_month', title: 'O Natal e os calendários', text: 'Uma data que todo mundo conhece e uma pergunta que quase ninguém faz. Siga as pistas do Evangelho, os dois suspeitos do 25 de dezembro e a noite de 1582 em que dez dias desapareceram do calendário.', link: '/artigo/natal-e-os-calendarios', tip: 'Também em Histórias › Contexto histórico.' },
     ],
   },
   {

@@ -19,7 +19,7 @@ import { StoryProgressService } from '../../core/story-progress.service';
 import { StoryJourney } from '../../shared/story-journey';
 import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
-import { outline } from '../../core/rich-text-parser';
+import { headingKey, outline } from '../../core/rich-text-parser';
 import { RichText } from '../../shared/rich-text';
 import { SourcesBox } from '../../shared/sources-box';
 
@@ -43,7 +43,7 @@ import { SourcesBox } from '../../shared/sources-box';
           <div class="progress" aria-hidden="true"></div>
           <div class="now" [class.on]="!!chapter()" aria-hidden="true">
             @if (chapter(); as c) {
-              <span class="now-n">{{ c.n }}/{{ toc().length }}</span>
+              <span class="now-n">{{ c.tag }}</span>
               <span class="now-t">{{ c.title }}</span>
               <span class="now-left">faltam {{ c.left }} min</span>
             }
@@ -60,7 +60,9 @@ import { SourcesBox } from '../../shared/sources-box';
             <h1 class="title">{{ a.title }}</h1>
             @if (a.topics?.length) {
               <ul class="topics" aria-label="Nesta história">
-                @for (t of a.topics; track t) { <li>{{ t }}</li> }
+                @for (t of topicLinks(); track t.text) {
+                  <li><button type="button" (click)="jump(t.anchor)" [disabled]="!t.anchor">{{ t.text }}<mat-icon aria-hidden="true">arrow_downward</mat-icon></button></li>
+                }
               </ul>
             } @else {
               <p class="lead">{{ a.subtitle }}</p>
@@ -75,7 +77,9 @@ import { SourcesBox } from '../../shared/sources-box';
           <h1 class="title">{{ a.title }}</h1>
           @if (a.topics?.length) {
             <ul class="topics" aria-label="Neste estudo">
-              @for (t of a.topics; track t) { <li>{{ t }}</li> }
+              @for (t of topicLinks(); track t.text) {
+                <li><button type="button" (click)="jump(t.anchor)" [disabled]="!t.anchor">{{ t.text }}<mat-icon aria-hidden="true">arrow_downward</mat-icon></button></li>
+              }
             </ul>
           } @else {
             <p class="lead">{{ a.subtitle }}</p>
@@ -96,7 +100,7 @@ import { SourcesBox } from '../../shared/sources-box';
           </a>
         }
 
-        @if (toc().length > 2) {
+        @if (toc().length > 2 && !article()?.topics?.length) {
           <details class="toc" [open]="wide">
             <summary class="toc-title">
               <mat-icon>list</mat-icon> {{ story() ? 'Nesta história' : 'Neste estudo' }}
@@ -114,7 +118,7 @@ import { SourcesBox } from '../../shared/sources-box';
         @if (body() === undefined) {
           <div class="skeleton"><span></span><span></span><span></span><span class="short"></span></div>
         } @else if (body(); as text) {
-          <app-rich-text [source]="text" [story]="story()" />
+          <app-rich-text [source]="text" [story]="story()" [topics]="article()?.topics ?? []" />
         } @else {
           <p class="empty">Não foi possível abrir este texto agora.</p>
         }
@@ -188,10 +192,18 @@ import { SourcesBox } from '../../shared/sources-box';
     .hero .lead { position: relative; margin: 0 0 16px; color: #eadfcb; }
     .hero .time { position: relative; margin: 0; color: #d9c9ad; }
     /* O que a história responde, um tópico por linha */
-    .topics { position: relative; display: flex; flex-direction: column; gap: 8px; margin: 2px 0 18px; padding: 0; list-style: none; }
-    .topics li { position: relative; padding-left: 20px; font: 400 16px/1.45 var(--reading-font); color: var(--mat-sys-on-surface-variant); }
-    .topics li::before { content: ''; position: absolute; left: 3px; top: .62em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-gold); }
-    .hero .topics li { color: #eadfcb; }
+    .topics { position: relative; display: flex; flex-direction: column; gap: 0; margin: 2px 0 14px; padding: 0; list-style: none; }
+    .topics li { position: relative; padding-left: 20px; }
+    .topics li::before { content: ''; position: absolute; left: 3px; top: 1.05em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-gold); }
+    .topics button {
+      display: block; width: 100%; min-height: 40px; padding: 6px 0; border: 0; background: none; cursor: pointer; text-align: left;
+      font: 400 16px/1.45 var(--reading-font); color: var(--mat-sys-on-surface-variant); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px;
+    }
+    .topics button:hover:not(:disabled) { text-decoration-color: currentColor; }
+    .topics button mat-icon { width: 16px; height: 16px; margin-left: 6px; font-size: 16px; vertical-align: -2px; color: var(--accent-gold); }
+    .hero .topics button mat-icon { color: #e2c28c; }
+    .topics button:disabled { cursor: default; }
+    .hero .topics button { color: #eadfcb; }
     .hero .topics li::before { background: #e2c28c; }
     .part-of {
       position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; margin-top: 14px; padding: 0 14px;
@@ -260,7 +272,7 @@ export class ArticlePage {
   /** Onde a pessoa parou da última vez (some quando ela continua ou passa desse ponto). */
   protected readonly resume = signal<number | null>(null);
   /** Capítulo que está na tela, com o tempo que falta. */
-  protected readonly chapter = signal<{ n: number; title: string; left: number } | null>(null);
+  protected readonly chapter = signal<{ tag: string; title: string; left: number } | null>(null);
   protected readonly collection = computed(() => {
     const a = this.article();
     return a ? COLLECTIONS[a.collection] : undefined;
@@ -288,10 +300,14 @@ export class ArticlePage {
 
   /** No celular o índice começa fechado, para o texto aparecer logo. */
   protected readonly wide = typeof matchMedia !== 'undefined' && matchMedia('(min-width: 840px)').matches;
-  protected readonly toc = computed(() => (this.body() ? outline(this.body()!) : []));
+  protected readonly toc = computed(() => (this.body() ? outline(this.body()!, this.article()?.topics ?? []) : []));
+  /** Os tópicos da capa, cada um com a seção do texto que ele abre. */
+  protected readonly topicLinks = computed(() =>
+    (this.article()?.topics ?? []).map((text) => ({ text, anchor: this.toc().find((h) => headingKey(h.text) === headingKey(text))?.anchor })),
+  );
 
-  protected jump(anchor: string): void {
-    document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  protected jump(anchor: string | undefined): void {
+    if (anchor) document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   protected percent(at: number): number {
@@ -326,7 +342,10 @@ export class ArticlePage {
       if (!el || el.getBoundingClientRect().top > h * 0.35) break;
       n = i;
     }
-    this.chapter.set(n >= 0 && r.bottom > h * 0.6 ? { n: n + 1, title: toc[n].text, left: Math.max(1, Math.round(a.minutes * (1 - fraction))) } : null);
+    // "Tópico 2 de 5" vira "2/5"; um capítulo, "3/12"; uma seção especial, o nome dela ("Em resumo")
+    const topic = n >= 0 ? /^Tópico (\d+) de (\d+)$/.exec(toc[n].label) : null;
+    const tag = n < 0 ? '' : topic ? `${topic[1]}/${topic[2]}` : toc[n].chapter ? `${toc[n].chapter}/${toc.filter((t) => t.chapter).length}` : toc[n].label;
+    this.chapter.set(n >= 0 && r.bottom > h * 0.6 ? { tag, title: toc[n].text, left: Math.max(1, Math.round(a.minutes * (1 - fraction))) } : null);
   }
 
   constructor() {

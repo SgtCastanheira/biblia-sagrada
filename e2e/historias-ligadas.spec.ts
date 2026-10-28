@@ -68,6 +68,14 @@ test('a capa mostra em tópicos o que a história responde, em vez de um parágr
   await page.goto('/artigo/natal-e-os-calendarios');
   const topics = page.getByRole('list', { name: 'Nesta história' });
   await expect(topics.getByRole('listitem')).toHaveCount(5);
-  await expect(topics).toContainText('De onde veio o 25 de dezembro');
+  await expect(topics).toContainText('Quem escolheu o 25 de dezembro?');
   await expect(page.locator('.hero .lead')).toHaveCount(0);
+});
+
+test('tocar num tópico da capa leva à seção dele, que mostra “Tópico 3 de 5”', async ({ page }) => {
+  await page.goto('/artigo/natal-e-os-calendarios');
+  await page.getByRole('list', { name: 'Nesta história' }).getByRole('button', { name: 'Os dez dias que desapareceram' }).click();
+  const heading = page.getByRole('heading', { level: 2, name: 'Os dez dias que desapareceram' });
+  await expect(heading).toBeInViewport();
+  await expect(page.locator('.chapter', { hasText: 'Tópico 3 de 5' })).toBeVisible();
 });
