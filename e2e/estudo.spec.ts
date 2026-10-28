@@ -416,15 +416,16 @@ test('entre os Testamentos: o mapa passa de uma época a outra e mostra onde est
   await expect(mapa.getByRole('link', { name: /Ver no atlas completo/ })).toHaveAttribute('href', /atlas\?epoca=macabeus/);
 });
 
-test('módulo Teologia Sistemático-Carismática: texto ilustrado e o cartão para comprar na editora', async ({ page }) => {
+test('módulo Teologia Sistemático-Carismática: resumo comentado com o plano da obra ilustrado e tópicos em maiúsculas', async ({ page }) => {
   await page.goto('/historia?trilha=pentecostalismo');
   await page.getByRole('link', { name: /Teologia Sistemático-Carismática/ }).click();
   await expect(page.getByRole('heading', { level: 1, name: 'Teologia Sistemático-Carismática' })).toBeVisible();
-  await expect(page.getByRole('img', { name: /Desenho dos dois volumes/ })).toBeAttached();
-  const buy = page.locator('a.buy');
-  await expect(buy).toContainText('Onde comprar');
-  await expect(buy).toHaveAttribute('href', /thomasnelson\.com\.br\/products\/box-teologia-sistematico-carismatica/);
-  await expect(buy).toHaveAttribute('target', '_blank');
+  await expect(page.getByRole('img', { name: /O plano da Teologia Sistemático-Carismática/ })).toBeAttached();
+  await expect(page.getByRole('heading', { level: 2, name: 'Teologia Pode Ser Pública?' })).toBeAttached();
+  await expect(page.getByRole('heading', { level: 2, name: 'Locus' })).toBeAttached();
+  await expect(page.locator('app-rich-text h2')).toHaveCount(6);
+  // Sem ano na capa
+  await expect(page.locator('.hero .era')).toHaveCount(0);
   // O estudo do Natal não traz mais a indicação do livro
   await page.goto('/artigo/natal-e-os-calendarios');
   await expect(page.getByRole('heading', { name: 'Para aprofundar' })).toHaveCount(0);

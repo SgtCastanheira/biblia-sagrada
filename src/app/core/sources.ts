@@ -191,9 +191,8 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ancient: [
       'César Moisés Carvalho e Céfora Carvalho, Teologia Sistemático-Carismática: introdução geral e capítulos 1 e 2, na prévia do Google Livros (Thomas Nelson Brasil, 2022)',
       'Descrição da obra no Google Livros e na página da editora Thomas Nelson Brasil',
-      'Entrevista dos autores à revista Comunhão: “Pai e filha escrevem manual teológico inédito na literatura pentecostal” (27 de junho de 2022)',
     ],
-    works: ['carvalho-tsc', 'horton-ts'],
+    works: ['carvalho-tsc'],
   },
   'natal-e-os-calendarios': {
     ancient: [

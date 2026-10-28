@@ -36,17 +36,6 @@ import { TanakhShelf } from './tanakh-shelf';
           }
         </svg>
       }
-      @case ('tsc-volumes') {
-        <svg viewBox="0 0 340 236" role="img" aria-label="Desenho dos dois volumes da Teologia Sistemático-Carismática, de César Moisés Carvalho e Céfora Carvalho">
-          <g class="book one"><rect x="34" y="14" width="132" height="176" rx="8" /><path d="M46 14 V190" />
-            <text x="106" y="70" class="t">TEOLOGIA</text><text x="106" y="90" class="t">SISTEMÁTICO-</text><text x="106" y="110" class="t">CARISMÁTICA</text>
-            <text x="106" y="164" class="v">Volume 1</text></g>
-          <g class="book two"><rect x="174" y="14" width="132" height="176" rx="8" /><path d="M186 14 V190" />
-            <text x="246" y="70" class="t">TEOLOGIA</text><text x="246" y="90" class="t">SISTEMÁTICO-</text><text x="246" y="110" class="t">CARISMÁTICA</text>
-            <text x="246" y="164" class="v">Volume 2</text></g>
-          <text x="170" y="220" class="sub">César Moisés Carvalho · Céfora Carvalho</text>
-        </svg>
-      }
       @case ('tsc-historia') {
         <svg viewBox="0 0 340 268" role="img" aria-label="A experiência com o Espírito Santo ao longo da história: Antigo Testamento, Novo Testamento, primeiros séculos da Igreja e hoje">
           <g class="links"><path d="M36 34 V234" /></g>
@@ -151,14 +140,6 @@ import { TanakhShelf } from './tanakh-shelf';
     .links .back { stroke: var(--mat-sys-primary); }
     .region rect { fill: var(--mat-sys-surface-container); stroke: var(--mat-sys-outline-variant); }
     .place circle { fill: var(--mat-sys-primary); stroke: var(--mat-sys-surface); stroke-width: 2; }
-    .book rect { stroke: none; }
-    .book path { stroke: rgba(0, 0, 0, .18); stroke-width: 2; }
-    .book.one rect { fill: var(--mat-sys-primary); }
-    .book.one text { fill: var(--mat-sys-on-primary); }
-    .book.two rect { fill: var(--accent-gold); }
-    .book.two text { fill: #1d1608; }
-    .book .t { font-weight: 700; }
-    .book .v { font-weight: 500; }
   `,
 })
 export class Figure {

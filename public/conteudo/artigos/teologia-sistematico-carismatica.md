@@ -2,9 +2,9 @@
 
 A *Teologia Sistemático-Carismática*, de César Moisés Carvalho e Céfora Carvalho (Thomas Nelson Brasil, 2022), é uma tentativa de escrever a sua a partir do lugar onde vivem pentecostais e carismáticos: a experiência com o Espírito Santo.
 
-Este módulo é um **resumo comentado** da introdução geral e dos capítulos 1 e 2, a parte que os autores chamam de teórico-metodológica. As ideias estão contadas com palavras próprias, os termos técnicos são explicados e, no fim, há algumas considerações críticas. Os capítulos de doutrina não foram lidos para este módulo: o que se diz deles vem só da introdução do livro. O texto da obra tem direitos autorais e não é reproduzido aqui.
+Este módulo é um **resumo comentado** da introdução geral e dos capítulos 1 e 2, a parte que os autores chamam de teórico-metodológica. As ideias estão contadas com palavras próprias e os termos técnicos são explicados. Os capítulos de doutrina não foram lidos para este módulo: o que se diz deles vem só da introdução do livro. O texto da obra tem direitos autorais e não é reproduzido aqui.
 
-## Teologia pode ser pública?
+## Teologia Pode Ser Pública?
 
 A introdução geral abre com uma pergunta: a teologia pode ser pública? Os autores notam que ela ganhou espaço na sociedade, mas ainda desperta desconfiança, inclusive dentro das igrejas e, segundo eles, sobretudo na tradição carismático-pentecostal. A dúvida é se uma teologia pode ser **confessional**, isto é, feita por quem crê, e ao mesmo tempo dialogar com as outras ciências. A resposta deles é que sim, desde que o estudo una conhecimento e piedade. Por isso o livro quer oferecer uma teologia séria, escrita da perspectiva carismático-pentecostal, para um mundo que, longe de ser apenas secular e materialista, continua pedindo espiritualidade.
 
@@ -53,13 +53,13 @@ Na história da teologia, “sinergismo” é um termo técnico do debate sobre 
 
 Na introdução do livro, a palavra aparece num sentido mais amplo, que cobre tanto o modo de fazer teologia quanto a vida cristã. Há, porém, um sinal do lado da doutrina da salvação: ao resumir o capítulo sobre o pecado, os autores falam em **graça preveniente**, a graça que age antes da decisão humana e torna possível a resposta, ideia comum na tradição arminiana e wesleyana. A introdução não detalha o funcionamento desse sinergismo, o que caberá ao capítulo sobre a salvação. Antes dele, o capítulo 1 apresenta a justificativa de toda a proposta: por que escrever uma teologia assim.
 
-## A lógica da fé e a lógica grega
+## A Lógica da Fé e a Lógica Grega
 
 O capítulo 1 busca responder ao seu próprio título: *por que uma teologia sistemático-carismática?* Parte de uma observação do jesuíta Karl Rahner: o cristão do futuro será um místico, alguém que experimentou algo, ou não será cristão. Os autores a leem como constatação profética: quando a fé perde o contato com a experiência, sobra formalismo religioso.
 
 Para eles, a fé tem uma lógica própria, a “lógica da fé”. Ela se apoia na palavra de Deus e nas suas promessas ([[Hb 11.1-3]]) e por isso nunca cabe inteira nos moldes da lógica grega, que procura provar tudo pela razão. O exemplo maior é a ressurreição: Tomé duvidou dela e os filósofos de Atenas zombaram dela ([[Jo 20.24-28]]; [[At 17.18-32]]), e tentar prová-la com argumentos racionalistas seria, dizem, estranho e ineficaz. Por isso Paulo, em Corinto, evitou a oratória dos gregos, para que a fé se apoiasse no poder de Deus ([[1Co 2.1-5]]). Os autores reconhecem, ao mesmo tempo, o risco da experiência mística, que pode ser falsa ou levar à manipulação: o próprio Paulo recebeu um espinho para não se exaltar ([[2Co 12.1-10]]).
 
-## Da filosofia grega à escolástica reformada
+## Filosofia Grega
 
 A resposta do capítulo ao seu título tem duas partes: um percurso histórico, que ocupa a maior parte do texto, e uma proposta. O percurso conta como a teologia se aproximou da filosofia grega. Segundo os autores, a própria palavra *teologia* teria sido cunhada por Platão, para separar o discurso racional sobre o divino dos mitos dos poetas, num movimento que vinha dos filósofos de Mileto, que preferiam explicar o mundo pela razão, e não pelos deuses. O cristianismo nasceu num mundo de língua e cultura gregas, e isso tem um lado inevitável (o Novo Testamento foi escrito em grego, e os primeiros “mestres teológicos” cristãos, no século II, usaram a linguagem dos filósofos para defender a fé) e um lado perigoso: com as melhores intenções, alguns passaram a moldar a leitura da Escritura pelas ideias dos filósofos, em vez de o contrário.
 
@@ -76,11 +76,9 @@ Na Idade Média, a **escolástica** (o método das escolas medievais) levou essa
 - séc. XIX–XX | Princeton | Hodge e Warfield; a ideia de que os dons cessaram com os apóstolos
 :::
 
-## O Espírito Santo como locus da teologia
+## Locus
 
-Os autores delimitam a proposta pelo que ela **não** é: não é relativismo, nem ruptura radical com a teologia protestante, nem anti-intelectualismo escondido atrás da espiritualidade. Lembram o lema reformado, atribuído ao holandês Jodocus van Lodenstein (século XVII), de que a igreja reformada deve estar sempre se reformando segundo a Palavra de Deus, e afirmam que os credos de Niceia (325) e de Calcedônia (451) continuam sendo a base do cristianismo ortodoxo.
-
-Usam, então, a palavra latina *locus*, “lugar”, para dizer de onde a teologia parte. O *locus* de uma teologia sistemático-carismática é “a atividade constante do Espírito em toda a Escritura”, lida de forma “sobrenaturalista” e respeitando a sua dinâmica própria, a “lógica da fé”. “Carismático” é usado no sentido do teólogo Craig Keener: quem defende que os dons espirituais continuam hoje e os pratica, mesmo sem ser membro de uma igreja pentecostal. E, como todo membro do Corpo de Cristo tem pelo menos um dom ([[Rm 12.4-6]]; [[1Co 12.12-30]]), todo cristão é, nesse sentido, carismático.
+Os autores usam a palavra latina *locus*, “lugar”, para dizer de onde a teologia parte. O *locus* de uma teologia sistemático-carismática é “a atividade constante do Espírito em toda a Escritura”, lida de forma “sobrenaturalista” e respeitando a sua dinâmica própria, a “lógica da fé”. “Carismático” é usado no sentido do teólogo Craig Keener: quem defende que os dons espirituais continuam hoje e os pratica, mesmo sem ser membro de uma igreja pentecostal. E, como todo membro do Corpo de Cristo tem pelo menos um dom ([[Rm 12.4-6]]; [[1Co 12.12-30]]), todo cristão é, nesse sentido, carismático.
 
 ### Argumentos contra o cessacionismo
 
@@ -106,9 +104,7 @@ Os autores reconhecem que essa posição pode parecer entusiasmo sem controle. P
 
 O capítulo reproduz ainda um quadro de Paul Pomerville que contrapõe duas concepções reformadas da Escritura: a **histórica**, dinâmica, centrada na fé e na obra do Espírito, e a **escolástica**, estática, centrada na razão e na exatidão do texto. Os autores veem a primeira como compatível com uma leitura carismática da Bíblia.
 
-## O sujeito da teologia: igreja, academia e educação cristã
-
-O capítulo 2 abre com uma frase que resume a sua tese: teologias não caem do céu. Toda teologia, mesmo a mais piedosa, é obra humana e por isso pode ser melhorada à luz da Escritura. Disso decorrem perguntas que o capítulo formula: quem tem o direito de corrigir? Quem decide o que é ortodoxo? O estudante de Bíblia faz teologia ou só repete o que está nos manuais?
+## Igreja, Academia e Educação Cristã
 
 ### A educação cristã como primeira forma de teologia
 
@@ -129,40 +125,3 @@ Com a especialização e com a tradução da fé para a cultura greco-romana, di
 Alertam também, com Alessandro Rocha, para a **teologia manualista**, que se apresenta como resposta universal e definitiva. Lembram o dilema descrito por Alberto Roldán: quando um texto bíblico ameaça o sistema, ou se muda o texto, ou se muda o sistema. Pelo conjunto do capítulo, ficam do lado da Escritura. E notam que a Declaração de Verdades Fundamentais das Assembleias de Deus norte-americanas (1916) disse não ser um credo para a igreja nem base de comunhão, mas apenas uma base de união para o ministério.
 
 O capítulo termina voltando ao tema do começo: não separar o conhecimento de Deus, revelado nas Escrituras, da experiência com ele ([[Mt 22.29]]). Os saduceus, com toda a sua cátedra, não reconheceram o poder de Deus, e o evangelho começou com homens indoutos, como Pedro e João ([[At 4.13]]).
-
-## Considerações críticas
-
-Esta seção é comentário do app, e não do livro. Em poucas linhas, o que a obra faz bem e o que vale ter em mente ao lê-la.
-
-:::ficha Comentário do app
-- Método e provisoriedade | A obra diz como trabalha (bíblico, histórico e teológico) e assume que a teologia é obra humana, sempre a caminho. Assim o leitor sabe de onde vêm as conclusões e pode discordar com argumentos.
-- Experiência com freio | Defende os dons sem fazer da experiência a juíza da fé: manda examinar tudo ([[1Ts 5.21]]) e adota o biblicismo crítico.
-- A história da razão na teologia | O retrato que o livro faz (filosofia grega, escolástica, escolástica reformada) segue uma linha crítica que muitos historiadores discutem. Convém lê-lo como uma leitura possível, e não como a única.
-- Razão e fé | Os autores não rejeitam a razão. Vale distinguir o que está acima da razão (o mistério, como a Trindade) do que está contra ela (a contradição); os critérios que o livro dá (a Escritura, os credos de Niceia e de Calcedônia e o exame da comunidade) ajudam a não confundir as duas coisas.
-- Os dons | O argumento de que as regras para examinar a profecia valem depois dos apóstolos é forte, mas o debate também é exegético (por exemplo, o que significa “o que é perfeito” em [[1Co 13.8-10]]). E a defesa dos dons se sustenta melhor em Atos e em 1 Coríntios do que no final de Marcos, que os manuscritos mais antigos não trazem.
-- Sinergismo | A introdução usa a palavra em sentido amplo e não detalha a doutrina da graça. Paulo une cooperação e graça no mesmo texto: “efetuai a vossa salvação com temor e tremor” e “Deus é o que opera em vós tanto o querer como o efetuar” ([[Fp 2.12-13]]).
-- Novidade | A revista Comunhão chamou a obra de “manual teológico inédito na literatura pentecostal”. Os próprios autores citam a *Teologia sistemática: uma perspectiva pentecostal* (Stanley Horton, org.), da CPAD; a novidade parece estar mais na proposta (o Espírito como fio condutor e a discussão do método) do que no gênero.
-- Utilidade | O capítulo 2 interessa de modo especial a professores da Escola Dominical e obreiros: a educação cristã aparece como a primeira forma de teologia.
-:::
-
-## Antevisão da segunda parte: a busca pelo transcendente
-
-Aqui terminam a introdução e a primeira parte. A **segunda parte** do livro, *Análises doutrinárias*, reúne os oito capítulos de doutrina, e o primeiro é o de **Teologia**.
-
-Ele abre com uma observação que os autores tratam como universal: em qualquer cultura, o ser humano sente a sua pequenez diante da existência e do céu, e faz perguntas que não sabe responder. O que acontece quando a resposta não vem? O capítulo mostra o que a humanidade fez com esse silêncio: lendas, epopeias e deuses, e depois sacerdotes para cuidar deles. Um autor que o capítulo cita, Don Richardson, deu a isso um nome sugestivo: “fator Melquisedeque”.
-
-Em seguida, o texto muda de direção. Mostra que Paulo reconheceu essa busca universal diante dos poetas gregos de Atenas ([[At 17.28]]) e que, mesmo assim, ninguém consegue ver sozinho a obra de Deus do começo ao fim ([[Ec 3.11]]). Segundo os autores, o ciclo dos mitos só foi interrompido quando o próprio Criador resolveu se revelar ([[Rm 1.18-21]]).
-
-Chega-se, então, ao termo que dá nome à disciplina: *teologia*. Em grego, ela pode ser a nossa fala *sobre* Deus ou a fala *de* Deus. O capítulo mostra por que, para um dos autores que cita, a teologia é mais do que a fala que só faz de Deus um objeto de estudo. O desenvolvimento do argumento fica para a leitura da obra.
-
-## Como adquirir a obra
-
-:::figura tsc-volumes
-Ilustração do app: a obra tem dois volumes, vendidos juntos numa caixa. Não é a capa do livro.
-:::
-
-:::comprar https://thomasnelson.com.br/products/box-teologia-sistematico-carismatica-cesar-moises-carvalhocefora-carvalho | Ver na loja da Thomas Nelson Brasil
-Os dois volumes vêm juntos numa caixa, em capa dura, e há também versão digital. Confira o preço e a disponibilidade na página da editora.
-:::
-
-O app indica este livro porque ele serve a quem quer estudar a fé pentecostal com profundidade. O app não recebe nada pela venda.
