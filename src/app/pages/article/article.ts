@@ -58,7 +58,13 @@ import { SourcesBox } from '../../shared/sources-box';
               </div>
             }
             <h1 class="title">{{ a.title }}</h1>
-            <p class="lead">{{ a.subtitle }}</p>
+            @if (a.topics?.length) {
+              <ul class="topics" aria-label="Nesta história">
+                @for (t of a.topics; track t) { <li>{{ t }}</li> }
+              </ul>
+            } @else {
+              <p class="lead">{{ a.subtitle }}</p>
+            }
             <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
             @if (overview(); as o) {
               <a class="part-of" [routerLink]="['/artigo', o.id]"><mat-icon>auto_stories</mat-icon> Parte do panorama: {{ o.title }}</a>
@@ -67,7 +73,13 @@ import { SourcesBox } from '../../shared/sources-box';
         } @else {
           <span class="overline">{{ step()?.trail?.name ?? collection()?.name }} · {{ a.period }}</span>
           <h1 class="title">{{ a.title }}</h1>
-          <p class="lead">{{ a.subtitle }}</p>
+          @if (a.topics?.length) {
+            <ul class="topics" aria-label="Neste estudo">
+              @for (t of a.topics; track t) { <li>{{ t }}</li> }
+            </ul>
+          } @else {
+            <p class="lead">{{ a.subtitle }}</p>
+          }
           <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
         }
 
@@ -175,6 +187,12 @@ import { SourcesBox } from '../../shared/sources-box';
     .hero .title { position: relative; margin: 0 0 10px; font-size: 34px; color: #fff8ec; }
     .hero .lead { position: relative; margin: 0 0 16px; color: #eadfcb; }
     .hero .time { position: relative; margin: 0; color: #d9c9ad; }
+    /* O que a história responde, um tópico por linha */
+    .topics { position: relative; display: flex; flex-direction: column; gap: 8px; margin: 2px 0 18px; padding: 0; list-style: none; }
+    .topics li { position: relative; padding-left: 20px; font: 400 16px/1.45 var(--reading-font); color: var(--mat-sys-on-surface-variant); }
+    .topics li::before { content: ''; position: absolute; left: 3px; top: .62em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-gold); }
+    .hero .topics li { color: #eadfcb; }
+    .hero .topics li::before { background: #e2c28c; }
     .part-of {
       position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; margin-top: 14px; padding: 0 14px;
       border-radius: 20px; text-decoration: none; font: 600 13px Inter, sans-serif; color: #fbf4e6;

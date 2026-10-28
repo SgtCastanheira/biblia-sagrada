@@ -8,7 +8,10 @@ export interface Article {
   id: string;
   collection: ArticleCollection;
   title: string;
+  /** Uma ou duas frases curtas: aparecem nas listas e nos cartões. */
   subtitle: string;
+  /** O que a história responde, em tópicos: aparecem na capa no lugar do subtítulo. */
+  topics?: string[];
   period: string;
   icon: string;
   minutes: number;
@@ -88,7 +91,14 @@ export const ARTICLES: Article[] = [
     story: true,
     passages: ['GEN 1', 'DEU 6', 'ISA 6', 'MAT 3', 'MAT 28', 'JHN 1', 'JHN 14', 'JHN 16', 'JHN 17', 'ACT 2', 'ACT 5', '2CO 13', 'EPH 2', 'PHP 2', 'COL 2', 'HEB 1'],
     title: 'A Trindade: um só Deus, Pai, Filho e Espírito Santo',
-    subtitle: 'O que a Bíblia ensina, onde está escrito, os erros mais comuns (de Sabélio e Ário aos unicistas) e por que isso muda a oração e a vida no Espírito.',
+    subtitle: 'O que a Bíblia ensina sobre o Pai, o Filho e o Espírito Santo, e por que isso muda a fé.',
+    topics: [
+      'O que a Bíblia ensina e onde está escrito',
+      'O Filho e o Espírito Santo são Deus',
+      'Os erros mais comuns, de Sabélio e Ário aos unicistas',
+      'Como a Igreja confessa a fé nos credos',
+      'Por que isso muda a oração e a vida no Espírito',
+    ],
     period: 'Toda a Bíblia',
     icon: 'change_history',
     minutes: 16,
@@ -99,7 +109,14 @@ export const ARTICLES: Article[] = [
     story: true,
     passages: ['EXO 12', 'EXO 20', 'EXO 32', 'NUM 25', 'JDG 2', 'JDG 6', 'JDG 16', '1SA 5', '1KI 11', '1KI 18', '2KI 1', '2KI 17', '2KI 23', 'ISA 46', 'JER 7', 'JER 44', 'EZK 8', 'ACT 14', 'ACT 17', 'ACT 19', '1CO 10'],
     title: 'Os deuses pagãos na Bíblia',
-    subtitle: 'Baal, Astarote, Moloque, Dagom, Júpiter, Diana e outros: onde aparecem, os nomes que ganharam, o que pediam e por que a Bíblia manda rejeitá-los.',
+    subtitle: 'Baal, Astarote, Moloque, Dagom, Júpiter, Diana e outros, e por que a Bíblia manda rejeitá-los.',
+    topics: [
+      'Quem eram e onde aparecem na Bíblia',
+      'Os nomes que ganharam ao longo do tempo',
+      'O que esses deuses pediam',
+      'Por que a Bíblia manda rejeitá-los',
+      'Os nomes que ficaram e os ídolos de hoje',
+    ],
     period: 'Do Êxodo aos Atos dos Apóstolos',
     icon: 'shield',
     minutes: 17,
@@ -110,7 +127,14 @@ export const ARTICLES: Article[] = [
     story: true,
     passages: ['LUK 2', 'MAT 2', 'GAL 4', 'EXO 12', 'ROM 14'],
     title: 'Jesus nasceu mesmo em 25 de dezembro?',
-    subtitle: 'A Bíblia não diz em que dia Jesus nasceu. Veja de onde veio o 25 de dezembro, por que há cristãos que comemoram em 7 de janeiro e como surgiu o calendário que usamos hoje.',
+    subtitle: 'A Bíblia não diz em que dia Jesus nasceu. A história do Natal e dos calendários explica de onde veio a data.',
+    topics: [
+      'O que a Bíblia diz, e o que não diz, sobre a data',
+      'De onde veio o 25 de dezembro',
+      'Por que há cristãos que comemoram em 7 de janeiro',
+      'Como surgiu o calendário que usamos hoje',
+      'Os calendários que o mundo usa',
+    ],
     period: '46 a.C. – hoje',
     icon: 'calendar_month',
     minutes: 15,

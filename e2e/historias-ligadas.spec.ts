@@ -63,3 +63,11 @@ test('a curiosidade leva ao estudo que a aprofunda, sem repetir o texto', async 
   await page.getByRole('link', { name: /Para estudar mais/ }).click();
   await expect(page).toHaveURL(/\/artigo\/trindade/);
 });
+
+test('a capa mostra em tópicos o que a história responde, em vez de um parágrafo comprido', async ({ page }) => {
+  await page.goto('/artigo/natal-e-os-calendarios');
+  const topics = page.getByRole('list', { name: 'Nesta história' });
+  await expect(topics.getByRole('listitem')).toHaveCount(5);
+  await expect(topics).toContainText('De onde veio o 25 de dezembro');
+  await expect(page.locator('.hero .lead')).toHaveCount(0);
+});
