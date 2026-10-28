@@ -165,6 +165,7 @@ Add a new screen to the right tab regex and to the right hub; don't list the sam
 These rules are deliberate; keep them. Licenses are tracked in CREDITOS.md and in the in-app credits screen (`core/credits.ts`).
 - **Allowed sources:** only public-domain or openly licensed material.
 - **No copyrighted study-Bible text:** do not add commentary from CPAD, the Pentecostal Study Bible or similar.
+- **Book modules** (e.g. `teologia-sistematico-carismatica`): summarise and comment in your own words, with quotes of a few words at most and the source named; say which parts were actually read (the module may only claim what the pages show); keep the author's life out unless the user asks; the buy card (`:::comprar`) links to the publisher's page without affiliate code.
 - **Modern sermons** (Billy Graham etc.) appear only as metadata plus a YouTube search link, never as text.
 - **Historical sermons** are in the public domain and are translated and condensed.
 - **Bible text changes** go through `tools/gerar-almeida.py`, which applies `VERSE_FIXES` and the 1990 orthography. To fix a verse without re-downloading the source, add it to `VERSE_FIXES` and run `tools/corrigir-almeida.py`. Do not edit `public/bible/almeida/*.json` by hand.

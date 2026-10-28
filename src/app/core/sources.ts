@@ -42,6 +42,14 @@ export const WORKS: Record<string, Work> = {
   hengel: { author: 'Martin Hengel', title: 'Crucifixion in the Ancient World and the Folly of the Message of the Cross', publisher: 'Fortress, 1977', kind: 'referencia' },
   hendin: { author: 'David Hendin', title: 'Guide to Biblical Coins', publisher: 'Amphora', kind: 'referencia' },
   ritmeyer: { author: 'Leen Ritmeyer', title: 'The Quest: Revealing the Temple Mount in Jerusalem', publisher: 'Carta, 2006', kind: 'referencia' },
+  'muller-after-calvin': { author: 'Richard A. Muller', title: 'After Calvin: Studies in the Development of a Theological Tradition', publisher: 'Oxford University Press, 2003', kind: 'historia' },
+  'hengel-judaism': { author: 'Martin Hengel', title: 'Judaism and Hellenism: Studies in Their Encounter in Palestine during the Early Hellenistic Period', publisher: 'SCM Press e Fortress Press, 1974', kind: 'historia' },
+  'carson-showing': { author: 'D. A. Carson', title: 'Showing the Spirit: A Theological Exposition of 1 Corinthians 12–14', publisher: 'Baker, 1987', kind: 'referencia' },
+  'rogers-mckim': { author: 'Jack B. Rogers e Donald K. McKim', title: 'The Authority and Interpretation of the Bible: An Historical Approach', publisher: 'Harper & Row, 1979', kind: 'historia' },
+  woodbridge: { author: 'John D. Woodbridge', title: 'Biblical Authority: A Critique of the Rogers/McKim Proposal', publisher: 'Zondervan, 1982', kind: 'historia' },
+  macchia: { author: 'Frank D. Macchia', title: 'Baptized in the Spirit: A Global Pentecostal Theology', publisher: 'Zondervan, 2006', kind: 'referencia' },
+  pinnock: { author: 'Clark H. Pinnock', title: 'Flame of Love: A Theology of the Holy Spirit', publisher: 'InterVarsity Press, 1996', kind: 'referencia' },
+  yong: { author: 'Amos Yong', title: 'Spirit-Word-Community: Theological Hermeneutics in Trinitarian Perspective', publisher: 'Ashgate, 2002', kind: 'referencia' },
   'carvalho-tsc': { author: 'César Moisés Carvalho e Céfora Carvalho', title: 'Teologia Sistemático-Carismática (2 volumes)', publisher: 'Thomas Nelson Brasil, 2022', kind: 'referencia' },
   'talley': { author: 'Thomas J. Talley', title: 'The Origins of the Liturgical Year', publisher: 'Liturgical Press, 2ª ed., 1991', kind: 'historia' },
   'bradshaw-johnson': { author: 'Paul F. Bradshaw e Maxwell E. Johnson', title: 'The Origins of Feasts, Fasts and Seasons in Early Christianity', publisher: 'Liturgical Press e SPCK, 2011', kind: 'historia' },
@@ -189,10 +197,11 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'teologia-sistematico-carismatica': {
     ancientLabel: 'Documentos consultados',
     ancient: [
-      'Entrevista de César Moisés Carvalho e Céfora Carvalho à revista Comunhão: “Pai e filha escrevem manual teológico inédito na literatura pentecostal” (27 de junho de 2022)',
-      'Página da obra na editora Thomas Nelson Brasil e a descrição da obra nas livrarias',
+      'César Moisés Carvalho e Céfora Carvalho, Teologia Sistemático-Carismática: introdução geral e capítulos 1 e 2, na prévia do Google Livros (Thomas Nelson Brasil, 2022)',
+      'Descrição da obra no Google Livros e na página da editora Thomas Nelson Brasil',
+      'Entrevista dos autores à revista Comunhão: “Pai e filha escrevem manual teológico inédito na literatura pentecostal” (27 de junho de 2022)',
     ],
-    works: ['carvalho-tsc'],
+    works: ['carvalho-tsc', 'horton-ts', 'muller-after-calvin', 'hengel-judaism', 'carson-showing', 'rogers-mckim', 'woodbridge', 'macchia', 'pinnock', 'yong'],
   },
   'natal-e-os-calendarios': {
     ancient: [

@@ -17,6 +17,25 @@ import { TanakhShelf } from './tanakh-shelf';
       @case ('calendario-ano-judaico') { <app-calendar-art kind="ano-judaico" /> }
       @case ('calendario-natal-13-dias') { <app-calendar-art kind="natal-13-dias" /> }
       @case ('calendario-ano-2026') { <app-calendar-art kind="ano-2026" /> }
+      @case ('tsc-plano') {
+        <svg viewBox="0 0 340 352" role="img" aria-label="O plano da Teologia Sistemático-Carismática: a primeira parte tem dois capítulos de método e a segunda tem oito capítulos de doutrina; o do Espírito Santo vem logo depois do de Deus">
+          <text x="170" y="20" class="label">PRIMEIRA PARTE</text>
+          <text x="170" y="38" class="sub">questões teórico-metodológicas</text>
+          <g class="node"><rect x="8" y="46" width="160" height="64" rx="10" />
+            <text x="88" y="65" class="year">Capítulo 1</text><text x="88" y="82" class="sub">O porquê de uma</text><text x="88" y="99" class="sub">teologia carismática</text></g>
+          <g class="node"><rect x="172" y="46" width="160" height="64" rx="10" />
+            <text x="252" y="65" class="year">Capítulo 2</text><text x="252" y="82" class="sub">Da experiência de fé</text><text x="252" y="99" class="sub">à teologia sistemática</text></g>
+          <text x="170" y="138" class="label">SEGUNDA PARTE</text>
+          <text x="170" y="156" class="sub">análises doutrinárias</text>
+          @for (d of tscDoctrines; track d.n; let i = $index) {
+            <g class="node" [class.key]="d.n === 4">
+              <rect [attr.x]="8 + (i % 2) * 164" [attr.y]="166 + floor(i / 2) * 46" width="160" height="38" rx="10" />
+              <text [attr.x]="88 + (i % 2) * 164" [attr.y]="182 + floor(i / 2) * 46" class="year">{{ d.n }} · {{ d.name }}</text>
+              <text [attr.x]="88 + (i % 2) * 164" [attr.y]="197 + floor(i / 2) * 46" class="sub">{{ d.about }}</text>
+            </g>
+          }
+        </svg>
+      }
       @case ('tsc-volumes') {
         <svg viewBox="0 0 340 236" role="img" aria-label="Desenho dos dois volumes da Teologia Sistemático-Carismática, de César Moisés Carvalho e Céfora Carvalho">
           <g class="book one"><rect x="34" y="14" width="132" height="176" rx="8" /><path d="M46 14 V190" />
@@ -144,11 +163,21 @@ import { TanakhShelf } from './tanakh-shelf';
 })
 export class Figure {
   readonly id = input.required<string>();
+  /** Os oito capítulos de doutrina da Teologia Sistemático-Carismática, na ordem da introdução geral. */
+  protected readonly tscDoctrines = [
+    { n: 3, name: 'Teologia', about: 'Deus' }, { n: 4, name: 'Pneumatologia', about: 'o Espírito Santo' },
+    { n: 5, name: 'Cristologia', about: 'Jesus Cristo' }, { n: 6, name: 'Antropologia', about: 'o ser humano' },
+    { n: 7, name: 'Hamartiologia', about: 'o pecado' }, { n: 8, name: 'Soteriologia', about: 'a salvação' },
+    { n: 9, name: 'Eclesiologia', about: 'a Igreja' }, { n: 10, name: 'Escatologia', about: 'as últimas coisas' },
+  ];
+  protected floor(n: number): number {
+    return Math.floor(n);
+  }
   /** A experiência com o Espírito ao longo da história, como a Teologia Sistemático-Carismática a apresenta. */
   protected readonly tscSteps = [
     { title: 'Antigo Testamento', text: 'o Espírito sobre juízes, reis e profetas' },
-    { title: 'Novo Testamento', text: 'Pentecostes e a igreja de Atos' },
-    { title: 'Primeiros séculos', text: 'os pais da Igreja, a patrística' },
-    { title: 'Hoje', text: 'a teologia pentecostal' },
+    { title: 'Novo Testamento', text: 'Jesus ungido, Pentecostes e Atos' },
+    { title: 'Primeiros séculos', text: 'os pais da Igreja (patrística)' },
+    { title: 'Movimentos de renovação', text: 'do fim do século XIX em diante' },
   ];
 }
