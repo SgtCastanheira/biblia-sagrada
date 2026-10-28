@@ -548,10 +548,21 @@ figcaption {
   }
 }
 
+// Quadros e paisagens: largura toda, sem inclinar
+.photo.wide img {
+  width: 100%;
+}
+
+:host(.story) .photo.wide {
+  width: auto;
+  rotate: none;
+  margin: 10px 0 28px;
+}
+
 // No computador: retratos ao lado do texto e linha do tempo alternada
 @container (min-width: 600px) {
   :host(.story) {
-    .photo {
+    .photo:not(.wide) {
       float: right;
       width: 220px;
       margin: 6px 0 16px 24px;

@@ -30,7 +30,7 @@ import { TRAILS } from '../core/trails';
     :host { display: block; }
     .rings { display: flex; gap: 14px; margin: 0 -20px; padding: 4px 20px 6px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; }
     .rings::-webkit-scrollbar { display: none; }
-    @media (min-width: 840px) { .rings { margin: 0; padding: 4px 0 6px; flex-wrap: wrap; overflow: visible; gap: 18px 22px; } }
+    @media (min-width: 840px) { .rings { margin: 0; padding: 4px 0 6px; flex-wrap: wrap; overflow: visible; gap: 18px 16px; } }
     .ring { flex: none; width: 84px; display: flex; flex-direction: column; align-items: center; gap: 6px; scroll-snap-align: start; text-decoration: none; color: var(--mat-sys-on-surface); }
     /* Uma só família de cores: sálvia com um fio dourado. O que distingue cada assunto é o ícone, não a cor. */
     .disc {

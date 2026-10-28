@@ -417,7 +417,7 @@ test('entre os Testamentos: o mapa passa de uma época a outra e mostra onde est
 });
 
 test('módulo Teologia Sistemático-Carismática: síntese com o plano da obra ilustrado e tópicos em maiúsculas', async ({ page }) => {
-  await page.goto('/historia?trilha=pentecostalismo');
+  await page.goto('/historia?trilha=teologia');
   await page.getByRole('link', { name: /Teologia Sistemático-Carismática/ }).click();
   await expect(page.getByRole('heading', { level: 1, name: 'Teologia Sistemático-Carismática' })).toBeVisible();
   await expect(page.getByRole('img', { name: /O plano da Teologia Sistemático-Carismática/ })).toBeAttached();
@@ -430,4 +430,29 @@ test('módulo Teologia Sistemático-Carismática: síntese com o plano da obra i
   await page.goto('/artigo/natal-e-os-calendarios');
   await expect(page.getByRole('heading', { name: 'Para aprofundar' })).toHaveCount(0);
   await expect(page.locator('app-calendar-art')).toHaveCount(5);
+});
+
+test('bolinhas: Teologia e A Igreja e o Estado aparecem na tela inicial e levam às suas histórias', async ({ page }) => {
+  await page.goto('/');
+  const bolinhas = page.getByRole('navigation', { name: 'Assuntos das histórias' });
+  await expect(bolinhas.getByRole('link')).toHaveCount(11);
+  await bolinhas.getByRole('link', { name: 'Teologia' }).click();
+  await expect(page).toHaveURL(/trilha=teologia/);
+  await expect(page.getByRole('link', { name: /Teologia Sistemático-Carismática/ })).toBeVisible();
+  // O estudo do livro saiu da bolinha do pentecostalismo
+  await page.goto('/historia?trilha=pentecostalismo');
+  await expect(page.getByRole('link', { name: /Teologia Sistemático-Carismática/ })).toHaveCount(0);
+
+  await page.goto('/');
+  await page.getByRole('navigation', { name: 'Assuntos das histórias' }).getByRole('link', { name: 'A Igreja e o Estado' }).click();
+  await expect(page).toHaveURL(/trilha=igreja-e-estado/);
+  await page.getByRole('link', { name: /A Igreja e o Estado no Brasil/ }).click();
+  await expect(page.getByRole('heading', { level: 1, name: 'A Igreja e o Estado no Brasil' })).toBeVisible();
+  await expect(page.getByRole('img', { name: /O que a igreja e o Estado levam para a cidade/ })).toBeAttached();
+  await expect(page.getByRole('img', { name: /Como uma cidade do interior nascia/ })).toBeAttached();
+  // Os quadros e a foto de época, todos com legenda e crédito
+  await expect(page.locator('figure.photo')).toHaveCount(3);
+  await expect(page.locator('figure.photo figcaption').first()).toContainText('Domínio público');
+  // A história 1 de 1 da bolinha leva à próxima trilha
+  await expect(page.getByText('Você chegou ao fim da trilha A Igreja e o Estado.')).toBeVisible();
 });

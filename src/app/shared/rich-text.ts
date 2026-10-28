@@ -138,7 +138,7 @@ import { Sheets } from './sheets';
           </div>
         }
         @case ('image') {
-          <figure class="photo" [class.left]="photoSide()[i]">
+          <figure class="photo" [class.left]="photoSide()[i]" [class.wide]="b.wide">
             <img [src]="'conteudo/' + b.src" [alt]="b.alt" loading="lazy" />
             @if (b.caption) { <figcaption><ng-container *ngTemplateOutlet="line; context: { $implicit: b.caption }" /></figcaption> }
           </figure>
@@ -173,7 +173,7 @@ export class RichText {
   /** As fotos alternam de lado no computador, como numa revista. */
   protected readonly photoSide = computed(() => {
     let n = 0;
-    return this.blocks().map((b) => b.type === 'image' && n++ % 2 === 1);
+    return this.blocks().map((b) => b.type === 'image' && !b.wide && n++ % 2 === 1);
   });
 
   protected sermonOf(id: string | undefined) {

@@ -102,6 +102,57 @@ import { TanakhShelf } from './tanakh-shelf';
           <g class="place"><circle cx="92" cy="268" r="7" /><text x="78" y="294" class="sub">Rio de Janeiro</text></g>
         </svg>
       }
+      @case ('duas-maos') {
+        <svg viewBox="0 0 340 330" role="img" aria-label="O que a igreja e o Estado levam para a cidade">
+          <g class="node key"><rect x="6" y="8" width="158" height="206" rx="14" />
+            <text x="85" y="34" class="label">IGREJA</text>
+            <text x="85" y="52" class="sub">forma a comunidade</text></g>
+          <g class="node madureira"><rect x="176" y="8" width="158" height="206" rx="14" />
+            <text x="255" y="34" class="label">ESTADO</text>
+            <text x="255" y="52" class="sub">constrói a estrutura</text></g>
+          @for (t of churchGives; track t; let i = $index) {
+            <circle class="dot gold" cx="22" [attr.cy]="80 + i * 27" r="4" />
+            <text x="32" [attr.y]="85 + i * 27" class="start">{{ t }}</text>
+          }
+          @for (t of stateGives; track t; let i = $index) {
+            <circle class="dot" cx="192" [attr.cy]="80 + i * 27" r="4" />
+            <text x="202" [attr.y]="85 + i * 27" class="start">{{ t }}</text>
+          }
+          <g class="links"><path d="M85 214 C 85 244, 150 238, 160 262 M255 214 C 255 244, 190 238, 180 262" /></g>
+          <g class="node event"><rect x="60" y="262" width="220" height="60" rx="14" />
+            <text x="170" y="286" class="year">A CIDADE</text>
+            <text x="170" y="306">comunidade + estrutura</text></g>
+        </svg>
+      }
+      @case ('cidade-capela') {
+        <svg viewBox="0 0 340 568" role="img" aria-label="Como uma cidade do interior nascia em volta da capela, em quatro etapas">
+          <defs>
+            <g id="fig-capela"><rect class="bldg chapel" x="-22" y="-40" width="44" height="40" /><polygon class="roof" points="-27,-40 0,-61 27,-40" />
+              <rect class="door" x="-6" y="-18" width="12" height="18" /><path class="cross" d="M0 -76 V-61 M-6 -70 H6" /></g>
+            <g id="fig-casa"><rect class="bldg" x="-11" y="-18" width="22" height="18" /><polygon class="roof" points="-14,-18 0,-30 14,-18" /></g>
+            <g id="fig-arvore"><path class="trunk" d="M0 0 V-14" /><circle class="tree" cy="-24" r="11" /></g>
+            <g id="fig-camara"><polygon class="roof" points="-31,-34 0,-47 31,-34" /><rect class="bldg" x="-27" y="-34" width="54" height="34" />
+              <path class="cols" d="M-17 -30 V-3 M-6 -30 V-3 M6 -30 V-3 M17 -30 V-3" /></g>
+            <g id="fig-escola"><rect class="bldg" x="-25" y="-28" width="50" height="28" /><path class="pole" d="M20 -28 V-52" /><polygon class="flag" points="20,-52 33,-47 20,-42" />
+              <rect class="win" x="-18" y="-20" width="9" height="9" /><rect class="win" x="-4" y="-20" width="9" height="9" /></g>
+            <g id="fig-poste"><path class="pole" d="M0 0 V-58 M-9 -52 H9" /></g>
+            <g id="fig-caixa"><path class="pole" d="M-8 0 L-5 -36 M8 0 L5 -36" /><rect class="bldg" x="-12" y="-54" width="24" height="18" rx="3" /></g>
+          </defs>
+          @for (p of cityStages; track p.title; let i = $index) {
+            <g [attr.transform]="'translate(0 ' + i * 140 + ')'">
+              <rect class="panel" x="4" y="4" width="332" height="132" rx="14" />
+              <text x="18" y="26" class="year start">{{ i + 1 }} · {{ p.title }}</text>
+              <text x="18" y="44" class="sub start">{{ p.text }}</text>
+              @if (i >= 2) { <rect class="road" [class.asphalt]="i === 3" x="14" y="124" width="312" height="7" rx="2" /> }
+              <path class="ground" d="M14 124 H326" />
+              @if (i === 3) { <path class="wire" d="M264 68 Q 277 76 290 68" /> }
+              @for (e of p.items; track $index) {
+                <use [attr.href]="'#fig-' + e[0]" [attr.x]="e[1]" y="124" />
+              }
+            </g>
+          }
+        </svg>
+      }
       @case ('berg-vingren-viagem') {
         <svg viewBox="0 0 340 330" role="img" aria-label="A viagem de Gunnar Vingren e Daniel Berg: da Suécia aos Estados Unidos e de Nova York a Belém do Pará">
           <g class="region"><rect x="8" y="8" width="186" height="150" rx="18" /><text x="101" y="30" class="label">ESTADOS UNIDOS</text></g>
@@ -140,6 +191,21 @@ import { TanakhShelf } from './tanakh-shelf';
     .links .back { stroke: var(--mat-sys-primary); }
     .region rect { fill: var(--mat-sys-surface-container); stroke: var(--mat-sys-outline-variant); }
     .place circle { fill: var(--mat-sys-primary); stroke: var(--mat-sys-surface); stroke-width: 2; }
+    .dot { fill: var(--mat-sys-primary); }
+    .dot.gold { fill: var(--accent-gold); }
+    .panel { fill: var(--mat-sys-surface); stroke: var(--mat-sys-outline-variant); }
+    .ground { stroke: var(--mat-sys-outline); stroke-width: 1.5; }
+    .road { fill: color-mix(in srgb, var(--accent-gold) 30%, var(--mat-sys-surface)); }
+    .road.asphalt { fill: var(--mat-sys-on-surface-variant); }
+    .bldg { fill: var(--mat-sys-surface-container-high); stroke: var(--mat-sys-on-surface-variant); stroke-width: 1.2; }
+    .bldg.chapel { fill: var(--mat-sys-surface); stroke: var(--accent-gold); stroke-width: 1.8; }
+    .roof { fill: color-mix(in srgb, var(--accent-gold) 55%, var(--mat-sys-surface)); stroke: var(--accent-gold); stroke-width: 1.2; }
+    .door, .win { fill: var(--mat-sys-on-surface-variant); }
+    .cross, .pole, .cols, .trunk { fill: none; stroke: var(--mat-sys-on-surface-variant); stroke-width: 2; }
+    .cross { stroke: var(--accent-gold); }
+    .flag { fill: var(--mat-sys-primary); }
+    .tree { fill: color-mix(in srgb, var(--mat-sys-primary) 45%, var(--mat-sys-surface)); }
+    .wire { fill: none; stroke: var(--mat-sys-on-surface-variant); stroke-width: 1; }
   `,
 })
 export class Figure {
@@ -160,5 +226,15 @@ export class Figure {
     { title: 'Novo Testamento', text: 'Jesus ungido, Pentecostes e Atos' },
     { title: 'Primeiros séculos', text: 'os pais da Igreja (patrística)' },
     { title: 'Movimentos de renovação', text: 'do fim do século XIX em diante' },
+  ];
+
+  protected readonly churchGives = ['Reúne as pessoas', 'Ensina a Palavra', 'Acolhe quem chega', 'Cuida de quem sofre', 'Ora pela cidade'];
+  protected readonly stateGives = ['Água e esgoto', 'Energia elétrica', 'Estrada e asfalto', 'Escola e saúde', 'Leis e segurança'];
+  /** Etapas da cidade: [desenho, posição x] sobre a linha do chão. */
+  protected readonly cityStages: { title: string; text: string; items: [string, number][] }[] = [
+    { title: 'A capela', text: 'Terra doada ao santo e uma capela', items: [['arvore', 70], ['arvore', 96], ['capela', 170], ['arvore', 250], ['arvore', 278]] },
+    { title: 'O arraial', text: 'Casas em volta da praça da igreja', items: [['casa', 84], ['casa', 114], ['capela', 170], ['casa', 226], ['casa', 256], ['arvore', 296]] },
+    { title: 'A vila', text: 'Câmara municipal e estrada', items: [['casa', 50], ['casa', 78], ['capela', 136], ['camara', 220], ['casa', 274], ['casa', 302]] },
+    { title: 'A cidade', text: 'Escola, água, luz e asfalto', items: [['escola', 40], ['casa', 82], ['capela', 122], ['camara', 186], ['casa', 236], ['poste', 264], ['poste', 290], ['caixa', 316]] },
   ];
 }

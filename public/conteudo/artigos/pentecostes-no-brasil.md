@@ -56,6 +56,10 @@ A expansão estado por estado, os obreiros, os costumes e o ensino, com o mapa i
 
 Gunnar Vingren adoeceu e voltou à Suécia, onde morreu em 1933. Daniel Berg passou boa parte da vida viajando pelo Brasil como evangelista e colportor, vendendo Bíblias, e morreu na Suécia em 1963.
 
+:::leia igreja-e-estado
+As igrejas cresceram junto com as migrações para o interior e para as periferias.
+:::
+
 ## As Outras Ondas
 
 Nas décadas seguintes, novas igrejas pentecostais surgiram no Brasil, com ênfases próprias: nos anos 1950, a Igreja do Evangelho Quadrangular, com as tendas da Cruzada Nacional de Evangelização, e O Brasil para Cristo, de Manoel de Mello; em 1962, a Igreja Pentecostal Deus é Amor. A partir dos anos 1970, surgiram as igrejas chamadas de neopentecostais. No Censo de 2010, cerca de 22% dos brasileiros se declararam evangélicos — a maioria deles, pentecostais —, e as Assembleias de Deus eram a maior igreja evangélica do país.

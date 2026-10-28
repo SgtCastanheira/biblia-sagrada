@@ -28,6 +28,9 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Bula Inter gravissimas (1582), primeira página | `public/conteudo/imagens/calendario-inter.jpg`, do Wikimedia Commons | Domínio público |
 | Foto de Gunnar Vingren (1908) | `public/conteudo/imagens/gunnar-vingren.jpg`, do Wikimedia Commons | Domínio público |
 | Foto de Paulo Leivas Macalão | `public/conteudo/imagens/paulo-leivas-macalao.jpg`, do Wikimedia Commons | Domínio público |
+| Quadro *A Primeira Missa no Brasil*, de Victor Meirelles (1860), Museu Nacional de Belas Artes | `public/conteudo/imagens/primeira-missa-meirelles.jpg`, do Wikimedia Commons | Domínio público |
+| Quadro *Fundação de São Paulo*, de Oscar Pereira da Silva (1909), Museu Paulista | `public/conteudo/imagens/fundacao-sao-paulo.jpg`, do Wikimedia Commons | Domínio público |
+| Foto da construção do Congresso Nacional (1959) — Arquivo Nacional, Fundo Agência Nacional | `public/conteudo/imagens/construcao-brasilia-1959.jpg`, do Wikimedia Commons | Domínio público |
 | Foto de Frida Vingren — acervo do Centro de Estudos Pentecostais da CPAD | `public/conteudo/imagens/frida-vingren.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
 | Louis Segond (1910), em francês | Texto embutido (`public/bible/lsg`), do eBible.org (`fraLSG`) | Domínio público |
 | Reina-Valera 1909, em espanhol | Texto embutido (`public/bible/rv1909`), do eBible.org (`spaRV1909`) | Domínio público |

@@ -119,7 +119,6 @@ export const TRAILS: Trail[] = [
     branches: [
       { title: 'O Movimento Pentecostal', ids: ['movimento-pentecostal'] },
       { title: 'Os Grandes Avivamentos', ids: ['avivamentos-desde-atos', 'avivamento-de-oracao-1857', 'avivamento-do-pais-de-gales', 'avivamento-da-coreia', 'avivamento-da-africa-oriental', 'avivamento-das-hebridas'] },
-      { title: 'A Teologia Pentecostal', ids: ['teologia-sistematico-carismatica'] },
     ],
   },
   {
@@ -153,6 +152,22 @@ export const TRAILS: Trail[] = [
       ids: ['harpa-crista'],
       links: [{ link: '/harpa', icon: 'library_music', name: 'Os hinos', description: 'Número, título, autor e a origem de cada hino.' }],
     }],
+  },
+  {
+    id: 'teologia',
+    name: 'Teologia',
+    short: 'Teologia',
+    description: 'O que a Bíblia ensina, organizado por assunto, e uma teologia escrita a partir da experiência com o Espírito Santo.',
+    icon: 'local_library',
+    branches: [{ title: 'A Teologia Pentecostal', ids: ['teologia-sistematico-carismatica'] }],
+  },
+  {
+    id: 'igreja-e-estado',
+    name: 'A Igreja e o Estado',
+    short: 'A Igreja e o Estado',
+    description: 'Como a fé reuniu o povo, o governo levou a estrutura e as cidades nasceram em volta da igreja: da primeira missa à separação e ao interior do Brasil.',
+    icon: 'location_city',
+    branches: [{ title: 'A História no Brasil', ids: ['igreja-e-estado'] }],
   },
 ];
 

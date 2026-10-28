@@ -64,6 +64,13 @@ Nos séculos XVIII e XIX, uma fé do coração renovou as igrejas: os morávios 
 :::leia missoes-modernas
 :::
 
+## A Igreja e a Formação do Brasil
+
+Em 1500, a primeira missa foi celebrada no Brasil, e por séculos a Igreja e a Coroa andaram juntas: os jesuítas fundaram aldeamentos e São Paulo, e as cidades do interior nasceram em volta de capelas. Com a República, em 1890, Igreja e Estado se separaram, e a liberdade de culto abriu espaço para todas as igrejas — que acompanharam os brasileiros na marcha para o interior.
+
+:::leia igreja-e-estado
+:::
+
 ## O Fogo Pentecostal
 
 :::cena Los Angeles · 1906

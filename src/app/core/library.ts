@@ -433,6 +433,15 @@ export const ARTICLES: Article[] = [
     minutes: 5,
   },
   {
+    id: 'igreja-e-estado',
+    collection: 'igreja',
+    title: 'A Igreja e o Estado no Brasil',
+    subtitle: 'Da primeira missa às cidades novas do interior: como a fé reuniu o povo, o governo levou a estrutura e as cidades nasceram em volta da igreja.',
+    period: '1500–hoje',
+    icon: 'location_city',
+    minutes: 12,
+  },
+  {
     id: 'movimento-pentecostal',
     collection: 'igreja',
     title: 'Azusa Street e o Movimento Pentecostal',

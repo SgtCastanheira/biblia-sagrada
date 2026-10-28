@@ -37,6 +37,10 @@ Os colportores — vendedores ambulantes de Bíblias, muitas vezes enviados pela
 Em 1855, Sarah Kalley começou em Petrópolis a primeira Escola Dominical permanente do Brasil.
 :::
 
+:::leia igreja-e-estado
+No Império, as igrejas protestantes só podiam ter culto em casas, “sem forma alguma exterior de templo”.
+:::
+
 ## Edimburgo, 1910
 
 Em 1910, mais de 1.200 delegados de sociedades missionárias se reuniram em Edimburgo, na Escócia, sonhando “evangelizar o mundo nesta geração”. Naquele mesmo ano, dois jovens suecos desembarcavam em Belém do Pará — mas essa é a história do pentecostalismo no Brasil.

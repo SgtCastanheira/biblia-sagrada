@@ -19,6 +19,8 @@ export interface Block {
   /** Foto: caminho dentro de public/conteudo e descrição para leitores de tela. */
   src?: string;
   alt?: string;
+  /** Foto larga (quadros e paisagens): ocupa toda a largura do texto. Escreva " {larga}" depois da foto. */
+  wide?: boolean;
   /** Ilustração desenhada pelo app (id do diagrama em shared/figure.ts). */
   figure?: string;
   /** Legenda da foto ou da ilustração (com o crédito). */
@@ -68,7 +70,8 @@ export function parseInline(line: string): Inline[] {
 /**
  * Markdown simples: ## e ### títulos, parágrafos, > citação, listas (- e 1.),
  * ":::tempo" (linha do tempo: "- data | título | texto"), ":::nota" (destaque),
- * ":::figura id" (ilustração do app, com a legenda dentro) e fotos: ![descrição](imagens/foto.jpg "legenda").
+ * ":::figura id" (ilustração do app, com a legenda dentro) e fotos: ![descrição](imagens/foto.jpg "legenda"),
+ * com " {larga}" no fim para quadros e paisagens ocuparem toda a largura.
  * Para as histórias: ":::cena Lugar, data" (um quadro que põe o leitor no lugar), ":::destaque" (frase em
  * destaque; a última linha começando com "— " é o autor), ":::pessoas" ("- Nome | papel | imagens/foto.jpg")
  * e ":::leia id-do-artigo" (cartão que leva à história completa; o texto dentro diz por que ela se liga a esta).
@@ -92,10 +95,10 @@ export function parseBlocks(source: string): Block[] {
       flush();
       continue;
     }
-    const image = line.match(/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$/);
+    const image = line.match(/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)(\s*\{larga\})?$/);
     if (image) {
       flush();
-      blocks.push({ type: 'image', alt: image[1], src: image[2], caption: image[3] ? parseInline(image[3]) : undefined });
+      blocks.push({ type: 'image', alt: image[1], src: image[2], caption: image[3] ? parseInline(image[3]) : undefined, wide: !!image[4] });
       continue;
     }
     const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao|envio|mapa-epocas|comprar)(?:\s+(.+))?$/);
