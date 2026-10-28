@@ -80,6 +80,7 @@ export const TRAILS: Trail[] = [
       { title: 'Roma e o poder', ids: ['legiao-e-o-exercito-romano', 'crucificacao-romana', 'a-familia-de-herodes'] },
       { title: 'A fé e a família', ids: ['casamento-judaico', 'o-templo-de-herodes'] },
       { title: 'O trabalho e o dinheiro', ids: ['dinheiro-e-salarios', 'pastores-e-ovelhas', 'agricultura-no-tempo-de-jesus'] },
+      { title: 'O tempo e as festas', ids: ['natal-e-os-calendarios'] },
     ],
   },
   {

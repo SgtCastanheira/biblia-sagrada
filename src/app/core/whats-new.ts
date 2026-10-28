@@ -22,6 +22,14 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'natal-e-calendarios',
+    date: '28 de outubro de 2026',
+    title: 'Jesus nasceu mesmo em 25 de dezembro?',
+    items: [
+      { icon: 'calendar_month', title: 'O Natal e os calendários', text: 'O que a Bíblia diz sobre a data do nascimento de Jesus, por que a Igreja escolheu o 25 de dezembro, por que alguns cristãos comemoram em 7 de janeiro, como nasceram os calendários juliano e gregoriano e quais calendários o mundo usa hoje.', link: '/artigo/natal-e-os-calendarios', tip: 'Também em Histórias › Contexto histórico.' },
+    ],
+  },
+  {
     id: 'linguas-indigenas-trindade-deuses',
     date: '27 de outubro de 2026',
     title: 'A Bíblia em línguas indígenas, a Trindade e os deuses pagãos',

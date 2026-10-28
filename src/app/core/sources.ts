@@ -42,6 +42,11 @@ export const WORKS: Record<string, Work> = {
   hengel: { author: 'Martin Hengel', title: 'Crucifixion in the Ancient World and the Folly of the Message of the Cross', publisher: 'Fortress, 1977', kind: 'referencia' },
   hendin: { author: 'David Hendin', title: 'Guide to Biblical Coins', publisher: 'Amphora', kind: 'referencia' },
   ritmeyer: { author: 'Leen Ritmeyer', title: 'The Quest: Revealing the Temple Mount in Jerusalem', publisher: 'Carta, 2006', kind: 'referencia' },
+  'carvalho-tsc': { author: 'César Moisés Carvalho e Céfora Carvalho', title: 'Teologia Sistemático-Carismática (2 volumes)', publisher: 'Thomas Nelson Brasil, 2022', kind: 'referencia' },
+  'talley': { author: 'Thomas J. Talley', title: 'The Origins of the Liturgical Year', publisher: 'Liturgical Press, 2ª ed., 1991', kind: 'historia' },
+  'bradshaw-johnson': { author: 'Paul F. Bradshaw e Maxwell E. Johnson', title: 'The Origins of Feasts, Fasts and Seasons in Early Christianity', publisher: 'Liturgical Press e SPCK, 2011', kind: 'historia' },
+  'richards-calendar': { author: 'E. G. Richards', title: 'Mapping Time: The Calendar and Its History', publisher: 'Oxford University Press, 1998', kind: 'historia' },
+  'finegan': { author: 'Jack Finegan', title: 'Handbook of Biblical Chronology', publisher: 'Hendrickson, ed. revista, 1998', kind: 'referencia' },
   'grudem-ts': { author: 'Wayne Grudem', title: 'Teologia sistemática', publisher: 'Vida Nova', kind: 'referencia' },
   'horton-ts': { author: 'Stanley M. Horton (org.)', title: 'Teologia sistemática: uma perspectiva pentecostal', publisher: 'CPAD', kind: 'referencia' },
   'ddd': { author: 'Karel van der Toorn, Bob Becking e Pieter W. van der Horst (orgs.)', title: 'Dictionary of Deities and Demons in the Bible', publisher: 'Brill e Eerdmans, 2ª ed., 1999', kind: 'referencia' },
@@ -180,6 +185,16 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'Salmos de Salomão (séc. I a.C.) e os manuscritos do Mar Morto',
     ],
     works: ['schurer', 'grabbe', 'russell', 'bruce-nt-history', 'ferguson', 'keener-nt'],
+  },
+  'natal-e-os-calendarios': {
+    ancient: [
+      'Clemente de Alexandria, Stromata 1.21 (as datas propostas para o nascimento, c. 200)',
+      'Cronógrafo de 354, ou Calendário Filocaliano (o Natal em 25 de dezembro numa lista de 336, e a festa do “Invicto”)',
+      'João Crisóstomo, Sermão no dia do Natal (Antioquia, 386); Agostinho, A Trindade 4.5; o tratado Sobre os solstícios e os equinócios (séc. IV)',
+      'Macróbio, Saturnais 1.14, e Censorino, Sobre o dia do nascimento 20 (a reforma de Júlio César)',
+      'Gregório XIII, bula Inter gravissimas (24 de fevereiro de 1582)',
+    ],
+    works: ['talley', 'bradshaw-johnson', 'finegan', 'richards-calendar', 'carvalho-tsc'],
   },
   trindade: {
     ancient: [

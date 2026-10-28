@@ -105,6 +105,17 @@ export const ARTICLES: Article[] = [
     minutes: 17,
   },
   {
+    id: 'natal-e-os-calendarios',
+    collection: 'contexto',
+    story: true,
+    passages: ['LUK 2', 'MAT 2', 'GAL 4', 'EXO 12', 'ROM 14'],
+    title: 'Jesus nasceu mesmo em 25 de dezembro?',
+    subtitle: 'O que a Bíblia diz, por que a Igreja escolheu essa data, como nasceram os calendários juliano e gregoriano, e quais calendários o mundo usa hoje.',
+    period: '46 a.C. – hoje',
+    icon: 'calendar_month',
+    minutes: 15,
+  },
+  {
     id: 'grupos-do-tempo-de-jesus',
     collection: 'estudos',
     story: true,
