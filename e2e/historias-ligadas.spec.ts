@@ -64,18 +64,13 @@ test('a curiosidade leva ao estudo que a aprofunda, sem repetir o texto', async 
   await expect(page).toHaveURL(/\/artigo\/trindade/);
 });
 
-test('a capa mostra em tópicos o que a história responde, em vez de um parágrafo comprido', async ({ page }) => {
+test('a capa fica só com o título; os tópicos aparecem ao longo do texto, como “Tópico 3 de 5”', async ({ page }) => {
   await page.goto('/artigo/natal-e-os-calendarios');
-  const topics = page.getByRole('list', { name: 'Nesta história' });
-  await expect(topics.getByRole('listitem')).toHaveCount(5);
-  await expect(topics).toContainText('Quem escolheu o 25 de dezembro?');
-  await expect(page.locator('.hero .lead')).toHaveCount(0);
-});
-
-test('tocar num tópico da capa leva à seção dele, que mostra “Tópico 3 de 5”', async ({ page }) => {
-  await page.goto('/artigo/natal-e-os-calendarios');
-  await page.getByRole('list', { name: 'Nesta história' }).getByRole('button', { name: 'Os dez dias que desapareceram' }).click();
+  const hero = page.locator('.hero');
+  await expect(hero.getByRole('heading', { level: 1, name: 'Jesus nasceu mesmo em 25 de dezembro?' })).toBeVisible();
+  await expect(hero.locator('ul, .lead')).toHaveCount(0);
+  await expect(page.locator('.toc')).toHaveCount(0);
   const heading = page.getByRole('heading', { level: 2, name: 'Os dez dias que desapareceram' });
-  await expect(heading).toBeInViewport();
+  await heading.scrollIntoViewIfNeeded();
   await expect(page.locator('.chapter', { hasText: 'Tópico 3 de 5' })).toBeVisible();
 });

@@ -19,7 +19,7 @@ import { StoryProgressService } from '../../core/story-progress.service';
 import { StoryJourney } from '../../shared/story-journey';
 import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
-import { headingKey, outline } from '../../core/rich-text-parser';
+import { outline } from '../../core/rich-text-parser';
 import { RichText } from '../../shared/rich-text';
 import { SourcesBox } from '../../shared/sources-box';
 
@@ -58,15 +58,7 @@ import { SourcesBox } from '../../shared/sources-box';
               </div>
             }
             <h1 class="title">{{ a.title }}</h1>
-            @if (a.topics?.length) {
-              <ul class="topics" aria-label="Nesta história">
-                @for (t of topicLinks(); track t.text) {
-                  <li><button type="button" (click)="jump(t.anchor)" [disabled]="!t.anchor">{{ t.text }}<mat-icon aria-hidden="true">arrow_downward</mat-icon></button></li>
-                }
-              </ul>
-            } @else {
-              <p class="lead">{{ a.subtitle }}</p>
-            }
+            @if (!a.topics?.length) { <p class="lead">{{ a.subtitle }}</p> }
             <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
             @if (overview(); as o) {
               <a class="part-of" [routerLink]="['/artigo', o.id]"><mat-icon>auto_stories</mat-icon> Parte do panorama: {{ o.title }}</a>
@@ -75,15 +67,7 @@ import { SourcesBox } from '../../shared/sources-box';
         } @else {
           <span class="overline">{{ step()?.trail?.name ?? collection()?.name }} · {{ a.period }}</span>
           <h1 class="title">{{ a.title }}</h1>
-          @if (a.topics?.length) {
-            <ul class="topics" aria-label="Neste estudo">
-              @for (t of topicLinks(); track t.text) {
-                <li><button type="button" (click)="jump(t.anchor)" [disabled]="!t.anchor">{{ t.text }}<mat-icon aria-hidden="true">arrow_downward</mat-icon></button></li>
-              }
-            </ul>
-          } @else {
-            <p class="lead">{{ a.subtitle }}</p>
-          }
+          @if (!a.topics?.length) { <p class="lead">{{ a.subtitle }}</p> }
           <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
         }
 
@@ -191,20 +175,6 @@ import { SourcesBox } from '../../shared/sources-box';
     .hero .title { position: relative; margin: 0 0 10px; font-size: 34px; color: #fff8ec; }
     .hero .lead { position: relative; margin: 0 0 16px; color: #eadfcb; }
     .hero .time { position: relative; margin: 0; color: #d9c9ad; }
-    /* O que a história responde, um tópico por linha */
-    .topics { position: relative; display: flex; flex-direction: column; gap: 0; margin: 2px 0 14px; padding: 0; list-style: none; }
-    .topics li { position: relative; padding-left: 20px; }
-    .topics li::before { content: ''; position: absolute; left: 3px; top: 1.05em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-gold); }
-    .topics button {
-      display: block; width: 100%; min-height: 40px; padding: 6px 0; border: 0; background: none; cursor: pointer; text-align: left;
-      font: 400 16px/1.45 var(--reading-font); color: var(--mat-sys-on-surface-variant); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px;
-    }
-    .topics button:hover:not(:disabled) { text-decoration-color: currentColor; }
-    .topics button mat-icon { width: 16px; height: 16px; margin-left: 6px; font-size: 16px; vertical-align: -2px; color: var(--accent-gold); }
-    .hero .topics button mat-icon { color: #e2c28c; }
-    .topics button:disabled { cursor: default; }
-    .hero .topics button { color: #eadfcb; }
-    .hero .topics li::before { background: #e2c28c; }
     .part-of {
       position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; margin-top: 14px; padding: 0 14px;
       border-radius: 20px; text-decoration: none; font: 600 13px Inter, sans-serif; color: #fbf4e6;
@@ -301,13 +271,9 @@ export class ArticlePage {
   /** No celular o índice começa fechado, para o texto aparecer logo. */
   protected readonly wide = typeof matchMedia !== 'undefined' && matchMedia('(min-width: 840px)').matches;
   protected readonly toc = computed(() => (this.body() ? outline(this.body()!, this.article()?.topics ?? []) : []));
-  /** Os tópicos da capa, cada um com a seção do texto que ele abre. */
-  protected readonly topicLinks = computed(() =>
-    (this.article()?.topics ?? []).map((text) => ({ text, anchor: this.toc().find((h) => headingKey(h.text) === headingKey(text))?.anchor })),
-  );
 
-  protected jump(anchor: string | undefined): void {
-    if (anchor) document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  protected jump(anchor: string): void {
+    document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   protected percent(at: number): number {

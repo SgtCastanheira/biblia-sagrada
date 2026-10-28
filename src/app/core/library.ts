@@ -10,7 +10,10 @@ export interface Article {
   title: string;
   /** Uma ou duas frases curtas: aparecem nas listas e nos cartões. */
   subtitle: string;
-  /** O que a história responde, em tópicos: aparecem na capa no lugar do subtítulo. */
+  /**
+   * Tópicos da história: são os títulos das seções do texto, na ordem, e ganham o rótulo “Tópico 1 de 5”.
+   * Escritos como perguntas e pistas, para despertar a curiosidade. A capa fica só com o título.
+   */
   topics?: string[];
   period: string;
   icon: string;
