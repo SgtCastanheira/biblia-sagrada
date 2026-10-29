@@ -38,6 +38,7 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Biblica® Open Nueva Biblia Viva™ — © 2006, 2008 by Biblica, Inc. | Texto embutido sem alterações (`public/bible/nbv-es`), do eBible.org (`spaonbv`). “Biblica” é uma marca registrada na Oficina de Patentes e Marcas dos Estados Unidos por Biblica, Inc. Usado com permissão | CC BY-SA 4.0 |
 | La Biblia en Español Sencillo | Texto embutido (`public/bible/bes`), do eBible.org (`spabes`) | Domínio público |
 | Santa Biblia libre Latinoamericano | Texto embutido, sem os livros deuterocanônicos (`public/bible/bll`), do eBible.org (`spabll`) | Domínio público |
+| Tradução Sinodal, em russo | Texto embutido (`public/bible/synodal`), do eBible.org (`russyn`) | Domínio público |
 | Lutherbibel 1912, em alemão | Texto embutido (`public/bible/luther1912`), do eBible.org (`deu1912`) | Domínio público |
 | Elberfelder 1905 (Unrevidierte), em alemão | Texto embutido (`public/bible/elo`), do eBible.org (`deuelo`) | Domínio público |
 | Schlachter 1951 — © 1951 Genfer Bibelgesellschaft | Texto embutido (`public/bible/schlachter`), do eBible.org (`deu1951`) | CC BY 4.0 |

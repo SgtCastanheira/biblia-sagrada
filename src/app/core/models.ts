@@ -27,6 +27,8 @@ export interface BibleVersion {
   language: string;
   flag: string;
   ntOnly?: boolean;
+  /** Aviso quando a tradução está incompleta em outros livros (ex.: Antigo Testamento ainda em andamento). */
+  partial?: string;
   /** Escrita da direita para a esquerda (hebraico). */
   rtl?: boolean;
   /** Sigla curta para o círculo da lista de versões, quando a sigla não cabe ("ALM" para "ALM1911"). */

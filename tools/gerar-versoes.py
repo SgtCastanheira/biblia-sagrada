@@ -28,6 +28,8 @@ VERSIONS = {
     "spaonbv": "nbv-es",     # Biblica® Open Nueva Biblia Viva (CC BY-SA 4.0)
     "spabes": "bes",         # La Biblia en Español Sencillo (domínio público)
     "spabll": "bll",         # Santa Biblia libre Latinoamericano (domínio público; os livros deuterocanônicos ficam de fora)
+    # Em russo
+    "russyn": "synodal",     # Tradução Sinodal (domínio público): a bible-api.com só tem o Gênesis
     # Em hebraico
     "heb": "hebraico",       # Bíblia hebraica de Franz Delitzsch (domínio público): texto consonantal, sem vogais
     # Em alemão

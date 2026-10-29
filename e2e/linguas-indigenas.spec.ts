@@ -32,3 +32,24 @@ test('o fim do capítulo mostra a licença certa de cada versão, não "domínio
   await page.goto('/ler/JHN/3');
   await expect(page.locator('p.source')).toContainText('domínio público');
 });
+
+test('Sinodal russa embutida: Bíblia inteira, sem pedir nada à internet', async ({ page }) => {
+  await page.goto('/');
+  await page.evaluate(() => localStorage.setItem('biblia.settings.version', JSON.stringify('synodal')));
+  for (const ref of ['GEN/1', 'PSA/23', 'JHN/3', 'REV/22']) {
+    await page.goto(`/ler/${ref}`);
+    await expect(page.locator('#v1')).toContainText(/[А-Яа-я]/);
+  }
+  await expect(page.locator('p.source')).toContainText('domínio público');
+});
+
+test('tradução que pula versículos avisa quais faltam; versão completa não avisa', async ({ page }) => {
+  await page.goto('/');
+  await page.evaluate(() => localStorage.setItem('biblia.settings.version', JSON.stringify('xavante')));
+  await page.goto('/ler/JHN/1');
+  await expect(page.locator('.gap-note')).toContainText('Esta tradução não traz os versículos 11, 17');
+  await page.evaluate(() => localStorage.setItem('biblia.settings.version', JSON.stringify('almeida')));
+  await page.goto('/ler/JHN/1');
+  await expect(page.locator('#v1')).toBeVisible();
+  await expect(page.locator('.gap-note')).toHaveCount(0);
+});

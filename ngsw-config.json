@@ -69,6 +69,7 @@
           "/bible/luther1912/*.json",
           "/bible/elo/*.json",
           "/bible/schlachter/*.json",
+          "/bible/synodal/*.json",
           "/bible/hebraico/*.json",
           "/bible/mbya/*.json",
           "/bible/guajajara/*.json",

@@ -387,6 +387,26 @@ sup {
   font: var(--mat-sys-body-medium);
 }
 
+.gap-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: var(--mat-sys-surface-container-low);
+  border: 1px solid var(--mat-sys-outline-variant);
+  font: 500 13px/1.45 Inter, sans-serif;
+  color: var(--mat-sys-on-surface-variant);
+
+  mat-icon {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+  }
+}
+
 .source {
   margin: 24px 0 0;
   text-align: center;

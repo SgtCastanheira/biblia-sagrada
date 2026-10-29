@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'biblia-russa-e-versiculos-faltando',
+    date: '29 de outubro de 2026',
+    title: 'Bíblia em Russo e Aviso de Versículos que Faltam',
+    items: [
+      { icon: 'translate', title: 'Bíblia em russo, inteira e sem internet', text: 'A Tradução Sinodal agora vem dentro do app, com os 66 livros. Antes ela só abria o Gênesis.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto do capítulo.' },
+      { icon: 'info', title: 'Versículos que a tradução não traz', text: 'Algumas traduções, como as das línguas indígenas e a Nueva Biblia Viva, pulam versículos. Agora o fim do capítulo diz quais faltam. A Open English Bible também avisa que o Antigo Testamento dela ainda está incompleto.', link: '/ler/JHN/1' },
+    ],
+  },
+  {
     id: 'lembretes-e-leitura-imersiva',
     date: '28 de outubro de 2026',
     title: 'Lembretes do Dia e Histórias para Mergulhar',

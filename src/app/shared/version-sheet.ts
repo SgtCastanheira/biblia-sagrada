@@ -23,7 +23,7 @@ export interface VersionSheetData {
             <span class="badge">{{ v.badge ?? v.abbrev }}</span>
             <span class="text">
               <span class="name">{{ v.name }}</span>
-              <span class="meta">{{ v.flag }} {{ v.language }}{{ v.ntOnly ? ' · só Novo Testamento' : '' }}</span>
+              <span class="meta">{{ v.flag }} {{ v.language }}{{ v.ntOnly ? ' · só Novo Testamento' : v.partial ? ' · Antigo Testamento incompleto' : '' }}</span>
             </span>
             @if (v.id === data.current) {
               <mat-icon>check_circle</mat-icon>

@@ -289,6 +289,23 @@ export class ReaderPage {
     this.settings.compareVersion.set(null);
   }
 
+  /** Versículos que a tradução não traz neste capítulo (ex.: "6 a 11, 14"), para a tela avisar em vez de omitir em silêncio. */
+  protected readonly missingVerses = computed(() => {
+    const rows = this.state().rows;
+    if (!rows.length) return '';
+    const have = new Set(rows.map((r) => r.verse));
+    const last = rows[rows.length - 1].verse;
+    const gaps: string[] = [];
+    for (let n = 1; n <= last; n++) {
+      if (have.has(n)) continue;
+      let end = n;
+      while (!have.has(end + 1) && end + 1 <= last) end++;
+      gaps.push(end > n ? `${n} a ${end}` : `${n}`);
+      n = end;
+    }
+    return gaps.join(', ');
+  });
+
   protected readonly isLocal = computed(() => LOCAL_VERSIONS.has(this.settings.version()));
 
   protected readAlmeida(): void {
@@ -432,8 +449,9 @@ export class ReaderPage {
   private errorMessage(err: HttpErrorResponse, versionId: string): string {
     const version = findVersion(versionId);
     if (err.status === 404) {
-      return version?.ntOnly && this.bookInfo()?.testament === 'AT'
-        ? `A versão ${version.name} contém apenas o Novo Testamento.`
+      if (version?.ntOnly && this.bookInfo()?.testament === 'AT') return `A versão ${version.name} contém apenas o Novo Testamento.`;
+      return version?.partial && this.bookInfo()?.testament === 'AT'
+        ? `${version.partial} Este livro ainda não foi traduzido.`
         : `Este capítulo não está disponível na versão ${version?.name ?? versionId}.`;
     }
     if (!navigator.onLine) {

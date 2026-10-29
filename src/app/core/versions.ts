@@ -39,7 +39,7 @@ export const VERSIONS: BibleVersion[] = [
   { id: 'darby', abbrev: 'DBY', name: 'Darby Bible', language: 'Inglês', flag: '🇬🇧' },
   { id: 'dra', abbrev: 'DRA', name: 'Douay-Rheims 1899', language: 'Inglês', flag: '🇺🇸' },
   { id: 'ylt', abbrev: 'YLT', name: "Young's Literal Translation", language: 'Inglês', flag: '🇬🇧', ntOnly: true },
-  { id: 'oeb-us', abbrev: 'OEB', name: 'Open English Bible (US)', language: 'Inglês', flag: '🇺🇸' },
+  { id: 'oeb-us', abbrev: 'OEB', name: 'Open English Bible (US)', language: 'Inglês', flag: '🇺🇸', partial: 'O Antigo Testamento desta versão ainda está em tradução: só 17 livros estão prontos.' },
   { id: 'webbe', abbrev: 'WEBBE', name: 'World English Bible (Britânica)', language: 'Inglês', flag: '🇬🇧' },
   { id: 'clementine', abbrev: 'VUL', name: 'Vulgata Clementina', language: 'Latim', flag: '🇻🇦' },
   { id: 'rccv', abbrev: 'RCCV', name: 'Cornilescu Corrigida', language: 'Romeno', flag: '🇷🇴' },

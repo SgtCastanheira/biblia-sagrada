@@ -154,6 +154,9 @@
         }
       }
 
+      @if (missingVerses(); as gaps) {
+        <p class="gap-note"><mat-icon>info</mat-icon> Esta tradução não traz os versículos {{ gaps }} deste capítulo.</p>
+      }
       <p class="source">{{ version()?.name }} · {{ version()?.copyright ?? 'domínio público' }}</p>
     }
 
