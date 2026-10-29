@@ -456,3 +456,17 @@ test('bolinhas: Teologia e A Igreja e o Estado aparecem na tela inicial e levam 
   // A história 1 de 1 da bolinha leva à próxima trilha
   await expect(page.getByText('Você chegou ao fim da trilha A Igreja e o Estado.')).toBeVisible();
 });
+
+test('manuais do ministério: quatro estudos na bolinha Teologia, ligados ao estudo dos cargos', async ({ page }) => {
+  await page.goto('/historia?trilha=teologia');
+  for (const nome of [/Manual do Diácono/, /Manual do Pastor Pentecostal/, /Manual da Igreja e do Obreiro/, /Diácono, Presbítero e Pastor nos Três Manuais/]) {
+    await expect(page.getByRole('link', { name: nome }).first()).toBeVisible();
+  }
+  await page.getByRole('link', { name: /Diácono, Presbítero e Pastor nos Três Manuais/ }).first().click();
+  await expect(page.getByRole('heading', { level: 1, name: 'Diácono, Presbítero e Pastor nos Três Manuais' })).toBeVisible();
+  await expect(page.locator('app-rich-text a.read')).toHaveCount(4);
+  // O estudo dos cargos leva de volta à comparação
+  await page.goto('/artigo/cargos-na-assembleia-de-deus');
+  await page.getByRole('link', { name: /Diácono, Presbítero e Pastor nos Três Manuais/ }).first().click();
+  await expect(page).toHaveURL(/diacono-presbitero-e-pastor-nos-manuais/);
+});

@@ -64,3 +64,6 @@ tools/.audio-cache/
 
 # Revistas da EBD (CPAD): material protegido, só para consulta local; nunca vai para o Git
 /EBD - Revista/
+
+# Livros de consulta (direitos autorais: nunca publicar)
+/Livros/

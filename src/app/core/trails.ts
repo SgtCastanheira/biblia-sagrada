@@ -157,9 +157,12 @@ export const TRAILS: Trail[] = [
     id: 'teologia',
     name: 'Teologia',
     short: 'Teologia',
-    description: 'O que a Bíblia ensina, organizado por assunto, e uma teologia escrita a partir da experiência com o Espírito Santo.',
+    description: 'O que a Bíblia ensina, organizado por assunto, uma teologia escrita a partir da experiência com o Espírito Santo e os manuais de quem serve na igreja.',
     icon: 'local_library',
-    branches: [{ title: 'A Teologia Pentecostal', ids: ['teologia-sistematico-carismatica'] }],
+    branches: [
+      { title: 'A Teologia Pentecostal', ids: ['teologia-sistematico-carismatica'] },
+      { title: 'Manuais do Ministério', ids: ['manual-do-diacono', 'manual-do-pastor-pentecostal', 'manual-da-igreja-e-do-obreiro', 'diacono-presbitero-e-pastor-nos-manuais'] },
+    ],
   },
   {
     id: 'igreja-e-estado',

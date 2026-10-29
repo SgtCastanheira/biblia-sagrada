@@ -53,6 +53,14 @@ Você ouviu que, em algumas convenções, o pastor precisa ser casado, não pode
 **Como saber a regra da sua convenção.** Peça ao seu pastor ou ao secretário da igreja os documentos que valem para ela: (1) o **estatuto** e o **regimento interno** da convenção estadual a que a igreja é filiada; (2) o regimento do **ministério** da igreja-sede; e (3) as **resoluções** da assembleia geral da convenção. Pergunte também ao pastor-presidente, porque é ele, com o ministério, quem aplica as regras.
 :::
 
+## E os Manuais?
+
+Livros como o *Manual do Diácono*, o *Manual do Pastor Pentecostal* e o manual batista da igreja e do obreiro tratam de como provar, escolher e ordenar quem serve. Eles ajudam a entender os princípios, mas são **orientações de autores e editoras**, e não o regimento de uma convenção. Leia o que cada um diz, lado a lado, sem confundir recomendação com regra.
+
+:::leia diacono-presbitero-e-pastor-nos-manuais
+Os três manuais comparados: quem escolhe, quanto tempo dura o cargo e como é a ordenação em cada tradição.
+:::
+
 ## Para Refletir
 
 Quem lê [[1Tm 3]] e [[Tt 1]] percebe que quase todos os critérios são sobre o **caráter**, e não sobre a posição ou o dinheiro. As convenções interpretam esses textos de modos diferentes, mas o alvo é o mesmo que o apóstolo tinha: que quem lidera sirva de exemplo ao rebanho ([[1Pe 5.3]]). E há um perigo nos dois sentidos: afrouxar o que a Bíblia pede, ou **acrescentar** exigências que ela não faz e deixar sem cuidado quem precisa de acolhimento.

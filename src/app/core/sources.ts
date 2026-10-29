@@ -42,6 +42,9 @@ export const WORKS: Record<string, Work> = {
   hengel: { author: 'Martin Hengel', title: 'Crucifixion in the Ancient World and the Folly of the Message of the Cross', publisher: 'Fortress, 1977', kind: 'referencia' },
   hendin: { author: 'David Hendin', title: 'Guide to Biblical Coins', publisher: 'Amphora', kind: 'referencia' },
   ritmeyer: { author: 'Leen Ritmeyer', title: 'The Quest: Revealing the Temple Mount in Jerusalem', publisher: 'Carta, 2006', kind: 'referencia' },
+  'andrade-diacono': { author: 'Claudionor Corrêa de Andrade', title: 'Manual do Diácono', publisher: 'CPAD, 1999', kind: 'referencia' },
+  'manual-pastor-pentecostal': { author: 'Raymond Carlson, Thomas E. Trask e outros', title: 'Manual do Pastor Pentecostal: Teologia e Práticas Pastorais (reedição de O Pastor Pentecostal; original The Pentecostal Pastor, 1997)', publisher: 'CPAD, 1999 (3ª ed., 2005)', kind: 'referencia' },
+  'ferreira-manual-igreja': { author: 'Ebenézer Soares Ferreira', title: 'Manual da Igreja e do Obreiro (antes Vade-Mécum do Obreiro e da Igreja)', publisher: 'JUERP, 1993 (7ª ed.)', kind: 'referencia' },
   'carvalho-tsc': { author: 'César Moisés Carvalho e Céfora Carvalho', title: 'Teologia Sistemático-Carismática (2 volumes)', publisher: 'Thomas Nelson Brasil, 2022', kind: 'referencia' },
   'talley': { author: 'Thomas J. Talley', title: 'The Origins of the Liturgical Year', publisher: 'Liturgical Press, 2ª ed., 1991', kind: 'historia' },
   'bradshaw-johnson': { author: 'Paul F. Bradshaw e Maxwell E. Johnson', title: 'The Origins of Feasts, Fasts and Seasons in Early Christianity', publisher: 'Liturgical Press e SPCK, 2011', kind: 'historia' },
@@ -197,6 +200,35 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'Descrição da obra no Google Livros e na página da editora Thomas Nelson Brasil',
     ],
     works: ['carvalho-tsc'],
+  },
+  'manual-do-diacono': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Claudionor Corrêa de Andrade, Manual do Diácono (CPAD, 1999): introdução e capítulos 1 (natureza do diaconato), 2 (qualificações, só o começo), 3 (provação), 4 (deveres eclesiásticos), 9 (ordenação) e o começo do 11 (ética). Os capítulos 5 a 8, 10 e 12 só foram vistos pelo sumário',
+    ],
+    works: ['andrade-diacono'],
+  },
+  'manual-do-pastor-pentecostal': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Manual do Pastor Pentecostal (CPAD, 3ª ed., 2005): prefácio, sumário e os capítulos “Treinando e Comissionando Presbíteros e Diáconos”, “Trabalhando com Corpos Ministeriais” e “Prestação de Contas Bíblica na Igreja”. O restante do livro não foi lido',
+    ],
+    works: ['manual-pastor-pentecostal'],
+  },
+  'manual-da-igreja-e-do-obreiro': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Ebenézer Soares Ferreira, Manual da Igreja e do Obreiro (JUERP, 1993, 7ª ed.): prefácio, sumário e os capítulos sobre o pastor (6) e os diáconos (7). O restante só foi visto pelo sumário',
+    ],
+    works: ['ferreira-manual-igreja'],
+  },
+  'diacono-presbitero-e-pastor-nos-manuais': {
+    ancientLabel: 'Documentos consultados',
+    ancient: [
+      'Os três manuais comparados, nas partes lidas descritas em cada estudo',
+      'Estatuto e regimento de cada convenção e de cada ministério: não foram encontrados publicamente e são eles que valem para a igreja',
+    ],
+    works: ['andrade-diacono', 'manual-pastor-pentecostal', 'ferreira-manual-igreja'],
   },
   'natal-e-os-calendarios': {
     ancient: [
