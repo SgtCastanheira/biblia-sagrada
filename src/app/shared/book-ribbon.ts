@@ -7,7 +7,7 @@ import { Component, input, output } from '@angular/core';
 @Component({
   selector: 'app-book-ribbon',
   template: `
-    <button type="button" class="ribbon" [class.placed]="placed()" (click)="toggle.emit()"
+    <button type="button" class="ribbon" [class.placed]="placed()" (click)="toggled.emit()"
       [attr.aria-label]="placed() ? 'Fitinha marcada neste capítulo. Toque para tirar' : 'Colocar a fitinha neste capítulo'"
       [attr.aria-pressed]="placed()">
       <span class="band"></span>
@@ -32,5 +32,5 @@ import { Component, input, output } from '@angular/core';
 })
 export class BookRibbon {
   readonly placed = input(false);
-  readonly toggle = output<void>();
+  readonly toggled = output<void>();
 }

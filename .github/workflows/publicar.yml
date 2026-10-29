@@ -17,6 +17,8 @@ concurrency:
 
 jobs:
   build:
+    # Só o main é produção: rodar o workflow à mão a partir do dev não publica nada.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,7 +27,8 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      # Se algum teste de lógica falhar, o app não é publicado.
+      # Se o lint ou algum teste de lógica falhar, o app não é publicado.
+      - run: npm run lint
       - run: npx playwright test --project=logica
         env:
           SO_LOGICA: 1

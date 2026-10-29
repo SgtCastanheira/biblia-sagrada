@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { AudioEntry, AudioIndex, normalizeForMatch, textKey } from './audio-text';
+import { AudioEntry, AudioIndex, textKey } from './audio-text';
 import { splitForSpeech } from './speech-split';
 import { narrationVoice, portugueseVoices, warmUpVoices } from './voice';
 

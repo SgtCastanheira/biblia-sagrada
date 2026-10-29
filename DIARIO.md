@@ -29,6 +29,37 @@ Modelo:
 
 ---
 
+## 2026-10-29 19:29 -0400 — Branch `dev` para homologação, `main` só produção, e linter
+
+**Autor:** JacksonLuiz99, com Claude Code
+
+**O que foi feito:**
+- Criada a branch `dev` a partir da `main`: desenvolvimento e homologação.
+- `.github/workflows/testes.yml` (novo): em todo envio para a `dev` e todo pull request para `main`/`dev`, roda lint, testes de lógica e build. Não publica nada.
+- `publicar.yml`: roda o lint antes dos testes; o job só roda na `main`, até quando disparado à mão (antes, disparar a partir de outra branch publicaria essa branch).
+- Linter: `angular-eslint` 21 (`npm run lint`, `eslint.config.js`), com as regras recomendadas de TypeScript e Angular e as de acessibilidade dos templates. A primeira passada achou 24 problemas, todos resolvidos:
+  - import sem uso (`listen.service.ts`), `!` depois de `?.` (`article.ts`), `type` trocado por `interface` (`memorial.ts`, `bible-map.ts`), ternário usado como comando (`page-toc.ts`);
+  - saídas com nome de evento do navegador renomeadas: `toggle` → `toggled` (`book-ribbon.ts`) e `close` → `closed` (`photo-viewer.ts`);
+  - as etapas do mapa agora abrem também pelo teclado (Enter e espaço);
+  - exceções comentadas onde já existe caminho pelo teclado (visualizador de fotos: Esc e botão Fechar; foto do texto: botão Ampliar) e nos versículos do leitor;
+  - configuração: `ignoreRestSiblings` (tirar uma chave com `{ x: _, ...resto }`) e os controles do Angular Material contam como campo de `<label>`.
+- `CLAUDE.md`, `README.md` (seções "Lint" e "Branches: desenvolvimento e produção"), `TESTES.md` e `PONTOS-FRAGEIS.md` (itens 4 e 8) atualizados.
+
+**Decisões:**
+- Só a `main` publica; homologação, por enquanto, é a `dev` com os testes verdes no GitHub Actions. O GitHub Pages tem um site só por repositório, então um endereço separado para ver a `dev` no ar precisaria de outra hospedagem ou de outra solução; fica para decidir.
+- Os versículos do leitor continuam sem acesso pelo teclado: tornar cada versículo focável colocaria centenas de paradas de Tab no capítulo. Precisa de um desenho próprio (por exemplo, setas para andar entre versículos); ficou como exceção comentada.
+- Lint só em `src/` (o padrão do schematic); os testes em `e2e/` ficam de fora por ora.
+
+**Testes:** lint sem problemas; build sem avisos; `leitor`, `mapas`, `leitura-historia`, `historias-ligadas`, `acessibilidade` e `estudo` nos dois aparelhos: 189 passaram, 3 pulados.
+
+**Arquivos:** `.github/workflows/testes.yml`, `.github/workflows/publicar.yml`, `eslint.config.js`, `angular.json`, `package.json`, `package-lock.json`, os 10 arquivos de `src/app` corrigidos, `CLAUDE.md`, `README.md`, `TESTES.md`, `PONTOS-FRAGEIS.md`
+
+**Pendências:**
+- No GitHub (precisa de administrador do repositório): tornar a `dev` a branch padrão e proteger a `main` (só por pull request, com o check **Testes** obrigatório).
+- Login do `gh` vencido nesta máquina (`gh auth login`).
+- Endereço de homologação para ver a `dev` no ar, se a equipe quiser.
+- Acesso pelo teclado aos versículos do leitor.
+
 ## 2026-10-29 19:16 -0400 — Dados do usuário protegidos (opção 1, sem servidor)
 
 **Autor:** JacksonLuiz99, com Claude Code

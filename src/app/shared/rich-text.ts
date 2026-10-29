@@ -140,6 +140,8 @@ import { Sheets } from './sheets';
         }
         @case ('image') {
           <figure class="photo" [class.left]="photoSide()[i]" [class.wide]="b.wide">
+            <!-- Pelo teclado, o botão Ampliar ao lado faz o mesmo -->
+            <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
             <img [src]="'conteudo/' + b.src" [alt]="b.alt" loading="lazy" (click)="view(b)" />
             <button type="button" class="zoom" (click)="view(b)" aria-label="Ampliar a imagem"><mat-icon>zoom_out_map</mat-icon></button>
             @if (b.caption) { <figcaption><ng-container *ngTemplateOutlet="line; context: { $implicit: b.caption }" /></figcaption> }
@@ -154,7 +156,7 @@ import { Sheets } from './sheets';
         @default { <p [class.opening]="i === opening()"><ng-container *ngTemplateOutlet="line; context: { $implicit: b.inlines }" /></p> }
       }
     }
-    <app-photo-viewer [photo]="viewing()" (close)="viewing.set(null)" />
+    <app-photo-viewer [photo]="viewing()" (closed)="viewing.set(null)" />
   `,
   styleUrl: './rich-text.scss',
 })

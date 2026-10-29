@@ -1,0 +1,33 @@
+# Homologação: confere cada envio para o dev e cada pull request antes de chegar ao main (produção).
+# Não publica nada; a publicação é só no main (publicar.yml).
+name: Testes
+
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [main, dev]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: testes-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npx playwright test --project=logica
+        env:
+          SO_LOGICA: 1
+      # O build falha se um estilo de componente passar do limite (angular.json) ou se o código não compilar.
+      - run: npx ng build

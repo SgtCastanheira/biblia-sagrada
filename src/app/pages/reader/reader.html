@@ -30,7 +30,7 @@
 
   <article class="page book-page" [class.turn-next]="turn() === 'next'" [class.turn-prev]="turn() === 'prev'" [class.dragging]="dragX() !== 0" [class.settling]="settling()"
     [style.transform]="dragTransform()" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)" (touchcancel)="onTouchCancel()">
-    <app-book-ribbon [placed]="ribbonHere()" (toggle)="toggleRibbon()" />
+    <app-book-ribbon [placed]="ribbonHere()" (toggled)="toggleRibbon()" />
     <!-- Abertura do capítulo -->
     <div class="chapter-head" [style.--c]="book.category.color">
       <span class="category">{{ book.category.name }}</span>
@@ -137,6 +137,8 @@
         </div>
         <div class="compare reading-font" [style.font-size.px]="settings.fontSize()" [style.line-height]="settings.lineHeight()">
           @for (row of state().rows; track row.verse) {
+            <!-- Tocar no versículo abre as opções dele; pelo teclado ainda não (veja DIARIO.md) -->
+            <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
             <div class="pair" [id]="'v' + row.verse" [class.target]="fragment() === 'v' + row.verse" (click)="openVerse(row)">
               <p [style.background]="highlightOf(row.verse)"><sup>{{ row.verse }}</sup>{{ row.text ?? '—' }}</p>
               <p class="other"><span class="tag">{{ compare()?.abbrev }}</span>{{ row.compareText ?? '—' }}</p>
@@ -148,6 +150,7 @@
           <!-- Um versículo por linha, com o número numa coluna à esquerda -->
           <div class="lines reading-font" [style.font-size.px]="settings.fontSize()" [style.line-height]="settings.lineHeight()">
             @for (row of state().rows; track row.verse) {
+              <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
               <p class="line" [attr.dir]="version()?.rtl ? 'rtl' : null" [attr.lang]="version()?.rtl ? 'he' : null" [id]="'v' + row.verse" [class.target]="fragment() === 'v' + row.verse"
                  [style.background]="highlightOf(row.verse)" [class.marked]="highlightOf(row.verse)" (click)="openVerse(row)">
                 <span class="n">{{ row.verse }}</span><span class="t">@for (part of partsOf(row); track $index) {@if (part.entry) {<button type="button" class="word" (click)="openWord($event, part.entry, row.verse)">{{ part.text }}</button>} @else {{{ part.text }}}}</span>
@@ -158,6 +161,7 @@
           <!-- Texto corrido, como num livro -->
           <p class="text reading-font" [attr.dir]="version()?.rtl ? 'rtl' : null" [attr.lang]="version()?.rtl ? 'he' : null" [style.font-size.px]="settings.fontSize()" [style.line-height]="settings.lineHeight()">
             @for (row of state().rows; track row.verse) {
+              <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
               <span class="verse" [id]="'v' + row.verse" [class.target]="fragment() === 'v' + row.verse"
                     [class.marked]="highlightOf(row.verse)" [style.background]="highlightOf(row.verse)"
                     (click)="openVerse(row)"><sup>{{ row.verse }}</sup>@for (part of partsOf(row); track $index) {@if (part.entry) {<button type="button" class="word" (click)="openWord($event, part.entry, row.verse)">{{ part.text }}</button>} @else {{{ part.text }}}} </span>

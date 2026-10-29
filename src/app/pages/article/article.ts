@@ -294,7 +294,10 @@ export class ArticlePage {
   /** Assunto da tela de histórias a que este artigo pertence (para onde o botão voltar leva). */
   protected readonly trailId = computed(() => trailOfArticle(this.id())?.id);
   /** Histórias (Igreja e Bíblia) ganham capa e leitura em capítulos. */
-  protected readonly story = computed(() => STORY_COLLECTIONS.includes(this.article()?.collection!) || !!this.article()?.story);
+  protected readonly story = computed(() => {
+    const a = this.article();
+    return !!a && (STORY_COLLECTIONS.includes(a.collection) || !!a.story);
+  });
   /** O panorama da coleção (como Atos), para quem quiser ver onde esta história se encaixa. */
   protected readonly overview = computed(() => {
     const a = this.article();

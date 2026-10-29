@@ -24,15 +24,18 @@ npx playwright test e2e/logica/referencias.spec.ts --project=logica
 npm run test:offline                 # PROD=1: builds, serves dist on :4400 (e2e/servir-build.mjs), runs offline.spec.ts
 npm run test:e2e:relatorio           # open the HTML report (traces/screenshots of failures)
 npm run test:e2e:ui                  # Playwright UI mode
+npm run lint                         # ESLint (angular-eslint): TS + template accessibility rules
 ```
 
 - **Windows:** npm runs scripts with cmd.exe here, so `npm run test:offline` (`PROD=1 …`) fails. Run it as `PROD=1 npx playwright test --project=producao` from the Bash tool, or `$env:PROD='1'; npx playwright test --project=producao` in PowerShell. `python3` usually opens the Microsoft Store stub, so run the `tools/*.py` scripts with `python` or `py` instead of the `python3` shown in tools/LEIA-ME.md (Python 3, standard library only).
 
-- **No unit tests or linter.** `ng test` has no specs. All testing is Playwright, documented in TESTES.md.
+- **No unit tests.** `ng test` has no specs. All testing is Playwright, documented in TESTES.md.
+- **Lint:** `eslint.config.js` (recommended TS + Angular + template accessibility). The code passes with zero problems; keep it so (CI fails otherwise). A one-off exception goes as `eslint-disable-next-line <rule>` with a comment above saying why (e.g. a click that already has a keyboard path). Outputs must not use DOM event names (`toggled`, `closed`, not `toggle`, `close`).
 - **Browser:** the tests use the installed Google Chrome (`channel: 'chrome'`). A standalone Playwright script needs `chromium.launch({ channel: 'chrome' })`; the bundled Chromium is not downloaded.
 - **Dev server:** the tests reuse an `ng serve` already running on 4200.
 - **Style budget:** component styles warn at 12kB and error at 16kB (`angular.json`). The build fails if a component SCSS grows past it.
-- **Deploy:** `.github/workflows/publicar.yml` publishes every push to `main` to Pages. It first runs the `logica` tests (`SO_LOGICA=1` skips the `webServer` in `playwright.config.ts`); a failure blocks the deploy. It builds with `--base-href /biblia-sagrada/` and copies `index.html` to `404.html` so deep links work. All asset URLs in code must therefore be relative (`conteudo/x.json`, never `/conteudo/x.json`).
+- **Branches:** `main` is production (every push publishes); `dev` is the default branch for development and homologation. Work on `dev` (or a branch off it) and reach `main` only through a pull request from `dev`. `.github/workflows/testes.yml` runs lint, the `logica` tests and the build on every push to `dev` and every PR to `main`/`dev`; it publishes nothing.
+- **Deploy:** `.github/workflows/publicar.yml` publishes every push to `main` to Pages (and only `main`, even when run by hand). It first runs lint and the `logica` tests (`SO_LOGICA=1` skips the `webServer` in `playwright.config.ts`); a failure blocks the deploy. It builds with `--base-href /biblia-sagrada/` and copies `index.html` to `404.html` so deep links work. All asset URLs in code must therefore be relative (`conteudo/x.json`, never `/conteudo/x.json`).
 
 ## Test harness (e2e/base.ts)
 
