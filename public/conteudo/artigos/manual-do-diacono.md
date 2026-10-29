@@ -80,6 +80,10 @@ O capítulo de ética começa com uma lembrança de infância, a de um velho di�
 **A referência é a Bíblia.** O que [[At 6.1-7]] e [[1Tm 3.8-13]] pedem do diácono (reputação, plenitude do Espírito, sabedoria, integridade, provação antes do serviço) é o que vale para qualquer igreja. A provação em sigilo, as quatro provas e o roteiro da ordenação são o que o autor **recomenda** a partir desses textos, e não uma ordem do Novo Testamento. Veja o estudo sobre os cargos para separar o que a Bíblia pede, o que se encontra por escrito e o que só se ouve dizer.
 :::
 
+:::comprar https://www.cpad.com.br/busca?q=manual+do+diacono | Procurar o Manual do Diácono na loja da CPAD
+Esta síntese não substitui o livro: ele traz os capítulos que aqui só foram vistos pelo título. O link abre a busca na loja da editora; não consegui confirmar se a edição ainda está à venda.
+:::
+
 :::leia cargos-na-assembleia-de-deus
 Como alguém chega a cooperador, diácono, presbítero, evangelista e pastor, e o que não dá para afirmar de todas as convenções.
 :::

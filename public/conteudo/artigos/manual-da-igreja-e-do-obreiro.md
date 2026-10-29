@@ -60,6 +60,10 @@ O ponto mais marcante do capítulo é o **rodízio**: segundo o livro, é o sist
 **O que a Bíblia fixa e o que deixa em aberto.** Ela fixa o caráter de quem serve ([[1Tm 3]]; [[Tt 1]]), a prova antes do serviço ([[1Tm 3.10]]), a aprovação da comunidade ([[At 6.5]]) e a oração com imposição de mãos ([[At 6.6]]). Não fixa por quantos anos o diácono serve, nem se há concílio, ata ou carteira de pastor. Esses detalhes são propostas do autor; cada igreja decide como aplicá-los, sem perder o que os textos pedem.
 :::
 
+:::nota
+**Quem quiser ler o livro inteiro.** Esta síntese cobre só os capítulos do pastor e do diácono. Não consegui confirmar se a edição da JUERP ainda está à venda: procure pelo título e pelo autor, Ebenézer Soares Ferreira, no catálogo da editora, em livrarias e em sebos.
+:::
+
 :::leia cargos-na-assembleia-de-deus
 Quem consagra, quais requisitos aparecem por escrito e o que ninguém conseguiu confirmar nas convenções.
 :::

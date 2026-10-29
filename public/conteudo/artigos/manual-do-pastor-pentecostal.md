@@ -63,6 +63,10 @@ Na prática, o capítulo propõe definir padrões claros, por exemplo em aulas d
 **A referência é a Bíblia.** Os modelos de “corpo ministerial”, “curadores” e “presbitério” descrevem a estrutura de igrejas de outro país, e o próprio capítulo admite que o Novo Testamento é mais descritivo do que prescritivo. O que vale para todas as igrejas é o que os textos pedem: servir e ser íntegro ([[1Tm 3.1-13]]; [[Tt 1.5-9]]), escolher homens aprovados ([[At 6.3]]) e prestar contas ([[Hb 13.17]]). Como cada igreja organiza isso depende do seu estatuto.
 :::
 
+:::comprar https://www.cpad.com.br/busca?q=manual+do+pastor+pentecostal | Procurar o Manual do Pastor Pentecostal na loja da CPAD
+O livro tem seis unidades e dezenas de capítulos, e esta síntese cobre só três. O link abre a busca na loja da editora; não consegui confirmar a disponibilidade da edição.
+:::
+
 :::leia cargos-na-assembleia-de-deus
 O que a Bíblia pede de quem lidera e o que se sabe, por escrito, sobre cada cargo nas convenções brasileiras.
 :::
