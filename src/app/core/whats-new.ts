@@ -28,6 +28,7 @@ export const RELEASES: Release[] = [
     items: [
       { icon: 'volunteer_activism', title: 'Manuais do ministério: diácono, pastor e obreiro', text: 'Um estudo de cada livro, em palavras próprias: o Manual do Diácono, o Manual do Pastor Pentecostal e o Manual da Igreja e do Obreiro (batista), mais um estudo que os põe lado a lado e liga ao dos cargos nas convenções. Cada um diz quais partes foram lidas.', link: '/artigo/diacono-presbitero-e-pastor-nos-manuais', tip: 'Também em Histórias › Teologia.' },
       { icon: 'translate', title: 'Bíblia em russo, inteira e sem internet', text: 'A Tradução Sinodal agora vem dentro do app, com os 66 livros. Antes ela só abria o Gênesis.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto do capítulo.' },
+      { icon: 'translate', title: 'Livro que a tradução não tem? Mostra na Almeida', text: 'Quando a versão escolhida só tem o Novo Testamento (as línguas indígenas, YLT, Cherokee), abrir o Gênesis não dá mais uma tela de erro: o capítulo aparece na Almeida, com um aviso e um botão para ir ao Novo Testamento na sua versão.', link: '/ler/GEN/1' },
       { icon: 'info', title: 'Versículos que a tradução não traz', text: 'Algumas traduções, como as das línguas indígenas e a Nueva Biblia Viva, pulam versículos. Agora o fim do capítulo diz quais faltam. A Open English Bible também avisa que o Antigo Testamento dela ainda está incompleto.', link: '/ler/JHN/1' },
     ],
   },

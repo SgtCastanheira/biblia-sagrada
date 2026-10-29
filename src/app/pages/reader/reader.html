@@ -110,6 +110,17 @@
         </div>
       </div>
     } @else {
+      @if (state().fallback) {
+        <div class="notice fallback">
+          <mat-icon>translate</mat-icon>
+          <span>
+            @if (version()?.ntOnly) {A versão <strong>{{ version()?.name }}</strong> só tem o Novo Testamento.} @else {{{ version()?.partial }}}
+            Aqui está este capítulo na <strong>Almeida</strong>.
+          </span>
+          <button mat-stroked-button (click)="openNewTestament()">Ver o Novo Testamento</button>
+          <button mat-button (click)="changeVersion()">Trocar versão</button>
+        </div>
+      }
       @if (state().compareError) {
         <div class="notice">
           <mat-icon>info</mat-icon>
@@ -157,7 +168,7 @@
       @if (missingVerses(); as gaps) {
         <p class="gap-note"><mat-icon>info</mat-icon> Esta tradução não traz os versículos {{ gaps }} deste capítulo.</p>
       }
-      <p class="source">{{ version()?.name }} · {{ version()?.copyright ?? 'domínio público' }}</p>
+      <p class="source">{{ versionName() }} · {{ state().fallback ? 'domínio público' : (version()?.copyright ?? 'domínio público') }}</p>
     }
 
     @if (!state().loading && state().rows.length) {

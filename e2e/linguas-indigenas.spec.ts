@@ -18,7 +18,12 @@ test('Bíblia em línguas indígenas do Brasil: Guarani Mbyá completa, Ticuna s
   // As outras, só o Novo Testamento: o Antigo avisa, sem pedir nada à internet
   await page.evaluate(() => localStorage.setItem('biblia.settings.version', JSON.stringify('ticuna')));
   await page.goto('/ler/GEN/1');
-  await expect(page.getByText('contém apenas o Novo Testamento')).toBeVisible();
+  await expect(page.locator('.notice.fallback')).toContainText('só tem o Novo Testamento');
+  await expect(page.locator('#v1')).toContainText('No princípio'); // o capítulo vem da Almeida
+  await expect(page.locator('p.source')).toContainText('Almeida');
+  await page.getByRole('button', { name: 'Ver o Novo Testamento' }).click();
+  await expect(page).toHaveURL(/\/ler\/MAT\/1/);
+  await expect(page.locator('#v1')).toBeVisible();
   await page.goto('/ler/JHN/3');
   await expect(page.locator('#v16')).toContainText('Tupana');
 });

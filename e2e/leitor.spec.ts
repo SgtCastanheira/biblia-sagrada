@@ -72,7 +72,7 @@ test('versões em português embutidas: Bíblia Livre, Nova Bíblia Viva e a BLT
   // Versão só do Novo Testamento: o Antigo avisa, sem pedir nada à internet
   await page.evaluate(() => localStorage.setItem('biblia.settings.version', JSON.stringify('blt')));
   await page.goto('/ler/GEN/1');
-  await expect(page.getByText('contém apenas o Novo Testamento')).toBeVisible();
+  await expect(page.locator('.notice.fallback')).toContainText('só tem o Novo Testamento');
   await page.goto('/ler/MAT/5');
   await expect(page.locator('#v3')).toBeVisible();
 

@@ -37,6 +37,8 @@ interface ChapterState {
   loading: boolean;
   error?: string;
   compareError?: string;
+  /** A versão escolhida não tem este livro: o capítulo veio da Almeida (o aviso diz isso). */
+  fallback?: boolean;
   rows: VerseRow[];
 }
 
@@ -92,13 +94,24 @@ export class ReaderPage {
   protected readonly state = toSignal(
     toObservable(this.request).pipe(
       switchMap(({ bookId, chapter, version, compare }) => {
-        const main$ = this.load(version, bookId, chapter);
+        const main$ = this.load(version, bookId, chapter).pipe(
+          // Versão sem o Antigo Testamento: em vez de uma tela de erro, mostra o capítulo na Almeida, com aviso
+          switchMap((m) =>
+            m.missing
+              ? this.bible.getChapter('almeida', bookId, chapter).pipe(
+                  map((verses) => ({ verses, fallback: true as const, error: undefined as string | undefined })),
+                  catchError(() => of(m)),
+                )
+              : of(m),
+          ),
+        );
         const compare$ = compare ? this.load(compare, bookId, chapter) : of(null);
         return combineLatest([main$, compare$]).pipe(
           map(([main, other]): ChapterState => {
             if (main.error) {
               return { loading: false, error: main.error, rows: [] };
             }
+            const fallback = 'fallback' in main && main.fallback;
             const rows = new Map<number, VerseRow>();
             main.verses.forEach((v) => rows.set(v.verse, { verse: v.verse, text: v.text }));
             other?.verses.forEach((v) => {
@@ -107,6 +120,7 @@ export class ReaderPage {
             });
             return {
               loading: false,
+              fallback,
               compareError: other?.error,
               rows: [...rows.values()].sort((a, b) => a.verse - b.verse),
             };
@@ -439,11 +453,24 @@ export class ReaderPage {
     return { bookId: other.id, chapter: otherChapter, label: `${other.name} ${otherChapter}` };
   }
 
-  private load(version: string, bookId: string, chapter: number): Observable<{ verses: Verse[]; error?: string }> {
+  private load(version: string, bookId: string, chapter: number): Observable<{ verses: Verse[]; error?: string; missing?: boolean }> {
     return this.bible.getChapter(version, bookId, chapter).pipe(
       map((verses) => ({ verses })),
-      catchError((err: HttpErrorResponse) => of({ verses: [], error: this.errorMessage(err, version) })),
+      catchError((err: HttpErrorResponse) => of({ verses: [], error: this.errorMessage(err, version), missing: this.lacksBook(err, version) })),
     );
+  }
+
+  /** O livro não existe nesta versão (só Novo Testamento, ou Antigo Testamento ainda incompleto): vale mostrar na Almeida. */
+  private lacksBook(err: HttpErrorResponse, versionId: string): boolean {
+    const version = findVersion(versionId);
+    return err.status === 404 && !!(version?.ntOnly || version?.partial) && this.bookInfo()?.testament === 'AT';
+  }
+
+  protected readonly versionName = computed(() => (this.state().fallback ? findVersion('almeida')?.name : this.version()?.name));
+
+  /** Da tela com o aviso para o começo do Novo Testamento, na mesma versão. */
+  protected openNewTestament(): void {
+    void this.router.navigate(['/ler', 'MAT', 1]);
   }
 
   private errorMessage(err: HttpErrorResponse, versionId: string): string {
