@@ -19,7 +19,10 @@ npx playwright test -g "jornada"     # a single test by name (add --headed to wa
 npx playwright test e2e/logica/referencias.spec.ts --project=logica
 npm run test:offline                 # PROD=1: builds, serves dist on :4400 (e2e/servir-build.mjs), runs offline.spec.ts
 npm run test:e2e:relatorio           # open the HTML report (traces/screenshots of failures)
+npm run test:e2e:ui                  # Playwright UI mode
 ```
+
+- **Windows:** npm runs scripts with cmd.exe here, so `npm run test:offline` (`PROD=1 …`) fails. Run it as `PROD=1 npx playwright test --project=producao` from the Bash tool, or `$env:PROD='1'; npx playwright test --project=producao` in PowerShell. Python 3.13 is installed as `python` / `py`; `python3` is still the Microsoft Store stub, so run the `tools/*.py` scripts with `python` instead of the `python3` shown in tools/LEIA-ME.md.
 
 - **No unit tests or linter.** `ng test` has no specs. All testing is Playwright, documented in TESTES.md.
 - **Browser:** the tests use the installed Google Chrome (`channel: 'chrome'`). A standalone Playwright script needs `chromium.launch({ channel: 'chrome' })`; the bundled Chromium is not downloaded.
