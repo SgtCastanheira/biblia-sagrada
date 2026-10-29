@@ -7,6 +7,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { RouterLink } from '@angular/router';
 import { BOOKS } from '../../core/books';
 import { BackupService } from '../../core/backup.service';
+import { StorageService } from '../../core/storage.service';
 import { NotifyService } from '../../core/notify.service';
 import { ReminderService } from '../../core/reminders.service';
 import { LibrasService } from '../../core/libras.service';
@@ -136,8 +137,24 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
         <mat-icon>{{ backup.lastBackup() ? 'cloud_done' : 'cloud_off' }}</mat-icon>
         {{ backup.lastBackup() ? 'Último backup: ' + lastBackupLabel() : 'Nenhum backup feito ainda' }}
       </p>
+      @if (storage.persisted() !== null) {
+        <p class="last-backup" [class.alert]="!storage.persisted()">
+          <mat-icon>{{ storage.persisted() ? 'shield' : 'warning' }}</mat-icon>
+          {{ storage.persisted() ? 'Protegidos: o navegador não apaga sem você pedir' : 'Sem proteção: o navegador pode apagar se faltar espaço' }}
+        </p>
+      }
+      @if (storage.failures()) {
+        <p class="last-backup alert">
+          <mat-icon>warning</mat-icon>
+          Algo não foi salvo nesta visita. Faça um backup agora.
+        </p>
+      }
+      <p class="data-info">Seus dados ocupam {{ usedLabel() }} de cerca de 5 MB que o navegador reserva para o app.</p>
       <div class="buttons">
         <button mat-flat-button (click)="backup.export()"><mat-icon>download</mat-icon> Fazer backup</button>
+        @if (storage.canProtect()) {
+          <button mat-stroked-button (click)="protect()"><mat-icon>shield</mat-icon> Proteger</button>
+        }
         <button mat-stroked-button (click)="fileInput.click()"><mat-icon>upload</mat-icon> Restaurar</button>
         <input #fileInput type="file" accept="application/json,.json" hidden (change)="restore($event)" />
       </div>
@@ -200,6 +217,7 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
     .data-info { margin: 0 0 10px; font: var(--mat-sys-body-medium); color: var(--mat-sys-on-surface-variant); }
     .last-backup { display: flex; align-items: center; gap: 6px; margin: 0 0 14px; font: 500 13px Inter, sans-serif; }
     .last-backup mat-icon { font-size: 18px; width: 18px; height: 18px; color: var(--mat-sys-primary); }
+    .last-backup.alert mat-icon { color: var(--mat-sys-error); }
     .about { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 16px 0 8px; text-align: center; }
     .about .logo { color: var(--mat-sys-primary); margin-bottom: 4px; } .about .logo mat-icon { font-size: 32px; width: 32px; height: 32px; } .about strong { font: 600 18px var(--heading-font); }
     .about .credits { margin-top: 10px; }
@@ -224,6 +242,22 @@ export class SettingsPage {
   protected readonly total = TOTAL_CHAPTERS;
   protected readonly version = computed(() => findVersion(this.settings.version()));
   protected readonly compare = computed(() => findVersion(this.settings.compareVersion() ?? ''));
+
+  protected readonly storage = inject(StorageService);
+  protected readonly usedLabel = computed(() => {
+    const kb = this.storage.used() / 1024;
+    return kb < 1000 ? `${Math.max(1, Math.round(kb))} KB` : `${(kb / 1024).toFixed(1).replace('.', ',')} MB`;
+  });
+
+  constructor() {
+    this.storage.measure();
+  }
+
+  /** Pedido feito pela própria pessoa: alguns navegadores (Firefox) perguntam antes de proteger. */
+  protected async protect(): Promise<void> {
+    const ok = await this.storage.protect();
+    this.snackBar.open(ok ? 'Dados protegidos neste aparelho.' : 'O navegador não permitiu. Instale o app ou faça backups com frequência.', 'OK', { duration: 5000 });
+  }
 
   protected lastBackupLabel(): string {
     const date = this.backup.lastBackup();

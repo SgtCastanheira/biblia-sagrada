@@ -15,6 +15,8 @@ import { WhatsNewService } from './core/whats-new.service';
 import { EbdService } from './core/ebd.service';
 import { PwaService } from './core/pwa.service';
 import { SettingsService } from './core/settings.service';
+import { StorageService, storageFailures } from './core/storage.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { UiService } from './core/ui.service';
 import { findVersion } from './core/versions';
 import { Sheets } from './shared/sheets';
@@ -80,6 +82,22 @@ export class App {
     effect(() => {
       this.url();
       untracked(() => this.ui.barsHidden.set(false));
+    });
+
+    // Gravação que falhou (espaço cheio, armazenamento bloqueado): avisa uma vez por visita em vez de perder em silêncio.
+    // O StorageService também pede ao navegador para não apagar os dados de quem já escreveu algo.
+    inject(StorageService);
+    const snackBar = inject(MatSnackBar);
+    let warned = false;
+    effect(() => {
+      if (!storageFailures() || warned) return;
+      warned = true;
+      untracked(() =>
+        snackBar
+          .open('Não foi possível salvar neste aparelho. Faça um backup em Ajustes.', 'Ajustes', { duration: 10000 })
+          .onAction()
+          .subscribe(() => this.router.navigate(['/ajustes'])),
+      );
     });
 
     // Lembretes (cada um no máximo uma vez por dia): EBD, devocional, curiosidade do dia e os três chamados do dia

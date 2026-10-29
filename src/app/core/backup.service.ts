@@ -1,5 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { todayKey } from './dates';
+import { saveLocal } from './storage.service';
 
 const PREFIX = 'biblia.';
 const LAST_BACKUP_KEY = 'biblia.backup.last';
@@ -57,18 +58,32 @@ export class BackupService {
     } catch {
       throw new Error('O arquivo não é um backup válido.');
     }
-    if (backup?.app !== 'biblia-sagrada' || typeof backup.data !== 'object') {
+    if (backup?.app !== 'biblia-sagrada' || typeof backup.data !== 'object' || backup.data === null) {
       throw new Error('Este arquivo não é um backup da Bíblia Sagrada.');
+    }
+    if (!Object.values(backup.data).every((value) => typeof value === 'string')) {
+      throw new Error('Este backup está danificado: nada foi alterado.');
     }
     return backup;
   }
 
-  /** Substitui os dados atuais pelos do backup e recarrega o app. */
+  /**
+   * Substitui os dados atuais pelos do backup e recarrega o app.
+   * Se o backup não couber, devolve os dados que estavam aqui e lança erro: nada se perde no meio do caminho.
+   */
   restore(backup: BackupFile): void {
-    const current = Object.keys(localStorage).filter((k) => k.startsWith(PREFIX) && k !== LAST_BACKUP_KEY);
-    current.forEach((key) => localStorage.removeItem(key));
-    for (const [key, value] of Object.entries(backup.data)) {
-      if (key.startsWith(PREFIX)) localStorage.setItem(key, value);
+    const ownKeys = () => Object.keys(localStorage).filter((k) => k.startsWith(PREFIX) && k !== LAST_BACKUP_KEY);
+    const previous = ownKeys().map((key) => [key, localStorage.getItem(key) ?? ''] as const);
+    // Apaga antes de gravar para liberar o espaço dos dados antigos
+    ownKeys().forEach((key) => localStorage.removeItem(key));
+    try {
+      for (const [key, value] of Object.entries(backup.data)) {
+        if (key.startsWith(PREFIX) && key !== LAST_BACKUP_KEY) localStorage.setItem(key, value);
+      }
+    } catch {
+      ownKeys().forEach((key) => localStorage.removeItem(key));
+      previous.forEach(([key, value]) => localStorage.setItem(key, value));
+      throw new Error('O backup não coube neste aparelho. Os dados que estavam aqui foram mantidos.');
     }
     location.reload();
   }
@@ -92,7 +107,7 @@ export class BackupService {
 
   private markDone(): void {
     const now = new Date().toISOString();
-    localStorage.setItem(LAST_BACKUP_KEY, JSON.stringify(now));
+    saveLocal(LAST_BACKUP_KEY, JSON.stringify(now));
     this.lastBackup.set(now);
   }
 

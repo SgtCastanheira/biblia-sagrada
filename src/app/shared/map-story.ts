@@ -12,6 +12,7 @@ import { BibleMap } from '../core/maps';
 import { parseReferences } from '../core/reference-parser';
 import { SettingsService } from '../core/settings.service';
 import { BibleMapView } from './bible-map';
+import { saveLocal } from '../core/storage.service';
 
 const MAX_VERSES = 3;
 const NARRATION_KEY = 'biblia.maps.narration';
@@ -250,11 +251,7 @@ export class MapStory {
 
   protected toggleNarration(): void {
     this.narrate.update((n) => !n);
-    try {
-      localStorage.setItem(NARRATION_KEY, JSON.stringify(this.narrate()));
-    } catch {
-      // armazenamento indisponível
-    }
+    saveLocal(NARRATION_KEY, JSON.stringify(this.narrate()));
     if (!this.narrate()) speechSynthesis?.cancel();
   }
 

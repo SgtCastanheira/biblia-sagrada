@@ -29,6 +29,48 @@ Modelo:
 
 ---
 
+## 2026-10-29 19:16 -0400 — Dados do usuário protegidos (opção 1, sem servidor)
+
+**Autor:** JacksonLuiz99, com Claude Code
+
+**O que foi feito:**
+- `src/app/core/storage.service.ts` (novo): `saveLocal` grava no `localStorage` e conta as falhas em `storageFailures`; `StorageService` pede armazenamento persistente (`navigator.storage.persist()`), mede o espaço usado e diz se os dados estão protegidos.
+- 15 pontos de gravação passaram a usar `saveLocal`, em vez de `try/catch` vazio: os serviços de anotações, sermões, EBD, devocional, favoritos, ajustes, progresso das histórias, curiosidades, quiz, avisos, lembretes e backup, além do púlpito, da narração do mapa e do cartão de lembrete.
+- `app.ts`: se uma gravação falhar, aparece um aviso (uma vez por visita) com botão para os Ajustes.
+- Ajustes › Seus dados: mostra se os dados estão protegidos, quanto espaço ocupam (de cerca de 5 MB), o alerta de falha e o botão "Proteger".
+- `backup.service.ts`: `parse()` recusa backup com valor que não seja texto; `restore()` guarda os dados atuais e, se o backup não couber, devolve esses dados e mostra o erro, em vez de deixar o aparelho vazio.
+- Novidade `dados-protegidos` no topo de `RELEASES`.
+- 3 testes novos em `e2e/dados.spec.ts`: backup danificado, backup que não cabe e aviso de falha ao salvar.
+- `CLAUDE.md` e `PONTOS-FRAGEIS.md` (itens 2 e 3 resolvidos) atualizados.
+
+**Decisões:**
+- Opção 1 entre as quatro discutidas (local melhorado, Google Drive do usuário, Firebase/Supabase, servidor próprio): resolve as perdas de dados sem conta, sem custo e sem guardar em servidor dados que revelam convicção religiosa, que a LGPD trata como sensíveis (art. 5º, II).
+- **IndexedDB ficou de fora, de propósito.** Todos os serviços leem os dados de forma síncrona ao abrir; passar para IndexedDB (assíncrono) exige reescrever todos eles e os testes que preparam o `localStorage`. O ganho seria só espaço, e os riscos reais (o navegador apagar e a falha silenciosa) já estão cobertos. Fica para quando alguém chegar perto dos 5 MB, e Ajustes agora mostra quanto falta.
+- A proteção é pedida sozinha só para quem já tem dados pessoais, porque no Firefox o pedido aparece como pergunta; para os demais, fica o botão em Ajustes.
+- O espaço é medido somando as chaves `biblia.*`, e não com `navigator.storage.estimate()`, que inclui o cache do service worker (~10 MB) e confundiria.
+- `listenRate`, `listenVoice`, a escolha do Libras e a marca das novidades continuam com o `try/catch` próprio: são preferências sem prefixo `biblia.` ou com fluxo diferente.
+
+**Testes:** suíte completa: 983 passaram e 7 falharam por tempo esgotado ou animação (navegação, acessibilidade, leitor, ouvir, busca), com o computador sobrecarregado. Os 7 rodados de novo com 2 workers: todos passaram. Depois da novidade: build sem avisos, `novidades`, `dados` e `titulos` passaram (15 testes).
+
+**Arquivos:** `src/app/core/storage.service.ts`, `src/app/app.ts`, `src/app/core/backup.service.ts`, `src/app/pages/settings/settings.ts`, `src/app/core/whats-new.ts`, os 14 arquivos com `saveLocal`, `e2e/dados.spec.ts`, `CLAUDE.md`, `PONTOS-FRAGEIS.md`
+
+**Pendências:**
+- IndexedDB, se o espaço começar a faltar.
+- Testar o pedido de proteção num iPhone e no Firefox de verdade (nos testes, o Chrome sem interface não concede).
+
+## 2026-10-29 19:12 -0400 — Como acompanhar os testes (README e TESTES.md)
+
+**Autor:** JacksonLuiz99, com Claude Code
+
+**O que foi feito:**
+- `README.md`: seções "Acompanhar os testes" (terminal, painel visual, `--headed`, relatório, saída em segundo plano, aviso de não rodar duas suítes juntas, `test:offline` no Windows) e "Testes antes de publicar" (o CI e a aba Actions).
+- `TESTES.md`: como seguir uma execução em segundo plano e o que o CI roda.
+
+**Decisões:**
+- Comandos longos em segundo plano não terminam mais em `| tail`, que segura toda a saída até o fim; o caminho do arquivo de saída é passado para quem quiser acompanhar.
+
+**Arquivos:** `README.md`, `TESTES.md`
+
 ## 2026-10-29 18:48 -0400 — Nota do Python no CLAUDE.md genérica
 
 **Autor:** JacksonLuiz99, com Claude Code

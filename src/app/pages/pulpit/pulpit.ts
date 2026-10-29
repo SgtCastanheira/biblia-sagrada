@@ -8,6 +8,7 @@ import { BibleService } from '../../core/bible.service';
 import { parseReferences } from '../../core/reference-parser';
 import { SettingsService } from '../../core/settings.service';
 import { SermonsService } from '../../core/sermons.service';
+import { saveLocal } from '../../core/storage.service';
 
 interface Slide {
   label: string;
@@ -205,11 +206,7 @@ export class PulpitPage {
 
   protected zoom(delta: number): void {
     this.size.update((s) => Math.min(40, Math.max(16, s + delta)));
-    try {
-      localStorage.setItem('biblia.sermons.pulpitSize', JSON.stringify(this.size()));
-    } catch {
-      // armazenamento indisponível
-    }
+    saveLocal('biblia.sermons.pulpitSize', JSON.stringify(this.size()));
   }
 
   protected close(): void {

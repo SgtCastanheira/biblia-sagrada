@@ -1,6 +1,7 @@
 import { effect, inject, Injectable, signal } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { saveLocal } from './storage.service';
 
 const STORAGE_KEY = 'biblia.notify';
 
@@ -112,10 +113,6 @@ export class NotifyService {
   }
 
   private save(key: string, value: unknown): void {
-    try {
-      localStorage.setItem(`${STORAGE_KEY}.${key}`, JSON.stringify(value));
-    } catch {
-      // armazenamento indisponível
-    }
+    saveLocal(`${STORAGE_KEY}.${key}`, JSON.stringify(value));
   }
 }

@@ -1,6 +1,7 @@
 import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { addDays, fromKey, todayKey, toKey } from './dates';
 import { NotifyService } from './notify.service';
+import { saveLocal } from './storage.service';
 
 export interface EbdLesson {
   number: number;
@@ -155,10 +156,6 @@ export class EbdService {
   }
 
   private save(key: string, value: unknown): void {
-    try {
-      localStorage.setItem(`${STORAGE_KEY}.${key}`, JSON.stringify(value));
-    } catch {
-      // armazenamento indisponível
-    }
+    saveLocal(`${STORAGE_KEY}.${key}`, JSON.stringify(value));
   }
 }

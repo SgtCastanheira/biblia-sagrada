@@ -19,6 +19,10 @@ Rodar um teste específico: `npx playwright test -g "jornada"` · ver o navegado
 **Pré-requisitos:** Google Chrome instalado (os testes usam o Chrome do computador, nada a baixar).
 Se o `ng serve` já estiver rodando na porta 4200 ele é reaproveitado; senão os testes o iniciam sozinhos.
 
+**Acompanhar uma execução em segundo plano** (por exemplo, iniciada pelo Claude Code): siga o arquivo de saída com `Get-Content "<arquivo>" -Wait` (PowerShell) ou `tail -f "<arquivo>"` (Git Bash). Só funciona se o comando não terminar em `| tail`, que segura toda a saída até o fim. Não rode duas suítes ao mesmo tempo.
+
+**No CI:** o workflow de publicação roda o projeto `logica` antes do build (`SO_LOGICA=1` dispensa o `ng serve`); se algum teste falhar, o app não é publicado.
+
 ## O vigia automático
 
 Todo teste de navegador passa por um **vigia** (`e2e/base.ts`) que registra:

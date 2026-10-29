@@ -5,6 +5,7 @@ import { BOOKS, findBook } from './books';
 import { ContentService } from './content.service';
 import { articlesFor, articlesOfBook, findArticle } from './library';
 import { bookInfoQuiz, chapterQuiz, type ChapterSource, interleave, makeRng, type QuizQuestion, shuffle, storyQuiz } from './quiz';
+import { saveLocal } from './storage.service';
 
 export interface QuizGame {
   /** Chave do jogo (para guardar a melhor pontuação). */
@@ -134,11 +135,7 @@ export class QuizService {
     const before = all[key];
     all[key] = { best: Math.max(before?.best ?? 0, score), total, plays: (before?.plays ?? 0) + 1 };
     this.scores.set(all);
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
-    } catch {
-      // armazenamento indisponível: a pontuação vale só nesta sessão
-    }
+    saveLocal(STORAGE_KEY, JSON.stringify(all));
   }
 
   // ---------- internos ----------

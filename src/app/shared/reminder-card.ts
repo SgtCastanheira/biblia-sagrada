@@ -6,6 +6,7 @@ import { RouterLink } from '@angular/router';
 import { NotifyService } from '../core/notify.service';
 import { REMINDER_WINDOWS } from '../core/reminders';
 import { ReminderService } from '../core/reminders.service';
+import { saveLocal } from '../core/storage.service';
 
 const DONE_KEY = 'biblia.lembretes.feitos';
 
@@ -74,11 +75,7 @@ export class ReminderCard {
 
   protected markDone(id: string): void {
     this.done.update((list) => [...list.slice(-20), id]);
-    try {
-      localStorage.setItem(DONE_KEY, JSON.stringify(this.done()));
-    } catch {
-      // armazenamento indisponível
-    }
+    saveLocal(DONE_KEY, JSON.stringify(this.done()));
   }
 
   protected async enable(): Promise<void> {

@@ -4,6 +4,7 @@ import { addDays, dayNumber, todayKey } from './dates';
 import { EbdService } from './ebd.service';
 import { NotifyService } from './notify.service';
 import { SettingsService } from './settings.service';
+import { saveLocal } from './storage.service';
 
 export type DevotionalBlock = 'observation' | 'application' | 'prayer' | 'gratitude' | 'worship' | 'requests';
 
@@ -202,10 +203,6 @@ export class DevotionalService {
   }
 
   private save(key: string, value: unknown): void {
-    try {
-      localStorage.setItem(`${STORAGE_KEY}.${key}`, JSON.stringify(value));
-    } catch {
-      // armazenamento indisponível
-    }
+    saveLocal(`${STORAGE_KEY}.${key}`, JSON.stringify(value));
   }
 }

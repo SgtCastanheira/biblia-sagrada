@@ -7,8 +7,8 @@ Análise feita em 29/10/2026, no commit `e2f147d`. O build de produção (`npx n
 | # | Ponto | Gravidade | Esforço para corrigir |
 |---|---|---|---|
 | 1 | O site é publicado sem rodar os testes (**resolvido em parte**: testes de lógica no CI) | Alta | Baixo |
-| 2 | Falhas ao salvar os dados do usuário são silenciosas | Alta | Médio |
-| 3 | Restaurar um backup pode apagar tudo | Alta | Baixo |
+| 2 | Falhas ao salvar os dados do usuário são silenciosas (**resolvido**) | Alta | Médio |
+| 3 | Restaurar um backup pode apagar tudo (**resolvido**) | Alta | Baixo |
 | 4 | Commits grandes e direto na `main` | Média | Combinado da equipe |
 | 5 | Conteúdo de estudo sem revisão de fatos | Média | Contínuo |
 | 6 | Dependência da API gratuita bible-api.com | Média | Médio |
@@ -41,11 +41,17 @@ Se o espaço acabar (cerca de 5 MB por site), a pessoa continua escrevendo, a te
 
 **Sugestão:** centralizar a gravação num único serviço que, ao falhar, mostre um aviso ("Não foi possível salvar. Faça um backup.") e lembrar o backup com mais insistência para quem tem sermões e anotações.
 
+**Feito em 29/10/2026:** toda gravação passa por `saveLocal` (`src/app/core/storage.service.ts`). Se falhar, o app avisa uma vez por visita (com o botão "Ajustes") e Ajustes › Seus dados mostra o alerta. O app também pede ao navegador armazenamento persistente (`navigator.storage.persist()`) para quem já tem dados pessoais, e Ajustes mostra se os dados estão protegidos, quanto espaço ocupam e um botão "Proteger".
+
+**Falta:** a troca do `localStorage` por IndexedDB (mais espaço) ficou para depois; veja o `DIARIO.md`.
+
 ## 3. Restaurar um backup pode apagar tudo
 
 Em `src/app/core/backup.service.ts:67`, o `restore()` primeiro remove todos os dados atuais e só depois grava os do arquivo, sem `try` e sem como desfazer. Se a gravação falhar no meio (por exemplo, por falta de espaço), a pessoa perde os dados antigos e os novos. O `parse()` confere só o campo `app` e se `data` é um objeto; o conteúdo de cada chave não é validado (um valor que não seja texto é gravado como `"[object Object]"`).
 
 **Sugestão:** validar que todo valor é texto, guardar uma cópia dos dados atuais, gravar os novos dentro de `try` e, se falhar, devolver a cópia.
+
+**Feito em 29/10/2026:** exatamente isso. Um backup danificado é recusado sem mexer em nada, e um backup que não cabe devolve os dados que estavam no aparelho. Os dois casos têm teste em `e2e/dados.spec.ts`.
 
 ## 4. Commits grandes e direto na `main`
 

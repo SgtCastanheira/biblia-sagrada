@@ -3,6 +3,7 @@ import { addDays, todayKey } from './dates';
 import { NotifyService } from './notify.service';
 import { dueReminder, Reminder, reminderTime, remindersFor } from './reminders';
 import { SettingsService } from './settings.service';
+import { saveLocal } from './storage.service';
 
 const STORAGE_KEY = 'biblia.lembretes';
 /** Cache que o service worker (public/sw.js) lê para avisar com o app fechado. */
@@ -139,10 +140,6 @@ export class ReminderService {
   }
 
   private save(value: boolean): void {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
-    } catch {
-      // armazenamento indisponível
-    }
+    saveLocal(STORAGE_KEY, JSON.stringify(value));
   }
 }

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CURIOSITIES } from './curiosities';
 import { NotifyService } from './notify.service';
 import { dayNumber, todayKey } from './dates';
+import { saveLocal } from './storage.service';
 
 const STORAGE_KEY = 'biblia.curiosities';
 
@@ -20,11 +21,7 @@ export class CuriositiesService {
 
   constructor() {
     effect(() => {
-      try {
-        localStorage.setItem(`${STORAGE_KEY}.read`, JSON.stringify(this.readIds()));
-      } catch {
-        // armazenamento indisponível
-      }
+      saveLocal(`${STORAGE_KEY}.read`, JSON.stringify(this.readIds()));
     });
   }
 

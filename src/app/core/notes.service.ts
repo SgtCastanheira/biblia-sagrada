@@ -1,5 +1,6 @@
 import { computed, effect, Injectable, signal } from '@angular/core';
 import { todayKey } from './dates';
+import { saveLocal } from './storage.service';
 
 export interface ServiceNote {
   id: string;
@@ -125,10 +126,6 @@ export class NotesService {
   }
 
   private save(key: string, value: unknown): void {
-    try {
-      localStorage.setItem(`${STORAGE_KEY}.${key}`, JSON.stringify(value));
-    } catch {
-      // armazenamento indisponível
-    }
+    saveLocal(`${STORAGE_KEY}.${key}`, JSON.stringify(value));
   }
 }

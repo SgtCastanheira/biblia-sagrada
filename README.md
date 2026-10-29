@@ -50,6 +50,24 @@ npm run test:e2e        # tudo: lógica + celular + computador
 npm run test:offline    # build de produção e modo sem internet
 ```
 
+### Acompanhar os testes
+
+| Para… | Use |
+|---|---|
+| ver cada teste passar (`✓`) ou falhar (`✘`) na hora, no terminal | `npx playwright test` |
+| escolher um teste e ver a tela dele passo a passo | `npm run test:e2e:ui` |
+| ver o navegador abrindo durante o teste | acrescente `--headed` (ex.: `npx playwright test -g "backup" --headed`) |
+| ver o que falhou na última execução (capturas e passo a passo) | `npm run test:e2e:relatorio` |
+| acompanhar um teste que está rodando em segundo plano (pelo Claude Code, por exemplo) | `Get-Content "<arquivo de saída>" -Wait` no PowerShell, ou `tail -f "<arquivo de saída>"` no Git Bash |
+
+Não rode duas suítes ao mesmo tempo: elas disputam o mesmo `ng serve` e o mesmo Chrome, e o resultado pode sair errado.
+
+**No Windows**, `npm run test:offline` não funciona (o cmd.exe não entende o `PROD=1` do script). Use, no PowerShell: `$env:PROD='1'; npx playwright test --project=producao`.
+
+### Testes antes de publicar
+
+Todo push na `main` publica o app no GitHub Pages, mas antes o GitHub Actions roda os testes de lógica (`npx playwright test --project=logica`). **Se algum falhar, o app não é publicado** e o site continua na versão anterior. Para ver o resultado, abra a aba **Actions** do repositório no GitHub. Os testes de tela (celular e computador) ainda rodam só no computador de quem desenvolve.
+
 ## Dados e conteúdo
 
 - `public/bible/` — a Almeida embutida e as referências cruzadas.

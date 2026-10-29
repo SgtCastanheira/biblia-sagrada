@@ -1,5 +1,6 @@
 import { computed, effect, Injectable, signal } from '@angular/core';
 import { FavoriteVerse, HighlightColor, VerseRef } from './models';
+import { saveLocal } from './storage.service';
 
 const STORAGE_KEY = 'biblia.favorites';
 
@@ -18,11 +19,7 @@ export class FavoritesService {
 
   constructor() {
     effect(() => {
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(this.favorites()));
-      } catch {
-        // armazenamento indisponível
-      }
+      saveLocal(STORAGE_KEY, JSON.stringify(this.favorites()));
     });
   }
 

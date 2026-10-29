@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'dados-protegidos',
+    date: '29 de outubro de 2026',
+    title: 'Seus Dados Mais Protegidos',
+    items: [
+      { icon: 'shield', title: 'O navegador não apaga mais sem você pedir', text: 'Quem já tem anotações, sermões, devocionais, favoritos ou aulas da EBD agora pede ao navegador para guardar esses dados de vez. Em Ajustes › Seus dados você vê se estão protegidos e quanto espaço ocupam.', link: '/ajustes' },
+      { icon: 'warning', title: 'Aviso quando algo não for salvo', text: 'Se o aparelho ficar sem espaço, o app avisa na hora, em vez de perder o que você escreveu em silêncio. E restaurar um backup que não cabe não apaga mais os dados que já estavam aqui.', link: '/ajustes', tip: 'Faça um backup em Ajustes de vez em quando, e antes de trocar de celular.' },
+    ],
+  },
+  {
     id: 'linha-do-tempo-e-roma',
     date: '29 de outubro de 2026',
     title: 'Linha do Tempo da História, o Coliseu e as Catacumbas',

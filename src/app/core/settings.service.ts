@@ -1,5 +1,6 @@
 import { computed, effect, Injectable, signal } from '@angular/core';
 import { ReadingFont, ThemeMode, VerseLayout } from './models';
+import { saveLocal } from './storage.service';
 
 interface LastRead {
   bookId: string;
@@ -34,11 +35,7 @@ function load<T>(key: string, fallback: T): T {
 }
 
 function persist(key: string, value: unknown): void {
-  try {
-    localStorage.setItem(`${STORAGE_KEY}.${key}`, JSON.stringify(value));
-  } catch {
-    // armazenamento indisponível (modo privado etc.)
-  }
+  saveLocal(`${STORAGE_KEY}.${key}`, JSON.stringify(value));
 }
 
 @Injectable({ providedIn: 'root' })

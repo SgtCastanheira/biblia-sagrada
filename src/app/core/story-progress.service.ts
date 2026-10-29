@@ -1,6 +1,7 @@
 import { computed, effect, Injectable, signal } from '@angular/core';
 import { findArticle } from './library';
 import { type Trail, trailArticleIds } from './trails';
+import { saveLocal } from './storage.service';
 
 const STORAGE_KEY = 'biblia.historias';
 
@@ -36,11 +37,7 @@ export class StoryProgressService {
 
   constructor() {
     effect(() => {
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(this.entries()));
-      } catch {
-        // armazenamento indisponível
-      }
+      saveLocal(STORAGE_KEY, JSON.stringify(this.entries()));
     });
   }
 

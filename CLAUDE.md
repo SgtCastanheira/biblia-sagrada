@@ -167,7 +167,7 @@ Add a new screen to the right tab regex and to the right hub; don't list the sam
   - label collision avoidance;
   - a scale bar and haversine distances.
 
-**User data.** Notes, sermons, EBD (Sunday school), favorites and settings live in `localStorage`, one service per feature. `backup.service.ts` exports and imports all keys.
+**User data.** Notes, sermons, EBD (Sunday school), favorites and settings live in `localStorage`, one service per feature. `backup.service.ts` exports and imports all keys. Write through `saveLocal` (`core/storage.service.ts`), never a bare `localStorage.setItem` in a silent `try/catch`: a failed write counts in `storageFailures`, and the app shows a snackbar once per visit plus a warning in Ajustes › Seus dados. `StorageService` asks the browser for persistent storage (`navigator.storage.persist()`) at startup when the person already has notes, sermons, devotional, favorites or EBD data, and Ajustes shows the protection status, the space used and a "Proteger" button. `restore()` validates that every value is a string and, if the backup does not fit, puts the previous data back and throws (tested in `dados.spec.ts`). IndexedDB was deliberately not adopted yet (see DIARIO.md).
 
 **PWA** (`ngsw-config.json`):
 - The asset groups `app`, `assets`, `bible-almeida` and `conteudo` are prefetched, so the Almeida and all study content work offline.

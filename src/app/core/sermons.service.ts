@@ -1,5 +1,6 @@
 import { computed, effect, Injectable, signal } from '@angular/core';
 import { todayKey } from './dates';
+import { saveLocal } from './storage.service';
 
 export type SermonKind = 'expositivo' | 'tematico' | 'textual' | 'livre';
 
@@ -79,11 +80,7 @@ export class SermonsService {
 
   constructor() {
     effect(() => {
-      try {
-        localStorage.setItem(`${STORAGE_KEY}.items`, JSON.stringify(this.sermons()));
-      } catch {
-        // armazenamento indisponível
-      }
+      saveLocal(`${STORAGE_KEY}.items`, JSON.stringify(this.sermons()));
     });
   }
 
