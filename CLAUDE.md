@@ -8,6 +8,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The code uses English identifiers. Everything else is in Brazilian Portuguese: UI text, code comments, content, docs (README.md, TESTES.md, CREDITOS.md, tools/LEIA-ME.md) and commit messages. Keep it that way.
 
+## Project diary (DIARIO.md)
+
+Before every commit, add an entry at the top of `DIARIO.md` and stage it in the same commit. Use the format at the top of that file: date and local time from `date '+%Y-%m-%d %H:%M %z'`, author, what was done, decisions (what was chosen, why, what was left out), files, open items. Write it in Portuguese. When an open item of an older entry gets done, say so in the new entry instead of editing the old one.
+
 ## Commands
 
 ```bash
@@ -22,13 +26,13 @@ npm run test:e2e:relatorio           # open the HTML report (traces/screenshots 
 npm run test:e2e:ui                  # Playwright UI mode
 ```
 
-- **Windows:** npm runs scripts with cmd.exe here, so `npm run test:offline` (`PROD=1 …`) fails. Run it as `PROD=1 npx playwright test --project=producao` from the Bash tool, or `$env:PROD='1'; npx playwright test --project=producao` in PowerShell. Python 3.13 is installed as `python` / `py`; `python3` is still the Microsoft Store stub, so run the `tools/*.py` scripts with `python` instead of the `python3` shown in tools/LEIA-ME.md.
+- **Windows:** npm runs scripts with cmd.exe here, so `npm run test:offline` (`PROD=1 …`) fails. Run it as `PROD=1 npx playwright test --project=producao` from the Bash tool, or `$env:PROD='1'; npx playwright test --project=producao` in PowerShell. `python3` usually opens the Microsoft Store stub, so run the `tools/*.py` scripts with `python` or `py` instead of the `python3` shown in tools/LEIA-ME.md (Python 3, standard library only).
 
 - **No unit tests or linter.** `ng test` has no specs. All testing is Playwright, documented in TESTES.md.
 - **Browser:** the tests use the installed Google Chrome (`channel: 'chrome'`). A standalone Playwright script needs `chromium.launch({ channel: 'chrome' })`; the bundled Chromium is not downloaded.
 - **Dev server:** the tests reuse an `ng serve` already running on 4200.
 - **Style budget:** component styles warn at 12kB and error at 16kB (`angular.json`). The build fails if a component SCSS grows past it.
-- **Deploy:** `.github/workflows/publicar.yml` publishes every push to `main` to Pages. It builds with `--base-href /biblia-sagrada/` and copies `index.html` to `404.html` so deep links work. All asset URLs in code must therefore be relative (`conteudo/x.json`, never `/conteudo/x.json`).
+- **Deploy:** `.github/workflows/publicar.yml` publishes every push to `main` to Pages. It first runs the `logica` tests (`SO_LOGICA=1` skips the `webServer` in `playwright.config.ts`); a failure blocks the deploy. It builds with `--base-href /biblia-sagrada/` and copies `index.html` to `404.html` so deep links work. All asset URLs in code must therefore be relative (`conteudo/x.json`, never `/conteudo/x.json`).
 
 ## Test harness (e2e/base.ts)
 

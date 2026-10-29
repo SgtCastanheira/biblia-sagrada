@@ -6,7 +6,7 @@ Análise feita em 29/10/2026, no commit `e2f147d`. O build de produção (`npx n
 
 | # | Ponto | Gravidade | Esforço para corrigir |
 |---|---|---|---|
-| 1 | O site é publicado sem rodar os testes | Alta | Baixo |
+| 1 | O site é publicado sem rodar os testes (**resolvido em parte**: testes de lógica no CI) | Alta | Baixo |
 | 2 | Falhas ao salvar os dados do usuário são silenciosas | Alta | Médio |
 | 3 | Restaurar um backup pode apagar tudo | Alta | Baixo |
 | 4 | Commits grandes e direto na `main` | Média | Combinado da equipe |
@@ -19,7 +19,9 @@ Análise feita em 29/10/2026, no commit `e2f147d`. O build de produção (`npx n
 
 `.github/workflows/publicar.yml` faz só `npm ci` → `ng build` → copia o `404.html` → publica (linhas 27–30). Os testes Playwright, que cobrem acessibilidade, contraste, links, referências bíblicas e fontes, só rodam quando alguém lembra de rodar na própria máquina. Qualquer push na `main` com defeito chega direto aos usuários.
 
-**Sugestão:** rodar `npx playwright test --project=logica` no workflow antes do build. Esse projeto não precisa de navegador e é rápido. Num segundo passo, rodar também o projeto `celular` (precisa do Chrome no runner).
+**Feito em 29/10/2026:** o workflow roda `npx playwright test --project=logica` (130 testes, cerca de 20 s) antes do build; se algum falhar, o app não é publicado. A variável `SO_LOGICA=1` faz o `playwright.config.ts` não subir o `ng serve`, que esses testes não usam.
+
+**Falta:** os testes de tela (projetos `celular` e `computador`) ainda não rodam no CI. Eles precisam do Google Chrome no runner e do `ng serve`, e demoram bem mais.
 
 ## 2. Falhas ao salvar os dados do usuário são silenciosas
 

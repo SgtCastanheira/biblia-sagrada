@@ -45,7 +45,10 @@ export default defineConfig({
     },
     ...(prod ? [{ name: 'producao', testMatch: /offline\.spec/, use: { ...devices['Pixel 7'], channel: 'chrome' } }] : []),
   ],
-  webServer: prod
-    ? { command: 'npx ng build && node e2e/servir-build.mjs 4400', url: baseURL, reuseExistingServer: true, timeout: 300_000 }
+  // SO_LOGICA=1: só os testes de lógica, que não abrem o app (usado no CI antes de publicar)
+  webServer: process.env['SO_LOGICA']
+    ? undefined
+    : prod
+    ?{ command: 'npx ng build && node e2e/servir-build.mjs 4400', url: baseURL, reuseExistingServer: true, timeout: 300_000 }
     : { command: 'npx ng serve --port 4200', url: baseURL, reuseExistingServer: true, timeout: 180_000 },
 });

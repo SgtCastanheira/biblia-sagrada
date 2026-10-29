@@ -25,6 +25,10 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      # Se algum teste de lógica falhar, o app não é publicado.
+      - run: npx playwright test --project=logica
+        env:
+          SO_LOGICA: 1
       - run: npx ng build --base-href /${{ github.event.repository.name }}/
       # O GitHub Pages não conhece as rotas do Angular: o 404.html abre o app em qualquer endereço.
       - run: cp dist/biblia-sagrada/browser/index.html dist/biblia-sagrada/browser/404.html
