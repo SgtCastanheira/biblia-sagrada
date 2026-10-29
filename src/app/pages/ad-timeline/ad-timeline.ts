@@ -8,6 +8,7 @@ import { AD_STATES, findAdState, REGIONS } from '../../core/ad-states';
 import { buildTimeline, groupByYear, TimelineItem } from '../../core/ad-timeline';
 import { ContentService } from '../../core/content.service';
 import { BackButton } from '../../shared/back-button';
+import { ChurchNoteView } from '../../shared/church-note';
 import { SourcesBox } from '../../shared/sources-box';
 
 type Lane = 'tudo' | 'igreja' | 'contexto';
@@ -15,13 +16,14 @@ type Lane = 'tudo' | 'igreja' | 'contexto';
 /** Linha do tempo nacional: o que acontecia na igreja e o que acontecia no Brasil e no mundo, ano a ano. */
 @Component({
   selector: 'app-ad-timeline',
-  imports: [RouterLink, MatIconModule, BackButton, SourcesBox],
+  imports: [RouterLink, MatIconModule, BackButton, ChurchNoteView, SourcesBox],
   template: `
     <div class="top"><app-back fallback="/assembleia-de-deus" /></div>
     <header class="page-head">
       <span class="overline">Assembleia de Deus no Brasil</span>
       <h1>Linha do tempo</h1>
-      <p>O que acontecia na igreja e o que acontecia no Brasil e no mundo, ano a ano, de 1910 até hoje. Cada fato da igreja leva à história do estado.</p>
+      <p>O que acontecia na igreja e o que acontecia no Brasil e no mundo, ano a ano, de 1910 até hoje. Cada fato da igreja leva à história do estado. A igreja não viveu fora do seu tempo: onde ela passou pela crise, o fato traz a caixa “A igreja nesse tempo”.</p>
+      <a class="whole" routerLink="/epocas"><mat-icon>timeline</mat-icon> A história inteira, da Criação a hoje</a>
     </header>
 
     <div class="filters">
@@ -67,6 +69,7 @@ type Lane = 'tudo' | 'igreja' | 'contexto';
                       <span class="tag"><mat-icon>{{ icons[it.kind!] }}</mat-icon>{{ it.when }} · {{ kinds[it.kind!] }}</span>
                       <strong>{{ it.title }}</strong>
                       <span class="text">{{ plain(it) }}</span>
+                      @if (it.church; as c) { <app-church-note [note]="c" /> }
                     </article>
                   }
                 </div>
@@ -82,6 +85,7 @@ type Lane = 'tudo' | 'igreja' | 'contexto';
   `,
   styleUrl: '../../shared/study.scss',
   styles: `
+    .whole { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; margin-top: 6px; text-decoration: none; font: 600 14px Inter, sans-serif; color: var(--mat-sys-primary); }
     .filters { display: flex; flex-direction: column; gap: 10px; margin: 0 0 14px; }
     .seg { display: inline-flex; align-self: flex-start; padding: 3px; border-radius: 22px; background: var(--mat-sys-surface-container); }
     .seg button { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border: 0; border-radius: 20px; background: none; cursor: pointer; font: 600 14px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }

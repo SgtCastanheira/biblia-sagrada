@@ -11,7 +11,8 @@ Aplicativo da Bíblia em português, feito com **Angular** e **Angular Material*
   - painel “Estudar este capítulo” com contexto histórico, notas, aulas, mapas e profecias;
   - dicionário com o hebraico, o aramaico, o grego e o latim — as palavras ficam marcadas no texto;
   - referências cruzadas (citações do AT no NT e textos relacionados);
-  - Memorial da Fé (personagens, reis, profetas), genealogia de Jesus e linha do tempo;
+  - **linha do tempo da história**, da Criação aos nossos dias, em 16 épocas: cada uma reúne os livros da Bíblia, as histórias, os personagens, as curiosidades, as profecias, os mapas e as crises do mundo (a fome do tempo de José, a peste de Cipriano, a Peste Negra, a crise de 1929…);
+  - Memorial da Fé (personagens, reis, profetas) e genealogia de Jesus;
   - as doze tribos de Israel: patriarcas, bênçãos, líderes, censos, acampamento e o mapa da divisão da terra, com a distância até o templo;
   - mapas das jornadas e atlas histórico por época;
   - promessas e profecias, Daniel e Apocalipse;

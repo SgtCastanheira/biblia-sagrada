@@ -74,6 +74,9 @@ export const WORKS: Record<string, Work> = {
   gonzalez: { author: 'Justo L. González', title: 'Uma história ilustrada do cristianismo', publisher: 'Vida Nova', kind: 'historia' },
   cairns: { author: 'Earle E. Cairns', title: 'O cristianismo através dos séculos', publisher: 'Vida Nova', kind: 'historia' },
   noll: { author: 'Mark A. Noll', title: 'Momentos decisivos na história do cristianismo', publisher: 'Cultura Cristã', kind: 'historia' },
+  'hopkins-beard': { author: 'Keith Hopkins e Mary Beard', title: 'The Colosseum', publisher: 'Profile Books e Harvard University Press, 2005', kind: 'historia' },
+  futrell: { author: 'Alison Futrell', title: 'The Roman Games: A Sourcebook', publisher: 'Blackwell, 2006', kind: 'historia' },
+  snyder: { author: 'Graydon F. Snyder', title: 'Ante Pacem: Archaeological Evidence of Church Life Before Constantine', publisher: 'Mercer University Press, ed. revista, 2003', kind: 'historia' },
   kelly: { author: 'J. N. D. Kelly', title: 'Patrística: origem e desenvolvimento das doutrinas centrais da fé cristã', publisher: 'Vida Nova', kind: 'historia' },
   bainton: { author: 'Roland H. Bainton', title: 'Cativo à Palavra: a vida de Martinho Lutero', publisher: 'Vida Nova', kind: 'historia' },
   george: { author: 'Timothy George', title: 'Teologia dos reformadores', publisher: 'Vida Nova', kind: 'historia' },
@@ -109,6 +112,11 @@ export const WORKS: Record<string, Work> = {
   fausto: { author: 'Boris Fausto', title: 'História do Brasil', publisher: 'EDUSP', kind: 'historia' },
   'schwarcz-starling': { author: 'Lilia M. Schwarcz e Heloisa M. Starling', title: 'Brasil: uma biografia', publisher: 'Companhia das Letras, 2015', kind: 'historia' },
   hobsbawm: { author: 'Eric Hobsbawm', title: 'Era dos Extremos: o breve século XX (1914–1991)', publisher: 'Companhia das Letras', kind: 'historia' },
+  roberts: { author: 'J. M. Roberts e Odd Arne Westad', title: 'The Penguin History of the World', publisher: 'Penguin, 6ª ed., 2013', kind: 'historia' },
+  'harper-fate': { author: 'Kyle Harper', title: 'The Fate of Rome: Climate, Disease, and the End of an Empire', publisher: 'Princeton University Press, 2017', kind: 'historia' },
+  'ward-perkins': { author: 'Bryan Ward-Perkins', title: 'The Fall of Rome and the End of Civilization', publisher: 'Oxford University Press, 2005', kind: 'historia' },
+  'kelly-mortality': { author: 'John Kelly', title: 'The Great Mortality: An Intimate History of the Black Death', publisher: 'HarperCollins, 2005', kind: 'historia' },
+  'wilson-thirty': { author: 'Peter H. Wilson', title: 'Europe’s Tragedy: A History of the Thirty Years War', publisher: 'Allen Lane, 2009', kind: 'historia' },
   'oliveira-2012': { author: 'Sérgio Batista de Oliveira', title: 'O lugar da hermenêutica bíblica na formação teológica da Igreja Evangélica Assembleia de Deus (dissertação)', publisher: 'PUC Goiás, 2012', kind: 'historia' },
   'marx-nosso-chao': { author: 'Murillo Marx', title: 'Nosso chão: do sagrado ao profano', publisher: 'EDUSP, 1988', kind: 'historia' },
   'marx-cidade': { author: 'Murillo Marx', title: 'Cidade no Brasil: terra de quem?', publisher: 'Nobel/EDUSP, 1991', kind: 'historia' },
@@ -282,6 +290,34 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   apocalipse: { ancient: ['Irineu, Contra as Heresias 5.30.3 (data no fim do reinado de Domiciano)', 'Eusébio, História Eclesiástica 3.18 (CPAD)'], works: ['ladd', 'fee-stuart', 'carson-moo', 'clouse'] },
   'igreja-primitiva': { ancient: ['Didaquê (séc. I–II)', 'Eusébio, História Eclesiástica (CPAD)'], works: ['ferguson', 'gonzalez', 'cairns'] },
   perseguicoes: { ancient: ['Tácito, Anais 15.44 (Nero e os cristãos)', 'Plínio, o Jovem, Cartas 10.96–97 (a Trajano)', 'Martírio de Policarpo (séc. II)', 'Eusébio, História Eclesiástica (CPAD)'], works: ['gonzalez', 'cairns', 'ferguson'] },
+  'coliseu-de-roma': {
+    ancientLabel: 'Fontes antigas e sites consultados',
+    ancient: [
+      'Marcial, Livro dos Espetáculos (os jogos de inauguração do Coliseu)',
+      'Dião Cássio, História Romana 66.25, e Suetônio, Vida de Tito (a inauguração, no ano 80)',
+      'Flávio Josefo, A Guerra dos Judeus 7.5 (o triunfo de Vespasiano e Tito, com os despojos do Templo)',
+      'Inscrição reconstituída do Coliseu: o anfiteatro erguido com a parte do butim que cabia ao general',
+      'Tácito, Anais 15.44 (os cristãos e o incêndio de Roma, em 64)',
+      'Eusébio, História Eclesiástica 3.36 (a viagem de Inácio a Roma) e 5.1 (os mártires de Lião e Viena, em 177)',
+      'Tertuliano, Dos Espetáculos; Agostinho, Confissões 6.8 (Alípio no anfiteatro); Teodoreto, História Eclesiástica 5.26 (Telêmaco)',
+      'Wikipédia (en): Colosseum, Gladiator e Inaugural games of the Colosseum',
+    ],
+    works: ['hopkins-beard', 'futrell', 'keener-nt'],
+  },
+  'catacumbas-de-roma': {
+    ancientLabel: 'Fontes antigas e sites consultados',
+    ancient: [
+      'Tertuliano, Apologético 39 (as ofertas da igreja, para sustentar e sepultar os pobres)',
+      'Hipólito, Refutação de Todas as Heresias, livro 9 (Calisto posto à frente do cemitério da igreja)',
+      'Eusébio, História Eclesiástica 7.11 (o édito de Valeriano e os cemitérios, em 257)',
+      'Cipriano, Carta 80 (a morte de Sisto II, em 258)',
+      'Giovanni Battista de Rossi, Roma Sotterranea Cristiana (1864–1877), e Joseph Wilpert, Die Malereien der Katakomben Roms (1903)',
+      'Antonio Bosio, Roma Sotterranea (1632)',
+      'Enciclopédia Católica, v. 3 (1908): Roman Catacombs (newadvent.org/cathen/03417b.htm)',
+      'Wikipédia (en): Catacombs of Rome, Catacomb of Callixtus, Catacomb of Domitilla, Catacomb of Priscilla e Antonio Bosio',
+    ],
+    works: ['snyder', 'ferguson', 'gonzalez'],
+  },
   'constantino-e-os-concilios': { ancient: ['Eusébio, Vida de Constantino', 'O Credo de Niceia (325) e o de Constantinopla (381)'], works: ['kelly', 'gonzalez', 'noll'] },
   'idade-media': { ancient: ['Regra de São Bento (séc. VI)'], works: ['gonzalez', 'cairns', 'noll'] },
   'pre-reformadores': { ancient: ['Jan Hus, Da Igreja (1413)', 'Erasmo de Roterdã, Novum Instrumentum (1516)'], works: ['gonzalez', 'cairns', 'george'] },
@@ -446,7 +482,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'capitulos-e-versiculos': { ancient: ['Capítulos de Stephen Langton (c. 1227)', 'Novo Testamento grego de Robert Estienne, com versículos (1551)', 'Bíblia de Genebra (1560), a primeira inglesa com versículos em toda a Bíblia'], works: ['metzger-ehrman', 'geisler-nix'] },
 };
 
-export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd' | 'harpa' | 'contexto-ad';
+export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd' | 'harpa' | 'contexto-ad' | 'epocas';
 
 /** Fontes de cada parte do app (o que não é um artigo). */
 export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; note?: string }> = {
@@ -467,6 +503,20 @@ export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; not
     works: ['araujo-dicionario', 'manual-harpa', 'osbeck', 'julian'],
   },
   ebd: { title: 'EBD — Apoio ao professor', note: 'A revista é só a inspiração dos temas: o contexto e as curiosidades vêm da Bíblia, de achados arqueológicos (como os papiros de Elefantina) e das obras abaixo.', works: ['walton-at', 'keener-nt', 'ndb', 'dillard-longman', 'carson-moo'] },
+  epocas: {
+    title: 'A linha do tempo da história',
+    note: 'Cada fato é curto e vem das fontes abaixo e da própria Bíblia, citada em cada fato que ela conta. As datas antigas são aproximadas, e onde os estudiosos divergem o texto diz. As épocas são uma divisão deste app, para organizar o estudo, e não uma divisão oficial da história.',
+    ancientLabel: 'Fontes antigas e documentos',
+    ancient: [
+      'Prisma de Senaqueribe e Crônicas Babilônicas: o cerco de Jerusalém em 701 a.C. e a tomada da cidade em 597 a.C.',
+      'Flávio Josefo, A Guerra dos Judeus (a revolta de 66–73 e o cerco de Jerusalém) e Antiguidades Judaicas 20 (a fome no tempo de Cláudio)',
+      'Suetônio, Vida de Cláudio 25 (a expulsão dos judeus de Roma) e Tácito, Anais 15.38–44 (o incêndio de Roma, em 64)',
+      'Eusébio, História Eclesiástica 3.5 (a igreja de Jerusalém antes do cerco) e 7.22 (a peste e os cristãos de Alexandria)',
+      'Procópio, Guerras 2.22–23 (a peste em Constantinopla, em 542) e Agostinho, A Cidade de Deus (resposta ao saque de Roma, em 410)',
+      'Decreto nº 847, de 1890, e Constituição de 1824, art. 5 (a religião do Império e o culto doméstico)',
+    ],
+    works: ['harper-fate', 'ward-perkins', 'kelly-mortality', 'wilson-thirty', 'roberts', 'gonzalez', 'cairns', 'fausto', 'keener-nt', 'walton-at', 'kitchen'],
+  },
   'contexto-ad': {
     title: 'O Brasil e o mundo no tempo da igreja',
     note: 'Cada fato é curto e confirmado nas obras de história abaixo e nos documentos citados. As estimativas de mortos e de datas variam entre os historiadores; onde há divergência, o texto diz.',
@@ -477,6 +527,10 @@ export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; not
       'Fiocruz (Invivo): a pandemia de gripe de 1918 no Brasil; O Povo (2018): a gripe espanhola e o Ceará',
       'Portal da Marinha e Revista do Exército: o Brasil na Primeira Guerra Mundial',
       'Câmara Municipal de Sorriso e Diário do Estado de MT: a colonização de Sorriso; Assembleia Legislativa de Mato Grosso: a fundação de Sinop',
+      'Resolução 181 da Assembleia Geral da ONU (29 de novembro de 1947), sobre a partilha da Palestina',
+      'Organização Mundial da Saúde: declaração da pandemia de covid-19 (11 de março de 2020); Ministério da Saúde: painel de óbitos por covid-19 no Brasil',
+      'The 9/11 Commission Report (2004) e Financial Crisis Inquiry Commission, Final Report (2011)',
+      'Paulo Julião da Silva, “Os missionários batistas norte-americanos no Brasil e os relatos de dificuldades na expansão evangélica entre os anos de 1930 e 1945”, Dimensões: Revista de História da UFES, n. 50, p. 227–247, 2023 (a igreja batista na crise de 1929 e na Segunda Guerra)',
     ],
     works: ['fausto', 'schwarcz-starling', 'hobsbawm', 'oliveira-2012'],
   },

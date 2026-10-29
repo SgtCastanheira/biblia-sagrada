@@ -3,6 +3,7 @@ import { catchError, forkJoin, map, Observable, of, shareReplay } from 'rxjs';
 import { AD_STATES } from './ad-states';
 import { ContentService } from './content.service';
 import { CURIOSITIES } from './curiosities';
+import { EPOCHS, epochOfYear, WORLD_TIMELINE } from './epochs';
 import { ARTICLES, CLASSIC_SERMONS } from './library';
 import { plainText, prepare, SearchDoc } from './study-search';
 
@@ -38,6 +39,8 @@ export class StudySearchService {
         for (const p of d.prophecies) docs.push({ kind: 'profecia', id: p.id, title: p.title, subtitle: p.ref, link: `/profecias/${p.id}`, body: `${p.given} ${p.context} ${p.explanation} ${p.fulfillment.map((f) => f.text).join(' ')}` });
         for (const c of CURIOSITIES) docs.push({ kind: 'curiosidade', id: c.id, title: c.question, subtitle: c.topic, link: `/curiosidades/${c.id}`, body: `${c.answer} ${c.body.join(' ')} ${(c.points ?? []).map((x) => x.text).join(' ')}` });
         for (const h of d.harpa.hymns) docs.push({ kind: 'hino', id: String(h.n), title: `${h.n}. ${h.title}`, subtitle: h.author, link: `/harpa/${h.n}`, body: plainText(h.origin ? `${h.origin.title} ${h.origin.author} ${h.origin.story}` : '') });
+        for (const e of EPOCHS) docs.push({ kind: 'epoca', id: e.id, title: e.name, subtitle: e.period, link: `/epocas/${e.id}`, body: e.summary });
+        for (const v of WORLD_TIMELINE) docs.push({ kind: 'fato', id: v.id, title: v.title, subtitle: v.when, link: `/epocas/${epochOfYear(v.from).id}`, body: v.text });
         return prepare(docs);
       }),
     );

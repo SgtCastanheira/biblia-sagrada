@@ -1,4 +1,4 @@
-import { CONTEXT_EVENTS, ContextKind } from './ad-context';
+import { CONTEXT_EVENTS, ChurchNote, ContextKind } from './ad-context';
 import { Inline, parseBlocks } from './rich-text-parser';
 
 /**
@@ -20,6 +20,8 @@ export interface TimelineItem {
   /** Estados a que o fato do contexto se aplica, se for restrito. */
   states?: string[];
   scopes?: string[];
+  /** O que a igreja viveu nesse tempo, nos fatos do contexto. */
+  church?: ChurchNote;
 }
 
 /** O primeiro ano de quatro dígitos de um texto de data ("1922–1924", "c. 1948", "jun. 1911"), ou null. */
@@ -55,6 +57,7 @@ export function contextItems(): TimelineItem[] {
     kind: e.kind,
     states: e.states,
     scopes: e.scope,
+    church: e.church,
   }));
 }
 

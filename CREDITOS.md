@@ -31,7 +31,14 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Quadro *A Primeira Missa no Brasil*, de Victor Meirelles (1860), Museu Nacional de Belas Artes | `public/conteudo/imagens/primeira-missa-meirelles.jpg`, do Wikimedia Commons | Domínio público |
 | Quadro *Fundação de São Paulo*, de Oscar Pereira da Silva (1909), Museu Paulista | `public/conteudo/imagens/fundacao-sao-paulo.jpg`, do Wikimedia Commons | Domínio público |
 | Foto da construção do Congresso Nacional (1959) — Arquivo Nacional, Fundo Agência Nacional | `public/conteudo/imagens/construcao-brasilia-1959.jpg`, do Wikimedia Commons | Domínio público |
+| VLibras (governo federal e UFPB/LAVID) | Widget carregado de `vlibras.gov.br` só quando a pessoa liga Libras em Ajustes; nada dele fica no repositório | Serviço gratuito, de código aberto |
 | Foto de Frida Vingren — acervo do Centro de Estudos Pentecostais da CPAD | `public/conteudo/imagens/frida-vingren.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
+| Relevo do Arco de Tito com o candelabro do Templo (foto de Laurel Lodged) | `public/conteudo/imagens/arco-de-tito-menora.jpg`, do Wikimedia Commons | Domínio público |
+| Quadro *A Última Oração dos Mártires Cristãos*, de Jean-Léon Gérôme (1863–1883), Walters Art Museum | `public/conteudo/imagens/coliseu-martires-gerome.jpg`, do Wikimedia Commons | Domínio público |
+| Gravura *Veduta dell’Anfiteatro Flavio detto il Colosseo*, de Giovanni Battista Piranesi (1776), The Metropolitan Museum of Art | `public/conteudo/imagens/coliseu-piranesi.jpg`, do Wikimedia Commons | CC0 |
+| O Bom Pastor, afresco do século III, publicado em *Die Malereien der Katakomben Roms*, de Joseph Wilpert (1903) | `public/conteudo/imagens/catacumbas-bom-pastor.jpg`, do Wikimedia Commons | Domínio público |
+| Ilustração de Eugène Damblans (1923): De Rossi mostra a Cripta dos Papas a Pio IX | `public/conteudo/imagens/catacumbas-de-rossi-pio-ix.jpg`, do Wikimedia Commons | Domínio público |
+| Slide de 1913 de Edmund F. Arras, Columbus Metropolitan Library (via DPLA): nichos de uma catacumba | `public/conteudo/imagens/catacumbas-nichos.jpg`, do Wikimedia Commons | Domínio público |
 | Louis Segond (1910), em francês | Texto embutido (`public/bible/lsg`), do eBible.org (`fraLSG`) | Domínio público |
 | Reina-Valera 1909, em espanhol | Texto embutido (`public/bible/rv1909`), do eBible.org (`spaRV1909`) | Domínio público |
 | Versión Biblia Libre (VBL) — © 2018–2020 Jonathan Gallagher e Shelly Barrios de Avila | Texto embutido (`public/bible/vbl`), do eBible.org (`spavbl`) | CC BY-SA 4.0 |

@@ -22,6 +22,20 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'linha-do-tempo-e-roma',
+    date: '29 de outubro de 2026',
+    title: 'Linha do Tempo da História, o Coliseu e as Catacumbas',
+    items: [
+      { icon: 'timeline', title: 'A linha do tempo da história', text: 'Da Criação aos nossos dias, em 16 épocas. Cada época junta o que a Bíblia conta, as histórias, os personagens, as curiosidades, as profecias, os mapas e as crises do mundo: a fome do tempo de José, a peste de Cipriano, a Peste Negra, a crise de 1929.', link: '/epocas', tip: 'No alto de Estudo, na tela inicial e em Histórias › Ver por época.' },
+      { icon: 'stadium', title: 'O Coliseu de Roma', text: 'Quem pagou a maior arena do mundo, como era um dia de espetáculo e a pergunta que os historiadores ainda discutem: os cristãos morreram mesmo ali?', link: '/artigo/coliseu-de-roma', tip: 'Também em Histórias › História da Igreja.' },
+      { icon: 'flashlight_on', title: 'As catacumbas de Roma', text: 'Não eram esconderijos: eram cemitérios. O que as pinturas e as inscrições contam sobre a fé dos primeiros cristãos, e como Bosio e De Rossi as reencontraram.', link: '/artigo/catacumbas-de-roma', tip: 'Também em Histórias › História da Igreja.' },
+      { icon: 'church', title: 'A igreja não ficou de fora', text: 'Na linha do tempo, as crises ganharam a caixa “A igreja nesse tempo”: o missionário parado pelo bando de Lampião, o pioneiro preso como espião na Primeira Guerra, as igrejas batistas sem dinheiro depois da crise de 1929, os cristãos que cuidavam dos doentes na peste. Só o que tem fonte, e o filtro “A igreja nas crises” mostra todos juntos.', link: '/epocas/pentecostes' },
+      { icon: 'sign_language', title: 'Libras', text: 'Em Ajustes › Acessibilidade, ligue o VLibras, o intérprete virtual gratuito do governo federal: toque no texto e veja em Libras. Precisa de internet.', link: '/ajustes' },
+      { icon: 'crisis_alert', title: 'Crises até hoje na linha do tempo da igreja', text: 'A linha do tempo da Assembleia de Deus agora vai até hoje, com a crise do petróleo, a queda do Muro de Berlim, a crise de 2008 e a pandemia de 2020.', link: '/assembleia-de-deus/linha-do-tempo' },
+      { icon: 'search', title: 'A busca acha as épocas e as crises', text: 'Digite “1929”, “peste” ou “Roma” no campo de pesquisa do Estudo e veja o fato, a história e a época em que aconteceu.', link: '/estudo' },
+    ],
+  },
+  {
     id: 'manuais-do-ministerio-e-biblia-russa',
     date: '29 de outubro de 2026',
     title: 'Manuais do Ministério, Bíblia em Russo e Versículos que Faltam',

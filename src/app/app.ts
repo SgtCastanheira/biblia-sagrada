@@ -10,6 +10,7 @@ import { filter, map } from 'rxjs';
 import { CuriositiesService } from './core/curiosities.service';
 import { DevotionalService } from './core/devotional.service';
 import { ReminderService } from './core/reminders.service';
+import { LibrasService } from './core/libras.service';
 import { WhatsNewService } from './core/whats-new.service';
 import { EbdService } from './core/ebd.service';
 import { PwaService } from './core/pwa.service';
@@ -56,7 +57,7 @@ export class App {
     if (/^\/(ler\/|busca|livros)/.test(url)) return 'biblia';
     if (/^\/(ensino|ebd|ibuc|sermoes)/.test(url)) return 'ensino';
     if (/^\/(meu-espaco|devocional|anotacoes|favoritos|ajustes|novidades|creditos)/.test(url)) return 'eu';
-    if (/^\/(estudo|fontes|harpa|memorial|genealogia|tribos|atlas|mapas|profecias|artigo|historia|avivamento|assembleia-de-deus|dicionario|curiosidades|quiz|livro\/)/.test(url)) return 'estudo';
+    if (/^\/(estudo|fontes|harpa|memorial|genealogia|tribos|atlas|mapas|profecias|artigo|historia|epocas|avivamento|assembleia-de-deus|dicionario|curiosidades|quiz|livro\/)/.test(url)) return 'estudo';
     return /^\/($|\?|#)/.test(url) ? 'inicio' : null;
   });
   protected readonly version = computed(() => findVersion(this.settings.version()));
@@ -73,6 +74,8 @@ export class App {
 
   constructor() {
     inject(MatIconRegistry).setDefaultFontSetClass('material-symbols-outlined');
+    // Libras (VLibras): só carrega se a pessoa ligou em Ajustes
+    inject(LibrasService);
     // Cada tela nova começa com as barras à vista
     effect(() => {
       this.url();

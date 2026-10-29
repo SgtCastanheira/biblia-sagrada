@@ -9,14 +9,16 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { findBook } from '../../core/books';
 import { ContentService } from '../../core/content.service';
+import { epochsOfBook } from '../../core/epochs';
 import { SettingsService } from '../../core/settings.service';
 import { BookMaterialsView } from '../../shared/book-materials';
+import { EraChip } from '../../shared/era-chip';
 import { Sheets } from '../../shared/sheets';
 import { SourcesBox } from '../../shared/sources-box';
 
 @Component({
   selector: 'app-book',
-  imports: [BackButton, BookMaterialsView, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, SourcesBox],
+  imports: [BackButton, BookMaterialsView, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, SourcesBox],
   template: `
     @if (bookInfo(); as b) {
       <header class="hero" [style.--c]="b.category.color">
@@ -33,6 +35,8 @@ import { SourcesBox } from '../../shared/sources-box';
           {{ read() ? 'Continuar' : 'Começar' }} no capítulo {{ nextToRead() }}
         </a>
       </header>
+
+      <app-era-chip [epochs]="epochs()" label="Em que época se passa" />
 
       @if (intro(); as i) {
         <section class="intro" id="contexto">
@@ -118,6 +122,7 @@ export class BookPage {
   private readonly content = inject(ContentService);
   protected readonly intro = toSignal(toObservable(this.book).pipe(switchMap((id) => this.content.intro(id))));
   protected readonly bookInfo = computed(() => findBook(this.book()));
+  protected readonly epochs = computed(() => epochsOfBook(this.book()));
   protected readonly chapters = computed(() => Array.from({ length: this.bookInfo()?.chapters ?? 0 }, (_, i) => i + 1));
   protected readonly read = computed(() => this.settings.readCount(this.book()));
   protected readonly nextToRead = computed(

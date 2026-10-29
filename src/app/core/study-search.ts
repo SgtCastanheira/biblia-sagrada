@@ -3,7 +3,7 @@
  * do dicionário, das profecias, das curiosidades e dos hinos. Código puro (sem Angular), para os testes.
  */
 
-export type HitKind = 'historia' | 'estado' | 'sermao' | 'personagem' | 'dicionario' | 'profecia' | 'curiosidade' | 'hino';
+export type HitKind = 'historia' | 'estado' | 'sermao' | 'personagem' | 'dicionario' | 'profecia' | 'curiosidade' | 'hino' | 'epoca' | 'fato';
 
 export interface SearchDoc {
   kind: HitKind;
@@ -25,6 +25,8 @@ export const KIND_INFO: Record<HitKind, { label: string; icon: string }> = {
   profecia: { label: 'Profecia', icon: 'star' },
   curiosidade: { label: 'Você sabia?', icon: 'lightbulb' },
   hino: { label: 'Harpa', icon: 'music_note' },
+  epoca: { label: 'Época', icon: 'timeline' },
+  fato: { label: 'Fato do mundo', icon: 'crisis_alert' },
 };
 
 export interface SearchHit {

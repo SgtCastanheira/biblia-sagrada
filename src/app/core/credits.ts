@@ -75,6 +75,12 @@ export const CREDITS: { group: string; items: Credit[] }[] = [
       { name: 'Fundação de São Paulo, de Oscar Pereira da Silva (1909)', use: 'Quadro no estudo A Igreja e o Estado no Brasil. Museu Paulista.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Oscar_Pereira_da_Silva_-_Funda%C3%A7%C3%A3o_de_S%C3%A3o_Paulo,_1909.jpg' },
       { name: 'Construção do Congresso Nacional (1959)', use: 'Foto no estudo A Igreja e o Estado no Brasil. Arquivo Nacional, Fundo Agência Nacional.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Constru%C3%A7%C3%A3o_do_Congresso_Nacional_1959-1.jpg' },
       { name: 'Frida Vingren', use: 'Foto no estudo sobre Frida Vingren. Acervo do Centro de Estudos Pentecostais da CPAD.', license: 'Creative Commons Atribuição-CompartilhaIgual 3.0 (CC BY-SA 3.0)', url: 'https://commons.wikimedia.org/wiki/File:Frida_Vingren.jpg' },
+      { name: 'Relevo do Arco de Tito com o candelabro do Templo (foto de Laurel Lodged)', use: 'Foto no estudo O Coliseu.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG' },
+      { name: 'A Última Oração dos Mártires Cristãos, de Jean-Léon Gérôme (1863–1883), Walters Art Museum', use: 'Quadro no estudo O Coliseu.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_The_Christian_Martyrs%27_Last_Prayer_-_Walters_37113.jpg' },
+      { name: 'Veduta dell’Anfiteatro Flavio detto il Colosseo, de Giovanni Battista Piranesi (1776), The Metropolitan Museum of Art', use: 'Gravura no estudo O Coliseu.', license: 'CC0 (domínio público)', url: 'https://commons.wikimedia.org/wiki/File:Veduta_dell%27Anfiteatro_Flavio_detto_il_Colosseo,_from-_%27Vedute_di_Roma%27_%28Views_of_Rome%29_MET_DP104275.jpg' },
+      { name: 'O Bom Pastor, afresco do século III, em Die Malereien der Katakomben Roms, de Joseph Wilpert (1903)', use: 'Imagem no estudo As Catacumbas de Roma.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:The_Good_Shepherd,_Priscilla_Catacomb,from_the_1903_book_Die_Malereien_der_Katakomben_Roms_%28Tafeln%29_by_Wilpert,_Joseph.jpg' },
+      { name: 'De Rossi mostra a Cripta dos Papas a Pio IX, de Eugène Damblans (1923)', use: 'Ilustração no estudo As Catacumbas de Roma.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Damblans_-_The_archeologist_Giovanni_Battista_de_Rossi_makes_Pope_Pius_IX_visit_the_crypt_of_the_Popes_he_has_just_discovered.jpg' },
+      { name: 'Catacumbas de Roma, slide de 1913 de Edmund F. Arras, Columbus Metropolitan Library (via DPLA)', use: 'Desenho no estudo As Catacumbas de Roma.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Catacombs_of_Rome_-_DPLA_-_5c077f1f104daa555989ea9447556838.jpg' },
     ],
   },
   {
@@ -90,6 +96,7 @@ export const CREDITS: { group: string; items: Credit[] }[] = [
       { name: 'Inter, Source Serif 4 e Lora', use: 'Fontes do texto.', license: 'SIL Open Font License 1.1', url: 'https://fonts.google.com' },
       { name: 'Material Symbols', use: 'Ícones.', license: 'Apache 2.0', url: 'https://fonts.google.com/icons' },
       { name: 'Angular e Angular Material', use: 'Estrutura do aplicativo.', license: 'MIT', url: 'https://angular.dev' },
+      { name: 'VLibras', use: 'Tradução automática para Libras, só quando ligada em Ajustes. Parceria do governo federal (Secretaria de Governo Digital e Secretaria Nacional dos Direitos da Pessoa com Deficiência) com a UFPB (LAVID).', license: 'Serviço gratuito, de código aberto', url: 'https://vlibras.gov.br' },
     ],
   },
 ];

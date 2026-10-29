@@ -2,7 +2,8 @@ import { Component, computed, inject, input } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import { ARTICLES } from '../core/library';
+import { epochOfArticle } from '../core/epochs';
+import { ARTICLES, findArticle } from '../core/library';
 import { sameEra, trailStep } from '../core/story-graph';
 import { StoryProgressService } from '../core/story-progress.service';
 
@@ -55,6 +56,13 @@ import { StoryProgressService } from '../core/story-progress.service';
           <a class="prev" [routerLink]="['/artigo', p.id]"><mat-icon>arrow_back</mat-icon><span>Anterior: {{ p.title }}</span></a>
         }
 
+        @if (epoch(); as ep) {
+          <a class="epoch-all" matRipple [routerLink]="['/epocas', ep.id]">
+            <mat-icon aria-hidden="true">timeline</mat-icon>
+            <span><small>Linha do tempo · {{ ep.period }}</small>{{ ep.name }}</span>
+            <span class="e-go">Ver a época inteira <mat-icon>arrow_forward</mat-icon></span>
+          </a>
+        }
         @if (era().length) {
           <h3 class="era-title"><mat-icon>schedule</mat-icon> Na mesma época, em outras trilhas</h3>
           <div class="era">
@@ -106,6 +114,15 @@ import { StoryProgressService } from '../core/story-progress.service';
     .end mat-icon { color: var(--accent-gold); }
     .prev { display: flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 8px; padding: 0 4px; text-decoration: none; font: 500 15px/1.35 Inter, sans-serif; color: var(--mat-sys-primary); }
     .prev mat-icon { flex: none; font-size: 20px; width: 20px; height: 20px; }
+    .epoch-all {
+      display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 4px 12px; margin-top: 22px; padding: 14px 16px; border-radius: 18px; text-decoration: none; color: inherit;
+      border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface-container-low); font: 600 18px/1.3 var(--heading-font);
+    }
+    .epoch-all > mat-icon { color: var(--accent-gold); }
+    .epoch-all span { display: flex; flex-direction: column; }
+    .epoch-all small { font: 600 13px Inter, sans-serif; color: var(--accent-gold); }
+    .e-go { grid-column: 2; flex-direction: row !important; align-items: center; gap: 6px; font: 600 14px Inter, sans-serif; color: var(--mat-sys-primary); }
+    .e-go mat-icon { font-size: 18px; width: 18px; height: 18px; }
     .era-title { display: flex; align-items: center; gap: 8px; margin: 26px 0 10px; font: 600 18px var(--heading-font); }
     .era-title mat-icon { color: var(--accent-gold); }
     .era { display: grid; gap: 10px; grid-template-columns: 1fr; }
@@ -128,6 +145,10 @@ export class StoryJourney {
 
   protected readonly step = computed(() => trailStep(this.articleId()));
   protected readonly era = computed(() => sameEra(this.articleId(), this.linked()));
+  protected readonly epoch = computed(() => {
+    const a = findArticle(this.articleId());
+    return a ? epochOfArticle(a) : null;
+  });
   protected readonly trailDone = computed(() => this.step()?.ids.filter((id) => this.progress.isDone(id)).length ?? 0);
   /** Quantas histórias a pessoa já terminou no app inteiro. */
   protected readonly readCount = computed(() => ARTICLES.filter((a) => this.progress.isDone(a.id)).length);

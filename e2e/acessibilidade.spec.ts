@@ -2,7 +2,7 @@ import { expect, test } from './base';
 
 const telas = ['/', '/quiz', '/quiz/capitulo/JHN/3', '/devocional', '/ebd', '/anotacoes', '/ajustes', '/ler/JHN/3', '/mapas/exodo',
   '/estudo', '/memorial?grupo=reis-israel', '/memorial/elias', '/artigo/cativeiros-de-israel', '/avivamento/edwards-pecadores', '/dicionario', '/dicionario/aba', '/livro/ROM',
-  '/atlas', '/genealogia', '/profecias/milenio', '/artigo/profecias-de-daniel', '/dicionario/salvar'];
+  '/atlas', '/genealogia', '/profecias/milenio', '/artigo/profecias-de-daniel', '/dicionario/salvar', '/epocas', '/epocas/patriarcas', '/epocas/pentecostes'];
 
 for (const tela of telas) {
   test(`${tela}: textos com pelo menos 13px`, async ({ page }) => {
@@ -61,7 +61,7 @@ test('todos os ícones aparecem como ícone (e não como texto)', async ({ page 
   // Percorre muitas telas: precisa de mais tempo do que o padrão
   test.setTimeout(150_000);
   for (const tela of ['/', '/ler/JHN/3', '/devocional', '/ebd', '/anotacoes', '/sermoes', '/mapas', '/ajustes',
-    '/estudo', '/memorial', '/historia', '/artigo/entre-os-testamentos', '/avivamento', '/dicionario', '/atlas', '/genealogia', '/tribos', '/artigo/madureira-e-a-separacao', '/harpa', '/harpa/1', '/ensino', '/meu-espaco', '/fontes', '/novidades', '/ibuc', '/ebd/apoio', '/ebd/apoio/aula/modelo-neemias-reconstroi-os-muros', '/ibuc/juniores', '/ibuc/aula/modelo-davi-e-golias', '/tribos/manasses', '/profecias', '/mapas/vida-de-jesus']) {
+    '/estudo', '/memorial', '/historia', '/artigo/entre-os-testamentos', '/avivamento', '/dicionario', '/atlas', '/genealogia', '/tribos', '/artigo/madureira-e-a-separacao', '/harpa', '/harpa/1', '/ensino', '/meu-espaco', '/epocas', '/epocas/pentecostes', '/epocas/patriarcas', '/artigo/coliseu-de-roma', '/artigo/catacumbas-de-roma', '/historia?trilha=igreja', '/fontes', '/novidades', '/ibuc', '/ebd/apoio', '/ebd/apoio/aula/modelo-neemias-reconstroi-os-muros', '/ibuc/juniores', '/ibuc/aula/modelo-davi-e-golias', '/tribos/manasses', '/profecias', '/mapas/vida-de-jesus']) {
     await page.goto(tela);
     await page.waitForLoadState('networkidle');
     await page.evaluate(async () => {

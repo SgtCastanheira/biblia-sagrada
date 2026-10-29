@@ -126,6 +126,16 @@
     <a routerLink="/historia">Ver todas</a>
   </div>
   <app-story-rings />
+  <!-- A linha do tempo: a história em ordem, com as crises do mundo -->
+  <a class="continue card timeline-link" matRipple routerLink="/epocas">
+    <span class="book-badge"><mat-icon>timeline</mat-icon></span>
+    <span class="continue-text">
+      <span class="overline">Linha do tempo</span>
+      <span class="title">A história, época por época</span>
+      <span class="caption">Da Criação a hoje, com as crises do mundo.</span>
+    </span>
+    <mat-icon class="go">arrow_forward</mat-icon>
+  </a>
   <!-- Em destaque: os manuais de quem serve na igreja -->
   <a class="featured" matRipple routerLink="/historia" [queryParams]="{ trilha: 'teologia' }">
     <mat-icon class="mark" aria-hidden="true">volunteer_activism</mat-icon>

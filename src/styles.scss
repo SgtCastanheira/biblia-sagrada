@@ -401,3 +401,8 @@ body.theme-sepia {
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-gold) 20%, transparent);
   transition: background .3s, box-shadow .3s;
 }
+
+// Libras desligado em Ajustes: esconde o botão do VLibras já carregado
+.libras-off [vw] {
+  display: none !important;
+}

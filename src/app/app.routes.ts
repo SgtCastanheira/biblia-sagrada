@@ -13,6 +13,8 @@ export const routes: Routes = [
   { path: 'harpa/:n', loadComponent: () => import('./pages/harpa/hymn').then((m) => m.HymnPage) },
   { path: 'genealogia', title: 'Genealogia de Jesus · Bíblia Sagrada', loadComponent: () => import('./pages/genealogy/genealogy').then((m) => m.GenealogyPage) },
   { path: 'memorial/:id', loadComponent: () => import('./pages/person/person').then((m) => m.PersonPage) },
+  { path: 'epocas', title: 'Linha do tempo · Bíblia Sagrada', loadComponent: () => import('./pages/epochs/epochs').then((m) => m.EpochsPage) },
+  { path: 'epocas/:id', loadComponent: () => import('./pages/epochs/epoch').then((m) => m.EpochPage) },
   { path: 'historia', title: 'História · Bíblia Sagrada', loadComponent: () => import('./pages/history/history').then((m) => m.HistoryPage) },
   { path: 'artigo/:id', loadComponent: () => import('./pages/article/article').then((m) => m.ArticlePage) },
   { path: 'profecias', title: 'Profecias · Bíblia Sagrada', loadComponent: () => import('./pages/prophecies/prophecies').then((m) => m.PropheciesPage) },

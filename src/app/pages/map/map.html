@@ -5,6 +5,7 @@
   <span class="overline">{{ m.period }}</span>
   <h1>{{ m.title }}</h1>
   <p class="summary">{{ m.summary }}</p>
+  <app-era-chip [epoch]="epoch()" />
   <p class="facts">
     <span><mat-icon>flag</mat-icon>{{ m.steps.length }} {{ m.route === false ? 'lugares' : 'etapas' }}</span>
     @if (distances().total; as total) { <span><mat-icon>straighten</mat-icon>Percurso {{ total }} (em linha reta)</span> }

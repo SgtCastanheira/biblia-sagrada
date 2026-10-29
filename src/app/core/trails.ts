@@ -103,7 +103,7 @@ export const TRAILS: Trail[] = [
     icon: 'history_edu',
     collections: ['igreja'],
     branches: [
-      { title: 'Os Primeiros Séculos', ids: ['panorama-da-igreja', 'igreja-primitiva', 'perseguicoes', 'constantino-e-os-concilios'] },
+      { title: 'Os Primeiros Séculos', ids: ['panorama-da-igreja', 'igreja-primitiva', 'perseguicoes', 'coliseu-de-roma', 'catacumbas-de-roma', 'constantino-e-os-concilios'] },
       { title: 'A Idade Média', ids: ['idade-media', 'pre-reformadores'] },
       { title: 'A Reforma', ids: ['reforma-protestante', 'reformadores', 'reforma-inglesa', 'contrarreforma'] },
       { title: 'Despertamentos e Missões', ids: ['pietismo-e-moravios', 'grandes-despertamentos', 'escola-dominical', 'missoes-modernas'] },

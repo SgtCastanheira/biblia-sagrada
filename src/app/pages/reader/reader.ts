@@ -14,6 +14,7 @@ import { BOOKS, findBook } from '../../core/books';
 import { ListenService } from '../../core/listen.service';
 import { ContentService } from '../../core/content.service';
 import { DictionaryMatcher, TextPart } from '../../core/dictionary';
+import { epochOfChapter } from '../../core/epochs';
 import { parseReferences } from '../../core/reference-parser';
 import { FavoritesService } from '../../core/favorites.service';
 import { Verse } from '../../core/models';
@@ -24,6 +25,7 @@ import { mapsFor } from '../../core/maps';
 import { TRIBE_CHAPTERS } from '../../core/tribes';
 import { findVersion } from '../../core/versions';
 import { BookRibbon } from '../../shared/book-ribbon';
+import { EraChip } from '../../shared/era-chip';
 import { QuizPrompt } from '../../shared/quiz-prompt';
 import { Sheets } from '../../shared/sheets';
 
@@ -50,7 +52,7 @@ interface ChapterLink {
 
 @Component({
   selector: 'app-reader',
-  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, MatTooltipModule, BookRibbon, QuizPrompt],
+  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, MatTooltipModule, BookRibbon, EraChip, QuizPrompt],
   templateUrl: './reader.html',
   styleUrl: './reader.scss',
   host: {
@@ -170,6 +172,8 @@ export class ReaderPage {
     ...this.prophecies().map((p) => ({ icon: 'visibility', kind: p.given ? 'Profecia' : 'Cumprimento de profecia', title: p.title, link: `/profecias/${p.id}` })),
   ]);
 
+  /** Em que época se passa este capítulo (linha do tempo da história). */
+  protected readonly epoch = computed(() => epochOfChapter(this.book(), this.chapterNum()));
   protected readonly studyItems = computed(() => [
     ...(this.intro() ? ['contexto'] : []),
     ...(this.notes().length ? ['notas'] : []),

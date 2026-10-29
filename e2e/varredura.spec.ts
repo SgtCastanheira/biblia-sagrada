@@ -1,5 +1,6 @@
 import { AD_STATES } from '../src/app/core/ad-states';
 import { CURIOSITIES } from '../src/app/core/curiosities';
+import { EPOCHS } from '../src/app/core/epochs';
 import { ARTICLES, CLASSIC_SERMONS } from '../src/app/core/library';
 import { BIBLE_MAPS, findMap } from '../src/app/core/maps';
 import { TRIBES } from '../src/app/core/tribes';
@@ -19,7 +20,8 @@ const rotas: string[] = [
   ...CLASSIC_SERMONS.map((s) => `/avivamento/${s.id}`),
   ...TRIBES.map((t) => `/tribos/${t.id}`),
   ...CURIOSITIES.map((c) => `/curiosidades/${c.id}`),
-  '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo', '/historia', '/historia?colecao=avivamentos', '/historia?colecao=biblia', '/mapas', '/estudo', '/avivamento',
+  ...EPOCHS.map((e) => `/epocas/${e.id}`),
+  '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo', '/epocas', '/historia', '/historia?colecao=avivamentos', '/historia?colecao=biblia', '/mapas', '/estudo', '/avivamento',
 ];
 
 for (const rota of rotas) {

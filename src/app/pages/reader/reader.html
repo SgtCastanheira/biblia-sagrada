@@ -53,6 +53,7 @@
         </button>
         @if (studyOpen()) {
           <div class="study-body">
+            <app-era-chip [epoch]="epoch()" />
             @if (intro(); as i) {
               <h3 class="study-section"><mat-icon>info</mat-icon> Contexto histórico de {{ book.name }}</h3>
               <dl class="intro-facts">

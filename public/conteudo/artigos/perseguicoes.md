@@ -28,6 +28,10 @@ Filósofo convertido, escreveu defesas da fé dirigidas ao imperador. Foi decapi
 ### Perpétua e Felicidade (203)
 Em Cartago, no norte da África, uma jovem nobre de 22 anos, mãe de um bebê, e a sua escrava Felicidade, grávida, foram presas por serem catecúmenas (em preparação para o batismo). Perpétua escreveu um diário na prisão. As duas morreram juntas na arena, de mãos dadas.
 
+:::leia coliseu-de-roma
+Inácio e tantos outros foram lançados às feras, mas em que arena? O que os documentos dizem e o que só a tradição conta.
+:::
+
 ## As Grandes Perseguições
 
 :::tempo
@@ -48,4 +52,8 @@ A palavra “mártir” vem do grego *mártys*, que quer dizer simplesmente “t
 
 :::nota
 Jesus avisou: “No mundo tereis aflições, mas tende bom ânimo; eu venci o mundo” [[Jo 16.33]]. Ainda hoje, milhões de cristãos vivem em países onde há perseguição. Lembrar dos mártires do passado é também um chamado a orar pela Igreja perseguida do presente [[Hb 13.3]].
+:::
+
+:::leia catacumbas-de-roma
+Onde a Igreja de Roma enterrou os seus mortos nesses séculos, e por que as catacumbas não eram esconderijos.
 :::

@@ -9,10 +9,12 @@ import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { map, startWith, switchMap } from 'rxjs';
 import { ContentService } from '../../core/content.service';
+import { epochOfArticle } from '../../core/epochs';
 import { articlesOf, COLLECTIONS, findArticle, STORY_COLLECTIONS } from '../../core/library';
 import { ListenService } from '../../core/listen.service';
 import { UiService } from '../../core/ui.service';
 import { storyItems } from '../../shared/listen-dom';
+import { EraChip } from '../../shared/era-chip';
 import { QuizPrompt } from '../../shared/quiz-prompt';
 import { trailOfArticle } from '../../core/trails';
 import { linkedArticles, trailStep } from '../../core/story-graph';
@@ -27,7 +29,7 @@ import { SourcesBox } from '../../shared/sources-box';
 /** Artigo de estudo (história da Igreja, origem da Bíblia, estudos bíblicos). */
 @Component({
   selector: 'app-article',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, BibleMapView, SourcesBox, QuizPrompt, StoryJourney],
+  imports: [BackButton, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, BibleMapView, SourcesBox, QuizPrompt, StoryJourney],
   template: `
     @if (article(); as a) {
       <div class="article">
@@ -57,6 +59,9 @@ import { SourcesBox } from '../../shared/sources-box';
             }
             <span class="hero-over">{{ step()?.trail?.name ?? collection()?.name }}@if (step(); as st) { · história {{ st.index + 1 }} de {{ st.total }} }</span>
             @if (a.period) { <span class="era">{{ a.period }}</span> }
+            @if (epoch(); as ep) {
+              <a class="epoch-link" [routerLink]="['/epocas', ep.id]"><mat-icon>timeline</mat-icon> Época: {{ ep.name }}</a>
+            }
             @if (a.portraits?.length) {
               <div class="portraits" aria-hidden="true">
                 @for (src of a.portraits; track src) { <img [src]="'conteudo/' + src" alt="" /> }
@@ -80,6 +85,7 @@ import { SourcesBox } from '../../shared/sources-box';
           <h1 class="title">{{ a.title }}</h1>
           @if (!a.topics?.length) { <p class="lead">{{ a.subtitle }}</p> }
           <p class="time"><mat-icon>schedule</mat-icon> {{ a.minutes }} min de leitura</p>
+          <app-era-chip [epoch]="epoch()" />
         }
 
         @if (resume(); as at) {
@@ -177,6 +183,11 @@ import { SourcesBox } from '../../shared/sources-box';
     }
     .hero-over { position: relative; font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 2px; color: #e2c28c; }
     .era { position: relative; margin: 6px 0 14px; font: 600 40px/1 var(--heading-font); letter-spacing: -.5px; color: #e2c28c; }
+    .epoch-link {
+      position: relative; display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; min-height: 40px; margin: -4px 0 12px; padding: 0 14px 0 10px;
+      border-radius: 20px; text-decoration: none; border: 1px solid rgba(241, 217, 168, .55); color: #f1d9a8; font: 600 14px Inter, sans-serif;
+    }
+    .epoch-link mat-icon { font-size: 18px; width: 18px; height: 18px; }
     /* Com quadro ao fundo: a imagem em cima, escurecendo para o texto embaixo, como a abertura de um filme */
     .hero.has-cover { box-sizing: border-box; min-height: min(70vh, 540px); justify-content: flex-end; padding-top: 150px; background: #21180f; }
     @media (min-width: 840px) { .hero.has-cover { min-height: 460px; } }
@@ -269,6 +280,7 @@ export class ArticlePage {
   protected readonly article = computed(() => findArticle(this.id()));
   /** Posição na trilha (para a capa e para o painel do fim). */
   protected readonly step = computed(() => trailStep(this.id()));
+  protected readonly epoch = computed(() => (this.article() ? epochOfArticle(this.article()!) : null));
   /** Histórias que o texto já cita: o painel do fim não as sugere de novo. */
   protected readonly linked = computed(() => linkedArticles(this.body() ?? ''));
   /** Onde a pessoa parou da última vez (some quando ela continua ou passa desse ponto). */

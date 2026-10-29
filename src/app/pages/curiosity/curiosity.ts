@@ -15,6 +15,8 @@ import { CuriositiesService } from '../../core/curiosities.service';
 import { findArticle } from '../../core/library';
 import { SettingsService } from '../../core/settings.service';
 import { findVersion } from '../../core/versions';
+import { epochOfCuriosity } from '../../core/epochs';
+import { EraChip } from '../../shared/era-chip';
 import { SourcesBox } from '../../shared/sources-box';
 
 interface Passage {
@@ -25,7 +27,7 @@ interface Passage {
 
 @Component({
   selector: 'app-curiosity',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, SourcesBox],
+  imports: [BackButton, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, SourcesBox],
   templateUrl: './curiosity.html',
   styleUrl: './curiosity.scss',
 })
@@ -43,6 +45,7 @@ export class CuriosityPage {
     const id = this.curiosity()?.study;
     return id ? findArticle(id) : undefined;
   });
+  protected readonly epoch = computed(() => (this.curiosity() ? epochOfCuriosity(this.curiosity()!) : null));
   protected readonly version = computed(() => findVersion(this.settings.version()));
 
   protected readonly next = computed(() => {

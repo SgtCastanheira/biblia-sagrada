@@ -10,6 +10,8 @@ import { ContentService } from '../../core/content.service';
 import { inBibleOrder, positionOfRef } from '../../core/bible-order';
 import { findArticle } from '../../core/library';
 import { CATEGORIES, KINDS, STATUSES } from '../../core/prophecy';
+import { epochOfProphecy } from '../../core/epochs';
+import { EraChip } from '../../shared/era-chip';
 import { PassageView } from '../../shared/passage-view';
 import { Sheets } from '../../shared/sheets';
 import { SourcesBox } from '../../shared/sources-box';
@@ -17,7 +19,7 @@ import { SourcesBox } from '../../shared/sources-box';
 /** Uma profecia: o texto, o contexto, o cumprimento e as interpretações. */
 @Component({
   selector: 'app-prophecy',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView, SourcesBox],
+  imports: [BackButton, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView, SourcesBox],
   template: `
     @if (prophecy(); as p) {
       <div class="article">
@@ -30,6 +32,8 @@ import { SourcesBox } from '../../shared/sources-box';
           <span class="status" [class]="p.status" [title]="statuses[p.status].description">{{ statuses[p.status].name }}</span>
           <span class="kind">{{ kinds[p.kind] }}</span>
         </div>
+
+        <app-era-chip [epoch]="epoch()" label="Quando foi dada" />
 
         <h2 class="section-title">A profecia</h2>
         <p class="given"><mat-icon>record_voice_over</mat-icon>{{ p.given }}</p>
@@ -132,6 +136,7 @@ export class ProphecyPage {
   protected readonly kinds = KINDS;
 
   protected readonly prophecy = computed(() => this.all()?.find((p) => p.id === this.id()));
+  protected readonly epoch = computed(() => (this.prophecy() ? epochOfProphecy(this.prophecy()!) : null));
   protected readonly article = computed(() => {
     const id = this.prophecy()?.article;
     return id ? findArticle(id) : undefined;

@@ -23,6 +23,12 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
 
     <app-story-rings [active]="trail()?.id" [all]="true" />
 
+    <a class="by-era" matRipple routerLink="/epocas">
+      <mat-icon>timeline</mat-icon>
+      <span><strong>Ver por época</strong> Da Criação a hoje, as histórias e as crises do mundo na ordem do tempo.</span>
+      <mat-icon class="go">chevron_right</mat-icon>
+    </a>
+
     @if (trail(); as t) {
       <section class="cover">
         <mat-icon class="watermark" aria-hidden="true">{{ t.icon }}</mat-icon>
@@ -106,6 +112,11 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
     }
     .disc mat-icon { width: 100%; height: 100%; display: grid; place-items: center; border-radius: 50%; background: var(--mat-sys-surface); color: var(--mat-sys-primary); box-sizing: border-box; border: 3px solid var(--mat-sys-surface); }
     .page-head + app-story-rings { margin-bottom: 18px; }
+    .by-era { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; margin: 0 0 18px; padding: 12px 16px; border-radius: 16px; text-decoration: none; color: inherit; border: 1px dashed var(--mat-sys-outline-variant); }
+    .by-era > mat-icon:first-child { color: var(--accent-gold); }
+    .by-era span { font: 400 14px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .by-era strong { display: block; font: 600 16px var(--heading-font); color: var(--mat-sys-on-surface); }
+    .by-era .go { color: var(--mat-sys-on-surface-variant); }
     .cover {
       position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 6px; margin: 0 0 8px; padding: 22px 20px; border-radius: 24px; color: #fff8ec;
       background: radial-gradient(110% 90% at 100% 0%, rgba(203, 165, 108, .26), transparent 62%), linear-gradient(165deg, #2f4a3d, #1b2b23 80%);

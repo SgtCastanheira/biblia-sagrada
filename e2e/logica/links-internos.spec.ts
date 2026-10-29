@@ -6,6 +6,7 @@ import { BOOKS } from '../../src/app/core/books';
 import { EBD_SUPPORT_CLASSES, EBD_SUPPORT_LESSONS } from '../../src/app/core/ebd-support';
 import { IBUC_CLASSES, IBUC_LESSONS } from '../../src/app/core/ibuc';
 import { CURIOSITIES } from '../../src/app/core/curiosities';
+import { EPOCHS } from '../../src/app/core/epochs';
 import { ARTICLES, CLASSIC_SERMONS, findArticle } from '../../src/app/core/library';
 import { BIBLE_MAPS, findMap } from '../../src/app/core/maps';
 import { articlesWithoutTrail, TRAILS, trailOfArticle } from '../../src/app/core/trails';
@@ -27,7 +28,7 @@ const hymns = new Set(json<{ hymns: { n: number }[] }>('harpa.json').hymns.map((
 const FIXED = new Set([
   '/', '/estudo', '/estudo/livros', '/ensino', '/meu-espaco', '/historia', '/avivamento', '/profecias', '/dicionario', '/atlas', '/mapas',
   '/busca', '/quiz', '/livros', '/curiosidades', '/devocional', '/ibuc', '/ebd', '/ebd/apoio', '/anotacoes', '/favoritos', '/sermoes', '/novidades',
-  '/fontes', '/creditos', '/ajustes', '/harpa', '/tribos', '/genealogia', '/memorial', '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo',
+  '/fontes', '/creditos', '/ajustes', '/harpa', '/tribos', '/genealogia', '/memorial', '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo', '/epocas',
 ]);
 
 /** Devolve o motivo se a rota não existe; texto vazio se existe. */
@@ -48,6 +49,7 @@ function problemWith(route: string): string {
     case 'profecias': return known(prophecies) ? '' : 'profecia não existe';
     case 'harpa': return known(hymns) ? '' : 'hino não existe';
     case 'curiosidades': return known(CURIOSITIES.map((c) => c.id)) ? '' : 'curiosidade não existe';
+    case 'epocas': return known(EPOCHS.map((e) => e.id)) ? '' : 'época não existe';
     case 'ebd':
       // /ebd, /ebd/licao/:n, /ebd/apoio, /ebd/apoio/:turma, /ebd/apoio/aula/:id
       if (id === 'licao') return Number.isInteger(Number(extra)) ? '' : 'lição inválida';

@@ -11,12 +11,18 @@ Portanto, nós também, pois estamos rodeados de tão grande nuvem de testemunha
 Os discípulos estão reunidos quando o Espírito Santo é derramado. Pedro prega, e naquele dia quase três mil pessoas são batizadas.
 :::
 
-De Jerusalém, o evangelho chegou a Antioquia e, pelas viagens de Paulo, a todo o Império Romano. A igreja cresceu debaixo de perseguição, de Nero a Diocleciano, até que Constantino deu liberdade de culto aos cristãos em 313. Logo vieram os grandes concílios, como o de Niceia, que defenderam a divindade de Cristo nos credos que as igrejas confessam até hoje.
+De Jerusalém, o evangelho chegou a Antioquia e, pelas viagens de Paulo, a todo o Império Romano. A igreja cresceu debaixo de perseguição, de Nero a Diocleciano, em cidades onde o Coliseu aplaudia o espetáculo e os mortos eram enterrados em galerias escavadas na rocha, até que Constantino deu liberdade de culto aos cristãos em 313. Logo vieram os grandes concílios, como o de Niceia, que defenderam a divindade de Cristo nos credos que as igrejas confessam até hoje.
 
 :::leia igreja-primitiva
 :::
 
 :::leia perseguicoes
+:::
+
+:::leia coliseu-de-roma
+:::
+
+:::leia catacumbas-de-roma
 :::
 
 :::leia constantino-e-os-concilios

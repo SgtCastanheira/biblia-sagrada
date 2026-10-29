@@ -8,6 +8,7 @@
     <span class="icon"><mat-icon>{{ c.icon }}</mat-icon></span>
     <span class="overline">Você sabia? · {{ c.topic }}</span>
     <h1>{{ c.question }}</h1>
+    <app-era-chip [epoch]="epoch()" />
 
     <p class="answer">{{ c.answer }}</p>
 

@@ -12,6 +12,8 @@ import { findMap } from '../../core/maps';
 import { findGroup, VERDICTS } from '../../core/memorial';
 import { articlesOfPerson, inGenealogy, mapsOfPerson, relatedPeople } from '../../core/relations';
 import { tribeOfPerson, tribesOfPatriarch } from '../../core/tribes';
+import { epochOfPerson } from '../../core/epochs';
+import { EraChip } from '../../shared/era-chip';
 import { PassageView } from '../../shared/passage-view';
 import { Sheets } from '../../shared/sheets';
 import { SourcesBox } from '../../shared/sources-box';
@@ -19,7 +21,7 @@ import { SourcesBox } from '../../shared/sources-box';
 /** Página de um personagem do Memorial da Fé. */
 @Component({
   selector: 'app-person',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView, SourcesBox],
+  imports: [BackButton, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView, SourcesBox],
   template: `
     @if (person(); as p) {
       <div class="article">
@@ -30,6 +32,7 @@ import { SourcesBox } from '../../shared/sources-box';
         <span class="overline">{{ mainGroup()?.name }} · {{ p.period }}</span>
         <h1 class="title">{{ p.name }}</h1>
         <p class="epithet">{{ p.title }}</p>
+        <app-era-chip [epoch]="epoch()" />
         @if (p.meaning) {
           <p class="meaning"><mat-icon>badge</mat-icon> O nome significa <strong>“{{ p.meaning }}”</strong></p>
         }
@@ -182,6 +185,7 @@ export class PersonPage {
   protected readonly verdicts = VERDICTS;
 
   protected readonly person = computed(() => this.all()?.find((p) => p.id === this.id()));
+  protected readonly epoch = computed(() => (this.person() ? epochOfPerson(this.person()!) : null));
   protected readonly mainGroup = computed(() => findGroup(this.person()?.groups[0] ?? ''));
   protected readonly otherGroups = computed(() =>
     (this.person()?.groups.slice(1) ?? []).map((g) => findGroup(g)!).filter(Boolean),

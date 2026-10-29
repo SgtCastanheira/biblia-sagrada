@@ -12,12 +12,14 @@ import { findMap, isChurchMap } from '../../core/maps';
 import { SettingsService } from '../../core/settings.service';
 import { parseReferences } from '../../core/reference-parser';
 import { BibleMapView } from '../../shared/bible-map';
+import { epochOfMap } from '../../core/epochs';
+import { EraChip } from '../../shared/era-chip';
 import { MapStory } from '../../shared/map-story';
 import { SourcesBox } from '../../shared/sources-box';
 
 @Component({
   selector: 'app-map',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, BibleMapView, MapStory, SourcesBox],
+  imports: [BackButton, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, BibleMapView, MapStory, SourcesBox],
   templateUrl: './map.html',
   styleUrl: './map.scss',
 })
@@ -30,6 +32,7 @@ export class MapPage {
   protected readonly article = computed(() => ARTICLES.find((a) => a.map === this.id()));
   protected readonly settings = inject(SettingsService);
   protected readonly era = computed(() => eraOfMap(this.id()) ?? null);
+  protected readonly epoch = computed(() => (this.map() ? epochOfMap(this.map()!) : null));
   /** Mapa da história da Igreja: divisas dos estados sempre visíveis, sem as camadas do mundo bíblico. */
   protected readonly church = computed(() => {
     const m = this.map();

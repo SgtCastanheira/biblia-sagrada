@@ -9,6 +9,7 @@ import { BOOKS } from '../../core/books';
 import { BackupService } from '../../core/backup.service';
 import { NotifyService } from '../../core/notify.service';
 import { ReminderService } from '../../core/reminders.service';
+import { LibrasService } from '../../core/libras.service';
 import { PwaService } from '../../core/pwa.service';
 import { FavoritesService } from '../../core/favorites.service';
 import { SettingsService } from '../../core/settings.service';
@@ -99,6 +100,32 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
       <app-reading-settings />
     </section>
 
+    <section class="card" id="acessibilidade">
+      <h2>Acessibilidade</h2>
+      <div class="row toggle-row">
+        <span class="badge gold"><mat-icon>sign_language</mat-icon></span>
+        <span class="row-text">
+          <strong>Libras (VLibras)</strong>
+          <small>
+            @switch (libras.status()) {
+              @case ('loading') { Carregando o VLibras… }
+              @case ('on') { Ligado: toque no botão azul de Libras, no canto da tela, e depois no texto que quer ver em Libras. }
+              @case ('error') { Não consegui abrir o VLibras. Ele precisa de internet: confira a conexão e ligue de novo. }
+              @default { Um intérprete virtual traduz para Libras o texto em que você tocar. É o VLibras, gratuito, do governo federal com a UFPB. Precisa de internet, e o texto escolhido vai para o serviço deles para ser traduzido. A tradução é automática: não substitui um intérprete. }
+            }
+          </small>
+        </span>
+        <mat-slide-toggle [checked]="libras.enabled()" (change)="libras.enabled.set($event.checked)" aria-label="Libras (VLibras)" />
+      </div>
+      <div class="row">
+        <span class="badge"><mat-icon>hearing_disabled</mat-icon></span>
+        <span class="row-text">
+          <strong>Sem depender de som nem de voz</strong>
+          <small>Nada no app exige ouvir ou falar. Tudo o que tem áudio (“Ouvir” o capítulo ou a história) tem o texto na tela, com o trecho lido destacado; os lembretes aparecem escritos, na tela e na notificação.</small>
+        </span>
+      </div>
+    </section>
+
     <section class="card">
       <h2>Seus dados</h2>
       <p class="data-info">
@@ -184,6 +211,7 @@ export class SettingsPage {
   protected readonly favorites = inject(FavoritesService);
   protected readonly notify = inject(NotifyService);
   protected readonly reminders = inject(ReminderService);
+  protected readonly libras = inject(LibrasService);
   /** Os três horários de hoje ("08:17, 14:42 e 21:05"). */
   protected readonly todayTimes = computed(() => {
     const times = this.reminders.today().map((r) => r.at);

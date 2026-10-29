@@ -79,6 +79,16 @@ interface Section {
       }
     </nav>
 
+    <a class="card timeline" matRipple routerLink="/epocas">
+      <span class="tl-badge"><mat-icon>timeline</mat-icon></span>
+      <span class="tl-info">
+        <span class="overline">Comece por aqui</span>
+        <span class="tl-title">A linha do tempo da história</span>
+        <span class="tl-sub">Da Criação aos nossos dias, em 16 épocas: o que a Bíblia conta, as histórias, os personagens, as curiosidades e as crises do mundo, como a de 1929, tudo junto.</span>
+      </span>
+      <mat-icon class="go">chevron_right</mat-icon>
+    </a>
+
     <a class="card hero" matRipple routerLink="/atlas">
       <app-bible-map [map]="atlas" [compact]="true" />
       <span class="hero-info">
@@ -148,6 +158,12 @@ interface Section {
     }
     .toc mat-icon { font-size: 18px; width: 18px; height: 18px; color: var(--accent-gold); }
     section { scroll-margin-top: 72px; }
+    .timeline { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px; margin-bottom: 12px; padding: 16px 18px; border-left: 4px solid var(--accent-gold); }
+    .tl-badge { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--mat-sys-primary-container); color: var(--mat-sys-primary); }
+    .tl-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .tl-title { font: 600 20px/1.25 var(--heading-font); }
+    .tl-sub { font: var(--mat-sys-body-medium); color: var(--mat-sys-on-surface-variant); }
+    .timeline .go { color: var(--mat-sys-on-surface-variant); }
     .hero { margin-bottom: 12px; }
     .hero app-bible-map { display: block; aspect-ratio: 21 / 9; overflow: hidden; border-bottom: 1px solid var(--mat-sys-outline-variant); }
     .hero-info { display: flex; flex-direction: column; gap: 4px; padding: 14px 18px 16px; }
@@ -221,7 +237,7 @@ export class StudyPage {
       icon: 'groups',
       shelves: [
         { link: '/memorial', icon: 'military_tech', name: 'Memorial da Fé', description: 'Patriarcas, juízes, profetas, reis, nazireus, mulheres de fé e apóstolos.' },
-        { link: '/memorial', queryParams: { grupo: 'linha-do-tempo' }, icon: 'timeline', name: 'Linha do tempo', description: 'Todos os personagens na ordem da história, de Adão aos apóstolos.' },
+        { link: '/memorial', queryParams: { grupo: 'linha-do-tempo' }, icon: 'timeline', name: 'Personagens na ordem do tempo', description: 'Todos os personagens na ordem da história, de Adão aos apóstolos.' },
         { link: '/memorial', queryParams: { grupo: 'dois-reinos' }, icon: 'compare_arrows', name: 'Os dois reinos', description: 'Os reis de Israel e de Judá lado a lado, com a avaliação de cada um.' },
         { link: '/tribos', icon: 'diversity_3', name: 'As doze tribos de Israel', description: 'Os filhos de Jacó, as bênçãos, os líderes e a vocação de cada tribo.' },
         { link: '/genealogia', icon: 'account_tree', name: 'Genealogia de Jesus', description: 'De Adão a Maria: as linhas de Mateus e de Lucas, com os reis.' },
