@@ -470,3 +470,10 @@ test('manuais do ministério: quatro estudos na bolinha Teologia, ligados ao est
   await page.getByRole('link', { name: /Diácono, Presbítero e Pastor nos Três Manuais/ }).first().click();
   await expect(page).toHaveURL(/diacono-presbitero-e-pastor-nos-manuais/);
 });
+
+test('tela inicial: destaque dos manuais do ministério leva à bolinha Teologia', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('link', { name: /Manuais do Ministério/ }).click();
+  await expect(page).toHaveURL(/trilha=teologia/);
+  await expect(page.getByRole('link', { name: /Manual do Diácono/ }).first()).toBeVisible();
+});

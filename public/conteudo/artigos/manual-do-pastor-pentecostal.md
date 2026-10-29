@@ -1,10 +1,10 @@
-Quem forma os líderes de uma igreja? E como um pastor trabalha com os presbíteros e diáconos que o ajudam? O *Manual do Pastor Pentecostal: Teologia e Práticas Pastorais* foi escrito por pastores, reitores e dirigentes das Assembleias de Deus dos Estados Unidos e publicado em português pela CPAD (1999; a edição consultada é a terceira, de 2005), a partir de *The Pentecostal Pastor*, de 1997. É uma obra enorme, com seis unidades e dezenas de capítulos assinados por autores diferentes, escrita, segundo o prefácio, como “compêndio de teologia prática” para o pastor e seus auxiliares mais diretos e para quem se prepara para o ministério. Esta síntese, em palavras próprias, cobre o prefácio, o índice e três capítulos: o de treinar e comissionar presbíteros e diáconos, o de trabalhar com os corpos ministeriais e o de prestação de contas na igreja. O resto do livro não foi lido para este estudo.
+Quem forma os líderes de uma igreja? E como um pastor trabalha com os presbíteros e diáconos que o ajudam? O *Manual do Pastor Pentecostal: Teologia e Práticas Pastorais* foi escrito por pastores, reitores e dirigentes de uma igreja dos Estados Unidos e publicado em português pela CPAD (1999; a edição consultada é a terceira, de 2005), a partir de *The Pentecostal Pastor*, de 1997. É uma obra enorme, com seis unidades e dezenas de capítulos assinados por autores diferentes, escrita, segundo o prefácio, como “compêndio de teologia prática” para o pastor e seus auxiliares mais diretos e para quem se prepara para o ministério. Esta síntese, em palavras próprias, cobre o prefácio, o índice e três capítulos: o de treinar e comissionar presbíteros e diáconos, o de trabalhar com os corpos ministeriais e o de prestação de contas na igreja. O resto do livro não foi lido para este estudo.
 
 ## O Livro por Dentro
 
-As seis unidades dão o mapa do que um pastor, nessa tradição, precisa dominar: as **prioridades na vida do pastor** (devocional, casamento, estudo, pregação expositiva); a **vida pessoal** (caráter, finanças, saúde, estresse, ética sexual, a esposa do pastor); a **preparação para o avivamento** (oração, evangelismo, implantação de igrejas e a formação de presbíteros e diáconos); a **prestação de contas** (corpos ministeriais, assembleias, questões legais, finanças, conflitos); o **ministério ao corpo de crentes** (auxiliares, crescimento, aconselhamento); e a **adoração ungida pelo Espírito** (preparo do sermão, música, oração, pregação pentecostal).
+As seis unidades dão o mapa do que um pastor precisa dominar, segundo o livro: as **prioridades na vida do pastor** (devocional, casamento, estudo, pregação expositiva); a **vida pessoal** (caráter, finanças, saúde, estresse, ética sexual, a esposa do pastor); a **preparação para o avivamento** (oração, evangelismo, implantação de igrejas e a formação de presbíteros e diáconos); a **prestação de contas** (corpos ministeriais, assembleias, questões legais, finanças, conflitos); o **ministério ao corpo de crentes** (auxiliares, crescimento, aconselhamento); e a **adoração ungida pelo Espírito** (preparo do sermão, música, oração, pregação pentecostal).
 
-O prefácio dá o tom: os métodos de alcançar as pessoas mudam, a mensagem pentecostal não pode mudar, e o pastor depende do poder do Espírito para guiar uma igreja num mundo complexo. O livro diz que se destina a pastores das Assembleias de Deus e de qualquer outra comunidade pentecostal.
+O prefácio dá o tom: os métodos de alcançar as pessoas mudam, a mensagem pentecostal não pode mudar, e o pastor depende do poder do Espírito para guiar uma igreja num mundo complexo.
 
 ## Liderar em Equipe
 
@@ -60,7 +60,7 @@ O terceiro capítulo lido trata de prestar contas: informar e dar razão das pr�
 Na prática, o capítulo propõe definir padrões claros, por exemplo em aulas de membresia, que ensinam os compromissos, as doutrinas, o plano financeiro e o estatuto, e listas de expectativas para os líderes. A lista de expectativas para diáconos, no exemplo dado, é assinada por quem aceita a indicação. Os casos contados mostram uma disciplina que termina em restauração: afastamento do ministério, um período de prova de alguns anos, apoio da convenção estadual, reconciliação com a congregação. As etapas da disciplina que o capítulo enumera começam por comunicação e confrontação.
 
 :::nota
-**Um livro americano, traduzido para o Brasil.** Os modelos de “corpo ministerial”, “curadores”, “presbitério” e “superintendente distrital” descrevem as Assembleias de Deus dos Estados Unidos. No Brasil, a organização varia de uma convenção e de um ministério para outro. O manual ajuda a pensar princípios (equipe, prestação de contas, qualificações), mas não diz como cada igreja brasileira escolhe os seus obreiros. Para isso valem o estatuto e o regimento de cada uma.
+**A referência é a Bíblia.** Os modelos de “corpo ministerial”, “curadores” e “presbitério” descrevem a estrutura de igrejas de outro país, e o próprio capítulo admite que o Novo Testamento é mais descritivo do que prescritivo. O que vale para todas as igrejas é o que os textos pedem: servir e ser íntegro ([[1Tm 3.1-13]]; [[Tt 1.5-9]]), escolher homens aprovados ([[At 6.3]]) e prestar contas ([[Hb 13.17]]). Como cada igreja organiza isso depende do seu estatuto.
 :::
 
 :::leia cargos-na-assembleia-de-deus
@@ -68,5 +68,5 @@ O que a Bíblia pede de quem lidera e o que se sabe, por escrito, sobre cada car
 :::
 
 :::leia diacono-presbitero-e-pastor-nos-manuais
-Este manual comparado com o do diácono e com o manual batista: provar, escolher, ordenar e prestar contas.
+Este manual comparado com os outros dois, à luz da Bíblia: provar, escolher, ordenar e prestar contas.
 :::

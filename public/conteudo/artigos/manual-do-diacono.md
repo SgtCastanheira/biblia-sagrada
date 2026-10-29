@@ -1,4 +1,4 @@
-O diácono é o primeiro cargo que a Igreja criou depois dos apóstolos, e o primeiro que muita gente de uma Assembleia de Deus enxerga de perto: é ele quem recolhe a oferta, serve a Santa Ceia, cuida das portas e visita quem está doente. O *Manual do Diácono*, de Claudionor Corrêa de Andrade (CPAD, 1999), reúne em doze capítulos o que se espera de quem serve assim. Esta síntese, em palavras próprias, apoia-se na introdução e nos capítulos sobre a natureza do diaconato, as qualificações, a provação, os deveres e a ordenação, mais o começo do capítulo de ética. Os capítulos sobre filantropia, Santa Ceia, ofertas, porteiro e evangelismo, e a conclusão, só foram vistos pelos títulos e pelos resumos de abertura.
+O diácono é o primeiro cargo que a Igreja criou depois dos apóstolos, e o primeiro que muita gente enxerga de perto na igreja: é ele quem recolhe a oferta, serve a Santa Ceia, cuida das portas e visita quem está doente. O *Manual do Diácono*, de Claudionor Corrêa de Andrade (CPAD, 1999), reúne em doze capítulos o que se espera de quem serve assim. Esta síntese, em palavras próprias, apoia-se na introdução e nos capítulos sobre a natureza do diaconato, as qualificações, a provação, os deveres e a ordenação, mais o começo do capítulo de ética. Os capítulos sobre filantropia, Santa Ceia, ofertas, porteiro e evangelismo, e a conclusão, só foram vistos pelos títulos e pelos resumos de abertura.
 
 ## Servir É a Essência
 
@@ -46,7 +46,7 @@ Duas delas ficam mais claras no texto. A **reputação** vem primeiro porque foi
 O capítulo mais prático é o da provação. O ponto de partida é [[1Tm 3.10]]: os candidatos devem ser primeiro provados, depois servir. A provação é o tempo que antecede a ordenação, em que a igreja conhece o candidato e o candidato conhece a si mesmo. O manual cita um estudioso de grego para lembrar que não se trata de uma prova formal, e sim da aprovação da igreja antes de o homem ocupar o cargo.
 
 :::ficha As Quatro Provas
-- Espiritual | A conversão e os frutos (“Pelos seus frutos os conhecereis”, [[Mt 7.16]]), além da experiência pentecostal: o candidato recebeu o Espírito Santo quando creu? ([[At 19.2]])
+- Espiritual | A conversão e os frutos (“Pelos seus frutos os conhecereis”, [[Mt 7.16]]), além da vida no Espírito: o candidato recebeu o Espírito Santo quando creu? ([[At 19.2]])
 - Moral | A vida particular: cumpre os compromissos, tem bom testemunho dos de fora, cuida da esposa e dos filhos ([[1Tm 5.8]]) e é de confiança no trato com crianças e jovens.
 - Social | Se convive bem com os outros: o diácono precisa ser tratável e acessível, e não alguém fechado em si mesmo.
 - Vocacional | Se tem iniciativa: quem só faz o que lhe mandam não passa de servo inútil. O candidato já ajuda o pastor, recolhe a oferta, cuida do culto e dos pobres antes de receber o cargo?
@@ -56,7 +56,7 @@ Duas orientações chamam a atenção. A primeira é a **discrição**: o livro 
 
 ## Os Deveres com o Pastor, o Ministério e a Doutrina
 
-O capítulo sobre os deveres eclesiásticos organiza o trabalho do diácono em três frentes. **Com o pastor:** ser o auxiliar mais direto, cuidando do material (bancos arrumados, elementos da Ceia preparados) para que o pastor cuide do espiritual. **Com o ministério:** trabalhar em equipe, participar das reuniões, opinar com humildade e nunca seguir carreira solo. **Com a história e a doutrina da igreja:** conhecer como a denominação começou e o que ela crê. Para isso, o próprio livro reproduz o credo das Assembleias de Deus no Brasil e a Declaração de Verdades Fundamentais de 1916, para que o diácono saiba expor sua fé como Estêvão soube diante do Sinédrio.
+O capítulo sobre os deveres eclesiásticos organiza o trabalho do diácono em três frentes. **Com o pastor:** ser o auxiliar mais direto, cuidando do material (bancos arrumados, elementos da Ceia preparados) para que o pastor cuide do espiritual. **Com o ministério:** trabalhar em equipe, participar das reuniões, opinar com humildade e nunca seguir carreira solo. **Com a história e a doutrina da igreja:** conhecer como a comunidade começou e o que ela crê, para saber expor a fé como Estêvão soube diante do Sinédrio ([[At 7]]). O livro reproduz, para isso, o credo e a declaração de fé da igreja do autor.
 
 O índice mostra ainda o alcance do trabalho: o diácono como filantropo, o serviço da Santa Ceia, o recolhimento das ofertas, o porteiro e o evangelista. Esses capítulos não foram lidos para este estudo.
 
@@ -77,7 +77,7 @@ O livro dedica um capítulo à cerimônia, pensado sobretudo para os pastores, e
 O capítulo de ética começa com uma lembrança de infância, a de um velho diácono rigoroso, e define ética como o conjunto de normas de conduta do ministério. As fontes da ética do diácono são três: a Bíblia, os regulamentos da igreja local e a consciência do próprio diácono. Foi só essa abertura que se leu.
 
 :::nota
-**O que este livro é e o que não é.** É um manual de uma editora ligada às Assembleias de Deus, escrito por um pastor para orientar diáconos e quem os escolhe. Não é o estatuto nem o regimento de uma convenção. Por isso, a provação em sigilo, as quatro provas e o roteiro da ordenação são o que o manual **recomenda**: cada ministério e cada igreja aplica as suas próprias regras. Veja o estudo sobre os cargos para separar o que a Bíblia pede, o que se encontra por escrito e o que só se ouve dizer.
+**A referência é a Bíblia.** O que [[At 6.1-7]] e [[1Tm 3.8-13]] pedem do diácono (reputação, plenitude do Espírito, sabedoria, integridade, provação antes do serviço) é o que vale para qualquer igreja. A provação em sigilo, as quatro provas e o roteiro da ordenação são o que o autor **recomenda** a partir desses textos, e não uma ordem do Novo Testamento. Veja o estudo sobre os cargos para separar o que a Bíblia pede, o que se encontra por escrito e o que só se ouve dizer.
 :::
 
 :::leia cargos-na-assembleia-de-deus
@@ -85,5 +85,5 @@ Como alguém chega a cooperador, diácono, presbítero, evangelista e pastor, e 
 :::
 
 :::leia diacono-presbitero-e-pastor-nos-manuais
-Este manual, o do pastor pentecostal e o manual batista lado a lado: como cada um prova, ordena e sustenta quem serve.
+Este manual e os outros dois lado a lado, à luz da Bíblia: como cada um prova, ordena e sustenta quem serve.
 :::

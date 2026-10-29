@@ -595,3 +595,15 @@
     font: 600 18px/1.25 var(--heading-font);
   }
 }
+
+/* Destaque dos manuais do ministério: escuro, como a capa das histórias */
+.featured {
+  position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 6px; margin-top: 14px; padding: 18px 18px 16px;
+  border-radius: 22px; text-decoration: none; color: #fbf4e6;
+  background: radial-gradient(110% 80% at 100% 0%, rgba(226, 194, 140, .28), transparent 60%), linear-gradient(165deg, #45321f, #21180f 75%);
+  .mark { position: absolute; right: -10px; bottom: -18px; width: 120px; height: 120px; font-size: 120px; color: rgba(226, 194, 140, .12); }
+  .f-over { position: relative; font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 1.2px; color: #e2c28c; }
+  .f-title { position: relative; font: 600 24px/1.2 var(--heading-font); color: #fff8ec; }
+  .f-sub { position: relative; font: 400 15px/1.5 var(--reading-font); color: #eadfcb; }
+  .f-go { position: relative; display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; font: 600 14px Inter, sans-serif; color: #f1d9a8; mat-icon { font-size: 18px; width: 18px; height: 18px; } }
+}

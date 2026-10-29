@@ -55,7 +55,7 @@ Você ouviu que, em algumas convenções, o pastor precisa ser casado, não pode
 
 ## E os Manuais?
 
-Livros como o *Manual do Diácono*, o *Manual do Pastor Pentecostal* e o manual batista da igreja e do obreiro tratam de como provar, escolher e ordenar quem serve. Eles ajudam a entender os princípios, mas são **orientações de autores e editoras**, e não o regimento de uma convenção. Leia o que cada um diz, lado a lado, sem confundir recomendação com regra.
+Livros como o *Manual do Diácono*, o *Manual do Pastor Pentecostal* e o *Manual da Igreja e do Obreiro* tratam de como provar, escolher e ordenar quem serve. Eles ajudam a entender os princípios, mas são **orientações de autores e editoras**, e não o regimento de uma convenção. Leia o que cada um diz, lado a lado, sem confundir recomendação com regra.
 
 :::leia diacono-presbitero-e-pastor-nos-manuais
 Os três manuais comparados: quem escolhe, quanto tempo dura o cargo e como é a ordenação em cada tradição.

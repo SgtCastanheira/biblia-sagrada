@@ -126,6 +126,14 @@
     <a routerLink="/historia">Ver todas</a>
   </div>
   <app-story-rings />
+  <!-- Em destaque: os manuais de quem serve na igreja -->
+  <a class="featured" matRipple routerLink="/historia" [queryParams]="{ trilha: 'teologia' }">
+    <mat-icon class="mark" aria-hidden="true">volunteer_activism</mat-icon>
+    <span class="f-over">Em destaque · Teologia</span>
+    <span class="f-title">Manuais do Ministério</span>
+    <span class="f-sub">Diácono, pastor e obreiro: o que cada livro diz sobre provar, escolher e ordenar quem serve, lado a lado.</span>
+    <span class="f-go">Ver os quatro estudos <mat-icon>arrow_forward</mat-icon></span>
+  </a>
   @if (stories.unfinished(); as u) {
     <a class="continue card story-resume" matRipple [routerLink]="['/artigo', u.article.id]">
       <span class="book-badge"><mat-icon>{{ u.article.icon }}</mat-icon></span>
