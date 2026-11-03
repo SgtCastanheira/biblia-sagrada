@@ -113,6 +113,9 @@ Gunnar Vingren e Daniel Berg chegaram a Belém em 1910, e em 1911 nasceu a igrej
 :::leia irmaos-perseguidos
 :::
 
+:::leia estatuto-da-cgadb
+:::
+
 :::leia cargos-na-assembleia-de-deus
 Como se chega a cooperador, diácono, presbítero, evangelista e pastor, e o que cada convenção exige.
 :::

@@ -140,7 +140,7 @@ export const TRAILS: Trail[] = [
           { link: '/mapas/assembleia-de-deus-estados', icon: 'map', name: 'No mapa', description: 'De onde saiu cada pioneiro.' },
         ],
       },
-      { title: 'Perseguições, Convenções e Cargos', ids: ['nome-assembleia-de-deus', 'irmaos-perseguidos', 'madureira-e-a-separacao', 'cargos-na-assembleia-de-deus'] },
+      { title: 'Perseguições, Convenções e Cargos', ids: ['nome-assembleia-de-deus', 'irmaos-perseguidos', 'madureira-e-a-separacao', 'estatuto-da-cgadb', 'cargos-na-assembleia-de-deus'] },
     ],
   },
   {

@@ -35,10 +35,10 @@ Os critérios mais citados vêm de três textos: [[At 6.3]], [[1Tm 3.1-13]] e [[
 
 ## O que Encontrei por Escrito
 
-Não achei um texto oficial, público e nacional da CGADB, da CONAMAD ou da CADB com os requisitos de cada cargo. O que apareceu foi:
+Achei o estatuto oficial da CGADB, que define quem pode ser membro (o pastor consagrado, art. 5º), mas não os requisitos de cada cargo: eles ficam no regimento interno, que não consegui ler. Dos estatutos da CONAMAD e da CADB, não achei texto oficial. O que apareceu foi:
 
 - **Um regimento de uma igreja local**, o da Assembleia de Deus Filadélfia de Luziânia (GO), que exige, para a consagração ao pastorado, que o candidato seja **homem, maior de 21 anos e casado**, recomenda o ensino fundamental completo e o curso básico de teologia, e menciona a fidelidade nos dízimos. É um **exemplo**, e vale só para aquela igreja.
-- **Mulheres.** A CGADB **não consagra mulheres ao pastorado**; a CONAMAD e a CADB consagram. Em 2011, a Convenção das Assembleias de Deus do Distrito Federal aprovou a possibilidade de consagrar mulheres pastoras. É um exemplo de como as regras mudam de uma convenção para outra.
+- **Mulheres.** O estatuto da CGADB exige que o membro seja “do sexo masculino, conforme definido na Bíblia Sagrada”, e consagrado ao pastorado (art. 5º), de modo que a CGADB **não consagra mulheres ao pastorado**; a CONAMAD e a CADB consagram. Em 2011, a Convenção das Assembleias de Deus do Distrito Federal aprovou a possibilidade de consagrar mulheres pastoras. É um exemplo de como as regras mudam de uma convenção para outra.
 - **Curso bíblico.** Um estudo sobre a Assembleia de Deus registra que uma convenção instituiu, em 1978, a **obrigatoriedade do curso bíblico** para o pastorado, o que levou à criação de institutos bíblicos nas igrejas-sede. Hoje, a formação é cobrada em graus diferentes, de acordo com cada ministério.
 
 ## “Dizem que...”: O Casamento, o Divórcio e o Nome Limpo
@@ -71,4 +71,8 @@ As três convenções, a separação de 1989 e como cada uma se organiza.
 
 :::leia ministerios-na-biblia
 Apóstolos, profetas, evangelistas, pastores, mestres, presbíteros e diáconos na Bíblia.
+:::
+
+:::leia estatuto-da-cgadb
+O que o estatuto da CGADB diz sobre membros, convenções afiliadas e disciplina, e o que mudou de 2023 para 2025.
 :::

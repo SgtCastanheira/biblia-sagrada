@@ -669,6 +669,23 @@ export const ARTICLES: Article[] = [
     minutes: 3,
   },
   {
+    id: 'estatuto-da-cgadb',
+    collection: 'igreja',
+    title: 'O Estatuto da CGADB: O que Diz e o que Mudou',
+    subtitle: 'Quem pode ser membro, como a convenção decide e o que mudou do estatuto de 2023 para o de 2025, segundo os documentos oficiais.',
+    topics: [
+      'O que É a CGADB?',
+      'Quem Pode Ser Membro e o que se Exige Dele?',
+      'Como a Convenção se Organiza?',
+      'O que São as Convenções Afiliadas?',
+      'Quem É Dono de Quê?',
+      'O que Mudou de 2023 para 2025?',
+    ],
+    period: '1930–hoje',
+    icon: 'gavel',
+    minutes: 7,
+  },
+  {
     id: 'irmaos-perseguidos',
     collection: 'igreja',
     title: 'Os Irmãos Perseguidos',

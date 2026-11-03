@@ -29,6 +29,25 @@ Modelo:
 
 ---
 
+## 2026-11-03 08:47 -0400 — Estudo do estatuto da CGADB
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Novo estudo `estatuto-da-cgadb` (coleção Igreja): o que é a CGADB, quem pode ser membro (art. 5º), órgãos e quóruns, convenções afiliadas, entidades controladas e o que mudou do estatuto de 2023 para o de 2025.
+- O estudo `cargos-na-assembleia-de-deus` passou a citar o estatuto oficial (antes dizia que não havia texto oficial) e ganhou um cartão para o novo estudo; o panorama da Igreja também.
+
+**Decisões:**
+- Só os dois PDFs oficiais do site da CGADB foram usados. São imagens escaneadas, lidas por reconhecimento de texto (OCR) e conferidas à mão nos trechos principais; o estudo avisa que os números dos artigos devem ser confirmados no PDF.
+- O estudo diz claramente o que não foi lido: regimento interno e código de ética da CGADB, estatutos da CONAMAD, da CADB e de outras convenções. Não se generalizou a regra de uma convenção para as demais.
+- Não há versões anteriores a 2023 no site, então a comparação cobre só 2023 → 2025.
+
+**Arquivos:** `public/conteudo/artigos/estatuto-da-cgadb.md`, `cargos-na-assembleia-de-deus.md`, `panorama-da-igreja.md`, `src/app/core/library.ts`, `trails.ts`, `sources.ts`, `DIARIO.md`
+
+**Pendências:**
+- Obter o regimento interno e os estatutos das outras convenções, se forem publicados.
+- Não publicado: continua na branch `dev-fim-dos-tempos`, à espera do pedido do usuário (agora via pull request dev → main).
+
 ## 2026-10-29 19:29 -0400 — Branch `dev` para homologação, `main` só produção, e linter
 
 **Autor:** JacksonLuiz99, com Claude Code

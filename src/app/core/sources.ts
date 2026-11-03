@@ -458,6 +458,15 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ],
     works: ['araujo-dicionario', 'mariano', 'alencar', 'conde'],
   },
+  'estatuto-da-cgadb': {
+    ancientLabel: 'Documentos consultados',
+    ancient: [
+      'CGADB: Estatuto Social, consolidação aprovada em 29/04/2023 (cgadb.org.br/wp-content/uploads/2023/07/consolidacao-estatuto-2023.pdf)',
+      'CGADB: Estatuto Social, texto reformado em 19/04/2025 (cgadb.org.br/wp-content/uploads/2026/08/EstatutoCGADB2025.pdf)',
+      'Página de documentos da CGADB (cgadb.org.br/documentos): o regimento interno e os estatutos de outras convenções não foram consultados',
+    ],
+    works: ['declaracao-fe-ad', 'alencar'],
+  },
   'nome-assembleia-de-deus': { ancientLabel: 'Documentos e sites consultados', ancient: ['Registro em cartório da Assembleia de Deus em Belém, em 1918, como citado nos estudos de Gunnar Vingren e Daniel Berg do app', 'Wikipédia (en): Assembleias de Deus; Assemblies of God (o concílio de Hot Springs, 1914)'], works: ['conde', 'synan', 'alencar'] },
   'madureira-e-a-separacao': {
     ancientLabel: 'Documentos e sites consultados',
