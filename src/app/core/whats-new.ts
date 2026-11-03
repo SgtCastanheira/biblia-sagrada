@@ -22,6 +22,19 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'estudos-do-fim-dos-tempos',
+    date: '3 de novembro de 2026',
+    title: 'Seis Estudos sobre o Fim dos Tempos',
+    items: [
+      { icon: 'calendar_view_week', title: 'As setenta semanas de Daniel', text: 'A conta dos 490 anos passo a passo: de qual ordem se conta, quem é o ungido cortado e as três leituras da última semana, lado a lado.', link: '/artigo/setenta-semanas', tip: 'Também em Histórias › Profecias.' },
+      { icon: 'flight_takeoff', title: 'O arrebatamento', text: 'O que Paulo escreveu para consolar uma igreja de luto, em que todos concordam e como se divide quem espera antes, no meio ou depois da tribulação.', link: '/artigo/arrebatamento' },
+      { icon: 'masks', title: 'A trindade satânica', text: 'O dragão, a besta e o falso profeta: quem são, o que imitam e por que a Bíblia nunca usa esse nome.', link: '/artigo/trindade-satanica' },
+      { icon: 'balance', title: 'O juízo final', text: 'O grande trono branco, os livros abertos, um juízo ou vários, e o destino de quem se perde, com as leituras de cada tradição.', link: '/artigo/juizo-final' },
+      { icon: 'location_city', title: 'A Nova Jerusalém', text: 'Do jardim do Éden à cidade do Apocalipse: as medidas, o que não haverá mais e quem entra.', link: '/artigo/nova-jerusalem' },
+      { icon: 'format_list_numbered', title: 'Selos, trombetas e taças', text: 'As três séries de sete do Apocalipse e a pergunta que divide os leitores: sequência ou ciclos?', link: '/artigo/selos-trombetas-e-tacas', tip: 'Em Histórias › Profecias › O Apocalipse por Dentro.' },
+    ],
+  },
+  {
     id: 'dados-protegidos',
     date: '29 de outubro de 2026',
     title: 'Seus Dados Mais Protegidos',

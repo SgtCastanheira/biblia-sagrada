@@ -70,6 +70,10 @@ Contando 483 anos (69 semanas) a partir de um decreto persa para reconstruir Jer
 | Cristológica | Contínua: cumprida no ministério de Cristo, que confirma a nova aliança e põe fim aos sacrifícios | Jesus |
 | Crítica | Os anos de Antíoco IV (171–164 a.C.) | O sumo sacerdote Onias III |
 
+:::leia setenta-semanas
+A conta dos 490 anos passo a passo: de qual ordem se conta, quem é o ungido cortado e as três leituras da última semana.
+:::
+
 ## Daniel 10–12 — Os Reis do Norte e do Sul
 
 A última visão é a mais detalhada da Bíblia. O capítulo 10 mostra uma batalha espiritual por trás da política: o anjo foi impedido por 21 dias pelo “príncipe do reino da Pérsia”, até que Miguel veio ajudá-lo [[Dn 10.12-13]].

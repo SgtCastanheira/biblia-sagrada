@@ -98,3 +98,11 @@ Daniel recebeu ordem de selar o livro; João, de não selar. O que era mistério
 Se o leitor esquecer todos os detalhes, deve lembrar isto: **o Cordeiro vence**. “Estes combaterão contra o Cordeiro, e o Cordeiro os vencerá, porque é o Senhor dos senhores e o Rei dos reis” [[Ap 17.14]]. Os que sofrem por Cristo não estão perdendo: “eles o venceram pelo sangue do Cordeiro e pela palavra do seu testemunho” [[Ap 12.11]].
 
 O livro termina como a Bíblia começou — com um jardim, um rio e a árvore da vida [[Ap 22.1-2]] — e com uma oração que a igreja faz até hoje: “Amém. Ora vem, Senhor Jesus” [[Ap 22.20]].
+
+:::leia selos-trombetas-e-tacas
+As três séries de sete por dentro: o que cada uma mostra e se elas se seguem ou se repetem.
+:::
+
+:::leia trindade-satanica
+O dragão, a besta e o falso profeta, as quatro leituras da besta e o que o livro pede de quem os vê.
+:::
