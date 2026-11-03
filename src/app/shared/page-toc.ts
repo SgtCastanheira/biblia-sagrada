@@ -83,7 +83,10 @@ export class PageToc {
       const visible = new Set<string>();
       this.observer = new IntersectionObserver(
         (entries) => {
-          for (const e of entries) (e.isIntersecting ? visible.add(e.target.id) : visible.delete(e.target.id));
+          for (const e of entries) {
+            if (e.isIntersecting) visible.add(e.target.id);
+            else visible.delete(e.target.id);
+          }
           const first = anchors.find((a) => visible.has(a));
           if (first) this.active.set(first);
         },

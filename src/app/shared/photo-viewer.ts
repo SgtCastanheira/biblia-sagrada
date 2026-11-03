@@ -14,14 +14,20 @@ export interface ViewedPhoto {
 @Component({
   selector: 'app-photo-viewer',
   imports: [MatIconModule],
-  host: { '(document:keydown.escape)': 'photo() && close.emit()' },
+  host: { '(document:keydown.escape)': 'photo() && closed.emit()' },
   template: `
     @if (photo(); as p) {
-      <div class="viewer" role="dialog" aria-modal="true" [attr.aria-label]="p.alt || 'Imagem ampliada'" (click)="close.emit()">
-        <button #closeButton type="button" class="close" (click)="close.emit()" aria-label="Fechar a imagem"><mat-icon>close</mat-icon></button>
+      <!-- Pelo teclado, Esc e o botão Fechar fazem o mesmo que tocar fora da imagem -->
+      <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -->
+      <div class="viewer" role="dialog" aria-modal="true" [attr.aria-label]="p.alt || 'Imagem ampliada'" (click)="closed.emit()">
+        <button #closeButton type="button" class="close" (click)="closed.emit()" aria-label="Fechar a imagem"><mat-icon>close</mat-icon></button>
+        <!-- Ampliar com o dedo; no computador a imagem já aparece grande -->
+        <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
         <div class="frame" [class.zoomed]="zoomed()" (click)="$event.stopPropagation(); zoomed.set(!zoomed())">
           <img [src]="'conteudo/' + p.src" [alt]="p.alt" />
         </div>
+        <!-- Só impede que o toque na legenda feche a imagem -->
+        <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
         @if (p.caption) { <p class="caption" (click)="$event.stopPropagation()">{{ p.caption }}</p> }
         <p class="hint">{{ zoomed() ? 'Arraste para ver os detalhes · toque para voltar' : 'Toque na imagem para ampliar' }}</p>
       </div>
@@ -49,7 +55,7 @@ export interface ViewedPhoto {
 })
 export class PhotoViewer {
   readonly photo = input<ViewedPhoto | null>(null);
-  readonly close = output<void>();
+  readonly closed = output<void>();
   protected readonly zoomed = signal(false);
   private readonly closeButton = viewChild<ElementRef<HTMLButtonElement>>('closeButton');
 

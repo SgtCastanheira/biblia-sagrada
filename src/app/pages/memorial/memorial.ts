@@ -241,7 +241,7 @@ export class MemorialPage {
    * de Judá do mesmo tempo dividem a linha; os grandes fatos ocupam a linha inteira.
    */
   protected readonly realmRows = computed(() => {
-    type Row = { israel?: Person; juda?: Person; event?: (typeof TWO_KINGDOMS_EVENTS)[number] };
+    interface Row { israel?: Person; juda?: Person; event?: (typeof TWO_KINGDOMS_EVENTS)[number] }
     const all = this.all() ?? [];
     const kings = (['reis-israel', 'reis-juda'] as const).flatMap((g) =>
       all.filter((p) => p.groups.includes(g) && p.reign).map((p, i) => ({ key: reignStart(p.reign!.years), order: i, side: g === 'reis-israel' ? 'israel' as const : 'juda' as const, p })),

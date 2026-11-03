@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { AudioEntry, AudioIndex, normalizeForMatch, textKey } from './audio-text';
+import { AudioEntry, AudioIndex, textKey } from './audio-text';
 import { splitForSpeech } from './speech-split';
 import { narrationVoice, portugueseVoices, warmUpVoices } from './voice';
 
@@ -92,8 +92,9 @@ export class ListenService {
       .then((r) => (r.ok ? (r.json() as Promise<AudioIndex>) : null))
       .catch(() => null);
     return this.audioIndex.then((index) => {
-      if (index) this.recordedVoice.set(index.voice);
-      return index?.files[key] ?? null;
+      const entry = index?.files[key] ?? null;
+      if (index) this.recordedVoice.set(entry?.voice ?? index.voice);
+      return entry;
     });
   }
 

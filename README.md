@@ -64,9 +64,28 @@ Não rode duas suítes ao mesmo tempo: elas disputam o mesmo `ng serve` e o mesm
 
 **No Windows**, `npm run test:offline` não funciona (o cmd.exe não entende o `PROD=1` do script). Use, no PowerShell: `$env:PROD='1'; npx playwright test --project=producao`.
 
-### Testes antes de publicar
+### Lint
 
-Todo push na `main` publica o app no GitHub Pages, mas antes o GitHub Actions roda os testes de lógica (`npx playwright test --project=logica`). **Se algum falhar, o app não é publicado** e o site continua na versão anterior. Para ver o resultado, abra a aba **Actions** do repositório no GitHub. Os testes de tela (celular e computador) ainda rodam só no computador de quem desenvolve.
+```bash
+npm run lint
+```
+
+Confere o código TypeScript e os templates (inclusive regras de acessibilidade) com o `angular-eslint`. O código está sem nenhum problema; o CI falha se aparecer algum.
+
+## Branches: desenvolvimento e produção
+
+| Branch | Para quê | O que acontece a cada envio |
+|---|---|---|
+| `dev` | Desenvolvimento e homologação (branch padrão) | O GitHub Actions roda lint, testes de lógica e build (workflow **Testes**). Não publica nada. |
+| `main` | Produção: o app no ar | Roda lint e testes de lógica e, se passarem, publica no GitHub Pages (workflow **Publicar no GitHub Pages**). Se algo falhar, o site continua na versão anterior. |
+
+Como trabalhar:
+
+1. Desenvolva na `dev` (ou numa branch criada a partir dela).
+2. Quando a `dev` estiver testada e aprovada, abra um **pull request da `dev` para a `main`**.
+3. Com os testes verdes no pull request, faça o merge: a `main` publica sozinha.
+
+Nunca envie direto para a `main`. Para ver o resultado dos testes, abra a aba **Actions** do repositório no GitHub. Os testes de tela (celular e computador) ainda rodam só no computador de quem desenvolve.
 
 ## Dados e conteúdo
 

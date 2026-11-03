@@ -388,7 +388,7 @@ export class BibleMapView {
 
     // Marcadores que se encostam viram um só ("Jerusalém 22–29"); ao aproximar, eles se separam
     type Member = (typeof raw)[number];
-    type Group = { members: Member[]; box: [number, number, number, number] };
+    interface Group { members: Member[]; box: [number, number, number, number] }
     const pad = f * 0.15;
     const boxOf = (m: Member): Group['box'] => [m.x - m.mw / 2 - pad, m.y - m.r - pad, m.x + m.mw / 2 + pad, m.y + m.r + pad];
     const touch = (a: Group['box'], b: Group['box']) => a[0] < b[2] && a[2] > b[0] && a[1] < b[3] && a[3] > b[1];

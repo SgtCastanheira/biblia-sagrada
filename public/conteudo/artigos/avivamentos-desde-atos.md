@@ -240,6 +240,13 @@ Moody foi um dos frutos daquele tempo de oração.
 :::leia avivamento-das-hebridas
 :::
 
+## A América do Sul (1909–hoje)
+
+O Chile, em 1909, e a Argentina, em 1954 e nos anos 1980 e 1990, aparecem nas fontes como lugares de avivamento. O estudo diz o que foi confirmado e o que não foi.
+
+:::leia avivamentos-na-america-do-sul
+:::
+
 ## Depois: Cruzadas e Renovação (1949–hoje)
 
 A partir de 1949, as **cruzadas de Billy Graham** levaram o evangelho a estádios do mundo inteiro, inclusive do Brasil. Nos anos 1960, a **renovação carismática** levou a experiência pentecostal a igrejas históricas, e o cristianismo cresceu muito na África, na Ásia e na América Latina. Os historiadores ainda discutem quais desses movimentos foram avivamentos no sentido antigo — mas todos mostram que a oração por avivamento continua.

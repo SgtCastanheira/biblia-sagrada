@@ -93,7 +93,7 @@ export class WhatsNewSheet {
   protected readonly tour = [
     { icon: 'home', title: 'Início', text: 'Versículo do dia', link: '/' },
     { icon: 'menu_book', title: 'Bíblia', text: 'Funciona sem internet', link: '/livros' },
-    { icon: 'local_library', title: 'Estudo', text: 'Mapas e história', link: '/estudo' },
+    { icon: 'auto_stories', title: 'História', text: 'Histórias, mapas e estudo', link: '/historia' },
     { icon: 'school', title: 'Ensino', text: 'EBD, IBUC e sermões', link: '/ensino' },
     { icon: 'person', title: 'Meu espaço', text: 'Devocional, anotações e favoritos', link: '/meu-espaco' },
   ];

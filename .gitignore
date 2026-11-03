@@ -67,3 +67,6 @@ tools/.audio-cache/
 
 # Livros de consulta (direitos autorais: nunca publicar)
 /Livros/
+
+# Amostras de voz para ouvir antes de gerar (tools/gerar-audio.mjs --amostra)
+tools/amostra-*.mp3
