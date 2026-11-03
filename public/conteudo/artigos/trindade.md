@@ -95,7 +95,7 @@ Quase todo erro sobre a Trindade é uma dessas três verdades deixada de lado. A
 - O que ensina | Que Deus é uma só pessoa, que aparece de três modos: como Pai no Antigo Testamento, como Filho nos Evangelhos e como Espírito hoje.
 - Quem ensinou | Práxeas e Noeto, por volta do ano 200, e Sabélio, em Roma, por volta de 220. Por isso também se chama sabelianismo.
 - Por que não serve | No batismo de Jesus, os três estão presentes ao mesmo tempo. O Filho ora ao Pai, e o Pai responde do céu. Jesus fala do Espírito como “outro Ajudador”.
-- Hoje | No começo do movimento pentecostal, nos Estados Unidos, entre 1913 e 1916, surgiu o ensino de que só se deve batizar “em nome de Jesus” e de que o Pai e o Espírito são só títulos de Jesus. As Assembleias de Deus americanas responderam em 1916 com uma declaração de fé que confessa a Trindade, e os pastores que pensavam diferente saíram. As igrejas unicistas existem até hoje.
+- Hoje | No começo do movimento pentecostal, nos Estados Unidos, entre 1913 e 1916, surgiu o ensino de que só se deve batizar “em nome de Jesus” e de que o Pai e o Espírito são só títulos de Jesus. As Assembleias de Deus americanas responderam em 1916 com uma declaração de fé que confessa a Trindade, e os pastores que pensavam diferente saíram. As igrejas unicistas existem até hoje. No Brasil, a Convenção Geral das Assembleias de Deus aprovou em 2023 um manifesto contra o unicismo, que reafirma a Trindade.
 :::
 
 :::ficha Arianismo (O Filho Como Criatura)

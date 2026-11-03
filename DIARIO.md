@@ -29,6 +29,27 @@ Modelo:
 
 ---
 
+## 2026-11-03 09:25 -0400 — Resoluções, manifesto e edital da CGADB no estudo do estatuto
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- O estudo `estatuto-da-cgadb` ganhou duas seções: "O que a Convenção Já Decidiu?" (Resolução 001/2011 sobre divórcio dos ministros, Resolução 001/2019 sobre união estável e o Manifesto contra o Unicismo, de 2023) e "Como É uma Assembleia na Prática?" (edital da 48ª AGO, de 20 a 23 de abril de 2027, com a retificação de 4/8/2026).
+- `cargos-na-assembleia-de-deus`: a seção do divórcio passou a citar a Resolução 001/2011 (antes dizia que não havia documento nacional) e a de "como saber a regra" cita as resoluções da CGADB.
+- `trindade`: uma frase sobre o manifesto de 2023 no bloco do modalismo; fontes dos três artigos atualizadas.
+
+**Decisões:**
+- As resoluções e o edital são PDFs de imagem; li por OCR e conferi os artigos e números. O manifesto veio como texto da página.
+- Tudo é apresentado como regra da CGADB e dos ministros a ela ligados; não foi estendido à CONAMAD, à CADB nem a outras convenções, pois não há texto delas.
+- O manifesto cita grupos pelo nome; o estudo diz que é o que o documento afirma e não faz juízo próprio sobre eles.
+- Ficou de fora o resto do edital (formas de pagamento, dados pessoais), que não ajuda a entender a estrutura.
+
+**Arquivos:** `public/conteudo/artigos/estatuto-da-cgadb.md`, `cargos-na-assembleia-de-deus.md`, `trindade.md`, `src/app/core/library.ts`, `sources.ts`, `DIARIO.md`
+
+**Pendências:**
+- Ainda sem o regimento interno da CGADB e sem estatutos de outras convenções.
+- Nada publicado; segue na branch `dev-fim-dos-tempos`.
+
 ## 2026-11-03 08:47 -0400 — Estudo do estatuto da CGADB
 
 **Autor:** Valtemir Junior (com Claude Code)

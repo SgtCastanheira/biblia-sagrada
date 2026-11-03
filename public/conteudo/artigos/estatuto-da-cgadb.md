@@ -1,9 +1,9 @@
 Quando alguém pergunta “quem manda na Assembleia de Deus?”, a resposta honesta é: depende de qual. Não existe uma única organização nacional que reúna todas as igrejas. Cada igreja tem o seu estatuto, cada ministério tem o seu, e as convenções têm os seus. Este estudo abre o estatuto de uma delas, a **CGADB**, a Convenção Geral dos Ministros das Igrejas Evangélicas Assembleia de Deus do Brasil, e mostra o que está escrito.
 
-A fonte é o próprio site da convenção, que publica duas versões: a consolidação aprovada em assembleia extraordinária em **29 de abril de 2023** (registrada em cartório em 14 de julho de 2023) e a aprovada em **19 de abril de 2025** (registrada em 13 de janeiro de 2026). Os dois arquivos são imagens escaneadas, sem texto copiável. Li as páginas com um programa de reconhecimento de texto e conferi à mão os trechos que mais pesam, mas para citar um artigo em documento oficial vale abrir o PDF.
+A fonte é o próprio site da convenção. Para o estatuto, ele publica duas versões: a consolidação aprovada em assembleia extraordinária em **29 de abril de 2023** (registrada em cartório em 14 de julho de 2023) e a aprovada em **19 de abril de 2025** (registrada em 13 de janeiro de 2026). Os dois arquivos são imagens escaneadas, sem texto copiável. Além do estatuto, usei duas resoluções da assembleia geral, um manifesto doutrinário e um edital de convocação, todos publicados no mesmo site. Li as páginas com um programa de reconhecimento de texto e conferi à mão os trechos que mais pesam, mas para citar um artigo em documento oficial vale abrir o PDF.
 
 :::nota
-**O que este estudo não cobre.** Só encontrei os estatutos da CGADB. Os da CONAMAD, da CADB e de outras convenções não estavam disponíveis para consulta, e o regimento interno e o código de ética e disciplina da CGADB, a que o estatuto remete, não puderam ser lidos. O que vale para uma convenção não vale, sem prova, para as outras.
+**O que este estudo não cobre.** Só encontrei os documentos da CGADB. Os estatutos da CONAMAD, da CADB e de outras convenções não estavam disponíveis para consulta, e o regimento interno e o código de ética e disciplina da CGADB, a que o estatuto remete, não puderam ser lidos. Tudo o que está aqui vale para a CGADB e para os ministros ligados a ela, e não para toda igreja chamada Assembleia de Deus. O que vale para uma convenção não vale, sem prova, para as outras.
 :::
 
 ## O que É a CGADB?
@@ -79,6 +79,50 @@ Comparei as duas versões artigo por artigo. As mudanças que encontrei são pou
 :::
 
 Não existe, no site, o histórico das versões anteriores a 2023. Quem quiser saber o que mudou antes disso precisa das atas das assembleias ou dos estatutos antigos, que não pude consultar.
+
+## O que a Convenção Já Decidiu?
+
+O estatuto dá o quadro, e as **resoluções** da assembleia geral tratam de casos concretos. O site da CGADB publica duas que mexem diretamente com a vida dos ministros, e um manifesto de doutrina.
+
+:::ficha Resolução 001/2011: Divórcio dos Ministros
+- Onde e quando | 40ª Assembleia Geral Ordinária, em Cuiabá (MT), em 13 de abril de 2011. Revogou uma resolução anterior, a 001/95, de 29 de janeiro de 1995.
+- O que decidiu | A CGADB só reconhece o divórcio de ministro nos casos de **infidelidade conjugal** comprovada, com base em [[Mt 5.31-32]] e [[Mt 19.9]] (art. 1º). Antes de qualquer ação de divórcio, as convenções estaduais devem esgotar os esforços de reconciliação (art. 2º).
+- Se o ministro se divorciou | Se o divórcio se deu nesses termos, ou se a iniciativa partiu da esposa ([[1Co 7.15]]), ele pode ou não permanecer no ministério, e **quem decide é a convenção estadual**, com recurso à Mesa Diretora e à assembleia geral (art. 4º).
+- Novo casamento | O ministro que foi vítima de infidelidade da esposa pode casar de novo, e cada caso é examinado pela convenção estadual (art. 4º, § 1º). Se ele deu causa ao divórcio, a permanência ou o retorno ao ministério depende de exame e decisão da convenção estadual, com direito de defesa (§ 2º).
+- Quem acolhe | O ministro que acolher um ministro divorciado sem seguir a resolução responde disciplinarmente (art. 5º).
+:::
+
+A mesma resolução afirma, no artigo 3º, que a CGADB **não reconhece a união estável** na vida ministerial dos seus membros. Em **2019**, a 44ª assembleia, em Belém (PA), voltou ao tema na Resolução 001/2019:
+
+:::ficha Resolução 001/2019: União Estável
+- O que decidiu | **Ratificou** a resolução de 2011 para os ministros membros da CGADB (art. 1º). Esclareceu que união estável e concubinato **não se confundem com o matrimônio**, distinção que a própria lei civil faz (art. 2º). E recomendou às convenções afiliadas e aos pastores que definam procedimentos locais para os casos de congregados nessa situação, “levando em conta a supremacia das normas bíblicas” (art. 3º).
+- Por quê | Os considerandos citam o debate sobre a união estável em lugar do casamento, a ordem de [[Hb 13.4]] sobre honrar o matrimônio, o fato de que há congregados que não recebem o batismo em águas por falta do requisito do matrimônio e a frase de [[At 5.29]]: “mais importa obedecer a Deus do que aos homens”.
+- Assina | O presidente da CGADB, pastor José Wellington Costa Junior.
+:::
+
+:::nota
+**O que essas resoluções são e o que não são.** Elas obrigam os **ministros membros da CGADB**, e as convenções estaduais é que decidem cada caso. Não encontrei texto igual para a CONAMAD, para a CADB ou para os ministérios independentes. Quem é de outra convenção precisa procurar o documento da sua.
+:::
+
+O terceiro documento é de **doutrina**. Na 46ª assembleia, em Novo Hamburgo (RS), em 2023, a CGADB aprovou um *Manifesto contra o Unicismo*, preparado pelo Conselho de Doutrina e pela Comissão de Apologética. O manifesto reafirma a Trindade, apoiado na Declaração de Fé das Assembleias de Deus (cap. III.2), apresenta o unicismo como uma adaptação do modalismo antigo e **orienta as igrejas a não usar as músicas nem a fazer circular as publicações** de grupos que ele chama de unicistas, entre eles o conjunto Voz da Verdade. É o que o documento diz, e a avaliação de cada grupo cabe a cada leitor.
+
+:::leia trindade
+A doutrina que o manifesto defende, o que a Bíblia diz do Pai, do Filho e do Espírito, e as outras maneiras de errar nesse assunto.
+:::
+
+## Como É uma Assembleia na Prática?
+
+O estatuto fica abstrato até que se leia um edital. O da **48ª Assembleia Geral Ordinária**, publicado em 31 de julho de 2026 e retificado em 4 de agosto, mostra como funciona:
+
+:::ficha A 48ª Assembleia Geral Ordinária
+- Quando e onde | De 20 a 23 de abril de 2027, em Belém (PA), na sede da convenção do Pará. A forma é presencial (art. 24, § 1º).
+- Pauta | As contas dos órgãos e entidades controladas de 2025 e 2026, com parecer do Conselho Fiscal; a **homologação da Comissão Eleitoral** que conduzirá a eleição da 49ª assembleia, para o quadriênio 2029 a 2033; e os temas eclesiásticos escolhidos pela Comissão de Temário.
+- Quem vota | Só ministros inscritos e em dia com a anuidade de 2026. A inscrição custa R$ 250 e vai até as 19h de 26 de fevereiro de 2027.
+- Presbíteros convidados | Podem assistir como ouvintes, **sem voz nem voto**, pagando R$ 150 (a taxa fica a cargo da convenção afiliada). Não entram no plenário nas votações que o estatuto ou a Mesa reservarem aos membros, como as eleições.
+- Esposas | A União Nacional das Esposas dos Ministros, órgão previsto no art. 42, § 3º, convida as esposas dos inscritos para o mesmo período, com taxa de R$ 100.
+:::
+
+O edital mostra que a assembleia tem pauta, prazo, taxa e credencial. E mostra quem decide: o **voto** é dos ministros inscritos, e não dos presbíteros convidados nem dos membros das igrejas.
 
 ## Para a Vida
 
