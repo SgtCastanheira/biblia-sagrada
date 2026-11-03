@@ -29,6 +29,26 @@ Modelo:
 
 ---
 
+## 2026-11-03 21:00 -0400 — Livros na tela inicial e voz da ElevenLabs na ferramenta de áudio
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- As bolinhas de assuntos (tela inicial e seletor dentro de um assunto) viraram **livros em pé**, com a cor de cada assunto (`Trail.tone`), como na biblioteca. O componente `shared/story-rings.ts` virou `shared/story-books.ts`. Os destinos não mudaram (cada livro abre o assunto em `/historia?trilha=`).
+- `tools/gerar-audio.mjs` ganhou a **ElevenLabs** como segunda voz (`--provedor elevenlabs`, `ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID`), mantendo o Azure como padrão. Também: `--amostra` (grava só o começo de uma história em `tools/amostra-*.mp3` para escolher a voz), `--velocidade`, `--modelo`, estimativa de créditos no `--dry-run`, contexto do parágrafo anterior e seguinte para a entonação, pausa entre trechos, nova tentativa em erro 429/5xx e mensagens claras para chave inválida e créditos esgotados.
+- A duração de cada trecho passou a ser medida no próprio MP3 (soma dos quadros), em vez de supor taxa de bits fixa; o destaque do parágrafo no app depende desses tempos.
+
+**Decisões:**
+- Não foi gerado nenhum áudio e nenhuma chave foi usada: a ferramenta foi testada contra um servidor falso que imita a API (pedido, cabeçalhos, cache, tempos); o teste com a ElevenLabs de verdade depende da chave e do ID de voz do usuário.
+- Os termos do plano da ElevenLabs (uso comercial, atribuição) precisam ser conferidos antes de publicar áudios feitos com ela; está no LEIA-ME. O app continua gratuito.
+- A tela inicial manteve o destino antigo dos livros (lista do assunto); levá-los à estante da biblioteca fica como opção.
+
+**Arquivos:** `src/app/shared/story-books.ts`, `pages/home/*`, `pages/history/history.ts`, `tools/gerar-audio.mjs`, `tools/LEIA-ME.md`, `.gitignore`, `CLAUDE.md`, `DIARIO.md`
+
+**Pendências:**
+- Usuário: escolher a voz em pt-BR na ElevenLabs, criar a chave e rodar `--amostra`; depois gerar os áudios aos poucos.
+- Nada publicado; continua na branch `dev-fim-dos-tempos`.
+
 ## 2026-11-03 20:10 -0400 — A Igreja e os avivamentos na América do Sul; dicionários como livros
 
 **Autor:** Valtemir Junior (com Claude Code)

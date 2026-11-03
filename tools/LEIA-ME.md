@@ -21,7 +21,7 @@ Depois de gerar dados, rode `npm run test:e2e` (o protocolo confere referências
 
 ## gerar-audio.mjs — a narração em voz neural das histórias
 
-Grava, com a voz neural da Microsoft (Francisca, pt-BR), a narração de cada história e de cada estado da Assembleia de Deus. O app toca esses áudios no botão "Ouvir" (em qualquer navegador) e destaca o parágrafo que está sendo falado; onde não há áudio, usa a voz do aparelho.
+Grava, com a voz neural da Microsoft (Francisca, pt-BR) ou, se preferir, da ElevenLabs (veja abaixo), a narração de cada história e de cada estado da Assembleia de Deus. O app toca esses áudios no botão "Ouvir" (em qualquer navegador) e destaca o parágrafo que está sendo falado; onde não há áudio, usa a voz do aparelho.
 
 **Uma vez só: criar a chave (grátis)**
 
@@ -45,3 +45,28 @@ node tools/gerar-audio.mjs                       # todas (cerca de 290 mil carac
 - Gravações prontas ficam em `tools/.audio-cache` (fora do Git): rodar de novo só paga o que mudou. Se o texto de uma história mudar, o app deixa de usar a gravação antiga e volta à voz do aparelho até você gerar de novo.
 - Saída: `public/audio/artigos/*.mp3`, `public/audio/estados/*.mp3` e `public/audio/index.json` (de que segundo começa cada parágrafo). **Commite esses arquivos.** Não entram no cache offline do app (tocam pela internet).
 - A chave nunca é gravada em lugar nenhum pela ferramenta. Se ela vazar, gere outra no portal (Chaves e Ponto de Extremidade → Regenerar).
+
+### Com a voz da ElevenLabs (opcional)
+
+A mesma ferramenta grava com a ElevenLabs no lugar do Azure. O app não muda: ele só toca os MP3 e destaca o parágrafo.
+
+1. Em https://elevenlabs.io/app/speech-synthesis/ (a tela de Text to Speech), cole um trecho de uma história e **teste vozes em português do Brasil**. Escolha a que soar melhor.
+2. Copie o **ID da voz** (em *Voices*, no menu da voz: *Copy voice ID*). Se a voz for da Biblioteca de Vozes, adicione-a à sua conta primeiro.
+3. Crie uma **chave de API** (conta → *API Keys*; o nome do botão pode mudar no site).
+4. Rode:
+
+```bash
+export ELEVENLABS_API_KEY="cole-a-chave-aqui"     # só neste terminal; nunca em arquivo do projeto
+export ELEVENLABS_VOICE_ID="id-da-voz"
+
+node tools/gerar-audio.mjs --provedor elevenlabs --only igreja-primitiva --dry-run   # estimativa de créditos, sem gastar
+node tools/gerar-audio.mjs --provedor elevenlabs --only igreja-primitiva --amostra   # grava só o começo em tools/amostra-*.mp3 para ouvir
+node tools/gerar-audio.mjs --provedor elevenlabs --only igreja-primitiva             # a história inteira, dentro do app
+```
+
+- `--velocidade 0.9` deixa a fala mais lenta (padrão `0.95`; vai de 0,7 a 1,2); `--modelo eleven_multilingual_v2` é o padrão (o `eleven_v3` não aceita a marca de pausa nem o contexto entre parágrafos, que a ferramenta usa para a entonação seguir de um trecho ao outro).
+- O consumo é de cerca de **1 crédito por caractere** no modelo padrão; o `--dry-run` mostra o total. Todas as histórias passam de 290 mil caracteres: gere aos poucos com `--only` e `--limite`, e confira no site a franquia do seu plano.
+- **Antes de publicar áudios da ElevenLabs, confira nos termos do plano se o uso comercial e a atribuição estão liberados** (os planos gratuitos costumam ter restrições). O app é gratuito e para igrejas; se os termos pedirem crédito, inclua em `core/credits.ts` e no CREDITOS.md.
+- O texto das histórias vai para o serviço da ElevenLabs só quando você gera o áudio; o app em uso não fala com ela.
+- A chave nunca é gravada em lugar nenhum pela ferramenta. As gravações ficam no mesmo cache (`tools/.audio-cache`), separadas por voz: trocar de voz regrava, trocar de volta não gasta de novo.
+- A duração de cada trecho é medida no próprio MP3 (soma dos quadros), então o destaque do parágrafo acompanha a voz mesmo com outra taxa de bits.

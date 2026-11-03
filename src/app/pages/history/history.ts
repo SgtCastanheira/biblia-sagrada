@@ -6,7 +6,7 @@ import { findArticle } from '../../core/library';
 import { StoryProgressService } from '../../core/story-progress.service';
 import { Bookshelf } from '../../shared/bookshelf';
 import { StudyFinder } from '../../shared/study-finder';
-import { StoryRings } from '../../shared/story-rings';
+import { StoryBooks } from '../../shared/story-books';
 import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '../../core/trails';
 
 /**
@@ -15,7 +15,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
  */
 @Component({
   selector: 'app-history',
-  imports: [RouterLink, MatIconModule, MatRippleModule, Bookshelf, StoryRings, StudyFinder],
+  imports: [RouterLink, MatIconModule, MatRippleModule, Bookshelf, StoryBooks, StudyFinder],
   template: `
     <header class="page-head">
       <span class="overline">Biblioteca</span>
@@ -24,7 +24,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
     </header>
 
     @if (trail()) {
-      <app-story-rings [active]="trail()?.id" [all]="true" />
+      <app-story-books [active]="trail()?.id" [all]="true" />
     }
 
     @if (trail(); as t) {
@@ -116,7 +116,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
   `,
   styleUrl: '../../shared/study.scss',
   styles: `
-    .page-head + app-story-rings { margin-bottom: 18px; }
+    .page-head + app-story-books { margin-bottom: 18px; }
     .howto { margin-top: 18px; padding: 0 18px; border-left: 3px solid var(--accent-gold); }
     .howto summary { display: flex; align-items: center; gap: 8px; min-height: 52px; cursor: pointer; list-style: none; font: 600 17px var(--heading-font); }
     .howto summary::-webkit-details-marker { display: none; }
