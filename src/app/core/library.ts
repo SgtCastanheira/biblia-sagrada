@@ -660,6 +660,15 @@ export const ARTICLES: Article[] = [
     portraits: ['imagens/frida-vingren.jpg'],
   },
   {
+    id: 'nome-assembleia-de-deus',
+    collection: 'igreja',
+    title: 'Por que se Chama Assembleia de Deus?',
+    subtitle: 'O que a palavra quer dizer na Bíblia, de onde veio o nome e o ponto que as fontes não esclarecem.',
+    period: '1911–1918',
+    icon: 'groups',
+    minutes: 3,
+  },
+  {
     id: 'irmaos-perseguidos',
     collection: 'igreja',
     title: 'Os Irmãos Perseguidos',

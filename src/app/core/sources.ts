@@ -458,6 +458,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ],
     works: ['araujo-dicionario', 'mariano', 'alencar', 'conde'],
   },
+  'nome-assembleia-de-deus': { ancientLabel: 'Documentos e sites consultados', ancient: ['Registro em cartório da Assembleia de Deus em Belém, em 1918, como citado nos estudos de Gunnar Vingren e Daniel Berg do app', 'Wikipédia (en): Assembleias de Deus; Assemblies of God (o concílio de Hot Springs, 1914)'], works: ['conde', 'synan', 'alencar'] },
   'madureira-e-a-separacao': {
     ancientLabel: 'Documentos e sites consultados',
     ancient: [
