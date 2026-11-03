@@ -44,7 +44,8 @@ const BYTES_PER_SECOND = BITRATE / 8; // só para a estimativa; a duração real
 const PAUSE_MS = 500;
 /** Tudo o que muda o som: entra no cache e na "assinatura" de cada história. */
 const CONFIG = ELEVEN ? `elevenlabs|${VOICE}|${MODEL}|${SPEED}|${FORMAT}|${PAUSE_MS}` : `azure|${VOICE}|${RATE}|${FORMAT}|${PAUSE_MS}`;
-const VOICE_LABEL = ELEVEN ? `ElevenLabs ${VOICE} (${MODEL})` : VOICE;
+// Nome mostrado no player ("Brian (voz neural)"); na ElevenLabs o ID da voz não diz nada a quem ouve
+const VOICE_LABEL = ELEVEN ? option('nome-voz', 'ElevenLabs') : VOICE;
 const ONLY = option('only', '')?.split(',').filter(Boolean) ?? [];
 const FREE_MONTHLY_CHARS = 500_000;
 
@@ -115,10 +116,27 @@ if (flag('itens')) {
 const indexPath = join(root, 'public/audio/index.json');
 const index = existsSync(indexPath) ? JSON.parse(readFileSync(indexPath, 'utf8')) : { voice: '', files: {} };
 const sourceOf = (job) => createHash('sha1').update(`${CONFIG}|${job.items.map((i) => i.text).join('\n')}`).digest('hex').slice(0, 16);
-const pending = jobs.filter((j) => flag('force') || index.files[j.key]?.source !== sourceOf(j));
-const chars = pending.reduce((n, j) => n + j.items.reduce((m, i) => m + i.text.length, 0), 0);
+const textOf = (job) => createHash('sha1').update(job.items.map((i) => i.text).join('\n')).digest('hex').slice(0, 16);
+const charsOf = (job) => job.items.reduce((m, i) => m + i.text.length, 0);
+let pending = jobs.filter((j) => {
+  if (flag('force')) return true;
+  const entry = index.files[j.key];
+  // --completar: serve a gravação de qualquer voz; só falta o que não tem áudio ou cujo texto mudou
+  if (flag('completar')) return !entry || entry.text !== textOf(j);
+  return entry?.source !== sourceOf(j);
+});
+// --cota: grava até esse tanto de caracteres (a franquia grátis do provedor) e deixa o resto para a próxima rodada
+const quota = Number(option('cota', '0'));
+let postponed = 0;
+if (quota) {
+  let used = 0;
+  const fit = pending.filter((j) => (used + charsOf(j) <= quota ? ((used += charsOf(j)), true) : false));
+  postponed = pending.length - fit.length;
+  pending = fit;
+}
+const chars = pending.reduce((n, j) => n + charsOf(j), 0);
 
-console.log(`${jobs.length} histórias · ${pending.length} para gerar · ${chars.toLocaleString('pt-BR')} caracteres`);
+console.log(`${jobs.length} histórias · ${pending.length} para gerar · ${chars.toLocaleString('pt-BR')} caracteres${postponed ? ` · ${postponed} ficam para a próxima rodada (passam da cota de ${quota.toLocaleString('pt-BR')})` : ''}`);
 console.log(`Estimativa: ${Math.round(chars / 900)} minutos de áudio, ${Math.round((chars / 900) * 60 * BYTES_PER_SECOND / 1048576)} MB.`);
 if (ELEVEN) {
   console.log(`Voz ${VOICE || '(defina ELEVENLABS_VOICE_ID ou --voz)'}, modelo ${MODEL}, velocidade ${SPEED}.`);
@@ -268,7 +286,7 @@ for (const [n, job] of pending.entries()) {
   mkdirSync(dirname(out), { recursive: true });
   const all = Buffer.concat(parts);
   writeFileSync(out, all);
-  index.files[job.key] = { source: sourceOf(job), seconds: Math.round(seconds), items };
+  index.files[job.key] = { source: sourceOf(job), text: textOf(job), voice: VOICE_LABEL, seconds: Math.round(seconds), items };
   index.voice = VOICE_LABEL;
   mkdirSync(dirname(indexPath), { recursive: true });
   writeFileSync(indexPath, JSON.stringify(index));

@@ -29,6 +29,32 @@ Modelo:
 
 ---
 
+## 2026-11-03 16:41 -0400 — Áudio das histórias: revezar vozes e provedores dentro da franquia grátis
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- O servidor MCP da ElevenLabs foi autenticado na sessão e testamos vozes em português do Brasil com o Salmo 23.1-2 (Almeida): George, Sarah e Brian (vozes "premade", liberadas no plano grátis) e Mayla (biblioteca, pt-BR nativa). A escolhida foi a **Brian** (`nPczCjzI2devNBz1zQrb`). O teste com a Leonardo falhou porque as gerações grátis estavam ocupadas (nada foi cobrado). Os testes gastaram 448 créditos.
+- `tools/gerar-audio.mjs` ganhou `--completar` (só gera o que não tem áudio de nenhuma voz ou cujo texto mudou, sem regravar o que outro provedor já fez), `--cota N` (grava até N caracteres e deixa o resto para a próxima rodada) e `--nome-voz` (nome mostrado no player). Cada história passa a guardar `text` (resumo só do texto) e `voice` no `public/audio/index.json`.
+- O app mostra a voz da história que está tocando: `AudioEntry` ganhou `text?` e `voice?` (`core/audio-text.ts`) e `ListenService.recording` usa `entry.voice` antes de `index.voice` (`core/listen.service.ts`).
+- `tools/LEIA-ME.md` documenta o revezamento, com exemplos para ElevenLabs e Azure.
+
+**Decisões:**
+- `--completar` é uma flag, não o padrão: sem ela, trocar de voz continua regravando tudo, como o LEIA-ME já dizia. Assim nada muda para quem usa só um provedor.
+- Guardar `text` separado de `source`: `source` inclui provedor e voz (era a causa de a ferramenta regravar tudo ao trocar de provedor); `text` só muda quando o texto muda. Campos novos são opcionais, então um `index.json` antigo continua valendo.
+- `--cota` pega as histórias em ordem e pula as que passariam da cota, em vez de abortar como o `--limite`. O `--limite` ficou como estava.
+- Ficou de fora: ler o saldo de créditos da ElevenLabs pela API (a cota é informada à mão) e escolher o provedor automaticamente por saldo.
+
+**Arquivos:** `tools/gerar-audio.mjs`, `tools/LEIA-ME.md`, `src/app/core/audio-text.ts`, `src/app/core/listen.service.ts`, `DIARIO.md`
+
+**Pendências:**
+- Gravar a amostra com a Brian pela API (`--amostra`) quando a `ELEVENLABS_API_KEY` estiver no terminal, e confirmar que a chave gratuita aceita a voz.
+- Ouvir a Brian e decidir se o sotaque (voz em inglês falando português) serve; alternativas: Mayla ou Leonardo (pt-BR nativas, da biblioteca, que podem exigir plano pago na API).
+- Conferir os termos do plano grátis da ElevenLabs (atribuição, uso comercial) antes de publicar áudios; se pedirem crédito, incluir em `core/credits.ts` e no `CREDITOS.md`.
+- Nenhuma história foi gravada ainda: `public/audio/index.json` continua vazio.
+
+---
+
 ## 2026-11-03 21:00 -0400 — Livros na tela inicial e voz da ElevenLabs na ferramenta de áudio
 
 **Autor:** Valtemir Junior (com Claude Code)

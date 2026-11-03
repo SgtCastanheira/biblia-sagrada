@@ -67,6 +67,16 @@ node tools/gerar-audio.mjs --provedor elevenlabs --only igreja-primitiva        
 - `--velocidade 0.9` deixa a fala mais lenta (padrão `0.95`; vai de 0,7 a 1,2); `--modelo eleven_multilingual_v2` é o padrão (o `eleven_v3` não aceita a marca de pausa nem o contexto entre parágrafos, que a ferramenta usa para a entonação seguir de um trecho ao outro).
 - O consumo é de cerca de **1 crédito por caractere** no modelo padrão; o `--dry-run` mostra o total. Todas as histórias passam de 290 mil caracteres: gere aos poucos com `--only` e `--limite`, e confira no site a franquia do seu plano.
 - **Antes de publicar áudios da ElevenLabs, confira nos termos do plano se o uso comercial e a atribuição estão liberados** (os planos gratuitos costumam ter restrições). O app é gratuito e para igrejas; se os termos pedirem crédito, inclua em `core/credits.ts` e no CREDITOS.md.
+- **Revezar provedores e vozes dentro da franquia grátis** (ElevenLabs tem uns 10 mil créditos por mês; o Azure, 500 mil caracteres). Cada gravação guarda a própria voz no `index.json` e o player mostra quem narra aquela história. Use `--completar` (só gera o que não tem áudio de nenhuma voz ou cujo texto mudou, sem regravar o que outro provedor já fez) e `--cota` (grava até esse tanto de caracteres e deixa o resto para a próxima rodada):
+
+```bash
+# este mês, com a franquia da ElevenLabs (voz Brian, id nPczCjzI2devNBz1zQrb):
+node tools/gerar-audio.mjs --provedor elevenlabs --voz nPczCjzI2devNBz1zQrb --nome-voz Brian --completar --cota 9000
+# na rodada seguinte, com o Azure, as que faltam:
+node tools/gerar-audio.mjs --completar --cota 450000
+```
+
+  `--nome-voz` é o nome que aparece no player (padrão "ElevenLabs"). Uma história maior que a cota nunca entra: gere-a sozinha com `--only` e um provedor de franquia maior. Sem `--completar`, trocar de voz regrava tudo, como antes.
 - O texto das histórias vai para o serviço da ElevenLabs só quando você gera o áudio; o app em uso não fala com ela.
 - A chave nunca é gravada em lugar nenhum pela ferramenta. As gravações ficam no mesmo cache (`tools/.audio-cache`), separadas por voz: trocar de voz regrava, trocar de volta não gasta de novo.
 - A duração de cada trecho é medida no próprio MP3 (soma dos quadros), então o destaque do parágrafo acompanha a voz mesmo com outra taxa de bits.
