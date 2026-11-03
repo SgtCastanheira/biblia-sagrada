@@ -1,9 +1,15 @@
-import { Component, computed, DestroyRef, ElementRef, inject, signal, viewChild } from '@angular/core';
+import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
 import { findArticle } from '../core/library';
+import { saveLocal } from '../core/storage.service';
 import { StoryProgressService } from '../core/story-progress.service';
 import { Trail, TRAILS } from '../core/trails';
+
+const MODE_KEY = 'biblia.estante.modo';
+
+/** Como os livros ficam na prateleira: de frente (capa, título na horizontal) ou de lado (lombada). */
+type Mode = 'capas' | 'lombadas';
 
 /** Tempo, em ms, que a capa leva para abrir antes de entrar na história (igual ao da animação no CSS). */
 const OPEN_MS = 700;
@@ -70,13 +76,18 @@ function shelvesOf(t: Trail): Shelf[] {
 
 /**
  * Biblioteca: todos os estudos, cada um como a lombada de um livro. Cada assunto (tópico) é uma estante, com a
- * sua cor; dentro dela, uma prateleira por subtópico (cor do assunto, com tons e alturas diferentes). Tocar numa lombada tira o livro da prateleira e mostra a capa, com o título
- * inteiro; "Abrir o livro" faz a capa girar e entra na história. Com "reduzir movimento", entra direto.
+ * sua cor; dentro dela, uma prateleira por subtópico (cor do assunto, com tons e alturas diferentes). Tocar num livro já o abre: a capa aparece grande, gira como um livro abrindo e entra na história. Com "reduzir movimento", entra direto.
  */
 @Component({
   selector: 'app-bookshelf',
+  host: { '[class.capas]': "mode() === 'capas'" },
   imports: [MatIconModule, RouterLink],
   template: `
+    <div class="mode" role="group" aria-label="Como ver os livros">
+      <button type="button" [attr.aria-pressed]="mode() === 'capas'" (click)="setMode('capas')"><mat-icon>menu_book</mat-icon> Capas</button>
+      <button type="button" [attr.aria-pressed]="mode() === 'lombadas'" (click)="setMode('lombadas')"><mat-icon>view_week</mat-icon> Lombadas</button>
+    </div>
+
     <nav class="jump" aria-label="Assuntos da biblioteca">
       @for (s of sections(); track s.trail.id) {
         <button type="button" class="stop" [style.--tone]="s.trail.tone" [attr.aria-label]="'Ir para ' + s.trail.name" (click)="goTo(s.trail.id)">
@@ -100,8 +111,8 @@ function shelvesOf(t: Trail): Shelf[] {
               <h3 class="sub-title">{{ sh.title }}</h3>
               <ul class="row">
                 @for (b of sh.books; track b.key) {
-                  <li class="cell" [style.width.px]="b.w">
-                    <button type="button" class="spine" [class.light]="b.light" [class.shortcut]="b.shortcut" [style.--tone]="b.trail.tone" [style.--dark]="b.dark + '%'" [style.height.px]="b.h" [attr.aria-label]="label(b)" (click)="pick(b)">
+                  <li class="cell" [style.width.px]="mode() === 'lombadas' ? b.w : null">
+                    <button type="button" class="spine" [class.light]="b.light" [class.shortcut]="b.shortcut" [style.--tone]="b.trail.tone" [style.--dark]="b.dark + '%'" [style.height.px]="mode() === 'lombadas' ? b.h : null" [attr.aria-label]="label(b)" (click)="pick(b)">
                       <mat-icon class="ico" aria-hidden="true">{{ b.icon }}</mat-icon>
                       <span class="t">{{ b.title }}</span>
                       @if (isDone(b)) { <mat-icon class="done" aria-hidden="true">check_circle</mat-icon> }
@@ -115,32 +126,31 @@ function shelvesOf(t: Trail): Shelf[] {
       }
     </div>
 
-    <!-- O clique fora da capa só fecha com o mouse; pelo teclado, Esc fecha a janela -->
-    <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
-    <dialog #hold class="hold" aria-labelledby="hold-title" (close)="picked.set(null)" (click)="backdrop($event)">
-      @if (picked(); as b) {
+    @if (picked(); as b) {
+      <div class="stage" role="status" [attr.aria-label]="'Abrindo ' + b.title">
         <div class="vol" [class.opening]="opening()" [style.--tone]="b.trail.tone">
           <span class="inside" aria-hidden="true"></span>
-          <span class="cover">
+          <span class="cover" aria-hidden="true">
             <span class="front">
               <span class="foil"><mat-icon>{{ b.icon }}</mat-icon></span>
               <span class="over">{{ b.shortcut ? 'Atalho · ' : '' }}{{ b.trail.short }}</span>
-              <h3 id="hold-title">{{ b.title }}</h3>
+              <span class="ttl">{{ b.title }}</span>
               @if (meta(b); as m) { <span class="meta">{{ m }}</span> }
             </span>
             <span class="back"></span>
           </span>
         </div>
-        <p class="sub">{{ b.subtitle }}</p>
-        <div class="actions">
-          <button type="button" class="go" (click)="openBook(b)">{{ b.shortcut ? 'Abrir' : 'Abrir o livro' }}</button>
-          <button type="button" class="close" (click)="hold.close()">Fechar</button>
-        </div>
-      }
-    </dialog>
+      </div>
+    }
   `,
   styles: `
     :host { display: block; --row: 226px; --gap: 14px; }
+    .mode { display: inline-flex; margin: 0 0 14px; padding: 3px; border-radius: 24px; background: var(--mat-sys-surface-container); }
+    .mode button { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 16px; border: 0; border-radius: 20px; background: none; cursor: pointer; font: 600 14px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .mode button[aria-pressed='true'] { background: var(--mat-sys-primary); color: var(--mat-sys-on-primary); }
+    .mode mat-icon { width: 20px; height: 20px; font-size: 20px; }
+    .mode button:focus-visible { outline: 3px solid var(--mat-sys-primary); outline-offset: 2px; }
+
     /* Índice: uma bolinha por assunto, que leva à estante dele */
     .jump { display: flex; gap: 14px; margin: 0 -20px 18px; padding: 4px 20px 6px; overflow-x: auto; scrollbar-width: none; }
     .jump::-webkit-scrollbar { display: none; }
@@ -199,13 +209,12 @@ function shelvesOf(t: Trail): Shelf[] {
     .spine.light .done { color: color-mix(in srgb, var(--tone) 85%, #000); }
     @media (hover: hover) { .spine:hover { transform: translateY(-9px); } }
 
-    /* Livro na mão: a capa inteira, com o título por extenso */
-    .hold { width: min(92vw, 360px); max-height: 92vh; overflow: auto; padding: 24px 22px 20px; border: 0; border-radius: 26px; color: var(--mat-sys-on-surface); background: var(--mat-sys-surface); box-shadow: 0 24px 60px rgba(0, 0, 0, .5); }
-    .hold[open] { animation: lift .3s ease; }
-    .hold::backdrop { background: rgba(24, 17, 10, .62); }
-    @keyframes lift { from { opacity: 0; transform: translateY(14px) scale(.96); } }
-    .vol { position: relative; width: min(66vw, 236px); aspect-ratio: 3 / 4.2; margin: 6px auto 18px; perspective: 1000px; transition: transform .4s ease; }
+    /* O livro que acabou de ser tocado: aparece grande no centro e já se abre, antes de entrar na história */
+    .stage { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; background: rgba(24, 17, 10, .62); animation: fade .25s ease; }
+    @keyframes fade { from { opacity: 0; } }
+    .vol { position: relative; width: min(66vw, 236px); aspect-ratio: 3 / 4.2; perspective: 1000px; transition: transform .4s ease; }
     .vol.opening { transform: scale(1.1); }
+    .vol .ttl { display: block; }
     .inside { position: absolute; inset: 2px 0 2px 3px; border-radius: 2px 6px 6px 2px; background: #f6ecd6; background-image: repeating-linear-gradient(#f6ecd6 0 15px, #e3d5b4 15px 16px); box-shadow: 3px 0 0 -1px #d9c9a4, 5px 0 0 -2px #cdbb92; }
     .cover { position: absolute; inset: 0; transform-style: preserve-3d; transform-origin: left center; transition: transform .7s cubic-bezier(.3, .7, .2, 1); }
     .vol.opening .cover { transform: rotateY(-158deg); }
@@ -222,15 +231,29 @@ function shelvesOf(t: Trail): Shelf[] {
     .foil { display: grid; place-items: center; width: 46px; height: 46px; border: 1.5px solid #f1d9a8; border-radius: 50%; color: #f1d9a8; }
     .foil mat-icon { width: 26px; height: 26px; font-size: 26px; }
     .over { font: 700 13px/1.2 Inter, sans-serif; text-transform: uppercase; letter-spacing: .8px; color: #f1d9a8; }
-    .front h3 { margin: 0; font: 600 20px/1.2 var(--heading-font); color: #fff8ec; text-wrap: balance; overflow-wrap: anywhere; }
+    .front .ttl { margin: 0; font: 600 20px/1.2 var(--heading-font); color: #fff8ec; text-wrap: balance; overflow-wrap: anywhere; }
     .meta { font: 600 13px/1.2 Inter, sans-serif; color: #f1d9a8; }
-    .sub { margin: 0 0 16px; font: 400 15px/1.5 var(--reading-font); color: var(--mat-sys-on-surface-variant); text-align: center; }
-    .actions { display: flex; gap: 10px; }
-    .actions button { flex: 1; min-height: 48px; border-radius: 24px; font: 600 16px Inter, sans-serif; cursor: pointer; }
-    .go { border: 0; background: var(--mat-sys-primary); color: var(--mat-sys-on-primary); }
-    .close { border: 1px solid var(--mat-sys-outline); background: transparent; color: var(--mat-sys-on-surface); max-width: 110px; }
+
+    /* De frente: a capa do livro, com o título na horizontal, para ler de imediato */
+    :host(.capas) { --row: 184px; --cols: 3; --cgap: 6px; }
+    :host(.capas) .bay { padding-inline: 8px; }
+    :host(.capas) .row { gap: var(--gap) var(--cgap); padding: 0 2px var(--gap); }
+    :host(.capas) .cell { width: calc((100% - (var(--cols) - 1) * var(--cgap)) / var(--cols)); }
+    :host(.capas) .spine {
+      height: 172px; justify-content: center; gap: 8px; padding: 14px 3px 14px 7px; border-radius: 3px 7px 7px 3px; text-align: center;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .35), 0 -1px 0 rgba(255, 255, 255, .12) inset;
+    }
+    :host(.capas) .spine::before, :host(.capas) .spine::after { left: 10px; right: 5px; }
+    :host(.capas) .ico { width: 26px; height: 26px; font-size: 26px; }
+    :host(.capas) .t {
+      flex: 0 1 auto; writing-mode: horizontal-tb; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; line-clamp: 5; text-align: center;
+      font: 600 13px/1.2 var(--heading-font); overflow-wrap: anywhere; text-wrap: balance;
+    }
+    :host(.capas) .done { position: absolute; right: 7px; bottom: 12px; }
 
     @media (min-width: 840px) {
+      :host(.capas) { --cols: 4; --cgap: 10px; }
+      :host(.capas) .bay { padding-inline: 18px; }
       .bay { padding: 16px 18px 6px; }
       .row { gap: var(--gap) 3px; padding-left: 6px; }
       .t { font-size: 14px; }
@@ -238,15 +261,14 @@ function shelvesOf(t: Trail): Shelf[] {
     @media (prefers-reduced-motion: reduce) {
       .spine, .vol, .cover { transition: none; }
       .spine:hover { transform: none; }
-      .hold[open] { animation: none; }
+      .stage { animation: none; }
     }
   `,
 })
 export class Bookshelf {
   private readonly router = inject(Router);
   private readonly progress = inject(StoryProgressService);
-  protected readonly dialog = viewChild.required<ElementRef<HTMLDialogElement>>('hold');
-  protected readonly sections = computed(() =>
+    protected readonly sections = computed(() =>
     TRAILS.map((trail) => {
       const shelves = shelvesOf(trail);
       return { trail, shelves, total: shelves.reduce((n, sh) => n + sh.books.length, 0) };
@@ -255,10 +277,25 @@ export class Bookshelf {
   protected readonly picked = signal<Book | null>(null);
   /** A capa está abrindo (só durante a animação). */
   protected readonly opening = signal(false);
+  /** De frente por padrão: o título se lê de imediato; as lombadas ficam a um toque. */
+  protected readonly mode = signal<Mode>(this.savedMode());
   private timer: ReturnType<typeof setTimeout> | undefined;
 
   constructor() {
     inject(DestroyRef).onDestroy(() => clearTimeout(this.timer));
+  }
+
+  private savedMode(): Mode {
+    try {
+      return localStorage.getItem(MODE_KEY) === 'lombadas' ? 'lombadas' : 'capas';
+    } catch {
+      return 'capas';
+    }
+  }
+
+  protected setMode(m: Mode): void {
+    this.mode.set(m);
+    saveLocal(MODE_KEY, m);
   }
 
   protected goTo(id: string): void {
@@ -278,25 +315,19 @@ export class Bookshelf {
     return [b.period, b.minutes ? `${b.minutes} min` : ''].filter(Boolean).join(' · ');
   }
 
+  /** Tocar no livro já o abre: a capa aparece grande, gira e a tela entra na história. */
   protected pick(b: Book): void {
-    this.opening.set(false);
-    this.picked.set(b);
-    this.dialog().nativeElement.showModal();
-  }
-
-  protected backdrop(e: MouseEvent): void {
-    const dlg = this.dialog().nativeElement;
-    if (e.target === dlg) dlg.close();
-  }
-
-  protected openBook(b: Book): void {
-    if (this.opening()) return;
+    if (this.picked()) return;
     const go = () => this.router.navigateByUrl(b.url);
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
       go();
       return;
     }
-    this.opening.set(true);
-    this.timer = setTimeout(go, OPEN_MS);
+    this.picked.set(b);
+    // Um instante com a capa fechada, para a abertura se ver
+    this.timer = setTimeout(() => {
+      this.opening.set(true);
+      this.timer = setTimeout(go, OPEN_MS + 100);
+    }, 120);
   }
 }

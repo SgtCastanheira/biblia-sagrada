@@ -29,6 +29,24 @@ Modelo:
 
 ---
 
+## 2026-11-03 17:05 -0400 — Biblioteca: capas de frente e livro que abre direto
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- O título na vertical das lombadas era difícil de ler. A biblioteca agora tem dois modos, com botões no alto: **Capas** (padrão; o livro de frente, com o título na horizontal, 3 por prateleira no celular e 4 no computador) e **Lombadas** (como antes). A escolha fica guardada (`biblia.estante.modo`, entra no backup).
+- Tocar num livro **já o abre**: a capa aparece grande no centro, gira e a tela entra na história. Saiu a janelinha com "Abrir o livro" e "Fechar" (a etapa do meio). Com "reduzir movimento", entra direto.
+
+**Decisões:**
+- Capas como padrão, porque o pedido era ler o título de imediato; as lombadas ficam a um toque para quem gosta do visual de estante.
+- O resumo (subtítulo) que aparecia na janelinha deixou de aparecer na biblioteca; continua na lista (`Ver em lista`) e na capa da história.
+- Ícone novo `view_week`: fonte de ícones regenerada.
+
+**Arquivos:** `src/app/shared/bookshelf.ts`, `src/app/pages/history/history.ts`, `e2e/estante.spec.ts`, `public/fonts/*`, `DIARIO.md`
+
+**Pendências:**
+- Nada publicado; continua na branch `dev-fim-dos-tempos`.
+
 ## 2026-11-03 16:20 -0400 — Biblioteca: tópicos, subtópicos e todos os livros
 
 **Autor:** Valtemir Junior (com Claude Code)

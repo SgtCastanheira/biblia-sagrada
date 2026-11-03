@@ -24,25 +24,26 @@ test('biblioteca: cada subtópico é uma prateleira com o seu título, e o índi
   await expect(page.locator('#bay-profecias')).toBeInViewport();
 });
 
-test('estante: tocar na lombada mostra a capa com o título inteiro; "Abrir o livro" gira a capa e entra na história', async ({ page }) => {
+test('estante: tocar no livro já o abre (a capa gira) e entra na história, sem passo no meio', async ({ page }) => {
   await page.goto('/historia');
   const a = findArticle('trindade')!;
   await page.getByRole('button', { name: new RegExp(`^Livro: ${a.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`) }).click();
-  const capa = page.getByRole('dialog', { name: a.title });
-  await expect(capa).toBeVisible();
-  await expect(capa).toContainText(a.subtitle);
-  await capa.getByRole('button', { name: 'Abrir o livro' }).click();
-  await expect(capa.locator('.vol')).toHaveClass(/opening/);
+  await expect(page.locator('.stage .vol')).toBeVisible();
+  await expect(page.locator('.stage .vol')).toContainText(a.title);
+  await expect(page.locator('.stage .vol')).toHaveClass(/opening/);
+  await expect(page.getByRole('dialog')).toHaveCount(0);
   await expect(page).toHaveURL(/\/artigo\/trindade$/);
 });
 
-test('estante: Esc fecha a capa e devolve o livro à prateleira', async ({ page }) => {
+test('estante: capas de frente por padrão, lombadas a um toque, e a escolha fica guardada', async ({ page }) => {
   await page.goto('/historia');
-  await page.locator('.spine').first().click();
-  await expect(page.getByRole('dialog')).toBeVisible();
-  await page.keyboard.press('Escape');
-  await expect(page.getByRole('dialog')).toHaveCount(0);
-  await expect(page).toHaveURL(/\/historia$/);
+  const modo = page.getByRole('group', { name: 'Como ver os livros' });
+  await expect(modo.getByRole('button', { name: 'Capas' })).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('app-bookshelf')).toHaveClass(/capas/);
+  await modo.getByRole('button', { name: 'Lombadas' }).click();
+  await expect(page.locator('app-bookshelf')).not.toHaveClass(/capas/);
+  await page.reload();
+  await expect(page.getByRole('group', { name: 'Como ver os livros' }).getByRole('button', { name: 'Lombadas' })).toHaveAttribute('aria-pressed', 'true');
 });
 
 test('estante: "Ver em lista" leva ao assunto, e "Todos" volta para a estante', async ({ page }) => {
@@ -57,7 +58,6 @@ test('estante: "Ver em lista" leva ao assunto, e "Todos" volta para a estante', 
 test('estante: um atalho (que não é história) também é um livro e leva à tela dele', async ({ page }) => {
   await page.goto('/historia');
   await page.getByRole('button', { name: /^Atalho: / }).first().click();
-  await page.getByRole('dialog').getByRole('button', { name: 'Abrir', exact: true }).click();
   await expect(page).not.toHaveURL(/\/historia$/);
 });
 
@@ -66,7 +66,6 @@ test.describe('com movimento reduzido', () => {
   test('o livro abre sem esperar a animação', async ({ page }) => {
     await page.goto('/historia');
     await page.getByRole('button', { name: /^Livro: A Trindade: Um Só Deus/ }).click();
-    await page.getByRole('dialog').getByRole('button', { name: 'Abrir o livro' }).click();
     await expect(page).toHaveURL(/\/artigo\/trindade$/);
   });
 });
