@@ -2,6 +2,7 @@ import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
 import { findArticle } from '../core/library';
+import { TOOL_BAYS, ToolBay } from '../core/library-bays';
 import { saveLocal } from '../core/storage.service';
 import { StoryProgressService } from '../core/story-progress.service';
 import { Trail, TRAILS } from '../core/trails';
@@ -14,7 +15,16 @@ type Mode = 'capas' | 'lombadas';
 /** Tempo, em ms, que a capa leva para abrir antes de entrar na história (igual ao da animação no CSS). */
 const OPEN_MS = 700;
 
-/** Um livro da estante: uma história (ou um atalho para outra tela) de um assunto. */
+/** A estante (tópico) a que um livro pertence: uma trilha de histórias ou uma estante de ferramentas. */
+export interface BayInfo {
+  id: string;
+  name: string;
+  short: string;
+  icon: string;
+  tone: string;
+}
+
+/** Um livro da estante: uma história, um mapa, uma ferramenta de estudo ou um atalho para outra tela. */
 export interface Book {
   key: string;
   title: string;
@@ -23,8 +33,8 @@ export interface Book {
   minutes?: number;
   period?: string;
   url: string;
-  trail: Trail;
-  /** Atalho para outra tela do app, e não uma história. */
+  bay: BayInfo;
+  /** Atalho de uma trilha para outra tela do app, e não uma história. */
   shortcut: boolean;
   /** Lombada: largura e altura (em px) e quanto escurece a cor (%), sempre os mesmos para o mesmo livro. */
   w: number;
@@ -57,6 +67,7 @@ interface Shelf {
   books: Book[];
 }
 
+/** Uma trilha tem id, name, short, icon e tone, então serve como `BayInfo`. */
 function shelvesOf(t: Trail): Shelf[] {
   return t.branches
     .map((b) => {
@@ -64,14 +75,21 @@ function shelvesOf(t: Trail): Shelf[] {
       for (const id of b.ids) {
         const a = findArticle(id);
         if (!a) continue;
-        books.push({ key: `a:${a.id}`, title: a.title, subtitle: a.subtitle, icon: a.icon, minutes: a.minutes, period: a.period, url: `/artigo/${a.id}`, trail: t, shortcut: false, ...spine(a.id, a.minutes) });
+        books.push({ key: `a:${a.id}`, title: a.title, subtitle: a.subtitle, icon: a.icon, minutes: a.minutes, period: a.period, url: `/artigo/${a.id}`, bay: t, shortcut: false, ...spine(a.id, a.minutes) });
       }
       for (const l of b.links ?? []) {
-        books.push({ key: `l:${l.link}`, title: l.name, subtitle: l.description, icon: l.icon, url: l.link, trail: t, shortcut: true, ...spine(l.link, undefined) });
+        books.push({ key: `l:${l.link}`, title: l.name, subtitle: l.description, icon: l.icon, url: l.link, bay: t, shortcut: true, ...spine(l.link, undefined) });
       }
       return { title: b.title, books };
     })
     .filter((sh) => sh.books.length);
+}
+
+function toolShelvesOf(bay: ToolBay): Shelf[] {
+  return bay.shelves.map((sh) => ({
+    title: sh.title,
+    books: sh.books.map((b) => ({ key: `t:${b.url}`, title: b.title, subtitle: b.subtitle, icon: b.icon, period: b.period, url: b.url, bay, shortcut: false, ...spine(b.url, undefined) })),
+  }));
 }
 
 /**
@@ -89,22 +107,24 @@ function shelvesOf(t: Trail): Shelf[] {
     </div>
 
     <nav class="jump" aria-label="Assuntos da biblioteca">
-      @for (s of sections(); track s.trail.id) {
-        <button type="button" class="stop" [style.--tone]="s.trail.tone" [attr.aria-label]="'Ir para ' + s.trail.name" (click)="goTo(s.trail.id)">
-          <span class="disc"><mat-icon>{{ s.trail.icon }}</mat-icon></span>
-          <span class="lab">{{ s.trail.short }}</span>
+      @for (s of sections(); track s.bay.id) {
+        <button type="button" class="stop" [style.--tone]="s.bay.tone" [attr.aria-label]="'Ir para ' + s.bay.name" (click)="goTo(s.bay.id)">
+          <span class="disc"><mat-icon>{{ s.bay.icon }}</mat-icon></span>
+          <span class="lab">{{ s.bay.short }}</span>
         </button>
       }
     </nav>
 
     <div class="case">
-      @for (s of sections(); track s.trail.id) {
-        <section class="bay" [id]="'bay-' + s.trail.id" [style.--tone]="s.trail.tone" [attr.aria-labelledby]="'bay-h-' + s.trail.id">
+      @for (s of sections(); track s.bay.id) {
+        <section class="bay" [id]="'bay-' + s.bay.id" [style.--tone]="s.bay.tone" [attr.aria-labelledby]="'bay-h-' + s.bay.id">
           <header class="plate">
-            <mat-icon>{{ s.trail.icon }}</mat-icon>
-            <h2 [id]="'bay-h-' + s.trail.id">{{ s.trail.name }}</h2>
+            <mat-icon>{{ s.bay.icon }}</mat-icon>
+            <h2 [id]="'bay-h-' + s.bay.id">{{ s.bay.name }}</h2>
             <span class="n">{{ s.total }}</span>
-            <a class="see" routerLink="/historia" [queryParams]="{ trilha: s.trail.id }" [attr.aria-label]="'Ver o assunto ' + s.trail.name + ' em lista'">Ver em lista</a>
+            @if (s.isTrail) {
+              <a class="see" routerLink="/historia" [queryParams]="{ trilha: s.bay.id }" [attr.aria-label]="'Ver o assunto ' + s.bay.name + ' em lista'">Ver em lista</a>
+            }
           </header>
           @for (sh of s.shelves; track sh.title) {
             <div class="shelf">
@@ -112,7 +132,7 @@ function shelvesOf(t: Trail): Shelf[] {
               <ul class="row">
                 @for (b of sh.books; track b.key) {
                   <li class="cell" [style.width.px]="mode() === 'lombadas' ? b.w : null">
-                    <button type="button" class="spine" [class.light]="b.light" [class.shortcut]="b.shortcut" [style.--tone]="b.trail.tone" [style.--dark]="b.dark + '%'" [style.height.px]="mode() === 'lombadas' ? b.h : null" [attr.aria-label]="label(b)" (click)="pick(b)">
+                    <button type="button" class="spine" [class.light]="b.light" [class.shortcut]="b.shortcut" [style.--tone]="b.bay.tone" [style.--dark]="b.dark + '%'" [style.height.px]="mode() === 'lombadas' ? b.h : null" [attr.aria-label]="label(b)" (click)="pick(b)">
                       <mat-icon class="ico" aria-hidden="true">{{ b.icon }}</mat-icon>
                       <span class="t">{{ b.title }}</span>
                       @if (isDone(b)) { <mat-icon class="done" aria-hidden="true">check_circle</mat-icon> }
@@ -128,12 +148,12 @@ function shelvesOf(t: Trail): Shelf[] {
 
     @if (picked(); as b) {
       <div class="stage" role="status" [attr.aria-label]="'Abrindo ' + b.title">
-        <div class="vol" [class.opening]="opening()" [style.--tone]="b.trail.tone">
+        <div class="vol" [class.opening]="opening()" [style.--tone]="b.bay.tone">
           <span class="inside" aria-hidden="true"></span>
           <span class="cover" aria-hidden="true">
             <span class="front">
               <span class="foil"><mat-icon>{{ b.icon }}</mat-icon></span>
-              <span class="over">{{ b.shortcut ? 'Atalho · ' : '' }}{{ b.trail.short }}</span>
+              <span class="over">{{ b.shortcut ? 'Atalho · ' : '' }}{{ b.bay.short }}</span>
               <span class="ttl">{{ b.title }}</span>
               @if (meta(b); as m) { <span class="meta">{{ m }}</span> }
             </span>
@@ -268,12 +288,11 @@ function shelvesOf(t: Trail): Shelf[] {
 export class Bookshelf {
   private readonly router = inject(Router);
   private readonly progress = inject(StoryProgressService);
-    protected readonly sections = computed(() =>
-    TRAILS.map((trail) => {
-      const shelves = shelvesOf(trail);
-      return { trail, shelves, total: shelves.reduce((n, sh) => n + sh.books.length, 0) };
-    }),
-  );
+    /** Primeiro as trilhas de histórias; depois as estantes de mapas e ferramentas. */
+  protected readonly sections = computed(() => [
+    ...TRAILS.map((t) => ({ bay: t as BayInfo, isTrail: true, shelves: shelvesOf(t) })),
+    ...TOOL_BAYS.map((t) => ({ bay: t as BayInfo, isTrail: false, shelves: toolShelvesOf(t) })),
+  ].map((s) => ({ ...s, total: s.shelves.reduce((n, sh) => n + sh.books.length, 0) })));
   protected readonly picked = signal<Book | null>(null);
   /** A capa está abrindo (só durante a animação). */
   protected readonly opening = signal(false);
@@ -308,7 +327,7 @@ export class Bookshelf {
   }
 
   protected label(b: Book): string {
-    return `${b.shortcut ? 'Atalho' : 'Livro'}: ${b.title}, em ${b.trail.name}${this.isDone(b) ? ', já lida' : ''}`;
+    return `${b.shortcut ? 'Atalho' : 'Livro'}: ${b.title}, em ${b.bay.name}${this.isDone(b) ? ', já lida' : ''}`;
   }
 
   protected meta(b: Book): string {

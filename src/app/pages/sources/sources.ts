@@ -10,7 +10,7 @@ import { BackButton } from '../../shared/back-button';
   selector: 'app-sources-page',
   imports: [RouterLink, MatIconModule, BackButton],
   template: `
-    <div class="top"><app-back fallback="/estudo" /></div>
+    <div class="top"><app-back fallback="/historia" /></div>
     <header class="page-head">
       <span class="overline">Estudo</span>
       <h1>Fontes das informações</h1>

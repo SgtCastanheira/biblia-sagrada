@@ -5,6 +5,7 @@ import { RouterLink } from '@angular/router';
 import { findArticle } from '../../core/library';
 import { StoryProgressService } from '../../core/story-progress.service';
 import { Bookshelf } from '../../shared/bookshelf';
+import { StudyFinder } from '../../shared/study-finder';
 import { StoryRings } from '../../shared/story-rings';
 import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '../../core/trails';
 
@@ -14,25 +15,24 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
  */
 @Component({
   selector: 'app-history',
-  imports: [RouterLink, MatIconModule, MatRippleModule, Bookshelf, StoryRings],
+  imports: [RouterLink, MatIconModule, MatRippleModule, Bookshelf, StoryRings, StudyFinder],
   template: `
     <header class="page-head">
       <span class="overline">Biblioteca</span>
-      <h1>Histórias</h1>
-      <p>@if (trail()) { Escolha um assunto. Cada um tem as suas histórias, em ordem, e leva a outras telas do app. } @else { A biblioteca: cada assunto é uma estante, com uma prateleira para cada subtópico. Toque num livro para abri-lo. }</p>
+      <h1>História</h1>
+      <p>@if (trail()) { Escolha um assunto. Cada um tem as suas histórias, em ordem, e leva a outras telas do app. } @else { Tudo num lugar só: histórias, mapas, personagens, contexto e palavras, como livros numa estante. Toque num livro para abri-lo. }</p>
     </header>
 
     @if (trail()) {
       <app-story-rings [active]="trail()?.id" [all]="true" />
     }
 
-    <a class="by-era" matRipple routerLink="/epocas">
-      <mat-icon>timeline</mat-icon>
-      <span><strong>Ver por época</strong> Da Criação a hoje, as histórias e as crises do mundo na ordem do tempo.</span>
-      <mat-icon class="go">chevron_right</mat-icon>
-    </a>
-
     @if (trail(); as t) {
+      <a class="by-era" matRipple routerLink="/epocas">
+        <mat-icon>timeline</mat-icon>
+        <span><strong>Ver por época</strong> Da Criação a hoje, as histórias e as crises do mundo na ordem do tempo.</span>
+        <mat-icon class="go">chevron_right</mat-icon>
+      </a>
       <section class="cover" [style.--tone]="t.tone">
         <mat-icon class="watermark" aria-hidden="true">{{ t.icon }}</mat-icon>
         <span class="c-over">{{ count(t) }} {{ count(t) === 1 ? 'história' : 'histórias' }}@if (state(t).done) { · {{ state(t).done }} {{ state(t).done === 1 ? 'lida' : 'lidas' }} }</span>
@@ -93,12 +93,47 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
         </a>
       }
     } @else {
-      <app-bookshelf />
+      <app-study-finder [q]="q()">
+        <app-bookshelf />
+
+        <details class="howto card">
+          <summary><mat-icon>route</mat-icon> Como estudar pelo leitor<mat-icon class="chevron">expand_more</mat-icon></summary>
+          <ol>
+            <li><strong>Leia o capítulo.</strong> No topo, abra <em>Estudar este capítulo</em> para saber quem escreveu, quando e o que acontecia na época.</li>
+            <li><strong>Toque numa palavra sublinhada.</strong> O dicionário mostra o termo original e o sentido naquele versículo.</li>
+            <li><strong>Toque num versículo.</strong> Veja as referências cruzadas e abra o mesmo texto em outras versões.</li>
+            <li><strong>Siga os cartões do capítulo.</strong> Mapas, aulas de contexto e estudos aparecem onde o texto pede.</li>
+          </ol>
+        </details>
+
+        <a class="sources" matRipple routerLink="/fontes">
+          <mat-icon>library_books</mat-icon>
+          <span><strong>Fontes das informações</strong> De onde vêm os textos de estudo: a Bíblia, fontes antigas, arqueologia e obras de referência.</span>
+          <mat-icon class="go">chevron_right</mat-icon>
+        </a>
+      </app-study-finder>
     }
   `,
   styleUrl: '../../shared/study.scss',
   styles: `
     .page-head + app-story-rings { margin-bottom: 18px; }
+    .howto { margin-top: 18px; padding: 0 18px; border-left: 3px solid var(--accent-gold); }
+    .howto summary { display: flex; align-items: center; gap: 8px; min-height: 52px; cursor: pointer; list-style: none; font: 600 17px var(--heading-font); }
+    .howto summary::-webkit-details-marker { display: none; }
+    .howto summary mat-icon { color: var(--accent-gold); }
+    .howto .chevron { margin-left: auto; color: var(--mat-sys-on-surface-variant); }
+    .howto[open] .chevron { transform: rotate(180deg); }
+    .howto ol { margin: 0 0 12px; padding-left: 22px; font: 400 15px/1.6 var(--reading-font); }
+    .howto li { margin-bottom: 6px; }
+    .howto li::marker { color: var(--accent-gold); font-weight: 600; }
+    .sources {
+      position: relative; overflow: hidden; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px;
+      margin-top: 28px; padding: 14px 16px; border-radius: 16px; text-decoration: none; color: inherit; border: 1px dashed var(--mat-sys-outline-variant);
+    }
+    .sources > mat-icon { color: var(--accent-gold); }
+    .sources span { font: 400 14px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .sources strong { display: block; font: 600 16px var(--heading-font); color: var(--mat-sys-on-surface); }
+    .sources .go { color: var(--mat-sys-on-surface-variant); }
     .by-era { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; margin: 0 0 18px; padding: 12px 16px; border-radius: 16px; text-decoration: none; color: inherit; border: 1px dashed var(--mat-sys-outline-variant); }
     .by-era > mat-icon:first-child { color: var(--accent-gold); }
     .by-era span { font: 400 14px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
@@ -139,6 +174,8 @@ export class HistoryPage {
   readonly trilha = input<string>();
   /** Links antigos, com a coleção. */
   readonly colecao = input<string>();
+  /** Pesquisa na biblioteca (?q=). */
+  readonly q = input<string>();
   protected readonly progress = inject(StoryProgressService);
   protected readonly trail = computed(() => findTrail(this.trilha()) ?? trailOfCollection(this.colecao()));
   protected readonly next = computed(() => {

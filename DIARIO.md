@@ -29,6 +29,26 @@ Modelo:
 
 ---
 
+## 2026-11-03 18:10 -0400 — História e Estudo numa tela só, com os mapas na biblioteca
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- A aba **Estudo** e a tela **Histórias** viraram uma só, chamada **História** (`/historia`). `/estudo` redireciona para cá (a pesquisa `?q=` vai junto). A tela antiga `pages/study` saiu; o campo de pesquisa virou `shared/study-finder.ts`.
+- Na biblioteca entraram quatro estantes novas (`core/library-bays.ts`): **Mapas e Lugares** (um livro por mapa: Antigo Testamento, Novo Testamento, História da Igreja, Atlas), **Personagens e Famílias**, **Contexto e Cultura** e **Palavras e Promessas** (Memorial, tribos, genealogia, livros, curiosidades, quiz, linha do tempo, profecias, sermões, dicionário). Cada ferramenta e cada mapa é um livro; um mapa novo aparece sozinho.
+- A aba de baixo agora é "História" (ícone de livros abertos); o texto "Estudo" some da navegação.
+
+**Decisões:**
+- O nome é **História**, como o usuário sugeriu, para não haver dois nomes parecidos para a mesma coisa. Foi mantida a chave interna `estudo` da aba e a URL `/estudo/livros`, para não quebrar endereços.
+- Os cartões do Estudo (linha do tempo, atlas em destaque) viraram livros nas estantes; o cartão "Ver por época" saiu da biblioteca (a linha do tempo é um livro) e continua dentro de cada assunto.
+- As trilhas continuam na frente; as estantes de ferramentas vêm depois, cada item em um só lugar.
+
+**Arquivos:** `src/app/shared/bookshelf.ts`, `shared/study-finder.ts`, `core/library-bays.ts`, `pages/history/history.ts`, `app.routes.ts`, `app.ts`, `whats-new.ts`, `e2e/*.spec.ts`, `CLAUDE.md`, `DIARIO.md`
+
+**Pendências:**
+- A página ficou longa (106 livros); se pesar, dá para recolher cada estante.
+- Nada publicado; continua na branch `dev-fim-dos-tempos`.
+
 ## 2026-11-03 17:05 -0400 — Biblioteca: capas de frente e livro que abre direto
 
 **Autor:** Valtemir Junior (com Claude Code)

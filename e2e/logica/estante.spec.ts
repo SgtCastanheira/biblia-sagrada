@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { TOOL_BAYS } from '../../src/app/core/library-bays';
 import { TRAILS } from '../../src/app/core/trails';
 
 /**
@@ -14,10 +15,11 @@ const contrast = (a: string, b: string) => {
   return (hi + 0.05) / (lo + 0.05);
 };
 
-test('estante: cada livro tem uma cor só dele, e o texto da capa continua legível', () => {
-  const tones = TRAILS.map((t) => t.tone);
-  expect(new Set(tones).size, 'duas trilhas com a mesma cor').toBe(TRAILS.length);
-  for (const t of TRAILS) {
+test('estante: cada estante tem uma cor só dela, e o texto da capa continua legível', () => {
+  const bays = [...TRAILS, ...TOOL_BAYS];
+  const tones = bays.map((t) => t.tone);
+  expect(new Set(tones).size, 'duas estantes com a mesma cor').toBe(bays.length);
+  for (const t of bays) {
     expect(t.tone, t.id).toMatch(/^#[0-9a-f]{6}$/i);
     expect(contrast('#fff8ec', t.tone), `${t.id}: título creme`).toBeGreaterThanOrEqual(4.5);
     expect(contrast('#f1d9a8', t.tone), `${t.id}: contagem dourada`).toBeGreaterThanOrEqual(4.5);

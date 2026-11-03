@@ -1,12 +1,13 @@
 import { expect, test } from './base';
 import { findArticle } from '../src/app/core/library';
+import { TOOL_BAYS } from '../src/app/core/library-bays';
 import { TRAILS, trailArticleIds } from '../src/app/core/trails';
 
-const TOTAL = TRAILS.reduce((n, t) => n + trailArticleIds(t).length + t.branches.reduce((m, b) => m + (b.links?.length ?? 0), 0), 0);
+const TOTAL = TOOL_BAYS.reduce((n, b) => n + b.shelves.reduce((m, sh) => m + sh.books.length, 0), 0) + TRAILS.reduce((n, t) => n + trailArticleIds(t).length + t.branches.reduce((m, b) => m + (b.links?.length ?? 0), 0), 0);
 
 test('estante: toda história é uma lombada, agrupada por assunto', async ({ page }) => {
   await page.goto('/historia');
-  await expect(page.locator('app-bookshelf .bay')).toHaveCount(TRAILS.length);
+  await expect(page.locator('app-bookshelf .bay')).toHaveCount(TRAILS.length + TOOL_BAYS.length);
   await expect(page.locator('app-bookshelf .spine')).toHaveCount(TOTAL);
   // Cada assunto mostra quantos livros tem
   const primeira = TRAILS[0];
@@ -15,7 +16,7 @@ test('estante: toda história é uma lombada, agrupada por assunto', async ({ pa
 
 test('biblioteca: cada subtópico é uma prateleira com o seu título, e o índice leva à estante do assunto', async ({ page }) => {
   await page.goto('/historia');
-  const prateleiras = TRAILS.reduce((n, t) => n + t.branches.length, 0);
+  const prateleiras = TRAILS.reduce((n, t) => n + t.branches.length, 0) + TOOL_BAYS.reduce((n, b) => n + b.shelves.length, 0);
   await expect(page.locator('app-bookshelf .shelf')).toHaveCount(prateleiras);
   const contexto = page.locator('#bay-contexto');
   await expect(contexto.getByRole('heading', { level: 3, name: 'Roma e o Poder' })).toBeVisible();
@@ -68,4 +69,19 @@ test.describe('com movimento reduzido', () => {
     await page.getByRole('button', { name: /^Livro: A Trindade: Um Só Deus/ }).click();
     await expect(page).toHaveURL(/\/artigo\/trindade$/);
   });
+});
+
+test('história e estudo são uma tela só: mapas e ferramentas são livros, e /estudo leva para cá', async ({ page }) => {
+  await page.goto('/historia');
+  // O mapa de uma jornada é um livro, na estante de mapas
+  const mapas = page.locator('#bay-mapas');
+  await expect(mapas.getByRole('heading', { level: 3, name: 'Novo Testamento' })).toBeVisible();
+  await mapas.getByRole('button', { name: /^Livro: .*Paulo/ }).first().click();
+  await expect(page).toHaveURL(/\/mapas\/[a-z0-9-]+$/);
+  // O endereço antigo continua valendo, e a pesquisa vai junto
+  await page.goto('/estudo?q=niceia');
+  await expect(page).toHaveURL(/\/historia\?q=niceia/);
+  await expect(page.getByRole('searchbox', { name: 'Pesquisar na biblioteca' })).toHaveValue('niceia');
+  // A aba de baixo agora se chama História
+  await expect(page.getByRole('navigation').getByRole('link', { name: 'História' }).first()).toBeVisible();
 });

@@ -34,7 +34,7 @@ test.describe('celular pequeno (360 px)', () => {
 
 test('barra de navegação leva às áreas principais', async ({ page }) => {
   await page.goto('/');
-  for (const [aba, url] of [['Bíblia', /\/ler\//], ['Estudo', /\/estudo/], ['Ensino', /\/ensino/], ['Meu espaço', /\/meu-espaco/], ['Início', /\/$/]] as const) {
+  for (const [aba, url] of [['Bíblia', /\/ler\//], ['História', /\/historia/], ['Ensino', /\/ensino/], ['Meu espaço', /\/meu-espaco/], ['Início', /\/$/]] as const) {
     await goToTab(page, aba);
     await expect(page).toHaveURL(url);
   }
@@ -42,7 +42,7 @@ test('barra de navegação leva às áreas principais', async ({ page }) => {
 
 test('cada tela acende a aba certa do menu', async ({ page }) => {
   const nav = page.getByRole('navigation', { name: 'Navegação principal' });
-  for (const [url, aba] of [['/tribos', 'Estudo'], ['/ebd', 'Ensino'], ['/sermoes', 'Ensino'], ['/ibuc', 'Ensino'], ['/devocional', 'Meu espaço'], ['/favoritos', 'Meu espaço'], ['/livros', 'Bíblia']] as const) {
+  for (const [url, aba] of [['/tribos', 'História'], ['/ebd', 'Ensino'], ['/sermoes', 'Ensino'], ['/ibuc', 'Ensino'], ['/devocional', 'Meu espaço'], ['/favoritos', 'Meu espaço'], ['/livros', 'Bíblia']] as const) {
     await page.goto(url);
     await expect(nav.locator('.nav-item.active')).toHaveText(new RegExp(aba));
   }
