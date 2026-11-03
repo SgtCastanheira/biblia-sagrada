@@ -19,7 +19,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
     <header class="page-head">
       <span class="overline">Biblioteca</span>
       <h1>Histórias</h1>
-      <p>@if (trail()) { Escolha um assunto. Cada um tem as suas histórias, em ordem, e leva a outras telas do app. } @else { Toque num livro para abri-lo. Cada um guarda as histórias de um assunto, em ordem. }</p>
+      <p>@if (trail()) { Escolha um assunto. Cada um tem as suas histórias, em ordem, e leva a outras telas do app. } @else { A biblioteca: cada assunto é uma estante, com uma prateleira para cada subtópico. Toque numa lombada para tirar o livro e abri-lo. }</p>
     </header>
 
     @if (trail()) {

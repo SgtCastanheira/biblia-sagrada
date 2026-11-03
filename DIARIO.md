@@ -29,6 +29,29 @@ Modelo:
 
 ---
 
+## 2026-11-03 16:20 -0400 — Biblioteca: tópicos, subtópicos e todos os livros
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- A estante de `/historia` deixou de ter só 11 capas: agora tem **todas as histórias** (e os atalhos das trilhas) como lombadas de livro, organizadas em **tópico → subtópico → livros**. Cada assunto é uma estante com a sua cor, cada ramo da trilha é uma prateleira com o título, e os livros ficam em pé nela.
+- Lombadas: largura pela duração da leitura, altura e tom por sorteio fixo do id, uma em cada cinco cor de creme, título na vertical, fios dourados, marca de "lida". Atalhos têm contorno tracejado.
+- Ao tocar numa lombada abre uma janela (`<dialog>`) com a capa, o título inteiro e o resumo; "Abrir o livro" faz a capa girar e entra na história. Sem animação com "reduzir movimento".
+- As bolinhas do alto viraram o índice da biblioteca (levam à estante do assunto). "Ver em lista" mantém a lista antiga de cada trilha (`?trilha=`).
+- No computador, duas estantes lado a lado.
+
+**Decisões:**
+- Manter a lista antiga por `?trilha=` (é para onde levam a tela inicial, o botão Voltar e muitos testes) e fazer da biblioteca a tela principal de `/historia`.
+- Título da lombada cortado em duas linhas; o título inteiro aparece na capa ao tocar.
+- Bug corrigido no caminho: o tom das lombadas usava um deslocamento de bits com sinal e algumas ficavam sem cor.
+
+**Arquivos:** `src/app/shared/bookshelf.ts`, `src/app/pages/history/history.ts`, `src/app/core/whats-new.ts`, `e2e/estante.spec.ts`, `CLAUDE.md`, `DIARIO.md`
+
+**Pendências:**
+- A página fica longa no celular (muitas prateleiras); se pesar, dá para recolher cada estante.
+- Colocar a mesma biblioteca na tela inicial ou em `/estudo`, se o usuário quiser.
+- Nada publicado; continua na branch `dev-fim-dos-tempos`.
+
 ## 2026-11-03 15:50 -0400 — Estante de livros em Histórias
 
 **Autor:** Valtemir Junior (com Claude Code)

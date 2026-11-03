@@ -26,7 +26,7 @@ export const RELEASES: Release[] = [
     date: '3 de novembro de 2026',
     title: 'Estante de Livros e Novos Estudos',
     items: [
-      { icon: 'auto_stories', title: 'A estante de histórias', text: 'Cada assunto agora é um livro, com a sua cor. Toque no livro e ele se abre.', link: '/historia' },
+      { icon: 'auto_stories', title: 'A biblioteca de histórias', text: 'Todas as histórias viraram livros numa estante: cada assunto tem a sua cor e cada subtópico, a sua prateleira. Toque na lombada e o livro se abre.', link: '/historia' },
       { icon: 'gavel', title: 'O estatuto da CGADB', text: 'Quem pode ser membro, como a convenção decide, o que mudou de 2023 para 2025 e o que as resoluções dizem sobre divórcio e união estável.', link: '/artigo/estatuto-da-cgadb' },
       { icon: 'groups', title: 'Por que se chama Assembleia de Deus?', text: 'O que a palavra quer dizer na Bíblia, de onde veio o nome e o que as fontes não esclarecem.', link: '/artigo/nome-assembleia-de-deus' },
       { icon: 'calendar_view_week', title: 'As setenta semanas de Daniel', text: 'A conta dos 490 anos passo a passo: de qual ordem se conta, quem é o ungido cortado e as três leituras da última semana, lado a lado.', link: '/artigo/setenta-semanas', tip: 'Também em Histórias › Profecias.' },
