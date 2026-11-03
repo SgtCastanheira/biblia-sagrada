@@ -129,7 +129,7 @@ export const TRAILS: Trail[] = [
     collections: ['avivamentos'],
     branches: [
       { title: 'O Movimento Pentecostal', ids: ['movimento-pentecostal'] },
-      { title: 'Os Grandes Avivamentos', ids: ['avivamentos-desde-atos', 'avivamento-de-oracao-1857', 'avivamento-do-pais-de-gales', 'avivamento-da-coreia', 'avivamento-da-africa-oriental', 'avivamento-das-hebridas'] },
+      { title: 'Os Grandes Avivamentos', ids: ['avivamentos-desde-atos', 'avivamento-de-oracao-1857', 'avivamento-do-pais-de-gales', 'avivamento-da-coreia', 'avivamento-da-africa-oriental', 'avivamento-das-hebridas', 'avivamentos-na-america-do-sul'] },
     ],
   },
   {
@@ -151,6 +151,7 @@ export const TRAILS: Trail[] = [
         ],
       },
       { title: 'Perseguições, Convenções e Cargos', ids: ['nome-assembleia-de-deus', 'irmaos-perseguidos', 'madureira-e-a-separacao', 'estatuto-da-cgadb', 'cargos-na-assembleia-de-deus'] },
+      { title: 'Os Vizinhos do Brasil', ids: ['igreja-na-america-do-sul'] },
     ],
   },
   {

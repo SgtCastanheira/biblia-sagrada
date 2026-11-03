@@ -14,15 +14,13 @@ test('estante: toda história é uma lombada, agrupada por assunto', async ({ pa
   await expect(page.locator('.bay').first().locator('.n')).toHaveText(String(trailArticleIds(primeira).length + primeira.branches.reduce((m, b) => m + (b.links?.length ?? 0), 0)));
 });
 
-test('biblioteca: cada subtópico é uma prateleira com o seu título, e o índice leva à estante do assunto', async ({ page }) => {
+test('biblioteca: cada subtópico é uma prateleira com o seu título', async ({ page }) => {
   await page.goto('/historia');
   const prateleiras = TRAILS.reduce((n, t) => n + t.branches.length, 0) + TOOL_BAYS.reduce((n, b) => n + b.shelves.length, 0);
   await expect(page.locator('app-bookshelf .shelf')).toHaveCount(prateleiras);
   const contexto = page.locator('#bay-contexto');
   await expect(contexto.getByRole('heading', { level: 3, name: 'Roma e o Poder' })).toBeVisible();
   await expect(contexto.getByRole('heading', { level: 3, name: 'A Fé e a Família' })).toBeVisible();
-  await page.getByRole('navigation', { name: 'Assuntos da biblioteca' }).getByRole('button', { name: 'Ir para Profecias' }).click();
-  await expect(page.locator('#bay-profecias')).toBeInViewport();
 });
 
 test('estante: tocar no livro já o abre (a capa gira) e entra na história, sem passo no meio', async ({ page }) => {

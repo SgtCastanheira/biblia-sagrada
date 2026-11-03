@@ -78,6 +78,10 @@ export const WORKS: Record<string, Work> = {
   gonzalez: { author: 'Justo L. González', title: 'Uma história ilustrada do cristianismo', publisher: 'Vida Nova', kind: 'historia' },
   cairns: { author: 'Earle E. Cairns', title: 'O cristianismo através dos séculos', publisher: 'Vida Nova', kind: 'historia' },
   noll: { author: 'Mark A. Noll', title: 'Momentos decisivos na história do cristianismo', publisher: 'Cultura Cristã', kind: 'historia' },
+  'thomson-letters': { author: 'James Thomson', title: 'Letters on the Moral and Religious State of South America', publisher: 'James Nisbet, Londres, 1827 (domínio público, Projeto Gutenberg)', kind: 'historia' },
+  'shaw-villa-miseria': { author: 'Mark Shaw', title: 'God in the villa miseria', publisher: 'Christian History, nº 153, 2024', kind: 'historia' },
+  'pew-chile-2006': { author: 'Pew Research Center', title: 'Historical Overview of Pentecostalism in Chile', publisher: 'Pew Forum on Religion & Public Life, 2006', kind: 'historia' },
+  'pew-2017': { author: 'Neha Sahgal (Pew Research Center)', title: '500 years after the Reformation, 5 facts about Protestants around the world', publisher: 'Pew Research Center, 2017', kind: 'historia' },
   'hopkins-beard': { author: 'Keith Hopkins e Mary Beard', title: 'The Colosseum', publisher: 'Profile Books e Harvard University Press, 2005', kind: 'historia' },
   futrell: { author: 'Alison Futrell', title: 'The Roman Games: A Sourcebook', publisher: 'Blackwell, 2006', kind: 'historia' },
   snyder: { author: 'Graydon F. Snyder', title: 'Ante Pacem: Archaeological Evidence of Church Life Before Constantine', publisher: 'Mercer University Press, ed. revista, 2003', kind: 'historia' },
@@ -472,6 +476,26 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'Página de documentos da CGADB (cgadb.org.br/documentos): o regimento interno e os estatutos de outras convenções não foram consultados',
     ],
     works: ['declaracao-fe-ad', 'alencar'],
+  },
+  'igreja-na-america-do-sul': {
+    ancientLabel: 'Documentos e sites consultados',
+    ancient: [
+      'Wikipédia (en): Jesuit missions among the Guaraní; Bartolomé de las Casas; Peruvian Inquisition; James Thomson (pastor); Allen Francis Gardiner; Thomas Bridges (missionary); Y Wladfa; Protestantism in Bolivia; Protestantism in Colombia; La Violencia',
+      'Corporación Universitaria Reformada (Colômbia), livro sobre as igrejas evangélicas e o conflito armado (2024), que resume o levantamento de James Goff, The Persecution of Protestant Christians in Colombia, 1948–1958 (CIDOC, 1968), e a tese de Augusto Libreros (1969)',
+      'Clyde W. Taylor, “The Fate of Protestants in Colombia, Part II”, Christianity Today, 11/11/1957 (posição de uma associação evangélica; traz as respostas católicas de 1957)',
+      'Pew Research Center, pesquisa de 2014 sobre religião em 19 países da América Latina, como resumida em 2017',
+    ],
+    works: ['thomson-letters', 'shaw-villa-miseria', 'pew-2017'],
+  },
+  'avivamentos-na-america-do-sul': {
+    ancientLabel: 'Documentos e sites consultados',
+    ancient: [
+      'Memoria Chilena (Biblioteca Nacional do Chile): Fundación de la Iglesia Metodista Pentecostal en Chile (1909)',
+      'Pew Research Center (2006): Historical Overview of Pentecostalism in Chile',
+      'Wikipédia (en): Pentecostal revival movement in Chile; Operation Auca; Protestantism in Bolivia',
+      'Willis C. Hoover, Historia del avivamiento pentecostal en Chile (Valparaíso, 1948), citado pelos estudos como a fonte principal; não foi lido',
+    ],
+    works: ['shaw-villa-miseria', 'pew-chile-2006', 'pew-2017'],
   },
   'nome-assembleia-de-deus': { ancientLabel: 'Documentos e sites consultados', ancient: ['Registro em cartório da Assembleia de Deus em Belém, em 1918, como citado nos estudos de Gunnar Vingren e Daniel Berg do app', 'Wikipédia (en): Assembleias de Deus; Assemblies of God (o concílio de Hot Springs, 1914)'], works: ['conde', 'synan', 'alencar'] },
   'madureira-e-a-separacao': {

@@ -29,6 +29,25 @@ Modelo:
 
 ---
 
+## 2026-11-03 20:10 -0400 — A Igreja e os avivamentos na América do Sul; dicionários como livros
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Dois estudos novos: `igreja-na-america-do-sul` (coleção Igreja: Las Casas, as reduções jesuíticas e a Inquisição de Lima, James Thomson e as escolas, Allen Gardiner e Thomas Bridges na Terra do Fogo, os galeses na Patagônia, a Bolívia tardia, a Colômbia na Violencia, números de hoje) e `avivamentos-na-america-do-sul` (coleção Avivamentos: Valparaíso 1909, Tommy Hicks 1954, o Avivamento Argentino dos anos 1980–1990, a Bolívia, Operation Auca no Equador e o que não se confirmou nos outros países). Entram na trilha "O Evangelho no Brasil" (ramo novo "Os Vizinhos do Brasil") e na de Pentecostalismo, com cartões no panorama da Igreja e em "Os Avivamentos desde Atos".
+- Biblioteca: saiu o índice de bolinhas do alto (a pessoa percorre a lista). O dicionário virou livros por idioma (Hebraico, Aramaico, Grego, Latim) e por ordem (A a Z, pela ordem da Bíblia, por assunto, verbos).
+
+**Decisões:**
+- Só entrou o que as fontes abertas confirmam; onde divergem (data de fundação da igreja chilena: 1909, 1910, 1902), o texto diz. Onde não achei fonte (estádio e governo na campanha de 1954; avivamentos no Peru, Paraguai, Uruguai, Venezuela, Colômbia e Equador), o texto diz que não confirmou, sem inventar.
+- Colômbia: os números de Goff (126 mortos, mais de 60 templos, mais de 200 escolas) vêm de um levantamento evangélico, resumido num livro universitário de 2024, que avisa do rigor limitado; a leitura de Libreros (intolerância política) e as respostas católicas de 1957 entram ao lado, e a nota diz que a causa é ponto de debate.
+- Fontes lidas por subagentes de leitura de páginas; o resumo de busca não foi usado como fonte. O livro de Hoover (1948) é citado como fonte principal dos estudos, mas não foi lido.
+
+**Arquivos:** `public/conteudo/artigos/igreja-na-america-do-sul.md`, `avivamentos-na-america-do-sul.md`, `panorama-da-igreja.md`, `avivamentos-desde-atos.md`, `src/app/core/library.ts`, `trails.ts`, `sources.ts`, `library-bays.ts`, `whats-new.ts`, `shared/bookshelf.ts`, `e2e/*.spec.ts`
+
+**Pendências:**
+- Faltam fontes sobre avivamentos no Peru, Paraguai, Uruguai, Venezuela, Colômbia e Equador; Brasil e Congregação Cristã na Argentina (Francescon) não entraram.
+- Nada publicado; continua na branch `dev-fim-dos-tempos`.
+
 ## 2026-11-03 18:10 -0400 — História e Estudo numa tela só, com os mapas na biblioteca
 
 **Autor:** Valtemir Junior (com Claude Code)

@@ -111,8 +111,22 @@ export const TOOL_BAYS: ToolBay[] = [
         ],
       },
       {
-        title: 'Idiomas Originais',
-        books: [{ title: 'Dicionário Bíblico', subtitle: 'Hebraico, aramaico, grego e latim, com os sentidos e as conjugações.', icon: 'translate', url: '/dicionario' }],
+        title: 'Dicionário por Idioma',
+        books: [
+          { title: 'Dicionário de Hebraico', subtitle: 'Os termos do Antigo Testamento que vêm do hebraico, com a palavra original, a leitura e os sentidos.', icon: 'translate', url: '/dicionario?lingua=he' },
+          { title: 'Dicionário de Aramaico', subtitle: 'As palavras aramaicas da Bíblia, como Talita cumi, Efatá, Aba e Maranata, com a palavra original e os sentidos.', icon: 'translate', url: '/dicionario?lingua=ar' },
+          { title: 'Dicionário de Grego', subtitle: 'Os termos do Novo Testamento que vêm do grego, com a palavra original, a leitura e os sentidos.', icon: 'translate', url: '/dicionario?lingua=gr' },
+          { title: 'Dicionário de Latim', subtitle: 'O latim por trás de palavras que a igreja usa até hoje, como gratia, fides e ecclesia.', icon: 'translate', url: '/dicionario?lingua=la' },
+        ],
+      },
+      {
+        title: 'Dicionário do Seu Jeito',
+        books: [
+          { title: 'Dicionário Bíblico de A a Z', subtitle: 'Todos os verbetes em ordem alfabética, com pesquisa.', icon: 'sort_by_alpha', url: '/dicionario' },
+          { title: 'Dicionário pela Ordem da Bíblia', subtitle: 'Os verbetes na ordem em que aparecem, de Gênesis a Apocalipse.', icon: 'menu_book', url: '/dicionario?ordem=biblia' },
+          { title: 'Dicionário por Assunto', subtitle: 'Nomes, lugares, festas, medidas, expressões e termos, cada grupo no seu lugar.', icon: 'category', url: '/dicionario?ordem=assunto' },
+          { title: 'Dicionário dos Verbos', subtitle: 'Os verbos da Bíblia, com as conjugações e os sentidos.', icon: 'format_list_bulleted', url: '/dicionario?lingua=verbos' },
+        ],
       },
     ],
   },

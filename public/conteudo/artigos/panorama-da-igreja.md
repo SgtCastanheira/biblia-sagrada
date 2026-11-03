@@ -77,6 +77,13 @@ Em 1500, a primeira missa foi celebrada no Brasil, e por séculos a Igreja e a C
 :::leia igreja-e-estado
 :::
 
+## A Igreja na América do Sul
+
+Os vizinhos do Brasil viveram a mesma história com outra ordem: os jesuítas entre os guaranis, a Bíblia que chegou pelas escolas, missionários que morreram na Terra do Fogo e igrejas que cresceram no século XX.
+
+:::leia igreja-na-america-do-sul
+:::
+
 ## O Fogo Pentecostal
 
 :::cena Los Angeles · 1906

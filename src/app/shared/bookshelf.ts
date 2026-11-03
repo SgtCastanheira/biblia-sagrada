@@ -106,15 +106,6 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
       <button type="button" [attr.aria-pressed]="mode() === 'lombadas'" (click)="setMode('lombadas')"><mat-icon>view_week</mat-icon> Lombadas</button>
     </div>
 
-    <nav class="jump" aria-label="Assuntos da biblioteca">
-      @for (s of sections(); track s.bay.id) {
-        <button type="button" class="stop" [style.--tone]="s.bay.tone" [attr.aria-label]="'Ir para ' + s.bay.name" (click)="goTo(s.bay.id)">
-          <span class="disc"><mat-icon>{{ s.bay.icon }}</mat-icon></span>
-          <span class="lab">{{ s.bay.short }}</span>
-        </button>
-      }
-    </nav>
-
     <div class="case">
       @for (s of sections(); track s.bay.id) {
         <section class="bay" [id]="'bay-' + s.bay.id" [style.--tone]="s.bay.tone" [attr.aria-labelledby]="'bay-h-' + s.bay.id">
@@ -171,15 +162,6 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
     .mode mat-icon { width: 20px; height: 20px; font-size: 20px; }
     .mode button:focus-visible { outline: 3px solid var(--mat-sys-primary); outline-offset: 2px; }
 
-    /* Índice: uma bolinha por assunto, que leva à estante dele */
-    .jump { display: flex; gap: 14px; margin: 0 -20px 18px; padding: 4px 20px 6px; overflow-x: auto; scrollbar-width: none; }
-    .jump::-webkit-scrollbar { display: none; }
-    .stop { flex: none; width: 84px; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 0; border: 0; background: none; cursor: pointer; color: var(--mat-sys-on-surface); }
-    .stop .disc { display: grid; place-items: center; width: 64px; height: 64px; box-sizing: border-box; border-radius: 6px 12px 12px 6px; color: #f1d9a8; background: linear-gradient(165deg, var(--tone), color-mix(in srgb, var(--tone) 62%, #000)); box-shadow: inset 5px 0 5px -3px rgba(0, 0, 0, .5), 0 2px 5px rgba(0, 0, 0, .25); transition: transform .15s; }
-    .stop:hover .disc { transform: translateY(-3px); }
-    .stop:focus-visible { outline: 3px solid var(--mat-sys-primary); outline-offset: 2px; border-radius: 8px; }
-    .stop .lab { font: 500 13px/1.25 Inter, sans-serif; text-align: center; max-width: 84px; }
-    @media (min-width: 840px) { .jump { margin: 0 0 18px; padding: 4px 0 6px; flex-wrap: wrap; overflow: visible; gap: 18px 16px; } }
     .case { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; align-items: start; }
     @media (min-width: 1000px) { .case { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
@@ -315,11 +297,6 @@ export class Bookshelf {
   protected setMode(m: Mode): void {
     this.mode.set(m);
     saveLocal(MODE_KEY, m);
-  }
-
-  protected goTo(id: string): void {
-    const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    document.getElementById(`bay-${id}`)?.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
   }
 
   protected isDone(b: Book): boolean {
