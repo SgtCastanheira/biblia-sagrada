@@ -29,6 +29,27 @@ Modelo:
 
 ---
 
+## 2026-11-03 15:50 -0400 — Estante de livros em Histórias
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- `/historia` sem assunto escolhido mostra uma estante de livros (`shared/bookshelf.ts`): um livro por trilha, cada um com a sua cor (`Trail.tone`), capa com fio dourado, ícone, título e contagem de histórias; fita dourada se o assunto foi começado e barra de progresso. Ao tocar, a capa gira como um livro abrindo e a tela entra no assunto, cujo cabeçalho assume a cor do livro e "abre" também.
+- Nas telas largas são 6 livros por prateleira; no celular, 3.
+- Testes: `e2e/estante.spec.ts` (um livro por assunto, toque abre, movimento reduzido) e `e2e/logica/estante.spec.ts` (cores distintas e contraste de 4,5:1).
+- Novidades: entrada `estudos-do-fim-dos-tempos` ampliada (estante, estatuto da CGADB e "Por que se chama Assembleia de Deus?") e renomeada.
+
+**Decisões:**
+- A regra antiga (uma só família de cores, sem arco-íris por assunto) continua nas bolinhas da tela inicial e no seletor dentro do assunto; a estante é a exceção, a pedido do usuário. Cores escuras e terrosas, para parecerem uma estante e não um painel colorido; registrado no CLAUDE.md.
+- Botão em vez de link para o livro, para a animação rodar antes de navegar. Com "reduzir movimento", entra direto.
+- A tela inicial manteve as bolinhas; trocar por estante lá fica para o usuário decidir.
+
+**Arquivos:** `src/app/shared/bookshelf.ts`, `src/app/pages/history/history.ts`, `src/app/core/trails.ts`, `src/app/core/whats-new.ts`, `e2e/estante.spec.ts`, `e2e/logica/estante.spec.ts`, `CLAUDE.md`, `DIARIO.md`
+
+**Pendências:**
+- Decidir se a estante também aparece na tela inicial e em `/estudo`.
+- Nada publicado; continua na branch `dev-fim-dos-tempos`.
+
 ## 2026-11-03 09:25 -0400 — Resoluções, manifesto e edital da CGADB no estudo do estatuto
 
 **Autor:** Valtemir Junior (com Claude Code)

@@ -26,6 +26,8 @@ export interface Trail {
   short: string;
   description: string;
   icon: string;
+  /** Cor da capa do livro na estante (escura: o texto da capa é creme, com contraste mínimo de 4,5:1). */
+  tone: string;
   branches: TrailBranch[];
   /** Coleções antigas que levam a esta trilha (links com ?colecao=). */
   collections?: ArticleCollection[];
@@ -38,6 +40,7 @@ export const TRAILS: Trail[] = [
     short: 'Histórias da Bíblia',
     description: 'Povos, personagens e acontecimentos da própria Bíblia, com mapas e linhas do tempo.',
     icon: 'menu_book',
+    tone: '#7a5a14',
     collections: ['estudos'],
     branches: [
       { title: 'A Ponte entre os Testamentos', ids: ['entre-os-testamentos', 'grupos-do-tempo-de-jesus'] },
@@ -50,6 +53,7 @@ export const TRAILS: Trail[] = [
     short: 'Um Só Deus',
     description: 'Quem é o Deus da Bíblia, Pai, Filho e Espírito Santo, e por que a Bíblia rejeita os outros deuses.',
     icon: 'church',
+    tone: '#1f3a5f',
     branches: [
       { title: 'Quem É Deus', ids: ['trindade'] },
       { title: 'Os Falsos Deuses', ids: ['deuses-pagaos'] },
@@ -61,6 +65,7 @@ export const TRAILS: Trail[] = [
     short: 'Sobre a Bíblia',
     description: 'Como os livros foram escritos, reunidos, copiados e traduzidos até a Almeida.',
     icon: 'auto_stories',
+    tone: '#5b3a29',
     collections: ['biblia'],
     branches: [
       { title: 'A Bíblia dos Judeus', ids: ['biblia-judaica'] },
@@ -75,6 +80,7 @@ export const TRAILS: Trail[] = [
     short: 'Contexto Histórico',
     description: 'O que as palavras, os costumes e a vida da época significavam para os primeiros ouvintes.',
     icon: 'school',
+    tone: '#4b3766',
     collections: ['contexto'],
     branches: [
       { title: 'Roma e o Poder', ids: ['legiao-e-o-exercito-romano', 'crucificacao-romana', 'a-familia-de-herodes'] },
@@ -89,6 +95,7 @@ export const TRAILS: Trail[] = [
     short: 'Profecias',
     description: 'Como ler as profecias, Daniel e Apocalipse, com o contexto histórico e as principais interpretações.',
     icon: 'visibility',
+    tone: '#7a1f2b',
     collections: ['profecias'],
     branches: [
       { title: 'Comece por Aqui', ids: ['como-interpretar-profecias'] },
@@ -103,6 +110,7 @@ export const TRAILS: Trail[] = [
     short: 'História da Igreja',
     description: 'De Pentecostes às reformas e às missões: como a fé chegou até nós.',
     icon: 'history_edu',
+    tone: '#0f4c4a',
     collections: ['igreja'],
     branches: [
       { title: 'Os Primeiros Séculos', ids: ['panorama-da-igreja', 'igreja-primitiva', 'perseguicoes', 'coliseu-de-roma', 'catacumbas-de-roma', 'constantino-e-os-concilios'] },
@@ -117,6 +125,7 @@ export const TRAILS: Trail[] = [
     short: 'Pentecostalismo',
     description: 'De Azusa Street aos grandes avivamentos: como começaram, por quem, como terminaram e o que mudaram.',
     icon: 'local_fire_department',
+    tone: '#a2381a',
     collections: ['avivamentos'],
     branches: [
       { title: 'O Movimento Pentecostal', ids: ['movimento-pentecostal'] },
@@ -129,6 +138,7 @@ export const TRAILS: Trail[] = [
     short: 'Evangelho no Brasil',
     description: 'Os pioneiros, a igreja em cada estado, as perseguições e as convenções: o pentecostalismo brasileiro.',
     icon: 'flag',
+    tone: '#1d5c3a',
     branches: [
       { title: 'Os Pioneiros', ids: ['pentecostes-no-brasil', 'daniel-berg-e-gunnar-vingren', 'frida-vingren'] },
       {
@@ -149,6 +159,7 @@ export const TRAILS: Trail[] = [
     short: 'Harpa Cristã',
     description: 'A história do hinário que acompanha os cultos da Assembleia de Deus.',
     icon: 'music_note',
+    tone: '#7d2f63',
     branches: [{
       title: 'A História e os Hinos',
       ids: ['harpa-crista'],
@@ -161,6 +172,7 @@ export const TRAILS: Trail[] = [
     short: 'Teologia',
     description: 'O que a Bíblia ensina, organizado por assunto, uma teologia escrita a partir da experiência com o Espírito Santo e os manuais de quem serve na igreja.',
     icon: 'local_library',
+    tone: '#3f4a52',
     branches: [
       { title: 'A Teologia Pentecostal', ids: ['teologia-sistematico-carismatica'] },
       { title: 'Manuais do Ministério', ids: ['manual-do-diacono', 'manual-do-pastor-pentecostal', 'manual-da-igreja-e-do-obreiro', 'diacono-presbitero-e-pastor-nos-manuais'] },
@@ -172,6 +184,7 @@ export const TRAILS: Trail[] = [
     short: 'A Igreja e o Estado',
     description: 'Como a fé reuniu o povo, o governo levou a estrutura e as cidades nasceram em volta da igreja: da primeira missa à separação e ao interior do Brasil.',
     icon: 'location_city',
+    tone: '#5f5a2a',
     branches: [{ title: 'A História no Brasil', ids: ['igreja-e-estado'] }],
   },
 ];

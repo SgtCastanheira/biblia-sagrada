@@ -24,8 +24,11 @@ export const RELEASES: Release[] = [
   {
     id: 'estudos-do-fim-dos-tempos',
     date: '3 de novembro de 2026',
-    title: 'Seis Estudos sobre o Fim dos Tempos',
+    title: 'Estante de Livros e Novos Estudos',
     items: [
+      { icon: 'auto_stories', title: 'A estante de histórias', text: 'Cada assunto agora é um livro, com a sua cor. Toque no livro e ele se abre.', link: '/historia' },
+      { icon: 'gavel', title: 'O estatuto da CGADB', text: 'Quem pode ser membro, como a convenção decide, o que mudou de 2023 para 2025 e o que as resoluções dizem sobre divórcio e união estável.', link: '/artigo/estatuto-da-cgadb' },
+      { icon: 'groups', title: 'Por que se chama Assembleia de Deus?', text: 'O que a palavra quer dizer na Bíblia, de onde veio o nome e o que as fontes não esclarecem.', link: '/artigo/nome-assembleia-de-deus' },
       { icon: 'calendar_view_week', title: 'As setenta semanas de Daniel', text: 'A conta dos 490 anos passo a passo: de qual ordem se conta, quem é o ungido cortado e as três leituras da última semana, lado a lado.', link: '/artigo/setenta-semanas', tip: 'Também em Histórias › Profecias.' },
       { icon: 'flight_takeoff', title: 'O arrebatamento', text: 'O que Paulo escreveu para consolar uma igreja de luto, em que todos concordam e como se divide quem espera antes, no meio ou depois da tribulação.', link: '/artigo/arrebatamento' },
       { icon: 'masks', title: 'A trindade satânica', text: 'O dragão, a besta e o falso profeta: quem são, o que imitam e por que a Bíblia nunca usa esse nome.', link: '/artigo/trindade-satanica' },
