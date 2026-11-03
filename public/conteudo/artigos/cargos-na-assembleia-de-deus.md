@@ -35,10 +35,10 @@ Os critérios mais citados vêm de três textos: [[At 6.3]], [[1Tm 3.1-13]] e [[
 
 ## O que Encontrei por Escrito
 
-Não achei um texto oficial, público e nacional da CGADB, da CONAMAD ou da CADB com os requisitos de cada cargo. O que apareceu foi:
+Achei o estatuto oficial da CGADB, que define quem pode ser membro (o pastor consagrado, art. 5º), mas não os requisitos de cada cargo: eles ficam no regimento interno, que não consegui ler. Dos estatutos da CONAMAD e da CADB, não achei texto oficial. O que apareceu foi:
 
 - **Um regimento de uma igreja local**, o da Assembleia de Deus Filadélfia de Luziânia (GO), que exige, para a consagração ao pastorado, que o candidato seja **homem, maior de 21 anos e casado**, recomenda o ensino fundamental completo e o curso básico de teologia, e menciona a fidelidade nos dízimos. É um **exemplo**, e vale só para aquela igreja.
-- **Mulheres.** A CGADB **não consagra mulheres ao pastorado**; a CONAMAD e a CADB consagram. Em 2011, a Convenção das Assembleias de Deus do Distrito Federal aprovou a possibilidade de consagrar mulheres pastoras. É um exemplo de como as regras mudam de uma convenção para outra.
+- **Mulheres.** O estatuto da CGADB exige que o membro seja “do sexo masculino, conforme definido na Bíblia Sagrada”, e consagrado ao pastorado (art. 5º), de modo que a CGADB **não consagra mulheres ao pastorado**; a CONAMAD e a CADB consagram. Em 2011, a Convenção das Assembleias de Deus do Distrito Federal aprovou a possibilidade de consagrar mulheres pastoras. É um exemplo de como as regras mudam de uma convenção para outra.
 - **Curso bíblico.** Um estudo sobre a Assembleia de Deus registra que uma convenção instituiu, em 1978, a **obrigatoriedade do curso bíblico** para o pastorado, o que levou à criação de institutos bíblicos nas igrejas-sede. Hoje, a formação é cobrada em graus diferentes, de acordo com cada ministério.
 
 ## “Dizem que...”: O Casamento, o Divórcio e o Nome Limpo
@@ -46,11 +46,11 @@ Não achei um texto oficial, público e nacional da CGADB, da CONAMAD ou da CADB
 Você ouviu que, em algumas convenções, o pastor precisa ser casado, não pode ser divorciado e não pode ter o nome sujo no SPC e no Serasa. O que dá para dizer com honestidade:
 
 - **Ser casado.** Aparece **por escrito** no regimento de pelo menos uma igreja, como vimos. Em muitos ministérios isso é a prática; em outros, há exceções. Não é uma regra que se possa dizer valer para toda a Assembleia de Deus.
-- **Divórcio.** Aqui está o ponto em que as igrejas mais se dividem, por causa de **“marido de uma só mulher”**. Há três leituras entre os cristãos: (1) quem se divorciou **nunca** pode ser líder; (2) quem se divorciou **e casou de novo** não pode; (3) a frase se refere a **não ter mais de uma esposa ao mesmo tempo**, e o divórcio, por si, não impede. Cada ministério adota a sua. Não encontrei um documento nacional que escolha uma delas.
+- **Divórcio.** Aqui está o ponto em que as igrejas mais se dividem, por causa de **“marido de uma só mulher”**. Há três leituras entre os cristãos: (1) quem se divorciou **nunca** pode ser líder; (2) quem se divorciou **e casou de novo** não pode; (3) a frase se refere a **não ter mais de uma esposa ao mesmo tempo**, e o divórcio, por si, não impede. Cada ministério adota a sua. Para os ministros da **CGADB** há um texto escrito: a Resolução 001/2011, ratificada em 2019, só reconhece o divórcio no caso de infidelidade conjugal comprovada ([[Mt 19.9]]) e deixa à **convenção estadual** a decisão sobre a permanência do ministro (veja o estudo do estatuto). Não achei um documento equivalente da CONAMAD nem da CADB.
 - **Nome limpo no SPC e no Serasa.** **Não encontrei nenhum documento público** que exija isso. Pode ser uma prática local, entendida como parte do bom testemunho e de não amar o dinheiro (veja [[Rm 13.8]]: “a ninguém devais coisa alguma”). Mas, como regra escrita, **não consegui confirmar**.
 
 :::nota
-**Como saber a regra da sua convenção.** Peça ao seu pastor ou ao secretário da igreja os documentos que valem para ela: (1) o **estatuto** e o **regimento interno** da convenção estadual a que a igreja é filiada; (2) o regimento do **ministério** da igreja-sede; e (3) as **resoluções** da assembleia geral da convenção. Pergunte também ao pastor-presidente, porque é ele, com o ministério, quem aplica as regras.
+**Como saber a regra da sua convenção.** Peça ao seu pastor ou ao secretário da igreja os documentos que valem para ela: (1) o **estatuto** e o **regimento interno** da convenção estadual a que a igreja é filiada; (2) o regimento do **ministério** da igreja-sede; e (3) as **resoluções** da assembleia geral da convenção, como as da CGADB sobre divórcio e união estável. Pergunte também ao pastor-presidente, porque é ele, com o ministério, quem aplica as regras.
 :::
 
 ## E os Manuais?
@@ -71,4 +71,8 @@ As três convenções, a separação de 1989 e como cada uma se organiza.
 
 :::leia ministerios-na-biblia
 Apóstolos, profetas, evangelistas, pastores, mestres, presbíteros e diáconos na Bíblia.
+:::
+
+:::leia estatuto-da-cgadb
+O que o estatuto da CGADB diz sobre membros, convenções afiliadas e disciplina, e o que mudou de 2023 para 2025.
 :::

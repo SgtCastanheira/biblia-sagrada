@@ -24,6 +24,10 @@ export function textKey(text: string): string {
 export interface AudioEntry {
   /** Resumo do texto lido; muda quando o texto muda (o áudio fica desatualizado). */
   source: string;
+  /** Resumo só do texto (sem a voz): permite revezar provedores sem regravar o que já está pronto. */
+  text?: string;
+  /** Quem narra esta história; a ferramenta pode alternar vozes entre histórias. */
+  voice?: string;
   seconds: number;
   /** `t`: início em segundos; `k`: textKey() do trecho. */
   items: { t: number; k: string }[];

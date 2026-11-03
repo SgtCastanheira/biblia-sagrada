@@ -79,23 +79,23 @@ test('o leitor mostra a época do capítulo no painel de estudo', async ({ page 
 });
 
 test('a pesquisa do estudo acha o fato do mundo e a época', async ({ page }) => {
-  await page.goto('/estudo?q=1929');
+  await page.goto('/historia?q=1929');
   const fato = page.locator('a.hit', { hasText: 'Fato do mundo' }).filter({ hasText: 'A crise de 1929' });
   await expect(fato).toBeVisible();
   await fato.click();
   await expect(page).toHaveURL(/\/epocas\/pentecostes/);
-  await page.goto('/estudo?q=patriarcas');
+  await page.goto('/historia?q=patriarcas');
   await expect(page.locator('a.hit', { hasText: 'Os Patriarcas' }).first()).toBeVisible();
 });
 
-test('a linha do tempo está no alto do Estudo, na tela inicial e em Histórias', async ({ page }) => {
-  await page.goto('/estudo');
-  await page.locator('a.timeline').click();
+test('a linha do tempo está na biblioteca, na tela inicial e dentro de cada assunto', async ({ page }) => {
+  await page.goto('/historia');
+  await page.getByRole('button', { name: /^Livro: A Linha do Tempo/ }).click();
   await expect(page).toHaveURL(/\/epocas$/);
   await page.goto('/');
   await page.getByRole('link', { name: /A história, época por época/ }).click();
   await expect(page).toHaveURL(/\/epocas$/);
-  await page.goto('/historia');
+  await page.goto('/historia?trilha=igreja');
   await page.getByRole('link', { name: /Ver por época/ }).click();
   await expect(page).toHaveURL(/\/epocas$/);
 });

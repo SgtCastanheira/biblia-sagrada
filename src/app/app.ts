@@ -69,7 +69,7 @@ export class App {
   });
 
   protected readonly nav: { tab: NavTab; label: string; icon: string; link: string }[] = [
-    { tab: 'estudo', label: 'Estudo', icon: 'local_library', link: '/estudo' },
+    { tab: 'estudo', label: 'História', icon: 'auto_stories', link: '/historia' },
     { tab: 'ensino', label: 'Ensino', icon: 'school', link: '/ensino' },
     { tab: 'eu', label: 'Meu espaço', icon: 'person', link: '/meu-espaco' },
   ];

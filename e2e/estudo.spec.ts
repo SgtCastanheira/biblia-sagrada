@@ -1,10 +1,10 @@
 import { expect, test } from './base';
 
-test('início leva à biblioteca de estudo', async ({ page }) => {
+test('início leva à biblioteca de história e estudo', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('link', { name: 'Estudo' }).first().click();
-  await expect(page.getByRole('heading', { name: 'Estudo', level: 1 })).toBeVisible();
-  await expect(page.getByText('Memorial da Fé')).toBeVisible();
+  await page.getByRole('link', { name: 'História' }).first().click();
+  await expect(page.getByRole('heading', { name: 'História', level: 1 })).toBeVisible();
+  await expect(page.getByRole('button', { name: /^Livro: Memorial da Fé/ })).toBeVisible();
 });
 
 test('leitor: palavra do dicionário abre o verbete', async ({ page }) => {
@@ -292,7 +292,7 @@ test('fontes: cada estudo mostra de onde vêm as informações, e há uma págin
   await expect(page.getByText('Jerusalém no tempo de Jesus')).toBeVisible();
   await page.getByRole('link', { name: 'Todas as fontes do app' }).click();
   await expect(page.getByRole('heading', { name: 'Fontes das informações', level: 1 })).toBeVisible();
-  await page.goto('/estudo');
+  await page.goto('/historia');
   await expect(page.getByRole('link', { name: /Fontes das informações/ })).toBeVisible();
 });
 

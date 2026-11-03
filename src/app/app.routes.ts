@@ -5,7 +5,8 @@ export const routes: Routes = [
   { path: 'ensino', title: 'Ensino · Bíblia Sagrada', loadComponent: () => import('./pages/teach/teach').then((m) => m.TeachPage) },
   { path: 'meu-espaco', title: 'Meu espaço · Bíblia Sagrada', loadComponent: () => import('./pages/me/me').then((m) => m.MePage) },
   { path: 'estudo/livros', title: 'Estudo livro por livro · Bíblia Sagrada', loadComponent: () => import('./pages/study-books/study-books').then((m) => m.StudyBooksPage) },
-  { path: 'estudo', title: 'Estudo · Bíblia Sagrada', loadComponent: () => import('./pages/study/study').then((m) => m.StudyPage) },
+  // O Estudo e a História viraram uma tela só; o endereço antigo continua valendo (e leva a pesquisa junto)
+  { path: 'estudo', pathMatch: 'full', redirectTo: 'historia' },
   { path: 'memorial', title: 'Memorial da Fé · Bíblia Sagrada', loadComponent: () => import('./pages/memorial/memorial').then((m) => m.MemorialPage) },
   { path: 'tribos', title: 'As doze tribos de Israel · Bíblia Sagrada', loadComponent: () => import('./pages/tribes/tribes').then((m) => m.TribesPage) },
   { path: 'tribos/:id', loadComponent: () => import('./pages/tribe/tribe').then((m) => m.TribePage) },
