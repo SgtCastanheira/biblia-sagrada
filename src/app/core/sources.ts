@@ -342,7 +342,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'constantino-e-os-concilios': { ancient: ['Eusébio, Vida de Constantino', 'O Credo de Niceia (325) e o de Constantinopla (381)'], works: ['kelly', 'gonzalez', 'noll'] },
   'idade-media': { ancient: ['Regra de São Bento (séc. VI)'], works: ['gonzalez', 'cairns', 'noll'] },
   'pre-reformadores': { ancient: ['Jan Hus, Da Igreja (1413)', 'Erasmo de Roterdã, Novum Instrumentum (1516)'], works: ['gonzalez', 'cairns', 'george'] },
-  'reforma-protestante': { ancient: ['Martinho Lutero, as 95 Teses (1517)', 'Discurso de Lutero na Dieta de Worms (1521)'], works: ['bainton', 'george', 'gonzalez'] },
+  'reforma-protestante': { ancient: ['Martinho Lutero, as 95 Teses (1517)', 'Discurso de Lutero na Dieta de Worms (1521)', 'Christian History Institute (“1521: The Diet of Worms”): a resposta de Lutero em 18 de abril de 1521; as fontes divergem sobre o dia da primeira audiência (17 ou 16 a 18)', 'Encyclopaedia Britannica: Martin Luther, a viagem a Eisleben e a morte em 18 de fevereiro de 1546'], works: ['bainton', 'george', 'gonzalez'] },
   reformadores: { ancient: ['João Calvino, Institutas da Religião Cristã (1536–1559)', 'Confissão de Schleitheim (1527), dos anabatistas'], works: ['george', 'gonzalez', 'cairns'] },
   'reforma-inglesa': { ancient: ['Ato de Supremacia (1534)', 'Confissão de Fé de Westminster (1646)'], works: ['ryken', 'daniell', 'gonzalez'] },
   contrarreforma: { ancient: ['Cânones e decretos do Concílio de Trento (1545–1563)'], works: ['omalley', 'gonzalez', 'noll'] },
@@ -385,6 +385,16 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ancientLabel: 'Documentos e sites consultados',
     ancient: ['Wikipédia: Pyongyang Revival (en.wikipedia.org)', 'Relatos dos missionários Robert A. Hardie e William Blair', 'The Gospel Coalition: “The North Korean revival of 1907”'],
     works: ['lee-korea', 'orr-fervent', 'noll'],
+  },
+  'a-palavra-no-coracao': {
+    ancientLabel: 'Textos e registros consultados',
+    ancient: [
+      'A Bíblia (Almeida), citada ao longo do texto: Gênesis 2 e 3, Êxodo 20, Deuteronômio 4 e 6, Salmos 91 e 119, Provérbios 7, 22 e 30, Isaías 8 e 53, Oseias 4, Mateus 4 e 5, Lucas 23, Atos 8, Gálatas 1, 2 Timóteo 3, Hebreus 5, 2 Pedro 3, Apocalipse 22',
+      'Wikipédia (en): Wicked Bible, a edição de 1631 da Bíblia do rei Jaime que omitiu o “não” de Êxodo 20.14; as fontes divergem quanto ao valor da multa, por isso o texto não o cita',
+      'Lista VERSE_FIXES de tools/gerar-almeida.py: as 23 correções de erros de digitação feitas no texto digital da Almeida do app, de onde vêm os exemplos',
+      'Os estudos do app Os Manuscritos da Bíblia e A Bíblia em Português, sobre a preservação do texto e as diferenças entre traduções',
+    ],
+    works: ['carson-moo', 'dillard-longman', 'keener-nt', 'ndb'],
   },
   'avivamento-da-africa-oriental': {
     ancientLabel: 'Documentos e sites consultados',

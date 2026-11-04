@@ -254,6 +254,14 @@ A partir de 1949, as **cruzadas de Billy Graham** levaram o evangelho a estádio
 :::sermao billy-graham
 :::
 
+## Guardar o Fogo
+
+Quase todo avivamento termina na geração seguinte. O que guarda o fogo aceso é a Palavra dentro de cada pessoa, e não só no aparelho ou na estante.
+
+:::leia a-palavra-no-coracao
+A Palavra está no seu aparelho, mas está em você? Por que ler e decorar, o que acontece quando um texto muda sem ninguém ver e quem vai ensinar o caminho que você não conhece.
+:::
+
 ## Para a Vida
 
 Os avivamentos não começaram com estratégias, mas com gente que orava e se arrependia. A promessa continua: “Quanto mais dará o Pai celestial o Espírito Santo àqueles que lho pedirem?” [[Lc 11.13]]. A oração de cada avivamento pode ser a nossa: “Cria em mim, ó Deus, um coração puro” [[Sl 51.10]] — “aviva, ó Senhor, a tua obra” [[Hc 3.2]].

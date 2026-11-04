@@ -59,7 +59,7 @@ export class App {
     if (/^\/(ler\/|busca|livros)/.test(url)) return 'biblia';
     if (/^\/(ensino|ebd|ibuc|sermoes)/.test(url)) return 'ensino';
     if (/^\/(meu-espaco|devocional|anotacoes|favoritos|ajustes|novidades|creditos)/.test(url)) return 'eu';
-    if (/^\/(estudo|fontes|harpa|memorial|genealogia|tribos|atlas|mapas|profecias|artigo|historia|epocas|avivamento|assembleia-de-deus|dicionario|curiosidades|quiz|livro\/)/.test(url)) return 'estudo';
+    if (/^\/(estudo|fontes|harpa|memorial|genealogia|tribos|atlas|mapas|profecias|artigo|historia|epocas|datas|avivamento|assembleia-de-deus|dicionario|curiosidades|quiz|livro\/)/.test(url)) return 'estudo';
     return /^\/($|\?|#)/.test(url) ? 'inicio' : null;
   });
   protected readonly version = computed(() => findVersion(this.settings.version()));

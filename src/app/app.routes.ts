@@ -15,6 +15,7 @@ export const routes: Routes = [
   { path: 'genealogia', title: 'Genealogia de Jesus · Bíblia Sagrada', loadComponent: () => import('./pages/genealogy/genealogy').then((m) => m.GenealogyPage) },
   { path: 'memorial/:id', loadComponent: () => import('./pages/person/person').then((m) => m.PersonPage) },
   { path: 'epocas', title: 'Linha do tempo · Bíblia Sagrada', loadComponent: () => import('./pages/epochs/epochs').then((m) => m.EpochsPage) },
+  { path: 'datas', title: 'Datas da história · Bíblia Sagrada', loadComponent: () => import('./pages/dates/dates').then((m) => m.DatesPage) },
   { path: 'epocas/:id', loadComponent: () => import('./pages/epochs/epoch').then((m) => m.EpochPage) },
   { path: 'historia', title: 'História · Bíblia Sagrada', loadComponent: () => import('./pages/history/history').then((m) => m.HistoryPage) },
   { path: 'artigo/:id', loadComponent: () => import('./pages/article/article').then((m) => m.ArticlePage) },

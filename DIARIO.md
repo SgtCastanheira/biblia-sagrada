@@ -29,6 +29,27 @@ Modelo:
 
 ---
 
+## 2026-11-04 15:28 -0400 — Publicação: Datas da História e o estudo da Palavra no coração
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Ramo à parte (`publicar-palavra-e-datas`, saído do `main`) com só o que o usuário aprovou para publicar: o estudo **A Bíblia Está no Seu Celular, mas Está em Você?** e a página **Datas da História** (`/datas`). O resto do trabalho segue só no `dev`.
+- **Estudo da Palavra**: o texto, a entrada na biblioteca (`library.ts`), um ramo novo da trilha dos avivamentos (“Reconhecer e Guardar o Avivamento”, só com este estudo), as fontes, o cartão em `avivamentos-desde-atos` (seção “Guardar o Fogo”) e as sete correções de digitação do Almeida (`tools/gerar-almeida.py` e cinco livros). A frase que citava o estudo ainda não publicado “A Geração que Não Conheceu o Senhor” foi tirada.
+- **Datas da História**: a página, o carrossel da tela inicial (só os fatos do mês, um cartão por dia, compilado nos dias com vários fatos), o cartão “Datas de <mês>” no alto da biblioteca, o livro na estante “O Tempo”, a imagem de compartilhar (com o gancho, a explicação simples e as fotos) e o cache preguiçoso das fotos (`imagens-das-datas`). A imagem de compartilhar entrou só para as datas (infraestrutura em `share-card.ts`, `share-render.ts`, `share-sheet.ts` e `Sheets.shareImage`; `qrcode-generator` no `package.json`).
+- **72 datas** (das 90 do `dev`), todas ligadas a estudos que já estão no `main`. Ficaram de fora, por dependerem de estudos ainda não publicados, 18 datas: as 11 da Coreia, as 3 de Miller (Diocleciano, Wycliffe, Constança), Edwards em Northampton e as 3 da igreja batista de Belém e de Salvador. Fotos: 49 novas (900 px) mais as que o `main` já tinha, com crédito em `CREDITOS.md` e `credits.ts`.
+- `reforma-protestante`: o dia da resposta de Lutero em Worms (18 de abril de 1521) e o da morte dele (18 de fevereiro de 1546) entraram no texto, conferidos em fontes públicas, e as fontes do estudo foram atualizadas.
+- Testes de datas e da imagem de compartilhar ajustados ao conjunto menor (meses com poucos fatos); o teste das novidades passou a procurar o botão “Entendi” pelo nome exato.
+
+**Decisões:**
+- Publicar por ramo próprio, saído do `main`, e não o `dev` inteiro: o `dev` tem mais de cem arquivos de outras frentes (Coreia, estudos de Miller e de Ferguson, estudo dos batistas, imagem de compartilhar em todas as páginas) que não foram aprovados. Quando forem, o próximo envio do `dev` para o `main` vai ter conflitos nos arquivos que os dois ramos mudaram; vale a versão do `dev`, que é um conjunto maior.
+- Só as datas cujo texto está num estudo já publicado entram: o texto de cada data só repete o que o estudo conta.
+
+**Arquivos:** `public/conteudo/artigos/a-palavra-no-coracao.md`, `public/conteudo/artigos/avivamentos-desde-atos.md`, `public/conteudo/artigos/reforma-protestante.md`, `src/app/core/` (`anniversaries.ts`, `share-card.ts`, `library.ts`, `trails.ts`, `sources.ts`, `whats-new.ts`, `credits.ts`, `library-bays.ts`), `src/app/shared/` (`commemorations.ts`, `share-render.ts`, `share-sheet.ts`, `sheets.ts`), `src/app/pages/` (`dates`, `history`, `home`), `public/conteudo/imagens/`, `ngsw-config.json`, `package.json`, `tools/gerar-almeida.py`, `public/bible/almeida/`, testes, `CREDITOS.md`, `CLAUDE.md`, `TESTES.md`, `DIARIO.md`
+
+**Pendências:**
+- Publicar o resto (Coreia e as 18 datas, estudos de Miller e de Ferguson, estudo dos batistas, imagem de compartilhar nas outras páginas) quando o usuário aprovar.
+
 ## 2026-11-03 16:41 -0400 — Áudio das histórias: revezar vozes e provedores dentro da franquia grátis
 
 **Autor:** Valtemir Junior (com Claude Code)
