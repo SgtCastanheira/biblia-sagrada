@@ -2,6 +2,7 @@ import { Component, computed, inject, input } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
+import { featured, monthName } from '../../core/anniversaries';
 import { findArticle } from '../../core/library';
 import { StoryProgressService } from '../../core/story-progress.service';
 import { Bookshelf } from '../../shared/bookshelf';
@@ -94,6 +95,11 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
       }
     } @else {
       <app-study-finder [q]="q()">
+        <a class="by-era dates" matRipple routerLink="/datas">
+          <mat-icon>event</mat-icon>
+          <span><strong>Datas de {{ month }}</strong> {{ monthCount }} {{ monthCount === 1 ? 'fato da história da Igreja' : 'fatos da história da Igreja' }} neste mês, com foto e imagem para compartilhar, e o ano inteiro logo ali.</span>
+          <mat-icon class="go">chevron_right</mat-icon>
+        </a>
         <app-bookshelf />
 
         <details class="howto card">
@@ -177,6 +183,10 @@ export class HistoryPage {
   /** Pesquisa na biblioteca (?q=). */
   readonly q = input<string>();
   protected readonly progress = inject(StoryProgressService);
+  /** O cartão das datas, no alto da biblioteca: o mês de hoje e quantos fatos ele tem. */
+  private readonly today = new Date();
+  protected readonly month = monthName(this.today.getMonth() + 1);
+  protected readonly monthCount = featured(this.today).reduce((n, f) => n + f.events.length, 0);
   protected readonly trail = computed(() => findTrail(this.trilha()) ?? trailOfCollection(this.colecao()));
   protected readonly next = computed(() => {
     const i = TRAILS.findIndex((t) => t.id === this.trail()?.id);

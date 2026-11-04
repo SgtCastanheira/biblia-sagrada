@@ -27,7 +27,7 @@ Lutero reagiu escrevendo 95 teses em latim. Segundo a tradição, pregou-as na p
 - 1546 | Morte | Lutero morre em Eisleben, a cidade onde nasceu.
 :::
 
-Em Worms, em abril de 1521, pediram que Lutero renegasse os seus livros. Ele respondeu: “A menos que eu seja convencido pelo testemunho das Escrituras ou por razões claras… estou preso aos textos que citei, e a minha consciência está cativa à Palavra de Deus. Não posso nem quero me retratar de nada, porque não é seguro nem correto agir contra a consciência. Que Deus me ajude. Amém”. A frase “Aqui estou; não posso fazer outra coisa” aparece nas primeiras edições impressas do discurso.
+Em Worms, em abril de 1521, pediram que Lutero renegasse os seus livros. Ele respondeu, em 18 de abril: “A menos que eu seja convencido pelo testemunho das Escrituras ou por razões claras… estou preso aos textos que citei, e a minha consciência está cativa à Palavra de Deus. Não posso nem quero me retratar de nada, porque não é seguro nem correto agir contra a consciência. Que Deus me ajude. Amém”. A frase “Aqui estou; não posso fazer outra coisa” aparece nas primeiras edições impressas do discurso.
 
 Declarado fora da lei, Lutero foi “sequestrado” no caminho de volta por soldados do seu protetor, o príncipe Frederico, o Sábio, e levado ao castelo de Wartburg. Ali, disfarçado de cavaleiro, traduziu o Novo Testamento do grego para um alemão simples, que “a mãe em casa, as crianças na rua e o homem comum no mercado” pudessem entender.
 
@@ -52,5 +52,5 @@ Lutero amava a música e queria que a congregação cantasse, em alemão. Compô
 A Reforma tem também capítulos tristes. Na Guerra dos Camponeses (1525), Lutero apoiou com palavras duras a repressão aos revoltosos. Na velhice, escreveu textos terríveis contra os judeus, que os luteranos de hoje repudiam. A história da Igreja mostra que Deus usa pessoas imperfeitas — e que só a Palavra de Deus é infalível.
 
 :::nota
-Quando morreu, em 1546, encontraram no bolso de Lutero um papel com as suas últimas palavras escritas: “Somos mendigos. Isto é verdade”. Ele terminou a vida como a começou na fé: dependendo inteiramente da graça.
+Quando morreu, em 18 de fevereiro de 1546, encontraram no bolso de Lutero um papel com as suas últimas palavras escritas: “Somos mendigos. Isto é verdade”. Ele terminou a vida como a começou na fé: dependendo inteiramente da graça.
 :::

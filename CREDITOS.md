@@ -39,6 +39,55 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | O Bom Pastor, afresco do século III, publicado em *Die Malereien der Katakomben Roms*, de Joseph Wilpert (1903) | `public/conteudo/imagens/catacumbas-bom-pastor.jpg`, do Wikimedia Commons | Domínio público |
 | Ilustração de Eugène Damblans (1923): De Rossi mostra a Cripta dos Papas a Pio IX | `public/conteudo/imagens/catacumbas-de-rossi-pio-ix.jpg`, do Wikimedia Commons | Domínio público |
 | Slide de 1913 de Edmund F. Arras, Columbus Metropolitan Library (via DPLA): nichos de uma catacumba | `public/conteudo/imagens/catacumbas-nichos.jpg`, do Wikimedia Commons | Domínio público |
+| Gravura alemã de 1717 da execução de Jan Hus no Concílio de Constança (recortada) | `public/conteudo/imagens/hus-fogueira.jpg`, do Wikimedia Commons | Domínio público |
+| Martinho Lutero, retrato de Lucas Cranach, o Velho (1528), Veste Coburg | `public/conteudo/imagens/lutero-cranach-1528.jpg`, do Wikimedia Commons | Domínio público |
+| Ulrico Zuínglio, retrato de Hans Asper (1531) | `public/conteudo/imagens/zuinglio-asper-1531.jpg`, do Wikimedia Commons | Domínio público |
+| William Tyndale, retrato de autor desconhecido (publicado em 1836) | `public/conteudo/imagens/tyndale-retrato.jpg`, do Wikimedia Commons | Domínio público |
+| O conde Zinzendorf, retrato de Balthasar Denner (1731) | `public/conteudo/imagens/zinzendorf-denner-1731.jpg`, do Wikimedia Commons | Domínio público |
+| John Wesley, retrato de George Romney (1788–1789) | `public/conteudo/imagens/wesley-romney.jpg`, do Wikimedia Commons | Domínio público |
+| Jonathan Edwards, retrato de Henry Augustus Loop (1860), a partir de Joseph Badger | `public/conteudo/imagens/edwards-retrato.jpg`, do Wikimedia Commons | Domínio público |
+| Allen Gardiner, gravura de autor desconhecido | `public/conteudo/imagens/allen-gardiner.jpg`, do Wikimedia Commons | Domínio público |
+| Robert Reid Kalley, foto de autor desconhecido | `public/conteudo/imagens/kalley-retrato.jpg`, do Wikimedia Commons | Domínio público |
+| Dom Bosco, retrato de Eugénie Marie Salanson (1883) | `public/conteudo/imagens/dom-bosco-1883.jpg`, do Wikimedia Commons | Domínio público |
+| William J. Seymour, foto dos anos 1910, de autor desconhecido | `public/conteudo/imagens/seymour-1910.jpg`, do Wikimedia Commons | Domínio público |
+| Willis Hoover, por volta de 1920, Biblioteca Nacional do Chile (Memoria Chilena) | `public/conteudo/imagens/hoover-1920.jpg`, do Wikimedia Commons | Domínio público |
+| Casarões antigos com azulejos, em Belém do Pará (Celso Abreu) | `public/conteudo/imagens/datas-belem-casaroes.jpg`, do Wikimedia Commons | CC BY 2.0 |
+| Culto num templo da Assembleia de Deus, em Imperatriz (MA) (Jozeias3d) | `public/conteudo/imagens/datas-assembleia-templo.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
+| Congresso de missões num templo da Assembleia de Deus, em Imperatriz (MA) (Jozeias3d) | `public/conteudo/imagens/datas-assembleia-culto.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
+| Estação inicial da Ferrovia Madeira-Mamoré, em Porto Velho, entre 1910 e 1915 (Autor desconhecido) | `public/conteudo/imagens/datas-porto-velho-estacao.jpg`, do Wikimedia Commons | domínio público |
+| Igreja Matriz de São Boaventura, em Canavieiras (BA) (MandacaruFlor) | `public/conteudo/imagens/datas-canavieiras.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| Centro histórico de São Luís (MA) (Flaviohmg) | `public/conteudo/imagens/datas-sao-luis.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| Catedral Evangélica de Chile, da Igreja Metodista Pentecostal, em Santiago (Carlos Figueroa Rojas) | `public/conteudo/imagens/datas-catedral-evangelica-chile.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| Félix Manz é afogado em Zurique (1527), na crônica de Heinrich Thomann (Heinrich Thomann) | `public/conteudo/imagens/datas-felix-manz.jpg`, do Wikimedia Commons | domínio público |
+| A igreja de Kirk o’ Shotts, na Escócia (ctollan) | `public/conteudo/imagens/datas-kirk-o-shotts.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| O avião de Nate Saint, da Mission Aviation Fellowship (Mission Aviation Fellowship) | `public/conteudo/imagens/datas-aviao-nate-saint.jpg`, do Wikimedia Commons | CC BY-SA 2.5 |
+| Ovação popular ao general Deodoro da Fonseca, na proclamação da República (1889) (Autor desconhecido) | `public/conteudo/imagens/datas-republica-1889.jpg`, do Wikimedia Commons | domínio público |
+| Ashbel Green Simonton (William Simonton) | `public/conteudo/imagens/datas-simonton.jpg`, do Wikimedia Commons | domínio público |
+| Charles F. Parham, diretor da escola bíblica de Topeka (Autor desconhecido) | `public/conteudo/imagens/datas-parham.jpg`, do Wikimedia Commons | domínio público |
+| Catherine Davies e os filhos, que emigraram para a Patagônia no Mimosa (Autor desconhecido) | `public/conteudo/imagens/datas-mimosa-familia.jpg`, do Wikimedia Commons | domínio público |
+| O Forte Coligny, da França Antártica, numa gravura de 1560 (Autor desconhecido) | `public/conteudo/imagens/datas-forte-coligny.jpg`, do Wikimedia Commons | domínio público |
+| Reunião de oração numa tenda, em Eastham (EUA), em 1852 (Miscellaneous Items in High Demand, PPOC, Library of Congres) | `public/conteudo/imagens/datas-reuniao-oracao-1852.jpg`, do Wikimedia Commons | domínio público |
+| O cemitério Skogskyrkogården, em Estocolmo, onde Daniel Berg está sepultado (Hans Lindqvist) | `public/conteudo/imagens/datas-skogskyrkogarden.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
+| Vargön, na Suécia, a cidade onde Daniel Berg nasceu (VulpesVulpes42) | `public/conteudo/imagens/datas-vargon.jpg`, do Wikimedia Commons | CC0 (domínio público) |
+| Passeio Público de Fortaleza (CE) (GLandovsky) | `public/conteudo/imagens/datas-fortaleza.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| Vista de Campina Grande (PB) (Marinelson Almeida - Traveling through Brazil) | `public/conteudo/imagens/datas-campina-grande.jpg`, do Wikimedia Commons | CC BY 2.0 |
+| Praça do centro de Boa Vista (RR) (Luis Fernando Teixeira de Souza) | `public/conteudo/imagens/datas-boa-vista.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| Fortaleza de São José, em Macapá (AP) (Paulo Akira) | `public/conteudo/imagens/datas-macapa.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| Teatro Amazonas, em Manaus (AM) (Ridiculopathy) | `public/conteudo/imagens/datas-manaus.jpg`, do Wikimedia Commons | CC0 (domínio público) |
+| Forte dos Reis Magos, em Natal (RN) (DlauriniJr) | `public/conteudo/imagens/datas-natal.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| Bairro do Recife Antigo e o Marco Zero, no Recife (PE) (Hans von Manteuffel) | `public/conteudo/imagens/datas-recife.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| Praça Mauá, no porto do Rio de Janeiro (Wilfredor) | `public/conteudo/imagens/datas-rio.jpg`, do Wikimedia Commons | CC0 (domínio público) |
+| Rua Carolina Machado, em Madureira (RJ) (Quintinense) | `public/conteudo/imagens/datas-madureira.jpg`, do Wikimedia Commons | domínio público |
+| Mercado Público de Porto Alegre (RS) (Eugenio Hansen) | `public/conteudo/imagens/datas-porto-alegre.jpg`, do Wikimedia Commons | CC BY-SA 2.0 |
+| Praça da Liberdade, em Belo Horizonte, em 1935 (Autor desconhecido) | `public/conteudo/imagens/datas-bh-1935.jpg`, do Wikimedia Commons | domínio público |
+| Catedral da Sé, em São Paulo (SP) (Wilfredor) | `public/conteudo/imagens/datas-sao-paulo.jpg`, do Wikimedia Commons | CC0 (domínio público) |
+| Centro de Curitiba (PR) (Ubonat) | `public/conteudo/imagens/datas-curitiba.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| O porto de Itajaí (SC) (Marinha do Brasil) | `public/conteudo/imagens/datas-itajai.jpg`, do Wikimedia Commons | CC BY-SA 2.0 |
+| Palácio Fausto Cardoso, em Aracaju (SE) (Paul R. Burley) | `public/conteudo/imagens/datas-aracaju.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| O rio Parnaíba em Teresina (PI) (Alexandro Dias) | `public/conteudo/imagens/datas-teresina.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| Vista de Anápolis (GO) (Alessandro Sagazes) | `public/conteudo/imagens/datas-anapolis.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
+| Catedral do Senhor Bom Jesus de Cuiabá (MT), em 1941, Arquivo Nacional (Arquivo Nacional) | `public/conteudo/imagens/datas-cuiaba-1941.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
+| Vista de Pindamonhangaba (SP) (Facs90) | `public/conteudo/imagens/datas-pindamonhangaba.jpg`, do Wikimedia Commons | CC BY-SA 4.0 |
 | Louis Segond (1910), em francês | Texto embutido (`public/bible/lsg`), do eBible.org (`fraLSG`) | Domínio público |
 | Reina-Valera 1909, em espanhol | Texto embutido (`public/bible/rv1909`), do eBible.org (`spaRV1909`) | Domínio público |
 | Versión Biblia Libre (VBL) — © 2018–2020 Jonathan Gallagher e Shelly Barrios de Avila | Texto embutido (`public/bible/vbl`), do eBible.org (`spavbl`) | CC BY-SA 4.0 |

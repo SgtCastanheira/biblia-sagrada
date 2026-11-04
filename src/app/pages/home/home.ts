@@ -18,6 +18,7 @@ import { Sheets } from '../../shared/sheets';
 import { StoryProgressService } from '../../core/story-progress.service';
 import { StoryBooks } from '../../shared/story-books';
 import { ReminderCard } from '../../shared/reminder-card';
+import { Commemorations } from '../../shared/commemorations';
 
 /** Versículos sorteados na tela inicial: um diferente a cada vez que ela é aberta. */
 const HIGHLIGHTS = [
@@ -120,7 +121,7 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, StoryBooks, ReminderCard],
+  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, StoryBooks, ReminderCard, Commemorations],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

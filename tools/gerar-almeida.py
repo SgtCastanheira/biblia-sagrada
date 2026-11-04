@@ -70,6 +70,13 @@ VERSE_FIXES = {
     ("PSA", 42, 7): ("todas as tuas tuas ondas", "todas as tuas ondas"),
     ("JHN", 11, 15): ("para para que creiais", "para que creiais"),
     ("REV", 19, 12): ("ninguém sabia sabia senão", "ninguém sabia senão"),
+    ("2CO", 8, 1): ("Mecedônia", "Macedônia"),
+    ("1KI", 18, 39): ("O senhor é Deus! O Senhor é Deus!", "O Senhor é Deus! O Senhor é Deus!"),
+    ("JDG", 10, 6): ("a fazer e que era mau", "a fazer o que era mau"),
+    ("JDG", 11, 35): ("eu fiz, um voto", "eu fiz um voto"),
+    ("JDG", 11, 40): (" Isso não é", ""),
+    ("1SA", 3, 13): ("já lhe fiz: saber", "já lhe fiz saber"),
+    ("ISA", 8, 20): ("A Lei e ao Testemunho! se eles", "À Lei e ao Testemunho! Se eles"),
 }
 
 def fix_verse(book, chapter, verse, text):

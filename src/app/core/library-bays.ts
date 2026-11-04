@@ -92,7 +92,10 @@ export const TOOL_BAYS: ToolBay[] = [
       },
       {
         title: 'O Tempo',
-        books: [{ title: 'A Linha do Tempo', subtitle: 'Da Criação aos nossos dias, em 16 épocas: as histórias, os personagens e as crises do mundo, tudo junto.', icon: 'timeline', url: '/epocas' }],
+        books: [
+          { title: 'A Linha do Tempo', subtitle: 'Da Criação aos nossos dias, em 16 épocas: as histórias, os personagens e as crises do mundo, tudo junto.', icon: 'timeline', url: '/epocas' },
+          { title: 'Datas da História', subtitle: 'Os fatos da Igreja, dos avivamentos e das igrejas do Brasil no dia em que aconteceram, com foto e imagem para compartilhar.', icon: 'event', url: '/datas' },
+        ],
       },
     ],
   },

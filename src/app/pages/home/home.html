@@ -40,6 +40,9 @@
 <!-- O chamado da vez (lembretes do dia) -->
 <app-reminder-card />
 
+<!-- Datas da história: o que faz aniversário por perto, com foto -->
+<app-commemorations />
+
 <!-- Devocional -->
 <a class="devotional card" matRipple routerLink="/devocional/hoje" [class.done]="devotional.todayEntry()?.done">
   <span class="dev-icon"><mat-icon>{{ devotional.todayEntry()?.done ? 'check' : 'self_improvement' }}</mat-icon></span>
