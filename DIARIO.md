@@ -29,6 +29,23 @@ Modelo:
 
 ---
 
+## 2026-11-04 16:07 -0400 — Publicação: “A Geração que Não Conheceu o Senhor” e a data de Edwards
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Ramo `publicar-geracao`, saído do `main`, com o estudo **A Geração que Não Conheceu o Senhor** (o padrão de Josué e Jefté aos nossos avivamentos; o culto no lar; a doutrina, a regra e o costume), aprovado pelo usuário: o texto, a entrada na biblioteca, as fontes, o item de novidades, a entrada na trilha “Reconhecer e Guardar o Avivamento” (agora com este estudo e o da Palavra) e o cartão em `avivamentos-desde-atos` (seção “Guardar o Fogo”, com os dois estudos).
+- A data **Edwards é dispensado de Northampton** (22 de junho de 1750) entrou em `anniversaries.ts`: a história que a explica é este estudo. O 22 de junho passa a ter dois fatos (com o do Rio de Janeiro, de 1924), e vira compilado.
+- A frase do estudo que citava *Os Avivamentos na Bíblia*, que ainda não está publicado, foi tirada.
+
+**Decisões:**
+- As outras 17 datas que o usuário aprovou (11 da Coreia, 3 de Miller e 3 dos batistas) **não** subiram: o texto de cada uma repete fatos que só estão nos estudos reescritos (Coreia, batistas) ou nos livros de Miller, e esses estudos ainda não foram aprovados. Uma data publicada sem o estudo que a explica leva a uma história que não tem o fato. Sobem juntas com os estudos, quando eles forem aprovados.
+
+**Arquivos:** `public/conteudo/artigos/a-geracao-que-nao-conheceu-o-senhor.md`, `public/conteudo/artigos/avivamentos-desde-atos.md`, `src/app/core/library.ts`, `trails.ts`, `sources.ts`, `whats-new.ts`, `anniversaries.ts`, `DIARIO.md`
+
+**Pendências:**
+- Aprovar e publicar a Coreia (e as 11 datas), os batistas (e as 3 datas), os livros de Miller e Ferguson (e as 3 datas de Miller), “Avivamentos na Bíblia”, “Marcas de um Avivamento”, a imagem de compartilhar nas outras páginas e as fotos como num jornal.
+
 ## 2026-11-04 15:28 -0400 — Publicação: Datas da História e o estudo da Palavra no coração
 
 **Autor:** Valtemir Junior (com Claude Code)

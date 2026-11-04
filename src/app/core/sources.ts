@@ -386,6 +386,17 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ancient: ['Wikipédia: Pyongyang Revival (en.wikipedia.org)', 'Relatos dos missionários Robert A. Hardie e William Blair', 'The Gospel Coalition: “The North Korean revival of 1907”'],
     works: ['lee-korea', 'orr-fervent', 'noll'],
   },
+  'a-geracao-que-nao-conheceu-o-senhor': {
+    ancientLabel: 'Documentos e sites consultados',
+    ancient: [
+      'A Bíblia (Almeida), citada ao longo do texto: Josué 24, Juízes 2 e 10–11, 2 Reis 21–23, 2 Crônicas 17, 24 e 33, Deuteronômio 4, 6 e 31, Salmo 78, Provérbios 1 e 31, Efésios 6, 2 Timóteo 1 e 3, Atos 10, 16 e 17',
+      'John Wesley, Thoughts Upon Methodism (1786), na edição de Thomas Jackson (vol. 13); a frase foi conferida em citações de fontes metodistas, e a tradução é livre',
+      'Christianity Today e Encyclopaedia Britannica: o Pacto pela Metade (1662) e a demissão de Jonathan Edwards de Northampton (22 de junho de 1750); Yale Jonathan Edwards Studies: novas leituras da demissão',
+      'Christian History Institute (“Like Mother, Like Son”) e Epworth Old Rectory: Susanna Wesley e as reuniões da cozinha, em 1712; os relatos variam nos números',
+      'CGADB: Estatuto Social, versões de 2023 e de 2025 (art. 5º e 8º), com a exigência de observar a Declaração de Fé das Assembleias de Deus; os estudos do app sobre as Assembleias de Deus, de onde vêm os fatos da igreja',
+    ],
+    works: ['dillard-longman', 'walton-at', 'thiele', 'edwards-revival', 'keener-nt', 'conde', 'synan', 'alencar'],
+  },
   'a-palavra-no-coracao': {
     ancientLabel: 'Textos e registros consultados',
     ancient: [

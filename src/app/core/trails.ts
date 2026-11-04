@@ -130,7 +130,7 @@ export const TRAILS: Trail[] = [
     branches: [
       { title: 'O Movimento Pentecostal', ids: ['movimento-pentecostal'] },
       { title: 'Os Grandes Avivamentos', ids: ['avivamentos-desde-atos', 'avivamento-de-oracao-1857', 'avivamento-do-pais-de-gales', 'avivamento-da-coreia', 'avivamento-da-africa-oriental', 'avivamento-das-hebridas', 'avivamentos-na-america-do-sul'] },
-      { title: 'Reconhecer e Guardar o Avivamento', ids: ['a-palavra-no-coracao'] },
+      { title: 'Reconhecer e Guardar o Avivamento', ids: ['a-geracao-que-nao-conheceu-o-senhor', 'a-palavra-no-coracao'] },
     ],
   },
   {

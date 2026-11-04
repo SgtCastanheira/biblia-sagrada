@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'a-geracao',
+    date: '4 de novembro de 2026',
+    title: 'A Geração que Não Conheceu o Senhor',
+    items: [
+      { icon: 'groups', title: 'A geração que não conheceu o Senhor', text: 'Por que o fogo esfria na geração seguinte, em três partes: o padrão, de Josué e Jefté aos nossos avivamentos; a casa, com o que o pai e a mãe precisam voltar a ser e um culto no lar de vinte minutos; e a igreja, com a diferença entre doutrina, regra e costume e sete perguntas para conhecer a sua.', link: '/artigo/a-geracao-que-nao-conheceu-o-senhor' },
+      { icon: 'event', title: 'Mais uma data na História', text: 'Em 22 de junho, Jonathan Edwards foi dispensado da igreja de Northampton, em 1750. A data entrou nas Datas da História, com a história que a explica.', link: '/datas' },
+    ],
+  },
+  {
     id: 'datas-e-palavra',
     date: '4 de novembro de 2026',
     title: 'Datas da História e um Estudo sobre a Palavra',
