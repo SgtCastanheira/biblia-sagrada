@@ -256,7 +256,10 @@ A partir de 1949, as **cruzadas de Billy Graham** levaram o evangelho a estádio
 
 ## Guardar o Fogo
 
-Quase todo avivamento termina na geração seguinte. O que guarda o fogo aceso é a Palavra dentro de cada pessoa, e não só no aparelho ou na estante.
+Quase todo avivamento termina na geração seguinte. O primeiro estudo olha para o depois: o que acontece quando os que viram morrem, o que a família precisa voltar a fazer em casa e por que conhecer a história e as regras da própria igreja protege a fé. O segundo é mais direto: você conhece a Palavra o bastante para perceber quando mudam uma palavra dela?
+
+:::leia a-geracao-que-nao-conheceu-o-senhor
+:::
 
 :::leia a-palavra-no-coracao
 A Palavra está no seu aparelho, mas está em você? Por que ler e decorar, o que acontece quando um texto muda sem ninguém ver e quem vai ensinar o caminho que você não conhece.
