@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import {
   approvalMessage, bibleVersionFor, contentVersion, GUEST_LANGUAGES, GUEST_SERMONS, GUEST_STRINGS, guestSermonByToken, guestTextPath,
-  LangCode, readingMinutes, visibleGuestSermons,
+  guestSermonForRoute, LangCode, readingMinutes, visibleGuestSermons,
 } from '../../src/app/core/guest-sermons';
 import { parseReferences } from '../../src/app/core/reference-parser';
 import { Block, parseBlocks } from '../../src/app/core/rich-text-parser';
@@ -141,13 +141,18 @@ test('vozes: o link de revisão é exclusivo e não aparece em nenhum outro arqu
   }
 });
 
-test('vozes: sermão em revisão só aparece no desenvolvimento; o publicado aparece sempre', () => {
+test('vozes: catálogo e acesso direto respeitam os estados de publicação', () => {
   const inReview = GUEST_SERMONS.filter((s) => s.status === 'revisao');
-  expect(visibleGuestSermons(false).filter((s) => s.status === 'revisao'), 'no app publicado').toEqual([]);
-  expect(visibleGuestSermons(true)).toEqual(GUEST_SERMONS);
-  const published = { ...sermon, status: 'publicado' as const };
-  expect(published.status).toBe('publicado');
-  expect(inReview.length + visibleGuestSermons(false).length).toBe(GUEST_SERMONS.length);
+  const unlisted = GUEST_SERMONS.find((s) => s.status === 'nao-listado')!;
+  expect(visibleGuestSermons(false).some((s) => s.id === unlisted.id), 'não aparece no catálogo publicado').toBe(false);
+  expect(visibleGuestSermons(true).some((s) => s.id === unlisted.id), 'não aparece nem no catálogo de desenvolvimento').toBe(false);
+  expect(guestSermonForRoute(unlisted.id, false), 'abre pelo endereço direto em produção').toBe(unlisted);
+  expect(guestSermonForRoute(unlisted.id, true), 'abre pelo endereço direto em desenvolvimento').toBe(unlisted);
+  expect(visibleGuestSermons(false).filter((s) => s.status === 'revisao'), 'revisão não aparece em produção').toEqual([]);
+  expect(inReview.every((s) => visibleGuestSermons(true).some((visible) => visible.id === s.id))).toBe(true);
+  expect(inReview.every((s) => guestSermonForRoute(s.id, false) === undefined), 'revisão não abre em produção').toBe(true);
+  expect(inReview.every((s) => guestSermonForRoute(s.id, true) !== undefined), 'revisão abre em desenvolvimento').toBe(true);
+  expect(visibleGuestSermons(false).every((s) => s.status === 'publicado')).toBe(true);
 });
 
 test('vozes: a versão do texto muda com uma letra e a mensagem de aprovação diz qual versão foi aprovada', () => {

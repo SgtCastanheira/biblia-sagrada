@@ -1,7 +1,7 @@
-import { Component, computed, effect, inject, input, isDevMode } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component, computed, DestroyRef, effect, inject, input, isDevMode } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { GUEST_STRINGS, visibleGuestSermons } from '../../core/guest-sermons';
+import { GUEST_STRINGS, guestSermonForRoute } from '../../core/guest-sermons';
 import { BackButton } from '../../shared/back-button';
 import { VoiceArticle } from '../../shared/voice-article';
 
@@ -12,9 +12,11 @@ import { VoiceArticle } from '../../shared/voice-article';
   template: `
     @if (sermon(); as s) {
       <div class="page">
-        <div class="top"><app-back fallback="/vozes" /></div>
+        <div class="top"><app-back [fallback]="s.status === 'nao-listado' ? '/ensino' : '/vozes'" /></div>
         <app-voice-article [sermon]="s" [initialLang]="idioma()" />
-        <p class="more"><a routerLink="/vozes">{{ masthead }}</a></p>
+        @if (s.status !== 'nao-listado') {
+          <p class="more"><a routerLink="/vozes">{{ masthead }}</a></p>
+        }
       </div>
     } @else {
       <p class="empty">Sermão não encontrado.</p>
@@ -34,13 +36,26 @@ export class VoiceSermonPage {
   readonly idioma = input<string | undefined>();
   protected readonly masthead = GUEST_STRINGS.pt.masthead;
   /** Um sermão que ainda espera a aprovação do autor só abre em desenvolvimento; o autor o lê pela página de revisão. */
-  protected readonly sermon = computed(() => visibleGuestSermons(isDevMode()).find((s) => s.id === this.id()));
+  protected readonly sermon = computed(() => guestSermonForRoute(this.id(), isDevMode()));
 
   constructor() {
     const title = inject(Title);
+    const meta = inject(Meta);
+    let robots: HTMLMetaElement | null = null;
+    inject(DestroyRef).onDestroy(() => {
+      if (robots) meta.removeTagElement(robots);
+    });
     effect(() => {
       const s = this.sermon();
-      if (s) title.setTitle(`${s.meta.pt.title} · ${s.author} · ${GUEST_STRINGS.pt.masthead}`);
+      if (s) {
+        title.setTitle(`${s.meta.pt.title} · ${s.author} · ${GUEST_STRINGS.pt.masthead}`);
+      }
+      if (s?.status === 'nao-listado') {
+        robots ??= meta.addTag({ name: 'robots', content: 'noindex, nofollow' });
+      } else if (robots) {
+        meta.removeTagElement(robots);
+        robots = null;
+      }
     });
   }
 }

@@ -8,6 +8,26 @@ Regras:
 - **Decisões** dizem o que foi escolhido, por quê e o que ficou de fora. **Pendências** são o que ficou para depois.
 - O hash do commit não entra na entrada (ele ainda não existe ao escrever); `git log -- DIARIO.md` liga cada entrada ao seu commit.
 
+## 2026-11-05 14:02 -0400 — Sermão A Sanguessuga não listado
+
+**Autor:** Copilot
+
+**O que foi feito:**
+- Configurei “A Sanguessuga” para publicação como sermão não listado, acessível em `/vozes/a-sanguessuga`, fora dos catálogos de Novas Vozes e do hub Ensino.
+- A página direta pede `noindex, nofollow`; o antigo link de aprovação deixa de funcionar depois da publicação.
+- Acrescentei testes de catálogo, acesso direto e build de produção, e documentei o fluxo.
+
+**Decisões:**
+- Usei `status: 'nao-listado'` em vez de `publicado` para manter o sermão fora de listas e novidades, conforme solicitado.
+- O sermão continua público para quem tem o endereço; isso não é controle de acesso nem confidencialidade.
+- Não anunciei a publicação em Novidades, pois isso a tornaria encontrável.
+
+**Arquivos:** `src/app/core/guest-sermons.ts`, `src/app/pages/voices/voice-sermon.ts`, `src/app/pages/voices/voice-review.ts`, `e2e/logica/vozes.spec.ts`, `e2e/vozes.spec.ts`, `e2e/offline.spec.ts`, `CLAUDE.md`, `DIARIO.md`.
+
+**Validação:** lint aprovado; 14 testes lógicos, 7 testes de navegador e build de produção aprovados. A validação de produção confirmou catálogo vazio, URL direta acessível com `noindex` e link de revisão invalidado. O teste offline padrão encontrou um servidor preexistente na porta 4400; validei o build num servidor isolado na porta 4401.
+
+**Pendências:** nenhuma.
+
 Modelo:
 
 ```markdown
