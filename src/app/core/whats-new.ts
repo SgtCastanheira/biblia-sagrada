@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'jornal-novas-vozes',
+    date: '5 de novembro de 2026',
+    title: 'O Jornal: Novas Vozes da Palavra',
+    items: [
+      { icon: 'newspaper', title: 'Jornal na barra de baixo', text: 'Sermões e pregações das novas gerações, em estilo de jornal, em seções separadas, para ler em vários idiomas e ouvir. O ícone do jornal pisca sempre que há matéria nova.', link: '/vozes', tip: 'Toque em “Jornal”, na barra de baixo.' },
+      { icon: 'campaign', title: 'A Sanguessuga', text: 'O primeiro sermão do jornal, de Lucas Silva, sobre Provérbios 30.15: a criatura que nunca diz “basta” e o convite de Jesus a quem tem sede.', link: '/vozes/a-sanguessuga' },
+    ],
+  },
+  {
     id: 'da-volta-do-exilio-a-jesus',
     date: '5 de novembro de 2026',
     title: 'Da Volta do Exílio a Jesus, Flávio Josefo e os Macabeus',

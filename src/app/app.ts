@@ -18,11 +18,12 @@ import { SettingsService } from './core/settings.service';
 import { StorageService, storageFailures } from './core/storage.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UiService } from './core/ui.service';
+import { VoicesNewsService } from './core/voices-news.service';
 import { findVersion } from './core/versions';
 import { Sheets } from './shared/sheets';
 import { ListenPlayer } from './shared/listen-player';
 
-type NavTab = 'inicio' | 'biblia' | 'estudo' | 'ensino' | 'eu';
+type NavTab = 'inicio' | 'biblia' | 'estudo' | 'ensino' | 'jornal' | 'eu';
 
 @Component({
   selector: 'app-root',
@@ -37,6 +38,8 @@ export class App {
   private readonly whatsNew = inject(WhatsNewService);
   protected readonly settings = inject(SettingsService);
   protected readonly ui = inject(UiService);
+  /** Matéria nova no jornal: o ícone dele, na barra de baixo, pisca enquanto houver. */
+  protected readonly news = inject(VoicesNewsService);
   protected readonly curiosities = inject(CuriositiesService);
   protected readonly pwa = inject(PwaService);
   private readonly sheets = inject(Sheets);
@@ -59,7 +62,8 @@ export class App {
   protected readonly tab = computed<NavTab | null>(() => {
     const url = this.url();
     if (/^\/(ler\/|busca|livros)/.test(url)) return 'biblia';
-    if (/^\/(ensino|ebd|ibuc|sermoes|vozes)/.test(url)) return 'ensino';
+    if (/^\/vozes/.test(url)) return 'jornal';
+    if (/^\/(ensino|ebd|ibuc|sermoes)/.test(url)) return 'ensino';
     if (/^\/(meu-espaco|devocional|anotacoes|favoritos|ajustes|novidades|creditos)/.test(url)) return 'eu';
     if (/^\/(estudo|fontes|harpa|memorial|genealogia|tribos|atlas|mapas|profecias|artigo|historia|epocas|datas|avivamento|assembleia-de-deus|dicionario|curiosidades|quiz|livro\/)/.test(url)) return 'estudo';
     return /^\/($|\?|#)/.test(url) ? 'inicio' : null;
@@ -73,6 +77,7 @@ export class App {
   protected readonly nav: { tab: NavTab; label: string; icon: string; link: string }[] = [
     { tab: 'estudo', label: 'História', icon: 'auto_stories', link: '/historia' },
     { tab: 'ensino', label: 'Ensino', icon: 'school', link: '/ensino' },
+    { tab: 'jornal', label: 'Jornal', icon: 'newspaper', link: '/vozes' },
     { tab: 'eu', label: 'Meu espaço', icon: 'person', link: '/meu-espaco' },
   ];
 

@@ -86,18 +86,44 @@ async function drawQr(ctx: CanvasRenderingContext2D, url: string, x: number, y: 
   }
 }
 
-/** Desenha uma foto cortada para caber no quadro (sem deformar), com cantos redondos; a linha de crédito vem logo abaixo. */
+/** Fundo de uma imagem mostrada inteira: ela mesma, reduzida a poucos pontos e esticada de volta (fica borrada em qualquer navegador), mais escura. */
+function drawBackdrop(ctx: CanvasRenderingContext2D, img: HTMLImageElement, x: number, y: number, w: number, h: number): void {
+  const small = document.createElement('canvas');
+  small.width = 10;
+  small.height = Math.max(2, Math.round((10 * h) / w));
+  small.getContext('2d')!.drawImage(img, 0, 0, small.width, small.height);
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(small, x, y, w, h);
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.18)';
+  ctx.fillRect(x, y, w, h);
+}
+
+/** Desenha uma foto cortada para caber no quadro (sem deformar), com cantos redondos; a linha de crédito vem logo abaixo. Com `fit: 'contain'` a foto aparece inteira, sem corte. */
 async function drawPhoto(ctx: CanvasRenderingContext2D, photo: NonNullable<ShareCard['photo']>, x: number, y: number, w: number, h: number, withCredit = true): Promise<number> {
   const img = await loadImage(photo.src);
   if (img) {
     ctx.save();
     roundRect(ctx, x, y, w, h, 24);
     ctx.clip();
-    const scale = Math.max(w / img.naturalWidth, h / img.naturalHeight);
-    const dw = img.naturalWidth * scale;
-    const dh = img.naturalHeight * scale;
-    // retratos ficam com o rosto no quadro: alinhados mais ao alto
-    ctx.drawImage(img, x + (w - dw) / 2, y - Math.max(0, (dh - h) * (photo.focusY ?? 0.04)), dw, dh);
+    // “inteira” (fit: 'contain') só quando preencher o quadro cortaria mais de um quinto da imagem; se quase cabe, preenche
+    const fit = Math.min(w / img.naturalWidth, h / img.naturalHeight);
+    const fill = Math.max(w / img.naturalWidth, h / img.naturalHeight);
+    const whole = photo.fit === 'contain' && fit < fill * 0.8;
+    const dw = img.naturalWidth * (whole ? fit : fill);
+    const dh = img.naturalHeight * (whole ? fit : fill);
+    if (whole) {
+      drawBackdrop(ctx, img, x, y, w, h);
+      roundRect(ctx, x + (w - dw) / 2, y + (h - dh) / 2, dw, dh, 18);
+      ctx.clip();
+      ctx.drawImage(img, x + (w - dw) / 2, y + (h - dh) / 2, dw, dh);
+      // filete claro em volta: a imagem inteira fica como um quadro sobre o fundo
+      ctx.strokeStyle = 'rgba(241, 217, 168, 0.5)';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+    } else {
+      // retratos ficam com o rosto no quadro: alinhados mais ao alto
+      ctx.drawImage(img, x + (w - dw) / 2, y - Math.max(0, (dh - h) * (photo.focusY ?? 0.04)), dw, dh);
+    }
     ctx.restore();
   } else {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
@@ -245,7 +271,9 @@ export async function renderShareImage(card: ShareCard, format: ShareFormat): Pr
     }
     const textH = (n: number) => tLines.length * tSize * 1.1 + (tLines.length ? 14 : 0) + n * 42 + (hookN ? 46 + hookN * 48 : 0) + 30 + topicsH;
     while (subN > (card.topics.length ? 1 : 2) && y + 8 + minPhoto + creditH + textH(subN) > listBottom) subN--;
-    const photoH = photos.length ? Math.max(minPhoto, Math.min(stories ? 740 : 290, listBottom - (y + 8) - creditH - textH(subN))) : 0;
+    // no feed a foto é uma faixa; a que aparece inteira (fit: 'contain') pode usar o espaço que sobra
+    const photoMax = stories ? 740 : card.photo?.fit === 'contain' ? 380 : 290;
+    const photoH = photos.length ? Math.max(minPhoto, Math.min(photoMax, listBottom - (y + 8) - creditH - textH(subN))) : 0;
     dateText = { size: tSize, titleLines: tLines, sub: clampLines(ctx, subAll, subN, textW), hook: clampLines(ctx, hookAll, hookN, textW) };
     if (card.photos?.length) y += await drawPhotoRow(ctx, card.photos, PAD, y, textW, photoH);
     else if (card.photo) y += await drawPhoto(ctx, card.photo, PAD, y, textW, photoH);

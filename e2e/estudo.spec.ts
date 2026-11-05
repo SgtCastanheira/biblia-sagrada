@@ -242,8 +242,8 @@ test('pregações recomendadas com link para ouvir', async ({ page }) => {
 });
 
 test('IBUC: turma por idade e aula-modelo com curiosidades e brincadeiras', async ({ page }) => {
-  await page.goto('/ensino');
-  await page.getByRole('link', { name: /Instituto Bíblico Único Caminho/ }).click();
+  // O IBUC está oculto do menu Ensino (veja vozes.spec.ts); a tela abre pelo endereço
+  await page.goto('/ibuc');
   await expect(page.getByRole('heading', { name: 'IBUC', level: 1 })).toBeVisible();
   await page.getByRole('link', { name: /Primários/ }).click();
   await expect(page.getByText('Como ensinar nesta idade')).toBeVisible();

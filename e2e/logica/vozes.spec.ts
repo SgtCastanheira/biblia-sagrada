@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import {
-  approvalMessage, bibleVersionFor, contentVersion, GUEST_LANGUAGES, GUEST_SERMONS, GUEST_STRINGS, guestSermonByToken, guestTextPath,
-  guestSermonForRoute, LangCode, readingMinutes, visibleGuestSermons,
+  approvalMessage, bibleVersionFor, contentVersion, GUEST_KINDS, GUEST_LANGUAGES, GUEST_SERMONS, GUEST_STRINGS, GuestSermon, guestSermonByToken,
+  guestTextPath, guestSermonForRoute, LangCode, readingMinutes, visibleGuestSermons,
 } from '../../src/app/core/guest-sermons';
 import { parseReferences } from '../../src/app/core/reference-parser';
 import { Block, parseBlocks } from '../../src/app/core/rich-text-parser';
@@ -142,17 +142,36 @@ test('vozes: o link de revisão é exclusivo e não aparece em nenhum outro arqu
 });
 
 test('vozes: catálogo e acesso direto respeitam os estados de publicação', () => {
-  const inReview = GUEST_SERMONS.filter((s) => s.status === 'revisao');
-  const unlisted = GUEST_SERMONS.find((s) => s.status === 'nao-listado')!;
-  expect(visibleGuestSermons(false).some((s) => s.id === unlisted.id), 'não aparece no catálogo publicado').toBe(false);
-  expect(visibleGuestSermons(true).some((s) => s.id === unlisted.id), 'não aparece nem no catálogo de desenvolvimento').toBe(false);
-  expect(guestSermonForRoute(unlisted.id, false), 'abre pelo endereço direto em produção').toBe(unlisted);
-  expect(guestSermonForRoute(unlisted.id, true), 'abre pelo endereço direto em desenvolvimento').toBe(unlisted);
-  expect(visibleGuestSermons(false).filter((s) => s.status === 'revisao'), 'revisão não aparece em produção').toEqual([]);
-  expect(inReview.every((s) => visibleGuestSermons(true).some((visible) => visible.id === s.id))).toBe(true);
-  expect(inReview.every((s) => guestSermonForRoute(s.id, false) === undefined), 'revisão não abre em produção').toBe(true);
-  expect(inReview.every((s) => guestSermonForRoute(s.id, true) !== undefined), 'revisão abre em desenvolvimento').toBe(true);
-  expect(visibleGuestSermons(false).every((s) => s.status === 'publicado')).toBe(true);
+  // O sermão do app está publicado: entra no jornal e abre pelo endereço, em produção e em desenvolvimento
+  expect(sermon.status).toBe('publicado');
+  expect(visibleGuestSermons(false)).toContain(sermon);
+  expect(guestSermonForRoute(sermon.id, false)).toBe(sermon);
+  // Os outros estados, conferidos com sermões de mentira acrescentados só durante o teste
+  const fake = (id: string, status: GuestSermon['status']): GuestSermon => ({ ...sermon, id, status });
+  const extras = [fake('de-mentira-em-revisao', 'revisao'), fake('de-mentira-nao-listado', 'nao-listado')];
+  GUEST_SERMONS.push(...extras);
+  try {
+    const [inReview, unlisted] = extras;
+    expect(visibleGuestSermons(false).some((s) => s.id === unlisted.id), 'não listado não aparece no catálogo publicado').toBe(false);
+    expect(visibleGuestSermons(true).some((s) => s.id === unlisted.id), 'não listado não aparece nem no catálogo de desenvolvimento').toBe(false);
+    expect(guestSermonForRoute(unlisted.id, false), 'não listado abre pelo endereço direto em produção').toBe(unlisted);
+    expect(guestSermonForRoute(unlisted.id, true), 'não listado abre pelo endereço direto em desenvolvimento').toBe(unlisted);
+    expect(visibleGuestSermons(false).some((s) => s.id === inReview.id), 'revisão não aparece em produção').toBe(false);
+    expect(visibleGuestSermons(true).some((s) => s.id === inReview.id), 'revisão aparece em desenvolvimento').toBe(true);
+    expect(guestSermonForRoute(inReview.id, false), 'revisão não abre em produção').toBeUndefined();
+    expect(guestSermonForRoute(inReview.id, true), 'revisão abre em desenvolvimento').toBe(inReview);
+    expect(visibleGuestSermons(false).every((s) => s.status === 'publicado')).toBe(true);
+  } finally {
+    GUEST_SERMONS.splice(GUEST_SERMONS.length - extras.length, extras.length);
+  }
+});
+
+test('vozes: o jornal separa sermões e pregações, cada matéria tem a sua seção', () => {
+  expect(Object.keys(GUEST_KINDS).sort()).toEqual(['pregacao', 'sermao']);
+  for (const s of GUEST_SERMONS) expect(GUEST_KINDS[s.kind], `${s.id}: seção do jornal`).toBeTruthy();
+  expect(sermon.kind).toBe('sermao');
+  expect(GUEST_KINDS.sermao.title).not.toBe(GUEST_KINDS.pregacao.title);
+  for (const l of GUEST_LANGUAGES) expect(GUEST_STRINGS[l.code].tagline, `${l.code}: subtítulo do jornal`).toBeTruthy();
 });
 
 test('vozes: a versão do texto muda com uma letra e a mensagem de aprovação diz qual versão foi aprovada', () => {
@@ -207,11 +226,36 @@ test('vozes: a lista de mudanças do editor está completa e pede resposta onde 
 
 test('vozes: o texto do autor foi respeitado (frases-chave dele continuam no sermão)', () => {
   const pt = text(sermon.id, 'pt');
-  for (const frase of ['A sanguessuga é semelhante ao pecado: nunca diz basta', 'Um abismo chama outro abismo', 'cisternas', 'Quem tem sede de vencer, venha', 'O pródigo caiu em si', 'Hoje Deus te chama para uma nova realidade']) {
+  for (const frase of ['A sanguessuga é semelhante ao pecado: nunca diz basta', 'Um abismo chama outro abismo', 'cisternas', 'Quem tem sede de vencer, venha', 'O pródigo caiu em si', 'Hoje Deus o chama para uma nova realidade']) {
     expect(pt, frase).toContain(frase);
   }
   // O que saiu (por não conferir com a Bíblia) não pode estar no texto publicado
   expect(pt).not.toMatch(/Sebna|toro selvagem/);
+});
+
+test('vozes: o português está na norma culta (sem “te” com “você”, sem “pra” e sem gírias que já foram trocadas)', () => {
+  const pt = text(sermon.id, 'pt');
+  // Tratamento: “você” leva “o”, “lhe” e “seu”, nunca “te” nem “teu” (as citações da Almeida, entre aspas, podem ter “tu”)
+  const fora = pt.replace(/[“«][^”»]*[”»]/g, '');
+  expect(fora, 'tratamento misturado (te/teu com você)').not.toMatch(/\b(te|teu|tua|teus|tuas)\b/i);
+  for (const informal of [/\bpra\b/i, /\bpro\b/i, /trocando em miúdos/i, /vista grossa/i, /chiqueiro/i, /\btenho que\b/i, /\bgente assim\b/i]) {
+    expect(pt, `${informal}`).not.toMatch(informal);
+  }
+  expect(sermon.meta.pt.deck).toContain('a quem tem sede');
+});
+
+test('vozes: a foto do autor e as ilustrações do sermão existem e a imagem de compartilhar combina com o idioma', () => {
+  expect(sermon.authorPhoto, 'o sermão tem o retrato do autor').toBeTruthy();
+  expect(existsSync(`public/${sermon.authorPhoto}`), 'o retrato existe').toBe(true);
+  for (const arquivo of ['vozes-sanguessuga-corpo.jpg', 'vozes-sanguessuga-dada.jpg']) {
+    expect(existsSync(`public/conteudo/imagens/${arquivo}`), arquivo).toBe(true);
+  }
+  // Em português, a imagem-base (com “DÁ!” escrito); nos outros idiomas, a sanguessuga sem letras
+  expect(voiceSermonCard(sermon, 'pt').photo!.src).toContain('vozes-sanguessuga-dada.jpg');
+  for (const lang of sermon.languages.filter((l) => l !== 'pt')) expect(voiceSermonCard(sermon, lang).photo!.src, lang).toContain('vozes-sanguessuga-corpo.jpg');
+  // A ilustração é de inteligência artificial e o crédito diz isso em cada idioma
+  for (const l of GUEST_LANGUAGES) expect(GUEST_STRINGS[l.code].share.artCredit, l.code).toBeTruthy();
+  expect(GUEST_STRINGS.pt.share.artCredit).toContain('inteligência artificial');
 });
 
 test('vozes: a imagem de compartilhar leva a frase de efeito do próprio texto e o QR code do sermão no idioma certo', () => {
@@ -226,9 +270,9 @@ test('vozes: a imagem de compartilhar leva a frase de efeito do próprio texto e
   for (const lang of sermon.languages) {
     const md = text(sermon.id, lang);
     const card = voiceSermonCard(sermon, lang);
-    // A frase de efeito é a primeira frase em destaque do texto naquele idioma, palavra por palavra
-    const pull = parseBlocks(md).find((b) => b.type === 'pullquote')!;
-    expect(card.hook, `${lang}: a frase de efeito vem do texto`).toBe(pull.inlines!.map((x) => x.text).join(''));
+    // A frase de efeito é o título da segunda parte naquele idioma, palavra por palavra (sem contar maiúsculas e pontuação)
+    const titles = parseBlocks(md).filter((b) => b.type === 'h2').map((b) => fold(b.inlines!.map((x) => x.text).join('')));
+    expect(titles, `${lang}: a frase de efeito vem do texto`).toContain(fold(card.hook!));
     expect(card.title).toBe(sermon.meta[lang].title);
     expect(card.badge, `${lang}: o texto-base em letras grandes`).toBeTruthy();
     expect(pageUrl(card.path)).toBe(lang === 'pt' ? `https://sgtcastanheira.github.io/biblia-sagrada/vozes/${sermon.id}` : `https://sgtcastanheira.github.io/biblia-sagrada/vozes/${sermon.id}?idioma=${lang}`);

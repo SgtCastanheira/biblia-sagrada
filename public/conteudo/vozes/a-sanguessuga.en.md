@@ -11,7 +11,7 @@ But Agur’s limits do not keep him from being an instrument of God. Among the m
 The leech is an animal that usually lives in water, very much like a worm, and belongs to the group of the annelids. It is known for sticking to the skin of other animals and sucking. Its mouth is made to pierce and cut the skin and, depending on the species, it produces hirudin, a substance that makes the blood harder to clot.
 
 :::figura sanguessuga
-The leech: a soft body in rings, with a sucker at each end. Drawing made for the app.
+The leech: a soft body in rings, with a sucker at each end. Illustration created with artificial intelligence for the app.
 :::
 
 In plain words: it lives on the blood of others. It needs a host, and I believe it will not be you.
@@ -47,11 +47,6 @@ The mother and her two daughters, named “Give, give” (Proverbs 30:15). Drawi
 The daughters’ name is the cry of someone who is never satisfied. The mother sucks you, and the daughters do too.
 
 ## The leech is like sin: it never says enough
-
-:::destaque
-The leech is like sin: it never says enough.
-— Lucas Silva
-:::
 
 ### Sin sucks away spiritual sensitivity
 

@@ -1,14 +1,17 @@
-import { Component, inject, isDevMode } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { formatLong } from '../../core/dates';
 import { EbdService } from '../../core/ebd.service';
-import { visibleGuestSermons } from '../../core/guest-sermons';
 import { SermonsService } from '../../core/sermons.service';
 import { PROGRAMS } from '../../core/teaching';
 
-/** Ensino: tudo para quem ensina e prega — EBD, apoio ao professor, IBUC e sermões. */
+/**
+ * Ensino: tudo para quem ensina e prega — EBD, apoio ao professor e sermões.
+ * “Minhas aulas da revista” (/ebd) e o IBUC (/ibuc) estão ocultos do menu a pedido do dono do app; as telas e os endereços continuam
+ * no app, e voltam ao menu recolocando o cartão aqui. O jornal Novas Vozes da Palavra tem aba própria (“Jornal”).
+ */
 @Component({
   selector: 'app-teach',
   imports: [RouterLink, MatIconModule, MatRippleModule],
@@ -16,7 +19,7 @@ import { PROGRAMS } from '../../core/teaching';
     <header class="page-head">
       <span class="overline">Para quem ensina e prega</span>
       <h1>Ensino</h1>
-      <p>A Escola Bíblica Dominical, o apoio ao professor por idade, o IBUC e os seus sermões, num só lugar.</p>
+      <p>A Escola Bíblica Dominical, o apoio ao professor por idade e os seus sermões, num só lugar.</p>
     </header>
 
     <h2 class="section-title"><mat-icon>school</mat-icon> Escola Bíblica Dominical</h2>
@@ -28,11 +31,6 @@ import { PROGRAMS } from '../../core/teaching';
           <mat-icon class="go">chevron_right</mat-icon>
         </a>
       }
-      <a class="card row" matRipple routerLink="/ebd">
-        <span class="badge"><mat-icon>menu_book</mat-icon></span>
-        <span class="texts"><span class="name">Minhas aulas da revista</span><span class="desc">As 13 lições do trimestre, com os textos, a leitura diária e as suas anotações.</span></span>
-        <mat-icon class="go">chevron_right</mat-icon>
-      </a>
       <div class="card group">
         <a class="row head" matRipple routerLink="/ebd/apoio">
           <span class="badge"><mat-icon>volunteer_activism</mat-icon></span>
@@ -45,18 +43,6 @@ import { PROGRAMS } from '../../core/teaching';
       </div>
     </div>
 
-    <h2 class="section-title"><mat-icon>child_care</mat-icon> IBUC</h2>
-    <div class="card group">
-      <a class="row head" matRipple routerLink="/ibuc">
-        <span class="badge"><mat-icon>child_care</mat-icon></span>
-        <span class="texts"><span class="name">Instituto Bíblico Único Caminho</span><span class="desc">Apoio ao professor por idade, do Maternal aos Juvenis.</span></span>
-        <mat-icon class="go">chevron_right</mat-icon>
-      </a>
-      <nav class="chips" aria-label="Turmas do IBUC">
-        @for (c of ibucClasses; track c.id) { <a [routerLink]="['/ibuc', c.id]">{{ c.name }}</a> }
-      </nav>
-    </div>
-
     <h2 class="section-title"><mat-icon>campaign</mat-icon> Pregação</h2>
     <div class="list">
     <a class="card row" matRipple routerLink="/sermoes">
@@ -64,13 +50,6 @@ import { PROGRAMS } from '../../core/teaching';
       <span class="texts"><span class="name">Meus sermões</span><span class="desc">Escreva por modelos, organize os tópicos e pregue no modo púlpito.@if (sermons.sermons().length) { {{ sermons.sermons().length }} {{ sermons.sermons().length === 1 ? 'sermão salvo' : 'sermões salvos' }}. }</span></span>
       <mat-icon class="go">chevron_right</mat-icon>
     </a>
-    @if (voices.length) {
-      <a class="card row" matRipple routerLink="/vozes">
-        <span class="badge"><mat-icon>newspaper</mat-icon></span>
-        <span class="texts"><span class="name">Novas Vozes da Palavra</span><span class="desc">Sermões de novos teólogos e estudiosos, em estilo de jornal, em vários idiomas e para ouvir.</span>@if (voices[0].status !== 'publicado') { <span class="meta">Em revisão: só você vê</span> }</span>
-        <mat-icon class="go">chevron_right</mat-icon>
-      </a>
-    }
     </div>
   `,
   styleUrl: '../../shared/study.scss',
@@ -87,8 +66,5 @@ export class TeachPage {
   protected readonly ebd = inject(EbdService);
   protected readonly sermons = inject(SermonsService);
   protected readonly formatLong = formatLong;
-  /** Sermões de convidados: os publicados (os que esperam a aprovação do autor só aparecem em desenvolvimento). */
-  protected readonly voices = visibleGuestSermons(isDevMode());
   protected readonly ebdClasses = PROGRAMS.ebd.classes;
-  protected readonly ibucClasses = PROGRAMS.ibuc.classes;
 }
