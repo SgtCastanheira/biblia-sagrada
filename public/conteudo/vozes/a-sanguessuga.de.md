@@ -11,7 +11,7 @@ Aber Agurs Grenzen hindern ihn nicht daran, ein Werkzeug Gottes zu sein. Unter d
 Der Blutegel ist ein meist im Wasser lebendes Tier, einem Wurm sehr ähnlich, aus der Gruppe der Ringelwürmer. Bekannt ist er dafür, sich an der Haut anderer Tiere festzusetzen und zu saugen. Sein Mund ist dazu gebaut, die Haut zu durchbohren und zu schneiden, und je nach Art bildet er Hirudin, einen Stoff, der die Blutgerinnung hemmt.
 
 :::figura sanguessuga
-Der Blutegel: ein weicher, geringelter Körper mit einem Saugnapf an jedem Ende. Für die App gezeichnet.
+Der Blutegel: ein weicher, geringelter Körper mit einem Saugnapf an jedem Ende. Mit künstlicher Intelligenz für die App erstellte Illustration.
 :::
 
 Kurz gesagt: Er lebt vom Blut der anderen. Er braucht einen Wirt, und ich glaube, dass du es nicht sein wirst.
@@ -47,11 +47,6 @@ Die Mutter und ihre zwei Töchter, die „Bring her, bring her“ heißen (Sprü
 Der Name der Töchter ist der Schrei dessen, der nie satt wird. Die Mutter saugt dich aus, und die Töchter auch.
 
 ## Der Blutegel gleicht der Sünde: Er sagt nie „genug“
-
-:::destaque
-Der Blutegel gleicht der Sünde: Er sagt nie „genug“.
-— Lucas Silva
-:::
 
 ### Die Sünde saugt die geistliche Empfindsamkeit aus
 

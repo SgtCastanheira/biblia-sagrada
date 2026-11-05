@@ -12,6 +12,7 @@ import { BIBLE_MAPS, findMap } from '../../src/app/core/maps';
 import { articlesWithoutTrail, TRAILS, trailOfArticle } from '../../src/app/core/trails';
 import { parseReferences } from '../../src/app/core/reference-parser';
 import { TRIBES } from '../../src/app/core/tribes';
+import { GUEST_SERMONS } from '../../src/app/core/guest-sermons';
 import { RELEASES } from '../../src/app/core/whats-new';
 
 /**
@@ -27,7 +28,7 @@ const hymns = new Set(json<{ hymns: { n: number }[] }>('harpa.json').hymns.map((
 
 const FIXED = new Set([
   '/', '/estudo', '/estudo/livros', '/ensino', '/meu-espaco', '/historia', '/avivamento', '/profecias', '/dicionario', '/atlas', '/mapas',
-  '/busca', '/quiz', '/livros', '/curiosidades', '/devocional', '/ibuc', '/ebd', '/ebd/apoio', '/anotacoes', '/favoritos', '/sermoes', '/novidades',
+  '/busca', '/quiz', '/livros', '/curiosidades', '/vozes', '/devocional', '/ibuc', '/ebd', '/ebd/apoio', '/anotacoes', '/favoritos', '/sermoes', '/novidades',
   '/fontes', '/creditos', '/ajustes', '/harpa', '/tribos', '/genealogia', '/memorial', '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo', '/epocas', '/datas',
 ]);
 
@@ -59,6 +60,7 @@ function problemWith(route: string): string {
     case 'ibuc':
       if (id === 'aula') return IBUC_LESSONS.some((l) => l.id === extra) ? '' : 'aula não existe';
       return IBUC_CLASSES.some((c) => c.id === id) ? '' : 'turma não existe';
+    case 'vozes': return GUEST_SERMONS.some((g) => g.id === id) ? '' : 'matéria do jornal não existe';
     case 'livro': return BOOKS.some((b) => b.id === id) ? '' : 'livro não existe';
     case 'ler': return BOOKS.some((b) => b.id === id) && Number.isInteger(Number(extra)) ? '' : 'capítulo inválido';
     default: return 'rota desconhecida';

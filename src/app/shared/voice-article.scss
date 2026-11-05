@@ -91,6 +91,57 @@ h1 {
   margin: 0 4px;
 }
 
+// Retrato do autor à direita do título. No celular a chamada fica inteira em cima e o retrato ao lado só do título
+// (que encolhe um pouco para caber); a partir de 560 px o retrato fica ao lado da chamada e do título juntos.
+.title-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: 'kicker kicker' 'title title';
+  align-items: center;
+}
+
+.title-row.has-photo {
+  column-gap: 12px;
+  grid-template-areas: 'kicker kicker' 'title photo';
+}
+
+.title-row .kicker {
+  grid-area: kicker;
+}
+
+.title-row h1 {
+  grid-area: title;
+}
+
+.title-row.has-photo h1 {
+  font-size: clamp(28px, 7vw, 64px);
+}
+
+.author-photo {
+  grid-area: photo;
+  width: clamp(64px, 18vw, 124px);
+  height: clamp(64px, 18vw, 124px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border: 3px solid var(--accent-gold);
+  box-shadow: var(--shadow-soft);
+  background: var(--mat-sys-surface-container-high);
+}
+
+@media (min-width: 560px) {
+  .title-row.has-photo {
+    column-gap: 16px;
+    grid-template-areas: 'kicker photo' 'title photo';
+    grid-template-rows: auto 1fr;
+    align-items: start;
+  }
+
+  .title-row.has-photo .author-photo {
+    align-self: center;
+  }
+}
+
 // Idioma, ouvir e tamanho da letra
 .tools {
   display: flex;

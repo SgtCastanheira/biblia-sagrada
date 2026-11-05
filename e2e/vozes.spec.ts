@@ -1,4 +1,4 @@
-import { expect, test } from './base';
+import { expect, goToTab, test } from './base';
 
 const ID = 'a-sanguessuga';
 const TOKEN = '8f11d02bac34306e';
@@ -26,31 +26,81 @@ async function fakeSpeech(page: import('@playwright/test').Page) {
 
 const spoken = (page: import('@playwright/test').Page) => page.evaluate(() => (window as unknown as { spoken: string[] }).spoken.join('\n'));
 
-test('o sermão não aparece nos catálogos, mas abre pelo link direto', async ({ page }) => {
+test('o sermão aparece no Jornal (aba própria), fora do menu Ensino, e abre pelo link direto', async ({ page }) => {
   await page.goto('/ensino');
   await expect(page.getByRole('link', { name: /Novas Vozes da Palavra/ })).toHaveCount(0);
-  await page.goto('/vozes');
-  await expect(page.getByText('Ainda não há sermões nesta edição.')).toBeVisible();
-  await page.goto(`/vozes/${ID}`);
+  await goToTab(page, 'Jornal');
+  await expect(page).toHaveURL(/\/vozes$/);
+  // Duas seções separadas; só a dos sermões tem matéria por enquanto
+  await expect(page.getByRole('heading', { level: 2, name: 'Sermões' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Pregações' })).toHaveCount(0);
+  await expect(page.getByText('Novo', { exact: true })).toBeVisible();
+  await page.getByRole('link', { name: /A Sanguessuga/ }).click();
   await expect(page).toHaveURL(new RegExp(`/vozes/${ID}$`));
   await expect(page.getByRole('heading', { level: 1, name: 'A Sanguessuga' })).toBeVisible();
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
-  await expect(page.getByRole('link', { name: 'Novas Vozes da Palavra' })).toHaveCount(0);
+  // Publicado: pode ser achado por buscadores
+  await expect(page.locator('meta[name="robots"]')).toHaveCount(0);
+  await expect(page.getByRole('link', { name: 'Novas Vozes da Palavra' })).toBeVisible();
+});
+
+test('o ícone do jornal pisca enquanto há matéria nova e para depois de abrir', async ({ page }) => {
+  await page.goto('/');
+  const jornal = page.getByRole('navigation', { name: 'Navegação principal' }).locator('.nav-item', { hasText: 'Jornal' });
+  await expect(jornal).toHaveClass(/fresh/);
+  await expect(jornal.locator('.dot')).toBeVisible();
+  await expect(jornal.locator('.label')).toHaveText('Jornal');
+  expect(await jornal.locator('.indicator').evaluate((el) => getComputedStyle(el).animationName), 'pisca').toMatch(/news-pulse$/);
+  // Com movimento reduzido, o ícone não pisca, mas o ponto dourado continua
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  expect(await jornal.locator('.indicator').evaluate((el) => getComputedStyle(el).animationName), 'sem piscar').toBe('none');
+  await expect(jornal.locator('.dot')).toBeVisible();
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  // Abrir a matéria apaga o aviso, e ele não volta ao recarregar
+  await goToTab(page, 'Jornal');
+  await page.getByRole('link', { name: /A Sanguessuga/ }).click();
+  await expect(page.getByRole('heading', { level: 1, name: 'A Sanguessuga' })).toBeVisible();
+  await expect(jornal).not.toHaveClass(/fresh/);
+  await expect(jornal.locator('.dot')).toHaveCount(0);
+  await page.reload();
+  await expect(jornal).not.toHaveClass(/fresh/);
+  expect(await page.evaluate(() => localStorage.getItem('biblia.vozes.vistas'))).toBe(JSON.stringify([ID]));
+});
+
+test('Ensino sem IBUC nem Minhas aulas da revista no menu; as telas continuam abrindo pelo endereço', async ({ page }) => {
+  await page.goto('/ensino');
+  await expect(page.getByRole('heading', { level: 1, name: 'Ensino' })).toBeVisible();
+  await expect(page.getByRole('link', { name: /Instituto Bíblico Único Caminho/ })).toHaveCount(0);
+  await expect(page.getByRole('link', { name: /Minhas aulas da revista/ })).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: 'IBUC' })).toHaveCount(0);
+  // O que ficou: apoio ao professor e os sermões do próprio usuário
+  await expect(page.getByRole('link', { name: /Apoio ao professor/ })).toBeVisible();
+  await expect(page.getByRole('link', { name: /Meus sermões/ })).toBeVisible();
+  for (const rota of ['/ibuc', '/ebd']) {
+    await page.goto(rota);
+    await expect(page.getByRole('heading', { level: 1 }).first()).toBeVisible();
+  }
 });
 
 test('o sermão é um jornal: manchete, autoria, texto-base, as quatro ilustrações e o texto da imagem do autor', async ({ page }) => {
   await page.goto(`/vozes/${ID}`);
   await expect(page.getByText('Novas Vozes da Palavra').first()).toBeVisible();
   await expect(page.getByText('Por Lucas Silva')).toBeVisible();
+  // O retrato do autor, à direita do título, carregou de verdade e fica na altura do título
+  const retrato = page.locator('.head .title-row .author-photo');
+  await expect(retrato).toBeVisible();
+  expect(await retrato.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0), 'o retrato carregou').toBe(true);
+  const [foto, titulo] = await Promise.all([retrato.boundingBox(), page.getByRole('heading', { level: 1 }).boundingBox()]);
+  expect(foto!.x, 'o retrato fica à direita do título').toBeGreaterThan(titulo!.x + 100);
+  expect(foto!.y, 'o retrato fica na mesma faixa do título').toBeLessThan(titulo!.y + titulo!.height);
   await expect(page.getByText('Texto-base')).toBeVisible();
   await expect(page.locator('.base')).toContainText('A sanguessuga tem duas filhas');
-  for (const nome of [/Desenho de uma sanguessuga/, /A sanguessuga e as suas duas filhas/, /O caminho de Tiago 1/, /A fonte de água viva/]) {
+  for (const nome of [/Ilustração de uma sanguessuga/, /A sanguessuga e as suas duas filhas/, /O caminho de Tiago 1/, /A fonte de água viva/]) {
     await expect(page.getByRole('img', { name: nome })).toBeVisible();
   }
   // As três partes e o fim do sermão (o que estava na imagem)
   await expect(page.getByRole('heading', { level: 2 })).toHaveCount(3);
   await expect(page.getByText('Se alguém tem sede, venha a mim e beba')).toBeVisible();
-  await expect(page.getByText('Hoje Deus te chama para uma nova realidade').first()).toBeVisible();
+  await expect(page.getByText('Hoje Deus o chama para uma nova realidade').first()).toBeVisible();
   // O versículo por extenso vem da Bíblia do app
   await expect(page.locator('.verse', { hasText: 'Tiago 1:14-15' })).toContainText('Cada um, porém, é tentado');
 });

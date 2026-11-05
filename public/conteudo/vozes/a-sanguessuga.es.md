@@ -11,7 +11,7 @@ Pero la limitación de Agur no le impide ser un instrumento de Dios. Entre tanto
 La sanguijuela es un animal generalmente acuático, muy parecido a un gusano, del grupo de los anélidos. Es conocida por pegarse a la piel de otros animales y chupar. Su boca está adaptada para perforar y cortar la piel y, según la especie, produce hirudina, una sustancia que dificulta la coagulación de la sangre.
 
 :::figura sanguessuga
-La sanguijuela: cuerpo blando, en anillos, con una ventosa en cada extremo. Dibujo de la aplicación.
+La sanguijuela: cuerpo blando, en anillos, con una ventosa en cada extremo. Ilustración creada con inteligencia artificial para la aplicación.
 :::
 
 En pocas palabras: vive de la sangre de los demás. Necesita un huésped, y yo creo que no serás tú.
@@ -47,11 +47,6 @@ La madre y sus dos hijas, que se llaman «Trae, trae» (Proverbios 30:15). Dibuj
 El nombre de las hijas es el grito de quien nunca se satisface. La madre te chupa, y las hijas también.
 
 ## La sanguijuela se parece al pecado: nunca dice basta
-
-:::destaque
-La sanguijuela se parece al pecado: nunca dice basta.
-— Lucas Silva
-:::
 
 ### El pecado chupa la sensibilidad espiritual
 

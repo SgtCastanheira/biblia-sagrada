@@ -69,14 +69,14 @@ test('o conteúdo de estudo funciona sem internet', async ({ page, context }) =>
   await context.setOffline(false);
 });
 
-test('o sermão não listado não aparece no catálogo e abre pelo endereço direto', async ({ page }) => {
+test('o sermão aparece no jornal e abre, sem a marca de não indexar', async ({ page }) => {
   await page.goto('/vozes');
-  await expect(page.getByText('Ainda não há sermões nesta edição.')).toBeVisible();
-  await expect(page.getByRole('link', { name: /A Sanguessuga/ })).toHaveCount(0);
-
+  await expect(page.getByRole('heading', { level: 2, name: 'Sermões' })).toBeVisible();
+  await expect(page.getByRole('link', { name: /A Sanguessuga/ })).toHaveAttribute('href', '/vozes/a-sanguessuga');
+  // Pelo endereço, e não pelo toque: com o cache do app baixando a Bíblia em seis testes ao mesmo tempo, os pacotes da página do sermão demoram
   await page.goto('/vozes/a-sanguessuga');
   await expect(page.getByRole('heading', { level: 1, name: 'A Sanguessuga' })).toBeVisible();
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
+  await expect(page.locator('meta[name="robots"]')).toHaveCount(0);
 });
 
 test('o service worker é o sw.js: o do Angular e, junto, os lembretes com o app fechado', async ({ page }) => {

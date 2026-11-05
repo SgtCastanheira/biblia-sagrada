@@ -8,6 +8,35 @@ Regras:
 - **Decisões** dizem o que foi escolhido, por quê e o que ficou de fora. **Pendências** são o que ficou para depois.
 - O hash do commit não entra na entrada (ele ainda não existe ao escrever); `git log -- DIARIO.md` liga cada entrada ao seu commit.
 
+## 2026-11-05 17:00 -0400 — Jornal com aba própria e ícone que pisca; “A Sanguessuga” no jornal com foto do autor, imagens novas e texto em norma culta; IBUC e “Minhas aulas da revista” fora do menu Ensino
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- **Jornal (Novas Vozes da Palavra):** sexta aba “Jornal” na barra de baixo (ícone de jornal, nome embaixo). O fundo do ícone pisca devagar (1,6 s) e um ponto dourado fica parado enquanto houver matéria que a pessoa não abriu (`core/voices-news.service.ts`, `biblia.vozes.vistas`, que entra no backup); abrir a matéria apaga o aviso. A lista (`/vozes`) tem duas seções separadas, “Sermões” e “Pregações” (`GuestSermon.kind`), cada uma só aparece com matéria, e o que não foi aberto leva o selo “Novo”. O cartão do jornal saiu do menu Ensino (cada tela mora em uma aba só). Subtítulo do jornal: “Sermões e pregações das novas gerações”, nos seis idiomas.
+- **“A Sanguessuga”** passou de não listado para `publicado` (a pedido do dono: entra no jornal) e ganhou entrada em Novidades (`jornal-novas-vozes`). Foto do autor em círculo à direita do título (`authorPhoto`, recorte 440×440 da foto enviada). Texto em português revisado na norma culta (você + o/lhe/seu, regência, pontuação), com as citações da Almeida intactas; apagada a frase em destaque da parte II, que repetia o título logo acima (a frase de efeito da imagem de compartilhar agora é o título da parte II).
+- **Imagens do sermão:** a imagem enviada pelo editor é a base de compartilhar em português e a figura “Dá, Dá”; a sanguessuga sozinha foi gerada a partir dela, no mesmo estilo e sem letras (compartilhar nos outros idiomas e figura do texto). Legenda “criada com inteligência artificial para o app”. O gerador de imagem de compartilhar ganhou `photo.fit: 'contain'` (arte inteira, em quadro sobre fundo desfocado, quando preencher cortaria mais de um quinto).
+- **Ensino:** o cartão “Minhas aulas da revista” e a seção IBUC saíram do menu (ocultos, não apagados: telas, endereços e código continuam; voltam recolocando o cartão em `pages/teach/teach.ts`).
+
+**Decisões:**
+- **Ocultar, não remover:** IBUC e “Minhas aulas da revista” só deixam o menu Ensino; `/ibuc`, `/ebd` e os atalhos de outras telas seguem funcionando. Foi o que o dono confirmou (“ocultar do menu Ensino”). O cartão “Próxima aula” e o “Apoio ao professor” ficaram, porque não foram pedidos.
+- **Aba, não cartão:** o jornal é a sexta aba. Em 360 px os seis botões cabem (testado). O piscar muda só a cor, nunca o tamanho, e fica parado com movimento reduzido (o ponto dourado continua).
+- **Sermões e pregações separados:** entendi “só que separados” como duas seções no jornal. Hoje só há sermão; a seção de pregações aparece sozinha quando houver a primeira.
+- **Orçamento do pacote inicial:** o aviso subiu de 1 MB para 1,05 MB (`angular.json`; o erro continua em 2 MB). O pacote já estava em 99,99% do limite, e o menu, o serviço e a novidade custam cerca de 3 kB. Os dados dos sermões entram por `import()` depois da abertura (importá-los direto custava uns 22 kB).
+- **Imagem enviada em português só:** ela tem “DÁ!” e “SANGUE” escritos; nos outros idiomas a figura continua o desenho com rótulos traduzidos e o compartilhar usa a sanguessuga sem letras.
+- **Ficou de fora:** nova versão da imagem enviada sem as letras (o gerador estava ocupado); trocar o subtítulo do sermão (sugestões enviadas, aguardando escolha).
+
+**Arquivos:** `src/app/app.ts`, `app.html`, `app.scss`, `core/voices-news.service.ts`, `core/guest-sermons.ts`, `core/whats-new.ts`, `core/voice-share-card.ts`, `core/share-card.ts`, `core/credits.ts`, `pages/voices/voices.ts`, `pages/voices/voice-sermon.ts`, `pages/teach/teach.ts`, `shared/voice-article.ts`, `shared/voice-article.scss`, `shared/voice-art.ts`, `shared/share-render.ts`, `public/conteudo/vozes/a-sanguessuga*.md`, `public/conteudo/imagens/vozes-*.jpg`, `angular.json`, `e2e/vozes.spec.ts`, `e2e/offline.spec.ts`, `e2e/navegacao.spec.ts`, `e2e/estudo.spec.ts`, `e2e/logica/vozes.spec.ts`, `e2e/logica/links-internos.spec.ts`, `CLAUDE.md`, `CREDITOS.md`, `DIARIO.md`.
+
+**Validação:** lint e build limpos (pacote inicial em 1,00 MB, sem aviso com o novo limite de 1,05 MB). Bateria completa (lógica, celular e computador): 1.238 aprovados, 4 ignorados e 6 reprovados, todos pelo selo “Novo” da lista do jornal (12 px e contraste de 2,69 no tema sépia); o selo passou a usar as cores do tema e 13 px, e os testes de temas e de acessibilidade das telas do jornal foram refeitos e passaram (a bateria inteira não foi repetida depois dessa correção de estilo). Produção offline (porta 4401, build de base `/`): 7 de 7 em duas rodadas. Um teste de produção que abria o sermão por toque falhava quando rodava junto com os outros (o cache do app baixando a Bíblia em seis testes engarrafa o servidor de teste); passou a abrir pelo endereço. Fora da bateria, a página do jornal e do sermão foi conferida em capturas (computador, celular de 390 e 360 px, temas claro e escuro).
+
+**Pendências:**
+- Gerar a versão sem letras da imagem enviada (para o compartilhar e a figura “Dá, Dá” nos outros idiomas).
+- Escolher o novo subtítulo do sermão (quatro sugestões já enviadas).
+- Os cartões “Minhas aulas da revista” e IBUC continuam alcançáveis por outras telas (por exemplo, links de lembretes da EBD); só o menu Ensino foi limpo.
+
+---
+
 ## 2026-11-05 14:02 -0400 — Sermão A Sanguessuga não listado
 
 **Autor:** Copilot

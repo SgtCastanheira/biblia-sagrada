@@ -1,5 +1,5 @@
 /**
- * Novas Vozes da Palavra: sermões de novos teólogos e estudiosos da Palavra, publicados com a autorização de cada autor,
+ * Novas Vozes da Palavra: sermões e pregações das novas gerações (novos teólogos e estudiosos da Palavra), publicados com a autorização de cada autor,
  * no formato de jornal, em vários idiomas e para ouvir. O texto de cada um fica em public/conteudo/vozes/<id>.md
  * (português) e <id>.<idioma>.md (traduções). Código puro: os testes de lógica o importam direto.
  *
@@ -57,44 +57,44 @@ export interface GuestStrings {
 
 export const GUEST_STRINGS: Record<LangCode, GuestStrings> = {
   pt: {
-    masthead: 'Novas Vozes da Palavra', tagline: 'Sermões de novos teólogos e estudiosos da Palavra', by: 'Por', minutes: 'min de leitura',
+    masthead: 'Novas Vozes da Palavra', tagline: 'Sermões e pregações das novas gerações', by: 'Por', minutes: 'min de leitura',
     listen: 'Ouvir', stop: 'Parar', language: 'Idioma', smaller: 'Diminuir letra', larger: 'Aumentar letra', baseText: 'Texto-base', bibleText: 'Texto bíblico', edition: 'Edição nº', sources: 'Fontes',
     authorized: 'Publicado com a autorização do autor.',
-    share: { button: 'Compartilhar', cta: 'Leia o sermão', artLabel: 'Ilustração', artCredit: 'desenhada para o app' }, translation: '',
+    share: { button: 'Compartilhar', cta: 'Leia o sermão', artLabel: 'Ilustração', artCredit: 'criada com inteligência artificial para o app' }, translation: '',
   },
   es: {
-    masthead: 'Nuevas Voces de la Palabra', tagline: 'Sermones de nuevos teólogos y estudiosos de la Palabra', by: 'Por', minutes: 'min de lectura',
+    masthead: 'Nuevas Voces de la Palabra', tagline: 'Sermones y predicaciones de las nuevas generaciones', by: 'Por', minutes: 'min de lectura',
     listen: 'Escuchar', stop: 'Parar', language: 'Idioma', smaller: 'Reducir la letra', larger: 'Aumentar la letra', baseText: 'Texto base', bibleText: 'Texto bíblico', edition: 'Edición n.º', sources: 'Fuentes',
     authorized: 'Publicado con la autorización del autor.',
-    share: { button: 'Compartir', cta: 'Lee el sermón', artLabel: 'Ilustración', artCredit: 'dibujada para la app' },
+    share: { button: 'Compartir', cta: 'Lee el sermón', artLabel: 'Ilustración', artCredit: 'creada con inteligencia artificial para la app' },
     translation: 'Traducción del texto original en portugués, hecha con apoyo de inteligencia artificial y sin revisión de un hablante nativo. Las citas bíblicas siguen la versión de la Biblia en este idioma.',
   },
   en: {
-    masthead: 'New Voices of the Word', tagline: 'Sermons by new theologians and students of the Word', by: 'By', minutes: 'min read',
+    masthead: 'New Voices of the Word', tagline: 'Sermons and preaching by the new generations', by: 'By', minutes: 'min read',
     listen: 'Listen', stop: 'Stop', language: 'Language', smaller: 'Smaller text', larger: 'Larger text', baseText: 'Text', bibleText: 'Bible text', edition: 'Issue no.', sources: 'Sources',
     authorized: 'Published with the author’s permission.',
-    share: { button: 'Share', cta: 'Read the sermon', artLabel: 'Illustration', artCredit: 'drawn for the app' },
+    share: { button: 'Share', cta: 'Read the sermon', artLabel: 'Illustration', artCredit: 'created with artificial intelligence for the app' },
     translation: 'Translation of the original Portuguese text, made with the help of artificial intelligence and not reviewed by a native speaker. Bible quotations follow the Bible version in this language.',
   },
   fr: {
-    masthead: 'Nouvelles Voix de la Parole', tagline: 'Sermons de nouveaux théologiens et étudiants de la Parole', by: 'Par', minutes: 'min de lecture',
+    masthead: 'Nouvelles Voix de la Parole', tagline: 'Sermons et prédications des nouvelles générations', by: 'Par', minutes: 'min de lecture',
     listen: 'Écouter', stop: 'Arrêter', language: 'Langue', smaller: 'Réduire le texte', larger: 'Agrandir le texte', baseText: 'Texte de base', bibleText: 'Texte biblique', edition: 'Édition n°', sources: 'Sources',
     authorized: 'Publié avec l’autorisation de l’auteur.',
-    share: { button: 'Partager', cta: 'Lisez le sermon', artLabel: 'Illustration', artCredit: 'dessinée pour l’application' },
+    share: { button: 'Partager', cta: 'Lisez le sermon', artLabel: 'Illustration', artCredit: 'créée avec l’intelligence artificielle pour l’application' },
     translation: 'Traduction du texte original en portugais, réalisée avec l’aide de l’intelligence artificielle et non relue par un locuteur natif. Les citations bibliques suivent la version de la Bible dans cette langue.',
   },
   de: {
-    masthead: 'Neue Stimmen des Wortes', tagline: 'Predigten neuer Theologen und Bibelforscher', by: 'Von', minutes: 'Min. Lesezeit',
+    masthead: 'Neue Stimmen des Wortes', tagline: 'Predigten und Verkündigungen der neuen Generationen', by: 'Von', minutes: 'Min. Lesezeit',
     listen: 'Anhören', stop: 'Anhalten', language: 'Sprache', smaller: 'Schrift verkleinern', larger: 'Schrift vergrößern', baseText: 'Predigttext', bibleText: 'Bibeltext', edition: 'Ausgabe Nr.', sources: 'Quellen',
     authorized: 'Mit Erlaubnis des Autors veröffentlicht.',
-    share: { button: 'Teilen', cta: 'Lies die Predigt', artLabel: 'Illustration', artCredit: 'für die App gezeichnet' },
+    share: { button: 'Teilen', cta: 'Lies die Predigt', artLabel: 'Illustration', artCredit: 'mit künstlicher Intelligenz für die App erstellt' },
     translation: 'Übersetzung des portugiesischen Originaltextes, mit Hilfe künstlicher Intelligenz erstellt und nicht von Muttersprachlern geprüft. Die Bibelzitate folgen der Bibelübersetzung in dieser Sprache.',
   },
   ru: {
-    masthead: 'Новые голоса Слова', tagline: 'Проповеди новых богословов и исследователей Слова', by: 'Автор:', minutes: 'мин чтения',
+    masthead: 'Новые голоса Слова', tagline: 'Проповеди и наставления новых поколений', by: 'Автор:', minutes: 'мин чтения',
     listen: 'Слушать', stop: 'Остановить', language: 'Язык', smaller: 'Уменьшить шрифт', larger: 'Увеличить шрифт', baseText: 'Основной текст', bibleText: 'Текст Библии', edition: 'Выпуск №', sources: 'Источники',
     authorized: 'Опубликовано с разрешения автора.',
-    share: { button: 'Поделиться', cta: 'Читайте проповедь', artLabel: 'Иллюстрация', artCredit: 'нарисована для приложения' },
+    share: { button: 'Поделиться', cta: 'Читайте проповедь', artLabel: 'Иллюстрация', artCredit: 'создана с помощью искусственного интеллекта для приложения' },
     translation: 'Перевод португальского оригинала, выполненный с помощью искусственного интеллекта и не проверенный носителем языка. Библейские цитаты приводятся по переводу Библии на этом языке.',
   },
 };
@@ -123,9 +123,21 @@ export interface SourceLink {
   url: string;
 }
 
+/** O jornal tem duas seções, separadas: os sermões e as pregações das novas gerações. */
+export type GuestKind = 'sermao' | 'pregacao';
+
+export const GUEST_KINDS: Record<GuestKind, { title: string; read: string }> = {
+  sermao: { title: 'Sermões', read: 'Ler o sermão' },
+  pregacao: { title: 'Pregações', read: 'Ler a pregação' },
+};
+
 export interface GuestSermon {
   id: string;
+  /** Em qual seção do jornal aparece: sermão ou pregação. */
+  kind: GuestKind;
   author: string;
+  /** Retrato do autor (caminho dentro de public, ex.: conteudo/imagens/x.jpg), enviado por ele ou pelo editor com a autorização dele. Aparece na linha de autoria do jornal. */
+  authorPhoto?: string;
   /** Texto bíblico do sermão (referência no leitor do app). */
   text: string;
   status: 'revisao' | 'publicado' | 'nao-listado';
@@ -134,7 +146,7 @@ export interface GuestSermon {
   /** Número da edição no jornal. */
   edition: number;
   languages: LangCode[];
-  /** `hook` é a frase de efeito do próprio texto (a primeira frase em destaque), que vai em dourado na imagem de compartilhar. */
+  /** `hook` é a frase de efeito do próprio texto (o título da segunda parte), que vai em dourado na imagem de compartilhar. */
   meta: Record<LangCode, { title: string; deck: string; kicker: string; hook: string; /** O texto-base em poucas letras, em letras grandes na imagem de compartilhar (“Pv 30.15”). */ badge: string }>;
   /** Fontes do que o editor acrescentou (a biologia do quadro, a palavra hebraica). */
   sources: SourceLink[];
@@ -144,14 +156,16 @@ export interface GuestSermon {
 export const GUEST_SERMONS: GuestSermon[] = [
   {
     id: 'a-sanguessuga',
+    kind: 'sermao',
     author: 'Lucas Silva',
+    authorPhoto: 'conteudo/imagens/vozes-lucas-silva.jpg',
     text: 'Pv 30.15',
-    status: 'nao-listado',
+    status: 'publicado',
     reviewToken: '8f11d02bac34306e',
     edition: 1,
     languages: ['pt', 'es', 'en', 'fr', 'de', 'ru'],
     meta: {
-      pt: { title: 'A Sanguessuga', deck: 'Uma criatura que nunca diz “basta” e o convite de Jesus para quem tem sede', kicker: 'Sermão · Provérbios 30.15', hook: 'A sanguessuga é semelhante ao pecado: nunca diz basta.', badge: 'Pv 30.15' },
+      pt: { title: 'A Sanguessuga', deck: 'Uma criatura que nunca diz “basta” e o convite de Jesus a quem tem sede', kicker: 'Sermão · Provérbios 30.15', hook: 'A sanguessuga é semelhante ao pecado: nunca diz basta.', badge: 'Pv 30.15' },
       es: { title: 'La Sanguijuela', deck: 'Una criatura que nunca dice «basta» y la invitación de Jesús para quien tiene sed', kicker: 'Sermón · Proverbios 30:15', hook: 'La sanguijuela se parece al pecado: nunca dice basta.', badge: 'Pr 30:15' },
       en: { title: 'The Leech', deck: 'A creature that never says “enough,” and Jesus’ invitation to the thirsty', kicker: 'Sermon · Proverbs 30:15', hook: 'The leech is like sin: it never says enough.', badge: 'Prov 30:15' },
       fr: { title: 'La Sangsue', deck: 'Une créature qui ne dit jamais « assez », et l’invitation de Jésus à ceux qui ont soif', kicker: 'Sermon · Proverbes 30:15', hook: 'La sangsue ressemble au péché : elle ne dit jamais assez.', badge: 'Pr 30:15' },
@@ -174,7 +188,7 @@ export const GUEST_SERMONS: GuestSermon[] = [
         kind: 'conferir',
         title: '“O nome delas já fiz tudo”',
         original: 'O nome delas já fiz tudo: A mãe te suga e as filhas também.',
-        now: 'O nome das filhas é o grito de quem nunca se satisfaz. A mãe te suga, e as filhas também.',
+        now: 'O nome das filhas é o grito de quem nunca se satisfaz. A mãe o suga, e as filhas também.',
         why: 'Em Provérbios 30.15 as filhas se chamam “Dá, Dá”. Não ficou claro o que a primeira frase queria dizer. Se a ideia era outra, diga qual.',
       },
       {
@@ -194,21 +208,21 @@ export const GUEST_SERMONS: GuestSermon[] = [
         kind: 'ajustado',
         title: '“Ela só vive se tiver alguém pra sugar”',
         original: 'Ela só vive se tiver alguém pra sugar.',
-        now: 'Ela vive do sangue dos outros. Precisa de um hospedeiro.',
+        now: 'Ela vive do sangue alheio. Precisa de um hospedeiro, e creio que esse hospedeiro não será você.',
         why: 'A sanguessuga-medicinal pode ficar até cerca de um ano sem comer (Wikipédia, verbete Hirudo medicinalis). A ideia, que ela vive à custa de outro, ficou.',
       },
       {
         kind: 'ajustado',
         title: 'Ló e Sodoma',
         original: 'Ló foi atraído pela beleza de Sodoma.',
-        now: 'Ló foi atraído pela planície bem regada e acabou armando as tendas até Sodoma (Gn 13.10-12).',
+        now: 'Ló foi atraído pela planície bem regada e acabou por armar as tendas até Sodoma (Gn 13.10-12).',
         why: 'O texto diz que Ló viu a planície do Jordão, “toda bem regada”, e só depois chegou a Sodoma.',
       },
       {
         kind: 'ajustado',
         title: '“O corpo cai no chão sem vida”',
         original: 'No final o corpo cai no chão sem vida.',
-        now: 'A frase ficou como está, como imagem do pecado.',
+        now: 'A imagem ficou, em forma culta: “No fim, o corpo cai ao chão, sem vida”, como figura do pecado.',
         why: 'É uma figura de linguagem: a sanguessuga usada em tratamentos não costuma matar. O texto não afirma o contrário, e a figura é sua.',
       },
       {
@@ -229,8 +243,15 @@ export const GUEST_SERMONS: GuestSermon[] = [
         kind: 'ajustado',
         title: 'Forma, linguagem e concordância',
         original: 'Frases curtas, numeradas (1, 2, 3), com “pra”, “teu” e “sua” misturados.',
-        now: 'Parágrafos e listas numeradas; “para”; “você” e “seu”; verbos e palavras no mesmo número (“pessoas entenebrecidas… se entregaram”). As suas frases foram mantidas, e o jeito direto de falar com quem ouve também (“te chama”, “te suga”).',
+        now: 'Parágrafos e listas numeradas; “para”; “você” e “seu”; verbos e palavras no mesmo número (“pessoas entenebrecidas… se entregaram”). As suas frases foram mantidas, e o jeito direto de falar com quem ouve também (“o chama”, “o suga”).',
         why: 'Para ler como jornal sem perder a voz do sermão. A marca de fim (a fileira de cerquilhas) saiu. Em Provérbios 30.16, “a terra que nunca se farta de água” é o que o versículo diz (antes estava “a terra sem água”).',
+      },
+      {
+        kind: 'ajustado',
+        title: 'Norma culta: linguagem e pontuação',
+        original: 'Trocando em miúdos; “te suga”, “te chama” (com “você” e “seu”); “faz vista grossa”; “chiqueiro”; “tenho que mudar”; “gente assim”.',
+        now: 'Em outras palavras; “o suga”, “o chama”; “finge não ver a realidade em que vive”; “pocilga”; “tenho de mudar”; “pessoas assim”; “assuntos de que tratou”; “convite a quem tem sede”.',
+        why: 'Revisão na norma culta, a pedido do editor: “você” com “o”, “lhe” e “seu”, sem “te”; regência, colocação dos pronomes, vocabulário e vírgulas. As ideias, a ordem e as citações da Bíblia ficaram.',
       },
       {
         kind: 'acrescentado',
@@ -241,14 +262,20 @@ export const GUEST_SERMONS: GuestSermon[] = [
       {
         kind: 'acrescentado',
         title: 'Quadro “Fatos sobre a sanguessuga” e quatro ilustrações',
-        now: 'Um quadro ao lado do primeiro ponto e desenhos da sanguessuga, da mãe com as filhas, do caminho do desejo (Tiago 1) e da fonte e das cisternas (Jeremias 2).',
-        why: 'Para ajudar a entender. Os fatos têm fonte (no pé da página) e os desenhos são do app, sem direitos de terceiros. Pode pedir para tirar qualquer um.',
+        now: 'Um quadro ao lado do primeiro ponto e quatro ilustrações: a sanguessuga e a mãe com as filhas (criadas com inteligência artificial, no mesmo estilo), o caminho do desejo (Tiago 1) e a fonte e as cisternas (Jeremias 2), desenhos do app. A mãe com as filhas só é imagem em português, porque traz “Dá” e “Sangue” escritos; nos outros idiomas fica o desenho, com rótulos traduzidos.',
+        why: 'Para ajudar a entender. Os fatos têm fonte (no pé da página); as ilustrações não têm direitos de terceiros: a da mãe com as filhas é a imagem que o editor enviou, e a da sanguessuga foi criada a partir dela, no mesmo estilo. Pode pedir para tirar qualquer uma.',
       },
       {
         kind: 'acrescentado',
         title: 'Imagem para compartilhar',
-        now: 'Um botão “Compartilhar” gera uma imagem com a ilustração, o texto-base (Pv 30.15), a sua frase “A sanguessuga é semelhante ao pecado: nunca diz basta” e um QR code que abre o sermão (no mesmo idioma) para divulgar o jornal.',
+        now: 'Um botão “Compartilhar” gera uma imagem com a ilustração da mãe e das filhas “Dá, Dá” (nos outros idiomas, a sanguessuga sem letras), o texto-base (Pv 30.15), a sua frase “A sanguessuga é semelhante ao pecado: nunca diz basta” e um QR code que abre o sermão (no mesmo idioma) para divulgar o jornal.',
         why: 'Para que quem ler possa mandar o sermão no WhatsApp e no Instagram. Só aparecem o título, o seu nome, o texto-base e a sua frase; o texto do sermão não vai na imagem.',
+      },
+      {
+        kind: 'acrescentado',
+        title: 'Foto do autor',
+        now: 'O seu retrato, em círculo, ao lado do nome na linha de autoria do jornal.',
+        why: 'A foto foi enviada pelo editor. Se preferir outra, ou nenhuma, é só dizer.',
       },
       {
         kind: 'acrescentado',

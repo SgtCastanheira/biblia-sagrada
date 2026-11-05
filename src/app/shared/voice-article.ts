@@ -30,8 +30,11 @@ import { ShareImageButton } from './share-image-button';
       </header>
 
       <div class="head">
-        <p class="kicker">{{ meta().kicker }}</p>
-        <h1>{{ meta().title }}</h1>
+        <div class="title-row" [class.has-photo]="sermon().authorPhoto">
+          <p class="kicker">{{ meta().kicker }}</p>
+          <h1>{{ meta().title }}</h1>
+          @if (sermon().authorPhoto) { <img class="author-photo" [src]="sermon().authorPhoto" alt="" width="132" height="132" /> }
+        </div>
         <p class="deck">{{ meta().deck }}</p>
         <p class="byline">{{ s().by }} <strong>{{ sermon().author }}</strong>@if (minutes()) { <span class="sep" aria-hidden="true">·</span> {{ minutes() }} {{ s().minutes }} }</p>
       </div>

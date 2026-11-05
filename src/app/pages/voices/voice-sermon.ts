@@ -2,6 +2,7 @@ import { Component, computed, DestroyRef, effect, inject, input, isDevMode } fro
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { GUEST_STRINGS, guestSermonForRoute } from '../../core/guest-sermons';
+import { VoicesNewsService } from '../../core/voices-news.service';
 import { BackButton } from '../../shared/back-button';
 import { VoiceArticle } from '../../shared/voice-article';
 
@@ -12,7 +13,7 @@ import { VoiceArticle } from '../../shared/voice-article';
   template: `
     @if (sermon(); as s) {
       <div class="page">
-        <div class="top"><app-back [fallback]="s.status === 'nao-listado' ? '/ensino' : '/vozes'" /></div>
+        <div class="top"><app-back [fallback]="s.status === 'nao-listado' ? '/' : '/vozes'" /></div>
         <app-voice-article [sermon]="s" [initialLang]="idioma()" />
         @if (s.status !== 'nao-listado') {
           <p class="more"><a routerLink="/vozes">{{ masthead }}</a></p>
@@ -41,6 +42,7 @@ export class VoiceSermonPage {
   constructor() {
     const title = inject(Title);
     const meta = inject(Meta);
+    const news = inject(VoicesNewsService);
     let robots: HTMLMetaElement | null = null;
     inject(DestroyRef).onDestroy(() => {
       if (robots) meta.removeTagElement(robots);
@@ -49,6 +51,8 @@ export class VoiceSermonPage {
       const s = this.sermon();
       if (s) {
         title.setTitle(`${s.meta.pt.title} · ${s.author} · ${GUEST_STRINGS.pt.masthead}`);
+        // Abriu a matéria: o jornal deixa de piscar por causa dela
+        news.markSeen(s.id);
       }
       if (s?.status === 'nao-listado') {
         robots ??= meta.addTag({ name: 'robots', content: 'noindex, nofollow' });

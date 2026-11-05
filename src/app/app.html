@@ -35,9 +35,13 @@
     <span class="label">Bíblia</span>
   </a>
   @for (item of nav; track item.link) {
-    <a class="nav-item" [routerLink]="item.link" [class.active]="tab() === item.tab">
-      <span class="indicator" matRipple><mat-icon>{{ item.icon }}</mat-icon></span>
+    <a class="nav-item" [routerLink]="item.link" [class.active]="tab() === item.tab" [class.fresh]="item.tab === 'jornal' && news.unread() > 0">
+      <span class="indicator" matRipple>
+        <mat-icon>{{ item.icon }}</mat-icon>
+        @if (item.tab === 'jornal' && news.unread() > 0) { <span class="dot" aria-hidden="true"></span> }
+      </span>
       <span class="label">{{ item.label }}</span>
+      @if (item.tab === 'jornal' && news.unread() > 0) { <span class="sr-only">, matéria nova</span> }
     </a>
   }
 </nav>

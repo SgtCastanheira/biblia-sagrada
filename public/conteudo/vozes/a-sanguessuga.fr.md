@@ -11,7 +11,7 @@ Mais les limites d’Agur ne l’empêchent pas d’être un instrument de Dieu.
 La sangsue est un animal le plus souvent aquatique, très semblable à un ver, du groupe des annélides. Elle est connue pour se coller à la peau des autres animaux et sucer. Sa bouche est adaptée pour percer et couper la peau et, selon l’espèce, elle produit de l’hirudine, une substance qui gêne la coagulation du sang.
 
 :::figura sanguessuga
-La sangsue : un corps mou, en anneaux, avec une ventouse à chaque bout. Dessin réalisé pour l’application.
+La sangsue : un corps mou, en anneaux, avec une ventouse à chaque bout. Illustration créée avec l’intelligence artificielle pour l’application.
 :::
 
 En d’autres termes : elle vit du sang des autres. Elle a besoin d’un hôte, et je crois que ce ne sera pas toi.
@@ -47,11 +47,6 @@ La mère et ses deux filles, qui s’appellent « Donne ! Donne ! » (Proverbes 
 Le nom des filles est le cri de celui qui n’est jamais satisfait. La mère te suce, et les filles aussi.
 
 ## La sangsue ressemble au péché : elle ne dit jamais assez
-
-:::destaque
-La sangsue ressemble au péché : elle ne dit jamais assez.
-— Lucas Silva
-:::
 
 ### Le péché suce la sensibilité spirituelle
 

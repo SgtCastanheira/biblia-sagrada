@@ -177,6 +177,54 @@
   }
 }
 
+// Jornal com matéria nova: o fundo do ícone pisca devagar (uma vez a cada 1,6 s, bem abaixo do limite de 3 por segundo) e um
+// ponto dourado fica parado, para quem prefere sem movimento ou nem vê a cor mudar. Só a cor muda: o tamanho não, para o toque não escapar.
+.nav-item .indicator {
+  position: relative;
+}
+
+.nav-item.fresh .indicator {
+  animation: news-pulse 1.6s ease-in-out infinite;
+}
+
+.nav-item .dot {
+  position: absolute;
+  top: 3px;
+  right: 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  box-shadow: 0 0 0 2px var(--mat-sys-surface);
+}
+
+@keyframes news-pulse {
+  0%,
+  100% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: color-mix(in srgb, var(--accent-gold) 45%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-item.fresh .indicator {
+    animation: none;
+    background-color: color-mix(in srgb, var(--accent-gold) 28%, transparent);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .content {
   max-width: 1040px;
   margin: 0 auto;
