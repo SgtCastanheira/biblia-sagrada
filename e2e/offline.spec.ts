@@ -69,6 +69,16 @@ test('o conteúdo de estudo funciona sem internet', async ({ page, context }) =>
   await context.setOffline(false);
 });
 
+test('o sermão não listado não aparece no catálogo e abre pelo endereço direto', async ({ page }) => {
+  await page.goto('/vozes');
+  await expect(page.getByText('Ainda não há sermões nesta edição.')).toBeVisible();
+  await expect(page.getByRole('link', { name: /A Sanguessuga/ })).toHaveCount(0);
+
+  await page.goto('/vozes/a-sanguessuga');
+  await expect(page.getByRole('heading', { level: 1, name: 'A Sanguessuga' })).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
+});
+
 test('o service worker é o sw.js: o do Angular e, junto, os lembretes com o app fechado', async ({ page }) => {
   await page.goto('/');
   const worker = await page.evaluate(async () => (await navigator.serviceWorker.ready).active?.scriptURL ?? '');

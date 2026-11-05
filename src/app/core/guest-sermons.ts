@@ -3,9 +3,9 @@
  * no formato de jornal, em vários idiomas e para ouvir. O texto de cada um fica em public/conteudo/vozes/<id>.md
  * (português) e <id>.<idioma>.md (traduções). Código puro: os testes de lógica o importam direto.
  *
- * Fluxo de publicação: o sermão nasce com status 'revisao'. Nesse estado ele não aparece no menu nem na lista do app publicado
- * (só no `ng serve`); o autor o lê e aprova pelo link exclusivo /revisao/<reviewToken>. Quando o autor aprova, troca-se
- * o status para 'publicado' e o sermão entra no menu de Ensino.
+ * Fluxo de publicação: o sermão nasce com status 'revisao'. Nesse estado ele não aparece no app publicado
+ * (só no `ng serve`); o autor o lê e aprova pelo link exclusivo /revisao/<reviewToken>. Depois, pode ser 'publicado'
+ * e entrar nos catálogos ou 'nao-listado', acessível apenas pelo endereço direto.
  */
 import { findVersion } from './versions';
 
@@ -128,7 +128,7 @@ export interface GuestSermon {
   author: string;
   /** Texto bíblico do sermão (referência no leitor do app). */
   text: string;
-  status: 'revisao' | 'publicado';
+  status: 'revisao' | 'publicado' | 'nao-listado';
   /** Parte secreta do link de revisão do autor (/revisao/<reviewToken>): só quem recebeu o link entra. */
   reviewToken: string;
   /** Número da edição no jornal. */
@@ -146,7 +146,7 @@ export const GUEST_SERMONS: GuestSermon[] = [
     id: 'a-sanguessuga',
     author: 'Lucas Silva',
     text: 'Pv 30.15',
-    status: 'revisao',
+    status: 'nao-listado',
     reviewToken: '8f11d02bac34306e',
     edition: 1,
     languages: ['pt', 'es', 'en', 'fr', 'de', 'ru'],
@@ -264,10 +264,15 @@ export const findGuestSermon = (id: string): GuestSermon | undefined => GUEST_SE
 export const guestSermonByToken = (token: string): GuestSermon | undefined => GUEST_SERMONS.find((s) => s.reviewToken === token);
 
 /**
- * Quais sermões o app mostra: os publicados; os que ainda esperam a aprovação do autor só aparecem em desenvolvimento (`ng serve`),
- * para o dono do app ver o resultado.
+ * Quais sermões aparecem nos catálogos: os publicados; os que ainda esperam a aprovação só aparecem em desenvolvimento.
+ * Sermões não listados são acessíveis apenas pelo endereço direto.
  */
-export const visibleGuestSermons = (dev: boolean): GuestSermon[] => GUEST_SERMONS.filter((s) => s.status === 'publicado' || dev);
+export const visibleGuestSermons = (dev: boolean): GuestSermon[] =>
+  GUEST_SERMONS.filter((s) => s.status === 'publicado' || (dev && s.status === 'revisao'));
+
+/** Sermões que podem abrir por endereço: publicados e não listados; em revisão, só no desenvolvimento. */
+export const guestSermonForRoute = (id: string, dev: boolean): GuestSermon | undefined =>
+  GUEST_SERMONS.find((s) => s.id === id && (s.status !== 'revisao' || dev));
 
 /** Arquivo do texto de um sermão em uma língua (dentro de public/conteudo). */
 export const guestTextPath = (id: string, lang: LangCode): string => (lang === 'pt' ? `vozes/${id}.md` : `vozes/${id}.${lang}.md`);

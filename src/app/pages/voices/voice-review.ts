@@ -128,7 +128,10 @@ interface Saved {
 })
 export class VoiceReviewPage {
   readonly token = input.required<string>();
-  protected readonly sermon = computed(() => guestSermonByToken(this.token()));
+  protected readonly sermon = computed(() => {
+    const sermon = guestSermonByToken(this.token());
+    return sermon?.status === 'revisao' ? sermon : undefined;
+  });
   protected readonly original = signal('');
   protected readonly name = signal('');
   protected readonly note = signal('');

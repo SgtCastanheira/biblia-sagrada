@@ -26,18 +26,16 @@ async function fakeSpeech(page: import('@playwright/test').Page) {
 
 const spoken = (page: import('@playwright/test').Page) => page.evaluate(() => (window as unknown as { spoken: string[] }).spoken.join('\n'));
 
-test('Ensino tem o menu das Novas Vozes, que leva à primeira página e ao sermão', async ({ page }) => {
+test('o sermão não aparece nos catálogos, mas abre pelo link direto', async ({ page }) => {
   await page.goto('/ensino');
-  const card = page.getByRole('link', { name: /Novas Vozes da Palavra/ });
-  await expect(card).toBeVisible();
-  await expect(card).toContainText('Em revisão'); // em desenvolvimento, o sermão ainda espera a aprovação do autor
-  await card.click();
-  await expect(page).toHaveURL(/\/vozes$/);
-  await expect(page.getByRole('navigation', { name: 'Navegação principal' }).locator('.nav-item.active')).toHaveText(/Ensino/);
-  await expect(page.getByText('Nesta edição')).toBeVisible();
-  await page.getByRole('link', { name: /A Sanguessuga/ }).click();
+  await expect(page.getByRole('link', { name: /Novas Vozes da Palavra/ })).toHaveCount(0);
+  await page.goto('/vozes');
+  await expect(page.getByText('Ainda não há sermões nesta edição.')).toBeVisible();
+  await page.goto(`/vozes/${ID}`);
   await expect(page).toHaveURL(new RegExp(`/vozes/${ID}$`));
   await expect(page.getByRole('heading', { level: 1, name: 'A Sanguessuga' })).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
+  await expect(page.getByRole('link', { name: 'Novas Vozes da Palavra' })).toHaveCount(0);
 });
 
 test('o sermão é um jornal: manchete, autoria, texto-base, as quatro ilustrações e o texto da imagem do autor', async ({ page }) => {
@@ -102,51 +100,13 @@ test('ouvir lê o título e o texto, diz as referências por extenso e usa a lí
   await expect(player).toHaveCount(0);
 });
 
-test('a prévia do autor abre sem as barras do app, pede ao buscador para não indexar e mostra a versão do texto', async ({ page }) => {
+test('o link de aprovação deixa de abrir o sermão depois da publicação', async ({ page }) => {
   await page.goto(`/revisao/${TOKEN}`);
-  await expect(page.getByText('Prévia para aprovação').first()).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Este link não é válido' })).toBeVisible();
   await expect(page.getByRole('navigation', { name: 'Navegação principal' })).toHaveCount(0);
   await expect(page.locator('header.top-bar')).toHaveCount(0);
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
-  await expect(page.locator('.banner code')).toHaveText(/^[0-9a-f]{8}$/);
-  // O mesmo jornal que o público vai ler
-  await expect(page.getByRole('heading', { level: 1, name: 'A Sanguessuga' })).toBeVisible();
-  // O que o editor mudou: o que pede resposta vem primeiro
-  const grupos = page.locator('.changes .kind');
-  await expect(grupos.first()).toContainText('Para você conferir');
-  await expect(page.getByRole('heading', { name: 'Sebna e os filhos' })).toBeVisible();
-  await expect(page.getByText('Sebna o tesoureiro foi arrastado pra miséria')).toBeVisible();
-});
-
-test('o autor aprova uma versão: precisa autorizar, recebe a mensagem para o editor e a decisão fica guardada', async ({ page }) => {
-  await page.goto(`/revisao/${TOKEN}`);
-  const aprovar = page.getByRole('button', { name: 'Aprovar para publicação' });
-  await expect(aprovar).toBeDisabled();
-  await expect(page.getByLabel(/Seu nome/)).toHaveValue('Lucas Silva');
-  await page.getByLabel(/Li o sermão e autorizo/).check();
-  await expect(aprovar).toBeEnabled();
-  await aprovar.click();
-  const enviada = page.locator('.sent');
-  await expect(enviada).toContainText('Aprovação do sermão');
-  await expect(enviada).toContainText('autorizo a publicação');
-  const versao = (await page.locator('.banner code').textContent())!;
-  await expect(enviada).toContainText(`Versão do texto: ${versao}`);
-  await expect(enviada.getByRole('link', { name: /WhatsApp/ })).toHaveAttribute('href', /^https:\/\/wa\.me\/\?text=/);
-  // Volta depois: a decisão está guardada neste aparelho e vale para esta versão
-  await page.reload();
-  await expect(page.getByRole('status').filter({ hasText: 'Você aprovou esta versão' })).toBeVisible();
-});
-
-test('o autor pede ajustes: só com a descrição do que quer mudar', async ({ page }) => {
-  await page.goto(`/revisao/${TOKEN}`);
-  const pedir = page.getByRole('button', { name: 'Pedir ajustes' });
-  await expect(pedir).toBeDisabled();
-  await page.getByLabel(/Ajustes que você quer/).fill('Na parte II, trocar “basta” por “chega”.');
-  await expect(pedir).toBeEnabled();
-  await pedir.click();
-  await expect(page.locator('.sent')).toContainText('Pedido de ajustes');
-  await expect(page.locator('.sent')).toContainText('trocar “basta” por “chega”');
-  await expect(page.locator('.sent')).not.toContainText('autorizo');
+  await expect(page.getByRole('heading', { level: 1, name: 'A Sanguessuga' })).toHaveCount(0);
 });
 
 test('um link de revisão inventado não abre nada', async ({ page }) => {
