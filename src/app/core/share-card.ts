@@ -45,7 +45,7 @@ export interface ShareCard {
   /** Selo grande abaixo do assunto (“116 anos”), nas imagens de datas da história. */
   badge?: string;
   /** Foto da imagem (caminho dentro de `public/conteudo`) e a linha de crédito, que sempre vai junto. */
-  photo?: { src: string; credit: string; /** “Foto ilustrativa” em vez de “Foto”. */ label?: string; /** Selo no canto da foto (o ano, no compilado de um dia). */ tag?: string };
+  photo?: { src: string; credit: string; /** “Foto ilustrativa” em vez de “Foto”. */ label?: string; /** Onde fica o centro do recorte, de cima (0) para baixo (1); padrão: perto do alto, para os rostos. */ focusY?: number; /** Selo no canto da foto (o ano, no compilado de um dia). */ tag?: string };
   /** Várias fotos lado a lado, no compilado de um dia (no lugar de `photo`). */
   photos?: { src: string; credit: string; label?: string; tag?: string }[];
   /** Frase curta, em dourado, que deixa a pessoa com vontade de ler a história. */

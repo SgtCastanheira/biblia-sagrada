@@ -43,7 +43,7 @@ export const TRAILS: Trail[] = [
     tone: '#7a5a14',
     collections: ['estudos'],
     branches: [
-      { title: 'A Ponte entre os Testamentos', ids: ['entre-os-testamentos', 'grupos-do-tempo-de-jesus'] },
+      { title: 'A Ponte entre os Testamentos', ids: ['da-volta-do-exilio-a-jesus', 'livros-dos-macabeus'] },
       { title: 'Estudos', ids: ['ministerios-na-biblia', 'cativeiros-de-israel', 'os-faraos-da-biblia'] },
     ],
   },
@@ -83,7 +83,7 @@ export const TRAILS: Trail[] = [
     tone: '#4b3766',
     collections: ['contexto'],
     branches: [
-      { title: 'Roma e o Poder', ids: ['legiao-e-o-exercito-romano', 'crucificacao-romana', 'a-familia-de-herodes'] },
+      { title: 'Roma e o Poder', ids: ['legiao-e-o-exercito-romano', 'crucificacao-romana', 'a-familia-de-herodes', 'flavio-josefo'] },
       { title: 'A Fé e a Família', ids: ['casamento-judaico', 'o-templo-de-herodes'] },
       { title: 'O Trabalho e o Dinheiro', ids: ['dinheiro-e-salarios', 'pastores-e-ovelhas', 'agricultura-no-tempo-de-jesus'] },
       { title: 'O Tempo e as Festas', ids: ['natal-e-os-calendarios'] },
@@ -117,6 +117,7 @@ export const TRAILS: Trail[] = [
       { title: 'A Idade Média', ids: ['idade-media', 'pre-reformadores'] },
       { title: 'A Reforma', ids: ['reforma-protestante', 'reformadores', 'reforma-inglesa', 'contrarreforma'] },
       { title: 'Despertamentos e Missões', ids: ['pietismo-e-moravios', 'grandes-despertamentos', 'escola-dominical', 'missoes-modernas'] },
+      { title: 'Livros de História da Igreja', ids: ['historia-da-igreja-andrew-miller', 'miller-estevao-apostolos-e-paulo', 'miller-roma-e-as-perseguicoes', 'miller-constantino-e-os-concilios', 'miller-gregorio-o-islamismo-e-carlos-magno', 'miller-gregorio-vii-e-as-cruzadas', 'miller-bernardo-becket-e-inocencio-iii', 'miller-albigenses-inquisicao-e-frades', 'miller-declinio-do-papado-e-wycliffe', 'miller-hus-gutenberg-e-os-ultimos-precursores', 'historia-da-igreja-everett-ferguson', 'ferguson-perseguicoes-heresias-e-canon', 'ferguson-pais-da-igreja-e-terceiro-seculo', 'ferguson-constantino-e-o-quarto-seculo', 'ferguson-monges-cristologia-e-agostinho', 'ferguson-migracoes-papado-e-igrejas-orientais', 'ferguson-ocidente-medieval-e-cruzadas', 'ferguson-escolastica-cister-e-seculo-xii', 'ferguson-inocencio-iii-frades-e-aquino', 'ferguson-presagios-de-declinio-e-fim-da-idade-media'] },
     ],
   },
   {
@@ -129,8 +130,9 @@ export const TRAILS: Trail[] = [
     collections: ['avivamentos'],
     branches: [
       { title: 'O Movimento Pentecostal', ids: ['movimento-pentecostal'] },
+      { title: 'Os Avivamentos na Bíblia', ids: ['avivamentos-na-biblia'] },
       { title: 'Os Grandes Avivamentos', ids: ['avivamentos-desde-atos', 'avivamento-de-oracao-1857', 'avivamento-do-pais-de-gales', 'avivamento-da-coreia', 'avivamento-da-africa-oriental', 'avivamento-das-hebridas', 'avivamentos-na-america-do-sul'] },
-      { title: 'Reconhecer e Guardar o Avivamento', ids: ['a-geracao-que-nao-conheceu-o-senhor', 'a-palavra-no-coracao'] },
+      { title: 'Reconhecer e Guardar o Avivamento', ids: ['marcas-de-um-avivamento', 'a-geracao-que-nao-conheceu-o-senhor', 'a-palavra-no-coracao'] },
     ],
   },
   {

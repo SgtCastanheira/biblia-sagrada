@@ -31,7 +31,7 @@ test('datas: os destaques passam sozinhos, e parar ou escolher um segura a troca
   const title = box.getByRole('heading', { level: 3 });
   await expect(title).toHaveText('Berg e Vingren Chegam a Belém');
   const dots = box.locator('.dot');
-  expect(await dots.count()).toBeGreaterThanOrEqual(2);
+  expect(await dots.count()).toBeGreaterThanOrEqual(4);
   expect(await dots.count()).toBeLessThanOrEqual(12);
   await page.clock.fastForward(10_000);
   await expect(title).not.toHaveText('Berg e Vingren Chegam a Belém');
@@ -41,9 +41,9 @@ test('datas: os destaques passam sozinhos, e parar ou escolher um segura a troca
   await expect(box.getByRole('button', { name: 'Retomar a troca dos destaques' })).toBeVisible();
   await page.clock.fastForward(30_000);
   await expect(title).toHaveText(second!);
-  // escolher o primeiro ponto
-  await dots.nth(0).click();
-  await expect(dots.nth(0)).toHaveAttribute('aria-current', 'true');
+  // escolher o terceiro ponto
+  await dots.nth(2).click();
+  await expect(dots.nth(2)).toHaveAttribute('aria-current', 'true');
   await expect(title).not.toHaveText(second!);
 });
 
@@ -215,4 +215,31 @@ test('datas: 1º de janeiro tem três fatos, e cada um aparece no compilado com 
   const img = page.locator('app-share-sheet .preview img');
   await expect(img).toBeVisible({ timeout: 15_000 });
   expect(await img.evaluate((i: HTMLImageElement) => [i.naturalWidth, i.naturalHeight])).toEqual([1080, 1350]);
+});
+
+test('datas: a lei marcial explica o que é e deixa o gancho; a imagem de compartilhar sai completa', async ({ page }) => {
+  await page.clock.install({ time: new Date('2026-12-03T10:00:00') });
+  await page.goto('/');
+  const box = page.locator('app-commemorations');
+  await expect(box.getByRole('heading', { level: 3 })).toHaveText('A Lei Marcial na Coreia do Sul');
+  await expect(box).toContainText('Lei marcial é quando os militares assumem o comando');
+  await expect(box.locator('.hook')).toHaveText('E de que lado ficou a igreja?');
+  await expect(box.locator('figcaption')).toContainText('Foto ilustrativa');
+  await box.getByRole('button', { name: /Compartilhar a imagem desta data/ }).click();
+  const img = page.locator('app-share-sheet .preview img');
+  await expect(img).toBeVisible({ timeout: 15_000 });
+  await expect(img).toHaveAttribute('alt', /A Lei Marcial na Coreia do Sul/);
+  // a explicação não é cortada em duas linhas e o gancho aparece em dourado: há pixels dourados na parte de baixo do texto
+  const dourados = await img.evaluate((i: HTMLImageElement) => {
+    const c = document.createElement('canvas');
+    c.width = i.naturalWidth;
+    c.height = i.naturalHeight;
+    const ctx = c.getContext('2d')!;
+    ctx.drawImage(i, 0, 0);
+    const d = ctx.getImageData(70, 560, 940, 480).data;
+    let n = 0;
+    for (let p = 0; p < d.length; p += 4) if (Math.abs(d[p] - 241) < 14 && Math.abs(d[p + 1] - 217) < 14 && Math.abs(d[p + 2] - 168) < 18) n++;
+    return n;
+  });
+  expect(dourados).toBeGreaterThan(300);
 });

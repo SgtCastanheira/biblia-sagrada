@@ -19,7 +19,7 @@ Os fundadores da igreja brasileira, Gunnar Vingren e Daniel Berg, não começara
 :::
 
 :::leia daniel-berg-e-gunnar-vingren
-Quem eram os dois suecos que chegaram a Belém em 1910, a exclusão da igreja batista e o registro de 1918.
+Quem eram os dois suecos que chegaram a Belém em 1910 e o que fizeram até o registro de 1918.
 :::
 
 ## Para a Vida

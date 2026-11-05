@@ -402,8 +402,8 @@ test('no mapa estado por estado, cada etapa leva à história completa', async (
   await expect(page).toHaveURL(/\/assembleia-de-deus\/(ce|pb)$/);
 });
 
-test('entre os Testamentos: o mapa passa de uma época a outra e mostra onde está Israel', async ({ page }) => {
-  await page.goto('/artigo/entre-os-testamentos');
+test('da volta do exílio a Jesus: o mapa passa de uma época a outra e mostra onde está Israel', async ({ page }) => {
+  await page.goto('/artigo/da-volta-do-exilio-a-jesus');
   const mapa = page.locator('.era-map');
   await expect(mapa).toBeAttached();
   await mapa.scrollIntoViewIfNeeded();
@@ -414,6 +414,28 @@ test('entre os Testamentos: o mapa passa de uma época a outra e mostra onde est
   await mapa.getByRole('button', { name: /Depois/ }).click();
   await expect(mapa.getByText('Dn 11.31')).toBeVisible();
   await expect(mapa.getByRole('link', { name: /Ver no atlas completo/ })).toHaveAttribute('href', /atlas\?epoca=macabeus/);
+});
+
+test('da volta do exílio a Jesus: uma história só, com a casa de Davi desenhada, e os endereços antigos levam a ela', async ({ page }) => {
+  await page.goto('/artigo/da-volta-do-exilio-a-jesus');
+  await expect(page.getByRole('heading', { level: 1, name: 'Da Volta do Exílio a Jesus' })).toBeVisible();
+  for (const titulo of [/Como Neemias Levantou os Muros/, /Quem Eram os Samaritanos/, /Onde Estava a Casa de Davi/, /Os Grupos Existem Hoje/]) {
+    await expect(page.getByRole('heading', { level: 2, name: titulo })).toBeAttached();
+  }
+  await expect(page.getByRole('img', { name: /A casa de Davi e quem mandava em Jerusalém/ })).toBeAttached();
+  for (const antigo of ['entre-os-testamentos', 'grupos-do-tempo-de-jesus']) {
+    await page.goto(`/artigo/${antigo}`);
+    await expect(page).toHaveURL(/\/artigo\/da-volta-do-exilio-a-jesus$/);
+  }
+});
+
+test('Flávio Josefo e os livros dos Macabeus: as duas histórias abrem, ligadas à história única', async ({ page }) => {
+  await page.goto('/artigo/flavio-josefo');
+  await expect(page.getByRole('heading', { level: 1, name: /Flávio Josefo/ })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: /Pontos em Debate|O Testemunho sobre Jesus/ }).first()).toBeAttached();
+  await page.goto('/artigo/livros-dos-macabeus');
+  await expect(page.getByRole('heading', { level: 1, name: 'Os Livros dos Macabeus' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 3, name: /Capítulos 1–2: A Proibição e o Grito de Modin/ })).toBeAttached();
 });
 
 test('módulo Teologia Sistemático-Carismática: síntese com o plano da obra ilustrado e tópicos em maiúsculas', async ({ page }) => {

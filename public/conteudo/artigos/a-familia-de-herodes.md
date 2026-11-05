@@ -70,6 +70,6 @@ Os Evangelhos contrastam dois reis. Herodes, o Grande, “rei dos judeus” por 
 - Paulo diante de Agripa II: [[At 26.1-32]].
 - No dicionário: [tetrarca](/dicionario/tetrarca).
 
-:::leia entre-os-testamentos
+:::leia da-volta-do-exilio-a-jesus
 Antes dos Herodes: os Macabeus, os reis-sacerdotes, a chegada de Pompeu em 63 a.C. e de onde vinha a família idumeia de Herodes.
 :::

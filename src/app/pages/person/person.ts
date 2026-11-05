@@ -17,16 +17,19 @@ import { EraChip } from '../../shared/era-chip';
 import { PassageView } from '../../shared/passage-view';
 import { Sheets } from '../../shared/sheets';
 import { SourcesBox } from '../../shared/sources-box';
+import { ShareImageButton } from '../../shared/share-image-button';
+import { personCard } from '../../core/share-card';
 
 /** Página de um personagem do Memorial da Fé. */
 @Component({
   selector: 'app-person',
-  imports: [BackButton, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView, SourcesBox],
+  imports: [BackButton, EraChip, ShareImageButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView, SourcesBox],
   template: `
     @if (person(); as p) {
       <div class="article">
         <div class="top">
           <app-back fallback="/memorial" [queryParams]="{ grupo: mainGroup()?.id }" />
+          <app-share-image-button [card]="shareCard()" />
         </div>
 
         <span class="overline">{{ mainGroup()?.name }} · {{ p.period }}</span>
@@ -186,6 +189,7 @@ export class PersonPage {
 
   protected readonly person = computed(() => this.all()?.find((p) => p.id === this.id()));
   protected readonly epoch = computed(() => (this.person() ? epochOfPerson(this.person()!) : null));
+  protected readonly shareCard = computed(() => (this.person() ? personCard(this.person()!, this.mainGroup()?.name ?? 'Personagens') : null));
   protected readonly mainGroup = computed(() => findGroup(this.person()?.groups[0] ?? ''));
   protected readonly otherGroups = computed(() =>
     (this.person()?.groups.slice(1) ?? []).map((g) => findGroup(g)!).filter(Boolean),

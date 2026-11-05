@@ -20,53 +20,69 @@ import { renderShareImage, SHARE_FORMATS, type ShareFormat } from './share-rende
       <h2>Compartilhar</h2>
       <p class="lead">Uma imagem com o assunto, os tópicos e o endereço do app, para quem receber querer ler.</p>
 
-      <div class="formats" role="group" aria-label="Tamanho da imagem">
-        @for (f of formats; track f.id) {
-          <button type="button" class="fmt" [class.on]="format() === f.id" [attr.aria-pressed]="format() === f.id" (click)="format.set(f.id)">
-            <strong>{{ f.label }}</strong><small>{{ f.hint }}</small>
-          </button>
-        }
-      </div>
+      <div class="layout">
+        <div class="preview" [class.stories]="format() === 'stories'" aria-live="polite">
+          @switch (state()) {
+            @case ('pronto') {
+              <img [src]="preview()" [alt]="'Prévia da imagem para compartilhar: ' + card.title" />
+            }
+            @case ('erro') {
+              <p class="msg">Não foi possível gerar a imagem. Use “Copiar link”.</p>
+            }
+            @default {
+              <p class="msg">Gerando a imagem…</p>
+            }
+          }
+        </div>
 
-      <div class="preview" [class.stories]="format() === 'stories'" aria-live="polite">
-        @switch (state()) {
-          @case ('pronto') {
-            <img [src]="preview()" [alt]="'Prévia da imagem para compartilhar: ' + card.title" />
+        <div class="formats" role="group" aria-label="Tamanho da imagem">
+          @for (f of formats; track f.id) {
+            <button type="button" class="fmt" [class.on]="format() === f.id" [attr.aria-pressed]="format() === f.id" (click)="format.set(f.id)">
+              <strong>{{ f.label }}</strong><small>{{ f.hint }}</small>
+            </button>
           }
-          @case ('erro') {
-            <p class="msg">Não foi possível gerar a imagem. Use “Copiar link”.</p>
-          }
-          @default {
-            <p class="msg">Gerando a imagem…</p>
-          }
-        }
-      </div>
+        </div>
 
-      <div class="actions">
-        <button mat-flat-button type="button" [disabled]="state() !== 'pronto'" (click)="share()"><mat-icon>ios_share</mat-icon> Compartilhar imagem</button>
-        <button mat-stroked-button type="button" [disabled]="state() !== 'pronto'" (click)="download()"><mat-icon>download</mat-icon> Baixar a imagem</button>
-        <button mat-stroked-button type="button" (click)="whatsapp()"><mat-icon>chat</mat-icon> Enviar o link no WhatsApp</button>
-        <button mat-stroked-button type="button" (click)="copy()"><mat-icon>content_copy</mat-icon> Copiar o link</button>
+        <!-- Os botões ficam sempre à vista: na tela estreita grudam no pé do painel; na larga ficam ao lado da imagem -->
+        <div class="actions">
+          <button mat-flat-button type="button" [disabled]="state() !== 'pronto'" (click)="share()"><mat-icon>ios_share</mat-icon> Compartilhar imagem</button>
+          <button mat-stroked-button type="button" [disabled]="state() !== 'pronto'" (click)="download()"><mat-icon>download</mat-icon> Baixar a imagem</button>
+          <button mat-stroked-button type="button" (click)="whatsapp()"><mat-icon>chat</mat-icon> Enviar o link no WhatsApp</button>
+          <button mat-stroked-button type="button" (click)="copy()"><mat-icon>content_copy</mat-icon> Copiar o link</button>
+        </div>
+        <p class="tip">Ao compartilhar, escolha o <strong>WhatsApp</strong> ou o <strong>Instagram</strong> (Stories ou Feed) na tela que abrir. No computador, que não tem esse menu, a imagem é salva; se o aparelho não mostrar o Instagram, baixe-a e publique por lá.</p>
       </div>
-      <p class="tip">Ao compartilhar, escolha o <strong>WhatsApp</strong> ou o <strong>Instagram</strong> (Stories ou Feed) na tela que abrir. Se o seu aparelho não mostrar o Instagram, baixe a imagem e publique por lá.</p>
     </div>
   `,
   styles: `
-    .content { padding: 4px 20px 24px; }
+    .content { padding: 4px 20px 0; }
     h2 { margin: 6px 0 4px; font: 600 22px/1.25 var(--heading-font); }
-    .lead { margin: 0 0 14px; font: 400 15px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
-    .formats { display: flex; gap: 8px; margin-bottom: 14px; }
-    .fmt { flex: 1; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 8px; border: 1.5px solid var(--mat-sys-outline-variant); border-radius: 14px; background: transparent; color: var(--mat-sys-on-surface); font: inherit; cursor: pointer; }
+    .lead { margin: 0 0 12px; font: 400 15px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    /* Tela estreita: tamanhos, imagem, botões (grudados no pé) e dica. */
+    .layout { display: grid; grid-template-areas: 'formats' 'preview' 'actions' 'tip'; gap: 12px; }
+    .formats { grid-area: formats; display: flex; gap: 8px; }
+    .preview { grid-area: preview; }
+    .actions { grid-area: actions; }
+    .tip { grid-area: tip; }
+    .fmt { flex: 1; min-height: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 6px 8px; border: 1.5px solid var(--mat-sys-outline-variant); border-radius: 14px; background: transparent; color: var(--mat-sys-on-surface); font: inherit; cursor: pointer; }
     .fmt strong { font: 600 15px/1.2 Inter, sans-serif; }
     .fmt small { font: 500 13px/1.2 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .fmt.on { border-color: var(--accent-gold); background: color-mix(in srgb, var(--accent-gold) 16%, transparent); }
-    .preview { display: grid; place-items: center; min-height: 180px; margin-bottom: 14px; padding: 10px; border-radius: 16px; background: color-mix(in srgb, var(--mat-sys-on-surface) 6%, transparent); }
-    .preview img { display: block; width: auto; max-width: 100%; max-height: min(46vh, 420px); border-radius: 10px; box-shadow: 0 6px 22px rgba(0, 0, 0, .28); }
-    .preview.stories img { max-height: min(52vh, 480px); }
+    .preview { display: grid; place-items: center; min-height: 160px; padding: 10px; border-radius: 16px; background: color-mix(in srgb, var(--mat-sys-on-surface) 6%, transparent); }
+    .preview img { display: block; width: auto; max-width: 100%; max-height: min(34vh, 300px); border-radius: 10px; box-shadow: 0 6px 22px rgba(0, 0, 0, .28); }
+    .preview.stories img { max-height: min(38vh, 340px); }
     .msg { margin: 0; font: 400 15px/1.4 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); text-align: center; }
-    .actions { display: grid; gap: 8px; }
-    .actions button { min-height: 48px; justify-content: center; }
-    .tip { margin: 14px 0 0; font: 400 14px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .actions { position: sticky; bottom: 0; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 0 calc(12px + env(safe-area-inset-bottom)); background: var(--mat-bottom-sheet-container-background-color, var(--mat-sys-surface-container-low, var(--mat-sys-surface))); box-shadow: 0 -10px 12px -10px rgba(0, 0, 0, .28); }
+    .actions button { min-height: 48px; justify-content: center; padding-inline: 10px; line-height: 1.2; }
+    .tip { margin: 0 0 18px; font: 400 14px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+    /* Tela larga: a imagem de um lado; tamanhos, botões e dica do outro, sem rolar. */
+    @media (min-width: 760px) {
+      .layout { grid-template-columns: minmax(260px, 380px) minmax(0, 1fr); grid-template-areas: 'preview formats' 'preview actions' 'preview tip'; grid-template-rows: auto auto 1fr; column-gap: 28px; align-items: start; }
+      .preview img { max-height: min(62vh, 520px); }
+      .preview.stories img { max-height: min(66vh, 560px); }
+      .actions { position: static; grid-template-columns: 1fr; padding: 0; box-shadow: none; background: none; }
+      .tip { margin-bottom: 20px; }
+    }
   `,
 })
 export class ShareSheet {

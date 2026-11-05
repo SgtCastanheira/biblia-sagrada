@@ -12,8 +12,21 @@ Os avivamentos da história têm muito em comum:
 - **Mudam a sociedade**: menos crime e bebedeira, famílias restauradas, escolas, obras sociais e missões.
 - **Têm um fim**: depois de meses ou anos, o fogo diminui. Às vezes vêm excessos e divisões; quase sempre ficam igrejas novas, obreiros e missionários.
 
+Cada ponto desta lista tem exemplos, e há mais marcas, num estudo à parte.
+
+:::leia marcas-de-um-avivamento
+As dez marcas que se repetem, os cinco sinais de Edwards para testar uma obra e o que quase sempre atrapalha.
+:::
+
 :::sermao finney-o-que-e-avivamento
 Charles Finney explica o que é um avivamento e quando a igreja precisa dele.
+:::
+
+## Antes de Atos: Os Avivamentos na Bíblia
+
+A Bíblia já conta avivamentos: Jacó em Betel, Samuel em Mizpá, os reis Asa, Ezequias e Josias, o povo que ouviu a Lei no tempo de Neemias, a cidade de Nínive e as igrejas da Macedônia.
+
+:::leia avivamentos-na-biblia
 :::
 
 ## Pentecostes e a Igreja Primitiva (30–100)
@@ -175,6 +188,7 @@ Moody foi um dos frutos daquele tempo de oração.
 :::
 
 :::leia avivamento-da-coreia
+Do avivamento de 1907 aos golpes de Estado de 1961 e 1979 e à lei marcial de 2024: a história da igreja coreana até hoje.
 :::
 
 ## Azusa e o Fogo Pentecostal (1906–1913)

@@ -1,6 +1,7 @@
 @if (map(); as m) {
   <div class="top">
     <app-back fallback="/mapas" label="Voltar aos mapas" />
+    <app-share-image-button [card]="shareCard()" />
   </div>
   <span class="overline">{{ m.period }}</span>
   <h1>{{ m.title }}</h1>

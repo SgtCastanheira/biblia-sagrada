@@ -18,6 +18,8 @@ import { findVersion } from '../../core/versions';
 import { epochOfCuriosity } from '../../core/epochs';
 import { EraChip } from '../../shared/era-chip';
 import { SourcesBox } from '../../shared/sources-box';
+import { ShareImageButton } from '../../shared/share-image-button';
+import { curiosityCard } from '../../core/share-card';
 
 interface Passage {
   range: VerseRange;
@@ -27,7 +29,7 @@ interface Passage {
 
 @Component({
   selector: 'app-curiosity',
-  imports: [BackButton, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, SourcesBox],
+  imports: [BackButton, EraChip, ShareImageButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, SourcesBox],
   templateUrl: './curiosity.html',
   styleUrl: './curiosity.scss',
 })
@@ -40,6 +42,7 @@ export class CuriosityPage {
   private readonly snackBar = inject(MatSnackBar);
 
   protected readonly curiosity = computed(() => findCuriosity(this.id()));
+  protected readonly shareCard = computed(() => (this.curiosity() ? curiosityCard(this.curiosity()!) : null));
   /** O estudo que aprofunda esta curiosidade, quando há. */
   protected readonly study = computed(() => {
     const id = this.curiosity()?.study;
@@ -82,23 +85,6 @@ export class CuriosityPage {
         this.service.markRead(curiosity.id);
       }
     });
-  }
-
-  protected async share(): Promise<void> {
-    const c = this.curiosity();
-    if (!c) return;
-    const refs = c.refs.map((r) => this.reference(r)).join('; ');
-    const text = `${c.question}\n\n${c.answer}\n\n${[...c.body, ...(c.points ?? []).map((p) => `• ${p.label}: ${p.text}`), c.closing ?? ''].join('\n').trim()}\n\n📖 ${refs}`;
-    if (navigator.share) {
-      try {
-        await navigator.share({ title: 'Você sabia?', text });
-      } catch {
-        // cancelado
-      }
-    } else {
-      await navigator.clipboard.writeText(text);
-      this.snackBar.open('Curiosidade copiada', undefined, { duration: 2000 });
-    }
   }
 
   private reference(range: VerseRange): string {

@@ -40,8 +40,8 @@ export class Sheets {
   }
 
   /** Texto de uma referência citada num estudo ("Jo 3.16"). */
-  passage(refs: string): void {
-    this.bottomSheet.open(PassageSheet, { ...this.config, data: refs });
+  passage(refs: string, version?: string): void {
+    this.bottomSheet.open(PassageSheet, { ...this.config, data: { refs, version } });
   }
 
   /** Verbete do dicionário. */

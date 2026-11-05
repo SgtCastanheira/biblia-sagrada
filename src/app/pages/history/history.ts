@@ -9,6 +9,8 @@ import { Bookshelf } from '../../shared/bookshelf';
 import { StudyFinder } from '../../shared/study-finder';
 import { StoryBooks } from '../../shared/story-books';
 import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '../../core/trails';
+import { trailCard } from '../../core/share-card';
+import { ShareImageButton } from '../../shared/share-image-button';
 
 /**
  * Histórias: uma fileira de círculos (como os destaques do Instagram), um por assunto. Sem escolher nenhum,
@@ -16,7 +18,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
  */
 @Component({
   selector: 'app-history',
-  imports: [RouterLink, MatIconModule, MatRippleModule, Bookshelf, StoryBooks, StudyFinder],
+  imports: [RouterLink, MatIconModule, MatRippleModule, Bookshelf, ShareImageButton, StoryBooks, StudyFinder],
   template: `
     <header class="page-head">
       <span class="overline">Biblioteca</span>
@@ -36,6 +38,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
       </a>
       <section class="cover" [style.--tone]="t.tone">
         <mat-icon class="watermark" aria-hidden="true">{{ t.icon }}</mat-icon>
+        <app-share-image-button class="c-share" [card]="trailCard(t)" label="Compartilhar este assunto" />
         <span class="c-over">{{ count(t) }} {{ count(t) === 1 ? 'história' : 'histórias' }}@if (state(t).done) { · {{ state(t).done }} {{ state(t).done === 1 ? 'lida' : 'lidas' }} }</span>
         <h2>{{ t.name }}</h2>
         <p>{{ t.description }}</p>
@@ -151,6 +154,7 @@ import { findTrail, Trail, TRAILS, trailArticleIds, trailOfCollection } from '..
       /* Como um livro que acabou de abrir: a capa gira a partir da lombada */
       box-shadow: inset 12px 0 14px -10px rgba(0, 0, 0, .55); transform-origin: left center; animation: open-book .7s cubic-bezier(.3, .7, .2, 1) both;
     }
+    .c-share { position: absolute; top: 6px; right: 6px; z-index: 2; color: #fff8ec; }
     @keyframes open-book { from { transform: perspective(1100px) rotateY(-70deg); opacity: .35; } to { transform: none; opacity: 1; } }
     @media (prefers-reduced-motion: reduce) { .cover { animation: none; } }
     .cover h2 { position: relative; margin: 0; font: 600 28px/1.15 var(--heading-font); }
@@ -183,6 +187,7 @@ export class HistoryPage {
   /** Pesquisa na biblioteca (?q=). */
   readonly q = input<string>();
   protected readonly progress = inject(StoryProgressService);
+  protected trailCard = trailCard;
   /** O cartão das datas, no alto da biblioteca: o mês de hoje e quantos fatos ele tem. */
   private readonly today = new Date();
   protected readonly month = monthName(this.today.getMonth() + 1);

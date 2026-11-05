@@ -15,16 +15,19 @@ import { EraChip } from '../../shared/era-chip';
 import { PassageView } from '../../shared/passage-view';
 import { Sheets } from '../../shared/sheets';
 import { SourcesBox } from '../../shared/sources-box';
+import { ShareImageButton } from '../../shared/share-image-button';
+import { prophecyCard } from '../../core/share-card';
 
 /** Uma profecia: o texto, o contexto, o cumprimento e as interpretações. */
 @Component({
   selector: 'app-prophecy',
-  imports: [BackButton, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView, SourcesBox],
+  imports: [BackButton, EraChip, ShareImageButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, PassageView, SourcesBox],
   template: `
     @if (prophecy(); as p) {
       <div class="article">
         <div class="top">
           <app-back fallback="/profecias" />
+          <app-share-image-button [card]="shareCard()" />
         </div>
         <span class="overline">{{ categories[p.category].name }}</span>
         <h1 class="title">{{ p.title }}</h1>
@@ -137,6 +140,7 @@ export class ProphecyPage {
 
   protected readonly prophecy = computed(() => this.all()?.find((p) => p.id === this.id()));
   protected readonly epoch = computed(() => (this.prophecy() ? epochOfProphecy(this.prophecy()!) : null));
+  protected readonly shareCard = computed(() => (this.prophecy() ? prophecyCard(this.prophecy()!, this.categories[this.prophecy()!.category].name) : null));
   protected readonly article = computed(() => {
     const id = this.prophecy()?.article;
     return id ? findArticle(id) : undefined;

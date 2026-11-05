@@ -39,6 +39,10 @@ O menino do arado de Tyndale hoje é quem tem a Bíblia inteira, em dezenas de v
 O que Lutero fez em Worms e em Wartburg, as cinco frases da Reforma e como a Bíblia chegou ao povo na língua dele.
 :::
 
+:::leia reforma-inglesa
+O que Tyndale disse ao clérigo, como os exemplares entravam escondidos na Inglaterra, as últimas palavras dele e o que o rei fez três anos depois.
+:::
+
 ## Entende o que Lê?
 
 Numa estrada deserta, havia um encontro marcado. Um anjo disse a Filipe: “Levanta-te, e vai em direção do sul pelo caminho que desce de Jerusalém a Gaza, o qual está deserto” ([[At 8.26]]). Ali passava um etíope, “mordomo-mor de Candace, rainha dos etíopes”, “superintendente de todos os seus tesouros”, que “tinha ido a Jerusalém para adorar” ([[At 8.27]]). Voltava para casa, “sentado no seu carro”, e “lia o profeta Isaías” ([[At 8.28]]).
@@ -115,7 +119,7 @@ O salmista perguntava como o jovem purifica o seu caminho, e respondia: “Obser
 
 “Instrui o menino no caminho em que deve andar, e até quando envelhecer não se desviará dele” ([[Pv 22.6]]). É o versículo que mais se cita a pais e a igrejas. E a pergunta que ele faz a você não é difícil de entender: **que caminho você vai ensinar?** O que você nunca andou com a Palavra? O que você não sabe dizer?
 
-Jesus foi duro com guias assim: “são guias cegos; ora, se um cego guiar outro cego, ambos cairão no barranco” ([[Mt 15.14]]). Não é xingamento, é descrição. E o pior é a conta que fica para os filhos: o menino não aprende de você o que você não sabe. Ele pergunta “o que significa isto?”, e a resposta “eu não sei” também é um ensino, só que o errado. Os provérbios são princípios, e não promessas sem exceção. Mas o princípio é inegociável: quem instrui precisa saber o que instrui.
+Jesus foi duro com guias assim: “são guias cegos; ora, se um cego guiar outro cego, ambos cairão no barranco” ([[Mt 15.14]]). Não é xingamento, é descrição. E o pior é a conta que fica para os filhos: o menino não aprende de você o que você não sabe. Ele pergunta “o que significa isto?”, e a resposta “eu não sei” também é um ensino, só que o errado. Os provérbios são princípios, e não promessas sem exceção, como o estudo *A Geração que Não Conheceu o Senhor* mostra. Mas o princípio é inegociável: quem instrui precisa saber o que instrui.
 
 A ordem de Deus é clara: “E estas palavras, que hoje te ordeno, estarão no teu coração; e as ensinarás a teus filhos” ([[Dt 6.6-7]]). **Primeiro no teu coração, depois na boca dos teus filhos.** Não adianta inverter a ordem. Timóteo sabia as Escrituras “desde a infância” porque havia quem as soubesse antes dele ([[2Tm 3.14-15]]). Quem as sabe antes dos seus filhos?
 

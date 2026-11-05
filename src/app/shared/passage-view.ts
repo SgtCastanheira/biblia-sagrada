@@ -80,6 +80,8 @@ interface LoadedPassage {
 })
 export class PassageView {
   readonly refs = input.required<string>();
+  /** Versão da Bíblia a usar; vazio = a escolhida em Ajustes. */
+  readonly version = input<string | undefined>();
 
   private readonly bible = inject(BibleService);
   private readonly settings = inject(SettingsService);
@@ -87,7 +89,7 @@ export class PassageView {
   protected readonly expanded = signal(new Set<string>());
   // Só interpreta depois que a pessoa para de digitar
   protected readonly state = toSignal(
-    toObservable(computed(() => ({ text: this.refs(), version: this.settings.version() }))).pipe(
+    toObservable(computed(() => ({ text: this.refs(), version: this.version() ?? this.settings.version() }))).pipe(
       debounceTime(500),
       switchMap(({ text, version }) => {
         const { refs, errors } = parseReferences(text);

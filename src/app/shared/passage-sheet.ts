@@ -9,7 +9,7 @@ import { PassageView } from './passage-view';
   template: `
     <div class="sheet-handle"></div>
     <div class="content">
-      <app-passage-view [refs]="refs" />
+      <app-passage-view [refs]="data.refs" [version]="data.version" />
     </div>
   `,
   styles: `
@@ -17,5 +17,6 @@ import { PassageView } from './passage-view';
   `,
 })
 export class PassageSheet {
-  protected readonly refs = inject<string>(MAT_BOTTOM_SHEET_DATA);
+  /** As referências e, se a página está numa língua própria (Novas Vozes), a versão da Bíblia nessa língua. */
+  protected readonly data = inject<{ refs: string; version?: string }>(MAT_BOTTOM_SHEET_DATA);
 }

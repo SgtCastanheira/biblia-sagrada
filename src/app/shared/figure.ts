@@ -153,6 +153,25 @@ import { TanakhShelf } from './tanakh-shelf';
           }
         </svg>
       }
+      @case ('linhagem-de-davi') {
+        <svg viewBox="0 0 340 440" role="img" aria-label="A casa de Davi e quem mandava em Jerusalém, de 586 a.C. ao nascimento de Jesus: a linhagem de Davi segue com Jeconias e Zorobabel, mas sem trono, enquanto a cidade é governada por babilônios, persas, gregos, asmoneus, romanos e Herodes">
+          <text x="88" y="18" class="label">CASA DE DAVI</text>
+          <text x="252" y="18" class="label">QUEM MANDAVA</text>
+          @for (r of davidRows; track r.year; let i = $index) {
+            @if (i < davidRows.length - 1) {
+              <g class="links">
+                <path [class.dashed]="i > 0" [attr.d]="'M88 ' + (90 + i * 68) + ' V' + (114 + i * 68)" />
+                <path [attr.d]="'M252 ' + (90 + i * 68) + ' V' + (114 + i * 68)" />
+              </g>
+            }
+            <text x="170" [attr.y]="40 + i * 68" class="year">{{ r.year }}</text>
+            <g class="node key"><rect x="8" [attr.y]="46 + i * 68" width="160" height="44" rx="10" />
+              <text x="88" [attr.y]="64 + i * 68">{{ r.house[0] }}</text><text x="88" [attr.y]="81 + i * 68" class="sub">{{ r.house[1] }}</text></g>
+            <g class="node"><rect x="172" [attr.y]="46 + i * 68" width="160" height="44" rx="10" />
+              <text x="252" [attr.y]="64 + i * 68">{{ r.ruler[0] }}</text><text x="252" [attr.y]="81 + i * 68" class="sub">{{ r.ruler[1] }}</text></g>
+          }
+        </svg>
+      }
       @case ('berg-vingren-viagem') {
         <svg viewBox="0 0 340 330" role="img" aria-label="A viagem de Gunnar Vingren e Daniel Berg: da Suécia aos Estados Unidos e de Nova York a Belém do Pará">
           <g class="region"><rect x="8" y="8" width="186" height="150" rx="18" /><text x="101" y="30" class="label">ESTADOS UNIDOS</text></g>
@@ -216,6 +235,15 @@ export class Figure {
     { n: 5, name: 'Cristologia', about: 'Jesus Cristo' }, { n: 6, name: 'Antropologia', about: 'o ser humano' },
     { n: 7, name: 'Hamartiologia', about: 'o pecado' }, { n: 8, name: 'Soteriologia', about: 'a salvação' },
     { n: 9, name: 'Eclesiologia', about: 'a Igreja' }, { n: 10, name: 'Escatologia', about: 'as últimas coisas' },
+  ];
+  /** A casa de Davi e quem mandava em Jerusalém, linha a linha: [casa de Davi, quem mandava]. */
+  protected readonly davidRows: { year: string; house: [string, string]; ruler: [string, string] }[] = [
+    { year: '586 a.C.', house: ['Zedequias', 'último rei de Judá'], ruler: ['Babilônia', 'destrói o Templo'] },
+    { year: '538 a.C.', house: ['Zorobabel', 'neto do rei Jeconias'], ruler: ['Persas', 'o Templo é refeito'] },
+    { year: '333 a.C.', house: ['A linhagem continua', 'sem trono nem exército'], ruler: ['Gregos', 'Egito e Síria mandam'] },
+    { year: '142 a.C.', house: ['Sem registros', 'na Bíblia hebraica'], ruler: ['Asmoneus', 'sacerdotes que viram reis'] },
+    { year: '63 a.C.', house: ['Sem trono', 'a promessa continua'], ruler: ['Roma', 'Pompeu toma Jerusalém'] },
+    { year: 'c. 5 a.C.', house: ['José e Maria', 'da casa de Davi'], ruler: ['Herodes', 'rei escolhido por Roma'] },
   ];
   protected floor(n: number): number {
     return Math.floor(n);

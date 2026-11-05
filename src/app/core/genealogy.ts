@@ -177,7 +177,7 @@ export const GENEALOGY: GenSection[] = [
     text: 'As duas listas se encontram em Salatiel e no seu filho Zorobabel, o governador que liderou a volta da Babilônia e reconstruiu o templo. Depois, separam-se de novo até chegar a José. Os nomes deste trecho não aparecem no Antigo Testamento: vinham dos registros de família, que os judeus guardavam com cuidado.',
     refs: 'Mt 1.12-16; Lc 3.23-27; Ed 3.8',
     nodes: [
-      { name: 'Salatiel', alt: 'Sealtiel', ref: '1Cr 3.17', note: 'Em Mateus, filho de Jeconias; em Lucas, de Neri — talvez por adoção ou casamento de levirato.' },
+      { name: 'Salatiel', alt: 'Selatiel', ref: '1Cr 3.17', note: 'Em Mateus, filho de Jeconias; em Lucas, de Neri — talvez por adoção ou casamento de levirato.' },
       { name: 'Zorobabel', person: 'zorobabel', ref: 'Ag 2.23', note: 'Líder do retorno do exílio. Deus o chamou de “anel de selar”.', contemporaries: [{ name: 'Ageu', person: 'ageu' }, { name: 'Zacarias', person: 'zacarias-profeta' }] },
     ],
     mt: [

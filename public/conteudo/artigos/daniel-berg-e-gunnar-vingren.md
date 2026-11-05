@@ -44,15 +44,9 @@ O caminho dos pioneiros: da Suécia aos Estados Unidos (1902–1903) e de Nova Y
 Dois jovens suecos descem do navio Clement. Não falam português, não recebem salário de nenhuma missão e não conhecem ninguém na cidade.
 :::
 
-Os dois foram recebidos pela **Igreja Batista de Belém** e hospedados no porão da casa de um ministro batista. Daniel Berg empregou-se como caldeireiro e fundidor na companhia **Port of Pará**: com o salário pagava as aulas de português de Vingren e comprava Bíblias. De dia Vingren estudava a língua; à noite ensinava a Berg o que tinha aprendido, e os dois oravam com os irmãos que buscavam a promessa do Espírito [[At 2.38-39]].
+Os dois foram recebidos pela Igreja Batista de Belém e hospedados no porão da casa de um ministro batista. Daniel Berg empregou-se como caldeireiro e fundidor na companhia **Port of Pará**: com o salário pagava as aulas de português de Vingren e comprava Bíblias. De dia Vingren estudava a língua; à noite ensinava a Berg o que tinha aprendido, e os dois oravam com os irmãos que buscavam a promessa do Espírito [[At 2.38-39]].
 
-Em junho de 1911, a irmã **Celina de Albuquerque** foi a primeira a receber o batismo no Espírito Santo. A pregação pentecostal dividiu a igreja batista, e os dois missionários foram excluídos com **dezoito membros** que os apoiavam.
-
-Em **18 de junho de 1911**, esse pequeno grupo formou a **Missão da Fé Apostólica**. Em **11 de janeiro de 1918**, Vingren registrou a igreja em cartório já com o nome de **Assembleia de Deus**.
-
-:::cena Belém · 18 de junho de 1911
-Excluídos da igreja batista, dezoito irmãos e os dois missionários se reúnem como um grupo novo: a Missão da Fé Apostólica. Era o começo da Assembleia de Deus.
-:::
+Foram sete meses assim. Em junho de 1911, a experiência pentecostal separou os dois da igreja batista e, em **18 de junho de 1911**, eles formaram com os irmãos desligados a **Missão da Fé Apostólica**. Em **11 de janeiro de 1918**, Vingren registrou a igreja em cartório já com o nome de **Assembleia de Deus**.
 
 :::nota
 **Como a igreja primitiva.** O grupo de Belém começou pequeno, perseguido e sem recursos, mas cheio do Espírito — como os discípulos em Jerusalém, que “perseveravam unanimemente em oração” [[At 1.14]] — e “cada dia acrescentava-lhes o Senhor os que iam sendo salvos” [[At 2.47]].
@@ -94,7 +88,7 @@ Em 1920 casou-se com **Sara**, na Suécia, e no ano seguinte o casal veio para o
 Em 1962 voltou definitivamente para a Suécia e morreu em **27 de maio de 1963**, em Estocolmo; também está sepultado no Skogskyrkogården. Suas memórias foram publicadas com o título *Enviado por Deus*.
 
 :::leia assembleia-de-deus-no-brasil
-Como a igreja saiu de Belém para todo o Brasil — com o mapa interativo.
+Os batistas de Belém e a exclusão de 1911, e como a igreja saiu de Belém para todo o Brasil — com o mapa interativo.
 :::
 
 ## Linha do Tempo

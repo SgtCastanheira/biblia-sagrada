@@ -48,12 +48,18 @@ test('datas: cada fato tem um gancho (pergunta ou frase curta que a história re
     if (a.text.split(/[.!?]/).some((frase) => frase.trim().split(/\s+/).length > 45)) problems.push(`${a.id}: frase longa demais no texto`);
   }
   expect(problems).toEqual([]);
-  // o gancho vai para a imagem de compartilhar, e a foto ilustrativa avisa que é ilustrativa
+  // a lei marcial explica o que é, e o gancho puxa para a história
+  const lei = ANNIVERSARIES.find((a) => a.id === 'lei-marcial-2024')!;
+  expect(lei.text).toMatch(/Lei marcial é quando/);
+  expect(lei.hook).toBe('E de que lado ficou a igreja?');
+  const card = anniversaryCard(lei, new Date(2026, 11, 3));
+  expect(card.hook).toBe(lei.hook);
+  expect(card.subtitle).toBe(lei.text);
   const ceara = ANNIVERSARIES.find((a) => a.id === 'ceara')!;
-  const card = anniversaryCard(ceara, new Date(2026, 6, 20));
-  expect(card.hook).toBe(ceara.hook);
-  expect(card.subtitle).toBe(ceara.text);
-  expect(card.photo?.label).toBe('Foto ilustrativa');
+  const cearaCard = anniversaryCard(ceara, new Date(2026, 6, 20));
+  expect(cearaCard.hook).toBe(ceara.hook);
+  expect(cearaCard.subtitle).toBe(ceara.text);
+  expect(cearaCard.photo?.label).toBe('Foto ilustrativa');
 });
 
 test('datas: cada fato leva a uma história que existe, e a foto existe e vem com crédito', () => {
@@ -108,7 +114,7 @@ test('datas: a tela inicial mostra só os fatos do mês de hoje, um cartão por 
     const list = featured(d);
     const month = d.getMonth() + 1;
     const ofMonth = ANNIVERSARIES.filter((a) => a.month === month);
-    if (list.length < 1 || list.length > 12) problems.push(`${d.toDateString()}: ${list.length} destaques`);
+    if (list.length < 4 || list.length > 12) problems.push(`${d.toDateString()}: ${list.length} destaques`);
     if (list.flatMap((f) => f.events).length !== ofMonth.length || list.some((f) => f.month !== month || f.events.some((e) => e.month !== month))) problems.push(`${d.toDateString()}: tem fato de outro mês ou falta um do mês`);
     if (new Set(list.map((f) => f.day)).size !== list.length) problems.push(`${d.toDateString()}: o mesmo dia aparece em dois cartões`);
     if (ofMonth.some((a) => a.day === d.getDate()) && list[0].delta !== 0) problems.push(`${d.toDateString()}: o dia de hoje não vem primeiro`);
@@ -133,7 +139,7 @@ test('datas: os fatos do mesmo dia viram um compilado (15 de novembro: São Paul
   // todo dia com mais de um fato tem o compilado, e os dias sem repetição ficam com um só
   const grupos = groupByDay(ANNIVERSARIES);
   expect(grupos.flatMap((g) => g.events).length).toBe(ANNIVERSARIES.length);
-  expect(grupos.filter((g) => g.events.length > 1).length).toBeGreaterThanOrEqual(2);
+  expect(grupos.filter((g) => g.events.length > 1).length).toBeGreaterThanOrEqual(9);
   for (const g of grupos) {
     expect(g.events.map((e) => e.year), `${g.day}/${g.month}`).toEqual([...g.events.map((e) => e.year)].sort((a, b) => a - b));
     expect(new Set(g.events.map((e) => `${e.month}-${e.day}`)).size).toBe(1);

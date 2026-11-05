@@ -18,6 +18,8 @@ A árvore das Assembleias de Deus: de Belém (1911) às convenções de hoje. A 
 
 ## De Belém ao Rio
 
+![Gunnar Vingren](imagens/gunnar-vingren.jpg "Gunnar Vingren em 1908. Foto de autor desconhecido, em domínio público (Wikimedia Commons).")
+
 Tudo começou em Belém, com **Gunnar Vingren** e **Daniel Berg**, em 1911 (veja [Daniel Berg e Gunnar Vingren](/artigo/daniel-berg-e-gunnar-vingren)). Nos anos seguintes, a obra se espalhou pelo Norte e pelo Nordeste.
 
 No **Rio de Janeiro**, a Assembleia de Deus se estabeleceu em **1922**, no bairro de **São Cristóvão**, e ganhou força com a chegada de Gunnar e **Frida Vingren** em 1924. Vingren pastoreou São Cristóvão até 1932, e Frida dirigia cultos, a Escola Dominical e o trabalho social (veja *Frida Vingren*). Foi nesse primeiro grupo do Rio que começou a congregar o jovem gaúcho Paulo Leivas Macalão, que depois abriria o trabalho em Madureira.
@@ -25,8 +27,6 @@ No **Rio de Janeiro**, a Assembleia de Deus se estabeleceu em **1922**, no bairr
 :::leia frida-vingren
 A pioneira que pregava e ensinava em São Cristóvão.
 :::
-
-![Gunnar Vingren](imagens/gunnar-vingren.jpg "Gunnar Vingren em 1908. Foto de autor desconhecido, em domínio público (Wikimedia Commons).")
 
 ## A Organização: A Convenção Geral (1930)
 

@@ -1,7 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 import { AudioEntry, AudioIndex, textKey } from './audio-text';
 import { splitForSpeech } from './speech-split';
-import { narrationVoice, portugueseVoices, warmUpVoices } from './voice';
+import { narrationVoice, SPEECH_TAGS, voicesFor, warmUpVoices } from './voice';
 
 /** Um trecho para ouvir: o texto e, se houver, o elemento da tela que ele destaca enquanto é lido. */
 export interface ListenItem {
@@ -19,6 +19,9 @@ export const LISTEN_RATES = [0.8, 0.92, 1, 1.15];
 
 const PAUSE_BETWEEN_ITEMS = 450;
 
+/** Nome da língua, para o aviso de que o aparelho não tem voz nela. */
+const LANGUAGE_NAMES: Record<string, string> = { pt: 'português', es: 'espanhol', en: 'inglês', fr: 'francês', de: 'alemão', ru: 'russo' };
+
 /**
  * "Ouvir": lê em voz alta, trecho por trecho, um capítulo da Bíblia ou uma história. Usa a melhor voz brasileira
  * do aparelho (voice.ts), um pouco mais devagar, com uma pausa entre os trechos. Destaca na tela o que está sendo lido.
@@ -34,9 +37,11 @@ export class ListenService {
   readonly recordedVoice = signal('');
   readonly mode = signal<ListenMode>('speech');
   readonly rate = signal(this.savedRate());
-  /** Vozes em português deste aparelho; a lista chega depois no Chrome e no Edge. */
+  /** Língua da leitura ("pt" por padrão; "es", "en", "fr", "de", "ru" nos jornais de Novas Vozes). */
+  readonly lang = signal('pt');
+  /** Vozes deste aparelho na língua da leitura; a lista chega depois no Chrome e no Edge. */
   readonly voices = signal<SpeechSynthesisVoice[]>([]);
-  /** Voz escolhida pela pessoa (voiceURI); vazio = a melhor do aparelho. */
+  /** Voz escolhida pela pessoa (voiceURI) para esta língua; vazio = a melhor do aparelho. */
   readonly voiceUri = signal(this.saved('listenVoice') ?? '');
 
   /** Por que a voz não tocou (sem voz no aparelho, bloqueio do navegador…); vazio quando está tudo bem. */
@@ -55,18 +60,19 @@ export class ListenService {
   constructor() {
     if (this.supported) {
       warmUpVoices();
-      const refresh = () => this.voices.set(portugueseVoices());
+      const refresh = () => this.voices.set(voicesFor(this.lang()));
       refresh();
       speechSynthesis.addEventListener?.('voiceschanged', refresh);
     }
   }
 
   /** Começa a ler. `onEnd` é chamado quando o último trecho termina (a Bíblia usa para seguir ao próximo capítulo). */
-  start(title: string, items: ListenItem[], options: { from?: number; onEnd?: () => void } = {}): void {
+  start(title: string, items: ListenItem[], options: { from?: number; onEnd?: () => void; lang?: string } = {}): void {
     if (!this.supported || !items.length) return;
     this.stopAudio();
     this.mode.set('speech');
     this.halt();
+    this.setLang(options.lang ?? 'pt');
     this.title.set(title);
     this.items.set(items);
     this.onEnd = options.onEnd;
@@ -227,10 +233,21 @@ export class ListenService {
     else if (this.state() === 'playing') this.speakItem(this.index());
   }
 
+  /** A voz escolhida fica guardada por língua: a do português tem a chave de sempre, as outras levam o código. */
+  private voiceKey(lang = this.lang()): string {
+    return lang === 'pt' ? 'listenVoice' : `listenVoice.${lang}`;
+  }
+
+  private setLang(lang: string): void {
+    this.lang.set(lang);
+    this.voiceUri.set(this.saved(this.voiceKey(lang)) ?? '');
+    this.voices.set(voicesFor(lang));
+  }
+
   setVoice(uri: string): void {
     this.voiceUri.set(uri);
     try {
-      localStorage.setItem('listenVoice', uri);
+      localStorage.setItem(this.voiceKey(), uri);
     } catch { /* vale só nesta sessão */ }
     if (this.state() === 'playing') this.speakItem(this.index());
   }
@@ -261,8 +278,8 @@ export class ListenService {
         return;
       }
       const utterance = new SpeechSynthesisUtterance(chunks[n]);
-      utterance.lang = 'pt-BR';
-      utterance.voice = this.voices().find((v) => v.voiceURI === this.voiceUri()) ?? narrationVoice();
+      utterance.lang = SPEECH_TAGS[this.lang()] ?? 'pt-BR';
+      utterance.voice = this.voices().find((v) => v.voiceURI === this.voiceUri()) ?? narrationVoice(this.lang());
       utterance.rate = this.rate();
       utterance.pitch = 0.95;
       utterance.onstart = () => (started = true);
@@ -288,7 +305,7 @@ export class ListenService {
     this.state.set('paused');
     this.problem.set(message ?? (this.voices().length
       ? 'A voz não respondeu. Escolha outra voz abaixo ou tente de novo.'
-      : 'Este navegador não tem voz em português. Abra no Edge, no computador, ou no Chrome do celular.'));
+      : `Este navegador não tem voz em ${LANGUAGE_NAMES[this.lang()] ?? 'português'}. Abra no Edge, no computador, ou no Chrome do celular.`));
   }
 
   private finishItem(run: number): void {

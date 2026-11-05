@@ -32,7 +32,7 @@ Jefté conhecia a história de Israel e a conta com precisão aos reis de Amom (
 
 ## O Fogo Também Apagou nos Tempos dos Reis?
 
-Apagou, e várias vezes. Os avivamentos de Judá quase sempre terminam com um nome na sequência:
+Apagou, e várias vezes. Os avivamentos de Judá, que o estudo *Os Avivamentos na Bíblia* conta, quase sempre terminam com um nome na sequência:
 
 - **Joás.** “Fez o que era reto aos olhos do Senhor por todos os dias do sacerdote Jeoiada” ([[2Cr 24.2]]). Quando Jeoiada morreu, os príncipes de Judá vieram, o rei lhes deu ouvidos, e “abandonando a casa do Senhor, Deus de seus pais, serviram aos aserins e aos ídolos” ([[2Cr 24.17-18]]). O rei que foi salvo e criado na casa do Senhor se desviou quando o mestre morreu.
 - **Manassés.** Ezequias derrubou os altos, e o filho, Manassés, “tornou a edificar os altos que Ezequias, seu pai, tinha destruído” ([[2Rs 21.3]]); reinou 55 anos e fez o povo fazer “pior do que as nações” ([[2Rs 21.9]]). Mais tarde, angustiado, Manassés se humilhou, orou, e “conheceu […] que o Senhor era Deus” ([[2Cr 33.12-13]]): a volta é sempre possível. Mas o filho dele, Amom, voltou aos ídolos ([[2Cr 33.21-23]]).

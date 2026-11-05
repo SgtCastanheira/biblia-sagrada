@@ -35,9 +35,9 @@ E procurai a paz da cidade… e orai por ela ao Senhor: porque na sua paz vós t
 Num ilhéu perto da praia, os portugueses armam um altar. Frei Henrique de Coimbra celebra a primeira missa em terras do Brasil, e os indígenas, da praia, observam.
 :::
 
-A cena está na **carta de Pero Vaz de Caminha**, o escrivão da esquadra de Pedro Álvares Cabral, escrita ao rei de Portugal. A missa foi celebrada no domingo, 26 de abril de 1500, e no dia 1º de maio foi erguida uma grande cruz de madeira, com outra missa. Desde o primeiro dia, a cruz e a coroa chegaram juntas.
-
 ![A Primeira Missa no Brasil, de Victor Meirelles](imagens/primeira-missa-meirelles.jpg "A Primeira Missa no Brasil, de Victor Meirelles (1860), no Museu Nacional de Belas Artes. O pintor imaginou a cena 360 anos depois, a partir da carta de Caminha. Domínio público (Wikimedia Commons).") {larga}
+
+A cena está na **carta de Pero Vaz de Caminha**, o escrivão da esquadra de Pedro Álvares Cabral, escrita ao rei de Portugal. A missa foi celebrada no domingo, 26 de abril de 1500, e no dia 1º de maio foi erguida uma grande cruz de madeira, com outra missa. Desde o primeiro dia, a cruz e a coroa chegaram juntas.
 
 ## O Padroado: A Igreja Dentro do Estado
 
@@ -105,9 +105,9 @@ A ideia de uma capital no interior é antiga: a primeira Constituição da Repú
 Ainda não há cidade: só o cerrado e os primeiros canteiros de obras. Diante de uma grande cruz, é celebrada a primeira missa de Brasília.
 :::
 
-A missa foi celebrada pelo cardeal-arcebispo de São Paulo, Dom Carlos Carmelo de Vasconcelos Motta, segundo a revista da Novacap, a empresa que construía a cidade. O presidente **Juscelino Kubitschek** inaugurou Brasília em **21 de abril de 1960**. Milhares de trabalhadores, os **candangos**, vieram de todo o país — e com eles vieram as igrejas de todas as denominações.
-
 ![Construção do Congresso Nacional, em Brasília, 1959](imagens/construcao-brasilia-1959.jpg "A construção do Congresso Nacional, em Brasília, em 1959. Arquivo Nacional, Fundo Agência Nacional. Domínio público (Wikimedia Commons).")
+
+A missa foi celebrada pelo cardeal-arcebispo de São Paulo, Dom Carlos Carmelo de Vasconcelos Motta, segundo a revista da Novacap, a empresa que construía a cidade. O presidente **Juscelino Kubitschek** inaugurou Brasília em **21 de abril de 1960**. Milhares de trabalhadores, os **candangos**, vieram de todo o país — e com eles vieram as igrejas de todas as denominações.
 
 ## As Novas Fronteiras e as Igrejas Evangélicas
 

@@ -22,6 +22,38 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'da-volta-do-exilio-a-jesus',
+    date: '5 de novembro de 2026',
+    title: 'Da Volta do Exílio a Jesus, Flávio Josefo e os Macabeus',
+    items: [
+      { icon: 'swap_horiz', title: 'Da Volta do Exílio a Jesus', text: 'Uma só história, em ordem: Zorobabel, Esdras e Neemias, os Macabeus, os fariseus e os outros grupos (e se existem hoje) e o que foi feito do trono de Davi até João Batista e Jesus. Reúne duas histórias antigas numa só.', link: '/artigo/da-volta-do-exilio-a-jesus' },
+      { icon: 'history_edu', title: 'Flávio Josefo', text: 'O general judeu que virou historiador de Roma: quem foi, o que escreveu e o que os seus livros contam sobre Herodes, Pilatos, João Batista e Tiago.', link: '/artigo/flavio-josefo' },
+      { icon: 'menu_book', title: 'Os Livros dos Macabeus', text: 'Primeiro e Segundo Macabeus para ler como livros, capítulo a capítulo: a revolta, os mártires e a festa da Dedicação.', link: '/artigo/livros-dos-macabeus' },
+      { icon: 'search', title: 'Busca mais certeira', text: 'Quem pesquisa uma expressão, como “Coreia do Norte”, vê primeiro os estudos que trazem a expressão inteira, e não todos os que citam uma das palavras.', link: '/historia', tip: 'Campo de pesquisa no alto da História.' },
+    ],
+  },
+  {
+    id: 'compartilhar-imagem',
+    date: '4 de novembro de 2026',
+    title: 'Imagens para Compartilhar e Datas da História',
+    items: [
+      { icon: 'menu_book', title: 'A Bíblia está no seu celular, mas está em você?', text: 'Um estudo direto: ter acesso à Palavra não é tê-la no coração. Abre com duas frases, uma delas alterada: qual é a verdadeira? Conta o que Lutero, Tyndale e outros pagaram para o povo poder ler a Bíblia. Um texto digital muda sem ninguém ver, o tentador citou a Bíblia pela metade, e um cego não guia outro cego. Traz um plano de doze semanas para decorar. Traz a cena de Atos 8, em que o etíope lia Isaías e não entendia (e a Bíblia de papel, não só a do celular), o que Deus disse e o que a serpente disse lado a lado, e as duas leituras de Lucas 23.43. Também foram corrigidos sete erros de digitação no texto da Almeida do app.', link: '/artigo/a-palavra-no-coracao' },
+      { icon: 'event', title: 'Datas da História na tela inicial', text: 'O que aconteceu na história neste dia, com foto: em 19 de novembro, por exemplo, a chegada de Daniel Berg e Gunnar Vingren a Belém, em 1910. Só aparecem as datas do mês, e a lista se renova a cada mês. São 90 datas, da Reforma, com Lutero em Worms, até as igrejas do Brasil, a página das datas ganhou fotos maiores, com o crédito, os dias com vários fatos, como o 15 de novembro, viram um compilado, com uma imagem só para compartilhar, e cada data ganhou uma explicação simples, uma pergunta para despertar a curiosidade e uma foto (quando não há a do fato, uma foto ilustrativa do lugar ou da época). Os destaques passam sozinhos (dá para pausar) e mostram há quantos anos o fato aconteceu. Toque no botão de compartilhar para mandar a imagem da comemoração no WhatsApp ou no Instagram.', link: '/datas', tip: 'Em História › Contexto e Cultura › O Tempo: as datas do ano inteiro, mês a mês.' },
+      { icon: 'ios_share', title: 'Uma imagem para cada página', text: 'Toque em Compartilhar no alto de um estudo, personagem, profecia, tribo, mapa, hino ou curiosidade. O app faz uma imagem com o assunto, os tópicos e subtópicos, o nome Bíblia Sagrada, o endereço e um QR code que abre a página. Escolha o tamanho do Feed e do WhatsApp ou o dos Stories.', link: '/artigo/avivamento-da-coreia', tip: 'Na tela que abrir, escolha WhatsApp ou Instagram. Também dá para baixar a imagem.' },
+    ],
+  },
+  {
+    id: 'avivamentos-familias-e-coreia',
+    date: '4 de novembro de 2026',
+    title: 'Avivamentos na Bíblia, Famílias e a Coreia',
+    items: [
+      { icon: 'menu_book', title: 'Os avivamentos que a Bíblia conta', text: 'De Jacó em Betel e dos reis Asa, Ezequias e Josias ao tempo de Neemias, a Nínive, a Atos e à Macedônia: o que cada um começou, por quê, por meio de quem e como terminou.', link: '/artigo/avivamentos-na-biblia' },
+      { icon: 'local_fire_department', title: 'As marcas de um avivamento', text: 'Dez marcas que se repetem, os cinco sinais de Jonathan Edwards para testar uma obra e o que quase sempre atrapalha.', link: '/artigo/marcas-de-um-avivamento' },
+      { icon: 'groups', title: 'A geração que não conheceu o Senhor', text: 'Por que o fogo esfria na geração seguinte, em três partes: o padrão, de Josué e Jefté aos nossos avivamentos; a casa, com o que o pai e a mãe precisam voltar a ser e um culto no lar de vinte minutos; e a igreja, com a diferença entre doutrina, regra e costume e sete perguntas para conhecer a sua.', link: '/artigo/a-geracao-que-nao-conheceu-o-senhor' },
+      { icon: 'flag', title: 'A história da Coreia, completa', text: 'O estudo do avivamento da Coreia ganhou o que veio depois: a ocupação japonesa, a divisão e a guerra, os golpes de Estado de 1961 e 1979, Gwangju, 1987, a lei marcial de 2024 e o paralelo com a Coreia do Norte (a dinastia Kim, os expurgos e a igreja controlada pelo Estado), e o que a igreja fez em cada um.', link: '/artigo/avivamento-da-coreia' },
+    ],
+  },
+  {
     id: 'a-geracao',
     date: '4 de novembro de 2026',
     title: 'A Geração que Não Conheceu o Senhor',
@@ -37,6 +69,15 @@ export const RELEASES: Release[] = [
     items: [
       { icon: 'event', title: 'Datas da História na tela inicial', text: 'O que aconteceu na história no dia de hoje, com foto: em 19 de novembro, por exemplo, a chegada de Daniel Berg e Gunnar Vingren a Belém, em 1910. A tela inicial mostra só as datas do mês, e a lista se renova a cada mês. São 72 datas, da Reforma, com Lutero em Worms, até as igrejas do Brasil. Cada uma tem uma explicação simples, uma pergunta para despertar a curiosidade e uma foto (quando não há a do fato, uma foto ilustrativa do lugar ou da época). Os dias com vários fatos, como o 15 de novembro, viram um compilado. Toque no botão de compartilhar para mandar a imagem da comemoração no WhatsApp ou no Instagram.', link: '/datas', tip: 'Em História › Contexto e Cultura › O Tempo: as datas do ano inteiro, mês a mês.' },
       { icon: 'menu_book', title: 'A Bíblia está no seu celular, mas está em você?', text: 'Um estudo direto: ter acesso à Palavra não é tê-la no coração. Abre com duas frases, uma delas alterada: qual é a verdadeira? Conta o que Lutero, Tyndale e outros pagaram para o povo poder ler a Bíblia, a cena de Atos 8 (o etíope tinha o livro e precisava de quem lhe ensinasse), a Bíblia de papel junto com a do celular, o que Deus disse e o que a serpente disse lado a lado, e as duas leituras de Lucas 23.43. Traz um plano de doze semanas para decorar. Também foram corrigidos sete erros de digitação no texto da Almeida do app.', link: '/artigo/a-palavra-no-coracao' },
+    ],
+  },
+  {
+    id: 'historia-da-igreja-miller',
+    date: '3 de novembro de 2026',
+    title: 'Dois Livros de História da Igreja na Estante',
+    items: [
+      { icon: 'history_edu', title: 'A História da Igreja, de Andrew Miller', text: 'O livro inteiro, dos 32 capítulos, em dez partes: de Pentecostes e Paulo às perseguições, a Constantino, a Carlos Magno, às Cruzadas, aos valdenses, à Inquisição e a Wycliffe, Hus e Gutenberg. Cada parte traz o que o autor conta, o que ele interpreta e o que outro historiador confirma.', link: '/artigo/historia-da-igreja-andrew-miller', tip: 'Também em História › História da Igreja › Livros de História da Igreja.' },
+      { icon: 'menu_book', title: 'A História da Igreja, de Everett Ferguson', text: 'O volume 1, dos dias de Cristo à pré-Reforma, em dez partes e 24 capítulos, escrito em palavras próprias: perseguições e cânon, os pais da igreja, Constantino, os monges, o papado, Carlos Magno, Cluny, as Cruzadas, a Escolástica e o fim da Idade Média. Cada parte termina cruzando pontos com o Miller.', link: '/artigo/historia-da-igreja-everett-ferguson' },
     ],
   },
   {
@@ -165,10 +206,10 @@ export const RELEASES: Release[] = [
     items: [
       { icon: 'checklist', title: 'EBD: as 13 lições de Adultos, em Deuteronômio', text: 'Para o professor, em cada lição: lembretes do que preparar, como abrir a aula, curiosidades, contexto, dinâmicas e brincadeiras passo a passo, perguntas e as ligações com os estudos do app.', link: '/ebd/apoio/adultos', tip: 'Em Ensino › EBD › Apoio ao professor.' },
       { icon: 'palette', title: 'Novas cores e luz quente', text: 'Noite quente, Floresta, Névoa e o modo Automático, além de um controle de luz quente que tira o azul da tela. Toque em Aparência da leitura.', link: '/ler/JHN/3', tip: 'No alto do capítulo, o ícone de letras.' },
-      { icon: 'public', title: 'Mapa entre os Testamentos', text: 'De Alexandre a Herodes, época por época, com Israel em destaque no meio dos impérios e as referências de Daniel.', link: '/artigo/entre-os-testamentos' },
+      { icon: 'public', title: 'Mapa entre os Testamentos', text: 'De Alexandre a Herodes, época por época, com Israel em destaque no meio dos impérios e as referências de Daniel.', link: '/artigo/da-volta-do-exilio-a-jesus' },
       { icon: 'translate', title: 'A Bíblia em espanhol e em alemão', text: 'Reina-Valera 1909, Versión Biblia Libre, Nueva Biblia Viva e outras em espanhol; Lutero 1912, Elberfelder e Schlachter em alemão. Todas funcionam sem internet e podem ser comparadas com a Almeida.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto do capítulo.' },
       { icon: 'menu_book', title: 'A Septuaginta, em detalhe', text: 'A lenda dos 72 sábios, o que se sabe de verdade, a ordem e os nomes dos livros da sua Bíblia, e por que o Novo Testamento cita o Antigo do jeito que cita.', link: '/artigo/septuaginta' },
-      { icon: 'swap_horiz', title: 'Os 400 Anos entre os Testamentos', text: 'De Malaquias a Mateus: Alexandre, os Macabeus, a chegada dos romanos, fariseus e saduceus, as sinagogas e a esperança do Messias. A história que explica o mundo em que Jesus nasceu.', link: '/artigo/entre-os-testamentos', tip: 'Também aparece ao ler Malaquias 4 e Mateus 1.' },
+      { icon: 'swap_horiz', title: 'Os 400 Anos entre os Testamentos', text: 'De Malaquias a Mateus: Alexandre, os Macabeus, a chegada dos romanos, fariseus e saduceus, as sinagogas e a esperança do Messias. A história que explica o mundo em que Jesus nasceu.', link: '/artigo/da-volta-do-exilio-a-jesus', tip: 'Também aparece ao ler Malaquias 4 e Mateus 1.' },
     ],
   },
   {

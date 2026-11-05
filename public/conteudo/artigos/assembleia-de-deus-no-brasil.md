@@ -1,78 +1,148 @@
-Em 1911, era um pequeno grupo de irmãos, excluídos de uma igreja batista de Belém, com dois missionários suecos. Pelo censo do IBGE de 2010, as Assembleias de Deus reuniam mais de 12 milhões de brasileiros. Esta é a história de como a igreja atravessou o país, de como os obreiros eram separados em cada época, de como se tratavam o casamento dos ministros, os costumes, o ensino e o papel das mulheres — e de como, com o tempo, uma só igreja se tornou uma grande família de convenções.
+Em 1911, em Belém do Pará, um pequeno grupo de irmãos, desligado de uma igreja batista, começou a se reunir numa casa. Pelo censo do IBGE de 2010, as Assembleias de Deus reuniam mais de 12 milhões de brasileiros. Esta é a história de como a igreja atravessou o país, de como os obreiros eram separados em cada época, de como se tratavam o casamento dos ministros, os costumes, o ensino e o papel das mulheres — e de como, com o tempo, uma só igreja se tornou uma grande família de convenções.
 
 :::pessoas
 - Gunnar Vingren | pastor e organizador | imagens/gunnar-vingren.jpg
 - Daniel Berg | fundidor e evangelista
 - Frida Vingren | pregadora e professora | imagens/frida-vingren.jpg
+- Erik Alfred Nelson | missionário batista, fundador da igreja batista de Belém
 - Celina de Albuquerque | a primeira batizada no Espírito em Belém
 - Isidoro Filho | um dos primeiros pastores brasileiros (1912)
 - Absalão Piano | um dos primeiros pastores brasileiros (1913)
 - Samuel Nyström | missionário sueco, líder depois de Vingren
 :::
 
-## De Belém para o Brasil
+## A Origem em Belém: Os Batistas e a Exclusão de 1911
 
-:::cena Belém do Pará · 1911
-O grupo excluído da igreja batista se reúne em casas. Muitos dos que se convertem vieram de longe: nordestinos que tinham subido à Amazônia em busca de trabalho.
+Gunnar Vingren e Daniel Berg não chegaram a Belém como adversários dos batistas. Eram batistas, foram recebidos por batistas e viveram sete meses dentro da Igreja Batista de Belém. Em 13 de junho de 1911, porém, foram excluídos dela junto com um grupo de irmãos, e cinco dias depois nascia a igreja que viria a ser a Assembleia de Deus. Para entender como isso aconteceu, é preciso conhecer os dois lados: quem eram os batistas, em que acreditavam, como chegaram ao Pará e o que exatamente os separou dos dois suecos.
+
+### De Onde Vieram os Batistas?
+
+Os batistas nasceram da Reforma inglesa. Em 1609, um grupo de separatistas ingleses refugiados em Amsterdã, liderado por John Smyth e Thomas Helwys, concluiu que o batismo é para quem crê e formou uma igreja de crentes batizados; em 1612, Helwys fundou a primeira igreja batista em solo inglês. O mesmo estudo conta que ele defendeu a liberdade religiosa para todos e morreu na prisão. Aquele nascimento está contado em [A Reforma Inglesa e os Puritanos](/artigo/reforma-inglesa), e as ideias que os batistas herdaram dos anabatistas aparecem em [Zuínglio, Calvino e os Anabatistas](/artigo/reformadores).
+
+Daí o movimento atravessou o Atlântico. Nos Estados Unidos, os batistas do Sul se organizaram em convenção em 1845 e passaram a enviar missionários pelo mundo. No Brasil, as primeiras igrejas foram de imigrantes americanos, como a de Santa Bárbara d’Oeste, em 1871. A primeira igreja batista de língua portuguesa foi organizada em Salvador, em 15 de outubro de 1882, por missionários enviados pela Junta de Missões Estrangeiras, de Richmond. Em 1907, já com 83 igrejas e cerca de 4.200 membros, os batistas brasileiros formaram em Salvador a sua Convenção.
+
+### No que os Batistas Acreditavam?
+
+Em poucas palavras, o jeito batista de ser igreja repousava em algumas convicções que atravessam toda a sua história:
+
+- **A Bíblia como autoridade.** O que a Escritura ensina vale mais que a tradição e mais que o cargo de quem ensina.
+- **Salvação pela graça mediante a fé.** A pessoa é convertida pessoalmente, e não por herança ou por rito.
+- **Batismo só de crentes, por imersão.** Quem é batizado já professou a fé, e o batismo e a ceia são as duas únicas ordenanças.
+- **A igreja local como assembleia de crentes.** Cada igreja decide por si, em reunião de seus membros, quem recebe, quem disciplina e quem exclui. Essa autonomia vai pesar no que aconteceu em Belém.
+- **Todos os crentes são sacerdotes, e a consciência é livre.** Daí a defesa da liberdade religiosa e da separação entre a igreja e o Estado.
+- **Missões.** O mandato de [[Mt 28.19-20]] os levou a enviar missionários ao Brasil.
+
+Sobre o Espírito Santo, o ensino batista da época dizia, de modo geral, que ele passa a habitar em cada crente no momento da conversão. Em muitas igrejas se entendia que os dons extraordinários, como falar em línguas, tinham pertencido aos tempos dos apóstolos. É um ponto de partida decisivo, porque era justamente isso que os dois suecos viriam a contestar.
+
+### Como os Batistas Chegaram a Belém?
+
+A igreja de Belém tem uma história própria. **Erik Alfred Nelson** nasceu em Örebro, na Suécia, em 17 de dezembro de 1862, emigrou para os Estados Unidos e chegou ao Pará em 1891, vendendo Bíblias e pregando em português. Em 1897 foi nomeado missionário pela Junta de Missões Estrangeiras, e em **5 de fevereiro de 1897** organizou a **Primeira Igreja Batista de Belém**, a primeira da Amazônia. De barco e de canoa, fundou depois muitas congregações pela região, e ficou conhecido como o “Apóstolo da Amazônia”. Ele viveu no Pará até 1939.
+
+Nelson viajava muito. Por isso a congregação de Belém ficava, boa parte do tempo, nas mãos de outros líderes, e alguns relatos citam **Raimundo Nobre** como quem a conduzia. As fontes não concordam sobre os papéis de cada um nesses meses (veja o último tópico).
+
+### Por que os Dois Suecos Foram Bem Recebidos?
+
+Vingren e Berg foram acolhidos porque eram dos seus. **Gunnar Vingren** estudou em Chicago no seminário batista sueco e, em 1909, tornou-se pastor batista em Michigan. **Daniel Berg** era filho de pais batistas, batizado na Igreja Batista de Ranum, na Suécia. Em Nelson, que também era sueco, encontravam um conterrâneo na mesma fé. Quando desembarcaram, em **19 de novembro de 1910**, sem falar português e sem sustento de missão alguma, foram recebidos pela igreja batista e hospedados no porão da casa de um ministro batista. Berg empregou-se como fundidor e pagava as aulas de português de Vingren, e os dois frequentavam a igreja.
+
+Eles tampouco chegaram com a ideia de fundar outra denominação. Em Chicago, em 1909, Vingren recebera o batismo no Espírito Santo dentro de uma igreja batista, que se dividiu por causa disso; em South Bend, em 1910, a igreja batista sueca que passou a pastorear aceitou a experiência por inteiro. A vida deles de Chicago a Belém está em [Daniel Berg e Gunnar Vingren](/artigo/daniel-berg-e-gunnar-vingren). O que traziam a Belém era a convicção de que a promessa de [[At 2.38-39]] valia para os crentes de hoje, e queriam partilhá-la com os irmãos que os acolheram.
+
+### O que Aconteceu em Sete Meses?
+
+Segundo os relatos, Vingren foi convidado a dirigir reuniões de oração na igreja. Nesses cultos, quando o pastor estava ausente, ele e Berg pregavam e ensinavam sobre o batismo no Espírito Santo e sobre a cura divina. O ambiente esquentou quando duas mulheres receberam o batismo no Espírito. Celina de Albuquerque, membro da igreja, foi a primeira; o relato do Pará dá o dia **2 de junho de 1911**, numa casa da Cidade Velha. Depois dos cultos, alguns membros da igreja iam procurar os dois no quarto onde dormiam.
+
+:::cena Belém · junho de 1911
+Depois de sete meses de reuniões de oração, duas mulheres da igreja batista falam em outras línguas. Alguns irmãos procuram os dois suecos no quarto onde dormem. Em poucos dias, a igreja decide.
 :::
 
-A igreja nasceu em Belém em **18 de junho de 1911**, com o nome de Missão da Fé Apostólica, e passou a se chamar **Assembleia de Deus** em 1918, por sugestão de Gunnar Vingren. Daí ela se espalhou de dois jeitos: pelos **missionários enviados** e, principalmente, pelos **crentes que migravam**. Quem se convertia em Belém levava a fé de volta para a sua terra ou para o lugar aonde ia trabalhar — como os cristãos de Jerusalém, que, “dispersos, iam por toda parte, anunciando a palavra” [[At 8.4]].
+### Por que Foram Excluídos?
 
-O mapa interativo mostra o caminho, etapa por etapa:
-- **Amazônia:** pelos rios, a mensagem chegou a **Manaus** em 1917, com o irmão Severino Moreno de Araújo, vindo de Belém; a igreja foi organizada em 1º de janeiro de 1918 pelos missionários Samuel e Lina Nyström.
-- **Nordeste:** por volta de **1914** começaram os trabalhos no **Ceará**, na **Paraíba** e em **Alagoas**. As histórias locais lembram nomes como a irmã Maria Nazareth, no Ceará, e Manoel Francisco Dubu, na Paraíba. No **Recife**, Adriano Nobre foi enviado em 1916, e os missionários Joel e Signe Carlson chegaram em 1918 — as fontes divergem sobre quem começou.
-- **Sudeste:** a igreja se estabeleceu no **Rio de Janeiro**, em São Cristóvão, em **1922**, e Daniel e Sara Berg fundaram a de **Vitória** (1922) e a de **Santos** (1924), a primeira do estado de São Paulo. Em 1924, Gunnar e Frida Vingren foram para o Rio, que se tornou o novo centro da obra.
-- **Sul e interior:** a partir dos grandes centros, a igreja chegou a Porto Alegre, a Belo Horizonte e, com as migrações, ao Centro-Oeste e a Brasília.
+O fato é que a igreja decidiu. Em **13 de junho de 1911**, os dois missionários e o grupo que aceitara a experiência foram **desligados** da Igreja Batista de Belém. Pelo modelo batista, a assembleia dos membros tem o poder de excluir quem ensina o que ela considera contrário à doutrina, e foi isso o que fez. Os relatos dizem que o pastor rejeitou o batismo no Espírito, com línguas, de modo categórico, e acusou os dois de ensinar falsa doutrina.
+
+O desacordo não era sobre a Bíblia, que os dois lados aceitavam, mas sobre como ler o livro de Atos:
+
+| Ponto | A igreja batista de Belém | Vingren, Berg e o grupo |
+|---|---|---|
+| O Espírito Santo | Recebido na conversão, sem uma segunda experiência | Recebido num batismo distinto, depois da conversão |
+| As línguas | Dom que pertenceu aos tempos dos apóstolos | Sinal que acompanha o batismo, como em [[At 2.4]], [[At 10.44-46]] e [[At 19.6]] |
+| Quem decide | A assembleia dos membros, que podia excluir | Queriam continuar ensinando o que tinham vivido |
+
+Os relatos dizem ainda que Vingren e Berg pregavam também sobre a cura divina. Pesquisadores registram que, nos anos seguintes, líderes batistas chegaram a comparar os pentecostais com religiões mediúnicas e com feitiçaria.
+
+### O que Aconteceu Depois da Exclusão?
+
+Cinco dias depois, no domingo **18 de junho de 1911**, o grupo se reuniu na casa de **Celina e Henrique de Albuquerque** e formou a **Missão da Fé Apostólica**. Os dois suecos não tinham dinheiro nem apoio de missão; tinham um grupo pequeno, uma casa para reunir e a convicção de que a promessa era para eles. Em 1918, a igreja foi registrada em cartório com o nome de **Assembleia de Deus** (veja [Por que se Chama Assembleia de Deus?](/artigo/nome-assembleia-de-deus)). Dali a mensagem se espalhou pelo Pará e pelo Brasil, como contam as próximas seções.
+
+
+### Em que as Fontes Divergem?
+
+Quase tudo o que se conta vem do **diário de Vingren** e das **memórias de Berg**, escritos do lado dos excluídos; dos documentos da igreja batista de Belém restam menos vestígios. Por isso vale ler também os estudos acadêmicos. Os relatos divergem em alguns pontos, e é melhor dizer isso do que escolher em silêncio:
+
+- **Quantos foram excluídos.** A tradição da denominação conta dezoito membros, além dos dois missionários; há quem fale em treze, e outros em dezessete mais os missionários.
+- **Quem conduzia a igreja.** Alguns relatos dão a Erik Nelson o convite e a hospedagem, outros dão a Raimundo Nobre a condução da congregação e da exclusão, e há quem misture os dois homens de sobrenome Nelson. O que se sabe com segurança é que o fundador era Erik Nelson e que ele passava muito tempo longe.
+- **As datas.** O dia 13 de junho (a exclusão) e o 18 de junho (a fundação) são os mais citados. Alguns textos dão só “junho de 1911”, e o batismo de Celina aparece como “junho” em uns e como 2 de junho em outros.
+- **O nome.** A forma “Missão da Fé Apostólica” é a mais usada; outras fontes escrevem “Missão de Fé Apostólica”.
+
+## De Belém para o Brasil
+
+:::cena Belém · 18 de junho de 1911
+Num domingo, na casa de Celina e Henrique de Albuquerque, o grupo desligado da igreja batista se reúne pela primeira vez. Muitos dos que se convertem depois vieram de longe: nordestinos que tinham subido à Amazônia em busca de trabalho.
+:::
+
+Dali a igreja se espalhou de dois jeitos: pelos **missionários enviados** e, principalmente, pelos **crentes que migravam**. Quem se convertia em Belém levava a fé de volta para a sua terra ou para o lugar aonde ia trabalhar — como os cristãos de Jerusalém, que, “dispersos, iam por toda parte, anunciando a palavra” [[At 8.4]]. A seção seguinte conta esse caminho **em ordem de ano**; o mapa interativo mostra o mesmo caminho, etapa por etapa.
 
 :::nota
 **O jeito sueco-nordestino.** O sociólogo Paul Freston descreve o jeito das primeiras Assembleias de Deus como um “ethos sueco-nordestino”: a piedade simples e rigorosa dos missionários suecos misturada com a cultura patriarcal do Nordeste, de onde vinha grande parte dos membros. Isso marcou a igreja por décadas: a liturgia, os costumes e a liderança.
 :::
 
-## Estado por Estado
+## Ano a Ano, Estado por Estado
 
-[Abra a história completa de cada estado](/assembleia-de-deus) e veja tudo [ano a ano na linha do tempo](/assembleia-de-deus/linha-do-tempo) — escolha o estado e veja no mapa de onde saíram os pioneiros e como a igreja foi construída ali. Abaixo, o resumo.
+[Abra a história completa de cada estado](/assembleia-de-deus) e veja tudo [ano a ano na linha do tempo](/assembleia-de-deus/linha-do-tempo) — escolha o estado e veja no mapa de onde saíram os pioneiros e como a igreja foi construída ali. Abaixo, o resumo, **na ordem em que a igreja começou em cada lugar**; cada nome de estado leva à sua história.
 
 O jornal *Mensageiro da Paz* publicou a lista dos primeiros passos da igreja em cada estado, e as igrejas estaduais guardam as suas próprias histórias. Elas mostram um padrão: a maioria dos pioneiros **saiu de Belém** — missionários enviados, obreiros e, muitas vezes, crentes comuns que voltavam para a sua terra. As fontes nem sempre concordam; onde há divergência, isso aparece. No [mapa estado por estado](/mapas/assembleia-de-deus-estados), linhas douradas ligam a cidade de onde cada pessoa saiu à cidade aonde chegou.
 
-### Os que Vieram de Fora do Brasil
+### Quem Veio de Fora do Brasil
 - **Gunnar Vingren e Daniel Berg** (1910) e **Otto e Adina Nelson** (1914) vieram dos Estados Unidos, onde moravam.
-- **Samuel e Lina Nyström** (1916) e **Frida Strandberg** (1917) foram os primeiros missionários enviados oficialmente pela **Igreja Filadélfia de Estocolmo**, na Suécia. Depois vieram outros suecos, como **Joel e Signe Carlson** (1918) e **Gustav Nordlund**.
+- **Samuel e Lina Nyström** (1916) e **Frida Strandberg** (1917) foram os primeiros missionários enviados oficialmente pela **Igreja Filadélfia de Estocolmo**, na Suécia.
+- Depois vieram outros suecos, como **Joel e Signe Carlson** (1918) e **Gustav Nordlund**.
 
-### Norte
-- **Pará (1911):** em Belém, a igreja-mãe. Celina de Albuquerque era membro da Igreja Batista de Belém. Daniel Berg levou a mensagem a Soure e Mosqueiro (1911), Bragança (1912) e à Ilha de Marajó; **Clímaco Bueno Aza**, convertido em 1913, pregou ao longo da Estrada de Ferro Belém–Bragança.
-- **Roraima (1915):** **saiu de Belém** Cordolino Teixeira Bastos, que ali conheceu a fé pentecostal e foi com a família, onze pessoas, para a região do rio Branco (Boa Vista).
-- **Amapá (1916–1917):** **saiu de Belém** Clímaco Bueno Aza, que vendia Bíblias em Macapá; foi preso e teve as Bíblias queimadas. Em 27 de junho de 1917, José de Matos Caravella fundou a igreja, com seis pessoas — a primeira igreja evangélica do Amapá.
-- **Amazonas (1917–1918):** **saiu de Belém** Severino Moreno de Araújo, que chegou a Manaus em 1917; os Nyström organizaram a igreja em 1º de janeiro de 1918.
-- **Rondônia (1922):** Paul John Aenis pregou ao longo da Estrada de Ferro Madeira–Mamoré e em Porto Velho; em 1923 veio Elói Bispo de Sena.
-- **Acre (1932 e 1943):** Manoel Pirabas começou em Cruzeiro do Sul (1932), e Luís Firmino Câmara em Rio Branco (1943).
-- **Tocantins (1952):** Armando Chaves Cohen organizou a evangelização pelos rios Tocantins e Araguaia.
+### Até 1913: O Pará
+- **[Pará](/assembleia-de-deus/pa) (1911):** em Belém, a igreja-mãe. Daniel Berg levou a mensagem a Soure e Mosqueiro (1911), Bragança (1912) e à Ilha de Marajó; **Clímaco Bueno Aza**, convertido em 1913, pregou ao longo da Estrada de Ferro Belém–Bragança.
 
-### Nordeste
-- **Ceará (1914):** **saiu do Pará** Maria de Jesus Nazaré Araújo. Ela voltou sozinha, de navio, para a sua terra natal, **Uruburetama** (hoje Itapajé). Foi maltratada, teve a Bíblia jogada no chão e foi expulsa, mas foi acolhida por Raimundo de Salles Gomes e pelo genro, Vicente de Salles Bastos, que dirigiam uma congregação presbiteriana e aceitaram a mensagem pentecostal. Em 1922, Antonio Rêgo Barros começou em Fortaleza.
-- **Alagoas (1914):** **saíram de Belém** Gunnar Vingren e o missionário Otto Nelson, que pregaram em Maceió.
-- **Paraíba (1914 e 1920):** Manoel Francisco Dubu começou em **Campina Grande**; Francisco Félix e a esposa, em João Pessoa. As fontes não dizem de onde vieram.
-- **Pernambuco (1916):** **saiu de Belém** Adriano Nobre, obreiro e intérprete de Vingren, enviado ao Recife. Os Carlson chegaram em 1918.
-- **Rio Grande do Norte (1918):** **saiu do Recife** Adriano Nobre, que começou em Natal com pregadores de nomes desconhecidos. Em Natal se reuniram a reunião preparatória de 1929 e a primeira Convenção Geral, em 1930.
-- **Maranhão (1920–1921):** **saiu de Belém** Clímaco Bueno Aza. Partiu do porto em 3 de junho de 1920 e, depois de dois dias no mar, pregou de casa em casa em São Luís.
-- **Bahia (1926–1927):** Joaquina de Souza Carvalho começou em **Canavieiras**, no sul do estado; os primeiros batismos foram em 1927. Segundo um registro local, o missionário Otto Nelson consagrou Teodoro Santana como o primeiro pastor da igreja no estado.
-- **Piauí e Sergipe (1927):** Raimundo Prudente de Almeida começou em Teresina, e o sargento Ormínio em Aracaju.
+### De 1914 a 1916: Nordeste, Roraima e Amapá
+- **[Ceará](/assembleia-de-deus/ce) (1914):** **saiu de Belém** Maria de Jesus Nazaré Araújo, que voltou sozinha, de navio, para a sua terra, **Uruburetama** (hoje Itapajé). Em 1922, Antonio Rêgo Barros começou em Fortaleza.
+- **[Paraíba](/assembleia-de-deus/pb) (1914 e 1920):** Manoel Francisco do Bu começou em **Campina Grande**; Francisco Félix e a esposa, em João Pessoa. As fontes não dizem de onde vieram.
+- **[Alagoas](/assembleia-de-deus/al) (1915):** **saíram de Belém** Gunnar Vingren (maio) e o missionário Otto Nelson (agosto), que pregaram em Maceió.
+- **[Roraima](/assembleia-de-deus/rr) (1915):** **saiu de Belém** Cordolino Teixeira Bastos, que ali conheceu a fé pentecostal e foi com a família, onze pessoas, para a região do rio Branco (Boa Vista).
+- **[Pernambuco](/assembleia-de-deus/pe) (1916):** **saiu de Belém** Adriano Nobre, obreiro e intérprete de Vingren, enviado ao Recife; os Carlson chegaram em 1918.
+- **[Amapá](/assembleia-de-deus/ap) (1916–1917):** **saiu de Belém** Clímaco Bueno Aza, que vendia Bíblias em Macapá. Em 27 de junho de 1917, José de Matos Caravella fundou a igreja, com seis pessoas — a primeira igreja evangélica do Amapá.
 
-### Sudeste
-- **Rio de Janeiro (1920–1924):** **saíram do Pará** Gunnar Vingren, que visitou o Rio em 1920 e 1923, e “alguns crentes do Pará”, que chegaram em 1923. Em 1924, Vingren se mudou para o Rio com Frida.
-- **Espírito Santo (1922):** Galdino Sobrinho e a esposa, com Daniel e Sara Berg — que tinham voltado da Suécia em 1921 —, começaram em Vitória.
-- **São Paulo (1923–1924):** **saíram de Pernambuco** os crentes que começaram em Santos em 1923; Daniel Berg chegou em 1924 e, em 1927, foi para a capital.
-- **Minas Gerais (1927):** Clímaco Bueno Aza — o mesmo do Amapá e do Maranhão — começou em Belo Horizonte.
+### De 1917 a 1921: Amazonas, Rio Grande do Norte e Maranhão
+- **[Amazonas](/assembleia-de-deus/am) (1917–1918):** **saiu de Belém** Severino Moreno de Araújo, que chegou a Manaus em 1917; os Nyström organizaram a igreja em 1º de janeiro de 1918.
+- **[Rio Grande do Norte](/assembleia-de-deus/rn) (1918):** **saiu do Recife** Adriano Nobre, que começou em Natal com pregadores de nomes desconhecidos.
+- **[Maranhão](/assembleia-de-deus/ma) (1920–1922):** **saiu de Belém** Clímaco Bueno Aza, que partiu do porto em 3 de junho de 1920 e pregou de casa em casa em São Luís; o trabalho começou em 1921, e a igreja foi organizada em 15 de janeiro de 1922.
 
-### Sul
-- **Santa Catarina (1920 e 1931):** Gunnar Vingren pregou em Tubarão, Criciúma e Itajaí em 1920; em 1931, André Bernardino da Silva começou a igreja em Itajaí.
-- **Rio Grande do Sul (1924):** o missionário sueco Gustav Nordlund começou em Porto Alegre.
-- **Paraná (1928):** Bruno Skolimowski, um dos primeiros pastores separados pela igreja de Belém (1921), começou em Curitiba.
+### De 1922 a 1926: Rondônia, Sudeste, Sul e Bahia
+- **[Rondônia](/assembleia-de-deus/ro) (1922):** Paul John Aenis pregou ao longo da Estrada de Ferro Madeira–Mamoré e em Porto Velho; em 1923 veio Elói Bispo de Sena.
+- **[Espírito Santo](/assembleia-de-deus/es) (1922):** Galdino Sobrinho e a esposa, com Daniel e Sara Berg — que tinham voltado da Suécia em 1921 —, começaram em Vitória.
+- **[Rio de Janeiro](/assembleia-de-deus/rj) (1922–1924):** **saíram do Pará** “alguns crentes”, que se reuniram em São Cristóvão; Gunnar Vingren visitou o Rio em 1920 e 1923. A igreja foi oficializada em 22 de junho de 1924, e Vingren se mudou para lá com Frida, que fez do Rio o novo centro da obra.
+- **[São Paulo](/assembleia-de-deus/sp) (1924):** **saíram do Recife** os crentes que começaram em Santos (já em 1923, segundo uma lista); Daniel Berg organizou a igreja e, em 1927, foi para a capital.
+- **[Rio Grande do Sul](/assembleia-de-deus/rs) (1924):** o missionário sueco Gustav Nordlund começou em Porto Alegre.
+- **[Bahia](/assembleia-de-deus/ba) (1926–1927):** Joaquina de Souza Carvalho começou em **Canavieiras**, no sul do estado; os primeiros batismos foram em 1927.
 
-### Centro-Oeste
-- **Goiás (1936):** **saíram do Rio de Janeiro** crentes da igreja de Madureira, que começaram em Goiânia; o diácono Antônio Moreira, um pedreiro que trabalhava nas obras da nova capital, foi enviado para fundar a igreja.
-- **Mato Grosso (1936):** o pastor itinerante Eduardo Pablo Joerck foi o primeiro a pregar a mensagem pentecostal em Cuiabá, debaixo de oposição.
-- **Mato Grosso do Sul (1944):** Juvenal Roque de Andrade começou a igreja em Campo Grande — que, na época, ainda fazia parte de Mato Grosso (veja abaixo por que as datas divergem).
-- **Distrito Federal (1957–1959):** irmãos de vários estados chegaram em 1957 para trabalhar na construção de Brasília; a igreja foi fundada em Taguatinga, em maio de 1959.
+### De 1927 a 1936: Sergipe, Piauí, Minas, Paraná, Santa Catarina, Acre e Centro-Oeste
+- **[Sergipe](/assembleia-de-deus/se) (1927):** o sargento Ormínio começou em Aracaju.
+- **[Piauí](/assembleia-de-deus/pi) (1927):** Raimundo Prudente de Almeida começou em Teresina; a igreja da cidade foi organizada em 1936.
+- **[Minas Gerais](/assembleia-de-deus/mg) (1927):** Clímaco Bueno Aza — o mesmo do Amapá e do Maranhão — começou em Belo Horizonte.
+- **[Paraná](/assembleia-de-deus/pr) (1928):** Bruno Skolimowski, um dos primeiros pastores separados pela igreja de Belém (1921), começou em Curitiba.
+- **[Santa Catarina](/assembleia-de-deus/sc) (1931):** André Bernardino da Silva, convertido no Rio, começou a igreja em Itajaí; Vingren já pregara em Tubarão, Criciúma e Itajaí em 1920.
+- **[Acre](/assembleia-de-deus/ac) (1932 e 1943):** Manoel Pirabas começou em Cruzeiro do Sul, e Luís Firmino Câmara, em Rio Branco, em 1943.
+- **[Goiás](/assembleia-de-deus/go) (1936):** **saíram do Rio de Janeiro** crentes da igreja de Madureira, que começaram em Goiânia; o diácono Antônio Moreira, um pedreiro que trabalhava nas obras da nova capital, foi enviado para fundar a igreja.
+- **[Mato Grosso](/assembleia-de-deus/mt) (1936):** o pastor itinerante Eduardo Pablo Joerck foi o primeiro a pregar a mensagem pentecostal em Cuiabá, debaixo de oposição.
+
+### Depois de 1936: Mato Grosso do Sul, Tocantins e Distrito Federal
+- **[Mato Grosso do Sul](/assembleia-de-deus/ms) (1944):** Juvenal Roque de Andrade começou a igreja em Campo Grande — que, na época, ainda fazia parte de Mato Grosso (veja abaixo por que as datas divergem).
+- **[Tocantins](/assembleia-de-deus/to) (c. 1948):** o serviço de evangelização pelos rios Tocantins e Araguaia (SETA); uma fonte local diz que Armando Chaves Cohen o organizou em 1952.
+- **[Distrito Federal](/assembleia-de-deus/df) (1957–1959):** irmãos de vários estados chegaram em 1957 para trabalhar na construção de Brasília; a igreja foi fundada em Taguatinga, em maio de 1959.
 
 ### Quem Sofreu para a Igreja Chegar
 
@@ -115,9 +185,9 @@ Os próprios pioneiros mostram que, no começo, o casamento **não era condiçã
 
 | Pioneiro | Quando assumiu o ministério | Quando se casou |
 |---|---|---|
+| **Samuel Nyström** | Missionário enviado da Suécia | Chegou a Belém já casado, em 1916 |
 | **Gunnar Vingren** | Pastor nos EUA em 1909; veio solteiro ao Brasil (1910) | Com Frida, em Belém, em 1917 |
 | **Daniel Berg** | Evangelista e colportor, sem pastorear uma igreja | Com Sara, na Suécia, em 1920 |
-| **Samuel Nyström** | Missionário enviado da Suécia | Chegou a Belém já casado, em 1916 |
 | **Paulo Leivas Macalão** | Separado pastor em 1930 | Com Zélia Brito, em 1934 |
 
 Com o tempo, as igrejas passaram a dar mais peso às qualificações de [[1Tm 3.2-5]]: o obreiro deve ser “marido de uma só mulher” e governar “bem a sua própria casa (pois, se alguém não sabe governar a sua própria casa, como cuidará da igreja de Deus?)”. Hoje, em muitos ministérios, ser casado é um dos requisitos para a separação a cargos como presbítero, evangelista e pastor, junto com anos de membresia, bom testemunho, um curso de teologia e a aprovação da igreja. **Não há uma regra única:** os critérios variam de um ministério e de uma convenção para outra.
@@ -182,11 +252,14 @@ A própria denominação falava em cerca de 22 milhões de membros em 2021, soma
 ## Linha do Tempo
 
 :::tempo
+- 1897 | Belém | Erik Nelson organiza a Primeira Igreja Batista (5 de fevereiro)
 - 1910 | Belém | Chegam Gunnar Vingren e Daniel Berg (19 de novembro)
+- 1911 | Exclusão | O grupo é desligado da igreja batista (13 de junho)
 - 1911 | A igreja nasce | Missão da Fé Apostólica (18 de junho)
 - 1912–1913 | Pastores brasileiros | Isidoro Filho e Absalão Piano são separados
-- c. 1914 | Nordeste | Primeiros trabalhos no Ceará, na Paraíba e em Alagoas
-- 1917–1918 | Manaus e Recife | A igreja chega à Amazônia e a Pernambuco
+- 1914 | Nordeste | Primeiros trabalhos no Ceará e na Paraíba
+- 1915–1916 | Maceió e Recife | Vingren prega em Alagoas; Adriano Nobre vai a Pernambuco
+- 1917–1918 | Manaus | A igreja chega à Amazônia
 - 1918 | Assembleia de Deus | O novo nome é registrado
 - 1922–1924 | Sudeste | Rio de Janeiro, Vitória e Santos; Vingren vai para o Rio
 - 1926 | Conferência no Rio | Só missionários; cresce o descontentamento

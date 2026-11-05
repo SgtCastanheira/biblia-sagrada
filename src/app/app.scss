@@ -186,6 +186,11 @@
     padding-top: 0;
     max-width: 760px;
   }
+
+  // Prévia do autor: sem barras, então sem o espaço do menu
+  &.review {
+    padding-bottom: 40px;
+  }
 }
 
 /* ---------- Navegação: trilho lateral (tablet/computador) ---------- */
@@ -241,6 +246,10 @@
 
     &.reader {
       max-width: calc(760px + var(--rail-width));
+    }
+
+    &.review {
+      padding: 16px 40px 56px;
     }
   }
 }

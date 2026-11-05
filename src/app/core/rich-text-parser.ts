@@ -8,7 +8,7 @@ export interface Inline {
 }
 
 export interface Block {
-  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon' | 'sends' | 'eramap' | 'buy';
+  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon' | 'sends' | 'eramap' | 'buy' | 'verse';
   inlines?: Inline[];
   items?: Inline[][];
   events?: { date: string; title: string; text: Inline[] }[];
@@ -41,7 +41,7 @@ export interface Block {
   sends?: { from: string; to: string; who: string; year: string; note?: string }[];
   /** Mapa das épocas (":::mapa-epocas id1,id2,…"): ids de épocas do atlas, em ordem. */
   eras?: string[];
-  /** Onde comprar (":::comprar https://… | texto do botão"): o endereço da loja e o texto do cartão. */
+  /** Onde comprar (":::comprar https://… | texto do botão"): o endereço da loja e o texto do cartão. Versículo (":::versiculo Tg 1.14-15 | Santiago 1:14-15"): a referência e o nome dela na língua do texto. */
   href?: string;
   label?: string;
 }
@@ -79,6 +79,8 @@ export function parseInline(line: string): Inline[] {
  * e ":::sermao id" mostra o cartão de um sermão histórico do app.
  * ":::envio Título" mostra quem enviou quem: linhas "- De | Para | Quem | Ano | observação".
  * ":::mapa-epocas persia,alexandre,…" mostra o mapa do atlas passando de uma época a outra (ids de ERAS).
+ * ":::versiculo Tg 1.14-15 | Santiago 1:14-15" (uma linha, sem fechar) cita o texto bíblico por extenso, na versão da língua da página;
+ * ":::nota Título" (linhas até ":::") põe título no quadro.
  */
 export function parseBlocks(source: string): Block[] {
   const blocks: Block[] = [];
@@ -99,6 +101,14 @@ export function parseBlocks(source: string): Block[] {
     if (image) {
       flush();
       blocks.push({ type: 'image', alt: image[1], src: image[2], caption: image[3] ? parseInline(image[3]) : undefined, wide: !!image[4] });
+      continue;
+    }
+    // Versículo de uma linha só, sem fechar: ":::versiculo Tg 1.14-15 | Santiago 1:14-15"
+    const verse = line.match(/^:::\s*versiculo\s+(.+)$/);
+    if (verse) {
+      flush();
+      const [ref, label] = verse[1].split('|').map((p) => p.trim());
+      blocks.push({ type: 'verse', href: ref, label: label || undefined });
       continue;
     }
     const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao|envio|mapa-epocas|comprar)(?:\s+(.+))?$/);
@@ -156,7 +166,8 @@ export function parseBlocks(source: string): Block[] {
           });
         blocks.push({ type: 'timeline', events });
       } else {
-        blocks.push({ type: 'note', inlines: parseInline(body.filter(Boolean).join(' ')) });
+        // ":::nota Título" põe um título no quadro; cada linha do quadro também vale como item (usado nos jornais de Novas Vozes)
+        blocks.push({ type: 'note', place: fence[2]?.trim(), inlines: parseInline(text.join(' ')), items: text.map(parseInline) });
       }
       continue;
     }
@@ -212,9 +223,9 @@ export const SPECIAL_SECTIONS: Record<string, string> = {
   'Para aprofundar': 'Leitura recomendada',
 };
 
-/** Texto comparável de um título: sem acentos, sem pontuação e em minúsculas. */
+/** Texto comparável de um título: sem acentos, sem pontuação e em minúsculas (vale também para o cirílico dos jornais em russo). */
 export const headingKey = (text: string) =>
-  text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 
 const SPECIAL_BY_KEY = new Map(Object.entries(SPECIAL_SECTIONS).map(([title, name]) => [headingKey(title), name]));
 

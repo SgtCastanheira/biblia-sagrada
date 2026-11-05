@@ -1,9 +1,10 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, isDevMode } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { formatLong } from '../../core/dates';
 import { EbdService } from '../../core/ebd.service';
+import { visibleGuestSermons } from '../../core/guest-sermons';
 import { SermonsService } from '../../core/sermons.service';
 import { PROGRAMS } from '../../core/teaching';
 
@@ -57,11 +58,20 @@ import { PROGRAMS } from '../../core/teaching';
     </div>
 
     <h2 class="section-title"><mat-icon>campaign</mat-icon> Pregação</h2>
+    <div class="list">
     <a class="card row" matRipple routerLink="/sermoes">
       <span class="badge"><mat-icon>edit_document</mat-icon></span>
       <span class="texts"><span class="name">Meus sermões</span><span class="desc">Escreva por modelos, organize os tópicos e pregue no modo púlpito.@if (sermons.sermons().length) { {{ sermons.sermons().length }} {{ sermons.sermons().length === 1 ? 'sermão salvo' : 'sermões salvos' }}. }</span></span>
       <mat-icon class="go">chevron_right</mat-icon>
     </a>
+    @if (voices.length) {
+      <a class="card row" matRipple routerLink="/vozes">
+        <span class="badge"><mat-icon>newspaper</mat-icon></span>
+        <span class="texts"><span class="name">Novas Vozes da Palavra</span><span class="desc">Sermões de novos teólogos e estudiosos, em estilo de jornal, em vários idiomas e para ouvir.</span>@if (voices[0].status !== 'publicado') { <span class="meta">Em revisão: só você vê</span> }</span>
+        <mat-icon class="go">chevron_right</mat-icon>
+      </a>
+    }
+    </div>
   `,
   styleUrl: '../../shared/study.scss',
   styles: `
@@ -77,6 +87,8 @@ export class TeachPage {
   protected readonly ebd = inject(EbdService);
   protected readonly sermons = inject(SermonsService);
   protected readonly formatLong = formatLong;
+  /** Sermões de convidados: os publicados (os que esperam a aprovação do autor só aparecem em desenvolvimento). */
+  protected readonly voices = visibleGuestSermons(isDevMode());
   protected readonly ebdClasses = PROGRAMS.ebd.classes;
   protected readonly ibucClasses = PROGRAMS.ibuc.classes;
 }

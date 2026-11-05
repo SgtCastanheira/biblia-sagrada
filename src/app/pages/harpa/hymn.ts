@@ -8,15 +8,17 @@ import { ContentService } from '../../core/content.service';
 import { BackButton } from '../../shared/back-button';
 import { PassageView } from '../../shared/passage-view';
 import { RichText } from '../../shared/rich-text';
+import { ShareImageButton } from '../../shared/share-image-button';
+import { hymnCard } from '../../core/share-card';
 
 /** Um hino da Harpa Cristã: quem escreveu ou traduziu, a origem (quando documentada) e as fontes. */
 @Component({
   selector: 'app-hymn',
-  imports: [RouterLink, MatIconModule, MatRippleModule, BackButton, PassageView, RichText],
+  imports: [RouterLink, MatIconModule, MatRippleModule, BackButton, PassageView, RichText, ShareImageButton],
   template: `
     @if (hymn(); as h) {
       <div class="article">
-        <div class="top"><app-back fallback="/harpa" label="Voltar à Harpa" /></div>
+        <div class="top"><app-back fallback="/harpa" label="Voltar à Harpa" /><app-share-image-button [card]="shareCard()" /></div>
         <span class="overline">Harpa Cristã · Hino {{ h.n }}</span>
         <h1 class="title">{{ h.title }}</h1>
         @if (person(); as p) {
@@ -103,6 +105,7 @@ export class HymnPage {
   readonly n = input.required<string>();
   protected readonly data = toSignal(inject(ContentService).harpa);
   protected readonly hymn = computed(() => this.data()?.hymns.find((h) => h.n === Number(this.n())));
+  protected readonly shareCard = computed(() => (this.hymn() ? hymnCard(this.hymn()!, this.person()?.name ?? this.hymn()!.author) : null));
   protected readonly person = computed(() => {
     const id = this.hymn()?.person;
     return id ? this.data()?.people[id] : undefined;

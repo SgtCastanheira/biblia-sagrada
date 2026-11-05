@@ -12,17 +12,20 @@ import { CLASSIC_KINDS, CLASSIC_SERMONS, findArticle, findClassic } from '../../
 import { SettingsService } from '../../core/settings.service';
 import { PassageView } from '../../shared/passage-view';
 import { RichText } from '../../shared/rich-text';
+import { ShareImageButton } from '../../shared/share-image-button';
+import { classicSermonCard } from '../../core/share-card';
 
 /** Leitura de um sermão histórico. */
 @Component({
   selector: 'app-classic-sermon',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, PassageView],
+  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, PassageView, ShareImageButton],
   template: `
     @if (sermon(); as s) {
       <div class="article">
         <div class="top">
           <app-back fallback="/avivamento" />
           <span class="size">
+            <app-share-image-button [card]="shareCard()" />
             <button mat-icon-button (click)="settings.changeFontSize(-1)" aria-label="Diminuir letra"><mat-icon>text_decrease</mat-icon></button>
             <button mat-icon-button (click)="settings.changeFontSize(1)" aria-label="Aumentar letra"><mat-icon>text_increase</mat-icon></button>
           </span>
@@ -113,6 +116,7 @@ export class ClassicSermonPage {
     return id ? findArticle(id) : undefined;
   });
   protected readonly sermon = computed(() => findClassic(this.id()));
+  protected readonly shareCard = computed(() => (this.sermon() ? classicSermonCard(this.sermon()!) : null));
   protected readonly next = computed(() => {
     const i = CLASSIC_SERMONS.findIndex((s) => s.id === this.id());
     return i >= 0 ? CLASSIC_SERMONS[(i + 1) % CLASSIC_SERMONS.length] : undefined;

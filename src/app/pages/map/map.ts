@@ -16,16 +16,19 @@ import { epochOfMap } from '../../core/epochs';
 import { EraChip } from '../../shared/era-chip';
 import { MapStory } from '../../shared/map-story';
 import { SourcesBox } from '../../shared/sources-box';
+import { ShareImageButton } from '../../shared/share-image-button';
+import { mapCard } from '../../core/share-card';
 
 @Component({
   selector: 'app-map',
-  imports: [BackButton, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, BibleMapView, MapStory, SourcesBox],
+  imports: [BackButton, EraChip, ShareImageButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, BibleMapView, MapStory, SourcesBox],
   templateUrl: './map.html',
   styleUrl: './map.scss',
 })
 export class MapPage {
   readonly id = input.required<string>();
   protected readonly map = computed(() => findMap(this.id()));
+  protected readonly shareCard = computed(() => (this.map() ? mapCard(this.map()!) : null));
   protected readonly activeStep = signal<number | null>(null);
   protected readonly story = signal<number | null>(null);
   /** Estudo completo ligado a este mapa. */

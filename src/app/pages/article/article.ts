@@ -23,13 +23,15 @@ import { StoryJourney } from '../../shared/story-journey';
 import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
 import { outline } from '../../core/rich-text-parser';
+import { articleCard } from '../../core/share-card';
 import { RichText } from '../../shared/rich-text';
+import { ShareImageButton } from '../../shared/share-image-button';
 import { SourcesBox } from '../../shared/sources-box';
 
 /** Artigo de estudo (história da Igreja, origem da Bíblia, estudos bíblicos). */
 @Component({
   selector: 'app-article',
-  imports: [BackButton, EraChip, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, BibleMapView, SourcesBox, QuizPrompt, StoryJourney],
+  imports: [BackButton, EraChip, ShareImageButton, RouterLink, MatButtonModule, MatIconModule, MatRippleModule, RichText, BibleMapView, SourcesBox, QuizPrompt, StoryJourney],
   template: `
     @if (article(); as a) {
       <div class="article">
@@ -39,7 +41,7 @@ import { SourcesBox } from '../../shared/sources-box';
             <button mat-icon-button (click)="listenArticle()" [attr.aria-label]="listen.state() === 'idle' ? 'Ouvir esta história' : 'Parar de ouvir'">
               <mat-icon>{{ listen.state() === 'idle' ? 'headphones' : 'stop_circle' }}</mat-icon>
             </button>
-            <button mat-icon-button (click)="share()" aria-label="Compartilhar"><mat-icon>ios_share</mat-icon></button>
+            <app-share-image-button [card]="shareCard()" />
           </span>
         </div>
         @if (story()) {
@@ -317,6 +319,7 @@ export class ArticlePage {
 
   /** No celular o índice começa fechado, para o texto aparecer logo. */
   protected readonly wide = typeof matchMedia !== 'undefined' && matchMedia('(min-width: 840px)').matches;
+  protected readonly shareCard = computed(() => (this.body() ? articleCard(this.id(), this.body()!) : null));
   protected readonly toc = computed(() => (this.body() ? outline(this.body()!, this.article()?.topics ?? []) : []));
 
   protected jump(anchor: string): void {
@@ -385,20 +388,5 @@ export class ArticlePage {
       const a = this.article();
       if (a) title.setTitle(`${a.title} · Bíblia Sagrada`);
     });
-  }
-
-  protected async share(): Promise<void> {
-    const a = this.article();
-    if (!a) return;
-    const text = `${a.title}\n${a.subtitle}`;
-    if (navigator.share) {
-      try {
-        await navigator.share({ title: a.title, text, url: location.href });
-      } catch {
-        // cancelado
-      }
-    } else {
-      await navigator.clipboard?.writeText(`${text}\n${location.href}`);
-    }
   }
 }

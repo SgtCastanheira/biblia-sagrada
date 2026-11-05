@@ -522,11 +522,7 @@ figcaption {
     background: $paper;
     border-radius: 4px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18), 0 10px 24px rgba(0, 0, 0, 0.16);
-    rotate: 1.5deg;
-
-    &.left {
-      rotate: -1.5deg;
-    }
+    rotate: -1.5deg;
 
     img {
       width: 100%;
@@ -548,9 +544,11 @@ figcaption {
   }
 }
 
-// Um toque na foto abre em tela cheia (photo-viewer.ts)
+// Um toque na foto abre em tela cheia (photo-viewer.ts). O z-index mantém a foto acima do parágrafo que corre em volta dela:
+// sem ele, a caixa do parágrafo (que ocupa a largura toda) interceptaria o toque.
 .photo {
   position: relative;
+  z-index: 1;
 
   img { cursor: zoom-in; }
 
@@ -573,18 +571,54 @@ figcaption {
   margin: 10px 0 28px;
 }
 
+// No computador, em todo texto: a foto à esquerda, com o texto correndo em volta (as histórias têm a sua regra, abaixo)
+@container (min-width: 600px) {
+  :host(:not(.story)) {
+    .photo:not(.wide) {
+      float: left;
+      width: min(38%, 240px);
+      margin: 6px 24px 16px 0;
+    }
+
+    .photo.wide {
+      float: left;
+      width: min(52%, 380px);
+      margin: 6px 24px 16px 0;
+    }
+  }
+
+  // O que é cartão ou título não corre em volta da foto: começa abaixo dela
+  h2,
+  h3,
+  .chapter,
+  .facts,
+  .people,
+  .read,
+  .scene,
+  .note,
+  aside,
+  .pullquote,
+  .diagram,
+  .table-wrap,
+  .timeline {
+    clear: both;
+  }
+}
+
 // No computador: retratos ao lado do texto e linha do tempo alternada
 @container (min-width: 600px) {
   :host(.story) {
+    // Como num jornal: a foto à esquerda e o texto correndo em volta. A foto vai antes do parágrafo de que ela fala.
     .photo:not(.wide) {
-      float: right;
+      float: left;
       width: 220px;
-      margin: 6px 0 16px 24px;
+      margin: 6px 24px 16px 0;
+    }
 
-      &.left {
-        float: left;
-        margin: 6px 24px 16px 0;
-      }
+    .photo.wide {
+      float: left;
+      width: min(52%, 380px);
+      margin: 6px 24px 16px 0;
     }
 
     .timeline {

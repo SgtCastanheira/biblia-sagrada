@@ -97,7 +97,7 @@ async function drawPhoto(ctx: CanvasRenderingContext2D, photo: NonNullable<Share
     const dw = img.naturalWidth * scale;
     const dh = img.naturalHeight * scale;
     // retratos ficam com o rosto no quadro: alinhados mais ao alto
-    ctx.drawImage(img, x + (w - dw) / 2, y - Math.max(0, (dh - h) * 0.04), dw, dh);
+    ctx.drawImage(img, x + (w - dw) / 2, y - Math.max(0, (dh - h) * (photo.focusY ?? 0.04)), dw, dh);
     ctx.restore();
   } else {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';

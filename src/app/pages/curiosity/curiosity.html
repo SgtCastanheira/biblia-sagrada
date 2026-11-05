@@ -1,7 +1,7 @@
 @if (curiosity(); as c) {
   <div class="top">
     <app-back fallback="/curiosidades" />
-    <button mat-icon-button (click)="share()" aria-label="Compartilhar"><mat-icon>ios_share</mat-icon></button>
+    <app-share-image-button [card]="shareCard()" />
   </div>
 
   <article>

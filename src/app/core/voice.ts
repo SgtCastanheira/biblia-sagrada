@@ -26,16 +26,19 @@ export function voiceQuality(name: string, lang: string): number {
 /** A voz serve como "natural" (neural, premium) ou é só a voz comum do aparelho? */
 export const isNaturalVoice = (name: string) => /natural|neural|premium|enhanced|aprimorad|melhorad/i.test(name);
 
-/** Vozes em português ordenadas da mais para a menos natural. */
-export function rankVoices<T extends { name: string; lang: string }>(voices: T[]): T[] {
+/** Etiqueta de idioma da fala (BCP 47) de cada língua oferecida em Ouvir: o português do Brasil e as demais línguas dos jornais de Novas Vozes. */
+export const SPEECH_TAGS: Record<string, string> = { pt: 'pt-BR', es: 'es-ES', en: 'en-US', fr: 'fr-FR', de: 'de-DE', ru: 'ru-RU' };
+
+/** Vozes de uma língua ("pt", "es"…) ordenadas da mais para a menos natural. */
+export function rankVoices<T extends { name: string; lang: string }>(voices: T[], language = 'pt'): T[] {
   return voices
-    .filter((v) => v.lang.replace('_', '-').toLowerCase().startsWith('pt'))
+    .filter((v) => v.lang.replace('_', '-').toLowerCase().startsWith(language))
     .sort((a, b) => voiceQuality(b.name, b.lang) - voiceQuality(a.name, a.lang));
 }
 
-export function narrationVoice(): SpeechSynthesisVoice | null {
+export function narrationVoice(language = 'pt'): SpeechSynthesisVoice | null {
   if (typeof speechSynthesis === 'undefined') return null;
-  return rankVoices(speechSynthesis.getVoices())[0] ?? null;
+  return rankVoices(speechSynthesis.getVoices(), language)[0] ?? null;
 }
 
 /** No Chrome e no Edge a lista de vozes chega depois; chame cedo para ela já estar pronta na hora de falar. */
@@ -45,8 +48,8 @@ export function warmUpVoices(): void {
   speechSynthesis.addEventListener?.('voiceschanged', () => speechSynthesis.getVoices(), { once: true });
 }
 
-/** Vozes em português do aparelho, as mais naturais primeiro (para a pessoa escolher). */
-export function portugueseVoices(): SpeechSynthesisVoice[] {
+/** Vozes do aparelho numa língua (português por padrão), as mais naturais primeiro (para a pessoa escolher). */
+export function voicesFor(language = 'pt'): SpeechSynthesisVoice[] {
   if (typeof speechSynthesis === 'undefined') return [];
-  return rankVoices(speechSynthesis.getVoices());
+  return rankVoices(speechSynthesis.getVoices(), language);
 }

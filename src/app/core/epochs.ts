@@ -126,7 +126,7 @@ export const ARTICLE_EPOCH: Record<string, string> = {
   'daniel-berg-e-gunnar-vingren': 'pentecostes',
   'frida-vingren': 'pentecostes',
   'cativeiros-de-israel': 'exilio-retorno',
-  'grupos-do-tempo-de-jesus': 'jesus',
+  'da-volta-do-exilio-a-jesus': 'entre-testamentos',
   'natal-e-os-calendarios': 'jesus',
 };
 
