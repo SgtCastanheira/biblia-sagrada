@@ -50,7 +50,7 @@ import { renderShareImage, SHARE_FORMATS, type ShareFormat } from './share-rende
           <button mat-stroked-button type="button" (click)="whatsapp()"><mat-icon>chat</mat-icon> Enviar o link no WhatsApp</button>
           <button mat-stroked-button type="button" (click)="copy()"><mat-icon>content_copy</mat-icon> Copiar o link</button>
         </div>
-        <p class="tip">Ao compartilhar, escolha o <strong>WhatsApp</strong> ou o <strong>Instagram</strong> (Stories ou Feed) na tela que abrir. No computador, que não tem esse menu, a imagem é salva: depois é só anexá-la no WhatsApp ou no Instagram.</p>
+        <p class="tip">Ao compartilhar, escolha o <strong>WhatsApp</strong> ou o <strong>Instagram</strong> (Stories ou Feed) na tela que abrir. No computador, que não tem esse menu, a imagem é salva; se o aparelho não mostrar o Instagram, baixe-a e publique por lá.</p>
       </div>
     </div>
   `,

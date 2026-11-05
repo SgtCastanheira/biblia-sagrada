@@ -29,6 +29,28 @@ Modelo:
 
 ---
 
+## 2026-11-05 13:43 -0400 — Sincronização de main em dev para preparar a integração
+
+**Autor:** Valtemir Junior (com Copilot)
+
+**O que foi feito:**
+- Resolvi os conflitos do merge de `main` em `dev`, preservando a versão mais completa de `dev` e o conteúdo já publicado em `main`.
+- Mantive os registros publicados das Datas da História e da Geração, acrescentei os avisos antigos de novidades e as rotas que redirecionam os endereços substituídos.
+- Removi entradas duplicadas de dois estudos e de suas fontes, que a união automática havia repetido.
+- Integrei o relato mais completo de William Tyndale ao estudo da Palavra, mantendo o cartão para a história da Reforma Inglesa.
+- Validação local: lint, 165 testes lógicos e build de produção aprovados.
+
+**Decisões:**
+- `dev` continua sendo a versão de referência para os conflitos, pois contém os estudos e as datas adicionais; itens que já estavam em `main` foram mantidos onde não duplicavam conteúdo.
+- O envio para produção segue por PR de `dev` para `main`, como definido para o projeto.
+
+**Arquivos:** `CLAUDE.md`, `CREDITOS.md`, `DIARIO.md`, `TESTES.md`, `e2e/`, `public/conteudo/artigos/a-palavra-no-coracao.md`, `src/app/core/` (`anniversaries.ts`, `credits.ts`, `library.ts`, `share-card.ts`, `sources.ts`, `trails.ts`, `whats-new.ts`), `src/app/pages/history/history.ts`, `src/app/shared/` (`share-render.ts`, `share-sheet.ts`)
+
+**Pendências:**
+- Aguardar os checks da PR `dev` → `main` antes de concluir a publicação.
+
+---
+
 ## 2026-11-05 12:06 -0400 — Novas Vozes: imagem de compartilhar com QR code e revisão da concordância
 
 **Autor:** Valtemir Junior (com Claude Code)
@@ -128,6 +150,48 @@ Modelo:
 
 **Pendências:**
 - Só no `dev`: a imagem de compartilhar nas outras páginas ainda não foi publicada (nesta correção ela só afeta o painel).
+
+## 2026-11-04 16:07 -0400 — Publicação: “A Geração que Não Conheceu o Senhor” e a data de Edwards
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Ramo `publicar-geracao`, saído do `main`, com o estudo **A Geração que Não Conheceu o Senhor** (o padrão de Josué e Jefté aos nossos avivamentos; o culto no lar; a doutrina, a regra e o costume), aprovado pelo usuário: o texto, a entrada na biblioteca, as fontes, o item de novidades, a entrada na trilha “Reconhecer e Guardar o Avivamento” (agora com este estudo e o da Palavra) e o cartão em `avivamentos-desde-atos` (seção “Guardar o Fogo”, com os dois estudos).
+- A data **Edwards é dispensado de Northampton** (22 de junho de 1750) entrou em `anniversaries.ts`: a história que a explica é este estudo. O 22 de junho passa a ter dois fatos (com o do Rio de Janeiro, de 1924), e vira compilado.
+- A frase do estudo que citava *Os Avivamentos na Bíblia*, que ainda não está publicado, foi tirada.
+
+**Decisões:**
+- As outras 17 datas que o usuário aprovou (11 da Coreia, 3 de Miller e 3 dos batistas) **não** subiram: o texto de cada uma repete fatos que só estão nos estudos reescritos (Coreia, batistas) ou nos livros de Miller, e esses estudos ainda não foram aprovados. Uma data publicada sem o estudo que a explica leva a uma história que não tem o fato. Sobem juntas com os estudos, quando eles forem aprovados.
+
+**Arquivos:** `public/conteudo/artigos/a-geracao-que-nao-conheceu-o-senhor.md`, `public/conteudo/artigos/avivamentos-desde-atos.md`, `src/app/core/library.ts`, `trails.ts`, `sources.ts`, `whats-new.ts`, `anniversaries.ts`, `DIARIO.md`
+
+**Pendências:**
+- Aprovar e publicar a Coreia (e as 11 datas), os batistas (e as 3 datas), os livros de Miller e Ferguson (e as 3 datas de Miller), “Avivamentos na Bíblia”, “Marcas de um Avivamento”, a imagem de compartilhar nas outras páginas e as fotos como num jornal.
+
+---
+
+## 2026-11-04 15:28 -0400 — Publicação: Datas da História e o estudo da Palavra no coração
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Ramo à parte (`publicar-palavra-e-datas`, saído do `main`) com só o que o usuário aprovou para publicar: o estudo **A Bíblia Está no Seu Celular, mas Está em Você?** e a página **Datas da História** (`/datas`). O resto do trabalho segue só no `dev`.
+- **Estudo da Palavra**: o texto, a entrada na biblioteca (`library.ts`), um ramo novo da trilha dos avivamentos (“Reconhecer e Guardar o Avivamento”, só com este estudo), as fontes, o cartão em `avivamentos-desde-atos` (seção “Guardar o Fogo”) e as sete correções de digitação do Almeida (`tools/gerar-almeida.py` e cinco livros). A frase que citava o estudo ainda não publicado “A Geração que Não Conheceu o Senhor” foi tirada.
+- **Datas da História**: a página, o carrossel da tela inicial (só os fatos do mês, um cartão por dia, compilado nos dias com vários fatos), o cartão “Datas de <mês>” no alto da biblioteca, o livro na estante “O Tempo”, a imagem de compartilhar (com o gancho, a explicação simples e as fotos) e o cache preguiçoso das fotos (`imagens-das-datas`). A imagem de compartilhar entrou só para as datas (infraestrutura em `share-card.ts`, `share-render.ts`, `share-sheet.ts` e `Sheets.shareImage`; `qrcode-generator` no `package.json`).
+- **72 datas** (das 90 do `dev`), todas ligadas a estudos que já estão no `main`. Ficaram de fora, por dependerem de estudos ainda não publicados, 18 datas: as 11 da Coreia, as 3 de Miller (Diocleciano, Wycliffe, Constança), Edwards em Northampton e as 3 da igreja batista de Belém e de Salvador. Fotos: 49 novas (900 px) mais as que o `main` já tinha, com crédito em `CREDITOS.md` e `credits.ts`.
+- `reforma-protestante`: o dia da resposta de Lutero em Worms (18 de abril de 1521) e o da morte dele (18 de fevereiro de 1546) entraram no texto, conferidos em fontes públicas, e as fontes do estudo foram atualizadas.
+- Testes de datas e da imagem de compartilhar ajustados ao conjunto menor (meses com poucos fatos); o teste das novidades passou a procurar o botão “Entendi” pelo nome exato.
+
+**Decisões:**
+- Publicar por ramo próprio, saído do `main`, e não o `dev` inteiro: o `dev` tem mais de cem arquivos de outras frentes (Coreia, estudos de Miller e de Ferguson, estudo dos batistas, imagem de compartilhar em todas as páginas) que não foram aprovados. Quando forem, o próximo envio do `dev` para o `main` vai ter conflitos nos arquivos que os dois ramos mudaram; vale a versão do `dev`, que é um conjunto maior.
+- Só as datas cujo texto está num estudo já publicado entram: o texto de cada data só repete o que o estudo conta.
+
+**Arquivos:** `public/conteudo/artigos/a-palavra-no-coracao.md`, `public/conteudo/artigos/avivamentos-desde-atos.md`, `public/conteudo/artigos/reforma-protestante.md`, `src/app/core/` (`anniversaries.ts`, `share-card.ts`, `library.ts`, `trails.ts`, `sources.ts`, `whats-new.ts`, `credits.ts`, `library-bays.ts`), `src/app/shared/` (`commemorations.ts`, `share-render.ts`, `share-sheet.ts`, `sheets.ts`), `src/app/pages/` (`dates`, `history`, `home`), `public/conteudo/imagens/`, `ngsw-config.json`, `package.json`, `tools/gerar-almeida.py`, `public/bible/almeida/`, testes, `CREDITOS.md`, `CLAUDE.md`, `TESTES.md`, `DIARIO.md`
+
+**Pendências:**
+- Publicar o resto (Coreia e as 18 datas, estudos de Miller e de Ferguson, estudo dos batistas, imagem de compartilhar nas outras páginas) quando o usuário aprovar.
+
+---
 
 ## 2026-11-04 14:58 -0400 — Gancho e explicação simples em cada data, e uma foto para todos os fatos
 

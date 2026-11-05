@@ -54,6 +54,24 @@ export const RELEASES: Release[] = [
     ],
   },
   {
+    id: 'a-geracao',
+    date: '4 de novembro de 2026',
+    title: 'A Geração que Não Conheceu o Senhor',
+    items: [
+      { icon: 'groups', title: 'A geração que não conheceu o Senhor', text: 'Por que o fogo esfria na geração seguinte, em três partes: o padrão, de Josué e Jefté aos nossos avivamentos; a casa, com o que o pai e a mãe precisam voltar a ser e um culto no lar de vinte minutos; e a igreja, com a diferença entre doutrina, regra e costume e sete perguntas para conhecer a sua.', link: '/artigo/a-geracao-que-nao-conheceu-o-senhor' },
+      { icon: 'event', title: 'Mais uma data na História', text: 'Em 22 de junho, Jonathan Edwards foi dispensado da igreja de Northampton, em 1750. A data entrou nas Datas da História, com a história que a explica.', link: '/datas' },
+    ],
+  },
+  {
+    id: 'datas-e-palavra',
+    date: '4 de novembro de 2026',
+    title: 'Datas da História e um Estudo sobre a Palavra',
+    items: [
+      { icon: 'event', title: 'Datas da História na tela inicial', text: 'O que aconteceu na história no dia de hoje, com foto: em 19 de novembro, por exemplo, a chegada de Daniel Berg e Gunnar Vingren a Belém, em 1910. A tela inicial mostra só as datas do mês, e a lista se renova a cada mês. São 72 datas, da Reforma, com Lutero em Worms, até as igrejas do Brasil. Cada uma tem uma explicação simples, uma pergunta para despertar a curiosidade e uma foto (quando não há a do fato, uma foto ilustrativa do lugar ou da época). Os dias com vários fatos, como o 15 de novembro, viram um compilado. Toque no botão de compartilhar para mandar a imagem da comemoração no WhatsApp ou no Instagram.', link: '/datas', tip: 'Em História › Contexto e Cultura › O Tempo: as datas do ano inteiro, mês a mês.' },
+      { icon: 'menu_book', title: 'A Bíblia está no seu celular, mas está em você?', text: 'Um estudo direto: ter acesso à Palavra não é tê-la no coração. Abre com duas frases, uma delas alterada: qual é a verdadeira? Conta o que Lutero, Tyndale e outros pagaram para o povo poder ler a Bíblia, a cena de Atos 8 (o etíope tinha o livro e precisava de quem lhe ensinasse), a Bíblia de papel junto com a do celular, o que Deus disse e o que a serpente disse lado a lado, e as duas leituras de Lucas 23.43. Traz um plano de doze semanas para decorar. Também foram corrigidos sete erros de digitação no texto da Almeida do app.', link: '/artigo/a-palavra-no-coracao' },
+    ],
+  },
+  {
     id: 'historia-da-igreja-miller',
     date: '3 de novembro de 2026',
     title: 'Dois Livros de História da Igreja na Estante',

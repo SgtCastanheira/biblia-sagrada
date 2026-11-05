@@ -55,7 +55,11 @@ test('datas: cada fato tem um gancho (pergunta ou frase curta que a história re
   const card = anniversaryCard(lei, new Date(2026, 11, 3));
   expect(card.hook).toBe(lei.hook);
   expect(card.subtitle).toBe(lei.text);
-  expect(card.photo?.label).toBe('Foto ilustrativa');
+  const ceara = ANNIVERSARIES.find((a) => a.id === 'ceara')!;
+  const cearaCard = anniversaryCard(ceara, new Date(2026, 6, 20));
+  expect(cearaCard.hook).toBe(ceara.hook);
+  expect(cearaCard.subtitle).toBe(ceara.text);
+  expect(cearaCard.photo?.label).toBe('Foto ilustrativa');
 });
 
 test('datas: cada fato leva a uma história que existe, e a foto existe e vem com crédito', () => {
