@@ -29,3 +29,14 @@ test('busca no estudo: as palavras do título valem mais que as do texto', () =>
   expect(hits.length).toBeGreaterThan(3);
   expect(hits[0].doc.title.toLowerCase()).toContain('reform');
 });
+
+test('busca no estudo: uma pesquisa de várias palavras traz a expressão inteira e esconde quem só passa pelo assunto', () => {
+  // “Coreia do Norte” trazia 5 estudos (norte-americano, norte da Europa…): agora só os que dizem “Coreia do Norte”
+  const hits = search(index, 'Coreia do Norte');
+  expect(hits[0].doc.id).toBe('avivamento-da-coreia');
+  expect(hits.length, hits.map((h) => h.doc.id).join(', ')).toBeLessThanOrEqual(2);
+  expect(hits.every((h) => h.exact)).toBe(true);
+  // uma palavra só continua mostrando tudo o que a cita
+  expect(search(index, 'Coreia').length).toBeGreaterThanOrEqual(1);
+  expect(search(index, 'reforma').length).toBeGreaterThan(3);
+});

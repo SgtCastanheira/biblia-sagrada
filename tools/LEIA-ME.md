@@ -19,6 +19,20 @@ Escrito à mão, sem script: `dicionario.json` (com `senses` e `inflections`), `
 
 Depois de gerar dados, rode `npm run test:e2e` (o protocolo confere referências, mapas e ícones).
 
+## verificar-base.py — conferir o que o app já conta, antes de escrever
+
+Não gera nada: só lê `public/conteudo/` e `src/app/core/`. Serve para cumprir a regra do projeto de **olhar a base antes de escrever uma história, um personagem ou um assunto** (se já existe, completa-se ou ramifica-se; não se conta de novo, em outro formato e resumido).
+
+```bash
+python3 tools/verificar-base.py "Coreia do Norte"             # onde o assunto aparece e se já há estudo dedicado
+python3 tools/verificar-base.py "Neemias" "Esdras"             # vários de uma vez
+python3 tools/verificar-base.py --ler avivamento-da-coreia     # o roteiro de um estudo: capítulos, cartões e quadros
+python3 tools/verificar-base.py --repetidos --minimo 6         # revisão geral: pares de estudos com trechos iguais
+python3 tools/verificar-base.py --par estudo-a estudo-b        # os trechos que dois estudos têm em comum
+```
+
+O veredito é um de três: “já existe estudo dedicado” (complete ou ramifique), “aparece de passagem” (veja onde e escreva só o que falta) ou “não aparece” (pode escrever, ligando aos estudos vizinhos). A revisão geral mais recente está em `REVISAO-DE-CONTEUDO.md`.
+
 ## gerar-audio.mjs — a narração em voz neural das histórias
 
 Grava, com a voz neural da Microsoft (Francisca, pt-BR) ou, se preferir, da ElevenLabs (veja abaixo), a narração de cada história e de cada estado da Assembleia de Deus. O app toca esses áudios no botão "Ouvir" (em qualquer navegador) e destaca o parágrafo que está sendo falado; onde não há áudio, usa a voz do aparelho.

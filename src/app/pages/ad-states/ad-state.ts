@@ -22,19 +22,24 @@ import { storyItems } from '../../shared/listen-dom';
 import { PageToc, TocItem } from '../../shared/page-toc';
 import { RichText } from '../../shared/rich-text';
 import { StateMinistries } from '../../shared/state-ministries';
+import { ShareImageButton } from '../../shared/share-image-button';
+import { adStateCard } from '../../core/share-card';
 
 /** História completa da Assembleia de Deus num estado, com o mapa de onde saíram os pioneiros. */
 @Component({
   selector: 'app-ad-state',
-  imports: [MatButtonModule, NgTemplateOutlet, RouterLink, MatIconModule, MatRippleModule, BibleMapView, BackButton, RichText, PageToc, ContextList, StateMinistries],
+  imports: [MatButtonModule, NgTemplateOutlet, ShareImageButton, RouterLink, MatIconModule, MatRippleModule, BibleMapView, BackButton, RichText, PageToc, ContextList, StateMinistries],
   template: `
     @if (state(); as s) {
       <div class="article wide">
         <div class="top">
           <app-back fallback="/assembleia-de-deus" />
-          <button mat-icon-button (click)="listenState()" [attr.aria-label]="listen.state() === 'idle' ? 'Ouvir esta história' : 'Parar de ouvir'">
-            <mat-icon>{{ listen.state() === 'idle' ? 'headphones' : 'stop_circle' }}</mat-icon>
-          </button>
+          <span class="top-actions">
+            <button mat-icon-button (click)="listenState()" [attr.aria-label]="listen.state() === 'idle' ? 'Ouvir esta história' : 'Parar de ouvir'">
+              <mat-icon>{{ listen.state() === 'idle' ? 'headphones' : 'stop_circle' }}</mat-icon>
+            </button>
+            <app-share-image-button [card]="shareCard()" />
+          </span>
         </div>
         <header class="hero">
           <img class="hero-flag" [src]="flag(s.id)" [alt]="'Bandeira de ' + s.state" width="72" height="50" />
@@ -155,6 +160,7 @@ export class AdStatePage {
   private readonly snackBar = inject(MatSnackBar);
   protected readonly statesMap = findMap('assembleia-de-deus-estados')!;
   protected readonly state = computed(() => findAdState(this.id()));
+  protected readonly shareCard = computed(() => (this.state() ? adStateCard(this.state()!) : null));
 
   protected readonly ministries = computed(() => STATE_MINISTRIES[this.id()] ?? []);
   protected readonly conventions = computed(() => CGADB_CONVENTIONS[this.id()] ?? []);

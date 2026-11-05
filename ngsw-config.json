@@ -44,7 +44,18 @@
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/conteudo/**"
+          "/conteudo/**",
+          "!/conteudo/imagens/datas-*.jpg"
+        ]
+      }
+    },
+    {
+      "name": "imagens-das-datas",
+      "installMode": "lazy",
+      "updateMode": "lazy",
+      "resources": {
+        "files": [
+          "/conteudo/imagens/datas-*.jpg"
         ]
       }
     },

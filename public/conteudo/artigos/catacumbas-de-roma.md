@@ -32,9 +32,9 @@ O édito de Valeriano e as outras ondas de perseguição: quem mandou, quem morr
 
 As catacumbas eram obra de gente comum, os fossores, com picareta e lamparina. As galerias têm paredes cobertas de nichos horizontais, os *loculi*, empilhados do chão ao teto. O corpo era envolto em panos, e o nicho, fechado com uma lápide de mármore ou com telhas, que levava o nome, a idade e o dia da morte. Algumas famílias tinham salas próprias (*cubicula*), e os mais ricos, túmulos em arco (*arcosolia*) ou sarcófagos. Para entrar luz e ar, abriam-se poços, os *luminaria*, mas isso só se tornou comum no século IV.
 
-Os números impressionam. A catacumba de Calisto tem cerca de 20 km de galerias, em vários andares, e uma estimativa fala em meio milhão de sepultados; a de Domitila tem uns 17 km. Cálculos antigos chegaram a falar em dois milhões de sepulturas em todas as catacumbas de Roma. Hoje se conhecem mais de quarenta catacumbas cristãs e algumas judaicas, e também as de pagãos: nem todas eram cristãs.
-
 ![Nichos abertos na rocha de uma catacumba, em desenho colorido](imagens/catacumbas-nichos.jpg "Nichos (loculi) abertos na rocha de uma catacumba, num desenho colorido à mão de um slide de 1913. Edmund F. Arras, Columbus Metropolitan Library, domínio público, via Digital Public Library of America e Wikimedia Commons.")
+
+Os números impressionam. A catacumba de Calisto tem cerca de 20 km de galerias, em vários andares, e uma estimativa fala em meio milhão de sepultados; a de Domitila tem uns 17 km. Cálculos antigos chegaram a falar em dois milhões de sepulturas em todas as catacumbas de Roma. Hoje se conhecem mais de quarenta catacumbas cristãs e algumas judaicas, e também as de pagãos: nem todas eram cristãs.
 
 ## O que as Paredes Contam?
 

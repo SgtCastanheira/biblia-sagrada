@@ -15,16 +15,18 @@ import { parseReferences } from '../../core/reference-parser';
 import { BackButton } from '../../shared/back-button';
 import { ChurchNoteView } from '../../shared/church-note';
 import { SourcesBox } from '../../shared/sources-box';
+import { ShareImageButton } from '../../shared/share-image-button';
+import { epochCard } from '../../core/share-card';
 
 type Lane = 'tudo' | 'historias' | 'mundo' | 'igreja';
 
 /** Uma época: tudo o que o app tem dela, na ordem do tempo, com as crises do mundo no meio das histórias. */
 @Component({
   selector: 'app-epoch',
-  imports: [RouterLink, MatIconModule, MatRippleModule, BackButton, ChurchNoteView, SourcesBox],
+  imports: [RouterLink, MatIconModule, MatRippleModule, BackButton, ChurchNoteView, SourcesBox, ShareImageButton],
   template: `
     @if (epoch(); as e) {
-      <div class="top"><app-back fallback="/epocas" /></div>
+      <div class="top"><app-back fallback="/epocas" /><app-share-image-button [card]="shareCard()" /></div>
       <header class="hero">
         <mat-icon class="watermark" aria-hidden="true">{{ e.icon }}</mat-icon>
         <span class="h-over">{{ e.part }} · época {{ index() + 1 }} de {{ total }}</span>
@@ -223,6 +225,7 @@ export class EpochPage {
 
   protected readonly epoch = computed(() => findEpoch(this.id()));
   protected readonly index = computed(() => EPOCHS.findIndex((e) => e.id === this.id()));
+  protected readonly shareCard = computed(() => (this.epoch() ? epochCard(this.epoch()!, this.index(), this.total) : null));
   protected readonly near = computed(() => (this.epoch() ? epochNeighbours(this.epoch()!) : { prev: null, next: null }));
   protected readonly bible = computed(() => bibleOfEpoch(this.id() ?? ''));
   private readonly entries = computed(() => timelineOfEpoch(this.id() ?? ''));

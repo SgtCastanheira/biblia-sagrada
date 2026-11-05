@@ -45,6 +45,8 @@ export const WORKS: Record<string, Work> = {
   'andrade-diacono': { author: 'Claudionor Corrêa de Andrade', title: 'Manual do Diácono', publisher: 'CPAD, 1999', kind: 'referencia' },
   'manual-pastor-pentecostal': { author: 'Raymond Carlson, Thomas E. Trask e outros', title: 'Manual do Pastor Pentecostal: Teologia e Práticas Pastorais (reedição de O Pastor Pentecostal; original The Pentecostal Pastor, 1997)', publisher: 'CPAD, 1999 (3ª ed., 2005)', kind: 'referencia' },
   'ferreira-manual-igreja': { author: 'Ebenézer Soares Ferreira', title: 'Manual da Igreja e do Obreiro (antes Vade-Mécum do Obreiro e da Igreja)', publisher: 'JUERP, 1993 (7ª ed.)', kind: 'referencia' },
+  'miller-historia-igreja': { author: 'Andrew Miller', title: 'A História da Igreja (Church History), tradução em português, volumes 1 e 2', publisher: 'tradução de 2022 sob licença CC BY-NC-SA 4.0, a partir do texto de stempublishing.com', kind: 'historia' },
+  'ferguson-historia-igreja': { author: 'Everett Ferguson', title: 'História da Igreja, volume 1: dos dias de Cristo à Pré-Reforma', publisher: 'Central Gospel, 2017', kind: 'historia' },
   'carvalho-tsc': { author: 'César Moisés Carvalho e Céfora Carvalho', title: 'Teologia Sistemático-Carismática (2 volumes)', publisher: 'Thomas Nelson Brasil, 2022', kind: 'referencia' },
   'talley': { author: 'Thomas J. Talley', title: 'The Origins of the Liturgical Year', publisher: 'Liturgical Press, 2ª ed., 1991', kind: 'historia' },
   'bradshaw-johnson': { author: 'Paul F. Bradshaw e Maxwell E. Johnson', title: 'The Origins of Feasts, Fasts and Seasons in Early Christianity', publisher: 'Liturgical Press e SPCK, 2011', kind: 'historia' },
@@ -61,6 +63,18 @@ export const WORKS: Record<string, Work> = {
   schurer: { author: 'Emil Schürer (rev. Geza Vermes, Fergus Millar e outros)', title: 'The History of the Jewish People in the Age of Jesus Christ (175 B.C.–A.D. 135)', publisher: 'T&T Clark, 1973–1987', kind: 'historia' },
   grabbe: { author: 'Lester L. Grabbe', title: 'Judaism from Cyrus to Hadrian', publisher: 'Fortress Press, 1992', kind: 'historia' },
   russell: { author: 'D. S. Russell', title: 'Between the Testaments', publisher: 'SCM Press, 1960', kind: 'historia' },
+  'williamson-ezra': { author: 'H. G. M. Williamson', title: 'Ezra, Nehemiah (Word Biblical Commentary 16)', publisher: 'Word Books, 1985', kind: 'referencia' },
+  'blenkinsopp-ezra': { author: 'Joseph Blenkinsopp', title: 'Ezra–Nehemiah: A Commentary (Old Testament Library)', publisher: 'Westminster Press, 1988', kind: 'referencia' },
+  'knoppers-samaritans': { author: 'Gary N. Knoppers', title: 'Jews and Samaritans: The Origins and History of Their Early Relations', publisher: 'Oxford University Press, 2013', kind: 'historia' },
+  'pummer-samaritans': { author: 'Reinhard Pummer', title: 'The Samaritans: A Profile', publisher: 'Eerdmans, 2016', kind: 'historia' },
+  'brown-birth': { author: 'Raymond E. Brown', title: 'The Birth of the Messiah', publisher: 'Doubleday, ed. atualizada, 1993', kind: 'referencia' },
+  'bauckham-jude': { author: 'Richard Bauckham', title: 'Jude and the Relatives of Jesus in the Early Church', publisher: 'T&T Clark, 1990', kind: 'historia' },
+  'mason-josephus-nt': { author: 'Steve Mason', title: 'Josephus and the New Testament', publisher: 'Hendrickson, 2ª ed., 2003', kind: 'historia' },
+  rajak: { author: 'Tessa Rajak', title: 'Josephus: The Historian and His Society', publisher: 'Duckworth, 1983 (2ª ed., 2002)', kind: 'historia' },
+  'goodman-rome': { author: 'Martin Goodman', title: 'Rome and Jerusalem: The Clash of Ancient Civilizations', publisher: 'Allen Lane, 2007', kind: 'historia' },
+  'bartlett-maccabees': { author: 'John R. Bartlett', title: 'The First and Second Books of the Maccabees (Cambridge Bible Commentary)', publisher: 'Cambridge University Press, 1973', kind: 'referencia' },
+  'goldstein-maccabees': { author: 'Jonathan A. Goldstein', title: 'I Maccabees e II Maccabees (Anchor Bible 41 e 41A)', publisher: 'Doubleday, 1976 e 1983', kind: 'referencia' },
+  'schwartz-2mac': { author: 'Daniel R. Schwartz', title: '2 Maccabees (Commentaries on Early Jewish Literature)', publisher: 'De Gruyter, 2008', kind: 'referencia' },
   shaw: { author: 'Ian Shaw (org.)', title: 'The Oxford History of Ancient Egypt', publisher: 'Oxford University Press, 2000', kind: 'historia' },
   richardson: { author: 'Peter Richardson', title: 'Herod: King of the Jews and Friend of the Romans', publisher: 'University of South Carolina Press, 1996', kind: 'referencia' },
   borowski: { author: 'Oded Borowski', title: 'Agriculture in Iron Age Israel', publisher: 'Eisenbrauns, 1987', kind: 'referencia' },
@@ -81,6 +95,7 @@ export const WORKS: Record<string, Work> = {
   'thomson-letters': { author: 'James Thomson', title: 'Letters on the Moral and Religious State of South America', publisher: 'James Nisbet, Londres, 1827 (domínio público, Projeto Gutenberg)', kind: 'historia' },
   'shaw-villa-miseria': { author: 'Mark Shaw', title: 'God in the villa miseria', publisher: 'Christian History, nº 153, 2024', kind: 'historia' },
   'pew-chile-2006': { author: 'Pew Research Center', title: 'Historical Overview of Pentecostalism in Chile', publisher: 'Pew Forum on Religion & Public Life, 2006', kind: 'historia' },
+  'pew-korea-2006': { author: 'Pew Research Center', title: 'Historical Overview of Pentecostalism in South Korea', publisher: 'Pew Forum on Religion & Public Life, 2006', kind: 'historia' },
   'pew-2017': { author: 'Neha Sahgal (Pew Research Center)', title: '500 years after the Reformation, 5 facts about Protestants around the world', publisher: 'Pew Research Center, 2017', kind: 'historia' },
   'hopkins-beard': { author: 'Keith Hopkins e Mary Beard', title: 'The Colosseum', publisher: 'Profile Books e Harvard University Press, 2005', kind: 'historia' },
   futrell: { author: 'Alison Futrell', title: 'The Roman Games: A Sourcebook', publisher: 'Blackwell, 2006', kind: 'historia' },
@@ -200,14 +215,33 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ],
     works: ['beckwith', 'tov', 'dillard-longman', 'bruce-canon'],
   },
-  'entre-os-testamentos': {
+  'da-volta-do-exilio-a-jesus': {
     ancient: [
-      '1 Macabeus 1–4, 8, 9.27 e 13.41, e 2 Macabeus 4–6 e 10 (livros deuterocanônicos, fonte histórica do período)',
-      'Flávio Josefo, Antiguidades Judaicas, livros 11–14, e Guerra dos Judeus, livro 1; Contra Ápion 1.37–43',
-      'Carta de Aristeias (sobre a origem da Septuaginta)',
-      'Salmos de Salomão (séc. I a.C.) e os manuscritos do Mar Morto',
+      'Esdras e Neemias; Ageu, Zacarias e Malaquias; Cilindro de Ciro (Museu Britânico): a volta dos povos exilados',
+      '1 Macabeus 1–4, 7–9, 13–14 e 2 Macabeus 4–6 e 10 (livros deuterocanônicos, fonte histórica do período), e Eclesiástico 38–39',
+      'Flávio Josefo, Antiguidades Judaicas 11.321–324, 13.171–173, 13.254–256, 13.288–311, 13.399–409, 17.42, 18.1–25 e 18.116–119, Guerra dos Judeus 1.673 e 2.118–166 e 4.160–161, e Contra Ápion 1.37–43',
+      'Eusébio de Cesareia, História Eclesiástica 1.7 (Júlio Africano sobre as duas genealogias de Jesus) e 3.12, 3.19–20 (Hegésipo sobre os descendentes de Davi)',
+      'Carta de Aristeias (sobre a origem da Septuaginta), Salmos de Salomão (séc. I a.C.) e os manuscritos do Mar Morto: Regra da Comunidade (1QS), Documento de Damasco e Comentário de Habacuque (1QpHab)',
+      'Fílon de Alexandria, Todo homem bom é livre 75–91, e Plínio, o Velho, História Natural 5.73 (os essênios)',
+      'Mishná, tratado Avot 1.1 (a corrente da tradição)',
     ],
-    works: ['schurer', 'grabbe', 'russell', 'bruce-nt-history', 'ferguson', 'keener-nt'],
+    works: ['williamson-ezra', 'blenkinsopp-ezra', 'schurer', 'grabbe', 'russell', 'sanders-judaism', 'saldarini', 'vanderkam-dss', 'hengel-zealots', 'knoppers-samaritans', 'pummer-samaritans', 'brown-birth', 'bauckham-jude', 'bruce-nt-history', 'jeremias', 'ferguson', 'keener-nt'],
+  },
+  'livros-dos-macabeus': {
+    ancient: [
+      '1 Macabeus e 2 Macabeus (livros deuterocanônicos, em grego; o primeiro foi escrito em hebraico e só chegou em grego)',
+      'Flávio Josefo, Antiguidades Judaicas 12.237–13.214 (o mesmo período, contado de outro modo)',
+    ],
+    works: ['bartlett-maccabees', 'goldstein-maccabees', 'schwartz-2mac', 'schurer', 'grabbe'],
+  },
+  'flavio-josefo': {
+    ancient: [
+      'Flávio Josefo: A Vida; Guerra dos Judeus, livros 1–7; Antiguidades Judaicas, livros 1–20; Contra Ápion, livros 1–2',
+      'Eusébio de Cesareia, História Eclesiástica 1.11 e 3.9–10 (citações de Josefo e o testemunho sobre Jesus)',
+      'Suetônio, Vespasiano 5, e Díon Cássio, História Romana 66.1 (o prisioneiro judeu que anunciou o império a Vespasiano)',
+      'Inscrição de Pilatos, achada em Cesareia (1961), e o ossuário de Caifás, achado em Jerusalém (1990)',
+    ],
+    works: ['mason-josephus-nt', 'rajak', 'goodman-rome', 'schurer', 'bruce-nt-history', 'keener-nt'],
   },
   'teologia-sistematico-carismatica': {
     ancientLabel: 'Documentos consultados',
@@ -216,6 +250,166 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'Descrição da obra no Google Livros e na página da editora Thomas Nelson Brasil',
     ],
     works: ['carvalho-tsc'],
+  },
+  'miller-estevao-apostolos-e-paulo': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Andrew Miller, A História da Igreja: capítulos 3 (De Estêvão ao Apostolado de Paulo), 4 (Os Apóstolos e os Pioneiros), 5 (As Duas Primeiras Viagens de Paulo) e 6 (A Terceira Viagem de Paulo), páginas 49 a 162 da tradução de 2022',
+      'Everett Ferguson, História da Igreja, volume 1: capítulo 2 (Jesus e os primórdios da Igreja), p. 28–44, para conferir cinco pontos de Miller',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'miller-roma-e-as-perseguicoes': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Andrew Miller, A História da Igreja: capítulos 7 (Roma e Seus Governantes, 64–177), 8 (A História Interna da Igreja, 107–245) e 9 (De Cômodo à Ascensão de Constantino, 180–313), páginas 163 a 248 da tradução de 2022',
+      'Everett Ferguson, História da Igreja, volume 1: capítulos 4 (A Igreja e o Império), 6 (monepiscopado e cânon) e 9 (perseguições do século III), para conferir seis pontos de Miller',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'miller-constantino-e-os-concilios': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Andrew Miller, A História da Igreja: capítulos 10 (O Período de Pérgamo, 313–606), 11 (Roma e Seus Governantes, 313–397) e 12 (A História Interna da Igreja, 245–451), páginas 249 a 330 da tradução de 2022',
+      'Everett Ferguson, História da Igreja, volume 1: capítulos 8 (iniciação cristã), 10 e 11 (Constantino, Niceia, Atanásio, Ambrósio) e 14 (Pelágio), para conferir sete pontos de Miller',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'miller-gregorio-o-islamismo-e-carlos-magno': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Andrew Miller, A História da Igreja: capítulos 13 (Roma e a Expansão de Sua Influência, 397–590), 14 (Europa, 372–814), 15 (Islamismo e Iconoclastia, 569–741) e 16 (Europa, 653–855), páginas 331 a 422 da tradução de 2022',
+      'Everett Ferguson, História da Igreja, volume 1: capítulos 16 a 19 (Gregório, o Grande; igrejas orientais; Ocidente do século VII ao IX; Doação de Constantino), para conferir oito pontos de Miller',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'miller-gregorio-vii-e-as-cruzadas': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Andrew Miller, A História da Igreja: capítulos 17 (Europa, 814–1000), 18 (Europa, 1000–1110), 19 (O Papa Gregório VII, 1049–1085) e 20 (As Cruzadas, 1093–1213), páginas 423 a 496 da tradução de 2022',
+      'Everett Ferguson, História da Igreja, volume 1: capítulos 19 e 20 (declínio e renovação no Ocidente, reforma papal e Primeira Cruzada), para conferir sete pontos de Miller',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'miller-bernardo-becket-e-inocencio-iii': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Andrew Miller, A História da Igreja: capítulos 21 (Roma, 1106–1190), 22 (Inglaterra, 1162–1174), 23 (A Teologia de Roma) e 24 (O Papa Inocêncio III, 1190–1216), páginas 497 a 586 da tradução de 2022',
+      'Everett Ferguson, História da Igreja, volume 1: capítulos 20 a 23 (reforma papal e Concordata de Worms, Escolástica, século XII e Inocêncio III), para conferir dez pontos de Miller',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'miller-albigenses-inquisicao-e-frades': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Andrew Miller, A História da Igreja: capítulos 25 (França, 814–1229) e 26 (A Ordem Monástica, 480–1275), páginas 587 a 652 da tradução de 2022',
+      'Everett Ferguson, História da Igreja, volume 1: capítulos 16, 23 e 24 (Bento de Núrsia, ordens mendicantes, valdenses, cátaros, cruzada albigense e Inquisição), para conferir nove pontos de Miller',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'miller-declinio-do-papado-e-wycliffe': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Andrew Miller, A História da Igreja: capítulos 27 (O Amanhecer da Reforma, 1155–1386), 28 (O Declínio do Poder Papal, 1216–1314), 29 (Os Precursores da Reforma, 1150–1594) e 30 (O Testemunho e o Triunfo de Wycliffe, 1324–1417), páginas 653 a 723 da tradução de 2022',
+      'Everett Ferguson, História da Igreja, volume 1: capítulos 23 e 24 (Frederico II, Luís IX, Carlos de Anjou, Bonifácio VIII, Avignon e escolásticos), para conferir os pontos de Miller que o volume alcança',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'miller-hus-gutenberg-e-os-ultimos-precursores': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Andrew Miller, A História da Igreja: capítulos 31 (Boêmia, 1409–1471) e 32 (A Palavra de Deus Impressa, 1397–1516), páginas 724 a 783 da tradução de 2022',
+      'Everett Ferguson, História da Igreja, volume 1: consultado para esta parte, mas o volume termina no século XIII e início do XIV e não cobre o período',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'historia-da-igreja-everett-ferguson': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Everett Ferguson, História da Igreja, volume 1 (Central Gospel, 2017): prefácio e capítulos 1 a 3, páginas 21 a 65',
+      'Andrew Miller, A História da Igreja: capítulos 1 a 6, para comparar alguns pontos',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'ferguson-perseguicoes-heresias-e-canon': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Everett Ferguson, História da Igreja, volume 1 (Central Gospel, 2017): capítulos 4 a 6, páginas 66 a 139',
+      'Andrew Miller, A História da Igreja: capítulos 7 a 9, para comparar as perseguições',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'ferguson-pais-da-igreja-e-terceiro-seculo': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Everett Ferguson, História da Igreja, volume 1 (Central Gospel, 2017): capítulos 7 a 9, páginas 140 a 204',
+      'Andrew Miller, A História da Igreja: capítulos 9 e 12, para comparar o batismo e as perseguições',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'ferguson-constantino-e-o-quarto-seculo': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Everett Ferguson, História da Igreja, volume 1 (Central Gospel, 2017): capítulos 10 e 11, páginas 205 a 265',
+      'Andrew Miller, A História da Igreja: capítulos 10 a 12, para comparar Constantino e os concílios',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'ferguson-monges-cristologia-e-agostinho': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Everett Ferguson, História da Igreja, volume 1 (Central Gospel, 2017): capítulos 12 a 14, páginas 266 a 338',
+      'Andrew Miller, A História da Igreja: capítulo 12, para comparar monges, Pelágio e Nestório',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'ferguson-migracoes-papado-e-igrejas-orientais': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Everett Ferguson, História da Igreja, volume 1 (Central Gospel, 2017): capítulos 15 a 17, páginas 339 a 419',
+      'Andrew Miller, A História da Igreja: capítulos 13 a 16, para comparar Gregório, os paulicianos e a iconoclastia',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'ferguson-ocidente-medieval-e-cruzadas': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Everett Ferguson, História da Igreja, volume 1 (Central Gospel, 2017): capítulos 18 a 20, páginas 420 a 509',
+      'Andrew Miller, A História da Igreja: capítulos 17 a 20, para comparar Canossa, Urbano II e os Templários',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'ferguson-escolastica-cister-e-seculo-xii': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Everett Ferguson, História da Igreja, volume 1 (Central Gospel, 2017): capítulos 21 e 22, páginas 510 a 564',
+      'Andrew Miller, A História da Igreja: capítulos 21 a 24, para comparar Bernardo, Abelardo, Becket e os sacramentos',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'ferguson-inocencio-iii-frades-e-aquino': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Everett Ferguson, História da Igreja, volume 1 (Central Gospel, 2017): capítulo 23, páginas 565 a 602',
+      'Andrew Miller, A História da Igreja: capítulos 25 e 26, para comparar Domingos, Francisco e a Inquisição',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'ferguson-presagios-de-declinio-e-fim-da-idade-media': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Everett Ferguson, História da Igreja, volume 1 (Central Gospel, 2017): capítulo 24, páginas 603 a 632',
+      'Andrew Miller, A História da Igreja: capítulos 27 a 30, para comparar Celestino V, Bonifácio VIII e Avinhão',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
+  },
+  'historia-da-igreja-andrew-miller': {
+    ancientLabel: 'Partes lidas',
+    ancient: [
+      'Andrew Miller, A História da Igreja: prefácio, introdução e capítulos 1 (Verdades Fundamentais) e 2 (De Pentecostes ao Martírio de Estêvão), páginas 3 a 48 da tradução de 2022. Os capítulos 3 a 32 só foram vistos pelo sumário',
+      'Everett Ferguson, História da Igreja, volume 1: o uso do título “papa” e a ascensão do bispo de Roma (p. 357–358), só para conferir as notas de Miller',
+    ],
+    works: ['miller-historia-igreja', 'ferguson-historia-igreja'],
   },
   'manual-do-diacono': {
     ancientLabel: 'Partes lidas',
@@ -276,16 +470,6 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ],
     works: ['ddd', 'day-gods', 'walton-at', 'ndb', 'keener-nt'],
   },
-  'grupos-do-tempo-de-jesus': {
-    ancient: [
-      'Flávio Josefo, Antiguidades Judaicas 13.171–173, 13.288–298, 13.311, 13.399–409, 17.42 e 18.4–25, e Guerra dos Judeus 2.118–166 e 4.160–161',
-      '1 Macabeus 2.24–27, 2.42 e 7.12–16, e Eclesiástico 38–39 (livros deuterocanônicos, fontes históricas do período)',
-      'Fílon de Alexandria, Todo homem bom é livre 75–91, e Plínio, o Velho, História Natural 5.73 (os essênios)',
-      'Manuscritos do Mar Morto: Regra da Comunidade (1QS), Documento de Damasco e Comentário de Habacuque (1QpHab)',
-      'Mishná, tratado Avot 1.1 (a corrente da tradição)',
-    ],
-    works: ['schurer', 'sanders-judaism', 'saldarini', 'vanderkam-dss', 'hengel-zealots', 'jeremias', 'ferguson'],
-  },
   'a-familia-de-herodes': { ancient: ['Flávio Josefo, Antiguidades Judaicas, livros 14–20 (em especial 16.290, a carta de Augusto), e Guerra dos Judeus, livros 1–2', 'Tácito, Anais 15.44, e a inscrição de Pilatos, achada em Cesareia'], works: ['richardson', 'bruce-nt-history', 'keener-nt'] },
   'dinheiro-e-salarios': { ancient: ['Moedas antigas (denário, siclo de Tiro, leptos) estudadas pela numismática'], works: ['hendin', 'jeremias', 'keener-nt'] },
   'o-templo-de-herodes': {
@@ -342,7 +526,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'constantino-e-os-concilios': { ancient: ['Eusébio, Vida de Constantino', 'O Credo de Niceia (325) e o de Constantinopla (381)'], works: ['kelly', 'gonzalez', 'noll'] },
   'idade-media': { ancient: ['Regra de São Bento (séc. VI)'], works: ['gonzalez', 'cairns', 'noll'] },
   'pre-reformadores': { ancient: ['Jan Hus, Da Igreja (1413)', 'Erasmo de Roterdã, Novum Instrumentum (1516)'], works: ['gonzalez', 'cairns', 'george'] },
-  'reforma-protestante': { ancient: ['Martinho Lutero, as 95 Teses (1517)', 'Discurso de Lutero na Dieta de Worms (1521)'], works: ['bainton', 'george', 'gonzalez'] },
+  'reforma-protestante': { ancient: ['Martinho Lutero, as 95 Teses (1517)', 'Discurso de Lutero na Dieta de Worms (1521)', 'Christian History Institute (“1521: The Diet of Worms”): a resposta de Lutero em 18 de abril de 1521; as fontes divergem sobre o dia da primeira audiência (17 ou 16 a 18)', 'Encyclopaedia Britannica: Martin Luther, a viagem a Eisleben e a morte em 18 de fevereiro de 1546'], works: ['bainton', 'george', 'gonzalez'] },
   reformadores: { ancient: ['João Calvino, Institutas da Religião Cristã (1536–1559)', 'Confissão de Schleitheim (1527), dos anabatistas'], works: ['george', 'gonzalez', 'cairns'] },
   'reforma-inglesa': { ancient: ['Ato de Supremacia (1534)', 'Confissão de Fé de Westminster (1646)'], works: ['ryken', 'daniell', 'gonzalez'] },
   contrarreforma: { ancient: ['Cânones e decretos do Concílio de Trento (1545–1563)'], works: ['omalley', 'gonzalez', 'noll'] },
@@ -364,6 +548,11 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'Folha de Boa Vista: os 100 anos da Assembleia de Deus em Roraima',
       'Histórias das igrejas e convenções estaduais (Amapá, Roraima, Maranhão/CEADEMA, Bahia, Goiás/Jornal Opção, Brasília) e Portal CADB',
       'IBGE: Censos demográficos de 2000 e 2010 (religião)',
+      '“O campo religioso em Belém do Pará: reflexões sobre o evento fundador da Igreja Assembleia de Deus no Brasil”, Revista Mneme (UFRN)',
+      '“O campo religioso brasileiro, o Estado republicano e a implantação da Assembleia de Deus em 1911”, Revista Religare (UFPB)',
+      '“Eurico Alfredo Nelson (1862–1939) e a inserção dos batistas em Belém do Pará” (Universidade Metodista de São Paulo)',
+      'Eric Alfred Nelson: the first Baptist missionary on the Amazon, 1891–1939 (Texas Christian University)',
+      'Wikipédia: Brazilian Baptist Convention (a origem e a Convenção de 1907)',
     ],
     works: ['conde', 'araujo-dicionario', 'araujo-100', 'vingren-diario', 'berg-enviado', 'freston', 'alencar'],
   },
@@ -383,8 +572,53 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   },
   'avivamento-da-coreia': {
     ancientLabel: 'Documentos e sites consultados',
-    ancient: ['Wikipédia: Pyongyang Revival (en.wikipedia.org)', 'Relatos dos missionários Robert A. Hardie e William Blair', 'The Gospel Coalition: “The North Korean revival of 1907”'],
-    works: ['lee-korea', 'orr-fervent', 'noll'],
+    ancient: [
+      'Wikipédia: Pyongyang Revival (en.wikipedia.org)',
+      'Relatos dos missionários Robert A. Hardie e William Blair',
+      'The Gospel Coalition: “The North Korean revival of 1907”',
+      'Pew Research Center (2006): Historical Overview of Pentecostalism in South Korea',
+      'Wikipédia (en): Christianity in Korea; Yoido Full Gospel Church; Youngnak Presbyterian Church; May 16 coup; 1979 South Korean coup d’état; Gwangju Uprising; Minjung theology; National Council of Churches in Korea; June Democratic Struggle; 2024 South Korean martial law crisis; Chu Ki-chol; Kosin Presbyterian Church in Korea; State Shinto',
+      'Timothy S. Lee, Born Again: Evangelicalism in Korea (University of Hawai‘i Press, 2010), p. 58: o culto sob o xintoísmo e o fim das igrejas livres em 1945, pelo trecho citado no blog Far Outliers; o livro não foi lido',
+      'Encyclopaedia Britannica: Chu Ki-chol (morte em 21 de abril de 1944)',
+      'Wikipédia (en), sobre a Coreia do Norte: Religion in North Korea; Freedom of religion in North Korea; Persecution of Christians in North Korea; Bongsu Church; Chilgol Church; Changchung Cathedral; Korean Christian Federation; Juche; Kim Il Sung; Kim Jong Il; Kim Jong Un; Jang Song-thaek; Kim Jong-nam; August faction incident',
+      'Billy Graham Library e Wikipédia (en), lista das cruzadas de Billy Graham: Seul, 1973; Christianity Today (1973): relatos da cruzada de Seul e do Explo ’74',
+      'Adrian Jonas Gasser Monterrubio, “May God protect Korea from the deluge”: análise do apoio protestante a Yoon Suk Yeol (Graduate Institute, Genebra, 2025); só o resumo foi lido',
+      'AFP, via Arab News (19/02/2026): condenação de Yoon Suk Yeol; Don Baker, “Why were they arrested? Religious leaders and the Gwangju democratization movement” (Royal Asiatic Society Korea Branch, 2023)',
+      'Korea Times (2026) e USC Center for Religion and Civic Culture: a fundação da Igreja Youngnak, em 1945',
+      'Wikimedia Commons: as fotos do estudo, cada uma com a licença conferida na página do arquivo (domínio público, CC BY-SA ou licença aberta do governo coreano, KOGL Tipo 1)',
+    ],
+    works: ['lee-korea', 'orr-fervent', 'noll', 'pew-korea-2006'],
+  },
+  'avivamentos-na-biblia': {
+    ancientLabel: 'Textos consultados',
+    ancient: ['A Bíblia (Almeida), citada ao longo do texto: Gênesis 35, Josué 24, 1 Samuel 7, 2 Crônicas 15–17 e 29–34, 2 Reis 22–23, Neemias 8–9, Ageu 1, Jonas 3, Atos e as cartas aos tessalonicenses e aos coríntios'],
+    works: ['dillard-longman', 'thiele', 'walton-at', 'keener-nt', 'bruce-nt-history'],
+  },
+  'marcas-de-um-avivamento': {
+    ancientLabel: 'Documentos consultados',
+    ancient: ['Jonathan Edwards, The Distinguishing Marks of a Work of the Spirit of God (1741), pelas referências e resumos; o texto inteiro não foi lido', 'Os estudos de avivamento deste app, dos quais vêm todos os exemplos'],
+    works: ['orr-fervent', 'edwards-revival', 'noll', 'evans-welsh', 'campbell-lewis', 'ward-east-africa'],
+  },
+  'a-geracao-que-nao-conheceu-o-senhor': {
+    ancientLabel: 'Documentos e sites consultados',
+    ancient: [
+      'A Bíblia (Almeida), citada ao longo do texto: Josué 24, Juízes 2 e 10–11, 2 Reis 21–23, 2 Crônicas 17, 24 e 33, Deuteronômio 4, 6 e 31, Salmo 78, Provérbios 1 e 31, Efésios 6, 2 Timóteo 1 e 3, Atos 10, 16 e 17',
+      'John Wesley, Thoughts Upon Methodism (1786), na edição de Thomas Jackson (vol. 13); a frase foi conferida em citações de fontes metodistas, e a tradução é livre',
+      'Christianity Today e Encyclopaedia Britannica: o Pacto pela Metade (1662) e a demissão de Jonathan Edwards de Northampton (22 de junho de 1750); Yale Jonathan Edwards Studies: novas leituras da demissão',
+      'Christian History Institute (“Like Mother, Like Son”) e Epworth Old Rectory: Susanna Wesley e as reuniões da cozinha, em 1712; os relatos variam nos números',
+      'CGADB: Estatuto Social, versões de 2023 e de 2025 (art. 5º e 8º), com a exigência de observar a Declaração de Fé das Assembleias de Deus; os estudos do app sobre as Assembleias de Deus, de onde vêm os fatos da igreja',
+    ],
+    works: ['dillard-longman', 'walton-at', 'thiele', 'edwards-revival', 'keener-nt', 'conde', 'synan', 'alencar'],
+  },
+  'a-palavra-no-coracao': {
+    ancientLabel: 'Textos e registros consultados',
+    ancient: [
+      'A Bíblia (Almeida), citada ao longo do texto: Gênesis 2 e 3, Êxodo 20, Deuteronômio 4 e 6, Salmos 91 e 119, Provérbios 7, 22 e 30, Isaías 8 e 53, Oseias 4, Mateus 4 e 5, Lucas 23, Atos 8, Gálatas 1, 2 Timóteo 3, Hebreus 5, 2 Pedro 3, Apocalipse 22',
+      'Wikipédia (en): Wicked Bible, a edição de 1631 da Bíblia do rei Jaime que omitiu o “não” de Êxodo 20.14; as fontes divergem quanto ao valor da multa, por isso o texto não o cita',
+      'Lista VERSE_FIXES de tools/gerar-almeida.py: as 23 correções de erros de digitação feitas no texto digital da Almeida do app, de onde vêm os exemplos',
+      'Os estudos do app Os Manuscritos da Bíblia e A Bíblia em Português, sobre a preservação do texto e as diferenças entre traduções',
+    ],
+    works: ['carson-moo', 'dillard-longman', 'keener-nt', 'ndb'],
   },
   'avivamento-da-africa-oriental': {
     ancientLabel: 'Documentos e sites consultados',

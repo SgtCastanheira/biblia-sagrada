@@ -1,0 +1,247 @@
+// Página de jornal do sermão: título do jornal em filetes, manchete, autoria, ferramentas e texto em colunas.
+:host {
+  display: block;
+}
+
+.paper {
+  padding: 18px 18px 22px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent-gold) 4%, var(--mat-sys-surface));
+  box-shadow: var(--shadow-soft);
+}
+
+@media (min-width: 840px) {
+  .paper {
+    padding: 26px 40px 30px;
+  }
+}
+
+// Título do jornal
+.masthead {
+  text-align: center;
+  border-top: 4px double var(--mat-sys-on-surface);
+}
+
+.name {
+  margin: 0;
+  padding: 12px 0 10px;
+  font: 800 clamp(28px, 6.4vw, 56px) / 1.05 var(--heading-font);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--mat-sys-on-surface);
+}
+
+.dateline {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 7px 0;
+  border-top: 1px solid var(--mat-sys-on-surface);
+  border-bottom: 3px double var(--mat-sys-on-surface);
+  font: 600 13px / 1.4 Inter, sans-serif;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+// Manchete
+.head {
+  padding: 22px 0 6px;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  font: 700 13px Inter, sans-serif;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+h1 {
+  margin: 0 0 12px;
+  font: 800 clamp(36px, 7vw, 64px) / 1.04 var(--heading-font);
+  letter-spacing: -0.02em;
+  color: var(--mat-sys-on-surface);
+}
+
+.deck {
+  max-width: 34em;
+  margin: 0 0 16px;
+  font: italic 400 clamp(18px, 2.6vw, 23px) / 1.4 var(--reading-font);
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.byline {
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--mat-sys-outline-variant);
+  font: 500 14px Inter, sans-serif;
+  letter-spacing: 0.3px;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.byline strong {
+  color: var(--mat-sys-on-surface);
+}
+
+.sep {
+  margin: 0 4px;
+}
+
+// Idioma, ouvir e tamanho da letra
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin: 16px 0 14px;
+  padding: 10px 0;
+  border-top: 1px solid var(--mat-sys-outline-variant);
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+}
+
+.langs {
+  display: flex;
+  gap: 6px;
+  flex: 1 1 100%;
+  min-width: 0;
+  padding: 2px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.langs button {
+  flex: none;
+}
+
+@media (min-width: 840px) {
+  .langs {
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+
+.langs button,
+.listen {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: 8px;
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: 500 14px Inter, sans-serif;
+  cursor: pointer;
+}
+
+.langs button.on {
+  border-color: var(--accent-gold);
+  background: color-mix(in srgb, var(--accent-gold) 16%, var(--mat-sys-surface));
+  font-weight: 700;
+}
+
+.listen {
+  border-color: var(--mat-sys-primary);
+  background: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+  font-weight: 600;
+}
+
+.listen:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.listen mat-icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--mat-sys-primary);
+  outline-offset: 2px;
+}
+
+.actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.translation {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--accent-gold);
+  background: var(--mat-sys-surface-container);
+  font: 400 13px / 1.5 Inter, sans-serif;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.translation mat-icon {
+  flex: none;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: var(--accent-gold);
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.skeleton span {
+  height: 14px;
+  border-radius: 7px;
+  background: var(--mat-sys-surface-container);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.skeleton .short {
+  width: 60%;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton span {
+    animation: none;
+  }
+}
+
+.empty {
+  color: var(--mat-sys-on-surface-variant);
+}
+
+// Rodapé do jornal
+.colophon {
+  margin-top: 24px;
+  padding-top: 10px;
+  border-top: 3px double var(--mat-sys-on-surface);
+  font: 400 13px / 1.55 Inter, sans-serif;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.colophon p {
+  margin: 0 0 4px;
+}
+
+.colophon a {
+  color: var(--mat-sys-primary);
+}

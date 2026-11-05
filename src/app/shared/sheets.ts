@@ -1,12 +1,14 @@
 import { inject, Injectable } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetConfig } from '@angular/material/bottom-sheet';
 import { firstValueFrom } from 'rxjs';
+import type { ShareCard } from '../core/share-card';
 import { ChapterSheet, ChapterSheetData } from './chapter-sheet';
 import { DevotionalConfigSheet } from './devotional-config-sheet';
 import { DictionarySheet } from './dictionary-sheet';
 import { ImportSheet, ImportSheetData } from './import-sheet';
 import { PassageSheet } from './passage-sheet';
 import { ReadingSettingsSheet } from './reading-settings';
+import { ShareSheet } from './share-sheet';
 import { VersionSheet, VersionSheetData } from './version-sheet';
 import { VerseSheet, VerseSheetData } from './verse-sheet';
 
@@ -38,13 +40,18 @@ export class Sheets {
   }
 
   /** Texto de uma referência citada num estudo ("Jo 3.16"). */
-  passage(refs: string): void {
-    this.bottomSheet.open(PassageSheet, { ...this.config, data: refs });
+  passage(refs: string, version?: string): void {
+    this.bottomSheet.open(PassageSheet, { ...this.config, data: { refs, version } });
   }
 
   /** Verbete do dicionário. */
   dictionary(entryId: string, verse?: { bookId: string; chapter: number; verse: number }): void {
     this.bottomSheet.open(DictionarySheet, { ...this.config, data: { id: entryId, verse } });
+  }
+
+  /** Imagem para compartilhar no WhatsApp e no Instagram, com o assunto, os tópicos, o endereço e o QR code. */
+  shareImage(card: ShareCard): void {
+    this.bottomSheet.open(ShareSheet, { ...this.config, data: card });
   }
 
   readingSettings(): void {

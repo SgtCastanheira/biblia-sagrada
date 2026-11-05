@@ -1,0 +1,343 @@
+// Prévia para o autor aprovar: faixa de aviso, passos, o jornal, as mudanças do editor e a decisão.
+:host {
+  display: block;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 8px;
+}
+
+.banner {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+  font: 400 14px / 1.5 Inter, sans-serif;
+}
+
+.banner mat-icon {
+  flex: none;
+  margin-top: 2px;
+}
+
+.banner div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.banner strong {
+  font: 700 17px var(--heading-font);
+}
+
+.banner a {
+  color: inherit;
+  font-weight: 600;
+}
+
+.banner code {
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgb(255 255 255 / 0.18);
+  font: 600 13px ui-monospace, monospace;
+}
+
+.steps {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 16px;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+@media (min-width: 840px) {
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.steps li {
+  counter-increment: step;
+  padding: 12px 14px 12px 46px;
+  position: relative;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: 12px;
+  background: var(--mat-sys-surface-container-low);
+  font: 400 14px / 1.5 Inter, sans-serif;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  color: var(--mat-sys-surface);
+  font: 700 13px Inter, sans-serif;
+}
+
+.steps a,
+.lead a {
+  color: var(--mat-sys-primary);
+  font-weight: 600;
+}
+
+.status {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--accent-gold);
+  background: color-mix(in srgb, var(--accent-gold) 12%, var(--mat-sys-surface));
+  font: 600 14px / 1.45 Inter, sans-serif;
+}
+
+.status mat-icon {
+  flex: none;
+  color: var(--accent-gold);
+}
+
+h2 {
+  margin: 0 0 4px;
+  font: 700 26px / 1.2 var(--heading-font);
+}
+
+.lead {
+  margin: 0 0 12px;
+  font: 400 15px / 1.55 Inter, sans-serif;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+code {
+  font: 600 13px ui-monospace, monospace;
+}
+
+// O que o editor mudou
+.changes,
+.decide {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 3px double var(--mat-sys-on-surface);
+}
+
+.kind {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 22px 0 2px;
+  font: 700 18px var(--heading-font);
+}
+
+.kind mat-icon {
+  color: var(--accent-gold);
+}
+
+.kind .n {
+  padding: 0 8px;
+  border-radius: 10px;
+  background: var(--mat-sys-surface-container-high);
+  font: 600 13px Inter, sans-serif;
+}
+
+.hint {
+  margin: 0 0 8px;
+  font: 400 14px / 1.45 Inter, sans-serif;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.change {
+  margin: 0 0 10px;
+  padding: 12px 16px 4px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 10px;
+  background: var(--mat-sys-surface-container-low);
+}
+
+.change h4 {
+  margin: 0 0 6px;
+  font: 700 16px var(--heading-font);
+}
+
+.change dl {
+  margin: 0;
+}
+
+.change dl > div {
+  margin-bottom: 10px;
+}
+
+.change dt {
+  font: 700 13px Inter, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.change dd {
+  margin: 2px 0 0;
+  font: 400 15px / 1.55 var(--reading-font);
+}
+
+.change dd.orig {
+  font-style: italic;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+// Decisão
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 0 14px;
+  font: 600 14px Inter, sans-serif;
+}
+
+.field input,
+.field textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--mat-sys-outline);
+  border-radius: 10px;
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: 400 16px / 1.5 Inter, sans-serif;
+}
+
+.field input {
+  min-height: 44px;
+}
+
+.check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: 10px;
+  font: 500 15px / 1.5 Inter, sans-serif;
+  cursor: pointer;
+}
+
+.check input {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin: 1px 0 0;
+  accent-color: var(--mat-sys-primary);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.buttons .primary,
+.buttons .ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 24px;
+  font: 600 15px Inter, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buttons .primary {
+  border: 1px solid var(--mat-sys-primary);
+  background: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+}
+
+.buttons .ghost {
+  border: 1px solid var(--mat-sys-primary);
+  background: none;
+  color: var(--mat-sys-primary);
+}
+
+.buttons button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--mat-sys-primary);
+  outline-offset: 2px;
+}
+
+.sent {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--accent-gold);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent-gold) 10%, var(--mat-sys-surface));
+}
+
+.sent h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font: 700 17px var(--heading-font);
+}
+
+.sent h3 mat-icon {
+  color: var(--accent-gold);
+}
+
+.sent p {
+  margin: 0 0 8px;
+  font: 400 14px / 1.5 Inter, sans-serif;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.sent pre {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--mat-sys-surface-container);
+  font: 400 14px / 1.5 Inter, sans-serif;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.invalid {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.invalid mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+.invalid h1 {
+  margin: 0;
+  font: 700 24px var(--heading-font);
+  color: var(--mat-sys-on-surface);
+}

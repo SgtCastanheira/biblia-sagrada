@@ -2,7 +2,7 @@ Quando Jesus e os apóstolos citavam as Escrituras, muitas vezes não usavam o h
 
 ## Por que uma Bíblia em Grego?
 
-Depois das conquistas de Alexandre, o Grande, o grego se tornou a língua de todo o mundo antigo (a história está em *Os 400 Anos entre os Testamentos*). Alexandre fundou, em 331 a.C., a cidade de **Alexandria**, no Egito, que logo virou o maior centro de estudo do mundo, com a sua famosa biblioteca. Para lá foram muitos judeus, formando uma das maiores comunidades judaicas fora de Israel.
+Depois das conquistas de Alexandre, o Grande, o grego se tornou a língua de todo o mundo antigo (a história está em *Da Volta do Exílio a Jesus*). Alexandre fundou, em 331 a.C., a cidade de **Alexandria**, no Egito, que logo virou o maior centro de estudo do mundo, com a sua famosa biblioteca. Para lá foram muitos judeus, formando uma das maiores comunidades judaicas fora de Israel.
 
 Os filhos e netos desses judeus nasceram em terra grega, falavam grego e muitos já não entendiam o hebraico. Mas ainda queriam ouvir a Lei nas sinagogas aos sábados. A solução natural foi **traduzir as Escrituras**. É a mesma razão pela qual, hoje, a Bíblia é traduzida: as pessoas precisam entender o que ouvem.
 
@@ -108,7 +108,7 @@ Os **Manuscritos do Mar Morto**, achados em 1947, deram um resultado surpreenden
 - 1935 | Edição de Rahlfs | A edição crítica moderna da Septuaginta
 :::
 
-:::leia entre-os-testamentos
+:::leia da-volta-do-exilio-a-jesus
 O mundo em que a tradução nasceu: Alexandre, os Ptolomeus do Egito e a grande comunidade judaica de Alexandria.
 :::
 

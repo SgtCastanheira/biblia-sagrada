@@ -10,7 +10,7 @@ Tudo começou em Belém. Antes de ser a igreja de um país inteiro, a Assembleia
 
 ## De Onde Vieram os Fundadores
 
-Gunnar Vingren e Daniel Berg eram suecos que moravam nos Estados Unidos. Depois de uma profecia que falava de um lugar chamado “Pará”, partiram de Nova York e chegaram a Belém em **19 de novembro de 1910**. Foram acolhidos pela Igreja Batista de Belém; Berg trabalhava como fundidor para sustentar os dois, e Vingren estudava português.
+Gunnar Vingren e Daniel Berg eram suecos que moravam nos Estados Unidos. Depois de uma profecia que falava de um lugar chamado “Pará”, partiram de Nova York e chegaram a Belém em **19 de novembro de 1910**. Foram acolhidos pela Igreja Batista de Belém, onde ficaram sete meses; Berg trabalhava como fundidor para sustentar os dois, e Vingren estudava português.
 
 :::cena Rua Siqueira Mendes, 67 · 2 de junho de 1911
 Numa casa da Cidade Velha, uma irmã batista ora durante a noite. Celina de Albuquerque é a primeira a receber o batismo no Espírito Santo em Belém.
@@ -19,6 +19,10 @@ Numa casa da Cidade Velha, uma irmã batista ora durante a noite. Celina de Albu
 ## Os Primeiros Dias
 
 A experiência pentecostal dividiu a igreja batista. Em **13 de junho de 1911**, os que a aceitaram foram excluídos e, no dia **18 de junho**, um domingo, se reuniram na casa de Celina como **Missão da Fé Apostólica**. Em 1918, a igreja foi registrada como Assembleia de Deus.
+
+:::leia assembleia-de-deus-no-brasil
+Por que a igreja batista de Belém acolheu os suecos e depois os excluiu, e como a igreja se espalhou do Pará para o resto do país.
+:::
 
 ## A Mensagem se Espalha pelo Pará
 

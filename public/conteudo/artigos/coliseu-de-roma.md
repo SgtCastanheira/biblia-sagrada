@@ -11,9 +11,9 @@ Não temas o que hás de padecer. […] Sê fiel até a morte, e dar-te-ei a cor
 
 Onde hoje está o Coliseu havia um lago. Depois do grande incêndio de 64, o imperador Nero tomou boa parte da área e construiu ali a sua Casa Dourada, com jardins, um lago e uma estátua de bronze de si mesmo, o Colosso. Nero morreu em 68, e os imperadores seguintes quiseram devolver o lugar ao povo. Vespasiano mandou aterrar o lago e, por volta de 70 a 72, começou a levantar um anfiteatro no meio da cidade.
 
-Quem pagou? Uma inscrição reconstituída no local diz que o imperador mandou erguer o anfiteatro com a parte do butim que lhe cabia como general. A explicação mais aceita liga esse butim à guerra judaica: em 70, as legiões comandadas por Tito, filho de Vespasiano, tomaram Jerusalém e queimaram o Templo, e o ouro e os objetos do santuário foram levados para Roma. Era o que Jesus tinha dito aos discípulos, quando lhe mostraram os edifícios: “não se deixará aqui pedra sobre pedra que não seja derribada” ([[Mt 24.1-2]]). No Arco de Tito, no Fórum, um relevo mostra soldados carregando o candelabro de sete braços.
-
 ![Soldados romanos carregam o candelabro do Templo, em relevo no Arco de Tito](imagens/arco-de-tito-menora.jpg "O candelabro de sete braços do Templo de Jerusalém, levado por soldados romanos no desfile da vitória de 70, em relevo no Arco de Tito, no Fórum de Roma. Foto de Laurel Lodged, domínio público, via Wikimedia Commons.")
+
+Quem pagou? Uma inscrição reconstituída no local diz que o imperador mandou erguer o anfiteatro com a parte do butim que lhe cabia como general. A explicação mais aceita liga esse butim à guerra judaica: em 70, as legiões comandadas por Tito, filho de Vespasiano, tomaram Jerusalém e queimaram o Templo, e o ouro e os objetos do santuário foram levados para Roma. Era o que Jesus tinha dito aos discípulos, quando lhe mostraram os edifícios: “não se deixará aqui pedra sobre pedra que não seja derribada” ([[Mt 24.1-2]]). No Arco de Tito, no Fórum, um relevo mostra soldados carregando o candelabro de sete braços.
 
 :::leia o-templo-de-herodes
 O Templo cujo ouro foi para Roma: como era por dentro, quem o construiu e o que as suas pedras diziam.
@@ -83,9 +83,9 @@ Quando o Estado passou a ser cristão, a arena perdeu o apoio. Em 399 e de novo 
 
 Os combates de gladiadores deixam de ser citados por volta de 435. As caçadas de animais duraram mais: a última de que se tem notícia é de 523, quando um cônsul, Anício Máximo, deu jogos de feras e o rei Teodorico criticou o custo.
 
-O resto foi obra do tempo. Terremotos abalaram a estrutura, e séculos de saque de pedra a desfiguraram. No fim do século VI, havia uma pequena capela e um cemitério dentro da arena; nos arcos, casas e oficinas, alugadas até o século XII. Por volta de 1200, a família Frangipani a transformou em fortaleza. Em 1349, um grande terremoto derrubou o lado sul, e a pedra caída foi parar em palácios, igrejas e hospitais de Roma.
-
 ![O Coliseu em ruínas, gravura de Giovanni Battista Piranesi](imagens/coliseu-piranesi.jpg "O Coliseu em ruínas, numa gravura de Giovanni Battista Piranesi (1776), da série Vistas de Roma. The Metropolitan Museum of Art, CC0, via Wikimedia Commons.") {larga}
+
+O resto foi obra do tempo. Terremotos abalaram a estrutura, e séculos de saque de pedra a desfiguraram. No fim do século VI, havia uma pequena capela e um cemitério dentro da arena; nos arcos, casas e oficinas, alugadas até o século XII. Por volta de 1200, a família Frangipani a transformou em fortaleza. Em 1349, um grande terremoto derrubou o lado sul, e a pedra caída foi parar em palácios, igrejas e hospitais de Roma.
 
 :::tempo
 - 64 | Incêndio de Roma | Nero toma a área e constrói a Casa Dourada.

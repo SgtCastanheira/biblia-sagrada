@@ -1,0 +1,202 @@
+// Sermão em estilo de jornal: colunas com fio no computador, uma coluna no celular.
+:host {
+  display: block;
+  color: var(--mat-sys-on-surface);
+  font-family: var(--reading-font);
+}
+
+.cols {
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 840px) {
+  .cols {
+    column-count: 2;
+    column-gap: 40px;
+    column-rule: 1px solid var(--mat-sys-outline-variant);
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+// Letra capitular no primeiro parágrafo
+.lede::first-letter {
+  float: left;
+  margin: 0.06em 0.1em 0 0;
+  font: 700 3.5em/0.82 var(--heading-font);
+  color: var(--accent-gold);
+}
+
+// Título de parte: filete duplo em cima, fio embaixo, algarismo romano dourado; atravessa as duas colunas
+h2 {
+  column-span: all;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 1.5em 0 0.8em;
+  padding: 0.5em 0 0.45em;
+  border-top: 3px double var(--mat-sys-on-surface);
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+  font: 700 1.5em/1.2 var(--heading-font);
+  text-align: left;
+  hyphens: manual;
+  break-after: avoid;
+}
+
+h2 .num {
+  flex: none;
+  min-width: 1.5em;
+  font-size: 1.2em;
+  color: var(--accent-gold);
+}
+
+h3 {
+  margin: 1.4em 0 0.4em;
+  font: 700 max(13px, 0.82em) / 1.3 Inter, sans-serif;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  text-align: left;
+  break-after: avoid;
+}
+
+ul,
+ol {
+  margin: 0 0 1em;
+  padding-left: 1.4em;
+}
+
+li {
+  margin-bottom: 0.5em;
+  break-inside: avoid;
+}
+
+li::marker {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.ref {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  color: var(--mat-sys-primary);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  text-underline-offset: 3px;
+}
+
+@media (pointer: coarse) {
+  .ref {
+    padding-block: 10px;
+    margin-block: -10px;
+  }
+}
+
+// Texto-base: caixa de abertura, de ponta a ponta
+.base {
+  column-span: all;
+  margin: 0.2em 0 1.4em;
+  padding: 14px 20px 12px;
+  border-top: 3px solid var(--mat-sys-on-surface);
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+  background: var(--mat-sys-surface-container-low);
+  text-align: left;
+}
+
+.base .label {
+  display: block;
+  margin-bottom: 6px;
+  font: 700 13px Inter, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+// Versículo por extenso no meio do texto
+.verse {
+  break-inside: avoid;
+  margin: 0.5em 0 1.2em;
+  padding: 2px 0 2px 16px;
+  border-left: 3px solid var(--accent-gold);
+  text-align: left;
+}
+
+// Frase em destaque: centralizada, entre dois fios, de ponta a ponta
+.pull {
+  column-span: all;
+  max-width: 32em;
+  margin: 1.6em auto;
+  padding: 10px 12px 12px;
+  border-top: 1px solid var(--mat-sys-on-surface);
+  border-bottom: 1px solid var(--mat-sys-on-surface);
+  text-align: center;
+}
+
+.pull blockquote {
+  margin: 0;
+  font: italic 600 1.5em/1.3 var(--heading-font);
+}
+
+.pull blockquote::before {
+  content: '“';
+  display: block;
+  font-size: 2.2em;
+  line-height: 0.7;
+  color: var(--accent-gold);
+}
+
+.pull figcaption {
+  margin-top: 8px;
+  font: 600 13px Inter, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+// Quadro lateral
+.facts {
+  break-inside: avoid;
+  margin: 0.4em 0 1.3em;
+  padding: 14px 16px 6px;
+  border: 1px solid var(--mat-sys-on-surface);
+  outline: 1px solid var(--mat-sys-outline-variant);
+  outline-offset: 3px;
+  background: var(--mat-sys-surface-container-low);
+  font-size: 0.93em;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.facts h3 {
+  margin: 0 0 8px;
+}
+
+.facts ul {
+  margin: 0;
+}
+
+// Ilustração com legenda
+.art {
+  break-inside: avoid;
+  margin: 0.4em 0 1.3em;
+  padding: 12px 10px 10px;
+  border-top: 1px solid var(--mat-sys-outline-variant);
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+}
+
+.art figcaption {
+  margin-top: 8px;
+  font: italic 400 max(13px, 0.82em) / 1.4 var(--reading-font);
+  color: var(--mat-sys-on-surface-variant);
+  text-align: left;
+}

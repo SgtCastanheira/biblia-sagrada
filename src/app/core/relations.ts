@@ -61,6 +61,11 @@ const PERSON_ARTICLES: Record<string, string[]> = {
   'joao-apostolo': ['igreja-primitiva', 'apocalipse'],
   moises: ['formacao-do-antigo-testamento'],
 };
+// A volta do exílio e o que veio até Jesus; e Josefo, que conta de João Batista e de Tiago
+for (const id of ['esdras', 'neemias', 'zorobabel', 'ageu', 'zacarias-profeta', 'malaquias', 'joao-batista']) {
+  PERSON_ARTICLES[id] = [...(PERSON_ARTICLES[id] ?? []), 'da-volta-do-exilio-a-jesus'];
+}
+for (const id of ['joao-batista', 'tiago-irmao-do-senhor']) PERSON_ARTICLES[id] = [...(PERSON_ARTICLES[id] ?? []), 'flavio-josefo'];
 
 export const mapsOfPerson = (id: string) => PERSON_MAPS[id] ?? [];
 export const articlesOfPerson = (id: string) => PERSON_ARTICLES[id] ?? [];

@@ -9,16 +9,19 @@ import { ContentService } from '../../core/content.service';
 import { KINDS, LANGS } from '../../core/dictionary';
 import { Sheets } from '../../shared/sheets';
 import { SourcesBox } from '../../shared/sources-box';
+import { ShareImageButton } from '../../shared/share-image-button';
+import { dictionaryCard } from '../../core/share-card';
 
 /** Verbete completo do dicionário. */
 @Component({
   selector: 'app-dictionary-entry',
-  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, SourcesBox],
+  imports: [BackButton, RouterLink, MatButtonModule, MatIconModule, SourcesBox, ShareImageButton],
   template: `
     @if (entry(); as e) {
       <div class="article">
         <div class="top">
           <app-back fallback="/dicionario" />
+          <app-share-image-button [card]="shareCard()" />
         </div>
         <span class="overline">{{ kinds[e.kind] }}</span>
         <h1 class="title">{{ e.term }}</h1>
@@ -147,6 +150,7 @@ export class DictionaryEntryPage {
   protected readonly langs = LANGS;
 
   protected readonly entry = computed(() => this.all()?.find((e) => e.id === this.id()));
+  protected readonly shareCard = computed(() => (this.entry() ? dictionaryCard(this.entry()!, this.kinds[this.entry()!.kind]) : null));
   protected readonly related = computed(() =>
     (this.entry()?.see ?? []).map((id) => this.all()?.find((e) => e.id === id)).filter((e) => !!e),
   );

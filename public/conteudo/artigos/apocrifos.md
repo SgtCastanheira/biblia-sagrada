@@ -40,6 +40,10 @@ Os **apócrifos do Novo Testamento** são outra coisa: “evangelhos” como os 
 Para conversar sobre isso com amigos católicos, o melhor caminho é o respeito e a Escritura: “examinai tudo; retende o bem” [[1Ts 5.21]].
 :::
 
-:::leia entre-os-testamentos
+:::leia da-volta-do-exilio-a-jesus
 Os anos que os livros dos Macabeus contam: a perseguição de Antíoco IV, a revolta e a festa da Dedicação.
+:::
+
+:::leia livros-dos-macabeus
+Primeiro e Segundo Macabeus capítulo a capítulo: o que cada um conta que o outro não conta, os mártires, a ressurreição e a oração pelos mortos.
 :::

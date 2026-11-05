@@ -31,11 +31,11 @@ Se o Evangelho não marcou o dia, alguém marcou. Quem foi, e por quê?
 Nos primeiros séculos, os cristãos não tinham uma festa do nascimento de Jesus; a grande festa era a Páscoa. Quando começaram a perguntar pela data, as respostas foram várias:
 
 - **No Egito, por volta do ano 200,** Clemente de Alexandria anotou o que se dizia: uns calculavam o nascimento em 20 de maio; outros, em 20 ou 21 de abril; e um grupo comemorava o batismo de Jesus em 6 ou 10 de janeiro (*Stromata* 1.21).
+![O mês de dezembro desenhado no Cronógrafo de 354](imagens/calendario-cronografo.jpg "O mês de dezembro no Cronógrafo de 354, o calendário romano que traz a primeira data segura do Natal, numa cópia feita séculos depois. A figura lembra as Saturnais, com os dados do jogo e uma tocha. Domínio público, via Wikimedia Commons.")
+
 - **No Oriente,** muitas igrejas passaram a festejar no **6 de janeiro**, a Epifania, o nascimento e o batismo de Jesus juntos. A Igreja Apostólica Armênia guarda o Natal nesse dia até hoje.
 - **Em Roma,** a primeira prova segura do **25 de dezembro** está num calendário romano de 354, que registra numa lista do ano 336: “nasceu Cristo em Belém da Judeia”. Um comentário de Hipólito de Roma (c. 204) também cita o 25 de dezembro, mas muitos estudiosos acham que essa frase foi acrescentada depois.
 - **Em Antioquia,** em 386, João Crisóstomo pregou num 25 de dezembro e disse que aquela festa tinha chegado à cidade havia menos de dez anos, vinda do Ocidente.
-
-![O mês de dezembro desenhado no Cronógrafo de 354](imagens/calendario-cronografo.jpg "O mês de dezembro no Cronógrafo de 354, o calendário romano que traz a primeira data segura do Natal, numa cópia feita séculos depois. A figura lembra as Saturnais, com os dados do jogo e uma tocha. Domínio público, via Wikimedia Commons.")
 
 ### Os Dois Suspeitos
 
@@ -63,6 +63,8 @@ Mas o 25 de dezembro não cai no mesmo dia para todos os cristãos. A culpa é d
 
 ### Os Meses que Mudaram de Nome
 
+![O Calendário de Gezer, uma pequena placa de calcário com letras hebraicas antigas](imagens/calendario-gezer.jpg "O Calendário de Gezer (século X a.C.), uma das inscrições hebraicas mais antigas: marca os meses pelos trabalhos do campo, como a colheita da cevada. Museu Arqueológico de Istambul. Foto: Ana al'ain, CC BY-SA 3.0, via Wikimedia Commons.")
+
 Deus fez os luminares do céu “para sinais e para estações, e para dias e anos” ([[Gn 1.14]]). Israel contava os meses pela lua: cada mês começava com a lua nova e tinha 29 ou 30 dias. Na saída do Egito, Deus disse: “Este mês será para vós o princípio dos meses” ([[Êx 12.2]]). Era o mês de abibe ([[Êx 13.4]]), nome que quer dizer “espigas”, porque caía na primavera de lá, quando o trigo e a cevada espigam.
 
 Os nomes dos meses mudaram com a história do povo:
@@ -72,8 +74,6 @@ Os nomes dos meses mudaram com a história do povo:
 - Os nomes do exílio | Depois do cativeiro na Babilônia, os judeus passaram a usar os nomes babilônicos: nisã ([[Ne 2.1]]), sivã ([[Et 8.9]]), elul ([[Ne 6.15]]), quisleu ([[Ne 1.1]]), tebete ([[Et 2.16]]), sebate ([[Zc 1.7]]) e adar ([[Ed 6.15]]). São os nomes que o calendário judaico usa até hoje.
 - O mês a mais | Doze meses lunares dão só 354 dias, e as festas iam escapar da sua estação (a Páscoa precisa cair na colheita da cevada). Por isso, de tempos em tempos, se acrescenta um décimo terceiro mês, o segundo adar. Hoje isso acontece sete vezes a cada dezenove anos.
 :::
-
-![O Calendário de Gezer, uma pequena placa de calcário com letras hebraicas antigas](imagens/calendario-gezer.jpg "O Calendário de Gezer (século X a.C.), uma das inscrições hebraicas mais antigas: marca os meses pelos trabalhos do campo, como a colheita da cevada. Museu Arqueológico de Istambul. Foto: Ana al'ain, CC BY-SA 3.0, via Wikimedia Commons.")
 
 :::figura calendario-ano-judaico
 O ano judaico de hoje: doze meses lunares, com o mês aproximado do nosso calendário. Em dourado, os meses das festas bíblicas: Páscoa (nisã), Pentecostes (sivã), Trombetas, Expiação e Tabernáculos (tishri), Dedicação (quisleu) e Purim (adar).

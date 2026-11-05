@@ -107,16 +107,13 @@ Jeremias anunciou que o domínio da Babilônia duraria 70 anos [[Jr 25.11-12]]. 
 
 Em 539 a.C., na noite do banquete de Belsazar, a Babilônia caiu diante de Ciro, rei dos persas [[Dn 5.30-31]]. Cerca de 150 anos antes, Isaías tinha chamado Ciro pelo nome como o “pastor” de Deus que mandaria reconstruir Jerusalém [[Is 44.28]], [[Is 45.1]]. No ano seguinte, Ciro publicou um decreto permitindo a volta dos judeus [[Ed 1.1-4]]. Um cilindro de argila do próprio Ciro, hoje no Museu Britânico, descreve a sua política de devolver os povos deportados às suas terras e restaurar os seus templos.
 
-:::tempo
-- 538–537 a.C. | 1º retorno: Zorobabel | Cerca de 50 mil pessoas voltam com o governador Zorobabel (neto do rei Joaquim) e o sumo sacerdote Josué [[Ed 2.64-65]]. Levantam o altar e lançam os alicerces do templo [[Ed 3.10-13]].
-- 536–520 a.C. | A obra para | A oposição dos vizinhos e o desânimo param a reconstrução por 16 anos [[Ed 4.4-5,24]].
-- 520–516 a.C. | O templo é concluído | Ageu e Zacarias despertam o povo, e o templo fica pronto no sexto ano de Dario [[Ed 5.1-2]], [[Ed 6.14-15]].
-- 483–473 a.C. | Ester em Susã | Na Pérsia, Deus livra os judeus que não voltaram do plano de Hamã [[Et 4.14]].
-- 458 a.C. | 2º retorno: Esdras | O escriba Esdras volta com cerca de 1.500 homens e suas famílias para ensinar a Lei [[Ed 7.6-10]], [[Ed 8.1]].
-- 445 a.C. | 3º retorno: Neemias | Neemias, copeiro do rei Artaxerxes I, volta como governador e reconstrói os muros em 52 dias [[Ne 2.1-8]], [[Ne 6.15-16]].
-:::
+A volta veio em três ondas: a de Zorobabel e do sumo sacerdote Josué, em 538 a.C. (cerca de 50 mil pessoas, que levantaram o altar e o Templo, concluído por volta de 516 a.C.); a de Esdras, em 458 a.C., para ensinar a Lei; e a de Neemias, em 445 a.C., que reconstruiu os muros em 52 dias. Na Pérsia, entre 483 e 473 a.C., Deus livrou os judeus que não voltaram do plano de Hamã ([[Et 4.14]]).
 
 Nem todos voltaram. Muitos judeus preferiram ficar na Babilônia e na Pérsia, onde já tinham casas e negócios. Ali surgiu uma comunidade judaica que existiu por mais de 2.500 anos — no tempo do Pentecostes, havia em Jerusalém judeus “partos, medos, elamitas e os que habitam a Mesopotâmia” [[At 2.9]].
+
+:::leia da-volta-do-exilio-a-jesus
+O que aconteceu em cada volta: o altar e o Templo de Zorobabel, a Lei de Esdras e os muros de Neemias, e o que veio depois, até João Batista e Jesus.
+:::
 
 ## 6. Depois da Bíblia: A Destruição de 70 d.C.
 

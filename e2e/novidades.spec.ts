@@ -8,7 +8,7 @@ test('novidades aparecem uma vez em cada aparelho; na primeira visita, com boas-
   await page.reload();
   const painel = page.locator('app-whats-new-sheet');
   await expect(painel).toContainText(LATEST_RELEASE.items[0].title);
-  await painel.getByRole('button', { name: 'Entendi' }).click();
+  await painel.getByRole('button', { name: 'Entendi', exact: true }).click();
   await expect(painel).toHaveCount(0);
   await page.reload();
   await page.waitForTimeout(2500);

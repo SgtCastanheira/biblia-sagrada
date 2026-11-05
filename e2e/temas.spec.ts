@@ -46,7 +46,22 @@ for (const tema of NOVOS) {
   test(`tema ${tema}: o texto de várias telas passa de 4,5:1 de verdade`, async ({ page }) => {
     await page.addInitScript((t) => localStorage.setItem('biblia.settings.theme', JSON.stringify(t)), tema);
     const todos: string[] = [];
-    for (const tela of ['/', '/ler/JHN/3', '/historia', '/estudo', '/livros', '/ajustes', '/epocas', '/epocas/pentecostes']) {
+    for (const tela of ['/', '/ler/JHN/3', '/historia', '/estudo', '/livros', '/ajustes', '/epocas', '/epocas/pentecostes', '/vozes', '/vozes/a-sanguessuga', '/revisao/8f11d02bac34306e']) {
+      await page.goto(tela);
+      await page.waitForLoadState('networkidle');
+      await expect(page.locator('body')).toHaveClass(new RegExp(`theme-${tema}`));
+      todos.push(...(await textosFracos(page)).map((f) => `${tela}: ${f}`));
+    }
+    expect(todos, `No tema ${tema}:\n${todos.join('\n')}`).toEqual([]);
+  });
+}
+
+// O jornal das Novas Vozes e a prévia do autor também nos temas de sempre
+for (const tema of ['dark', 'sepia'] as const) {
+  test(`tema ${tema}: o jornal das Novas Vozes passa de 4,5:1 de verdade`, async ({ page }) => {
+    await page.addInitScript((t) => localStorage.setItem('biblia.settings.theme', JSON.stringify(t)), tema);
+    const todos: string[] = [];
+    for (const tela of ['/vozes', '/vozes/a-sanguessuga', '/revisao/8f11d02bac34306e']) {
       await page.goto(tela);
       await page.waitForLoadState('networkidle');
       await expect(page.locator('body')).toHaveClass(new RegExp(`theme-${tema}`));

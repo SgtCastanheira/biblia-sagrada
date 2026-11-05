@@ -130,6 +130,108 @@ Como se chega a cooperador, diácono, presbítero, evangelista e pastor, e o que
 :::leia madureira-e-a-separacao
 :::
 
+## Para Ler Mais
+
+Além das histórias deste panorama, há o livro de um autor do século XIX que conta a história da Igreja a partir da pergunta “o que Cristo quis edificar?”.
+
+:::leia historia-da-igreja-andrew-miller
+Síntese do prefácio, da introdução e dos capítulos 1 e 2 de Andrew Miller, com o que foi conferido em outro historiador.
+:::
+
+:::leia miller-estevao-apostolos-e-paulo
+Os capítulos 3 a 6 do mesmo livro: os Doze e as tradições sobre eles, as viagens e o fim de Paulo.
+:::
+
+:::leia miller-roma-e-as-perseguicoes
+Os capítulos 7 a 9: de Nero a Diocleciano, o clero que se separa do povo e as perseguições, com seis pontos conferidos.
+:::
+
+:::leia miller-constantino-e-os-concilios
+Os capítulos 10 a 12: Constantino, Niceia, Atanásio, a queda de Roma, o batismo, os monges e as controvérsias de Pelágio e Nestório.
+:::
+
+:::leia miller-gregorio-o-islamismo-e-carlos-magno
+Os capítulos 13 a 16: Gregório, o Grande, as missões nas Ilhas Britânicas e na Alemanha, o Islã, a iconoclastia, os paulicianos e Carlos Magno.
+:::
+
+:::leia miller-gregorio-vii-e-as-cruzadas
+Os capítulos 17 a 20: o evangelho entre eslavos e nórdicos, o pânico do ano 1000, Gregório VII, Canossa e as Cruzadas.
+:::
+
+:::leia miller-bernardo-becket-e-inocencio-iii
+Os capítulos 21 a 24: a Concordata de Worms, Bernardo de Claraval, Abelardo, Arnaldo de Bréscia, Tomás Becket, a teologia de Roma e Inocêncio III.
+:::
+
+:::leia miller-albigenses-inquisicao-e-frades
+Os capítulos 25 e 26: Pedro Valdo, a cruzada contra os albigenses, o nascimento da Inquisição, a Regra de Bento e as ordens dos frades.
+:::
+
+:::leia miller-declinio-do-papado-e-wycliffe
+Os capítulos 27 a 30: a Irlanda e a Escócia, Frederico II, Bonifácio VIII, o cativeiro de Avignon, os escolásticos, os valdenses e John Wycliffe.
+:::
+
+:::leia miller-hus-gutenberg-e-os-ultimos-precursores
+Os capítulos 31 e 32: Jan Hus e Jerônimo de Praga, as guerras hussitas, os Irmãos Unidos, a imprensa de Gutenberg e os últimos precursores de Lutero.
+:::
+
+:::leia historia-da-igreja-everett-ferguson
+O prefácio e os capítulos 1 a 3 do Ferguson: o mundo romano, grego e judaico, a igreja apostólica, os cristãos judeus e os Pais Apostólicos.
+:::
+
+:::leia ferguson-perseguicoes-heresias-e-canon
+Os capítulos 4 a 6 do Ferguson: o império e as perseguições, os apologistas e mártires, Marcião, o gnosticismo, o montanismo e a formação do cânon.
+:::
+
+:::leia ferguson-pais-da-igreja-e-terceiro-seculo
+Os capítulos 7 a 9 do Ferguson: Irineu, Tertuliano, Clemente, Orígenes, Hipólito, Cipriano, o batismo, o culto, a esperança cristã e as perseguições de Décio e Valeriano.
+:::
+
+:::leia ferguson-constantino-e-o-quarto-seculo
+Os capítulos 10 e 11 do Ferguson: a perseguição de Diocleciano, Constantino, os donatistas, Ário, Niceia, Atanásio, Constantinopla e os Pais do século IV.
+:::
+
+:::leia ferguson-monges-cristologia-e-agostinho
+Os capítulos 12 a 14 do Ferguson: os monges, as missões no Oriente, o culto, Nestório e Cirilo, Calcedônia, Agostinho e Pelágio.
+:::
+
+:::leia ferguson-migracoes-papado-e-igrejas-orientais
+Os capítulos 15 a 17 do Ferguson: os reinos germânicos, o papado, Justiniano, Bento, Gregório, o Islã, a iconoclastia, Fócio e as missões entre os eslavos.
+:::
+
+:::leia ferguson-ocidente-medieval-e-cruzadas
+Os capítulos 18 a 20 do Ferguson: celtas, Bonifácio, Carlos Magno, Cluny, o cisma de 1054, Gregório VII, Canossa e a Primeira Cruzada.
+:::
+
+:::leia ferguson-escolastica-cister-e-seculo-xii
+Os capítulos 21 e 22 do Ferguson: a Escolástica, Anselmo, Abelardo, Cister, Bernardo de Claraval, os mestres do século XII e a Terceira Cruzada.
+:::
+
+:::leia ferguson-inocencio-iii-frades-e-aquino
+O capítulo 23 do Ferguson: Inocêncio III, a Quarta Cruzada, Domingos, Francisco, as universidades, Tomás de Aquino, Boaventura e o gótico.
+:::
+
+:::leia ferguson-presagios-de-declinio-e-fim-da-idade-media
+O capítulo 24 do Ferguson: hereges e valdenses, cátaros e Inquisição, místicas, judeus, Lyon (1274), missões, Joaquim de Fiore, Bonifácio VIII e Avinhão.
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Para a Vida
 
 A história da Igreja é a continuação de Atos: o Espírito que desceu em Pentecostes continua levando o evangelho “até os confins da terra” [[At 1.8]]. Cada geração recebe a fé de quem veio antes e a passa adiante — “não os encobriremos aos seus filhos, cantaremos às gerações vindouras os louvores do Senhor” [[Sl 78.4]].

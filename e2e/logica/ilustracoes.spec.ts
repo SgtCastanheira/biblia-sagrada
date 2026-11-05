@@ -139,8 +139,8 @@ test('o leitor entende o bloco de envio (quem enviou quem)', () => {
   ]);
 });
 
-test('mapa das épocas: o estudo "entre os Testamentos" usa só épocas do atlas, em ordem cronológica', () => {
-  const text = readFileSync('public/conteudo/artigos/entre-os-testamentos.md', 'utf8');
+test('mapa das épocas: o estudo "Da Volta do Exílio a Jesus" usa só épocas do atlas, em ordem cronológica', () => {
+  const text = readFileSync('public/conteudo/artigos/da-volta-do-exilio-a-jesus.md', 'utf8');
   const block = parseBlocks(text).find((b) => b.type === 'eramap');
   expect(block?.eras?.length).toBeGreaterThanOrEqual(5);
   const eras = block!.eras!.map((id) => findEra(id));

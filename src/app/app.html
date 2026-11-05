@@ -1,4 +1,4 @@
-@if (!isReader()) {
+@if (!isReader() && !isReview()) {
   <header class="top-bar" [class.hidden]="isArticle() && ui.barsHidden()">
     <a routerLink="/" class="brand">
       <mat-icon class="logo">menu_book</mat-icon>
@@ -22,6 +22,7 @@
   </header>
 }
 
+@if (!isReview()) {
 <nav class="nav" [class.hidden]="(isReader() || isArticle()) && ui.barsHidden()" aria-label="Navegação principal">
   <a class="rail-logo" routerLink="/" aria-label="Início"><mat-icon>menu_book</mat-icon></a>
 
@@ -40,6 +41,7 @@
     </a>
   }
 </nav>
+}
 
 @if (!pwa.online()) {
   <div class="offline" role="status">
@@ -47,7 +49,7 @@
   </div>
 }
 
-<main class="content" [class.reader]="isReader()">
+<main class="content" [class.reader]="isReader()" [class.review]="isReview()">
   <router-outlet />
 </main>
 

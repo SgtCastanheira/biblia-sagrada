@@ -139,7 +139,7 @@ import { Sheets } from './sheets';
           </div>
         }
         @case ('image') {
-          <figure class="photo" [class.left]="photoSide()[i]" [class.wide]="b.wide">
+          <figure class="photo" [class.wide]="b.wide">
             <!-- Pelo teclado, o botão Ampliar ao lado faz o mesmo -->
             <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
             <img [src]="'conteudo/' + b.src" [alt]="b.alt" loading="lazy" (click)="view(b)" />
@@ -174,12 +174,6 @@ export class RichText {
 
   /** O primeiro parágrafo ganha a letra capitular. */
   protected readonly opening = computed(() => (this.story() ? this.blocks().findIndex((b: Block) => b.type === 'p') : -1));
-
-  /** As fotos alternam de lado no computador, como numa revista. */
-  protected readonly photoSide = computed(() => {
-    let n = 0;
-    return this.blocks().map((b) => b.type === 'image' && !b.wide && n++ % 2 === 1);
-  });
 
   /** Foto aberta em tela cheia (um toque na imagem). */
   protected readonly viewing = signal<ViewedPhoto | null>(null);

@@ -15,8 +15,12 @@ export const routes: Routes = [
   { path: 'genealogia', title: 'Genealogia de Jesus · Bíblia Sagrada', loadComponent: () => import('./pages/genealogy/genealogy').then((m) => m.GenealogyPage) },
   { path: 'memorial/:id', loadComponent: () => import('./pages/person/person').then((m) => m.PersonPage) },
   { path: 'epocas', title: 'Linha do tempo · Bíblia Sagrada', loadComponent: () => import('./pages/epochs/epochs').then((m) => m.EpochsPage) },
+  { path: 'datas', title: 'Datas da história · Bíblia Sagrada', loadComponent: () => import('./pages/dates/dates').then((m) => m.DatesPage) },
   { path: 'epocas/:id', loadComponent: () => import('./pages/epochs/epoch').then((m) => m.EpochPage) },
   { path: 'historia', title: 'História · Bíblia Sagrada', loadComponent: () => import('./pages/history/history').then((m) => m.HistoryPage) },
+  // Duas histórias viraram uma só (da volta do exílio a Jesus); os endereços antigos continuam valendo
+  { path: 'artigo/entre-os-testamentos', pathMatch: 'full', redirectTo: 'artigo/da-volta-do-exilio-a-jesus' },
+  { path: 'artigo/grupos-do-tempo-de-jesus', pathMatch: 'full', redirectTo: 'artigo/da-volta-do-exilio-a-jesus' },
   { path: 'artigo/:id', loadComponent: () => import('./pages/article/article').then((m) => m.ArticlePage) },
   { path: 'profecias', title: 'Profecias · Bíblia Sagrada', loadComponent: () => import('./pages/prophecies/prophecies').then((m) => m.PropheciesPage) },
   { path: 'profecias/:id', loadComponent: () => import('./pages/prophecy/prophecy').then((m) => m.ProphecyPage) },
@@ -56,6 +60,10 @@ export const routes: Routes = [
   { path: 'sermoes', title: 'Sermões · Bíblia Sagrada', loadComponent: () => import('./pages/sermons/sermons').then((m) => m.SermonsPage) },
   { path: 'sermoes/:id', loadComponent: () => import('./pages/sermon/sermon').then((m) => m.SermonPage) },
   { path: 'sermoes/:id/pregar', title: 'Púlpito · Bíblia Sagrada', loadComponent: () => import('./pages/pulpit/pulpit').then((m) => m.PulpitPage) },
+  // Novas Vozes da Palavra: sermões de novos teólogos, em jornal. /revisao/:token é a prévia exclusiva para o autor aprovar (não listada em lugar nenhum)
+  { path: 'vozes', title: 'Novas Vozes da Palavra · Bíblia Sagrada', loadComponent: () => import('./pages/voices/voices').then((m) => m.VoicesPage) },
+  { path: 'vozes/:id', loadComponent: () => import('./pages/voices/voice-sermon').then((m) => m.VoiceSermonPage) },
+  { path: 'revisao/:token', title: 'Prévia para aprovação · Bíblia Sagrada', loadComponent: () => import('./pages/voices/voice-review').then((m) => m.VoiceReviewPage) },
   { path: 'favoritos', title: 'Favoritos · Bíblia Sagrada', loadComponent: () => import('./pages/favorites/favorites').then((m) => m.FavoritesPage) },
   { path: 'novidades', title: 'Novidades · Bíblia Sagrada', loadComponent: () => import('./pages/whats-new/whats-new').then((m) => m.WhatsNewPage) },
   { path: 'fontes', title: 'Fontes das informações · Bíblia Sagrada', loadComponent: () => import('./pages/sources/sources').then((m) => m.SourcesPage) },

@@ -3,11 +3,16 @@ import { expect, test } from './base';
 test('estudo: pesquisar "conselho de Niceia" leva à história do Concílio', async ({ page }) => {
   await page.goto('/historia');
   await page.getByRole('searchbox', { name: 'Pesquisar na biblioteca' }).fill('conselho de niceia');
-  const first = page.locator('a.hit').first();
-  await expect(first).toBeVisible();
-  await expect(first).toContainText('Niceia');
+  const hits = page.locator('a.hit');
+  await expect(hits.first()).toBeVisible();
+  await expect(hits.first()).toContainText('Niceia');
   await expect(page.locator('a.hit mark').first()).toBeVisible();
-  await first.click();
+  // Mais de um estudo fala de Niceia (a síntese de Ferguson também): o do Concílio tem de estar entre os primeiros, não necessariamente em primeiro
+  const concilio = page.locator('a.hit[href$="/artigo/constantino-e-os-concilios"]');
+  await expect(concilio).toBeVisible();
+  const primeiros = await hits.evaluateAll((els) => els.slice(0, 5).map((e) => e.getAttribute('href')));
+  expect(primeiros.some((h) => h?.endsWith('/artigo/constantino-e-os-concilios')), `entre os 5 primeiros: ${primeiros.join(', ')}`).toBe(true);
+  await concilio.click();
   await expect(page).toHaveURL(/\/artigo\/constantino-e-os-concilios/);
   // O endereço guarda a pesquisa: ao voltar, ela continua
   await page.goBack();

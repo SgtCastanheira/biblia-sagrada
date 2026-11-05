@@ -143,7 +143,7 @@ export class VerseSheet {
 
   protected openLink(refs: string): void {
     this.ref.dismiss();
-    this.bottomSheet.open(PassageSheet, { panelClass: 'app-sheet', autoFocus: false, data: refs });
+    this.bottomSheet.open(PassageSheet, { panelClass: 'app-sheet', autoFocus: false, data: { refs } });
   }
 
   private get shareText(): string {

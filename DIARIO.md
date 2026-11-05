@@ -29,6 +29,507 @@ Modelo:
 
 ---
 
+## 2026-11-05 12:06 -0400 — Novas Vozes: imagem de compartilhar com QR code e revisão da concordância
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- **Imagem de compartilhar do sermão** (botão “Compartilhar” no jornal, em cada idioma): ilustração desenhada para o app (a sanguessuga e a gota de sangue), o texto-base em letras grandes (“Pv 30.15”), o título, o nome do autor, a frase de efeito do próprio texto em dourado (“A sanguessuga é semelhante ao pecado: nunca diz basta”) e o QR code que abre o sermão no mesmo idioma (`/vozes/a-sanguessuga?idioma=es`, nunca o link de revisão). Feed 1080×1350 e Stories 1080×1920, pelo mesmo painel das outras páginas (`voiceSermonCard`, em `core/voice-share-card.ts`, fora do `share-card.ts` para os dados do sermão não entrarem no pacote inicial).
+- **Concordância revisada** nos seis textos: “pessoas entenebrecidas… se entregaram” (a citação de Efésios está no plural), “a terra que nunca se farta de água” (Pv 30.16, antes “a terra sem água”, o que o versículo não diz) e “sugar os outros”. O que ficou no jeito do autor (“te chama”, “te suga”) está dito na lista de mudanças da prévia.
+- **Achado no caminho:** `headingKey` descartava letras que não fossem latinas, então todos os títulos em russo viravam a mesma chave e a lista de tópicos do cartão ficava com um só; agora vale para qualquer alfabeto.
+
+**Decisões:**
+- **Sem lista de partes na imagem:** o layout de selo, foto e frase (o das datas) não comporta a lista; o pedido era imagem que atraia, frase de efeito e QR code.
+- **A frase de efeito é a primeira frase em destaque do texto de cada idioma** (o teste confere palavra por palavra), para a imagem nunca dizer o que o sermão não diz.
+- **Ilustração em arquivo (JPEG de 53 KB)** em `public/conteudo/imagens/`, centralizada no recorte (`photo.focusY`), para o feed e o Stories não cortarem a sanguessuga.
+
+**Arquivos:** `core/voice-share-card.ts`, `core/guest-sermons.ts`, `core/rich-text-parser.ts`, `shared/share-render.ts`, `shared/voice-article.ts`, `public/conteudo/vozes/*.md`, `public/conteudo/imagens/vozes-sanguessuga.jpg`, `e2e/logica/vozes.spec.ts`, `e2e/compartilhar.spec.ts`, `CLAUDE.md`, `CREDITOS.md`, `core/credits.ts`
+
+**Pendências:**
+- O QR code só abre o sermão depois que ele for publicado (o `status` virar `'publicado'`); antes disso o link cai em “Sermão não encontrado”.
+- Busca no estudo para os sermões de convidados.
+
+---
+
+## 2026-11-05 11:30 -0400 — Novas Vozes da Palavra: o sermão “A Sanguessuga”, de Lucas Silva, em jornal, em seis idiomas e com prévia para o autor aprovar
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- **Módulo novo “Novas Vozes da Palavra”** (`core/guest-sermons.ts`, `pages/voices/`, rotas `/vozes`, `/vozes/:id` e `/revisao/:token`, cartão em Ensino ao lado de “Meus sermões”): sermões de novos teólogos e estudiosos da Palavra, publicados com a autorização de cada autor. O primeiro é “A Sanguessuga” (Provérbios 30.15), de Lucas Silva, a partir do texto colado e da imagem da anotação dele (o fim do sermão: Jesus no último dia da festa, o pródigo, “nova realidade”).
+- **Estilo de jornal** (`shared/news-text.ts`, `shared/voice-article.ts`): título do jornal entre filetes, manchete, subtítulo, autoria e minutos de leitura; duas colunas com fio no computador e uma no celular; letra capitular; partes em algarismo romano; texto-base em caixa; frases do autor em destaque; quadro lateral; ilustrações com legenda.
+- **Texto:** a ordem e as frases do Lucas foram mantidas e o que não conferia com a Bíblia ou com os fatos foi ajustado e listado (13 itens, em `GuestSermon.changes`, para o autor ver na prévia): três partes (I, II, III), “Sebna” retirado (Isaías 22 não diz que os filhos o sugaram), “toro selvagem” trocado pelo que Provérbios 30.2-3 diz, “só vive se tiver alguém pra sugar” suavizado (a sanguessuga-medicinal fica até cerca de um ano sem comer), Ló e a planície bem regada, siglas das referências no padrão do app e citações palavra por palavra da Almeida do app. Acrescentados, com aviso: versículos que apoiam o que ele já dizia (Pv 30.14, 30.15-16, Lv 17.11, Pv 14.12, Jo 7.37, Lc 15.14-20) e o quadro “Fatos sobre a sanguessuga” (com fonte no pé).
+- **Ilustrações** (`shared/voice-art.ts`, SVG com as cores do tema, sem direitos de terceiros): a sanguessuga, a mãe com as filhas “Dá, Dá”, o caminho do desejo (Tiago 1.14-15) e a fonte de água viva e as cisternas rotas (Jeremias 2.13). Os rótulos mudam com o idioma.
+- **Seis idiomas:** português (original), espanhol, inglês, francês, alemão e russo. Os versículos tocados e o texto por extenso (`:::versiculo`) vêm da versão da Bíblia da língua (RV1909, WEB, Louis Segond, Lutero 1912, Sinodal), ou da que a pessoa já escolheu em Ajustes, se for da mesma língua. A página diz que as traduções foram feitas com apoio de IA e sem revisão de falante nativo.
+- **Ouvir em cada idioma:** `ListenService` e `voice.ts` aceitam a língua (vozes do aparelho por língua, voz escolhida guardada por língua, aviso de “sem voz em …”); as referências são ditas por extenso (“Provérbios capítulo 30, versículo 1”, `core/speech-ref.ts`); o algarismo romano dos títulos e os números dos versículos não são lidos.
+- **Prévia exclusiva para o autor** (`/revisao/<token>`, `pages/voices/voice-review.ts`): página à parte (sem as barras do app, `noindex`), com o jornal como o público vai ler, a lista do que o editor mudou (o que pede resposta vem primeiro), e a decisão: aprovar (com a caixa “autorizo”) ou pedir ajustes (com a descrição). Como o app não tem servidor, a decisão fica guardada no aparelho dele, amarrada à marca da versão do texto (`contentVersion`), e vira uma mensagem para mandar ao editor (WhatsApp, compartilhar ou copiar). Se o texto mudar, a página avisa que a versão mudou.
+- **Publicação controlada:** o sermão nasce com `status: 'revisao'`. No app publicado ele não aparece no menu, em `/vozes` nem em `/vozes/a-sanguessuga` (conferido no build de produção); só a prévia abre. No `ng serve` ele aparece com a etiqueta “Em revisão” e um botão para copiar o link do autor.
+- **Outros:** `:::versiculo` e `:::nota Título` no leitor de Markdown; `PassageView`/`Sheets.passage` aceitam a versão da Bíblia; ícones novos (script das fontes rodado, 235 ícones); créditos (`credits.ts`, `CREDITOS.md`); `CLAUDE.md` e `TESTES.md`.
+
+**Decisões:**
+- **Prévia por link “sem lista”, não por senha:** o app é estático (GitHub Pages), sem servidor; o link tem 16 dígitos aleatórios, não aparece em nenhuma tela, o teste falha se ele aparecer em outro arquivo, e a página pede aos buscadores para não indexar. Quem tem o link lê, e o texto fica no pacote público (o autor concordou com a publicação). Não serve para nada confidencial.
+- **O sermão publicado só entra no menu quando o status vira `'publicado'`:** assim dá para subir o app (e o link do autor funcionar) sem mostrar o sermão ao público antes da aprovação.
+- **A decisão do autor volta por mensagem, não por servidor:** um servidor (ou formulário externo) pediria conta e chave; a mensagem leva a versão do texto, para não aprovarem uma versão e publicarem outra.
+- **A voz do sermão continua a do autor** (fala direta com “você”): é um sermão de convidado, não um texto do app; as regras de voz impessoal do CLAUDE.md valem para os estudos escritos para o app.
+- **Traduções com apoio de IA, avisadas na página e na prévia:** em vez de omitir idiomas por falta de revisor. As citações bíblicas vêm da Bíblia embutida de cada língua (e o teste confere palavra por palavra), não da minha tradução.
+- **Ficou de fora:** gravação em voz neural (gasta crédito do dono; o “Ouvir” usa a voz do aparelho), busca e imagem de compartilhar para o sermão, e a entrada em “Novidades” (só faz sentido quando o sermão for publicado).
+
+**Arquivos:** `src/app/core/guest-sermons.ts`, `core/speech-ref.ts`, `core/voice.ts`, `core/listen.service.ts`, `core/rich-text-parser.ts`, `shared/{news-text,voice-article,verse-quote,voice-art,listen-dom,listen-player,passage-view,passage-sheet,sheets,verse-sheet}.*`, `pages/voices/*`, `pages/teach/teach.ts`, `app.{ts,html,scss}`, `app.routes.ts`, `public/conteudo/vozes/*.md` (6 arquivos), `public/fonts/*`, `core/credits.ts`, `CREDITOS.md`, `CLAUDE.md`, `TESTES.md`, `e2e/logica/vozes.spec.ts`, `e2e/vozes.spec.ts`, `e2e/{navegacao,acessibilidade,temas}.spec.ts`
+
+**Pendências:**
+- **O Lucas precisa aprovar** pela prévia (`SITE_URL/revisao/8f11d02bac34306e`); o link só funciona fora do computador depois que o app for publicado no `main`. Quando ele aprovar: `status: 'publicado'` em `guest-sermons.ts`, entrada em `whats-new.ts` e subir.
+- Os pontos que dependem do Lucas: a ordem das partes (os números 11, 22, 33, 1 e 2 do original), a frase “O nome delas já fiz tudo” e a fonte de “Sebna”, se ele quiser manter.
+- As traduções (es, en, fr, de, ru) precisam de revisão de quem fala cada língua.
+- **Problema antigo achado de passagem:** nos Salmos, a Louis Segond (francês) e a Sinodal (russo) numeram diferente das outras versões embutidas (Sl 42.7 da Almeida é o 42.8 em francês e o 41.8 em russo); no leitor e nos estudos, uma referência a um Salmo cai no versículo errado nessas duas versões. Nas Novas Vozes isso foi tratado à mão; no resto do app, fica por tratar.
+- Busca no estudo para os sermões de convidados (a imagem de “Compartilhar” já foi feita, veja a entrada seguinte).
+
+## 2026-11-05 08:08 -0400 — Uma só história da volta do exílio a Jesus, Josefo, Macabeus e a regra de olhar a base antes
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- **Regra nova (pedido do dono do app):** antes de escrever qualquer história, personagem ou assunto, conferir o que a base já conta; se já existe, completar ou ramificar, nunca recontar em outro formato e resumido. Escrita em `CLAUDE.md` (“Check the base before writing”), na memória do projeto e na ferramenta nova `tools/verificar-base.py` (`"<assunto>"`, `--ler <id>`, `--repetidos`, `--par a b`), documentada em `tools/LEIA-ME.md`.
+- **Busca (`core/study-search.ts`):** uma pesquisa de várias palavras passa a trazer primeiro os estudos que têm a expressão inteira (`exact`) e descarta os de pontuação muito baixa. “Coreia do Norte”, que trazia quatro ou cinco estudos, traz só o da Coreia (`e2e/logica/busca-estudo.spec.ts`).
+- **Revisão geral de repetições** (`REVISAO-DE-CONTEUDO.md`): medida com `--repetidos`; a repetição literal é pequena (versículos, cartões, notas), o dono de cada assunto ficou registrado e as decisões em aberto, listadas.
+- **Duas histórias viraram uma:** `entre-os-testamentos` e `grupos-do-tempo-de-jesus` → `da-volta-do-exilio-a-jesus` (cerca de 9.000 palavras, 20 capítulos, em ordem): Zorobabel e o segundo Templo, Esdras, Neemias, os samaritanos, Malaquias, Alexandre, os Macabeus, os reis-sacerdotes, Roma e Herodes, de onde vieram os fariseus, os saduceus, os essênios, os zelotes e os herodianos, **a casa de Davi** (do último rei a José, com a figura `linhagem-de-davi`), as sinagogas, a esperança do Messias, João Batista e **“Os Grupos Existem Hoje?”**. O texto antigo foi aproveitado como estava; o novo foi escrito com as fontes (Esdras, Neemias, Josefo, Eusébio, 1 Macabeus, Qumran). Os dois endereços antigos redirecionam (`app.routes.ts`).
+- **Estudo novo `flavio-josefo`:** quem foi (de sacerdote de Jerusalém a general na Galileia, prisioneiro e historiador de Roma), as quatro obras, o que ele conta que a Bíblia também conta (Herodes, Pilatos, João Batista, Tiago, Agripa I, a fome, o egípcio), o *Testimonium* com as duas leituras, os pontos em que não bate com o Novo Testamento e como ler com cuidado. Fica em “Contexto Histórico › Roma e o Poder”.
+- **Estudo novo `livros-dos-macabeus`:** guia de leitura do Primeiro e do Segundo Macabeus capítulo a capítulo, com o que cada um conta que o outro não conta, os ensinos (ressurreição, oração pelos mortos) lidos por católicos, ortodoxos e protestantes, a Hanucá e uma nota honesta: o texto em si não está no app. Fica na estante, em “A Ponte entre os Testamentos”.
+- **Ajustes para não repetir:** `cativeiros-de-israel` (a volta em três ondas virou um parágrafo e um cartão para a história nova), `a-palavra-no-coracao` (Tyndale em duas frases e cartão para `reforma-inglesa`), `avivamentos-na-biblia` (aponta para a cena completa), `apocrifos` (cartão novo para os Macabeus).
+- **Ligações:** cartões de `a-familia-de-herodes`, `apocrifos`, `miller-estevao-apostolos-e-paulo`, `os-faraos-da-biblia`, `o-templo-de-herodes` e `septuaginta`; EBD de Adultos; trilha, época (`entre-testamentos`), fontes (`sources.ts`, com 13 obras de referência novas) e a tela Novidades (`da-volta-do-exilio-a-jesus`).
+- **Fotos:** 16 novas (Cilindro de Ciro, Doré, Alexandre, Antíoco IV, Janeu, Pompeu, Herodes, Herodium, maquete do Templo, Qumran, Páscoa dos samaritanos, Massada, Grande Rolo de Isaías, Josefo), todas de domínio público ou licença aberta, com crédito na legenda, em `core/credits.ts` e em `CREDITOS.md`. Fonte de ícones refeita (`history_edu`).
+
+**Decisões:**
+- **Juntar, não ramificar, as duas histórias antigas:** elas contavam o mesmo período por dois lados; deixar as duas deixaria o leitor com os Macabeus e os fariseus contados duas vezes. Os Macabeus ficaram com um estudo à parte só para os livros (leitura), e a revolta continua na história única.
+- **As linhas “Depois” dos quadros dos grupos foram para o último capítulo:** a resposta a “existem hoje?” fica num só lugar.
+- **Os livros dos Macabeus em guia, não em texto:** não se achou tradução em português de licença livre. Ficou de fora, por ora, traduzir de uma edição em inglês de domínio público (decisão do dono do app).
+- **Josefo com ressalvas:** o *Testimonium Flavianum* aparece com as duas leituras, e os números dele são tratados como exagerados; só entra o que se pode citar das obras dele e de fontes comparadas. Fora: a lenda do “problema de Josefo” e o que não se confirma.
+- **Época da história única:** `entre-testamentos` (a maior parte do texto), e não `exilio-retorno`, onde ela começa.
+
+**Arquivos:** `public/conteudo/artigos/{da-volta-do-exilio-a-jesus,flavio-josefo,livros-dos-macabeus}.md` (novos), `entre-os-testamentos.md` e `grupos-do-tempo-de-jesus.md` (removidos), cartões e ajustes em oito estudos, `src/app/core/{library,trails,sources,epochs,whats-new,credits,study-search,ebd-adultos-4t26}.ts`, `src/app/app.routes.ts`, `src/app/shared/figure.ts`, `tools/verificar-base.py`, `tools/LEIA-ME.md`, `REVISAO-DE-CONTEUDO.md`, `CLAUDE.md`, `CREDITOS.md`, 16 fotos em `public/conteudo/imagens/`, `public/fonts/`, testes em `e2e/` (estudo, navegação, acessibilidade, compartilhar, ilustrações, busca).
+
+**Pendências:**
+- Publicar só quando o dono do app mandar. Fica no `dev` junto com a Coreia, os batistas, Miller × Ferguson, Avivamentos na Bíblia, Marcas de um Avivamento e as 17 datas retidas.
+- Decidir o dono da história da chegada de Berg e Vingren a Belém (hoje contada em parte em quatro estudos) e se vale traduzir os Macabeus de uma edição em inglês de domínio público (`REVISAO-DE-CONTEUDO.md`).
+
+## 2026-11-05 07:19 -0400 — Painel de compartilhar: os botões ficavam escondidos
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- **Problema**: ao tocar em Compartilhar, o painel abria, mas os quatro botões (“Compartilhar imagem”, “Baixar a imagem”, “Enviar o link no WhatsApp” e “Copiar o link”) ficavam abaixo da dobra e só apareciam rolando o painel: numa janela de 1080×661 estavam entre 647 e 863 px, e no celular de 390×844 o primeiro ficava na borda e os outros fora da tela. Parecia que o compartilhar não funcionava.
+- **Correção** (`shared/share-sheet.ts`): na tela estreita, os botões ficam grudados no pé do painel, em duas colunas, e a imagem encolhe (até 34% da altura); na tela larga (a partir de 760 px), a imagem fica de um lado e os tamanhos, os botões e a dica do outro, tudo à vista, sem rolar. A dica passou a explicar que, no computador, que não tem o menu de compartilhar, a imagem é salva para anexar no WhatsApp ou no Instagram.
+- **Teste novo** (`e2e/compartilhar.spec.ts`): os quatro botões ficam inteiros dentro da tela, com pelo menos 40 px de altura, em janela baixa (1080×661) e no celular (390×740).
+- Conferido: o botão do alto da página abre o painel em todos os temas de cor (claro, escuro, brasa, floresta, sépia e névoa), sem erro no console.
+
+**Decisões:**
+- O botão “Compartilhar imagem” continua com o mesmo nome em todo aparelho. Onde o navegador não manda arquivos (computador no Linux, por exemplo), ele salva a imagem e avisa; trocar o nome por aparelho confundiria mais.
+
+**Arquivos:** `src/app/shared/share-sheet.ts`, `e2e/compartilhar.spec.ts`, `DIARIO.md`
+
+**Pendências:**
+- Só no `dev`: a imagem de compartilhar nas outras páginas ainda não foi publicada (nesta correção ela só afeta o painel).
+
+## 2026-11-04 14:58 -0400 — Gancho e explicação simples em cada data, e uma foto para todos os fatos
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- **Gancho e explicação simples**: cada uma das 90 datas ganhou um `hook`, uma pergunta curta que a história responde (“E de que lado ficou a igreja?”), em dourado na imagem de compartilhar, no carrossel e em `/datas`. Os textos mais vagos foram reescritos em linguagem simples: a **lei marcial** agora diz o que é (“quando os militares assumem o comando e direitos, como o de se reunir, ficam suspensos”), e o decreto 119-A, o golpe de 1979, a Constituição Yushin e a crise de Valparaíso também.
+- **Imagem de compartilhar das datas**: o texto não é mais cortado em duas linhas (ele pode ter até 6 linhas no feed e 8 nos Stories); a foto ocupa o espaço que sobra, o gancho vem depois, e o rótulo passou a dizer “Foto ilustrativa” quando é o caso.
+- **Todos os fatos têm foto**: os 52 que não tinham ganharam uma, do Wikimedia Commons (domínio público ou licença aberta), com 41 imagens novas (`datas-*.jpg`, 900 px, 4,2 MB no total) e mais algumas já existentes no app. Quando não há foto do fato em si, a foto é do lugar, da pessoa ligada ao fato ou da época, e aparece como **Foto ilustrativa** (campo `illustrative`). Exemplos: Fortaleza para o Ceará, a estação de Porto Velho em 1910 para Rondônia, a Catedral Evangélica do Chile, a multidão de Seul em 15 de agosto de 1945, Parham para Agnes Ozman, o avião de Nate Saint para os missionários do Equador.
+- **Compilado do dia**: no 1º de janeiro (três fatos), agora cada fato aparece com a sua foto, o seu ano e o seu crédito (antes só a primeira tinha foto). A imagem de compartilhar do dia mostra as três fotos lado a lado, cada uma com o ano no canto, e a lista dos três fatos.
+- **Créditos**: `CREDITOS.md` e `credits.ts` ganharam um item por foto nova. O cache offline tem um grupo novo, `imagens-das-datas`, que só baixa as fotos quando alguém as abre (não entram na instalação do app).
+- Testes: gancho, foto e crédito em todo fato; a lei marcial; o compilado do 1º de janeiro; a imagem de compartilhar.
+- **Teste da busca** (`e2e/busca-estudo.spec.ts`, “conselho de Niceia”): falhava porque um estudo novo (a síntese de Ferguson, ainda fora do commit) também tem Niceia no título e passou na frente do estudo do Concílio. Os dois estudos ficam; o teste agora confere que “Constantino, Niceia e os Credos” está entre os 5 primeiros resultados e abre esse, em vez de exigir o primeiro lugar. Era a pendência da falha antiga de `busca-estudo`.
+
+**Decisões:**
+- O gancho é uma pergunta que a história linkada responde, nunca uma afirmação nova: não inventa fatos.
+- Foto ilustrativa em vez de nenhuma foto, como pedido (“pode ser genérica, mas que tenha a ver com o assunto”). Fotos de cidades hoje (e não da época) são usadas só quando não há foto histórica livre; o rótulo avisa.
+- As fotos ficam fora da instalação (cache preguiçoso) para o app continuar leve e o Almeida e os estudos funcionarem offline como antes.
+
+**Arquivos:** `src/app/core/anniversaries.ts`, `src/app/core/share-card.ts`, `src/app/shared/share-render.ts`, `src/app/shared/commemorations.ts`, `src/app/pages/dates/dates.ts`, `src/app/core/credits.ts`, `src/app/core/whats-new.ts`, `public/conteudo/imagens/datas-*.jpg`, `ngsw-config.json`, `CREDITOS.md`, `CLAUDE.md`, `TESTES.md`, `e2e/datas.spec.ts`, `e2e/logica/datas.spec.ts`, `DIARIO.md`
+
+**Pendências:**
+- Trocar as fotos ilustrativas de hoje por fotos da época quando surgirem em acervos livres (Arquivo Nacional, Biblioteca Nacional).
+- Foto de Daniel Berg (não achei uma livre).
+
+## 2026-11-04 14:32 -0400 — Compilado dos fatos que caem no mesmo dia
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Quando vários fatos caem no mesmo dia e mês, eles formam um **compilado do dia**. São 9 dias assim hoje: 1º de janeiro (3 fatos), 18 e 24 de fevereiro, 21 de abril, 22 de junho, 15, 19 e 31 de outubro e **15 de novembro** (São Paulo em 1927 e Madureira em 1929).
+- **Tela inicial**: o carrossel passou a ter um cartão por dia. O dia com um fato só continua como estava; o dia com vários mostra “2 fatos nesse dia”, a data e a lista dos fatos (ano e título, com o resumo nas telas largas), cada um levando à sua história, e a foto do primeiro fato que tem uma (com o ano no crédito).
+- **`/datas`**: um cartão por dia, com os fatos dentro, separados por um filete, e o botão “Compartilhar o dia” nos dias com vários fatos. Cada fato mantém o seu botão de compartilhar. No celular a data vira uma faixa no alto do cartão.
+- **Imagem de compartilhar do dia** (`dayCard`): selo “2 fatos”, a data, o título “O que aconteceu em 15 de novembro” e a lista numerada (“1927: …”, “1929: …”), com o QR code de `/datas`. O título da lista de tópicos da imagem ficou configurável (`topicsLabel`).
+- O cartão da biblioteca conta fatos, não dias.
+- Testes: lógica (agrupamento, ordem, um cartão por dia em todos os dias do ano, o compilado de 15 de novembro, a imagem do dia) e navegador (tela inicial, imagem e `/datas`). `CLAUDE.md`, `TESTES.md` e a novidade do app atualizados.
+
+**Decisões:**
+- O compilado vale por dia e mês, sem importar o ano: é o que o calendário de datas mostra a cada ano.
+- A imagem do dia leva ao QR code de `/datas` (a lista de todas as datas), porque o dia tem várias histórias. A imagem de um fato só continua levando à sua história.
+- O texto de cada fato, o crédito da foto e a ordem (do mais antigo ao mais novo) foram mantidos.
+
+**Arquivos:** `src/app/core/anniversaries.ts`, `src/app/core/share-card.ts`, `src/app/shared/share-render.ts`, `src/app/shared/commemorations.ts`, `src/app/pages/dates/dates.ts`, `src/app/pages/history/history.ts`, `src/app/core/whats-new.ts`, `e2e/logica/datas.spec.ts`, `e2e/datas.spec.ts`, `TESTES.md`, `CLAUDE.md`, `DIARIO.md`
+
+**Pendências:**
+- Se um dia tiver muitos fatos no futuro (hoje o máximo é 3), vale pensar numa lista mais compacta.
+
+## 2026-11-04 14:25 -0400 — Coreia unida, fotos das datas, cartão na biblioteca e 22 datas novas
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- **Estudo da Coreia**: saiu o quadro “Qual Coreia, a do Norte ou a do Sul?”, que repetia a pergunta do pedido. No lugar, cada capítulo abre com o nome da Coreia em negrito: **Coreia unida** (até 1945, sem divisão), **Coreia do Sul** ou **Coreia do Norte**, e o trecho da divisão diz “Coreia do Norte e Coreia do Sul”. A linha do tempo e as datas da Coreia também. Um teste novo (`logica/coreia.spec.ts`) confere que nenhum capítulo fica sem o nome.
+- **Página `/datas`**: as fotos ficavam pequenas e soltas embaixo da data. Agora o cartão tem a foto grande ao lado do texto no computador e em faixa no alto no celular, com a linha de crédito (“Foto: …”, que a licença CC BY-SA exige). O botão de compartilhar continua no canto.
+- **Biblioteca (`/historia`)**: o livro “Datas da História” só aparecia no fim da página, na estante “O Tempo”. Entrou um cartão no alto, “Datas de novembro”, com a quantidade de fatos do mês, que leva a `/datas`. O livro continua na estante.
+- **Carrossel da tela inicial**: o cartão sem foto, que no computador ficava com uma faixa escura vazia, agora tem um fundo em degradê com o ícone e o ano grande.
+- **22 datas novas** (de 68 para 90), todas com a data escrita no estudo ligado: o decreto de Diocleciano (24/2/303), o Natal de 336, Wycliffe (31/12/1384), o Concílio de Constança (5/11/1414), Lutero em Worms (18/4/1521) e a morte dele (18/2/1546), Simonton no Rio (12/8/1859), nascimentos e mortes de Gunnar Vingren, Daniel Berg e Frida Vingren (com o Dia Nacional da Música Gospel, em 9 de junho), a primeira igreja batista em português (15/10/1882), as igrejas de Maranhão e Rondônia (1922), os missionários mortos no Equador (8/1/1956), a primeira missa de Brasília e a chegada dos primeiros irmãos ao Distrito Federal (1957), a catedral metodista pentecostal do Chile (1974), o Dia das Igrejas Evangélicas do Chile (31/10/2005) e a morte de Macalão (26/8/1982). Fotos só as que o app já tinha, com o crédito dos arquivos já listados em `CREDITOS.md`.
+- **Reforma**: o estudo `reforma-protestante` ganhou o dia (resposta de Lutero em Worms, em 18 de abril de 1521, e a morte dele em 18 de fevereiro de 1546), conferido em fontes públicas, e as fontes do estudo foram atualizadas.
+- Cada mês agora tem de 4 a 10 fatos no carrossel (o limite do teste passou de 8 para 12).
+
+**Decisões:**
+- Nenhuma data entrou sem estar escrita no estudo ligado (ou sem eu ter confirmado o dia e escrito no estudo antes): o dia de Lutero em Worms é o da resposta (18/4); a primeira audiência foi no dia anterior, segundo parte das fontes, e isso ficou nas fontes.
+- Não repeti fatos que o calendário já tinha (o calendário gregoriano de 24/2/1582, o templo de Bangu, que o texto de Macalão já conta).
+- As datas do estudo de Atos dos Apóstolos, do Concílio de Niceia e do estatuto da CGADB ficaram de fora: as primeiras são hipotéticas, e o estatuto é jurídico.
+- Datas de estados da Assembleia de Deus sem dia nas páginas (Acre, Tocantins, Espírito Santo, Mato Grosso do Sul) não entraram.
+
+**Arquivos:** `public/conteudo/artigos/avivamento-da-coreia.md`, `public/conteudo/artigos/reforma-protestante.md`, `src/app/core/anniversaries.ts`, `src/app/core/library.ts`, `src/app/core/sources.ts`, `src/app/core/whats-new.ts`, `src/app/pages/dates/dates.ts`, `src/app/pages/history/history.ts`, `src/app/shared/commemorations.ts`, `e2e/datas.spec.ts`, `e2e/logica/datas.spec.ts`, `e2e/logica/coreia.spec.ts`, `TESTES.md`, `CLAUDE.md`, `DIARIO.md`
+
+**Pendências:**
+- Mais datas dependem de dar o dia nos estudos que só têm o ano (Wesley em Oxford, os avivamentos do País de Gales e das Hébridas, a Confissão de Augsburgo): só entram se o dia for conferido.
+- Datas de nascimento e morte de outros personagens do Memorial, se quiser.
+
+## 2026-11-04 14:08 -0400 — Qual Coreia? E as datas só do mês
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- **Estudo da Coreia (`avivamento-da-coreia`)**: cada parte passou a dizer de qual Coreia fala. No começo entrou o quadro “Qual Coreia, a do Norte ou a do Sul?”: até 1945 uma só Coreia; hoje, a do Norte (Pyongyang e Wonsan, onde o avivamento aconteceu) e a do Sul (Seul, os golpes de 1961 e 1979, Gwangju, 1987, a lei marcial de 2024). Também ganharam o país: a lista de personagens, Wonsan e Pyongyang (“hoje na Coreia do Norte”), a divisão de 1945, Seul e a igreja Youngnak, o governo de Rhee, o golpe de 1961, a igreja nos anos de Park, o golpe de 1979, a luta de 1987, a lei marcial de 2024, o capítulo dos números e a linha do tempo inteira. O subtítulo da biblioteca e os textos das datas da Coreia (`anniversaries.ts`) também.
+- **Datas da História na tela inicial**: o carrossel agora mostra só os fatos do **mês de hoje** e troca sozinho pela lista do mês seguinte quando o mês vira. O fato do dia vem primeiro, depois os que ainda vêm no mês e, por fim, os que já passaram. O título é “Hoje na História” (quando há fato no dia) ou “Datas de novembro”, “Datas de dezembro” e assim por diante. Cada mês tem de 4 a 8 fatos.
+- **Testes**: o teste de lógica passou a conferir que, em todos os dias de 2026, só aparecem fatos do mês, o do dia vem primeiro, a ordem está certa e a virada de outubro para novembro troca a lista; o teste do navegador confere “Datas de novembro” e “Datas de dezembro”. `TESTES.md`, `CLAUDE.md` e a novidade do app foram atualizados.
+
+**Decisões:**
+- A tela `/datas` continua com o ano inteiro, começando pelo mês de hoje: ela é a biblioteca das datas, e a limitação por mês foi só no carrossel da tela inicial. Se a ideia era limitar também essa página, é uma mudança pequena.
+- A lista do mês é calculada quando a tela inicial abre. Quem deixar o app aberto na virada do mês vê a lista nova ao abrir de novo.
+- Em vez de mudar os títulos dos capítulos da Coreia (que ficam como estavam), a clareza entrou no quadro do começo e nas frases de cada parte.
+
+**Arquivos:** `public/conteudo/artigos/avivamento-da-coreia.md`, `src/app/core/anniversaries.ts`, `src/app/core/library.ts`, `src/app/core/whats-new.ts`, `src/app/shared/commemorations.ts`, `e2e/logica/datas.spec.ts`, `e2e/datas.spec.ts`, `TESTES.md`, `CLAUDE.md`, `DIARIO.md`
+
+**Pendências:**
+- Perguntar se a página `/datas` também deve mostrar só o mês.
+
+## 2026-11-04 12:55 -0400 — A Coreia do Norte ao lado da do Sul, Atos 8 e a Bíblia de papel
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- **Coreia (`avivamento-da-coreia`)**: saiu a nota “O que não consegui confirmar” do capítulo do golpe de 1961, como pedido. Entrou o capítulo **O Outro Lado da Fronteira: A Coreia do Norte**, com quatro partes: como a família Kim chegou ao poder (os soviéticos em 1945, Kim Il-sung, a sucessão de pai para filho), os expurgos e o que o regime chamou de traição (1956, Jang Song-thaek em 2013, Kim Jong-nam em 2017), a igreja no Norte (Federação Cristã Coreana de 1946, Bongsu, Chilgol, Changchung, a Open Doors) e o paralelo, com a ficha “As Duas Coreias”. A abertura do estudo, a linha do tempo, as fontes, o subtítulo e o tempo de leitura (18 min) foram atualizados.
+- **A palavra no coração (`a-palavra-no-coracao`)**: nova seção **Entende o que Lê?** com Atos 8.26-39 (o etíope, a estrada deserta entre Jerusalém e Gaza, Filipe levado pelo anjo e pelo Espírito) e a Bíblia de papel junto com a do aplicativo, e não só a do celular: abertura, primeira seção, regras do fim e fecho também falam da Bíblia de papel; um item novo mostra o erro de impressão da edição inglesa de 1631, que esqueceu o “não” de Êxodo 20.14. A passagem de Gênesis 3 ganhou uma **tabela** “O que Deus disse” e “O que a serpente disse”, com as palavras trocadas em negrito, e Lucas 23.43 ganhou as **duas leituras em destaque**, uma abaixo da outra (a da Almeida e a com a vírgula depois de “hoje”). Agora são 8 tópicos; subtítulo, fontes, novidades e tempo de leitura (14 min) atualizados.
+
+- **Teste das novidades** (`e2e/novidades.spec.ts`): o botão “Entendi” era achado por parte do nome e passou a bater também com o cartão das novidades, cujo texto agora diz “não entendia” (o etíope de Atos 8). O teste passou a procurar o nome exato.
+
+**Decisões:**
+- O pedido falava em “golpes de Estado” da família Kim. As fontes não mostram nenhum: o poder foi dado pelos soviéticos e passou de pai para filho, e o que há são expurgos, mortes e acusações de traição feitas pelo próprio regime. O capítulo diz isso com clareza e deixa explícito que os golpes contados antes (1961, 1979) são do Sul. O caso de Jang Song-thaek aparece como a acusação do regime, sem chamá-lo de golpe.
+- Números de cristãos presos no Norte vão de 50 mil a quase 200 mil e nenhum se verifica: o texto dá a faixa e avisa. Nada de fotos do Norte por ora.
+- Sobre a Bíblia de papel, o texto não coloca o papel acima da tela: o aplicativo serve para buscar e comparar, o papel para anotar e ficar à vista dos filhos, e a Palavra guardada confere os dois. O erro de 1631 mostra que o papel também erra. A multa dos impressores não foi citada, porque as fontes divergem (£300 ou £3.000).
+- O texto de Atos não diz “rolo”; está escrito assim, com o aviso de que os livros daquele tempo eram copiados à mão. A frase da Almeida usada nas citações é a do texto do app (“Entendes, porventura, o que estás lendo?”).
+
+**Arquivos:** `public/conteudo/artigos/avivamento-da-coreia.md`, `public/conteudo/artigos/a-palavra-no-coracao.md`, `src/app/core/library.ts`, `src/app/core/sources.ts`, `src/app/core/whats-new.ts`, `e2e/novidades.spec.ts`, `DIARIO.md`
+
+**Pendências:**
+- Módulo para as pessoas publicarem sermões e teses (nome, redes sociais e foto): proposta em conversa, ainda sem decisão.
+- Fotos para a seção do Norte e para Atos 8 (por exemplo, a pintura de Rembrandt sobre o batismo do eunuco, de domínio público) se o usuário quiser.
+- A falha de `busca-estudo.spec.ts` (“conselho de Niceia”), que não é desta mudança, continua.
+
+## 2026-11-04 12:23 -0400 — Fotos como num jornal em todas as páginas e o tom do estudo da Palavra
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- **Fotos à esquerda, com o texto em volta, em toda página** (`rich-text.scss`, `rich-text.ts`): no computador a foto flutua à esquerda e o texto corre ao lado dela, nas histórias e nos estudos comuns; a alternância esquerda/direita acabou. Quadros e paisagens (`{larga}`) ficam maiores, mas também ao lado do texto. Títulos, cartões, fichas, linhas do tempo e notas começam abaixo da foto. No celular a foto continua entre os parágrafos.
+- **Cada foto antes do parágrafo de que fala**: 11 fotos estavam depois do último parágrafo da seção (sem texto ao lado) e foram movidas: Coreia (nove, uma por capítulo), Coliseu (duas), Catacumbas, A Igreja e o Estado (duas), Madureira, Natal e os calendários (duas). Um teste novo (`logica/imagens-no-texto.spec.ts`) falha se uma foto ficar solta ou se houver mais de duas seguidas; outro (`imagens-jornal.spec.ts`) mede no navegador que a foto está à esquerda e o texto começa ao lado dela.
+- **Estudo da Palavra no coração**: a abertura passou a ser exatamente o bloco pedido (as duas frases, “Qual é a verdadeira? Você sabe?”); saíram “Vou ser direto, porque o assunto não aceita rodeio”, “Este estudo vai incomodar”, “Seja honesto”, “Pare de se desculpar” e “Este estudo não tem um Natã”, no lugar de frases impessoais. O tom passou a ser o de um pai que desperta e cuida: Provérbios 3.12 e Hebreus 12.11 na abertura, e Oseias 11.3-4 e Salmo 103.13 no fecho. O conteúdo do resto foi mantido.
+- `CLAUDE.md` ganhou as duas regras (foto antes do parágrafo; voz impessoal e de pai, sem anúncios nem pedidos de desculpa).
+
+**Decisões:**
+- A foto fica sempre à esquerda, como pedido, em vez de alternar de lado.
+- Em vez de reordenar as fotos por código na hora de mostrar, o Markdown foi corrigido e um teste impede o problema de voltar: a posição de cada foto é uma escolha de quem escreve.
+- Só tirei os anúncios sobre o próprio texto; as notas honestas sobre fontes (“não consegui confirmar”) ficaram.
+
+**Arquivos:** `src/app/shared/rich-text.scss`, `rich-text.ts`, `public/conteudo/artigos/avivamento-da-coreia.md`, `coliseu-de-roma.md`, `catacumbas-de-roma.md`, `igreja-e-estado.md`, `madureira-e-a-separacao.md`, `natal-e-os-calendarios.md`, `a-palavra-no-coracao.md`, `e2e/logica/imagens-no-texto.spec.ts`, `e2e/imagens-jornal.spec.ts`, `TESTES.md`, `CLAUDE.md`
+
+**Pendências:** conferir no celular de verdade; hoje só o computador tem o texto correndo em volta da foto.
+
+---
+
+## 2026-11-04 10:22 -0400 — Duas frases (uma alterada) na abertura e a Reforma no estudo da Palavra
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- A abertura de `a-palavra-no-coracao` agora mostra duas frases de Provérbios 3.5, uma verdadeira e outra com o “não” tirado, e pergunta: “Qual é a verdadeira? Você sabe?”. A resposta vem na seção “E se Trocarem uma Letra, uma Vírgula?”, que explica a troca (três letras mudam a frase para o contrário do que Deus manda).
+- Confirmado que as frases “Este estudo não está aqui para humilhar ninguém…” e “Feche os olhos por um minuto…”, da primeira versão, já não estão no texto (saíram na reescrita anterior).
+- Seção nova, “Quem Pagou para Você Poder Ler a Bíblia?” (agora o 2º dos sete tópicos): a Bíblia fechada em latim, Valdo, Wycliffe e Hus, a imprensa de Gutenberg, Lutero em Worms e em Wartburg (Novo Testamento em onze semanas, Bíblia completa em 1534), o sacerdócio de todos os crentes, Zuínglio, Tyndale e “o menino que guia o arado”, a Almeida e o Brasil colonial; termina no confronto: “o menino do arado hoje é você”. Cartão para *Lutero e a Reforma Protestante*.
+
+**Decisões:**
+- Todos os fatos da Reforma vêm dos estudos do app (Lutero e a Reforma Protestante, A Reforma Inglesa e os Puritanos, Antes de Lutero, Da Vulgata à King James, A Bíblia em Português); a frase de Worms e a de Tyndale são as que os estudos já citam.
+- “Os reformadores discordaram entre si em muita coisa, mas todos puseram a Escritura acima de tudo”: dito assim, e não como se tivessem pensado igual.
+- O Brasil colonial entra como dois fatos que o estudo da Bíblia em português registra, sem ligá-los por “porque”.
+
+**Arquivos:** `public/conteudo/artigos/a-palavra-no-coracao.md`, `src/app/core/library.ts`, `whats-new.ts`
+
+**Pendências:** as mesmas de antes (erros de digitação da Almeida ainda não conferidos no resto do texto).
+
+---
+
+## 2026-11-04 10:18 -0400 — O estudo da Palavra no coração, reescrito para confrontar e não para testar
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- O estudo `a-palavra-no-coracao` foi reescrito depois do esclarecimento do usuário: o objetivo não é testar a pessoa, e sim **confrontá-la de frente**. Saíram a ficha “O Teste dos Dez Textos”, a pontuação por faixas, o convite a se testar e o jogo de perguntas. Entrou um tom direto, com a Escritura apontando para a pessoa: “você tem acesso à Palavra, e ter acesso não é ter a Palavra”.
+- Título novo: *A Bíblia Está no Seu Celular, mas Está em Você?* (o endereço não mudou). Tópicos: Você Diz que Crê na Bíblia, mas Quanto Dela Está em Você?; E se Trocarem uma Letra, uma Vírgula?; Isso Já Acontece, ou É Exagero?; O que Fez Jesus Quando o Tentador Citou a Bíblia?; Quem Vai Ensinar o Caminho que Você Não Conhece?; O que Fazer a Partir de Hoje?
+- Textos novos que sustentam o confronto, todos conferidos na Almeida do app: Provérbios 27.6 (a ferida do amigo), João 5.39 e Mateus 22.29 (os que estudavam a Escritura e erravam), Tiago 1.22-24 (o espelho), Ezequiel 33.32, Amós 8.11, Jeremias 8.8 (a falsa pena dos escribas), Mateus 15.6-9 e 15.14 (a tradição e o cego que guia cego), Lucas 24.25 e 2 Samuel 12.7 (Natã). O fecho passou a ser Tiago 1.22: “feche a tela, escolha um texto, diga-o em voz alta até saber, e então ensine”.
+
+**Decisões:**
+- Direto não é inventar: o estudo continua sem números fabricados e sem afirmar o que não sabe sobre o leitor. A força vem de condicionais verdadeiras (“se trocarem, você não vai perceber; quem não sabe o texto não vê a troca”), de perguntas retóricas e dos próprios textos bíblicos.
+- Mantive o contrapeso honesto: a Bíblia em si não foi adulterada e traduções diferentes não são fraude. Ele agora serve também para ninguém se esconder atrás do “exagero”.
+- Jeremias 8.8 vem com o aviso de que os estudiosos discutem se fala de cópias alteradas ou de ensino torcido.
+- A confrontação termina em saída, como no texto de Lucas 24: Jesus chamou os discípulos de “néscios” e depois lhes abriu as Escrituras. O plano de doze semanas ficou como caminho.
+
+**Arquivos:** `public/conteudo/artigos/a-palavra-no-coracao.md`, `avivamentos-desde-atos.md`, `src/app/core/library.ts`, `whats-new.ts`
+
+**Pendências:** as mesmas da entrada anterior sobre os erros de digitação da Almeida.
+
+---
+
+## 2026-11-04 10:11 -0400 — Estudo “Se Mudassem uma Palavra da Bíblia no Seu Celular, Você Perceberia?” e sete correções na Almeida
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Estudo novo `a-palavra-no-coracao`, a pedido do usuário: um estudo que provoca a pessoa a se testar sobre ler e decorar a Palavra num tempo em que um texto digital muda sem ninguém ver, e que parte da pergunta de Provérbios 22.6 (como ensinar o caminho se nós mesmos o desconhecemos?). Seis tópicos em forma de pergunta: o teste dos dez textos; a troca de uma letra ou de uma vírgula (Gênesis 3, o “i” e o “til”, Lucas 23.43); o que já acontece (ditos populares tidos por versículos, memes, inteligência artificial, erros de digitação nos textos digitais); o que Jesus fez quando o tentador citou a Bíblia (o corte de “em todos os teus caminhos” no Salmo 91); como ensinar o caminho que não sabemos (Deuteronômio 6, Oseias 4, Hebreus 5); por onde começar (plano de doze semanas). Entra na trilha *Reconhecer e Guardar o Avivamento*, na visão geral dos avivamentos, nas fontes e na nota de novidades.
+- Sete erros de digitação corrigidos no texto da Almeida do app, pela lista `VERSE_FIXES` de `tools/gerar-almeida.py` e por `tools/corrigir-almeida.py` (não à mão): “Mecedônia” (2 Coríntios 8.1), “O senhor é Deus” (1 Reis 18.39), “a fazer e que era mau” (Juízes 10.6), “eu fiz, um voto” (Juízes 11.35), um “Isso não é” solto no fim de Juízes 11.40, “já lhe fiz: saber” (1 Samuel 3.13) e “A Lei e ao Testemunho! se” (Isaías 8.20). A lista passa a ter 23 correções.
+- A rota `/datas` entrou na lista de rotas fixas de `logica/links-internos.spec.ts`, que falhava por causa do link da nota de novidades.
+
+**Decisões:**
+- O pedido era “mexer com o brio” e “colocar a dúvida” na cabeça das pessoas. Fiz isso como desafio honesto: perguntas de verdade e um teste que a pessoa faz sozinha, sem número inventado (“só 10% acertam”) e sem humilhar. O texto diz isso logo na abertura.
+- O estudo equilibra o alarme: afirma que a Bíblia em si não foi “adulterada” (o texto é muito bem atestado, e o estudo sobre os manuscritos é ligado) e que traduções diferentes não são fraude; o risco é a cópia que se lê sem saber conferir.
+- A afirmação sobre erros de digitação é verdadeira e conferida: foram achados lendo versículos para escrever os estudos recentes, e agora estão corrigidos. A frase sobre inteligência artificial é cautelosa (“podem citar um versículo que não existe”), sem acusar nenhum programa.
+- Lucas 23.43 é apresentado como exemplo de como a posição de uma vírgula muda o sentido, sem decidir a discussão doutrinária.
+- Os ditos “Deus ajuda quem cedo madruga”, “Ajuda-te que Deus te ajudará” e “Deus escreve certo por linhas tortas” entram como ditos populares que não estão na Bíblia.
+
+**Arquivos:** `public/conteudo/artigos/a-palavra-no-coracao.md`, `avivamentos-desde-atos.md`, `src/app/core/library.ts`, `trails.ts`, `sources.ts`, `whats-new.ts`, `tools/gerar-almeida.py`, `public/bible/almeida/` (2CO, 1KI, JDG, 1SA e ISA), `e2e/logica/links-internos.spec.ts`
+
+**Pendências:**
+- Outros erros de digitação devem existir no resto do texto da Almeida: só se conferiu uma pequena parte. Uma conferência sistemática (por exemplo, palavras que não existem em português) acharia mais.
+- Dois pontos para conferir com calma: “espojavam” em Juízes 2.16 (talvez “despojavam”) e a pontuação de 2 Crônicas 33.22; não mexi, porque não tenho certeza do texto certo.
+
+---
+
+## 2026-11-04 10:00 -0400 — Datas da História: destaques com foto na tela inicial e imagem de comemoração
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Módulo `core/anniversaries.ts` com 68 fatos da história que têm dia e mês nos estudos do app (a chegada de Berg e Vingren a Belém em 19 de novembro de 1910; as 95 teses; Herrnhut; o coração aquecido de Wesley; a Escola Dominical de Kalley; a Rua Fulton; a fundação da Assembleia de Deus em cada estado; os golpes e a lei marcial na Coreia…). Cada fato repete só o que o estudo ligado conta, com o link da história e, quando há, a foto com o crédito.
+- Tela inicial: o bloco “Hoje na História” (ou “Datas da História”, quando não há fato no dia) com foto, selo dos anos (“116 anos · Hoje”), data, texto, “Ler a história” e compartilhar. Os destaques passam a cada 9 segundos e param ao tocar, ao passar o mouse, ao usar o teclado ou no botão de pausar; com “reduzir movimento” ligado não passam sozinhos. Mostra de uma semana atrás a um mês à frente, o do dia primeiro, sempre de quatro a oito.
+- Página `/datas` (Datas da História): o ano inteiro, mês a mês, a partir do mês de hoje, com o fato do dia marcado, miniatura da foto e botão de compartilhar; entra na biblioteca como um livro em Contexto e Cultura › O Tempo.
+- Imagem de comemoração (usa o mesmo painel de compartilhar): selo grande com os anos, data, foto com a linha de crédito, título, texto e o QR code da história.
+- 12 fotos novas (retratos e gravuras de Hus, Lutero, Zuínglio, Tyndale, Zinzendorf, Wesley, Edwards, Gardiner, Kalley, Dom Bosco, Seymour e Hoover), todas de domínio público conferido no Wikimedia Commons, com crédito em `credits.ts`, em `CREDITOS.md` e em cada fato; mais as 9 da Coreia, que também entram nos fatos.
+- Testes: `logica/datas.spec.ts` e `datas.spec.ts`; `TESTES.md`, `CLAUDE.md` e a nota de novidades atualizados.
+
+**Decisões:**
+- Os fatos vêm só de datas que os estudos já dizem; onde o estudo diz “por volta de” (a morte de Gardiner, Roraima), o fato leva `approx` e a data sai com “por volta de”. Datas de fundação por estado seguem “segundo a igreja do estado”, como nas páginas dos estados.
+- Foto só quando há de domínio público ou licença aberta; o resto fica sem foto e mostra um ícone no lugar. O crédito aparece sempre junto da foto, na tela e na imagem.
+- O texto dos destaques fica sobre uma faixa da cor do assunto, e não sobre a foto, para manter o contraste de 4,5:1.
+- A troca automática tem botão de pausar (obrigatório para quem não consegue acompanhar) e some com “reduzir movimento”.
+- Datas de nascimento e morte de pessoas ficaram de fora de propósito nesta primeira lista: o foco são fatos da história.
+
+**Arquivos:** `src/app/core/anniversaries.ts`, `share-card.ts`, `library-bays.ts`, `credits.ts`, `whats-new.ts`, `src/app/shared/commemorations.ts`, `share-render.ts`, `src/app/pages/dates/dates.ts`, `home/home.html`, `home/home.ts`, `app.routes.ts`, `app.ts`, `public/conteudo/imagens/` (12 fotos novas), `public/fonts/`, `e2e/logica/datas.spec.ts`, `e2e/datas.spec.ts`, `e2e/navegacao.spec.ts`, `TESTES.md`, `CLAUDE.md`, `CREDITOS.md`
+
+**Pendências:**
+- Faltam fotos para muitos fatos (Agnes Ozman, a Rua Fulton, Azusa, Daniel Berg sozinho, os estados): só entram com licença livre.
+- Mais fatos: toda data nova de estudo novo pode virar um destaque; vale acrescentar quando um estudo ganhar data com dia e mês.
+- Conferir no celular de verdade a troca automática e o compartilhar.
+
+---
+
+## 2026-11-04 09:42 -0400 — Coreia: como a pressão funcionou, destaque do Pew e fotos das pessoas
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- O capítulo dos santuários xintoístas deixou de dizer só que as igrejas “foram forçadas a ceder” e passou a mostrar como: uma ficha “Como a Pressão Funcionou” (o argumento do governo, as escolas e o seminário, a assembleia de 1938, as prisões, o culto virando cerimônia, o que mais mudou, os missionários e o fim das igrejas livres em 1945) e um parágrafo sobre Chu Ki-chol (quatro prisões, a morte em 1944, a causa registrada).
+- O trecho do Pew sobre os cristãos no poder virou a ficha “Os Cristãos e o Poder (1945–1953)”, com os números em negrito (35 de 50 em 1945, 38 de 190 em 1948, a guerra, a reeleição de Rhee) e o que não foi achado.
+- Fotos de nove pessoas e lugares, todas de domínio público ou de licença aberta, conferidas na página de cada arquivo do Wikimedia Commons: Kil Sun-ju, Chu Ki-chol, Syngman Rhee (1948), Park Chung-hee (1963), Park e Kennedy na Casa Branca (14 de novembro de 1961), Chun Doo-hwan, o antigo prédio do governo de Jeolla do Sul em Gwangju, a multidão da despedida de Lee Han-yeol (9 de julho de 1987) e a assinatura do impeachment de Yoon (14 de dezembro de 2024). Quatro delas também aparecem nos cartões dos personagens do alto da página. Créditos em `credits.ts`, em `CREDITOS.md` e na legenda de cada foto.
+- Uma frase nova no capítulo de Gwangju (em 21 de maio o exército atirou contra a multidão diante do prédio do governo da província) e outra no de 1961 (os Estados Unidos reconheceram o governo em 27 de julho; Park foi a Washington em 14 de novembro), para as fotos terem de que falar.
+
+**Decisões:**
+- Nas fontes que li, o local da Assembleia de 1938 (Pyongyang) e a pressão da polícia aparecem só numa; as outras dizem apenas que as autoridades japonesas forçaram a assembleia. O texto diz exatamente isso, em vez de afirmar o local e a polícia como fatos.
+- Sem totais de presos, de igrejas fechadas e de mortos nas prisões: as páginas não dão, e o texto avisa. O trecho de Timothy Lee sobre o ritual obrigatório e o fim das igrejas livres vem de uma citação no blog Far Outliers; o livro não foi lido, e a fonte diz isso. A data de 1945 diverge (25 de junho em Lee, 1º de agosto na Wikipédia), e o texto guarda as duas.
+- Sem foto de Robert Hardie (nenhuma livre achada) nem de Han Kyung-chik: a única foto livre dele mostra dois homens, e a legenda do Commons não diz quem é quem. Os dois ficam com as iniciais.
+- A licença KOGL Tipo 1 (governo coreano) permite uso e adaptação com crédito, e entrou como licença aberta; está dita nas legendas e nos créditos.
+- O capítulo “A Igreja durante a Ditadura” ficou sem foto: não achei imagem livre de Yonggi Cho nem da cruzada de Billy Graham.
+
+**Arquivos:** `public/conteudo/artigos/avivamento-da-coreia.md`, `public/conteudo/imagens/coreia-*.jpg` (9 fotos), `src/app/core/credits.ts`, `sources.ts`, `CREDITOS.md`
+
+**Pendências:**
+- Foto de Han Kyung-chik e de Hardie, se aparecer uma com licença livre.
+- Conferir, nas fontes primárias (Lee, Kim 2002), o que o estudo diz sobre o ritual e as datas de 1945.
+
+---
+
+## 2026-11-04 09:03 -0400 — Compartilhar uma imagem no WhatsApp e no Instagram
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Botão **Compartilhar** em 12 tipos de página: estudo, personagem do memorial, profecia, tribo, estado da Assembleia de Deus, verbete do dicionário, hino da Harpa, época, sermão histórico, curiosidade, mapa e o assunto da biblioteca (`/historia?trilha=`). O botão abre um painel com a imagem pronta (assunto, título, subtítulo, tópicos numerados com até dois subtópicos, o nome Bíblia Sagrada, o endereço e um QR code que abre a própria página) em dois tamanhos: Feed e WhatsApp (1080×1350) e Stories (1080×1920).
+- No painel: “Compartilhar imagem” (menu do aparelho, com WhatsApp e Instagram), “Baixar a imagem”, “Enviar o link no WhatsApp” e “Copiar o link”. Sem menu de compartilhar, a imagem é salva.
+- Código novo: `core/share-card.ts` (modelo puro de cada página), `shared/share-render.ts` (desenho no canvas), `shared/share-sheet.ts` (painel), `shared/share-image-button.ts` (botão) e `Sheets.shareImage`. O QR code vem do `qrcode-generator` (MIT), carregado só na hora de compartilhar; entra nos créditos.
+- O compartilhar de texto do estudo e o da curiosidade foram trocados pelo painel novo; o de sermão do usuário, anotação, devocional e versículo continua como era.
+- Ícones novos (`download`, `chat`): `tools/baixar-fontes.py` gerou o arquivo de ícones de novo.
+- Testes: `logica/compartilhar.spec.ts` (cartões de todas as páginas, endereço, contraste) e `compartilhar.spec.ts` (12 tipos de página, QR code, Stories, menu do aparelho, baixar, copiar, WhatsApp, tamanho dos botões e das letras). `TESTES.md`, `CLAUDE.md` e a nota de novidades foram atualizados.
+
+**Decisões:**
+- Imagem desenhada no próprio aparelho (canvas), sem servidor: funciona sem internet e não manda nada para fora. O endereço da imagem é sempre o do site publicado, mesmo quando se testa em `localhost`.
+- Instagram não tem endereço para postar de uma página da web; o caminho é o menu de compartilhar do aparelho (que lista o Instagram) ou baixar a imagem. Por isso o painel diz isso numa frase.
+- O QR code leva à página exata, e o endereço escrito é o do site, para quem quiser procurar na internet. A imagem só leva títulos e tópicos, nunca texto de obra com direitos autorais.
+- A curiosidade não revela a resposta na imagem, só a pergunta e “a resposta está no app”, para dar vontade de abrir.
+- Estudos com muitos tópicos mostram os que cabem e dizem “+ N tópicos no app”; se não couberem quatro com subtópicos, a imagem mostra mais tópicos sem eles.
+- Ficaram de fora, por enquanto: página de livro da Bíblia (`/livro/:book`), aulas do IBUC e da EBD (material do professor) e a tela inicial.
+
+**Arquivos:** `src/app/core/share-card.ts`, `src/app/shared/share-render.ts`, `share-sheet.ts`, `share-image-button.ts`, `sheets.ts`, `study.scss`, as páginas `article`, `person`, `prophecy`, `tribe`, `ad-state`, `dictionary-entry`, `hymn`, `epoch`, `classic-sermon`, `curiosity`, `map` e `history`, `credits.ts`, `whats-new.ts`, `public/fonts/`, `package.json`, `package-lock.json`, `e2e/compartilhar.spec.ts`, `e2e/logica/compartilhar.spec.ts`, `TESTES.md`, `CLAUDE.md`, `CREDITOS.md`.
+
+**Pendências:**
+- Botão na página de livro da Bíblia e talvez na tela inicial.
+- Imagem para versículo (o painel de versículo já compartilha o texto) e para anotações próprias: precisam de decisão sobre direitos de cada versão da Bíblia na imagem.
+- Conferir no celular de verdade (WhatsApp e Instagram), porque o menu de compartilhar de arquivos depende do aparelho e do navegador.
+
+---
+
+## 2026-11-04 08:16 -0400 — A história da Coreia num estudo só
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- O estudo *A Igreja Coreana Depois do Avivamento* foi incorporado ao *O Grande Avivamento da Coreia* (`avivamento-da-coreia`), a pedido do usuário: uma página só conta o avivamento de 1903–1910 e, em seguida, 1919, os santuários xintoístas, a divisão e a guerra, o golpe de 1961, a igreja durante a ditadura, o golpe de 1979 e Gwangju, 1987, a lei marcial de 2024 e a pergunta sobre o crescimento. A linha do tempo e o “Para a Vida” foram unidos, e os personagens passaram a seis.
+- Saíram da biblioteca, da trilha, das fontes, da nota de novidades e da visão geral dos avivamentos a entrada e o cartão do estudo que deixou de existir (`igreja-coreana-depois-do-avivamento`); o cartão da visão geral para o estudo da Coreia ganhou uma frase que diz que ele vai até hoje.
+
+**Decisões:**
+- Os títulos dos capítulos novos viraram afirmações (“1919: Os Cristãos e a Independência”, “A Igreja durante a Ditadura”), no estilo do que o estudo já tinha, e não perguntas: este estudo não usa tópicos na capa, e misturar os dois estilos ficaria estranho.
+- O título e o endereço do estudo da Coreia não mudaram, para não quebrar nenhum cartão que aponta para ele; o subtítulo, o período (1903–hoje) e a duração (15 minutos) refletem o texto inteiro.
+- O capítulo de 1919 parte da anexação de 1910 que o estudo já contou, sem repeti-la.
+- O fim do avivamento passou a se chamar “O Fim do Avivamento”, porque o capítulo agora fica no meio do estudo.
+
+**Arquivos:** `public/conteudo/artigos/avivamento-da-coreia.md`, `avivamentos-desde-atos.md`, `src/app/core/library.ts`, `trails.ts`, `sources.ts`, `whats-new.ts`; apagado: `igreja-coreana-depois-do-avivamento.md` (ainda sem commit).
+
+**Pendências:**
+- As mesmas da entrada anterior sobre a Coreia: faltam fontes mais fortes sobre a reação das igrejas ao golpe de 1961 e sobre quantos protestantes apoiaram cada lado em 2024; o público real do Explo ’74 não foi achado.
+
+---
+
+## 2026-11-04 08:13 -0400 — Três estudos viram um: a geração que esquece, a casa e a igreja
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Os estudos *A Geração que Não Conheceu o Senhor*, *O Culto no Lar e a Fé que Passa aos Filhos* e *Você Conhece a História e as Regras da Sua Igreja?* foram reunidos numa página só, a pedido do usuário. O estudo fica com o endereço e o título do primeiro (`a-geracao-que-nao-conheceu-o-senhor`), em três partes e 14 tópicos: o padrão (tópicos 1 a 6), a casa (7 a 11) e a igreja (12 a 14).
+- Saíram da biblioteca, da trilha, das fontes, da nota de novidades e da visão geral dos avivamentos as entradas e os cartões dos dois estudos que deixaram de existir (`culto-no-lar` e `conhece-a-sua-igreja`); a trilha *Reconhecer e Guardar o Avivamento* agora tem dois estudos.
+
+**Decisões:**
+- Reunir cortando a repetição, e não só colando: as passagens que apareciam em mais de um dos três (Deuteronômio 6.20, a Páscoa e as pedras do Jordão, Timóteo e a mãe e a avó, Malaquias 4.6, Juízes 2.10 e a Lei achada por Josias) ficam com o texto completo uma vez só, e as outras partes remetem a elas (“como vimos”). Os dois “Para a Vida” e as duas aberturas viraram uma abertura que explica as três partes e um fecho só.
+- O pai e a mãe ficaram no mesmo tópico, em dois subtítulos, e o que era “quem não conhece a própria história” e “de onde vêm as regras” e “como uma regra muda” virou subtítulo dentro de tópicos maiores, para a lista não passar de 14 tópicos.
+- Mantive o endereço do primeiro estudo para não quebrar os cartões que já apontavam para ele (estudo dos avivamentos na Bíblia, as marcas de um avivamento e a visão geral).
+- Os cartões de leitura de outros estudos (Pentecostes no Brasil, Harpa Cristã, Irmãos Perseguidos, Assembleia de Deus no Brasil, o nome, o estatuto da CGADB e as convenções) continuam, cada um uma vez.
+
+**Arquivos:** `public/conteudo/artigos/a-geracao-que-nao-conheceu-o-senhor.md`, `avivamentos-desde-atos.md`, `marcas-de-um-avivamento.md`, `avivamentos-na-biblia.md`, `src/app/core/library.ts`, `trails.ts`, `sources.ts`, `whats-new.ts`; apagados: `culto-no-lar.md` e `conhece-a-sua-igreja.md` (ainda sem commit).
+
+**Pendências:**
+- A entrada anterior, de hoje, ainda fala em seis estudos novos; os três que foram reunidos contam como um. O texto não foi editado, porque as duas entradas vão no mesmo commit.
+
+---
+
+## 2026-11-04 08:06 -0400 — Avivamentos na Bíblia, marcas de um avivamento, a geração que esquece, o culto no lar, a igreja que se conhece e a Coreia depois de 1907
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Seis estudos novos, na trilha Pentecostalismo e Avivamentos: *Os Avivamentos na Bíblia* (de Jacó em Betel e dos reis de Judá a Neemias, Nínive, Atos e a Macedônia, com fichas de Asa, Ezequias, Josias, Neemias e da Macedônia), *As Marcas de um Avivamento* (dez marcas tiradas dos estudos do app, os cinco sinais de Edwards de 1741, o que atrapalha e o que fica), *A Geração que Não Conheceu o Senhor* (Juízes 2, Jefté, os reis, Éfeso e Sardes, o pacto pela metade, Wesley em 1786, e as cinco práticas bíblicas para passar a fé), *O Culto no Lar e a Fé que Passa aos Filhos* (o pai, a mãe, um culto de vinte minutos, o filho que se afastou), *Você Conhece a História e as Regras da Sua Igreja?* (quatro camadas: Bíblia, doutrina, ordem e costume; sete perguntas) e *A Igreja Coreana Depois do Avivamento* (1919, os santuários xintoístas, divisão e guerra, os golpes de 1961 e de 1979, Gwangju, 1987 e a lei marcial de 2024).
+- Trilha: dois ramos novos (*Os Avivamentos na Bíblia* e *Reconhecer e Guardar o Avivamento*) e o estudo da Coreia logo depois do avivamento de 1907. A visão geral dos avivamentos ganhou a seção “Antes de Atos”, a seção “Guardar o Fogo” e os cartões dos novos estudos; o estudo do avivamento da Coreia aponta para o novo.
+- Fontes de cada estudo, nota de novidades e uma obra nova no catálogo (Pew, 2006, sobre a Coreia).
+
+**Decisões:**
+- O pedido sobre a Coreia dizia “o golpe de estado”. Contei os três que as fontes registram (1961, dezembro de 1979 e a tentativa de 2024), cada um com o que a igreja fez e o que não achei. Não achei fonte sobre como as igrejas reagiram ao golpe de 1961, e o estudo diz isso em vez de preencher o espaço.
+- Cada fato de igreja, de número ou de data veio de uma página lida ou de resultado de busca citado; onde as fontes divergem (15 ou 16 cristãos entre os 33 signatários de 1919; as sentenças de Yoon em janeiro de 2026; o total de mortos em Gwangju), o estudo guarda as duas versões. Nenhum pastor foi nomeado como apoiador do golpe de 2024, porque as páginas lidas não nomeiam; o estudo só atribui ao resumo de Gasser (2025) a conclusão de que grupos protestantes conservadores o receberam bem.
+- A palavra “avivamento” na Macedônia vem com aviso: o texto bíblico não usa a palavra, e o estudo diz o que a Macedônia mostra (casas, estudo da Palavra, generosidade na pobreza).
+- Sobre Jefté, o estudo não decide o que o voto significou (os intérpretes divergem) e lembra que Hebreus 11 o lista entre os que tiveram fé.
+- Os três estudos de família e igreja usam a Assembleia de Deus só como exemplo, e afirmam sobre ela apenas o que os estudos do app já registram. Nada sobre usos e costumes foi acrescentado sem fonte.
+- Susanna Wesley: as fontes divergem em quantos filhos (17 a 19) e em quantas pessoas vinham à cozinha; o estudo guarda o essencial e avisa que os números variam.
+- Todos os estudos novos são da coleção Avivamentos, para entrar na visão geral e na trilha sem exceção nos testes.
+
+**Arquivos:** `public/conteudo/artigos/avivamentos-na-biblia.md`, `marcas-de-um-avivamento.md`, `a-geracao-que-nao-conheceu-o-senhor.md`, `culto-no-lar.md`, `conhece-a-sua-igreja.md`, `igreja-coreana-depois-do-avivamento.md`, `avivamentos-desde-atos.md`, `avivamento-da-coreia.md`, `src/app/core/library.ts`, `trails.ts`, `sources.ts`, `whats-new.ts`
+
+**Pendências:**
+- Faltam fontes mais fortes sobre a reação das igrejas coreanas ao golpe de 1961 e sobre quantos protestantes apoiaram cada lado em 2024 (o resumo de Gasser, de 2025, só foi lido na página do resumo; o texto completo está no repositório do Graduate Institute).
+- O número real de pessoas no Explo ’74 não foi encontrado; o estudo cita só a expectativa.
+- Um estudo à parte sobre o que foi proibido, depois tolerado e depois proibido de novo (item 3 do pedido anterior) continua esperando a escolha do usuário entre o estudo histórico e a tese com conclusão definida.
+- Quando a lista de arquivos novos for para um commit, conferir que os estudos de Miller e de Ferguson, que já estavam no mesmo diretório sem commit, entram ou ficam de fora de propósito.
+
+---
+
+## 2026-11-04 08:10 -0400 — A exclusão de Belém contada num só lugar, dentro do artigo da Assembleia de Deus
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- A história da igreja batista de Belém e da exclusão de 1911 estava repetida em quatro textos. Agora ela é contada por inteiro em um só lugar: a seção "A Origem em Belém: Os Batistas e a Exclusão de 1911", dentro de `assembleia-de-deus-no-brasil`. Ela traz de onde vieram os batistas, no que acreditavam, como a igreja de Belém nasceu (Erik Nelson, 5 de fevereiro de 1897), por que Vingren e Berg foram bem recebidos, os sete meses, a exclusão de 13 de junho, o que veio depois e onde as fontes divergem.
+- `pentecostes-no-brasil`, `daniel-berg-e-gunnar-vingren` e `ad-estados/pa.md` guardam só um resumo curto e o cartão que leva ao artigo principal.
+- Num primeiro momento tinha sido criado um estudo separado; ele foi desfeito a pedido do dono do app (queria tudo num só lugar), junto com o registro em `library.ts`, `trails.ts`, `sources.ts` e no panorama. As fontes consultadas passaram para `ARTICLE_SOURCES` do artigo principal.
+- A lista "Ano a Ano, Estado por Estado" segue em ordem de ano, e as datas conferem com `AD_STATES` e as páginas de estado: Alagoas 1915 (era 1914), Maranhão 1920–1922 (era 1920–1921), Tocantins c. 1948 (era 1952), "Manoel Francisco do Bu" (era "Dubu"). A tabela de casamentos e a linha do tempo também ficaram em ordem de ano. "Missão da Fé Apostólica" ficou igual em todos os textos, e Berg e Vingren receberam o Espírito nos Estados Unidos em 1909 (e não os dois em Chicago).
+
+**Decisões:**
+- Tudo na seção do artigo principal, em vez de um estudo à parte, por pedido do dono do app. O artigo ficou maior (cerca de 4.800 palavras, 26 minutos).
+- O texto atribui cada ponto contestado ao relato que o traz (quem conduzia a igreja, quantos foram excluídos, datas) e diz que quase tudo vem do diário de Vingren e das memórias de Berg, do lado dos excluídos.
+- Ficou de fora um panfleto batista de 20 mil cópias contra os dois, encontrado só em um site sem fonte confiável.
+
+**Arquivos:** `public/conteudo/artigos/assembleia-de-deus-no-brasil.md`, `pentecostes-no-brasil.md`, `daniel-berg-e-gunnar-vingren.md`, `nome-assembleia-de-deus.md`, `public/conteudo/ad-estados/pa.md`, `src/app/core/library.ts`, `trails.ts`, `sources.ts`, `DIARIO.md`
+
+**Pendências:**
+- Ler a seção nova com atenção: as fontes batistas de 1911 são escassas, e os artigos acadêmicos foram lidos por trechos. Se houver o diário de Vingren e as memórias de Berg, conferir a sequência de 2 e 13 de junho e os nomes de Nelson e Nobre.
+- Nada foi commitado nem publicado.
+
+---
+
+## 2026-11-03 19:54 -0400 — Dois livros de história da igreja, lidos por inteiro e sintetizados em 20 partes
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Os dois livros da pasta `Livros/` (ignorada pelo git) foram lidos do começo ao fim: *A História da Igreja*, de Andrew Miller (tradução de 2022, 783 páginas, 32 capítulos), e *História da Igreja*, volume 1, de Everett Ferguson (Central Gospel, 2017, 639 páginas, 24 capítulos).
+- Cada livro virou uma série de 10 partes em `public/conteudo/artigos/`: `historia-da-igreja-andrew-miller` (Parte 1, caps. 1 e 2) e `miller-*` (Partes 2 a 10, caps. 3 a 32); `historia-da-igreja-everett-ferguson` (Parte 1, caps. 1 a 3) e `ferguson-*` (Partes 2 a 10, caps. 4 a 24). Cada parte tem tópicos em forma de pergunta e termina com um cartão `:::leia` para a série do outro livro e uma `:::ficha` que confere pontos concretos entre os dois (datas, números, nomes, o que um traz e o outro não).
+- Cada parte entrou em `library.ts` (coleção `igreja`), no ramo "Livros de História da Igreja" de `trails.ts`, em `ARTICLE_SOURCES` (`sources.ts`, rótulo "Partes lidas") e como cartão no fim de `panorama-da-igreja.md`. `credits.ts` e `CREDITOS.md` registram as duas obras.
+- O texto da Parte 1 do Miller dizia que os capítulos 3 a 32 só eram conhecidos pelo sumário; foi corrigido, e a Parte 1 do Ferguson deixou de chamar seus três capítulos de "primeiro terço".
+- O item de novidades `historia-da-igreja-miller` (`whats-new.ts`) passou a falar dos dois livros completos, com dois itens.
+- Testes lógicos: 131 passaram depois de cada parte.
+
+**Decisões:**
+- Miller (CC BY-NC-SA 4.0) e Ferguson (todos os direitos reservados) foram sintetizados do mesmo jeito: palavras próprias, organizadas por assunto, sem trechos copiados; do Ferguson só entram poucas palavras entre aspas. Onde Miller interpreta, o texto diz "segundo Miller".
+- A conferência entre os livros diz o que cada um afirma e o que ficou sem checagem ("não conferi"), em vez de decidir quem tem razão. Divergências reais ficaram à mostra: os albigenses (cátaros dualistas, para Ferguson; essencialmente iguais aos valdenses, para Miller), a data de morte de Becket (1170 e 1171), Valdo, a origem da Inquisição, a morte de Celestino V, a data de Avignon, Clóvis (496 ou 498) e outras.
+- Os capítulos 31 e 32 do Miller (Hus, Gutenberg e os últimos precursores) e parte do 30 (Wycliffe) saem do alcance do volume 1 do Ferguson, que termina por volta de 1300; esses trechos dizem expressamente que não têm segunda fonte.
+- A série do Ferguson ficou em 10 partes, e não em 8 como se pensou no início, porque os capítulos 21 a 24 pediam três módulos de tamanho semelhante aos outros.
+- O item de novidades manteve o `id` `historia-da-igreja-miller` porque ainda não foi publicado; foi editado no lugar, sem criar outra versão.
+- Ficou de fora das sínteses: as páginas finais do Ferguson (cronologia e bibliografia) e as notas e ilustrações dos dois livros.
+
+**Arquivos:** `public/conteudo/artigos/historia-da-igreja-andrew-miller.md`, `miller-*.md` (9), `historia-da-igreja-everett-ferguson.md`, `ferguson-*.md` (9), `panorama-da-igreja.md`, `src/app/core/library.ts`, `trails.ts`, `sources.ts`, `credits.ts`, `whats-new.ts`, `CREDITOS.md`, `DIARIO.md`
+
+**Pendências:**
+- Nada foi commitado nem publicado: o dono do app vai ler as 20 partes antes (leitura crítica de fatos e de direitos autorais).
+- `npm run lint` (sem problemas), `npx ng build` (sem erros) e os 131 testes lógicos passaram no fim desta sessão; falta só rodar de novo antes do commit, se algo mudar depois da leitura.
+- Seguem as pendências da entrada anterior: gravar a amostra da voz Brian com a chave `ELEVENLABS_API_KEY`, conferir as condições do plano grátis da ElevenLabs e gerar os áudios (nenhum foi gravado).
+
 ## 2026-11-03 16:41 -0400 — Áudio das histórias: revezar vozes e provedores dentro da franquia grátis
 
 **Autor:** Valtemir Junior (com Claude Code)

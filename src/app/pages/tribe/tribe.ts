@@ -13,15 +13,17 @@ import { RichText } from '../../shared/rich-text';
 import { Sheets } from '../../shared/sheets';
 import { tribeOrigin } from '../tribes/tribes';
 import { SourcesBox } from '../../shared/sources-box';
+import { ShareImageButton } from '../../shared/share-image-button';
+import { tribeCard } from '../../core/share-card';
 
 /** Uma das tribos de Israel: patriarca, bênçãos, vocação, líderes, território e personagens. */
 @Component({
   selector: 'app-tribe',
-  imports: [DecimalPipe, RouterLink, MatIconModule, MatRippleModule, BackButton, BibleMapView, PassageView, RichText, SourcesBox],
+  imports: [DecimalPipe, RouterLink, ShareImageButton, MatIconModule, MatRippleModule, BackButton, BibleMapView, PassageView, RichText, SourcesBox],
   template: `
     @if (tribe(); as t) {
       <div class="article">
-        <div class="top"><app-back fallback="/tribos" label="Voltar às tribos" /></div>
+        <div class="top"><app-back fallback="/tribos" label="Voltar às tribos" /><app-share-image-button [card]="shareCard()" /></div>
 
         <span class="overline">Tribo de Israel · {{ origin(t) }}</span>
         <h1 class="title"><i class="swatch" [style.background]="t.color"></i>{{ t.name }}</h1>
@@ -177,6 +179,7 @@ export class TribePage {
   protected readonly sideName = campSideName;
 
   protected readonly tribe = computed(() => findTribe(this.id()));
+  protected readonly shareCard = computed(() => (this.tribe() ? tribeCard(this.tribe()!) : null));
   protected readonly patriarch = computed(() => this.tribe()?.person ?? null);
 
   protected readonly territoryDistances = computed(() =>

@@ -80,7 +80,7 @@ Mas, na verdade, para isso te hei mantido com vida, para te mostrar o meu poder,
 O Egito foi o primeiro dos cativeiros de Israel, e o último a ser lembrado pelos profetas.
 :::
 
-:::leia entre-os-testamentos
+:::leia da-volta-do-exilio-a-jesus
 Séculos depois, o Egito de Ptolomeu abriga a Septuaginta e a comunidade judaica de Alexandria.
 :::
 

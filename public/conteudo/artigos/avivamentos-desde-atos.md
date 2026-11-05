@@ -12,8 +12,21 @@ Os avivamentos da história têm muito em comum:
 - **Mudam a sociedade**: menos crime e bebedeira, famílias restauradas, escolas, obras sociais e missões.
 - **Têm um fim**: depois de meses ou anos, o fogo diminui. Às vezes vêm excessos e divisões; quase sempre ficam igrejas novas, obreiros e missionários.
 
+Cada ponto desta lista tem exemplos, e há mais marcas, num estudo à parte.
+
+:::leia marcas-de-um-avivamento
+As dez marcas que se repetem, os cinco sinais de Edwards para testar uma obra e o que quase sempre atrapalha.
+:::
+
 :::sermao finney-o-que-e-avivamento
 Charles Finney explica o que é um avivamento e quando a igreja precisa dele.
+:::
+
+## Antes de Atos: Os Avivamentos na Bíblia
+
+A Bíblia já conta avivamentos: Jacó em Betel, Samuel em Mizpá, os reis Asa, Ezequias e Josias, o povo que ouviu a Lei no tempo de Neemias, a cidade de Nínive e as igrejas da Macedônia.
+
+:::leia avivamentos-na-biblia
 :::
 
 ## Pentecostes e a Igreja Primitiva (30–100)
@@ -175,6 +188,7 @@ Moody foi um dos frutos daquele tempo de oração.
 :::
 
 :::leia avivamento-da-coreia
+Do avivamento de 1907 aos golpes de Estado de 1961 e 1979 e à lei marcial de 2024: a história da igreja coreana até hoje.
 :::
 
 ## Azusa e o Fogo Pentecostal (1906–1913)
@@ -252,6 +266,17 @@ O Chile, em 1909, e a Argentina, em 1954 e nos anos 1980 e 1990, aparecem nas fo
 A partir de 1949, as **cruzadas de Billy Graham** levaram o evangelho a estádios do mundo inteiro, inclusive do Brasil. Nos anos 1960, a **renovação carismática** levou a experiência pentecostal a igrejas históricas, e o cristianismo cresceu muito na África, na Ásia e na América Latina. Os historiadores ainda discutem quais desses movimentos foram avivamentos no sentido antigo — mas todos mostram que a oração por avivamento continua.
 
 :::sermao billy-graham
+:::
+
+## Guardar o Fogo
+
+Quase todo avivamento termina na geração seguinte. O primeiro estudo olha para o depois: o que acontece quando os que viram morrem, o que a família precisa voltar a fazer em casa e por que conhecer a história e as regras da própria igreja protege a fé. O segundo é mais direto: você conhece a Palavra o bastante para perceber quando mudam uma palavra dela?
+
+:::leia a-geracao-que-nao-conheceu-o-senhor
+:::
+
+:::leia a-palavra-no-coracao
+A Palavra está no seu aparelho, mas está em você? Por que ler e decorar, o que acontece quando um texto muda sem ninguém ver e quem vai ensinar o caminho que você não conhece.
 :::
 
 ## Para a Vida

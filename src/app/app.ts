@@ -51,15 +51,17 @@ export class App {
     { initialValue: this.router.url },
   );
   protected readonly isReader = computed(() => this.url().startsWith('/ler/'));
+  /** Prévia exclusiva do autor (/revisao/…): uma página à parte, sem as barras do app. */
+  protected readonly isReview = computed(() => this.url().startsWith('/revisao/'));
   /** Estudos e histórias: lidos como o capítulo da Bíblia, com as barras saindo da frente do texto. */
   protected readonly isArticle = computed(() => this.url().startsWith('/artigo/'));
   /** Aba do menu de cada tela: cada coisa mora em um só lugar. */
   protected readonly tab = computed<NavTab | null>(() => {
     const url = this.url();
     if (/^\/(ler\/|busca|livros)/.test(url)) return 'biblia';
-    if (/^\/(ensino|ebd|ibuc|sermoes)/.test(url)) return 'ensino';
+    if (/^\/(ensino|ebd|ibuc|sermoes|vozes)/.test(url)) return 'ensino';
     if (/^\/(meu-espaco|devocional|anotacoes|favoritos|ajustes|novidades|creditos)/.test(url)) return 'eu';
-    if (/^\/(estudo|fontes|harpa|memorial|genealogia|tribos|atlas|mapas|profecias|artigo|historia|epocas|avivamento|assembleia-de-deus|dicionario|curiosidades|quiz|livro\/)/.test(url)) return 'estudo';
+    if (/^\/(estudo|fontes|harpa|memorial|genealogia|tribos|atlas|mapas|profecias|artigo|historia|epocas|datas|avivamento|assembleia-de-deus|dicionario|curiosidades|quiz|livro\/)/.test(url)) return 'estudo';
     return /^\/($|\?|#)/.test(url) ? 'inicio' : null;
   });
   protected readonly version = computed(() => findVersion(this.settings.version()));

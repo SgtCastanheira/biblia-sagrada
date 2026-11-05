@@ -34,6 +34,8 @@ export interface SearchHit {
   score: number;
   /** Trecho do texto onde a busca apareceu: antes, o que casou e depois. */
   snippet: { before: string; hit: string; after: string } | null;
+  /** A pesquisa de várias palavras aparece inteira, na mesma ordem (“Coreia do Norte”). */
+  exact?: boolean;
 }
 
 /** Minúsculas e sem acentos, para "Nicéia" e "niceia" serem a mesma palavra. */
@@ -134,10 +136,26 @@ export function search(prepared: Prepared[], query: string, limit = 60): SearchH
       score += best;
     }
     if (!ok) continue;
-    if (terms.length > 1 && (p.title.includes(phrase) || p.body.includes(phrase))) score += 8;
-    hits.push({ doc: p.doc, score, snippet: firstBody >= 0 ? snippetAt(p.rawBody, firstBody, firstLen) : null });
+    const exact = terms.length > 1 && (p.title.includes(phrase) || p.subtitle.includes(phrase) || p.body.includes(phrase));
+    if (exact) score += 8;
+    hits.push({ doc: p.doc, score, snippet: firstBody >= 0 ? snippetAt(p.rawBody, firstBody, firstLen) : null, exact });
   }
-  return hits.sort((a, b) => b.score - a.score || a.doc.title.localeCompare(b.doc.title, 'pt-BR')).slice(0, limit);
+  return trim(hits, terms.length)
+    .sort((a, b) => b.score - a.score || a.doc.title.localeCompare(b.doc.title, 'pt-BR'))
+    .slice(0, limit);
+}
+
+/**
+ * Tira o ruído de uma pesquisa de várias palavras: se algum achado traz a expressão inteira (“Coreia do Norte”), só
+ * esses ficam; e, entre os que ficam, somem os que só citam o assunto de passagem, com uma pontuação bem abaixo do
+ * melhor. Uma palavra só mantém todos os achados.
+ */
+function trim(hits: SearchHit[], termCount: number): SearchHit[] {
+  if (termCount < 2 || !hits.length) return hits;
+  const exact = hits.filter((h) => h.exact);
+  const pool = exact.length ? exact : hits;
+  const top = Math.max(...pool.map((h) => h.score));
+  return pool.filter((h) => h.score >= top * 0.2);
 }
 
 /** Um trecho de cerca de 150 letras em volta do achado, cortado em palavras inteiras. */

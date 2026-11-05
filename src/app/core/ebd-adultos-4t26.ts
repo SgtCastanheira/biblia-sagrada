@@ -66,7 +66,7 @@ export const EBD_ADULTOS_4T26: IbucLesson[] = [
     application:
       'Deuteronômio começa lembrando e termina escolhendo. **Esta semana**, escreva três coisas que Deus fez por você e que você não quer esquecer, e conte uma delas a alguém da sua casa. Quem lembra do que Deus fez tem mais facilidade para obedecer ao que ele manda.',
     deepen:
-      'Veja como o nome “Deuteronômio” nasceu na tradução grega em [A Septuaginta, a Bíblia Grega](/artigo/septuaginta). Para entender o mundo em que a Lei foi guardada e lida depois, leia [Os 400 Anos entre os Testamentos](/artigo/entre-os-testamentos). O livro aparece também no mapa do [Êxodo](/mapas/exodo).',
+      'Veja como o nome “Deuteronômio” nasceu na tradução grega em [A Septuaginta, a Bíblia Grega](/artigo/septuaginta). Para entender o mundo em que a Lei foi guardada e lida depois, leia [Da Volta do Exílio a Jesus](/artigo/da-volta-do-exilio-a-jesus). O livro aparece também no mapa do [Êxodo](/mapas/exodo).',
   },
   {
     ...BASE,
@@ -298,7 +298,7 @@ export const EBD_ADULTOS_4T26: IbucLesson[] = [
     ],
     application:
       'Amar a Deus é um **verbo de rotina**: ouvir, guardar, ensinar, lembrar. Escolha um momento fixo do dia, de cinco minutos, para ler uma passagem em voz alta em casa, nesta semana.',
-    deepen: 'Veja como Jesus citou esse texto em [[Mt 22.34-40]]. Para o ambiente do tempo de Jesus (sinagogas, escribas), veja [Os 400 Anos entre os Testamentos](/artigo/entre-os-testamentos).',
+    deepen: 'Veja como Jesus citou esse texto em [[Mt 22.34-40]]. Para o ambiente do tempo de Jesus (sinagogas, escribas), veja [Da Volta do Exílio a Jesus](/artigo/da-volta-do-exilio-a-jesus).',
   },
   {
     ...BASE,

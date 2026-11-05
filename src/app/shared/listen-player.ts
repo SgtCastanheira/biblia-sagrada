@@ -43,7 +43,7 @@ import { isNaturalVoice } from '../core/voice';
             </select>
           </label>
         }
-        @if (listen.mode() !== 'audio' && !hasNatural()) {
+        @if (listen.mode() !== 'audio' && listen.lang() === 'pt' && !hasNatural()) {
           <p class="tip"><mat-icon>lightbulb</mat-icon><span>Para uma voz mais natural: no computador ou no Android, abra o app no <b>Edge</b> (voz “Francisca”); no iPhone, baixe uma voz <b>Premium</b> em Ajustes › Acessibilidade › Conteúdo falado › Vozes › Português.</span></p>
         }
       </section>

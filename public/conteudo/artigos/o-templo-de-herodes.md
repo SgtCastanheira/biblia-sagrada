@@ -48,6 +48,6 @@ Imagine, numa grande cidade, uma área do tamanho de um bairro, cercada de muros
 - Na nova Jerusalém, não há templo: [[Ap 21.22]].
 - No dicionário: [templo](/dicionario/templo), [tabernáculo](/dicionario/tabernaculo).
 
-:::leia entre-os-testamentos
+:::leia da-volta-do-exilio-a-jesus
 O mesmo Templo antes de Herodes: profanado por Antíoco IV em 167 a.C. e purificado pelos Macabeus em 164 a.C., na festa da Dedicação.
 :::
