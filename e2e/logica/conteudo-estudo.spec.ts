@@ -64,18 +64,6 @@ test('notas de estudo: capítulos existentes e versículos dentro do capítulo',
   }
 });
 
-test('resumos: capítulo existente, referência válida e texto curto', () => {
-  const summaries = json<Record<string, { text: string; ref: string }>>('resumos.json');
-  expect(Object.keys(summaries).length, 'piloto limitado a poucos capítulos').toBeLessThanOrEqual(5);
-  for (const [key, summary] of Object.entries(summaries)) {
-    const [bookId, n] = key.split(' ');
-    const book = BOOKS.find((b) => b.id === bookId);
-    expect(book && Number(n) >= 1 && Number(n) <= book.chapters, `capítulo inexistente: ${key}`).toBeTruthy();
-    expect(summary.text.length, `resumo longo demais: ${key}`).toBeLessThanOrEqual(350);
-    expectValidRefs([summary.ref], `resumo/${key}`);
-  }
-});
-
 test('memorial: grupos conhecidos, todos os reis e referências válidas', () => {
   const people = json<Person[]>('memorial.json');
   const groups = new Set(GROUPS.map((g) => g.id));

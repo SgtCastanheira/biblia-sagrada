@@ -73,32 +73,14 @@ for (const tema of ['dark', 'sepia'] as const) {
 
 test('cores: escolher a paleta e a luz quente na Aparência da leitura, e lembrar na próxima vez', async ({ page }) => {
   await page.goto('/ler/JHN/3');
-  await page.getByRole('button', { name: 'Escolher cor do app' }).click();
-  await expect(page.getByRole('menu')).toBeVisible();
-  await expect(page.getByRole('dialog')).toHaveCount(0);
-  const colorMenu = page.getByRole('menu');
-  const swatches = colorMenu.getByRole('menuitemradio');
-  await expect(swatches).toHaveCount(5);
-  await expect(colorMenu.getByText('Noite')).toHaveCount(0);
-  await expect(colorMenu.getByText('Noite quente')).toHaveCount(0);
-  const swatchPositions = await swatches.evaluateAll((items) => items.map((item) => item.getBoundingClientRect().y));
-  expect(new Set(swatchPositions).size).toBe(1);
-  const selectedSwatch = colorMenu.getByRole('menuitemradio', { name: 'Cor: Claro' }).locator('.theme-swatch');
-  await expect(selectedSwatch).toHaveCSS('outline-style', 'none');
-  await expect(selectedSwatch).toHaveCSS('box-shadow', 'none');
-  const selectedColorButton = colorMenu.getByRole('menuitemradio', { name: 'Cor: Claro' });
-  await selectedColorButton.hover();
-  await expect(selectedColorButton).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
-  await colorMenu.getByRole('menuitemradio', { name: 'Cor: Floresta' }).click();
-  await expect(page.locator('body')).toHaveClass(/theme-forest/);
-  await expect(page.getByRole('menu')).toHaveCount(0);
-  await page.getByRole('button', { name: 'Escolher cor do app' }).click();
-  await page.getByRole('menuitemradio', { name: 'Cor: Sépia' }).click();
-  await expect(page.locator('body')).toHaveClass(/theme-sepia/);
+  await page.getByRole('button', { name: 'Aparência da leitura' }).click();
+  const grupo = page.getByRole('group', { name: 'Paleta de cores' });
+  await grupo.getByRole('button', { name: /Noite quente/ }).click();
+  await expect(page.locator('body')).toHaveClass(/theme-ember/);
+  await grupo.getByRole('button', { name: /Névoa/ }).click();
+  await expect(page.locator('body')).toHaveClass(/theme-mist/);
   await expect(page.locator('.warmth')).toHaveCount(0);
 
-  await page.getByRole('button', { name: 'Escolher cor do app' }).click();
-  await page.getByRole('menuitem', { name: 'Mais opções de leitura' }).click();
   const slider = page.getByRole('slider', { name: /Luz quente/ });
   await slider.focus();
   for (let i = 0; i < 4; i++) await page.keyboard.press('ArrowRight');
@@ -106,7 +88,7 @@ test('cores: escolher a paleta e a luz quente na Aparência da leitura, e lembra
   await expect(page.locator('.warmth')).toHaveCSS('pointer-events', 'none');
 
   await page.reload();
-  await expect(page.locator('body')).toHaveClass(/theme-sepia/);
+  await expect(page.locator('body')).toHaveClass(/theme-mist/);
   await expect(page.locator('.warmth')).toBeAttached();
 });
 
@@ -117,25 +99,4 @@ test('cores: o modo automático segue o claro e o escuro do aparelho', async ({ 
   await expect(page.locator('body')).toHaveClass(/theme-dark/);
   await page.emulateMedia({ colorScheme: 'light' });
   await expect(page.locator('body')).toHaveClass(/theme-light/);
-});
-
-test('Ajustes destaca Aparência e permite escolher cor, tamanho e luz quente', async ({ page }) => {
-  await page.goto('/ajustes');
-  const aparencia = page.locator('section.appearance');
-  await expect(aparencia.getByRole('heading', { name: 'Aparência' })).toBeVisible();
-  await expect(aparencia.getByRole('group', { name: 'Paleta de cores' })).toBeVisible();
-
-  const group = aparencia.getByRole('group', { name: 'Paleta de cores' });
-  await group.getByRole('button', { name: /Floresta/ }).click();
-  await expect(page.locator('body')).toHaveClass(/theme-forest/);
-
-  const fontSize = aparencia.getByRole('slider', { name: 'Tamanho do texto' });
-  await fontSize.focus();
-  await page.keyboard.press('ArrowRight');
-  await expect(aparencia.getByText(/Tamanho do texto/)).toContainText('20px');
-
-  const warmth = aparencia.getByRole('slider', { name: /Luz quente/ });
-  await warmth.focus();
-  await page.keyboard.press('ArrowRight');
-  await expect(page.locator('.warmth')).toBeAttached();
 });

@@ -43,17 +43,6 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
       </section>
     }
 
-    <section class="card appearance" aria-labelledby="appearance-title">
-      <div class="appearance-heading">
-        <span class="badge gold"><mat-icon>palette</mat-icon></span>
-        <div>
-          <h2 id="appearance-title">Aparência</h2>
-          <p>Escolha as cores do app, o tamanho das letras e a luz quente. A mudança aparece na hora e fica salva neste aparelho.</p>
-        </div>
-      </div>
-      <app-reading-settings />
-    </section>
-
     <section class="card">
       <h2>Versões</h2>
       <button class="row" matRipple (click)="pickVersion()">
@@ -105,6 +94,11 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
                           [disabled]="notify.permission() === 'unsupported' || notify.permission() === 'denied'"
                           aria-label="Notificações do sistema" />
       </div>
+    </section>
+
+    <section class="card">
+      <h2>Aparência</h2>
+      <app-reading-settings />
     </section>
 
     <section class="card" id="acessibilidade">
@@ -194,11 +188,6 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
     h1 { margin-bottom: 0; }
     .card { padding: 4px 20px 20px; border-radius: 22px; box-shadow: var(--shadow-soft); background: var(--mat-sys-surface-container-low); border: 1px solid var(--mat-sys-outline-variant); }
     h2 { font: 600 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 1.4px; color: var(--accent-gold); margin: 18px 0 8px; }
-    .appearance { border-color: color-mix(in srgb, var(--mat-sys-primary) 52%, var(--mat-sys-outline-variant)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--mat-sys-primary) 10%, transparent), var(--shadow-soft); }
-    .appearance-heading { display: flex; align-items: center; gap: 12px; margin: 8px 0 14px; }
-    .appearance-heading .badge { background: var(--mat-sys-surface); }
-    .appearance-heading h2 { margin: 0 0 4px; font-size: 15px; }
-    .appearance-heading p { margin: 0; font: 400 14px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .row {
       display: flex; align-items: center; gap: 14px; width: calc(100% + 16px); margin: 0 -8px; padding: 10px 8px;
       border: 0; border-radius: 16px; background: none; color: inherit; text-align: left; cursor: pointer; position: relative; overflow: hidden;
@@ -214,7 +203,7 @@ const TOTAL_CHAPTERS = BOOKS.reduce((sum, b) => sum + b.chapters, 0);
     .row-text { flex: 1; display: flex; flex-direction: column; min-width: 0; }
     .row-text strong { font: 600 16px Inter, sans-serif; }
     .row-text small { font: var(--mat-sys-body-medium); color: var(--mat-sys-on-surface-variant); }
-    app-reading-settings { display: block; }
+    app-reading-settings { margin-top: -12px; }
     .progress-info strong { font: 600 34px var(--heading-font); color: var(--mat-sys-primary); }
     .progress-info span { margin-left: 6px; color: var(--mat-sys-on-surface-variant); }
     .bar { height: 4px; border-radius: 2px; background: var(--mat-sys-surface-container-highest); margin: 10px 0 18px; overflow: hidden; }

@@ -1,5 +1,5 @@
 import { NavigationService } from './core/navigation.service';
-import { Component, computed, effect, inject, signal, untracked } from '@angular/core';
+import { Component, computed, effect, inject, untracked } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
@@ -32,11 +32,6 @@ type NavTab = 'inicio' | 'biblia' | 'estudo' | 'ensino' | 'jornal' | 'eu';
   styleUrl: './app.scss',
   host: {
     '(window:scroll)': 'onScroll()',
-    '(window:resize)': 'onResize()',
-    '(window:touchstart)': 'onTouchStart($event)',
-    '(window:touchend)': 'onTouchEnd($event)',
-    '(window:touchcancel)': 'onTouchCancel()',
-    '(document:keydown.escape)': 'closeMenu()',
   },
 })
 export class App {
@@ -50,9 +45,6 @@ export class App {
   private readonly sheets = inject(Sheets);
   private readonly router = inject(Router);
   private readonly navigation = inject(NavigationService);
-  protected readonly menuOpen = signal(false);
-  protected readonly isMobile = signal(typeof window !== 'undefined' && window.matchMedia('(max-width: 839px)').matches);
-  private touchStart: { x: number; y: number; inMenu: boolean } | null = null;
 
   private readonly url = toSignal(
     this.router.events.pipe(
@@ -96,13 +88,7 @@ export class App {
     // Cada tela nova começa com as barras à vista
     effect(() => {
       this.url();
-      untracked(() => {
-        this.ui.barsHidden.set(false);
-        this.menuOpen.set(false);
-      });
-    });
-    effect(() => {
-      if (this.isReader() && this.settings.focusMode()) this.menuOpen.set(false);
+      untracked(() => this.ui.barsHidden.set(false));
     });
 
     // Gravação que falhou (espaço cheio, armazenamento bloqueado): avisa uma vez por visita em vez de perder em silêncio.
@@ -126,7 +112,6 @@ export class App {
     const devotional = inject(DevotionalService);
     const reminders = inject(ReminderService);
     const check = () => {
-      if (this.isReader() && this.settings.focusMode()) return;
       ebd.check();
       devotional.check();
       this.curiosities.check();
@@ -147,46 +132,6 @@ export class App {
 
   protected onScroll(): void {
     this.ui.onScroll(window.scrollY);
-  }
-
-  protected toggleMenu(): void {
-    if (!this.isMobile() || (this.isReader() && this.settings.focusMode())) return;
-    this.menuOpen.update((open) => !open);
-  }
-
-  protected closeMenu(): void {
-    this.menuOpen.set(false);
-  }
-
-  protected onResize(): void {
-    this.isMobile.set(window.matchMedia('(max-width: 839px)').matches);
-    if (!this.isMobile()) this.closeMenu();
-  }
-
-  protected onTouchStart(event: TouchEvent): void {
-    if (!this.isMobile() || event.touches.length !== 1) return;
-    const touch = event.touches[0];
-    this.touchStart = {
-      x: touch.clientX,
-      y: touch.clientY,
-      inMenu: !!(event.target as HTMLElement | null)?.closest('.nav'),
-    };
-  }
-
-  protected onTouchEnd(event: TouchEvent): void {
-    const start = this.touchStart;
-    this.touchStart = null;
-    if (!start || event.changedTouches.length !== 1) return;
-    const touch = event.changedTouches[0];
-    const dx = touch.clientX - start.x;
-    const dy = touch.clientY - start.y;
-    if (Math.abs(dx) < 70 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
-    if (!this.menuOpen() && start.x <= 24 && dx > 0) this.menuOpen.set(true);
-    else if (this.menuOpen() && start.inMenu && dx < 0) this.closeMenu();
-  }
-
-  protected onTouchCancel(): void {
-    this.touchStart = null;
   }
 
 }

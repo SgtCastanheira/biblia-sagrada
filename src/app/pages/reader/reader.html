@@ -1,56 +1,34 @@
 @if (bookInfo(); as book) {
   <!-- Cabeçalho do leitor -->
-  <header class="reader-bar" [class.hidden]="ui.barsHidden() && !settings.focusMode()" [class.focus-mode]="settings.focusMode()">
+  <header class="reader-bar" [class.hidden]="ui.barsHidden()">
     <button class="chapter-btn" matRipple (click)="openChapters()" aria-label="Escolher livro e capítulo">
       <span>{{ book.name }} {{ chapterNum() }}</span>
       <mat-icon>expand_more</mat-icon>
     </button>
-    @if (settings.focusMode()) {
-      <span class="spacer"></span>
-      <button class="focus-exit" matRipple (click)="settings.focusMode.set(false)" aria-label="Sair do modo de foco">
-        <mat-icon>close</mat-icon><span>Sair do foco</span>
-      </button>
+    <span class="spacer"></span>
+    <button class="chip" matRipple (click)="changeVersion()" aria-label="Trocar versão">{{ version()?.abbrev }}</button>
+    @if (compare(); as c) {
+      <span class="chip compare">
+        <button matRipple (click)="changeCompare()" aria-label="Trocar versão de comparação">
+          <mat-icon>compare_arrows</mat-icon>{{ c.abbrev }}
+        </button>
+        <button class="close" (click)="stopCompare()" aria-label="Parar de comparar"><mat-icon>close</mat-icon></button>
+      </span>
     } @else {
-      <span class="spacer"></span>
-      <button class="chip" matRipple (click)="changeVersion()" aria-label="Trocar versão">{{ version()?.abbrev }}</button>
-      @if (compare(); as c) {
-        <span class="chip compare">
-          <button matRipple (click)="changeCompare()" aria-label="Trocar versão de comparação">
-            <mat-icon>compare_arrows</mat-icon>{{ c.abbrev }}
-          </button>
-          <button class="close" (click)="stopCompare()" aria-label="Parar de comparar"><mat-icon>close</mat-icon></button>
-        </span>
-      } @else {
-        <button mat-icon-button (click)="changeCompare()" matTooltip="Comparar versões" aria-label="Comparar versões">
-          <mat-icon>compare_arrows</mat-icon>
-        </button>
-      }
-      <button mat-icon-button (click)="listenChapter()" [matTooltip]="listen.state() === 'idle' ? 'Ouvir este capítulo' : 'Parar de ouvir'" [attr.aria-label]="listen.state() === 'idle' ? 'Ouvir este capítulo' : 'Parar de ouvir'">
-        <mat-icon>{{ listen.state() === 'idle' ? 'headphones' : 'stop_circle' }}</mat-icon>
-      </button>
-      <a mat-icon-button routerLink="/busca" matTooltip="Buscar" aria-label="Buscar na Bíblia"><mat-icon>search</mat-icon></a>
-      <button mat-icon-button [matMenuTriggerFor]="themeMenu" matTooltip="Cor do app" aria-label="Escolher cor do app">
-        <mat-icon>palette</mat-icon>
-      </button>
-      <mat-menu #themeMenu="matMenu" xPosition="before" class="theme-palette-menu">
-        @for (theme of themes; track theme.id) {
-          <button mat-menu-item class="theme-choice" [class.selected]="settings.theme() === theme.id"
-                  (click)="settings.theme.set(theme.id)" role="menuitemradio" [attr.aria-checked]="settings.theme() === theme.id"
-                  [attr.aria-label]="'Cor: ' + theme.label" disableRipple>
-            <span [class]="'theme-swatch ' + theme.id" aria-hidden="true"></span>
-          </button>
-        }
-        <button mat-menu-item class="more-options" (click)="openSettings()">
-          <mat-icon>tune</mat-icon><span>Mais opções de leitura</span>
-        </button>
-      </mat-menu>
-      <button mat-icon-button (click)="settings.focusMode.set(true)" matTooltip="Modo de foco" aria-label="Ativar modo de foco">
-        <mat-icon>center_focus_strong</mat-icon>
+      <button mat-icon-button (click)="changeCompare()" matTooltip="Comparar versões" aria-label="Comparar versões">
+        <mat-icon>compare_arrows</mat-icon>
       </button>
     }
+    <button mat-icon-button (click)="listenChapter()" [matTooltip]="listen.state() === 'idle' ? 'Ouvir este capítulo' : 'Parar de ouvir'" [attr.aria-label]="listen.state() === 'idle' ? 'Ouvir este capítulo' : 'Parar de ouvir'">
+      <mat-icon>{{ listen.state() === 'idle' ? 'headphones' : 'stop_circle' }}</mat-icon>
+    </button>
+    <a mat-icon-button routerLink="/busca" matTooltip="Buscar" aria-label="Buscar na Bíblia"><mat-icon>search</mat-icon></a>
+    <button mat-icon-button (click)="openSettings()" matTooltip="Aparência" aria-label="Aparência da leitura">
+      <mat-icon>format_size</mat-icon>
+    </button>
   </header>
 
-  <article class="page book-page" [class.focus-mode]="settings.focusMode()" [class.turn-next]="turn() === 'next'" [class.turn-prev]="turn() === 'prev'" [class.dragging]="dragX() !== 0" [class.settling]="settling()"
+  <article class="page book-page" [class.turn-next]="turn() === 'next'" [class.turn-prev]="turn() === 'prev'" [class.dragging]="dragX() !== 0" [class.settling]="settling()"
     [style.transform]="dragTransform()" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)" (touchcancel)="onTouchCancel()">
     <app-book-ribbon [placed]="ribbonHere()" (toggled)="toggleRibbon()" />
     <!-- Abertura do capítulo -->
@@ -61,18 +39,9 @@
       <span class="ornament" aria-hidden="true"><span></span><i></i><span></span></span>
     </div>
 
-    @if (showChapterSummary(); as summary) {
-      <section class="chapter-summary" aria-labelledby="chapter-summary-title">
-        <div class="study-body">
-          <h2 id="chapter-summary-title" class="study-section">Resumo do capítulo</h2>
-          <p class="intro-context">{{ summary.text }}</p>
-          <p class="intro-context"><span class="verse-ref">{{ summary.ref }}</span> · Síntese autoral, igual para todas as traduções.</p>
-        </div>
-      </section>
-    }
 
     <!-- Um só painel com tudo o que há para estudar neste capítulo -->
-    @if (!settings.focusMode() && settings.studyNotes() && studyItems().length) {
+    @if (settings.studyNotes() && studyItems().length) {
       <section class="study-card" [class.open]="studyOpen()">
         <button class="study-head" matRipple (click)="studyOpen.set(!studyOpen())" [attr.aria-expanded]="studyOpen()">
           <mat-icon>local_library</mat-icon>
@@ -94,7 +63,7 @@
               <p class="intro-context">{{ i.context }}</p>
             }
             @if (notes().length) {
-              <h3 class="study-section"><mat-icon>sticky_note_2</mat-icon> Explicações por trecho</h3>
+              <h3 class="study-section"><mat-icon>sticky_note_2</mat-icon> Notas de estudo</h3>
               @for (n of notes(); track n.v) {
                 <article class="study-note">
                   <a class="verse-ref" [routerLink]="[]" [fragment]="'v' + n.v.split('-')[0]">v. {{ n.v }}</a>
@@ -160,17 +129,6 @@
         </div>
       }
 
-      <div class="text-size-control" role="group" aria-label="Tamanho do texto bíblico">
-        <span aria-hidden="true">Texto</span>
-        <button mat-icon-button class="font-step" type="button" (click)="settings.changeFontSize(-1)" [disabled]="settings.fontSize() <= 13" aria-label="Diminuir tamanho do texto">
-          A−
-        </button>
-        <output aria-live="polite">{{ settings.fontSize() }} px</output>
-        <button mat-icon-button class="font-step" type="button" (click)="settings.changeFontSize(1)" [disabled]="settings.fontSize() >= 34" aria-label="Aumentar tamanho do texto">
-          A+
-        </button>
-      </div>
-
       @if (comparing()) {
         <!-- Modo comparação: um bloco por versículo -->
         <div class="compare-head">
@@ -218,7 +176,7 @@
       <p class="source">{{ versionName() }} · {{ state().fallback ? 'domínio público' : (version()?.copyright ?? 'domínio público') }}</p>
     }
 
-    @if (!settings.focusMode() && !state().loading && state().rows.length) {
+    @if (!state().loading && state().rows.length) {
       <app-quiz-prompt [link]="['/quiz/capitulo', book.id, chapterNum()]" text="Cinco perguntas sobre este capítulo e a sua história." />
     }
 
@@ -241,28 +199,20 @@
     </nav>
   </article>
 
-  @if (selectedBiblePassage()) {
-    <button class="reader-note-action" mat-flat-button (pointerdown)="$event.preventDefault()" (click)="annotateSelectedPassage()">
-      <mat-icon>edit_note</mat-icon> Anotar trecho
-    </button>
-  }
-
   <!-- Botões flutuantes -->
-  @if (!settings.focusMode()) {
-    <div class="fabs" [class.hidden]="ui.barsHidden()">
-      @if (previous(); as prev) {
-        <a class="fab" matRipple [routerLink]="['/ler', prev.bookId, prev.chapter]" aria-label="Capítulo anterior">
-          <mat-icon>chevron_left</mat-icon>
-        </a>
-      }
-      <span class="spacer"></span>
-      @if (next(); as nxt) {
-        <a class="fab" matRipple [routerLink]="['/ler', nxt.bookId, nxt.chapter]" aria-label="Próximo capítulo">
-          <mat-icon>chevron_right</mat-icon>
-        </a>
-      }
-    </div>
-  }
+  <div class="fabs" [class.hidden]="ui.barsHidden()">
+    @if (previous(); as prev) {
+      <a class="fab" matRipple [routerLink]="['/ler', prev.bookId, prev.chapter]" aria-label="Capítulo anterior">
+        <mat-icon>chevron_left</mat-icon>
+      </a>
+    }
+    <span class="spacer"></span>
+    @if (next(); as nxt) {
+      <a class="fab" matRipple [routerLink]="['/ler', nxt.bookId, nxt.chapter]" aria-label="Próximo capítulo">
+        <mat-icon>chevron_right</mat-icon>
+      </a>
+    }
+  </div>
 } @else {
   <p>Livro não encontrado.</p>
 }

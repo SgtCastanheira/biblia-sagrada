@@ -8,6 +8,25 @@ Regras:
 - **Decisões** dizem o que foi escolhido, por quê e o que ficou de fora. **Pendências** são o que ficou para depois.
 - O hash do commit não entra na entrada (ele ainda não existe ao escrever); `git log -- DIARIO.md` liga cada entrada ao seu commit.
 
+## 2026-11-06 17:30 -0400 — Reversão das publicações de hoje
+
+**Autor:** Valtemir Junior (com Copilot)
+
+**O que foi feito:**
+- Preparei a reversão das publicações dos PRs #8 (“Nova foto do autor de A Sanguessuga”) e #9 (“Melhorias do leitor e coleção Como a Ciência Explica”).
+- Restaurei os arquivos ao estado do PR #7, a versão que estava publicada antes das mudanças de hoje.
+
+**Decisões:**
+- Manter o GitHub Pages e o site no ar; retirar apenas as mudanças publicadas hoje.
+- Reverter os merges sem apagar o histórico. As entradas originais deste diário permanecem como registro do que foi publicado.
+- Manter fora da reversão os arquivos locais não rastreados em `.playwright-mcp/` e `Teologos/`.
+
+**Arquivos:** arquivos rastreados dos PRs #8 e #9; `DIARIO.md`.
+
+**Validação:** pendente dos checks e da publicação do PR de reversão.
+
+**Pendências:** concluir o PR de `dev` para `main` e confirmar a publicação no Pages.
+
 ## 2026-11-06 16:39 -0400 — Estudos científicos em volumes e melhorias no leitor, navegação e anotações
 
 **Autor:** Valtemir Junior (com Copilot)

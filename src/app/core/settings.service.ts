@@ -51,10 +51,6 @@ export class SettingsService {
   readonly studyWords = signal<boolean>(load('studyWords', true));
   /** Mostra o contexto histórico e as notas de estudo no início do capítulo. */
   readonly studyNotes = signal<boolean>(load('studyNotes', true));
-  /** Oculta recursos secundários durante a leitura do capítulo. */
-  readonly focusMode = signal<boolean>(load('focusMode', false));
-  /** Mantém o resumo curto visível no modo de foco, quando o capítulo tem um. */
-  readonly showSummaryInFocus = signal<boolean>(load('showSummaryInFocus', false));
   /** Camadas dos mapas: lugares ao redor, reinos da época e países de hoje. */
   readonly mapLayers = signal<{ nearby: boolean; era: boolean; modern: boolean }>(load('mapLayers', { nearby: true, era: true, modern: false }));
   readonly theme = signal<ThemeMode>(load('theme', load('darkMode', false) ? 'dark' : 'light'));
@@ -83,8 +79,6 @@ export class SettingsService {
     effect(() => persist('verseLayout', this.verseLayout()));
     effect(() => persist('studyWords', this.studyWords()));
     effect(() => persist('studyNotes', this.studyNotes()));
-    effect(() => persist('focusMode', this.focusMode()));
-    effect(() => persist('showSummaryInFocus', this.showSummaryInFocus()));
     effect(() => persist('mapLayers', this.mapLayers()));
     effect(() => persist('lastRead', this.lastRead()));
     effect(() => persist('bookmark', this.bookmark()));
