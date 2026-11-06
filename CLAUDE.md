@@ -71,7 +71,7 @@ Specs in `e2e/logica/` are pure-logic tests that import `src/app/core/*.ts` dire
 
 **Study content.** Two kinds of sources:
 - **Hand-written** in `public/conteudo/`, loaded and cached by `ContentService`:
-  - JSON files: `dicionario.json`, `memorial.json`, `profecias.json`, `citacoes.json`, `livros.json`, and `notas.json` (keyed `"JHN 3"`).
+  - JSON files: `dicionario.json`, `memorial.json`, `profecias.json`, `citacoes.json`, `livros.json`, `notas.json` and `resumos.json` (chapter keys such as `"JHN 3"`).
   - Markdown articles and sermons in `artigos/` and `sermoes/`.
 - **TS data modules** in `core/`:
   - `library.ts` is the article/sermon index.

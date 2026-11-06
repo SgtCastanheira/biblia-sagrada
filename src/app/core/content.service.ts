@@ -33,6 +33,12 @@ export interface ChapterNote {
   text: string;
 }
 
+/** Síntese autoral de um capítulo, independente da tradução selecionada. */
+export interface ChapterSummary {
+  text: string;
+  ref: string;
+}
+
 /**
  * Conteúdo de estudo (dicionário, contexto dos livros, memorial, artigos e sermões).
  * Fica em public/conteudo e é guardado pelo service worker: funciona offline.
@@ -45,6 +51,7 @@ export class ContentService {
   readonly dictionary = this.json<DictionaryEntry[]>('dicionario.json', []);
   readonly bookIntros = this.json<Record<string, BookIntro>>('livros.json', {});
   readonly chapterNotes = this.json<Record<string, ChapterNote[]>>('notas.json', {});
+  readonly chapterSummaries = this.json<Record<string, ChapterSummary>>('resumos.json', {});
   readonly memorial = this.json<Person[]>('memorial.json', []);
   readonly prophecies = this.json<Prophecy[]>('profecias.json', []);
   readonly quotations = this.json<Quotation[]>('citacoes.json', []);
@@ -56,6 +63,10 @@ export class ContentService {
 
   notes(bookId: string, chapter: number): Observable<ChapterNote[]> {
     return this.chapterNotes.pipe(map((all) => all[`${bookId} ${chapter}`] ?? []));
+  }
+
+  summary(bookId: string, chapter: number): Observable<ChapterSummary | null> {
+    return this.chapterSummaries.pipe(map((all) => all[`${bookId} ${chapter}`] ?? null));
   }
 
   /** Texto (Markdown simples) de um artigo ou sermão. */

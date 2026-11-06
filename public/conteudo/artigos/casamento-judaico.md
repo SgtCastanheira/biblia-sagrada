@@ -20,7 +20,11 @@ Isso explica por que José, ao saber da gravidez de Maria, pensou em **deixá-la
 
 ## 3. As Bodas de Caná
 
-Faltar vinho numa festa de casamento era uma grande vergonha para a família do noivo, responsável por receber bem os convidados durante todos os dias. Jesus transformou cerca de 600 litros de água em vinho — seis talhas de duas ou três metretas cada uma [[Jo 2.6-10]]. O primeiro sinal de Jesus aconteceu numa festa e livrou uma família da humilhação.
+Faltar vinho numa festa de casamento era uma grande vergonha para a família do noivo, responsável por receber bem os convidados durante todos os dias. Jesus transformou em vinho a água de seis talhas de pedra, cada uma com duas ou três metretas de capacidade [[Jo 2.6-10]]. O texto não fixa o tamanho moderno dessa medida; por isso, qualquer conversão para litros é uma estimativa, não um volume exato. O primeiro sinal de Jesus aconteceu numa festa e livrou uma família da humilhação.
+
+:::leia o-sinal-de-cana
+O que a química consegue — e não consegue — explicar sobre o sinal.
+:::
 
 ## 4. A Parábola das Dez Virgens
 

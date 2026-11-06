@@ -56,7 +56,7 @@ import { BackButton } from '../../shared/back-button';
     .collection { margin: 18px 4px 8px; font: 600 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: .8px; color: var(--accent-gold); }
     .note { margin: 0 0 6px; font: 400 14px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     ul { margin: 0; padding-left: 20px; font: 400 15px/1.55 var(--reading-font); }
-    li { margin-bottom: 4px; }
+    li { margin-bottom: 4px; overflow-wrap: anywhere; }
     cite { font-style: italic; }
     .article { margin: 0 4px; border-bottom: 1px solid var(--mat-sys-outline-variant); }
     .article summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 48px; cursor: pointer; list-style: none; }

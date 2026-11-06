@@ -8,6 +8,33 @@ Regras:
 - **Decisões** dizem o que foi escolhido, por quê e o que ficou de fora. **Pendências** são o que ficou para depois.
 - O hash do commit não entra na entrada (ele ainda não existe ao escrever); `git log -- DIARIO.md` liga cada entrada ao seu commit.
 
+## 2026-11-06 16:39 -0400 — Estudos científicos em volumes e melhorias no leitor, navegação e anotações
+
+**Autor:** Valtemir Junior (com Copilot)
+
+**O que foi feito:**
+- Reuni os sete estudos sobre sinais e milagres na estante própria **Como a Ciência Explica**, em três volumes (Química e Matéria, Física e Movimento, Corpo e Vida). Cada estudo continua sendo um artigo e pertence a uma única trilha.
+- Escrevi os estudos sobre Caná, o machado que flutuou, Jesus sobre as águas, a multiplicação dos pães, a tempestade acalmada, o cego de nascença e o filho da viúva de Naim. Acrescentei diagramas SVG com movimento reduzido, fontes e os links entre assuntos; os textos distinguem o que a ciência descreve do que os relatos não permitem reconstruir.
+- Corrigi a conversão de metretas no artigo sobre o casamento judaico: litros são estimativa, não medida informada por João.
+- No leitor, incluí a seleção de versículos para criar uma anotação com referência, citação, versão e comentário, salvando em Anotações. Anotações bíblicas não aparecem como tipo manual para novas anotações de culto.
+- Acrescentei um resumo-piloto autoral de Gênesis 1, com opção de exibição no modo de foco; modelei a preferência de leitura e incluí a validação do conteúdo.
+- Implementei menu lateral discreto, acionado por botão ou gesto da borda no celular; incluí modo de foco e ajustes rápidos de tema/tamanho do texto. Reservei o gesto da borda para o menu, sem virar o capítulo.
+- Ajustei a quebra de URLs longas na página de fontes para evitar rolagem horizontal em telas estreitas.
+
+**Decisões:**
+- **Separar a coleção científica das histórias da Bíblia:** os artigos ficam agrupados por área de conhecimento, sem duplicação. Novos estudos da série poderão entrar como volumes futuros.
+- **Limite das explicações:** não atribuir diagnósticos, mecanismos ou detalhes que as fontes bíblicas e clínicas não fornecem.
+- **Resumo em piloto:** somente Gênesis 1 por enquanto; a estrutura e a validação permitem ampliar sem presumir cobertura dos outros capítulos.
+- **Fluxo de produção:** preparar a publicação em `dev` e abrir PR para `main`; não enviar diretamente à branch de produção.
+- **Ficaram fora do commit:** `Teologos/` (imagens originais/auxiliares) e `.playwright-mcp/` (capturas e logs locais).
+
+**Arquivos:** `CLAUDE.md`; `e2e/acessibilidade.spec.ts`, `e2e/base.ts`, `e2e/estante.spec.ts`, `e2e/estudo.spec.ts`, `e2e/leitor.spec.ts`, `e2e/logica/conteudo-estudo.spec.ts`, `e2e/logica/estante.spec.ts`, `e2e/navegacao.spec.ts`, `e2e/temas.spec.ts`, `e2e/vozes.spec.ts`; `public/conteudo/artigos/casamento-judaico.md` e os sete artigos novos; `public/conteudo/resumos.json`; fontes Material Symbols em `public/fonts/`; `src/app/app.html`, `app.scss`, `app.ts`; `src/app/core/content.service.ts`, `library.ts`, `models.ts`, `notes.service.ts`, `settings.service.ts`, `sources.ts`, `trails.ts`, `whats-new.ts`; páginas `note/`, `notes/`, `reader/`, `settings/` e `sources/`; `src/app/shared/bible-note-sheet.ts`, `figure.ts`, `reading-settings.ts`, `sheets.ts`; `src/styles.scss`; `DIARIO.md`.
+
+**Validação:** `npm run lint`, `npx ng build`, 170 testes de lógica, 7 testes de produção offline e a verificação de largura de todas as rotas a 360 px passaram. A bateria completa inicial teve 1.267 aprovados e 6 falhas; após os ajustes, os cenários afetados foram repetidos em celular e computador (9 aprovados, 1 ignorado), e a varredura das rotas a 360 px passou. Também foi corrigido um conflito de gestos no leitor identificado na revisão do diff.
+
+**Pendências:**
+- Abrir o PR de `dev` para `main`, aguardar os checks e concluir a publicação no Pages.
+
 ## 2026-11-06 07:35 -0400 — Nova foto do autor de “A Sanguessuga”
 
 **Autor:** Valtemir Junior (com Claude Code)

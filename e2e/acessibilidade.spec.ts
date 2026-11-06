@@ -48,7 +48,7 @@ test('contraste das cores de destaque (mínimo 4,5:1)', async ({ page }) => {
 test('botões principais têm área de toque de pelo menos 40px', async ({ page, isMobile }) => {
   test.skip(!isMobile, 'Área de toque importa no celular');
   await page.goto('/ler/JHN/3');
-  for (const nome of ['Trocar versão', 'Aparência da leitura', 'Buscar na Bíblia']) {
+  for (const nome of ['Trocar versão', 'Escolher cor do app', 'Buscar na Bíblia']) {
     const alvo = page.getByRole('button', { name: nome }).or(page.getByRole('link', { name: nome })).first();
     await expect(alvo).toBeVisible();
     await page.waitForLoadState('networkidle');

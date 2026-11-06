@@ -77,6 +77,7 @@ export class NotePage {
       n.title && `Tema: ${n.title}`,
       n.preacher && `Pregador(a): ${n.preacher}`,
       n.refs && `Textos: ${n.refs}`,
+      n.quote && `Trecho (${n.sourceVersion ?? ''}): “${n.quote}”`,
       n.body,
       n.application && `O que vou praticar: ${n.application}`,
     ]

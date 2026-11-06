@@ -31,7 +31,7 @@ export class NotesPage {
     return this.service.sorted().filter(
       (n) =>
         (!type || n.type === type) &&
-        (!q || plain(`${n.title} ${n.preacher} ${n.refs} ${n.body} ${n.application}`).includes(q)),
+        (!q || plain(`${n.title} ${n.preacher} ${n.refs} ${n.quote ?? ''} ${n.body} ${n.application}`).includes(q)),
     );
   });
 

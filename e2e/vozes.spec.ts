@@ -45,6 +45,8 @@ test('o sermão aparece no Jornal (aba própria), fora do menu Ensino, e abre pe
 
 test('o ícone do jornal pisca enquanto há matéria nova e para depois de abrir', async ({ page }) => {
   await page.goto('/');
+  const menuButton = page.getByRole('button', { name: 'Abrir menu de navegação' });
+  if (await menuButton.isVisible()) await menuButton.click();
   const jornal = page.getByRole('navigation', { name: 'Navegação principal' }).locator('.nav-item', { hasText: 'Jornal' });
   await expect(jornal).toHaveClass(/fresh/);
   await expect(jornal.locator('.dot')).toBeVisible();
@@ -59,9 +61,11 @@ test('o ícone do jornal pisca enquanto há matéria nova e para depois de abrir
   await goToTab(page, 'Jornal');
   await page.getByRole('link', { name: /A Sanguessuga/ }).click();
   await expect(page.getByRole('heading', { level: 1, name: 'A Sanguessuga' })).toBeVisible();
+  if (await menuButton.isVisible()) await menuButton.click();
   await expect(jornal).not.toHaveClass(/fresh/);
   await expect(jornal.locator('.dot')).toHaveCount(0);
   await page.reload();
+  if (await menuButton.isVisible()) await menuButton.click();
   await expect(jornal).not.toHaveClass(/fresh/);
   expect(await page.evaluate(() => localStorage.getItem('biblia.vozes.vistas'))).toBe(JSON.stringify([ID]));
 });

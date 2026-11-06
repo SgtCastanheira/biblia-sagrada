@@ -4,6 +4,7 @@ import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { Title } from '@angular/platform-browser';
@@ -17,7 +18,7 @@ import { DictionaryMatcher, TextPart } from '../../core/dictionary';
 import { epochOfChapter } from '../../core/epochs';
 import { parseReferences } from '../../core/reference-parser';
 import { FavoritesService } from '../../core/favorites.service';
-import { Verse } from '../../core/models';
+import { THEME_OPTIONS, Verse } from '../../core/models';
 import { SettingsService } from '../../core/settings.service';
 import { UiService } from '../../core/ui.service';
 import { articlesFor } from '../../core/library';
@@ -52,12 +53,13 @@ interface ChapterLink {
 
 @Component({
   selector: 'app-reader',
-  imports: [RouterLink, MatButtonModule, MatIconModule, MatRippleModule, MatTooltipModule, BookRibbon, EraChip, QuizPrompt],
+  imports: [RouterLink, MatButtonModule, MatIconModule, MatMenuModule, MatRippleModule, MatTooltipModule, BookRibbon, EraChip, QuizPrompt],
   templateUrl: './reader.html',
   styleUrl: './reader.scss',
   host: {
     '(document:keydown.arrowleft)': 'goTo(previous())',
     '(document:keydown.arrowright)': 'goTo(next())',
+    '(document:selectionchange)': 'captureBibleSelection()',
   },
 })
 export class ReaderPage {
@@ -65,7 +67,9 @@ export class ReaderPage {
   readonly chapter = input.required<string>();
 
   protected readonly settings = inject(SettingsService);
+  protected readonly themes = THEME_OPTIONS;
   protected readonly favorites = inject(FavoritesService);
+  protected readonly selectedBiblePassage = signal<{ reference: string; quote: string; versionAbbrev: string } | null>(null);
   protected readonly ui = inject(UiService);
   private readonly bible = inject(BibleService);
   private readonly router = inject(Router);
@@ -145,6 +149,20 @@ export class ReaderPage {
     ),
     { initialValue: [] },
   );
+  protected readonly chapterSummary = toSignal(
+    toObservable(computed(() => ({ book: this.book(), chapter: this.chapterNum() }))).pipe(
+      switchMap(({ book, chapter }) => this.content.summary(book, chapter)),
+    ),
+    { initialValue: null },
+  );
+  protected readonly showChapterSummary = computed(() => {
+    const summary = this.chapterSummary();
+    if (!summary) return null;
+    const visible = this.settings.focusMode()
+      ? this.settings.showSummaryInFocus()
+      : this.settings.studyNotes();
+    return visible ? summary : null;
+  });
   protected readonly studyOpen = signal(false);
 
   /** Profecias dadas neste capítulo ou que se cumprem nele. */
@@ -175,6 +193,7 @@ export class ReaderPage {
   /** Em que época se passa este capítulo (linha do tempo da história). */
   protected readonly epoch = computed(() => epochOfChapter(this.book(), this.chapterNum()));
   protected readonly studyItems = computed(() => [
+    ...(this.chapterSummary() ? ['resumo'] : []),
     ...(this.intro() ? ['contexto'] : []),
     ...(this.notes().length ? ['notas'] : []),
     ...this.links().map((l) => l.icon),
@@ -182,9 +201,10 @@ export class ReaderPage {
 
   protected readonly studySummary = computed(() => {
     const parts: string[] = [];
+    if (this.chapterSummary()) parts.push('Resumo');
     if (this.intro()) parts.push('Contexto');
     const n = this.notes().length;
-    if (n) parts.push(`${n} ${n === 1 ? 'nota' : 'notas'}`);
+    if (n) parts.push(`${n} ${n === 1 ? 'explicação' : 'explicações'}`);
     const count = (icon: string, one: string, many: string) => {
       const k = this.links().filter((l) => l.icon === icon).length;
       if (k) parts.push(`${k} ${k === 1 ? one : many}`);
@@ -259,6 +279,7 @@ export class ReaderPage {
       const before = this.lastPosition;
       this.lastPosition = position;
       if (before === null || before === position) return;
+      this.selectedBiblePassage.set(null);
       if (!this.listenOnLoad) this.listen.stop();
       this.dragX.set(0);
       this.turn.set(position > before ? 'next' : 'prev');
@@ -346,7 +367,7 @@ export class ReaderPage {
   }
 
   protected openVerse(row: VerseRow): void {
-    if (!row.text) return;
+    if (!row.text || window.getSelection()?.toString().trim()) return;
     this.sheets.verseActions({
       ref: this.verseRef(row.verse),
       reference: `${this.bookInfo()?.name} ${this.chapterNum()}:${row.verse}`,
@@ -355,10 +376,58 @@ export class ReaderPage {
     });
   }
 
+  protected captureBibleSelection(): void {
+    const selection = window.getSelection();
+    if (!selection || selection.isCollapsed || !selection.toString().trim()) {
+      if (!selection || selection.isCollapsed) this.selectedBiblePassage.set(null);
+      return;
+    }
+
+    const page = document.querySelector('.book-page');
+    if (!page || !selection.anchorNode || !selection.focusNode ||
+        !page.contains(selection.anchorNode) || !page.contains(selection.focusNode)) {
+      this.selectedBiblePassage.set(null);
+      return;
+    }
+
+    const range = selection.getRangeAt(0);
+    const verses = [...page.querySelectorAll<HTMLElement>('.line, .verse, .pair')]
+      .filter((element) => range.intersectsNode(element))
+      .map((element) => Number(element.id.match(/^v(\d+)$/)?.[1]))
+      .filter(Number.isFinite)
+      .sort((a, b) => a - b);
+    if (!verses.length) {
+      this.selectedBiblePassage.set(null);
+      return;
+    }
+
+    const uniqueVerses = [...new Set(verses)];
+    const first = uniqueVerses[0];
+    const last = uniqueVerses.at(-1)!;
+    const reference = `${this.bookInfo()?.name} ${this.chapterNum()}:${first}${last > first ? `-${last}` : ''}`;
+    this.selectedBiblePassage.set({
+      reference,
+      quote: selection.toString().replace(/\s+/g, ' ').trim(),
+      versionAbbrev: this.version()?.abbrev ?? '',
+    });
+  }
+
+  protected annotateSelectedPassage(): void {
+    const selected = this.selectedBiblePassage();
+    if (!selected) return;
+    this.selectedBiblePassage.set(null);
+    window.getSelection()?.removeAllRanges();
+    this.sheets.bibleNote(selected).afterDismissed().subscribe((id) => {
+      if (!id) return;
+      this.snackBar.open('Comentário salvo em Anotações', 'Ver anotação', { duration: 5000 })
+        .onAction().subscribe(() => void this.router.navigate(['/anotacoes', id]));
+    });
+  }
+
   // Arrastar a página para o lado: ela acompanha o dedo e, passando do ponto, vira para o capítulo vizinho
   protected onTouchStart(e: TouchEvent): void {
     const t = e.changedTouches[0];
-    this.touchStart = { x: t.clientX, y: t.clientY };
+    this.touchStart = t.clientX <= 24 ? null : { x: t.clientX, y: t.clientY };
     this.settling.set(false);
   }
 

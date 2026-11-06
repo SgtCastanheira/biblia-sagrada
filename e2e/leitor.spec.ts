@@ -15,11 +15,95 @@ test.describe('Leitor', () => {
 
   test('alterna para texto corrido em Aparência', async ({ page }) => {
     await page.goto('/ler/JHN/3');
-    await page.getByRole('button', { name: 'Aparência da leitura' }).click();
+    await page.getByRole('button', { name: 'Escolher cor do app' }).click();
+    await page.getByRole('menuitem', { name: 'Mais opções de leitura' }).click();
     await page.getByRole('button', { name: /Texto corrido/ }).click();
     await page.keyboard.press('Escape');
     await expect(page.getByText(/um homem chamado Nicodemos/)).toBeVisible();
     await expect(page.locator('.line')).toHaveCount(0);
+  });
+
+  test('ajusta o tamanho do texto junto aos versículos e mantém a escolha', async ({ page }) => {
+    await page.goto('/ler/JHN/3');
+    const controls = page.getByRole('group', { name: 'Tamanho do texto bíblico' });
+    const verse = page.locator('.lines');
+    await expect(controls.locator('output')).toHaveText('19 px');
+    await expect(controls.getByRole('button', { name: 'Aumentar tamanho do texto' })).toContainText('A+');
+    await controls.getByRole('button', { name: 'Aumentar tamanho do texto' }).click();
+    await expect(controls.locator('output')).toHaveText('20 px');
+    await expect(verse).toHaveCSS('font-size', '20px');
+    await page.reload();
+    await expect(controls.locator('output')).toHaveText('20 px');
+    await controls.getByRole('button', { name: 'Diminuir tamanho do texto' }).click();
+    await expect(verse).toHaveCSS('font-size', '19px');
+  });
+
+  test('seleciona trecho, salva comentário em Anotações e mantém referência e citação', async ({ page }) => {
+    await page.goto('/ler/JHN/3');
+    await page.locator('#v16').waitFor();
+    await page.evaluate(() => {
+      const text = document.querySelector('#v16 .t') ?? document.querySelector('#v16');
+      if (!text) throw new Error('Texto do versículo não encontrado');
+      const range = document.createRange();
+      range.selectNodeContents(text);
+      const selection = window.getSelection();
+      if (!selection) throw new Error('Seleção de texto indisponível');
+      selection.removeAllRanges();
+      selection.addRange(range);
+    });
+
+    await page.getByRole('button', { name: 'Anotar trecho' }).click();
+    await expect(page.getByRole('heading', { name: 'Anotar trecho' })).toBeVisible();
+    await expect(page.locator('app-bible-note-sheet blockquote')).toContainText('Deus amou o mundo');
+    await page.getByRole('textbox', { name: 'Meu comentário' }).fill('Deus oferece vida eterna a quem crê.');
+    await page.getByRole('button', { name: 'Salvar em Anotações' }).click();
+    await page.getByRole('button', { name: 'Ver anotação' }).click();
+
+    await expect(page).toHaveURL(/\/anotacoes\/.+/);
+    await expect(page.locator('.bible-quote')).toContainText('João 3:16');
+    await expect(page.locator('.bible-quote')).toContainText('Deus amou o mundo');
+    await expect(page.getByRole('textbox', { name: 'Meu comentário' })).toHaveValue('Deus oferece vida eterna a quem crê.');
+    await page.reload();
+    await expect(page.getByRole('textbox', { name: 'Meu comentário' })).toHaveValue('Deus oferece vida eterna a quem crê.');
+    await page.goto('/anotacoes');
+    await expect(page.locator('.note').first()).toContainText('Anotação bíblica');
+    await expect(page.locator('.note').first()).toContainText('Deus oferece vida eterna a quem crê.');
+  });
+
+  test('modo de foco recolhe elementos secundários e pode ser encerrado', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 740 });
+    await page.goto('/ler/JHN/3');
+    await expect(page.getByRole('button', { name: /Estudar este capítulo/ })).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+    await page.getByRole('button', { name: 'Ativar modo de foco' }).click();
+
+    await expect(page.getByRole('button', { name: 'Sair do modo de foco' })).toBeVisible();
+    await expect(page.getByRole('button', { name: /Estudar este capítulo/ })).toHaveCount(0);
+    await expect(page.locator('app-quiz-prompt')).toHaveCount(0);
+    await expect(page.getByRole('navigation', { name: 'Navegação principal' })).toBeHidden();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+
+    await page.reload();
+    await expect(page.getByRole('button', { name: 'Sair do modo de foco' })).toBeVisible();
+    await page.getByRole('button', { name: 'Sair do modo de foco' }).click();
+    await expect(page.getByRole('button', { name: /Estudar este capítulo/ })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Abrir menu de navegação' })).toBeVisible();
+  });
+
+  test('gesto da borda abre o menu sem virar o capítulo', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'só no projeto celular');
+    await page.goto('/ler/JHN/3');
+    await page.locator('.book-page').waitFor();
+    await page.evaluate(() => {
+      const target = document.querySelector('.book-page') as HTMLElement;
+      const start = new Touch({ identifier: 1, target, clientX: 2, clientY: 300 });
+      const end = new Touch({ identifier: 1, target, clientX: 130, clientY: 304 });
+      target.dispatchEvent(new TouchEvent('touchstart', { bubbles: true, touches: [start], changedTouches: [start] }));
+      target.dispatchEvent(new TouchEvent('touchend', { bubbles: true, touches: [], changedTouches: [end] }));
+    });
+
+    await expect(page).toHaveURL(/\/ler\/JHN\/3$/);
+    await expect(page.getByRole('navigation', { name: 'Navegação principal' })).toBeVisible();
   });
 
   test('não tenta baixar arquivos locais inexistentes (sem 404)', async ({ page, problems }) => {
