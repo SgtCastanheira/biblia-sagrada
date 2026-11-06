@@ -8,6 +8,28 @@ Regras:
 - **Decisões** dizem o que foi escolhido, por quê e o que ficou de fora. **Pendências** são o que ficou para depois.
 - O hash do commit não entra na entrada (ele ainda não existe ao escrever); `git log -- DIARIO.md` liga cada entrada ao seu commit.
 
+## 2026-11-06 07:35 -0400 — Nova foto do autor de “A Sanguessuga”
+
+**Autor:** Valtemir Junior (com Claude Code)
+
+**O que foi feito:**
+- Troquei o retrato de Lucas Silva no jornal pela “Lucas Silva Modificado.jpeg”, que o dono deixou na pasta `Teologos/` (foto de estúdio, de corpo inteiro e fundo branco). O recorte é um quadrado de 580 px com a cabeça e o busto, reduzido a 440×440, no mesmo arquivo `public/conteudo/imagens/vozes-lucas-silva.jpg`; o código não mudou.
+- A nota “Foto do autor”, que o autor lê na prévia, os créditos (`CREDITOS.md`) e a tela de créditos (`core/credits.ts`) passaram a dizer que a foto é uma versão modificada da foto dele, enviada pelo editor.
+
+**Decisões:**
+- **Mesmo nome de arquivo:** o app já aponta para ele, e o cache do app (ngsw) troca por hash, então quem já abriu o app recebe a foto nova.
+- **Avisar que é modificada:** o arquivo se chama “Modificado”; a nota diz isso ao autor, com a opção de pedir a original, outra foto ou nenhuma. Não sei como a foto foi modificada, por isso o texto diz só “versão modificada”.
+- **Ficou de fora:** a pasta `Teologos/` (cópia da imagem de compartilhar já usada e a foto original do envio) não entra no git.
+
+**Arquivos:** `public/conteudo/imagens/vozes-lucas-silva.jpg`, `src/app/core/guest-sermons.ts`, `src/app/core/credits.ts`, `CREDITOS.md`, `DIARIO.md`.
+
+**Validação:** lint e build limpos (pacote inicial sem aviso); 35 testes do sermão aprovados (lógica, celular e computador); a página foi conferida em capturas nos temas claro e escuro e no celular.
+
+**Pendências:**
+- Gerar a versão sem letras da imagem de compartilhar e escolher o novo subtítulo do sermão (continuam da entrada anterior).
+
+---
+
 ## 2026-11-05 17:00 -0400 — Jornal com aba própria e ícone que pisca; “A Sanguessuga” no jornal com foto do autor, imagens novas e texto em norma culta; IBUC e “Minhas aulas da revista” fora do menu Ensino
 
 **Autor:** Valtemir Junior (com Claude Code)
