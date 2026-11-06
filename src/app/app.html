@@ -23,19 +23,31 @@
 }
 
 @if (!isReview()) {
-<nav class="nav" [class.hidden]="(isReader() || isArticle()) && ui.barsHidden()" aria-label="Navegação principal">
-  <a class="rail-logo" routerLink="/" aria-label="Início"><mat-icon>menu_book</mat-icon></a>
+  @if (!isReader() || !settings.focusMode()) {
+    <button class="menu-toggle" matRipple (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()"
+      [attr.aria-label]="menuOpen() ? 'Fechar menu de navegação' : 'Abrir menu de navegação'" aria-controls="primary-navigation">
+      <mat-icon>{{ menuOpen() ? 'close' : 'menu' }}</mat-icon>
+    </button>
+  }
+  @if (menuOpen()) {
+    <button class="nav-scrim" (click)="closeMenu()" aria-label="Fechar menu de navegação"></button>
+  }
+  <nav id="primary-navigation" class="nav" [class.hidden]="(isReader() || isArticle()) && ui.barsHidden()"
+    [class.open]="menuOpen()" [class.focus-mode]="isReader() && settings.focusMode()"
+    [attr.aria-hidden]="isMobile() && !menuOpen() ? 'true' : null"
+    [attr.inert]="isMobile() && !menuOpen() ? '' : null" aria-label="Navegação principal">
+  <a class="rail-logo" routerLink="/" aria-label="Início" (click)="closeMenu()"><mat-icon>menu_book</mat-icon></a>
 
-  <a class="nav-item" routerLink="/" [class.active]="tab() === 'inicio'">
+  <a class="nav-item" routerLink="/" [class.active]="tab() === 'inicio'" (click)="closeMenu()">
     <span class="indicator" matRipple><mat-icon>home</mat-icon></span>
     <span class="label">Início</span>
   </a>
-  <a class="nav-item" [routerLink]="readLink()" [class.active]="tab() === 'biblia'">
+  <a class="nav-item" [routerLink]="readLink()" [class.active]="tab() === 'biblia'" (click)="closeMenu()">
     <span class="indicator" matRipple><mat-icon>import_contacts</mat-icon></span>
     <span class="label">Bíblia</span>
   </a>
   @for (item of nav; track item.link) {
-    <a class="nav-item" [routerLink]="item.link" [class.active]="tab() === item.tab" [class.fresh]="item.tab === 'jornal' && news.unread() > 0">
+    <a class="nav-item" [routerLink]="item.link" [class.active]="tab() === item.tab" [class.fresh]="item.tab === 'jornal' && news.unread() > 0" (click)="closeMenu()">
       <span class="indicator" matRipple>
         <mat-icon>{{ item.icon }}</mat-icon>
         @if (item.tab === 'jornal' && news.unread() > 0) { <span class="dot" aria-hidden="true"></span> }

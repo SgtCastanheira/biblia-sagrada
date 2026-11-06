@@ -81,5 +81,7 @@ test('história e estudo são uma tela só: mapas e ferramentas são livros, e /
   await expect(page).toHaveURL(/\/historia\?q=niceia/);
   await expect(page.getByRole('searchbox', { name: 'Pesquisar na biblioteca' })).toHaveValue('niceia');
   // A aba de baixo agora se chama História
+  const menuButton = page.getByRole('button', { name: 'Abrir menu de navegação' });
+  if (await menuButton.isVisible()) await menuButton.click();
   await expect(page.getByRole('navigation').getByRole('link', { name: 'História' }).first()).toBeVisible();
 });

@@ -22,6 +22,110 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'colecao-como-a-ciencia-explica',
+    date: '6 de novembro de 2026',
+    title: 'Uma coleção em volumes',
+    items: [
+      { icon: 'science', title: 'Como a Ciência Explica', text: 'Os estudos sobre os sinais agora estão reunidos na estante em três volumes: Química e Matéria, Física e Movimento, Corpo e Vida. Cada texto distingue o conhecimento científico comum do que a Bíblia narra.', link: '/historia?trilha=como-a-ciencia-explica' },
+    ],
+  },
+  {
+    id: 'filho-da-viuva-de-naim-medicina',
+    date: '6 de novembro de 2026',
+    title: 'O filho da viúva de Naim',
+    items: [
+      { icon: 'science', title: 'O que a Medicina explica?', text: 'Um novo estudo mostra como respiração e circulação sustentam o corpo e por que Lucas 7 não oferece dados para reconstruir clinicamente o sinal.', link: '/artigo/filho-da-viuva-de-naim' },
+    ],
+  },
+  {
+    id: 'cego-de-nascenca-visao-medicina',
+    date: '6 de novembro de 2026',
+    title: 'Como funciona a visão?',
+    items: [
+      { icon: 'science', title: 'O cego de nascença', text: 'Um novo estudo mostra o caminho da luz pelo olho, explica por que João 9 não permite um diagnóstico moderno e distingue a medicina do sinal narrado.', link: '/artigo/cego-de-nascenca' },
+    ],
+  },
+  {
+    id: 'tempestade-acalmada-ciencia',
+    date: '6 de novembro de 2026',
+    title: 'Quando o vento e o mar se aquietam',
+    items: [
+      { icon: 'science', title: 'Jesus Acalma a Tempestade', text: 'Um novo estudo explica como o vento forma ondas e distingue a física observável do sinal narrado nos Evangelhos, sem inventar um mecanismo meteorológico.', link: '/artigo/jesus-acalma-tempestade' },
+    ],
+  },
+  {
+    id: 'multiplicacao-paes-sinal',
+    date: '6 de novembro de 2026',
+    title: 'Cinco pães, dois peixes e uma multidão',
+    items: [
+      { icon: 'science', title: 'Um sinal sob a lente da ciência', text: 'O novo estudo compara o relato dos Evangelhos com o que a química pode estudar sobre alimentos e matéria — sem inventar uma explicação para o milagre.', link: '/artigo/multiplicacao-dos-paes' },
+    ],
+  },
+  {
+    id: 'jesus-sobre-as-aguas-fisica',
+    date: '6 de novembro de 2026',
+    title: 'Mais um sinal sob a lente da ciência',
+    items: [
+      { icon: 'science', title: 'Jesus Anda sobre as Águas', text: 'Um novo estudo compara o que a física explica sobre flutuação com o relato dos Evangelhos, sem inventar um mecanismo para o sinal.', link: '/artigo/jesus-sobre-as-aguas' },
+    ],
+  },
+  {
+    id: 'sinal-de-cana-quimica',
+    date: '6 de novembro de 2026',
+    title: 'Um milagre sob a lente da química',
+    items: [
+      { icon: 'science', title: 'Água em Vinho: O Que a Química Pode Explicar?', text: 'Um estudo-piloto sobre as bodas de Caná: como o vinho se forma em condições comuns, por que a água sozinha não fornece o carbono do etanol e o que a ciência não pode concluir sobre um acontecimento singular narrado por João.', link: '/artigo/o-sinal-de-cana' },
+    ],
+  },
+  {
+    id: 'comentario-em-trecho-biblico',
+    date: '6 de novembro de 2026',
+    title: 'Comente um trecho da Bíblia',
+    items: [
+      { icon: 'edit_note', title: 'Sua reflexão vai para Anotações', text: 'Selecione palavras ou versículos durante a leitura e toque em “Anotar trecho”. Escreva seu comentário; a citação e a referência ficam guardadas em Anotações, junto com o texto e a tradução escolhida.', link: '/ler/JHN/3', tip: 'No celular, pressione o texto e ajuste a seleção.' },
+    ],
+  },
+  {
+    id: 'ajustes-rapidos-leitor',
+    date: '6 de novembro de 2026',
+    title: 'Ajustes rápidos no leitor',
+    items: [
+      { icon: 'palette', title: 'Troque a cor sem sair da leitura', text: 'Toque na paleta no alto do capítulo e escolha uma cor no menu pequeno. Os botões A− e A+ ficam junto ao texto bíblico para ajustar as letras na hora.', link: '/ler/JHN/3', tip: 'Para outras opções, abra a paleta e toque em “Mais opções de leitura”.' },
+    ],
+  },
+  {
+    id: 'aparencia-em-ajustes',
+    date: '6 de novembro de 2026',
+    title: 'Aparência mais fácil de personalizar',
+    items: [
+      { icon: 'palette', title: 'Cores, letras e luz quente', text: 'A seção Aparência agora fica em destaque no início de Ajustes. Escolha a paleta do app, ajuste o tamanho das letras e ligue a luz quente; as mudanças são aplicadas na hora e ficam salvas neste aparelho.', link: '/ajustes', tip: 'Abra Ajustes na barra inferior.' },
+    ],
+  },
+  {
+    id: 'resumo-piloto-genesis',
+    date: '6 de novembro de 2026',
+    title: 'Resumo e explicações no leitor',
+    items: [
+      { icon: 'menu_book', title: 'Uma amostra em Gênesis 1', text: 'Um resumo curto aparece antes do capítulo; ao abrir “Estudar este capítulo”, você encontra explicações ligadas a trechos. Em Aparência da leitura, escolha se quer manter o resumo visível no modo de foco. O texto é autoral e vale para qualquer tradução selecionada.', link: '/ler/GEN/1', tip: 'A amostra será ampliada depois de ser avaliada.' },
+    ],
+  },
+  {
+    id: 'menu-lateral-celular',
+    date: '6 de novembro de 2026',
+    title: 'Menu lateral no celular',
+    items: [
+      { icon: 'menu', title: 'Navegue sem a barra inferior', text: 'No celular, toque no botão discreto no canto superior esquerdo ou arraste da borda esquerda para abrir o menu. Arraste o painel para a esquerda ou toque fora dele para fechar.', link: '/', tip: 'O menu fica recolhido enquanto você lê.' },
+    ],
+  },
+  {
+    id: 'modo-foco-leitor',
+    date: '6 de novembro de 2026',
+    title: 'Modo de foco no leitor',
+    items: [
+      { icon: 'center_focus_strong', title: 'Menos elementos durante a leitura', text: 'Ative o modo de foco no alto do capítulo para recolher o painel de estudo, o quiz e a navegação principal. Os avisos automáticos não são verificados enquanto o modo está ativo. Saia do foco quando quiser.', link: '/ler/JHN/3', tip: 'No leitor, toque no ícone de foco no alto da tela.' },
+    ],
+  },
+  {
     id: 'jornal-novas-vozes',
     date: '5 de novembro de 2026',
     title: 'O Jornal: Novas Vozes da Palavra',
@@ -214,7 +318,7 @@ export const RELEASES: Release[] = [
     title: 'A ponte entre os Testamentos, a Septuaginta e a Bíblia em outras línguas',
     items: [
       { icon: 'checklist', title: 'EBD: as 13 lições de Adultos, em Deuteronômio', text: 'Para o professor, em cada lição: lembretes do que preparar, como abrir a aula, curiosidades, contexto, dinâmicas e brincadeiras passo a passo, perguntas e as ligações com os estudos do app.', link: '/ebd/apoio/adultos', tip: 'Em Ensino › EBD › Apoio ao professor.' },
-      { icon: 'palette', title: 'Novas cores e luz quente', text: 'Noite quente, Floresta, Névoa e o modo Automático, além de um controle de luz quente que tira o azul da tela. Toque em Aparência da leitura.', link: '/ler/JHN/3', tip: 'No alto do capítulo, o ícone de letras.' },
+      { icon: 'palette', title: 'Novas cores e luz quente', text: 'Floresta, Névoa e o modo Automático, além de um controle de luz quente que tira o azul da tela. Toque na paleta no alto do capítulo.', link: '/ler/JHN/3', tip: 'Para a luz quente e outras opções, abra o menu da paleta e toque em “Mais opções de leitura”.' },
       { icon: 'public', title: 'Mapa entre os Testamentos', text: 'De Alexandre a Herodes, época por época, com Israel em destaque no meio dos impérios e as referências de Daniel.', link: '/artigo/da-volta-do-exilio-a-jesus' },
       { icon: 'translate', title: 'A Bíblia em espanhol e em alemão', text: 'Reina-Valera 1909, Versión Biblia Libre, Nueva Biblia Viva e outras em espanhol; Lutero 1912, Elberfelder e Schlachter em alemão. Todas funcionam sem internet e podem ser comparadas com a Almeida.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto do capítulo.' },
       { icon: 'menu_book', title: 'A Septuaginta, em detalhe', text: 'A lenda dos 72 sábios, o que se sabe de verdade, a ordem e os nomes dos livros da sua Bíblia, e por que o Novo Testamento cita o Antigo do jeito que cita.', link: '/artigo/septuaginta' },

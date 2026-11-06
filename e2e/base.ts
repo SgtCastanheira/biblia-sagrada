@@ -93,5 +93,7 @@ export async function expectNoHorizontalOverflow(page: Page) {
 
 /** Toca num item da barra de navegação principal. */
 export async function goToTab(page: Page, label: string) {
+  const menuButton = page.getByRole('button', { name: 'Abrir menu de navegação' });
+  if (await menuButton.isVisible()) await menuButton.click();
   await page.getByRole('navigation', { name: 'Navegação principal' }).getByText(label, { exact: true }).click();
 }

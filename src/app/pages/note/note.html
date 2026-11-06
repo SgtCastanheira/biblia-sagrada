@@ -9,59 +9,75 @@
     </mat-menu>
   </div>
 
-  <!-- Indicação do culto -->
-  <div class="types" role="radiogroup" aria-label="Indicação">
-    @for (t of service.types(); track t) {
-      <button role="radio" [attr.aria-checked]="n.type === t" [class.active]="n.type === t" [style.--c]="color(t)"
-              (click)="update({ type: t })">
-        <i></i>{{ t }}
-        @if (service.customTypes().includes(t) && n.type === t) {
-          <mat-icon class="remove" (click)="$event.stopPropagation(); removeType(t)" aria-label="Remover indicação">close</mat-icon>
-        }
-      </button>
-    }
-    @if (addingType()) {
-      <input class="new-type" placeholder="Ex.: Culto de Jovens" (keydown.enter)="addType($event)" (blur)="addType($event)"
-             aria-label="Nova indicação" #newType />
-    } @else {
-      <button class="add" (click)="addingType.set(true)"><mat-icon>add</mat-icon> Nova</button>
-    }
-  </div>
+  @if (n.kind === 'bible') {
+    <p class="bible-kind"><mat-icon>menu_book</mat-icon> Anotação bíblica</p>
+    <textarea class="title" cdkTextareaAutosize rows="1" placeholder="Assunto (opcional)" [value]="n.title"
+              (input)="update({ title: value($event) })" aria-label="Assunto"></textarea>
+    <section class="bible-quote">
+      <h2>Trecho selecionado</h2>
+      <p class="quote-ref">{{ n.refs }} · {{ n.sourceVersion }}</p>
+      <blockquote>{{ n.quote }}</blockquote>
+    </section>
+    <section>
+      <h2>Meu comentário</h2>
+      <textarea class="body" cdkTextareaAutosize cdkAutosizeMinRows="5"
+                placeholder="O que este trecho fez você pensar?" [value]="n.body"
+                (input)="update({ body: value($event) })" aria-label="Meu comentário"></textarea>
+    </section>
+  } @else {
+    <!-- Indicação do culto -->
+    <div class="types" role="radiogroup" aria-label="Indicação">
+      @for (t of service.serviceTypes(); track t) {
+        <button role="radio" [attr.aria-checked]="n.type === t" [class.active]="n.type === t" [style.--c]="color(t)"
+                (click)="update({ type: t })">
+          <i></i>{{ t }}
+          @if (service.customTypes().includes(t) && n.type === t) {
+            <mat-icon class="remove" (click)="$event.stopPropagation(); removeType(t)" aria-label="Remover indicação">close</mat-icon>
+          }
+        </button>
+      }
+      @if (addingType()) {
+        <input class="new-type" placeholder="Ex.: Culto de Jovens" (keydown.enter)="addType($event)" (blur)="addType($event)"
+               aria-label="Nova indicação" #newType />
+      } @else {
+        <button class="add" (click)="addingType.set(true)"><mat-icon>add</mat-icon> Nova</button>
+      }
+    </div>
 
-  <textarea class="title" cdkTextareaAutosize rows="1" placeholder="Tema da pregação" [value]="n.title"
-            (input)="update({ title: value($event) })" aria-label="Tema"></textarea>
+    <textarea class="title" cdkTextareaAutosize rows="1" placeholder="Tema da pregação" [value]="n.title"
+              (input)="update({ title: value($event) })" aria-label="Tema"></textarea>
 
-  <div class="row">
-    <label class="field date">
-      <mat-icon>event</mat-icon>
-      <input type="date" [value]="n.date" (change)="update({ date: value($event) || n.date })" aria-label="Data" />
-    </label>
-    <label class="field">
-      <mat-icon>person</mat-icon>
-      <input placeholder="Pregador(a)" [value]="n.preacher" (input)="update({ preacher: value($event) })" aria-label="Pregador" />
-    </label>
-  </div>
+    <div class="row">
+      <label class="field date">
+        <mat-icon>event</mat-icon>
+        <input type="date" [value]="n.date" (change)="update({ date: value($event) || n.date })" aria-label="Data" />
+      </label>
+      <label class="field">
+        <mat-icon>person</mat-icon>
+        <input placeholder="Pregador(a)" [value]="n.preacher" (input)="update({ preacher: value($event) })" aria-label="Pregador" />
+      </label>
+    </div>
 
-  <section>
-    <h2>Textos bíblicos</h2>
-    <app-ref-input [value]="n.refs" (valueChange)="update({ refs: $event })" />
-    <!-- Só procura o texto depois do capítulo (enquanto digita o livro, não há o que mostrar) -->
-    @if (hasChapter(n.refs)) { <app-passage-view [refs]="n.refs" /> }
-  </section>
+    <section>
+      <h2>Textos bíblicos</h2>
+      <app-ref-input [value]="n.refs" (valueChange)="update({ refs: $event })" />
+      @if (hasChapter(n.refs)) { <app-passage-view [refs]="n.refs" /> }
+    </section>
 
-  <section>
-    <h2>Anotações</h2>
-    <textarea class="body" cdkTextareaAutosize cdkAutosizeMinRows="8"
-              placeholder="Pontos principais, frases marcantes, perguntas…" [value]="n.body"
-              (input)="update({ body: value($event) })" aria-label="Anotações"></textarea>
-  </section>
+    <section>
+      <h2>Anotações</h2>
+      <textarea class="body" cdkTextareaAutosize cdkAutosizeMinRows="8"
+                placeholder="Pontos principais, frases marcantes, perguntas…" [value]="n.body"
+                (input)="update({ body: value($event) })" aria-label="Anotações"></textarea>
+    </section>
 
-  <section>
-    <h2>O que vou praticar</h2>
-    <textarea class="body practice" cdkTextareaAutosize cdkAutosizeMinRows="3"
-              placeholder="Uma atitude concreta para esta semana" [value]="n.application"
-              (input)="update({ application: value($event) })" aria-label="O que vou praticar"></textarea>
-  </section>
+    <section>
+      <h2>O que vou praticar</h2>
+      <textarea class="body practice" cdkTextareaAutosize cdkAutosizeMinRows="3"
+                placeholder="Uma atitude concreta para esta semana" [value]="n.application"
+                (input)="update({ application: value($event) })" aria-label="O que vou praticar"></textarea>
+    </section>
+  }
 
   <p class="saved"><mat-icon>cloud_done</mat-icon> Salvo automaticamente neste aparelho</p>
 } @else {

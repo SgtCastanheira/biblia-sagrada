@@ -48,6 +48,19 @@ export const TRAILS: Trail[] = [
     ],
   },
   {
+    id: 'como-a-ciencia-explica',
+    name: 'Como a Ciência Explica',
+    short: 'Como a Ciência Explica',
+    description: 'Uma coleção em volumes: o que química, física e medicina explicam sobre o funcionamento comum do mundo — e o que os relatos bíblicos não permitem reconstruir.',
+    icon: 'science',
+    tone: '#3e4a3e',
+    branches: [
+      { title: 'Volume 1 · Química e Matéria', ids: ['o-sinal-de-cana', 'multiplicacao-dos-paes'] },
+      { title: 'Volume 2 · Física e Movimento', ids: ['o-machado-que-flutuou', 'jesus-sobre-as-aguas', 'jesus-acalma-tempestade'] },
+      { title: 'Volume 3 · Corpo e Vida', ids: ['cego-de-nascenca', 'filho-da-viuva-de-naim'] },
+    ],
+  },
+  {
     id: 'um-so-deus',
     name: 'Um Só Deus',
     short: 'Um Só Deus',

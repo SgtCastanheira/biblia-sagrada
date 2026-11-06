@@ -374,6 +374,87 @@ body.theme-sepia {
   background: linear-gradient(270deg, rgba(0, 0, 0, .16), transparent 45%);
 }
 
+.theme-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.theme-swatch.auto { background: linear-gradient(90deg, #f4ecdc 50%, #161514 50%); }
+.theme-swatch.light { background: #faf8f5; }
+.theme-swatch.sepia { background: #f4ecdc; }
+.theme-swatch.mist { background: #eceee9; }
+.theme-swatch.forest { background: #14201a; }
+
+.theme-palette-menu .mat-mdc-menu-content {
+  display: grid;
+  grid-template-columns: repeat(5, 44px);
+  gap: 4px;
+  padding: 8px;
+}
+
+.theme-palette-menu .mat-mdc-menu-item.theme-choice {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  --mat-menu-item-hover-state-layer-color: transparent;
+  --mat-menu-item-focus-state-layer-color: transparent;
+}
+
+.theme-choice .theme-swatch {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+
+.theme-palette-menu .mat-mdc-menu-item.more-options {
+  grid-column: 1 / -1;
+}
+
+.text-size-control {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2px;
+  margin: 0 0 8px;
+  color: var(--mat-sys-on-surface-variant);
+  font: 500 13px Inter, sans-serif;
+
+  output {
+    min-width: 42px;
+    color: var(--mat-sys-on-surface);
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.font-step { font: 600 14px Inter, sans-serif; }
+
+.reader-note-action {
+  position: fixed !important;
+  z-index: 18;
+  left: 50%;
+  bottom: calc(84px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  min-height: 48px;
+  border-radius: 24px !important;
+  box-shadow: 0 3px 12px rgb(35 33 30 / 0.18);
+  white-space: nowrap;
+}
+
+@media (min-width: 840px) {
+  .reader-note-action {
+    bottom: 24px;
+  }
+}
+
 @keyframes page-in-next {
   from { transform: perspective(1400px) translateX(46px) rotateY(-14deg); opacity: .25; }
   to { transform: perspective(1400px) none; opacity: 1; }

@@ -25,3 +25,22 @@ test('estante: cada estante tem uma cor só dela, e o texto da capa continua leg
     expect(contrast('#f1d9a8', t.tone), `${t.id}: contagem dourada`).toBeGreaterThanOrEqual(4.5);
   }
 });
+
+test('Como a Ciência Explica: os estudos ficam organizados nos volumes da coleção', () => {
+  const series = TRAILS.find((t) => t.id === 'como-a-ciencia-explica');
+  expect(series?.name).toBe('Como a Ciência Explica');
+  expect(series?.branches.map((branch) => branch.title)).toEqual([
+    'Volume 1 · Química e Matéria',
+    'Volume 2 · Física e Movimento',
+    'Volume 3 · Corpo e Vida',
+  ]);
+  expect(series?.branches.flatMap((branch) => branch.ids)).toEqual([
+    'o-sinal-de-cana',
+    'multiplicacao-dos-paes',
+    'o-machado-que-flutuou',
+    'jesus-sobre-as-aguas',
+    'jesus-acalma-tempestade',
+    'cego-de-nascenca',
+    'filho-da-viuva-de-naim',
+  ]);
+});

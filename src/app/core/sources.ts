@@ -25,6 +25,12 @@ export interface SourceSet {
 
 export const WORKS: Record<string, Work> = {
   // Referência geral
+  'openstax-chemistry': { author: 'Paul Flowers, Klaus Theopold, Richard Langley e William R. Robinson', title: 'Chemistry 2e', publisher: 'OpenStax, 2019', kind: 'referencia' },
+  'openstax-physics': { author: 'Paul Peter Urone e Roger Hinrichs', title: 'College Physics 2e', publisher: 'OpenStax, seções 11.2 e 11.7 (densidade e princípio de Arquimedes)', kind: 'referencia' },
+  'openstax-ap': { author: 'J. Gordon Betts e outros', title: 'Anatomy and Physiology 2e', publisher: 'OpenStax, 2ª ed., 2022, capítulos 19 e 22', kind: 'referencia' },
+  'nei-eyes': { author: 'National Eye Institute', title: 'How the Eyes Work', publisher: 'National Institutes of Health, nei.nih.gov/eye-health-information/healthy-vision/how-eyes-work', kind: 'referencia' },
+  'noaa-waves': { author: 'National Oceanic and Atmospheric Administration', title: 'What are waves?', publisher: 'NOAA Ocean Service, oceanservice.noaa.gov/facts/wavesinocean.html', kind: 'referencia' },
+  'oxford-companion-wine': { author: 'Jancis Robinson e Julia Harding (orgs.)', title: 'The Oxford Companion to Wine', publisher: 'Oxford University Press, 4ª ed., 2015', kind: 'referencia' },
   'walton-at': { author: 'John H. Walton, Victor H. Matthews e Mark W. Chavalas', title: 'Comentário histórico-cultural da Bíblia: Antigo Testamento', publisher: 'Vida Nova', kind: 'referencia' },
   'keener-nt': { author: 'Craig S. Keener', title: 'Comentário histórico-cultural da Bíblia: Novo Testamento', publisher: 'Vida Nova', kind: 'referencia' },
   ndb: { author: 'J. D. Douglas (org.)', title: 'O Novo Dicionário da Bíblia', publisher: 'Vida Nova', kind: 'referencia' },
@@ -199,6 +205,34 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     works: ['hengel', 'keener-nt', 'ferguson'],
   },
   'casamento-judaico': { ancient: ['Mishná, tratado Ketubot (o contrato de casamento)'], works: ['jeremias', 'keener-nt', 'bailey'] },
+  'o-sinal-de-cana': {
+    ancient: ['Evangelho segundo João 2.1–11'],
+    works: ['openstax-chemistry', 'oxford-companion-wine'],
+  },
+  'multiplicacao-dos-paes': {
+    ancient: ['Mateus 14.13–21; Marcos 6.30–44; Lucas 9.10–17; João 6.1–14'],
+    works: ['openstax-chemistry', 'keener-nt'],
+  },
+  'jesus-acalma-tempestade': {
+    ancient: ['Mateus 8.23–27; Marcos 4.35–41; Lucas 8.22–25'],
+    works: ['noaa-waves', 'keener-nt'],
+  },
+  'cego-de-nascenca': {
+    ancient: ['Evangelho segundo João 9.1–41'],
+    works: ['nei-eyes', 'keener-nt'],
+  },
+  'filho-da-viuva-de-naim': {
+    ancient: ['Evangelho segundo Lucas 7.11–17'],
+    works: ['openstax-ap', 'keener-nt'],
+  },
+  'o-machado-que-flutuou': {
+    ancient: ['2 Reis 6.1–7'],
+    works: ['openstax-physics', 'keener-nt'],
+  },
+  'jesus-sobre-as-aguas': {
+    ancient: ['Mateus 14.22–33; Marcos 6.45–52; João 6.16–21'],
+    works: ['openstax-physics', 'keener-nt'],
+  },
   'os-faraos-da-biblia': {
     ancient: [
       'Estela de Mernepta (c. 1208 a.C.), a menção mais antiga a “Israel” fora da Bíblia',
