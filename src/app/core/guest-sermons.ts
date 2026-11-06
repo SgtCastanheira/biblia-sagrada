@@ -274,8 +274,8 @@ export const GUEST_SERMONS: GuestSermon[] = [
       {
         kind: 'acrescentado',
         title: 'Foto do autor',
-        now: 'O seu retrato, em círculo, ao lado do nome na linha de autoria do jornal.',
-        why: 'A foto foi enviada pelo editor. Se preferir outra, ou nenhuma, é só dizer.',
+        now: 'O seu retrato, em círculo, à direita do título do jornal.',
+        why: 'É uma versão modificada da sua foto, enviada pelo editor. Se preferir a original, outra foto ou nenhuma, é só dizer.',
       },
       {
         kind: 'acrescentado',

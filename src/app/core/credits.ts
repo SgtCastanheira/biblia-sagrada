@@ -65,7 +65,7 @@ export const CREDITS: { group: string; items: Credit[] }[] = [
   {
     group: 'Novas Vozes da Palavra (sermões de convidados)',
     items: [
-      { name: '“A Sanguessuga”, sermão de Lucas Silva', use: 'Sermão sobre Provérbios 30.15, publicado com o nome do autor. O texto foi organizado para leitura e as traduções para espanhol, inglês, francês, alemão e russo foram feitas para o app, com apoio de inteligência artificial e sem revisão de falante nativo. A foto do autor foi enviada pelo editor. A sanguessuga e a mãe com as filhas são ilustrações criadas com inteligência artificial para o app; o caminho do desejo, a fonte e as cisternas são desenhos do app.', license: 'Usado com a autorização do autor' },
+      { name: '“A Sanguessuga”, sermão de Lucas Silva', use: 'Sermão sobre Provérbios 30.15, publicado com o nome do autor. O texto foi organizado para leitura e as traduções para espanhol, inglês, francês, alemão e russo foram feitas para o app, com apoio de inteligência artificial e sem revisão de falante nativo. A foto do autor é uma versão modificada de foto dele, enviada pelo editor. A sanguessuga e a mãe com as filhas são ilustrações criadas com inteligência artificial para o app; o caminho do desejo, a fonte e as cisternas são desenhos do app.', license: 'Usado com a autorização do autor' },
     ],
   },
   {
