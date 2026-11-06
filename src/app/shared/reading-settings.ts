@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
-import { ReadingFont, THEME_OPTIONS } from '../core/models';
+import { ReadingFont, ThemeMode } from '../core/models';
 import { SettingsService } from '../core/settings.service';
 
 /** Controles de aparência da leitura (tema, fonte, tamanho, espaçamento). */
@@ -51,16 +51,6 @@ import { SettingsService } from '../core/settings.service';
         <mat-icon>local_library</mat-icon> Painel de estudo
       </button>
     </div>
-
-    <p class="label">Modo de foco</p>
-    <div class="layouts focus-layouts">
-      <button class="layout" [class.active]="settings.showSummaryInFocus()" [attr.aria-pressed]="settings.showSummaryInFocus()"
-              (click)="settings.showSummaryInFocus.set(!settings.showSummaryInFocus())">
-        <mat-icon>center_focus_strong</mat-icon>
-        {{ settings.showSummaryInFocus() ? 'Resumo visível no foco' : 'Manter resumo no foco' }}
-      </button>
-    </div>
-    <p class="hint">Quando ativado, o resumo curto continua visível durante o modo de foco, nos capítulos que têm resumo.</p>
 
     <p class="label">Fonte</p>
     <div class="fonts">
@@ -130,7 +120,15 @@ import { SettingsService } from '../core/settings.service';
 })
 export class ReadingSettings {
   protected readonly settings = inject(SettingsService);
-  protected readonly themes = THEME_OPTIONS;
+  protected readonly themes: { id: ThemeMode; label: string; hint: string }[] = [
+    { id: 'auto', label: 'Automático', hint: 'Como o aparelho' },
+    { id: 'light', label: 'Claro', hint: 'Sálvia e papel' },
+    { id: 'sepia', label: 'Sépia', hint: 'Papel antigo' },
+    { id: 'mist', label: 'Névoa', hint: 'Claro suave' },
+    { id: 'dark', label: 'Noite', hint: 'Escuro neutro' },
+    { id: 'ember', label: 'Noite quente', hint: 'Para ler no escuro' },
+    { id: 'forest', label: 'Floresta', hint: 'Verde profundo' },
+  ];
   protected readonly fonts: { id: ReadingFont; label: string; family: string }[] = [
     { id: 'serif', label: 'Source Serif', family: "'Source Serif 4', serif" },
     { id: 'classic', label: 'Lora', family: 'Lora, serif' },

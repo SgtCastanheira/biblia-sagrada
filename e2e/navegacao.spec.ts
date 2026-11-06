@@ -45,42 +45,8 @@ test('cada tela acende a aba certa do menu', async ({ page }) => {
   const nav = page.getByRole('navigation', { name: 'Navegação principal' });
   for (const [url, aba] of [['/tribos', 'História'], ['/ebd', 'Ensino'], ['/sermoes', 'Ensino'], ['/vozes', 'Jornal'], ['/vozes/a-sanguessuga', 'Jornal'], ['/ibuc', 'Ensino'], ['/devocional', 'Meu espaço'], ['/favoritos', 'Meu espaço'], ['/livros', 'Bíblia']] as const) {
     await page.goto(url);
-    const menuButton = page.getByRole('button', { name: 'Abrir menu de navegação' });
-    if (await menuButton.isVisible()) await menuButton.click();
     await expect(nav.locator('.nav-item.active')).toHaveText(new RegExp(aba));
   }
-});
-
-test('menu lateral abre pelo botão e pelo gesto da borda no celular', async ({ page, isMobile }) => {
-  test.skip(!isMobile, 'só no projeto celular');
-  await page.goto('/');
-
-  const menuButton = page.getByRole('button', { name: 'Abrir menu de navegação' });
-  const nav = page.getByRole('navigation', { name: 'Navegação principal' });
-  await expect(menuButton).toBeVisible();
-  await expect(nav).toBeHidden();
-  await menuButton.click();
-  await expect(nav).toBeVisible();
-  await nav.getByRole('link', { name: 'História' }).click();
-  await expect(page).toHaveURL(/\/historia/);
-  await expect(nav).toBeHidden();
-
-  await page.evaluate(() => {
-    const target = document.elementFromPoint(2, 300) as HTMLElement;
-    const start = new Touch({ identifier: 1, target, clientX: 2, clientY: 300 });
-    const end = new Touch({ identifier: 1, target, clientX: 130, clientY: 304 });
-    target.dispatchEvent(new TouchEvent('touchstart', { bubbles: true, touches: [start], changedTouches: [start] }));
-    target.dispatchEvent(new TouchEvent('touchend', { bubbles: true, touches: [], changedTouches: [end] }));
-  });
-  await expect(nav).toBeVisible();
-  await page.evaluate(() => {
-    const target = document.querySelector('.nav a.nav-item') as HTMLElement;
-    const start = new Touch({ identifier: 2, target, clientX: 120, clientY: 200 });
-    const end = new Touch({ identifier: 2, target, clientX: 5, clientY: 204 });
-    target.dispatchEvent(new TouchEvent('touchstart', { bubbles: true, touches: [start], changedTouches: [start] }));
-    target.dispatchEvent(new TouchEvent('touchend', { bubbles: true, touches: [], changedTouches: [end] }));
-  });
-  await expect(nav).toBeHidden();
 });
 
 test('rota inexistente volta para o início', async ({ page }) => {

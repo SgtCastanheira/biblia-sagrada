@@ -4,14 +4,11 @@ import { saveLocal } from './storage.service';
 
 export interface ServiceNote {
   id: string;
-  kind?: 'bible';
   date: string;
   type: string;
   title: string;
   preacher: string;
   refs: string;
-  quote?: string;
-  sourceVersion?: string;
   body: string;
   application: string;
   createdAt: number;
@@ -29,7 +26,6 @@ export const DEFAULT_NOTE_TYPES = [
   'Outro',
 ];
 
-const BIBLE_NOTE_TYPE = 'Anotação bíblica';
 const STORAGE_KEY = 'biblia.notes';
 
 /** Anotações de cultos e pregações. */
@@ -39,8 +35,7 @@ export class NotesService {
   readonly notes = signal<ServiceNote[]>(this.load<ServiceNote[]>('items', []).filter((n) => !this.isEmpty(n)));
   readonly customTypes = signal<string[]>(this.load('types', []));
 
-  readonly types = computed(() => [...DEFAULT_NOTE_TYPES.slice(0, -1), ...this.customTypes(), BIBLE_NOTE_TYPE, 'Outro']);
-  readonly serviceTypes = computed(() => this.types().filter((type) => type !== BIBLE_NOTE_TYPE));
+  readonly types = computed(() => [...DEFAULT_NOTE_TYPES.slice(0, -1), ...this.customTypes(), 'Outro']);
 
   /** Mais recentes primeiro (pela data do culto). */
   readonly sorted = computed(() =>
@@ -76,27 +71,6 @@ export class NotesService {
       preacher: '',
       refs: '',
       body: '',
-      application: '',
-      createdAt: now,
-      updatedAt: now,
-    };
-    this.notes.update((list) => [note, ...list]);
-    return note;
-  }
-
-  createBibleNote(reference: string, quote: string, sourceVersion: string, body: string): ServiceNote {
-    const now = Date.now();
-    const note: ServiceNote = {
-      id: crypto.randomUUID(),
-      kind: 'bible',
-      date: todayKey(),
-      type: BIBLE_NOTE_TYPE,
-      title: `Comentário em ${reference}`,
-      preacher: '',
-      refs: reference,
-      quote,
-      sourceVersion,
-      body: body.trim(),
       application: '',
       createdAt: now,
       updatedAt: now,

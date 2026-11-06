@@ -136,30 +136,6 @@ section {
   margin-top: 24px;
 }
 
-.bible-kind {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 14px 0 0;
-  color: var(--mat-sys-primary);
-  font: 600 14px Inter, sans-serif;
-
-  mat-icon { font-size: 19px; width: 19px; height: 19px; }
-}
-
-.bible-quote {
-  padding: 14px 16px;
-  border-radius: 16px;
-  background: var(--mat-sys-surface-container-low);
-  border-left: 3px solid var(--accent-gold);
-
-  h2 { margin-bottom: 4px; }
-
-  .quote-ref { margin: 0 0 8px; color: var(--mat-sys-primary); font: 600 13px Inter, sans-serif; }
-
-  blockquote { margin: 0; font: 400 16px/1.65 var(--reading-font); }
-}
-
 h2 {
   margin: 0 0 10px;
   font: 600 20px var(--heading-font);

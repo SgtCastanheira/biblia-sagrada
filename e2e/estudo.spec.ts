@@ -1,8 +1,8 @@
-import { expect, goToTab, test } from './base';
+import { expect, test } from './base';
 
 test('início leva à biblioteca de história e estudo', async ({ page }) => {
   await page.goto('/');
-  await goToTab(page, 'História');
+  await page.getByRole('link', { name: 'História' }).first().click();
   await expect(page.getByRole('heading', { name: 'História', level: 1 })).toBeVisible();
   await expect(page.getByRole('button', { name: /^Livro: Memorial da Fé/ })).toBeVisible();
 });
@@ -31,40 +31,10 @@ test('leitor: contexto e notas do capítulo; desligar o dicionário', async ({ p
   await expect(page.getByText('Nicodemos, de noite')).toBeVisible();
   await expect(page.getByRole('link', { name: /Tudo para estudar João/ })).toBeVisible();
 
-  await page.getByRole('button', { name: 'Escolher cor do app' }).click();
-  await page.getByRole('menuitem', { name: 'Mais opções de leitura' }).click();
+  await page.getByRole('button', { name: 'Aparência da leitura' }).click();
   await page.getByRole('button', { name: 'Dicionário' }).click();
   await page.keyboard.press('Escape');
   await expect(page.locator('.word')).toHaveCount(0);
-});
-
-test('leitor: mostra o resumo de Gênesis 1 e as explicações dos versículos', async ({ page }) => {
-  await page.goto('/ler/GEN/1');
-  await expect(page.getByRole('heading', { name: 'Resumo do capítulo' })).toBeVisible();
-  await expect(page.locator('.chapter-summary')).toContainText('Deus dá origem aos céus e à terra');
-  await page.getByRole('button', { name: /Estudar este capítulo/ }).click();
-  await expect(page.getByRole('heading', { name: 'Explicações por trecho' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'À imagem de Deus' })).toBeVisible();
-});
-
-test('leitor: a pessoa escolhe manter ou ocultar o resumo no modo de foco', async ({ page }) => {
-  await page.goto('/ler/GEN/1');
-  await page.getByRole('button', { name: 'Ativar modo de foco' }).click();
-  await expect(page.getByRole('heading', { name: 'Resumo do capítulo' })).toHaveCount(0);
-  await page.getByRole('button', { name: 'Sair do modo de foco' }).click();
-
-  await page.getByRole('button', { name: 'Escolher cor do app' }).click();
-  await page.getByRole('menuitem', { name: 'Mais opções de leitura' }).click();
-  const preference = page.getByRole('button', { name: 'Manter resumo no foco' });
-  await expect(preference).toHaveAttribute('aria-pressed', 'false');
-  await preference.click();
-  await expect(page.getByRole('button', { name: 'Resumo visível no foco' })).toHaveAttribute('aria-pressed', 'true');
-  await page.keyboard.press('Escape');
-
-  await page.getByRole('button', { name: 'Ativar modo de foco' }).click();
-  await expect(page.getByRole('heading', { name: 'Resumo do capítulo' })).toBeVisible();
-  await page.reload();
-  await expect(page.getByRole('heading', { name: 'Resumo do capítulo' })).toBeVisible();
 });
 
 test('livro mostra introdução e contexto histórico', async ({ page }) => {
@@ -487,7 +457,7 @@ test('módulo Teologia Sistemático-Carismática: síntese com o plano da obra i
 test('bolinhas: Teologia e A Igreja e o Estado aparecem na tela inicial e levam às suas histórias', async ({ page }) => {
   await page.goto('/');
   const bolinhas = page.getByRole('navigation', { name: 'Assuntos das histórias' });
-  await expect(bolinhas.getByRole('link')).toHaveCount(12);
+  await expect(bolinhas.getByRole('link')).toHaveCount(11);
   await bolinhas.getByRole('link', { name: 'Teologia' }).click();
   await expect(page).toHaveURL(/trilha=teologia/);
   await expect(page.getByRole('link', { name: /Teologia Sistemático-Carismática/ })).toBeVisible();

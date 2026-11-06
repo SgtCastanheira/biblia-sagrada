@@ -3,7 +3,6 @@ import { MatBottomSheet, MatBottomSheetConfig } from '@angular/material/bottom-s
 import { firstValueFrom } from 'rxjs';
 import type { ShareCard } from '../core/share-card';
 import { ChapterSheet, ChapterSheetData } from './chapter-sheet';
-import { BibleNoteSheet, BibleNoteSheetData } from './bible-note-sheet';
 import { DevotionalConfigSheet } from './devotional-config-sheet';
 import { DictionarySheet } from './dictionary-sheet';
 import { ImportSheet, ImportSheetData } from './import-sheet';
@@ -26,10 +25,6 @@ export class Sheets {
 
   verseActions(data: VerseSheetData): void {
     this.bottomSheet.open(VerseSheet, { ...this.config, data });
-  }
-
-  bibleNote(data: BibleNoteSheetData) {
-    return this.bottomSheet.open(BibleNoteSheet, { ...this.config, data });
   }
 
   chapters(data: ChapterSheetData): void {

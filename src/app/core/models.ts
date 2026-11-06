@@ -1,13 +1,6 @@
 export type Testament = 'AT' | 'NT';
 /** 'auto' segue o claro/escuro do aparelho; os demais são as paletas do app (todas na mesma família: sálvia e dourado). */
 export type ThemeMode = 'auto' | 'light' | 'sepia' | 'mist' | 'dark' | 'ember' | 'forest';
-export const THEME_OPTIONS: readonly { id: ThemeMode; label: string; hint: string }[] = [
-  { id: 'auto', label: 'Automático', hint: 'Como o aparelho' },
-  { id: 'light', label: 'Claro', hint: 'Sálvia e papel' },
-  { id: 'sepia', label: 'Sépia', hint: 'Papel antigo' },
-  { id: 'mist', label: 'Névoa', hint: 'Claro suave' },
-  { id: 'forest', label: 'Floresta', hint: 'Verde profundo' },
-];
 export type ReadingFont = 'serif' | 'classic' | 'sans';
 export type VerseLayout = 'lines' | 'paragraph';
 export type HighlightColor = 'yellow' | 'green' | 'blue' | 'pink' | 'purple';
