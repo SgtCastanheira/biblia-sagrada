@@ -1,0 +1,81 @@
+:host { display: block; color: #efece7; scroll-margin-top: 90px; }
+.experience { --line: #42474b; --muted: #b6bbbd; --accent: #e8b39e; background: #171a1d; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; font: 400 15px/1.65 Inter, sans-serif; }
+.panel-header { padding: 26px 28px 20px; }
+.eyebrow, .section-label { display: block; color: var(--accent); font: 600 13px/1.6 Inter, sans-serif; letter-spacing: 1.8px; }
+h3 { margin: 8px 0 10px; font: 500 clamp(26px, 4vw, 36px)/1.15 var(--heading-font); color: #fff8f0; }
+.intro { margin: 0; max-width: 540px; font-size: 14px; color: var(--muted); }
+button { cursor: pointer; min-height: 44px; font: 500 13px/1.4 Inter, sans-serif; }
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #f1c6a4; outline-offset: 3px; }
+.lens-picker { display: flex; padding-inline: 28px; border-bottom: 1px solid var(--line); gap: 20px; }
+.lens-picker button { display: flex; align-items: center; gap: 7px; padding: 12px 0; border: 0; border-bottom: 3px solid transparent; background: transparent; color: #c7c9cb; }
+.lens-picker button span { color: #959da2; font-size: 13px; }
+.lens-picker button[aria-pressed='true'] { color: #fff2e8; border-bottom-color: var(--accent); }
+.lens-picker button[aria-pressed='true'] span { color: var(--accent); }
+.anatomy-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+.atlas { min-width: 0; background: #1e2022; border-right: 1px solid var(--line); }
+.plate-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px 18px; padding: 15px 18px; border-bottom: 1px solid #363a3d; color: #b7bdc1; font-size: 13px; line-height: 1.5; }
+.plate-heading > span:first-child { color: #eaded3; letter-spacing: 1.5px; white-space: nowrap; }
+.plate-image { position: relative; }
+.blood-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 16px; padding: 10px 18px; background: #282123; border-block: 1px solid #5c3b3c; }
+.blood-controls button { padding: 7px 12px; border: 1px solid #af796b; border-radius: 3px; background: #3b292a; color: #ffe3d7; font-size: 13px; }
+.blood-controls > span { color: #d2bcb6; font-size: 13px; }
+.plate-image img { display: block; width: 100%; height: auto; }
+.hotspot { position: absolute; transform: translate(-50%, -50%); display: grid; place-items: center; padding: 0; width: 44px; height: 44px; min-height: 44px; border: 0; background: transparent; color: #1d1b1b; isolation: isolate; font-size: 13px; font-weight: 700; }
+.hotspot::before { content: ''; position: absolute; inset: 8px; border-radius: 50%; border: 1px solid #f9ede1; background: #ece7de; box-shadow: 0 1px 5px #0009; z-index: -1; }
+.hotspot[aria-pressed='true']::before { inset: 5px; background: #9c3428; border: 2px solid #ffede2; }
+.hotspot[aria-pressed='true'] { color: white; }
+.plate-caption { display: grid; gap: 3px; padding: 16px 18px 12px; border-top: 1px solid #363a3d; }
+.plate-caption strong { font: 500 19px/1.3 var(--heading-font); color: #f4e9e0; }
+.plate-caption > span { color: #b6bbbd; font-size: 13px; }
+.structure-picker { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 14px 12px; }
+.structure-picker button { display: flex; align-items: center; gap: 6px; padding: 6px; min-height: 44px; border: 1px solid transparent; background: transparent; color: #bfc3c6; text-align: left; font-size: 13px; }
+.structure-picker button > span { display: grid; place-items: center; width: 20px; height: 20px; flex: 0 0 20px; border: 1px solid #687176; color: #dfd8d1; border-radius: 50%; font-size: 13px; }
+.structure-picker button[aria-pressed='true'] { border-color: #7d655d; color: #fff1e7; background: #3b2d29; }
+.structure-picker button[aria-pressed='true'] > span { background: #9c3428; border-color: #f1b59b; color: white; }
+.structure-detail { display: flex; gap: 10px; padding: 15px 18px; background: #292c2e; border-block: 1px solid #42474b; }
+.structure-index { color: var(--accent); font: 400 28px/1 var(--heading-font); }
+.structure-detail strong { color: #f3e6db; font-size: 13px; font-weight: 600; }
+.structure-detail p { margin: 4px 0 0; font-size: 13px; line-height: 1.65; color: #c5c9ca; }
+.plate-note { padding: 12px 18px 15px; margin: 0; color: #aeb5b9; font-size: 13px; line-height: 1.65; }
+.plate-source { display: block; margin: -3px 18px 16px; color: #c9c0b7; font-size: 13px; line-height: 1.7; text-underline-offset: 4px; }
+.lesson-copy { padding: 25px 24px; min-width: 0; }
+h4 { margin: 10px 0 16px; color: #f7eee7; font: 500 clamp(23px, 3vw, 29px)/1.2 var(--heading-font); }
+.lesson-copy p { font-size: 14px; line-height: 1.8; margin: 0; color: #d5d6d5; }
+.lesson-copy .physiology-explainer { margin-top: 15px; padding-left: 12px; border-left: 2px solid #728e90; color: #b7cace; font-size: 13px; }
+.mechanism-flow { padding: 4px 0 4px 12px; margin: 25px 0; list-style: none; border-left: 1px solid #77564c; }
+.mechanism-flow li { display: flex; gap: 12px; align-items: center; padding: 8px 0; color: #eee2d9; font-size: 13px; }
+.mechanism-flow li > span { font-size: 13px; color: var(--accent); }
+.clinical { padding-top: 17px; border-top: 1px solid var(--line); }
+.clinical .section-label { margin-bottom: 9px; font-size: 13px; letter-spacing: 1.3px; }
+details { border-block: 1px solid var(--line); margin-top: 23px; padding-block: 5px; }
+summary { padding: 10px 0; cursor: pointer; min-height: 44px; box-sizing: border-box; color: #dfc7b8; font-size: 13px; }
+details p { font-size: 13px !important; padding: 3px 0 10px; color: #bfc4c6 !important; }
+small { display: block; color: #d9bba9; font-size: 13px; line-height: 1.7; }
+details small { padding-bottom: 10px; }
+.source { display: block; padding-top: 18px; color: #c9c0b7; font-size: 13px; text-underline-offset: 4px; line-height: 1.7; }
+.source span { margin-left: 5px; }
+.landscape { grid-template-columns: 1fr; }
+.landscape .atlas { border-right: 0; }
+.landscape .plate-image { max-width: 100%; }
+.landscape .lesson-copy { border-top: 1px solid var(--line); padding: 25px 28px; }
+.landscape .lesson-copy p { max-width: 670px; }
+.landscape .mechanism-flow { display: flex; flex-wrap: wrap; gap: 4px 25px; border: 0; border-block: 1px solid var(--line); padding: 12px 0; margin-block: 20px; }
+.landscape .clinical { border-top: 0; padding-top: 0; }
+.journey-art { position: relative; height: 290px; overflow: hidden; background: #212629; }
+.journey-art img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 48%; }
+@media (max-width: 620px) {
+  .anatomy-layout { grid-template-columns: 1fr; }
+  .atlas { border-right: 0; }.lesson-copy { border-top: 1px solid var(--line); }
+  .panel-header { padding: 22px 18px 17px; }.lens-picker { padding-inline: 18px; gap: 14px; }.lens-picker button { font-size: 13px; gap: 5px; }
+  .lesson-copy, .landscape .lesson-copy { padding: 24px 18px; }
+  .journey-art { height: 230px; }
+  .landscape .mechanism-flow { display: block; }
+}
+@media (forced-colors: active) { .hotspot::before { background: Canvas; border-color: ButtonText; }.hotspot[aria-pressed='true']::before { background: Highlight; }.hotspot[aria-pressed='true'] { color: HighlightText; } }
+.enlarge { display: flex; gap: 20px; align-items: center; margin: 0 18px 10px; padding: 8px 12px; background: transparent; color: #e6c6b1; border: 1px solid #69584e; border-radius: 2px; font-size: 13px; }
+.atlas-dialog { position: fixed; inset: 0; margin: auto; padding: 0; width: min(1050px, calc(100vw - 28px)); max-width: calc(100vw - 28px); max-height: calc(100dvh - 28px); color: #ece5de; background: #1d2022; border: 1px solid #77706a; border-radius: 5px; overflow: auto; }
+.atlas-dialog::backdrop { background: #050709e8; }
+.dialog-heading { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #1d2022f5; padding: 10px 18px; border-bottom: 1px solid #505558; }
+.dialog-heading strong { font: 500 20px/1.2 var(--heading-font); }.dialog-heading button { color: #f7e2d2; border: 1px solid #867365; border-radius: 3px; background: #282a2a; padding: 6px 12px; }.dialog-heading button span { margin-left: 12px; }
+.atlas-dialog .plate-image { max-width: 780px; margin: auto; }.atlas-dialog .structure-detail { position: sticky; bottom: 0; z-index: 1; background: #292c2ef5; }
+

@@ -2,6 +2,7 @@
 
 import { inBibleOrder, positionOfChapter, positionOfRef } from './bible-order';
 import { DRAFT_ARTICLES } from './draft-content';
+import { PAIXAO_ARTICLES } from './paixao';
 
 export type ArticleCollection = 'estudos' | 'contexto' | 'profecias' | 'igreja' | 'avivamentos' | 'biblia';
 
@@ -1495,6 +1496,7 @@ export const ARTICLES: Article[] = [
     icon: 'format_list_numbered',
     minutes: 3,
   },
+  ...PAIXAO_ARTICLES,
 ];
 
 export const findArticle = (id: string) => ARTICLES.find((a) => a.id === id);

@@ -166,12 +166,16 @@ export const CREDITS: { group: string; items: Credit[] }[] = [
       { name: 'O capítulo 53 do Grande Rolo de Isaías, de Qumran (século II a.C.) (Ardon Bar Hama)', use: 'Foto no estudo “Da Volta do Exílio a Jesus”.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Great_Isaiah_Scroll_Ch53.jpg' },
       { name: 'Flávio Josefo, gravura do século XVIII (autor desconhecido)', use: 'Foto no estudo “Flávio Josefo: o Historiador do Tempo de Jesus”.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Josephus_Flavius_(37_-_um_100).jpg' },
       { name: 'Maquete de Jerusalém no tempo do Segundo Templo, Museu de Israel (Berthold Werner)', use: 'Foto no estudo “Da Volta do Exílio a Jesus”.', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Jerusalem_Modell_BW_2.JPG' },
+      { name: 'Quadro Simão, o Cireneu, obrigado a carregar a cruz com Jesus, de James Tissot (entre 1886 e 1894), Brooklyn Museum', use: 'Pintura no livro Crucificação (A Paixão, da Ceia à Ressurreição).', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Simon_the_Cyrenian_Compelled_to_Carry_the_Cross_with_Jesus_(Simon_de_Cyr%C3%A8ne_contraint_de_porter_la_Croix_avec_J%C3%A9sus)_-_James_Tissot.jpg' },
+      { name: 'Quadro As filhas de Jerusalém, de James Tissot (entre 1886 e 1894), Brooklyn Museum', use: 'Pintura no livro Crucificação (A Paixão, da Ceia à Ressurreição).', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Daughters_of_Jerusalem_(Les_filles_de_J%C3%A9rusalem)_-_James_Tissot.jpg' },
+      { name: 'Ilustrações dos livros da Paixão', use: 'Capas, pranchas de anatomia, cenas, sequências de quadros e figuras dos sete livros de A Paixão, da Ceia à Ressurreição. Reconstituições artísticas, não fotografias nem documentos da época.', license: 'Criadas com inteligência artificial para o app' },
     ],
   },
   {
     group: 'Mapas',
     items: [
       { name: 'Natural Earth', use: 'Litoral, rios, lagos e fronteiras atuais dos mapas e do atlas.', license: 'Domínio público', url: 'https://www.naturalearthdata.com' },
+      { name: 'OpenStreetMap', use: 'Fundo e caminhos a pé do mapa do percurso da Paixão, em Jerusalém (consultados em 10 e 12 de novembro de 2026). São os caminhos de hoje.', license: 'ODbL', url: 'https://www.openstreetmap.org/copyright' },
       { name: 'Fronteiras antigas e lugares', use: 'Traçados aproximados feitos para o app, para fins de estudo.', license: 'Conteúdo do app' },
     ],
   },

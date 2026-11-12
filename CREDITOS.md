@@ -132,6 +132,9 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Bíblia Nova Versão de Acesso Livre (NVA) — biblianva.com.br, baseada na Unlocked Literal Bible | Texto embutido (`public/bible/nva`), do módulo `PorNVA` da CrossWire | CC BY-SA 4.0 |
 | Almeida 1911 (reimpressão de 1911 de uma edição de 1900) | Texto embutido com a ortografia original (`public/bible/alm1911`), do módulo `PorAlmeida1911` da CrossWire, convertido com o pysword (MIT) | Texto em domínio público; módulo sob GPL |
 | [bible-api.com](https://bible-api.com) | Demais versões, carregadas pela internet | Textos em domínio público |
+| Quadro *Simão, o Cireneu, obrigado a carregar a cruz com Jesus*, de James Tissot (entre 1886 e 1894), Brooklyn Museum | `public/conteudo/imagens/paixao-anatomia-simao-cirene-tissot.jpg`, do Wikimedia Commons | Domínio público |
+| Quadro *As filhas de Jerusalém*, de James Tissot (entre 1886 e 1894), Brooklyn Museum | `public/conteudo/imagens/paixao-anatomia-filhas-de-jerusalem-tissot.jpg`, do Wikimedia Commons | Domínio público |
+| Ilustrações dos livros da Paixão (capas, pranchas de anatomia, cenas e sequências de quadros) | `public/conteudo/imagens/paixao-*`; reconstituições artísticas feitas com inteligência artificial para o app, não fotografias nem documentos da época | Criadas para o app |
 
 ## Estudo
 
@@ -164,6 +167,7 @@ A foto do autor (`vozes-lucas-silva.jpg`) foi enviada pelo editor do app e é us
 | Fonte | Uso no app | Licença |
 |---|---|---|
 | [Natural Earth](https://www.naturalearthdata.com) | Litoral, rios, lagos e fronteiras atuais (`public/maps`) | Domínio público |
+| [OpenStreetMap](https://www.openstreetmap.org/copyright) | Fundo e caminhos a pé do mapa do percurso da Paixão, em Jerusalém (consultados em 10 e 12 de novembro de 2026) | ODbL |
 
 As fronteiras antigas, os lugares e as rotas foram traçados para o app, de forma aproximada, para fins de estudo.
 

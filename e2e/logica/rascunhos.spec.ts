@@ -10,11 +10,11 @@ import { TRAILS } from '../../src/app/core/trails';
 
 const ARTICLE_IDS = [
   'do-getsemani-a-ressurreicao',
-  'paixao-santa-ceia', 'paixao-getsemani', 'paixao-prisao-e-interrogatorio', 'paixao-acoite-e-condenacao',
-  'paixao-crucificacao', 'paixao-sepultamento-e-ressurreicao', 'paixao-quem-mandava',
   'cego-de-nascenca', 'filho-da-viuva-de-naim', 'jesus-acalma-tempestade', 'multiplicacao-dos-paes',
   'jesus-sobre-as-aguas', 'o-machado-que-flutuou', 'o-sinal-de-cana',
 ];
+// Volume 4 · A Paixão, da Ceia à Ressurreição: publicado; os volumes 1 a 3 da trilha continuam privados
+const PAIXAO_VOLUME = 'Volume 4 · A Paixão, da Ceia à Ressurreição';
 const verifyScript = resolve('tools/verificar-publicacao.mjs');
 
 function verify(directory: string) {
@@ -40,7 +40,7 @@ test('rascunhos: os catálogos padrão e a biblioteca pública não incluem a co
   expect(DRAFT_WORKS).toEqual({});
   expect(DRAFT_ARTICLE_SOURCES).toEqual({});
   expect(ARTICLES.filter((article) => ARTICLE_IDS.includes(article.id))).toEqual([]);
-  expect(TRAILS.some((trail) => trail.id === 'como-a-ciencia-explica')).toBe(false);
+  expect(TRAILS.find((trail) => trail.id === 'como-a-ciencia-explica')?.branches.map((branch) => branch.title)).toEqual([PAIXAO_VOLUME]);
   expect(TRAILS.flatMap((trail) => trail.branches.flatMap((branch) => branch.ids)).filter((id) => ARTICLE_IDS.includes(id))).toEqual([]);
   expect(Object.keys(ARTICLE_SOURCES).filter((id) => ARTICLE_IDS.includes(id))).toEqual([]);
 });
@@ -78,24 +78,11 @@ test('publicação: recusa Markdown privado mesmo sem o artigo no catálogo Java
 
 test('publicação: recusa catálogo ou figuras privadas em bundles e mapas de código', () => {
   for (const [file, id] of [
-    ['chunk-local.js', 'como-a-ciencia-explica'],
     ['chunk-paixao.js', 'do-getsemani-a-ressurreicao'],
-    ['chunk-ceia.js', 'paixao-santa-ceia'],
-    ['chunk-prisao.js', 'paixao-prisao-e-interrogatorio'],
-    ['chunk-acoite.js', 'paixao-acoite-e-condenacao'],
-    ['chunk-cruz.js', 'paixao-crucificacao'],
-    ['chunk-ressurreicao.js', 'paixao-sepultamento-e-ressurreicao'],
     ['chunk-figura.js', 'visao-joao-9'],
-    ['chunk-sangue.js', 'paixao-sangue-'],
-    ['chunk-mapa.js', 'paixao-mapa'],
-    ['chunk-malco.js', 'paixao-malco'],
-    ['chunk-placa.js', 'paixao-placa'],
-    ['chunk-lanca.js', 'paixao-lanca'],
-    ['chunk-oliveiras.js', 'paixao-oliveiras'],
-    ['chunk-regioes.js', 'paixao-regioes'],
-    ['chunk-poder.js', 'paixao-poder'],
-    ['chunk-mandava.js', 'paixao-quem-mandava'],
     ['chunk.js.map', 'corpo-e-vida-lucas-7'],
+    ['chunk-vinho.js', 'o-sinal-de-cana'],
+    ['chunk-machado.js', 'o-machado-que-flutuou'],
   ]) {
     withBuild((directory) => {
       writeFileSync(join(directory, file), JSON.stringify({ id }));
@@ -107,10 +94,21 @@ test('publicação: recusa catálogo ou figuras privadas em bundles e mapas de c
 });
 
 test('publicação: também recusa identificador privado no nome de um arquivo de imagem', () => {
-  for (const name of ['cana-quimica.png', 'paixao-getsemani.png', 'paixao-anatomia-pele.png', 'paixao-anatomia-torax.webp', 'paixao-anatomia-neuro.png']) {
+  for (const name of ['cana-quimica.png', 'cego-de-nascenca.webp', 'o-sinal-de-cana.jpg']) {
     withBuild((directory) => {
       writeFileSync(join(directory, name), new Uint8Array([137, 80, 78, 71]));
       expect(verify(directory).status, name).toBe(1);
     });
   }
+});
+
+test('publicação: aceita os livros da Paixão e suas imagens, que agora são públicos', () => {
+  withBuild((directory) => {
+    mkdirSync(join(directory, 'conteudo', 'artigos'), { recursive: true });
+    mkdirSync(join(directory, 'conteudo', 'imagens'), { recursive: true });
+    writeFileSync(join(directory, 'conteudo', 'artigos', 'paixao-crucificacao.md'), '# Crucificação');
+    writeFileSync(join(directory, 'conteudo', 'imagens', 'paixao-anatomia-pele-v2.webp'), new Uint8Array([82, 73, 70, 70]));
+    writeFileSync(join(directory, 'chunk-paixao-lanca.js'), JSON.stringify({ id: 'paixao-lanca', trilha: 'como-a-ciencia-explica' }));
+    expect(verify(directory).status).toBe(0);
+  });
 });

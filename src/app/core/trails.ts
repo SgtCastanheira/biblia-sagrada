@@ -1,5 +1,6 @@
 import { ARTICLES, type ArticleCollection } from './library';
 import { DRAFT_TRAILS } from './draft-content';
+import { PAIXAO_TRAILS } from './paixao';
 
 /** Um atalho para outra tela do app, mostrado junto das histórias da trilha. */
 export interface TrailLink {
@@ -36,6 +37,7 @@ export interface Trail {
 
 export const TRAILS: Trail[] = [
   ...DRAFT_TRAILS,
+  ...PAIXAO_TRAILS,
   {
     id: 'historias-da-biblia',
     name: 'Histórias da Bíblia',

@@ -1,0 +1,88 @@
+:host { display: block; margin: 24px 0; }
+.route { margin: 0; padding: 14px; border-radius: 20px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface-container-low); }
+.head { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent-gold); }
+.head mat-icon { font-size: 18px; width: 18px; height: 18px; }
+
+button { font: 600 14px/1.3 Inter, sans-serif; color: var(--mat-sys-on-surface); cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--mat-sys-primary); outline-offset: 2px; }
+button:disabled { opacity: .45; cursor: default; }
+
+/* Dois grupos de dois botões, do mesmo tamanho: o pretório e o que mostrar */
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.seg-title { grid-column: 1 / -1; font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+.seg button { display: grid; justify-items: center; min-height: 48px; padding: 6px 10px; border-radius: 12px; background: var(--mat-sys-surface); border: 1px solid var(--mat-sys-outline-variant); line-height: 1.25; }
+.seg button small { font: 500 13px Inter, sans-serif; }
+.seg button[aria-pressed='true'] { background: var(--mat-sys-primary); color: var(--mat-sys-on-primary); border-color: var(--mat-sys-primary); }
+
+/* Moldura quadrada: o percurso tem a mesma altura e largura. Em tela larga fica centralizada. */
+.frame { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 1 / 1; background: var(--map-sea); border: 1px solid var(--mat-sys-outline-variant); }
+.frame app-bible-map { display: block; width: 100%; height: 100%; }
+@media (min-width: 640px) { .frame { max-width: 540px; margin-inline: auto; } }
+@media (max-width: 520px) { .frame { aspect-ratio: 5 / 6; } }
+
+/* O caminho a pé já está desenhado nas regiões do mapa: a linha reta do visualizador e o viajante ficam escondidos */
+:host ::ng-deep app-bible-map .route,
+:host ::ng-deep app-bible-map .traveler { display: none; }
+
+.kmchip { display: grid; gap: 1px; margin-top: 8px; padding: 8px 12px; border-radius: 12px; background: var(--mat-sys-surface); border: 1px solid var(--mat-sys-outline-variant); }
+.kmchip strong { font: 700 15px/1.3 Inter, sans-serif; color: var(--mat-sys-on-surface); }
+.kmchip span { font: 500 13px/1.35 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+.kmchip.arrival { border-color: var(--accent-gold); box-shadow: 0 0 0 2px var(--accent-gold); }
+
+.layers { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.chip { display: inline-flex; align-items: center; gap: 4px; min-height: 40px; padding: 6px 12px; border-radius: 20px; background: var(--mat-sys-surface); border: 1px solid var(--mat-sys-outline-variant); font-size: 13px; }
+.chip[aria-pressed='true'] { background: var(--mat-sys-secondary-container); color: var(--mat-sys-on-secondary-container); border-color: var(--mat-sys-secondary); }
+.chip[aria-pressed='true']::before { content: '✓ '; }
+.chip mat-icon { font-size: 18px; width: 18px; height: 18px; }
+.chip.go { background: var(--mat-sys-primary-container); color: var(--mat-sys-on-primary-container); border-color: transparent; font-weight: 700; }
+
+.legend { margin: 8px 2px 0; font: 400 13px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+.legend b { color: var(--accent-gold); }
+
+.steps { display: flex; gap: 8px; margin: 10px -14px; padding: 2px 14px 6px; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; }
+.steps::-webkit-scrollbar { display: none; }
+.steps button { flex: none; scroll-snap-align: start; display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 12px; border-radius: 14px; background: var(--mat-sys-surface); border: 1px solid var(--mat-sys-outline-variant); font-size: 13px; }
+.steps b { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--mat-sys-surface-container-high); font: 700 13px Inter, sans-serif; }
+.steps button span { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.25; }
+.steps button small { font: 600 13px Inter, sans-serif; color: var(--mat-sys-primary); }
+.steps .on { border-color: var(--accent-gold); box-shadow: inset 0 -3px var(--accent-gold); }
+.steps .on b { background: var(--accent-gold); color: var(--map-badge-text); }
+
+.card { padding: 14px 16px; border-radius: 16px; background: var(--mat-sys-surface); border: 1px solid var(--mat-sys-outline-variant); }
+.card header { display: flex; align-items: center; gap: 10px; }
+.num { display: grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--accent-gold); color: var(--map-badge-text); font: 700 14px Inter, sans-serif; }
+.card strong { flex: 1; font: 600 19px/1.3 var(--heading-font); }
+.count { font: 500 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+.text { margin: 10px 0 0; font: 400 15px/1.6 Inter, sans-serif; }
+.meta { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0 0; }
+.ref { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; background: none; border: 0; color: var(--mat-sys-primary); }
+.ref mat-icon { font-size: 18px; width: 18px; height: 18px; }
+.leg { font: 500 13px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+
+.controls { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 12px 0; }
+.controls button { min-width: 48px; min-height: 48px; border-radius: 24px; background: var(--mat-sys-surface); border: 1px solid var(--mat-sys-outline-variant); display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.controls .play { min-width: 190px; padding: 0 16px; background: var(--mat-sys-primary); color: var(--mat-sys-on-primary); border-color: var(--mat-sys-primary); }
+
+.kmtable { width: 100%; margin: 4px 0 0; border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 14px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface); font: 400 14px/1.4 Inter, sans-serif; }
+.kmtable caption { caption-side: top; text-align: left; padding: 0 2px 6px; font: 600 13px Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+.kmtable th, .kmtable td { padding: 8px 8px; text-align: left; border-top: 1px solid var(--mat-sys-outline-variant); }
+.kmtable thead th { border-top: 0; font: 600 13px/1.3 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); background: var(--mat-sys-surface-container); }
+.kmtable td { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.kmtable tbody th { padding-block: 0; font-weight: 600; }
+.kmtable tbody b { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 6px; border-radius: 50%; background: var(--mat-sys-surface-container-high); font: 700 13px Inter, sans-serif; }
+.kmtable .here { background: color-mix(in srgb, var(--accent-gold) 22%, var(--mat-sys-surface)); }
+.kmtable .here b { background: var(--accent-gold); color: var(--map-badge-text); }
+.kmtable tfoot th, .kmtable tfoot td { background: var(--mat-sys-surface-container); font-weight: 600; }
+.kmtable tfoot strong { font: 700 17px var(--heading-font); color: var(--mat-sys-primary); }
+.rowbtn { display: inline-flex; align-items: center; min-height: 44px; padding: 0; background: none; border: 0; text-align: left; font: 600 14px/1.35 Inter, sans-serif; color: inherit; }
+.rowbtn:focus-visible { outline: 3px solid var(--mat-sys-primary); outline-offset: 2px; border-radius: 6px; }
+
+.note { margin: 10px 2px 0; font: 400 14px/1.6 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+.credit { margin: 10px 0 0; font: 400 13px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+.credit a { color: var(--mat-sys-primary); text-underline-offset: 3px; }
+
+@media (max-width: 520px) {
+  .controls .play { min-width: 0; flex: 1; }
+  .kmtable th, .kmtable td { padding-inline: 6px; }
+  .kmtable thead th { font-size: 13px; }
+}

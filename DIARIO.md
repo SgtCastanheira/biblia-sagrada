@@ -8,6 +8,27 @@ Regras:
 - **Decisões** dizem o que foi escolhido, por quê e o que ficou de fora. **Pendências** são o que ficou para depois.
 - O hash do commit não entra na entrada (ele ainda não existe ao escrever); `git log -- DIARIO.md` liga cada entrada ao seu commit.
 
+## 2026-11-12 18:20 -0400 — Publicação do Volume 4 · A Paixão, da Ceia à Ressurreição
+
+**Autor:** Valter, com Claude. O dono pediu para ocultar os volumes 1 a 3 da trilha “Como a Ciência Explica”, manter o Volume 4 (A Paixão, da Ceia à Ressurreição) e publicar na `main`. Os volumes 1 a 3 continuam privados.
+
+**O que sobe:**
+1. **Sete livros**, numa só prateleira, “Volume 4 · A Paixão, da Ceia à Ressurreição”, da trilha `como-a-ciencia-explica`: `paixao-quem-mandava`, `paixao-santa-ceia`, `paixao-getsemani`, `paixao-prisao-e-interrogatorio`, `paixao-acoite-e-condenacao`, `paixao-crucificacao` e `paixao-sepultamento-e-ressurreicao` (cerca de 17 mil palavras, 87 minutos de leitura). Textos em `public/conteudo/artigos/`; dados (artigos, trilha, fontes e faixas das figuras) em `core/paixao.ts`, ligados em `library.ts`, `trails.ts` e `sources.ts`. A leitura reforçada (grifo das falas, figuras em faixa, “Saiba mais”, sanfona) liga por `PAIXAO_IDS`, em `ArticlePage.enhanced`.
+2. **15 figuras** em `shared/paixao/` (mapa do percurso, mapa das regiões e hierarquia de quem mandava, o Monte das Oliveiras, pranchas de anatomia e simulações, cenas em quatro quadros, a placa de Pilatos e a lança em seis quadros), registradas em `shared/figure.ts`; as faixas compactas vêm de `core/figure-info.ts`. A figura antiga da lança (folha de quatro quadros e GIF) não sobe.
+3. **Imagens:** 30 arquivos `paixao-*`; 44,5 MB em PNG viraram 6,4 MB em WebP (qualidade 90); o JPEG e o GIF para baixar ficam como eram. Ficam fora do cache de pré-carga e vão para o grupo lazy `imagens-da-paixao` do `ngsw-config.json`: o texto entra no uso offline, e a imagem só baixa para quem abre a figura.
+4. **Acessibilidade:** 41 declarações de letra de 8 a 12,5px nas figuras subiram para 13px (os alvos de toque já tinham 40px). `e2e/paixao.spec.ts` abre cada figura de cada livro, no celular e no computador, e mede letras, alvos e rolagem lateral.
+5. **Ícones:** o subconjunto da Material Symbols foi refeito com os ícones das figuras (`tools/baixar-fontes.py`); Inter e Lora ficaram como estavam.
+6. **Créditos e novidades:** Tissot (dois quadros, domínio público), ilustrações criadas com inteligência artificial e OpenStreetMap (ODbL) em `credits.ts` e `CREDITOS.md`; a novidade “A Paixão, da Ceia à Ressurreição” em `whats-new.ts`.
+7. **Trava de publicação:** saem da lista os sete ids, as figuras, `como-a-ciencia-explica` e o prefixo `paixao-anatomia-`; continuam bloqueados os ids dos volumes que não sobem. `e2e/logica/rascunhos.spec.ts` agora exige só o Volume 4 na trilha e aceita os livros.
+8. **Testes novos:** `e2e/logica/paixao.spec.ts` (livros, fontes, tópicos e minutos; citações e falas idênticas à Almeida do app; títulos; blocos; imagens, todas em WebP e dentro do peso; cartões de continuação), `e2e/paixao.spec.ts`, um caso em `e2e/offline.spec.ts` (livro aberto sem internet) e `estudo.spec.ts` com 12 bolinhas de assunto na tela inicial.
+9. **Estilo:** o estilo global dos livros (só vale com uma cena de anatomia aberta) foi para `styles.scss`; as legendas “para esta prévia” viraram “para este estudo”.
+
+**Decisões:** (a) a trilha fica na frente dos outros assuntos, como na prévia; mudar é uma linha em `trails.ts`; (b) imagens em WebP e cache sob demanda, para não pesar no celular de quem lê; (c) os volumes 1 a 3 seguem fora do app e bloqueados pela trava; (d) `DIARIO.md` e `CLAUDE.md` sobem sem o histórico detalhado de pedidos, só com esta entrada e as regras dos livros.
+
+**Validação:** num checkout limpo, sem a pasta privada: lint sem problemas; 189 testes de lógica; build de produção e trava de publicação sem achados; bateria do navegador com o app em desenvolvimento, em porta própria: celular, 555 ok e 1 ignorado; computador, 553 ok e 3 ignorados; teste offline com o build de produção: 8 ok.
+
+**Pendências:** o dono ver o resultado ao vivo; seguir editando os livros em `public/conteudo/artigos/`; dividir a Crucificação (26 min), se quiser.
+
 ## 2026-11-12 17:18 -0400 — Publicação: apoio a rascunhos privados, blocos novos nos estudos e correções da Almeida
 
 **Autor:** Valter, com Claude. O dono pediu para publicar na `main`. A publicação leva só o que é público; o conteúdo em elaboração continua na pasta privada `rascunhos/` (fora do Git), e o registro detalhado dele também fica fora do repositório, que é público.

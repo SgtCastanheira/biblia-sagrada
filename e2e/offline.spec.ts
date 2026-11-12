@@ -69,6 +69,18 @@ test('o conteúdo de estudo funciona sem internet', async ({ page, context }) =>
   await context.setOffline(false);
 });
 
+test('um livro da Paixão abre sem internet: o texto está no cache de pré-carga (as imagens, só depois de vistas)', async ({ page, context }) => {
+  test.setTimeout(150_000);
+  await page.goto('/');
+  await waitUntilInstalled(page);
+
+  await context.setOffline(true);
+  await page.goto('/artigo/paixao-santa-ceia');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Santa Ceia');
+  await expect(page.getByText('Os Preparativos da Páscoa').first()).toBeVisible();
+  await context.setOffline(false);
+});
+
 test('o sermão aparece no jornal e abre, sem a marca de não indexar', async ({ page }) => {
   await page.goto('/vozes');
   await expect(page.getByRole('heading', { level: 2, name: 'Sermões' })).toBeVisible();
