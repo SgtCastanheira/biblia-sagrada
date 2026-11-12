@@ -1,38 +1,11 @@
 #!/usr/bin/env node
-/** Impede que uma prévia local de rascunhos seja publicada como aplicativo público. */
+/** Impede que rascunhos privados (os volumes da coleção que não foram publicados) cheguem ao aplicativo público. */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { extname, join, resolve } from 'node:path';
 
 // A lista fica aqui para que a proteção funcione também num checkout sem os arquivos privados.
 const PRIVATE_IDS = [
-  'como-a-ciencia-explica',
   'do-getsemani-a-ressurreicao',
-  'paixao-santa-ceia',
-  'paixao-prisao-e-interrogatorio',
-  'paixao-acoite-e-condenacao',
-  'paixao-crucificacao',
-  'paixao-sepultamento-e-ressurreicao',
-  'paixao-percurso',
-  'paixao-corpo',
-  'paixao-ferimentos',
-  'paixao-morte',
-  'paixao-mapa',
-  'paixao-malco',
-  'paixao-anas',
-  'paixao-rosto',
-  'paixao-chicote',
-  'paixao-coroa',
-  'paixao-getsemani',
-  'paixao-golgota',
-  'paixao-tumulo-vazio',
-  'paixao-placa',
-  'paixao-lanca',
-  'paixao-oliveiras',
-  'paixao-regioes',
-  'paixao-poder',
-  'paixao-quem-mandava',
-  'paixao-anatomia-',
-  'paixao-sangue-',
   'cego-de-nascenca',
   'filho-da-viuva-de-naim',
   'jesus-acalma-tempestade',

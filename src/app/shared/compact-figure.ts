@@ -1,6 +1,6 @@
 import { Component, computed, input, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { DRAFT_FIGURES } from '../core/draft-content';
+import { FIGURE_INFO } from '../core/figure-info';
 import { Figure } from './figure';
 
 /**
@@ -35,5 +35,5 @@ export class CompactFigure {
   readonly id = input.required<string>();
   protected readonly open = signal(false);
   /** Rótulo, título e miniatura da figura (uma figura sem cadastro mostra só o id). */
-  protected readonly info = computed(() => DRAFT_FIGURES[this.id()] ?? { kind: 'Ilustração', title: this.id() });
+  protected readonly info = computed(() => FIGURE_INFO[this.id()] ?? { kind: 'Ilustração', title: this.id() });
 }

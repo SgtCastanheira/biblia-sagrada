@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'a-paixao-volume-4',
+    date: '12 de novembro de 2026',
+    title: 'A Paixão, da Ceia à Ressurreição',
+    items: [
+      { icon: 'menu_book', title: 'Sete livros da Paixão', text: 'Do preparo da páscoa ao túmulo vazio, com o que os Evangelhos contam: a Santa Ceia, o Getsêmani, a prisão, o açoite, a crucificação e a ressurreição, num livro para cada parte, e um estudo sobre quem mandava em cada lugar.', link: '/historia?trilha=como-a-ciencia-explica', tip: 'Biblioteca › Como a Ciência Explica' },
+      { icon: 'map', title: 'Mapas, distâncias e figuras', text: 'O caminho de Jesus em Jerusalém, do cenáculo ao Gólgota, com os quilômetros a pé; pranchas de anatomia para entender o que o corpo sofre; e imagens que acompanham cada cena.', link: '/artigo/paixao-prisao-e-interrogatorio' },
+    ],
+  },
+  {
     id: 'jornal-novas-vozes',
     date: '5 de novembro de 2026',
     title: 'O Jornal: Novas Vozes da Palavra',

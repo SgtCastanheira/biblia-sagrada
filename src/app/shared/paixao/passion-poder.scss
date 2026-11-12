@@ -1,0 +1,105 @@
+/* Organograma: autoridades políticas e religiosas em níveis distintos. */
+:host { display: block; container-type: inline-size; }
+.poder {
+  --branch: var(--mat-sys-primary);
+  --wire: var(--mat-sys-outline);
+  margin: 0;
+  padding: 24px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: 22px;
+  background: linear-gradient(155deg, color-mix(in srgb, var(--mat-sys-primary) 5%, var(--mat-sys-surface)), var(--mat-sys-surface) 65%);
+  color: var(--mat-sys-on-surface);
+  font: 400 13px/1.45 Inter, sans-serif;
+}
+p { margin: 5px 0 0; }
+ul { list-style: none; padding: 0; margin: 0; }
+li { min-width: 0; }
+.eyebrow { margin: 0 0 6px; color: var(--mat-sys-primary); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.head { margin: 0; font: 700 28px/1.15 var(--heading-font); letter-spacing: -.025em; }
+.intro { margin-top: 8px; font-size: 14px; color: var(--mat-sys-on-surface-variant); }
+.legend { display: flex; flex-wrap: wrap; gap: 7px 16px; margin: 16px 0 22px; color: var(--mat-sys-on-surface-variant); }
+.legend li, .influence-label { display: flex; align-items: center; gap: 7px; }
+.line { display: inline-block; flex: none; width: 20px; border-top: 2px solid currentColor; }
+.line.political { border-top-style: dashed; }
+.line.influence { border-top-style: dotted; }
+.node { position: relative; box-sizing: border-box; padding: 12px; border: 1px solid var(--mat-sys-outline-variant); border-radius: 12px; background: var(--mat-sys-surface); }
+.node-title { margin: 0; }
+.node-title strong { font: 700 18px/1.2 var(--heading-font); }
+.tag { display: flex; align-items: center; gap: 6px; margin: 0 0 7px; color: var(--mat-sys-on-surface-variant); }
+.territory-dot { flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--branch); }
+.leader { border-top: 3px solid var(--branch); background: color-mix(in srgb, var(--branch) 5%, var(--mat-sys-surface)); }
+.leader .node-title strong { font-size: 20px; }
+.subordinate .node-title strong, .leaf .node-title strong { font-size: 17px; }
+.subordinate { border-inline-start: 3px solid var(--branch); }
+.leaf { padding: 9px 10px; }
+.emperor { display: flex; align-items: center; justify-content: center; gap: 14px; width: min(100%, 300px); margin-inline: auto; padding: 16px 20px; border: 0; border-radius: 16px; color: var(--mat-sys-on-primary); background: var(--mat-sys-primary); box-shadow: 0 5px 16px color-mix(in srgb, var(--mat-sys-primary) 13%, transparent); }
+.emperor .tag { margin-bottom: 4px; color: inherit; }
+.emperor .node-title strong { font-size: 24px; }
+.imperial-seal { display: grid; place-items: center; flex: none; width: 44px; height: 44px; border: 1px solid currentColor; border-radius: 50%; font: 700 27px/1 var(--heading-font); }
+
+/* As listas mantêm os parentescos também quando o desenho vira uma coluna. */
+.branches { position: relative; display: grid; gap: 24px; }
+.antipas, .temple { --branch: var(--accent-gold); }
+.relation { position: relative; margin: 0; padding: 12px 0 7px; color: var(--mat-sys-on-surface-variant); }
+.local-branches, .temple-branches { display: grid; margin-inline-start: 10px; padding-inline-start: 13px; border-inline-start: 1px solid var(--wire); }
+.local-branches > li, .temple-branches > li { position: relative; }
+.local-branches > li::before, .temple-branches > li::before { content: ''; position: absolute; left: -13px; top: 21px; width: 9px; border-top: 1px solid var(--wire); }
+.local-branches > .temple::before { border-top-style: dashed; }
+.annas { margin-top: 10px; padding: 9px 10px; border: 1px dotted var(--mat-sys-outline); border-radius: 10px; background: color-mix(in srgb, var(--accent-gold) 5%, var(--mat-sys-surface)); }
+.annas .node-title strong { font-size: 17px; }
+.influence-label { margin: 0 0 5px; color: var(--mat-sys-on-surface-variant); }
+.independent { margin: 12px 2px 0; padding: 10px; border-radius: 10px; background: color-mix(in srgb, var(--accent-gold) 9%, var(--mat-sys-surface)); color: var(--mat-sys-on-surface-variant); }
+.independent b { color: var(--mat-sys-on-surface); }
+.regional { display: grid; gap: 4px 16px; margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--mat-sys-outline-variant); }
+.regional-label { margin: 0; font-weight: 700; color: var(--mat-sys-on-surface-variant); }
+.regional p + p { margin: 0; }
+.takeaway { display: flex; align-items: flex-start; gap: 10px; margin-top: 16px; padding: 12px; border-radius: 12px; color: var(--mat-sys-on-primary-container); background: var(--mat-sys-primary-container); font-size: 14px; }
+.takeaway-mark { flex: none; font-size: 22px; line-height: 20px; }
+.context-details { margin-top: 12px; border-top: 1px solid var(--mat-sys-outline-variant); }
+summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 3px 2px; box-sizing: border-box; list-style: none; font-weight: 600; cursor: pointer; }
+summary::-webkit-details-marker { display: none; }
+summary > span { font-size: 22px; font-weight: 400; transition: rotate .15s; }
+details[open] summary > span { rotate: 45deg; }
+summary:focus-visible { outline: 3px solid var(--mat-sys-primary); outline-offset: 3px; border-radius: 6px; }
+.context-body { padding: 0 2px 8px; }
+.context-body p { margin: 12px 0 0; }
+.credit { color: var(--mat-sys-on-surface-variant); }
+
+@container (min-width: 620px) {
+  .branches { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 16px; margin-top: 18px; }
+  .branches::before { content: ''; position: absolute; top: 0; left: calc(33.333% - 5.333px); right: calc(16.667% - 2.667px); border-top: 1px dashed var(--wire); }
+  .branches::after { content: ''; position: absolute; top: -18px; left: 50%; height: 18px; border-left: 1px dashed var(--wire); }
+  .branches > li > .relation { display: grid; place-items: end center; height: 42px; padding: 14px 0 8px; box-sizing: border-box; text-align: center; }
+  .branches > li > .relation::before { content: ''; position: absolute; top: 0; left: 50%; height: 10px; border-left: 1px dashed var(--wire); }
+  .leader { min-height: 117px; }
+  .judea > .local-branches { position: relative; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 14px 0 0; padding: 0; border: 0; }
+  .judea > .local-branches::before { content: ''; position: absolute; top: 0; left: calc(25% - 3.5px); right: calc(25% - 3.5px); border-top: 1px solid var(--wire); }
+  .judea > .local-branches::after { content: ''; position: absolute; top: -14px; left: 50%; height: 14px; border-left: 1px solid var(--wire); }
+  .judea > .local-branches > li > .relation { display: grid; align-content: end; height: 49px; box-sizing: border-box; padding-top: 12px; text-align: center; }
+  .judea > .local-branches > li::before { left: 50%; top: 0; width: 0; height: 10px; border-top: 0; border-left: 1px solid var(--wire); }
+  .judea > .local-branches > .temple::before { border-left-style: dashed; }
+  .regional { grid-template-columns: 135px minmax(0, 1fr); }
+}
+@container (max-width: 619px) {
+  .poder { padding: 18px; }
+  .head { font-size: 26px; }
+  .branches { margin: 20px 0 0 5px; }
+  .branches > li { border-inline-start: 1px dashed var(--wire); padding-inline-start: 13px; }
+  .branches > li > .relation { padding: 0 0 9px; font-weight: 600; }
+  .branches > li > .relation::before { content: ''; position: absolute; left: -13px; top: 9px; width: 9px; border-top: 1px dashed var(--wire); }
+  .node { padding: 11px; }
+  .emperor { padding: 15px 12px; }
+  .node-title strong, .leader .node-title strong { font-size: 19px; }
+  .subordinate .node-title strong, .leaf .node-title strong { font-size: 17px; }
+  .local-branches, .temple-branches { margin-inline-start: 7px; padding-inline-start: 11px; }
+  .local-branches > li::before, .temple-branches > li::before { left: -11px; width: 7px; }
+}
+@container (max-width: 330px) {
+  .poder { padding: 14px; }
+  .head { font-size: 24px; }
+  .imperial-seal { width: 36px; height: 36px; font-size: 24px; }
+  .emperor .node-title strong { font-size: 22px; }
+  .emperor { gap: 10px; }
+  .legend { gap: 7px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { summary > span { transition: none; } }

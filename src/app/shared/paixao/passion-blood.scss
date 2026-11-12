@@ -1,0 +1,21 @@
+:host { position: absolute; inset: 0; display: block; pointer-events: none; overflow: hidden; }
+svg { display: block; width: 100%; height: 100%; }
+.vessel-flow { stroke: #ffd0b4; stroke-width: 6; stroke-dasharray: 5 42; opacity: .94; animation: vessel-flow 4s linear infinite; }
+.vessel-flow.branch { stroke: #ffbca8; stroke-width: 5; stroke-dasharray: 4 33; animation-direction: reverse; animation-duration: 3.5s; }
+.wound-bed { stroke: #42020a; stroke-width: 12; opacity: .5; }
+.wound-film { stroke-width: 13; opacity: .83; animation: wet-film 5s ease-in-out infinite; }
+.wet-edge { stroke: #f3a69a; stroke-width: 1.8; opacity: .5; animation: wet-reflection 5s ease-in-out infinite; }
+.seep { stroke-width: 7; stroke-dasharray: 100; stroke-dashoffset: 0; animation: seep 5s ease-in-out infinite; }
+.seep-two { stroke-width: 9; animation-delay: -2.4s; }
+.blood-drop { transform-box: fill-box; transform-origin: center; animation: blood-drop 5s cubic-bezier(.45,.04,.7,.48) infinite; animation-delay: var(--delay); }
+:host.paused * { animation-play-state: paused !important; }
+@keyframes vessel-flow { to { stroke-dashoffset: -220; } }
+@keyframes wet-film { 0%, 100% { stroke-width: 9; opacity: .64; } 55% { stroke-width: 15; opacity: .92; } }
+@keyframes wet-reflection { 0%, 100% { opacity: .25; } 55% { opacity: .65; } }
+@keyframes seep { 0% { stroke-dashoffset: 100; opacity: .2; } 65% { stroke-dashoffset: 0; opacity: .85; } 100% { stroke-dashoffset: 0; opacity: .2; } }
+@keyframes blood-drop {
+  0% { transform: translate(0, 0) scale(.35); opacity: 0; }
+  12% { opacity: .95; }
+  75% { opacity: .95; }
+  95%, 100% { transform: translate(var(--dx), var(--dy)) scale(.95); opacity: 0; }
+}

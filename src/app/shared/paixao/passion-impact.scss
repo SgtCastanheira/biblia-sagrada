@@ -1,0 +1,29 @@
+:host { display: block; padding: 0 22px 26px; }
+.impact-lesson { border: 1px solid #62514a; background: #111517; color: #e7e1da; border-radius: 4px; overflow: hidden; font: 400 13px/1.65 Inter, sans-serif; }
+header { padding: 22px 20px 18px; }
+.overline { color: #e9b69b; font-size: 13px; font-weight: 600; letter-spacing: 1.6px; }
+h4 { margin: 7px 0 10px; font: 500 28px/1.2 var(--heading-font); color: #fff2e6; }
+header p { color: #b7bfc2; margin: 0; font-size: 13px; }
+.paired-view { display: grid; grid-template-columns: 1fr 1fr; border-block: 1px solid #42474b; }
+.action-panel { border-right: 1px solid #42474b; min-width: 0; }.tissue-panel { min-width: 0; }
+.view-label { display: grid; gap: 4px; padding: 12px; min-height: 50px; box-sizing: border-box; font-size: 13px; line-height: 1.5; color: #c2bdb7; background: #242626; }
+.view-label > span:first-child { color: #e7b69a; letter-spacing: 1px; }.view-label > span:last-child { color: #ddd7d0; }
+.action-frame { position: relative; aspect-ratio: 3 / 2; background-size: 200% 200%; background-repeat: no-repeat; background-color: #1d2022; }
+.model-label, .nerve-label { position: absolute; bottom: 8px; right: 7px; max-width: calc(100% - 20px); background: #171a1de0; padding: 4px 6px; color: #dbd4cb; font-size: 13px; line-height: 1.5; }
+.tissue-window { position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: #242526; }
+.tissue-motion { position: absolute; width: 100%; top: 50%; translate: 0 -50%; transform-origin: 74% 23%; }
+.tissue-motion img { display: block; width: 100%; height: auto; }.injured-tissue { position: absolute; inset: 0; }
+.tissue-signals { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.contact { fill: #9d281529; stroke: #f4b49b; stroke-width: 4; }.nerve-route { fill: none; stroke: #ffe0a8; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 100; }
+.transport { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 16px 16px 6px; }.playback-buttons, .speed { display: flex; flex-wrap: wrap; gap: 7px; }
+button { cursor: pointer; min-height: 44px; font: 500 13px/1.4 Inter, sans-serif; border: 1px solid #6c625a; background: #212528; color: #e7dfd7; padding: 8px 10px; border-radius: 2px; }
+button.play { background: #e3b69a; color: #261e1a; border-color: #edc5ad; }.speed button { color: #bdc3c6; border-color: #42474b; }.speed button[aria-pressed='true'] { color: #f7d9c5; border-color: #ab8670; background: #3a2d27; }
+button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid #f0c0a5; outline-offset: 3px; }
+.timeline { display: block; margin: 10px 18px 0; color: #c7c8c7; font-size: 13px; }.timeline > span { display: flex; justify-content: space-between; gap: 8px; }.timeline output { color: #e4b597; font-variant-numeric: tabular-nums; }
+input[type='range'] { display: block; width: 100%; min-height: 44px; margin: 0; accent-color: #e3b69a; cursor: pointer; }
+.moments { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; border-block: 1px solid #42474b; }.moments button { border: 0; border-radius: 0; background: #202427; color: #bdc2c3; padding: 10px 5px; }.moments button span { display: block; margin-bottom: 5px; font-size: 13px; color: #c8a185; }.moments button[aria-pressed='true'] { background: #44332c; color: #fff0e3; box-shadow: inset 0 -2px #e3b69a; }
+.moment-explanation { display: flex; gap: 15px; padding: 20px; background: #242727; min-height: 105px; }.moment-number { font: 400 32px/1 var(--heading-font); color: #e3b69a; }h5 { margin: 0 0 9px; font: 500 21px/1.3 var(--heading-font); color: #f5e4d6; }.moment-explanation p { margin: 0; color: #c8cdce; font-size: 13px; }
+.simulation-note { margin: 0; padding: 15px 20px 8px; font-size: 13px; color: #aeb7bb; }.reference { display: block; padding: 4px 20px 17px; color: #d8b69f; font-size: 13px; text-underline-offset: 4px; }
+.aftermath { padding: 24px 20px; border-block: 1px solid #62514a; background: #191b1c; }.aftermath-heading h5 { font-size: 27px; margin-top: 8px; }.aftermath-heading p { font-size: 13px; color: #bcc2c4; margin: 0 0 18px; }.aftermath figure { margin: 0; }.aftermath img { display: block; width: 100%; max-height: 720px; object-fit: contain; background: #131719; }.aftermath figcaption { font-size: 13px; color: #b8bcbf; line-height: 1.7; margin-top: 12px; }.back-enlarge { margin-top: 15px; }
+.back-dialog { position: fixed; inset: 0; margin: auto; padding: 0; width: min(720px, calc(100vw - 28px)); max-width: calc(100vw - 28px); max-height: calc(100dvh - 28px); overflow: auto; border: 1px solid #807266; border-radius: 4px; color: #efe2d6; background: #171a1c; }.back-dialog::backdrop { background: #080a0bed; }.back-dialog-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; position: sticky; top: 0; padding: 10px 16px; background: #171a1cf5; }.back-dialog img { display: block; width: 100%; height: auto; }
+@media (max-width: 560px) { :host { padding: 0 10px 20px; }.paired-view { grid-template-columns: 1fr; }.action-panel { border-right: 0; border-bottom: 1px solid #42474b; }.view-label { display: flex; flex-wrap: wrap; justify-content: space-between; min-height: 0; gap: 4px 8px; }.action-frame, .tissue-window { aspect-ratio: 3 / 2; }header { padding: 18px 14px; }h4 { font-size: 25px; }.transport { padding-inline: 12px; }.moments button { font-size: 13px; }.moment-explanation { padding: 18px 14px; }.simulation-note { padding-inline: 14px; }.reference { padding-inline: 14px; }.model-label, .nerve-label { font-size: 13px; } }

@@ -1,0 +1,51 @@
+:host { display: block; margin: 24px 0; }
+.ctx { margin: 0; padding: 14px; border-radius: 20px; border: 1px solid var(--mat-sys-outline-variant); background: var(--mat-sys-surface-container-low); }
+.head { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font: 700 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent-gold); }
+.head mat-icon { font-size: 18px; width: 18px; height: 18px; }
+
+button { font: 600 14px/1.3 Inter, sans-serif; color: var(--mat-sys-on-surface); cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--mat-sys-primary); outline-offset: 2px; }
+
+.frame { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--map-sea); border: 1px solid var(--mat-sys-outline-variant); }
+.frame.tall { aspect-ratio: 3 / 4; }
+.frame app-bible-map { display: block; width: 100%; height: 100%; }
+@media (min-width: 640px) { .frame { max-width: 560px; margin-inline: auto; } .frame.tall { max-width: 460px; } }
+/* O caminho a pé já está desenhado nas regiões do mapa: a linha reta do visualizador e o viajante ficam escondidos */
+:host ::ng-deep app-bible-map .route,
+:host ::ng-deep app-bible-map .traveler { display: none; }
+
+.layers { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.chip { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 6px 14px; border-radius: 22px; background: var(--mat-sys-surface); border: 1px solid var(--mat-sys-outline-variant); font-size: 13px; }
+.chip[aria-pressed='true'] { background: var(--mat-sys-secondary-container); color: var(--mat-sys-on-secondary-container); border-color: var(--mat-sys-secondary); }
+.chip[aria-pressed='true']::before { content: '✓ '; }
+
+.key { list-style: none; margin: 12px 2px 0; padding: 0; display: grid; gap: 8px; font: 400 14px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface); }
+.key li { display: flex; gap: 10px; align-items: flex-start; }
+.key b { color: var(--mat-sys-on-surface); }
+.muted { color: var(--mat-sys-on-surface-variant); }
+.sw { flex: none; width: 16px; height: 16px; margin-top: 3px; border-radius: 5px; opacity: .9; }
+.sw.gold { background: var(--accent-gold); }
+.sw.water { background: var(--map-river); }
+.sw.olive { background: color-mix(in srgb, var(--mat-sys-primary) 65%, var(--accent-gold)); }
+.sw.route { background: var(--mat-sys-primary); }
+.rules { margin-top: 12px; }
+
+.note { margin: 12px 2px 0; font: 400 14px/1.6 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+.credit { margin: 10px 2px 0; font: 400 13px/1.5 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
+.credit a { color: var(--mat-sys-primary); text-underline-offset: 3px; }
+
+/* Esquema: três faixas (Roma, os judeus, o tetrarca), cada uma de cima para baixo */
+.lanes { display: grid; gap: 14px; }
+@media (min-width: 900px) { .lanes { grid-template-columns: repeat(3, 1fr); align-items: start; } }
+.lane { --c: var(--mat-sys-primary); padding: 10px 10px 12px; border-radius: 16px; background: color-mix(in srgb, var(--c) 9%, var(--mat-sys-surface)); border: 1px solid color-mix(in srgb, var(--c) 40%, var(--mat-sys-outline-variant)); }
+.lane.judeus { --c: var(--accent-gold); }
+.lane.rei { --c: color-mix(in srgb, var(--mat-sys-primary) 55%, var(--accent-gold)); }
+.lane h4 { margin: 0 0 8px 2px; font: 700 16px/1.3 var(--heading-font); }
+.lane ol { list-style: none; margin: 0; padding: 0; display: grid; justify-items: stretch; }
+.lane li { display: grid; justify-items: center; }
+.node { width: 100%; box-sizing: border-box; padding: 9px 12px; border-radius: 12px; background: var(--mat-sys-surface); border-left: 5px solid var(--c); border-top: 1px solid var(--mat-sys-outline-variant); border-right: 1px solid var(--mat-sys-outline-variant); border-bottom: 1px solid var(--mat-sys-outline-variant); }
+.node strong { display: block; font: 700 16px/1.3 var(--heading-font); }
+.tag { display: inline-block; margin: 3px 0 4px; padding: 1px 8px; border-radius: 10px; background: color-mix(in srgb, var(--c) 18%, var(--mat-sys-surface)); font: 600 13px/1.4 Inter, sans-serif; color: var(--mat-sys-on-surface); }
+.node p { margin: 2px 0 0; font: 400 14px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface); }
+.node p b { font-weight: 700; color: var(--mat-sys-on-surface-variant); }
+.arrow { padding: 2px 0; font: 700 20px/1 Inter, sans-serif; color: var(--c); }

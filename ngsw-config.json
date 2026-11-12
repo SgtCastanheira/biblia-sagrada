@@ -23,7 +23,8 @@
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+          "/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)",
+          "!/conteudo/imagens/paixao-*"
         ]
       }
     },
@@ -45,7 +46,8 @@
       "resources": {
         "files": [
           "/conteudo/**",
-          "!/conteudo/imagens/datas-*.jpg"
+          "!/conteudo/imagens/datas-*.jpg",
+          "!/conteudo/imagens/paixao-*"
         ]
       }
     },
@@ -56,6 +58,16 @@
       "resources": {
         "files": [
           "/conteudo/imagens/datas-*.jpg"
+        ]
+      }
+    },
+    {
+      "name": "imagens-da-paixao",
+      "installMode": "lazy",
+      "updateMode": "lazy",
+      "resources": {
+        "files": [
+          "/conteudo/imagens/paixao-*"
         ]
       }
     },

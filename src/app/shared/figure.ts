@@ -2,6 +2,12 @@ import { Component, input } from '@angular/core';
 import { CalendarArt } from './calendar-art';
 import { TanakhShelf } from './tanakh-shelf';
 import { DraftFigure } from './draft-figure';
+import { PassionScene } from './paixao/passion-scene';
+import { PassionRoute } from './paixao/passion-route';
+import { PassionPlaca } from './paixao/passion-placa';
+import { PassionStory } from './paixao/passion-story';
+import { PassionSpear } from './paixao/passion-spear';
+import { PassionOliveiras, PassionPoder, PassionRegioes } from './paixao/passion-contexto';
 
 /**
  * Ilustrações desenhadas pelo app para os estudos (":::figura id" no texto).
@@ -9,10 +15,25 @@ import { DraftFigure } from './draft-figure';
  */
 @Component({
   selector: 'app-figure',
-  imports: [TanakhShelf, CalendarArt, DraftFigure],
+  imports: [TanakhShelf, CalendarArt, DraftFigure, PassionScene, PassionRoute, PassionStory, PassionPlaca, PassionSpear, PassionOliveiras, PassionRegioes, PassionPoder],
   template: `
     @switch (id()) {
       @default { <app-draft-figure [id]="id()" /> }
+      @case ('paixao-coroa') { <app-passion-story kind="coroa" /> }
+      @case ('paixao-mapa') { <app-passion-route /> }
+      @case ('paixao-placa') { <app-passion-placa /> }
+      @case ('paixao-malco') { <app-passion-story kind="malco" /> }
+      @case ('paixao-anas') { <app-passion-story kind="anas" /> }
+      @case ('paixao-rosto') { <app-passion-story kind="rosto" /> }
+      @case ('paixao-chicote') { <app-passion-story kind="chicote" /> }
+      @case ('paixao-percurso') { <app-passion-scene kind="percurso" /> }
+      @case ('paixao-corpo') { <app-passion-scene kind="corpo" /> }
+      @case ('paixao-ferimentos') { <app-passion-scene kind="ferimentos" /> }
+      @case ('paixao-morte') { <app-passion-scene kind="morte" /> }
+      @case ('paixao-lanca') { <app-passion-spear /> }
+      @case ('paixao-oliveiras') { <app-passion-oliveiras /> }
+      @case ('paixao-regioes') { <app-passion-regioes /> }
+      @case ('paixao-poder') { <app-passion-poder /> }
       @case ('biblia-judaica') { <app-tanakh-shelf /> }
       @case ('calendario-outubro-1582') { <app-calendar-art kind="outubro-1582" /> }
       @case ('calendario-meses-romanos') { <app-calendar-art kind="meses-romanos" /> }

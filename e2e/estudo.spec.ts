@@ -457,7 +457,8 @@ test('módulo Teologia Sistemático-Carismática: síntese com o plano da obra i
 test('bolinhas: Teologia e A Igreja e o Estado aparecem na tela inicial e levam às suas histórias', async ({ page }) => {
   await page.goto('/');
   const bolinhas = page.getByRole('navigation', { name: 'Assuntos das histórias' });
-  await expect(bolinhas.getByRole('link')).toHaveCount(11);
+  // 12 assuntos: os 11 de antes e “Como a Ciência Explica” (A Paixão, da Ceia à Ressurreição)
+  await expect(bolinhas.getByRole('link')).toHaveCount(12);
   await bolinhas.getByRole('link', { name: 'Teologia' }).click();
   await expect(page).toHaveURL(/trilha=teologia/);
   await expect(page.getByRole('link', { name: /Teologia Sistemático-Carismática/ })).toBeVisible();

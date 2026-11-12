@@ -24,6 +24,7 @@ import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
 import { outline } from '../../core/rich-text-parser';
 import { DRAFT_ARTICLES } from '../../core/draft-content';
+import { PAIXAO_IDS } from '../../core/paixao';
 import { articleCard } from '../../core/share-card';
 import { RichText } from '../../shared/rich-text';
 import { ShareImageButton } from '../../shared/share-image-button';
@@ -122,7 +123,7 @@ import { SourcesBox } from '../../shared/sources-box';
         @if (body() === undefined) {
           <div class="skeleton"><span></span><span></span><span></span><span class="short"></span></div>
         } @else if (body(); as text) {
-          <app-rich-text [source]="text" [story]="story()" [markQuotes]="isDraft()" [compactFigures]="isDraft()" [accordion]="accordion()" [foldable]="isDraft()" [keepOpen]="listen.state() !== 'idle'" [topics]="article()?.topics ?? []" />
+          <app-rich-text [source]="text" [story]="story()" [markQuotes]="enhanced()" [compactFigures]="enhanced()" [accordion]="accordion()" [foldable]="enhanced()" [keepOpen]="listen.state() !== 'idle'" [topics]="article()?.topics ?? []" />
         } @else {
           <p class="empty">Não foi possível abrir este texto agora.</p>
         }
@@ -302,10 +303,10 @@ export class ArticlePage {
     const a = this.article();
     return !!a && (STORY_COLLECTIONS.includes(a.collection) || !!a.story);
   });
-  /** Estudo privado (só existe na prévia local): grifa de leve as falas e os versículos entre aspas. */
-  protected readonly isDraft = computed(() => DRAFT_ARTICLES.some((d) => d.id === this.id()));
-  /** Sanfona por tópico: só nos estudos privados longos (8 tópicos ou mais), onde a rolagem cansa no celular. */
-  protected readonly accordion = computed(() => this.isDraft() && (this.article()?.topics?.length ?? 0) >= 8);
+  /** Leitura reforçada (os livros da Paixão e os rascunhos da prévia local): grifa de leve as falas e os versículos entre aspas, mostra as figuras em faixa e dobra os “Saiba mais”. */
+  protected readonly enhanced = computed(() => PAIXAO_IDS.has(this.id()) || DRAFT_ARTICLES.some((d) => d.id === this.id()));
+  /** Sanfona por tópico: só nos estudos de leitura reforçada com 8 tópicos ou mais, onde a rolagem cansa no celular. */
+  protected readonly accordion = computed(() => this.enhanced() && (this.article()?.topics?.length ?? 0) >= 8);
   protected readonly rich = viewChild(RichText);
   /** O panorama da coleção (como Atos), para quem quiser ver onde esta história se encaixa. */
   protected readonly overview = computed(() => {
@@ -358,7 +359,7 @@ export class ArticlePage {
     const r = text.getBoundingClientRect();
     const h = innerHeight;
     // Enquanto um tópico (sanfona) ou uma linha “Saiba mais” abre ou fecha, a página muda de altura de uma vez e a rolagem ainda não se acertou: não grava
-    if (this.isDraft() && this.rich()?.settling()) return;
+    if (this.enhanced() && this.rich()?.settling()) return;
     // Com a sanfona a altura do texto muda quando os tópicos abrem e fecham: o progresso vem das palavras, não da altura
     const byContent = this.accordion() ? (this.rich()?.progress(h * 0.5, h) ?? null) : null;
     const fraction = byContent ?? (r.bottom <= h ? 1 : Math.min(1, Math.max(0, (h * 0.5 - r.top) / r.height)));

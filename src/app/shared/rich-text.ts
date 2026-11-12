@@ -3,7 +3,7 @@ import { Component, computed, ElementRef, inject, input, signal } from '@angular
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { CLASSIC_SERMONS, findArticle } from '../core/library';
-import { DRAFT_FIGURES } from '../core/draft-content';
+import { FIGURE_INFO } from '../core/figure-info';
 import { Block, markBlockQuotes, parseBlocks, sectionLabels } from '../core/rich-text-parser';
 import { foldRanges, locateTopic, readingFraction, topicSections, visibleBlocks } from '../core/topic-sections';
 import { CompactFigure } from './compact-figure';
@@ -197,7 +197,7 @@ import { FoldHead, TopicHead, TopicNext } from './topic-head';
 })
 export class RichText {
   protected inlineFigure(id: string): boolean {
-    return DRAFT_FIGURES[id]?.inline ?? false;
+    return FIGURE_INFO[id]?.inline ?? false;
   }
 
   readonly source = input.required<string>();
