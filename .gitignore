@@ -70,3 +70,9 @@ tools/.audio-cache/
 
 # Amostras de voz para ouvir antes de gerar (tools/gerar-audio.mjs --amostra)
 tools/amostra-*.mp3
+
+# Rascunhos privados: disponíveis somente na prévia local, fora do Git e do build público
+/rascunhos/
+
+# PDFs de consulta da coleção em elaboração
+/Ciencia explica/

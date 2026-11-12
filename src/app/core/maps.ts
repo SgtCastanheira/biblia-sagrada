@@ -55,6 +55,8 @@ export interface BibleMap {
   note?: string;
   /** Aproximação máxima da jornada (fração da largura do mapa). Menor = mais perto. Padrão 0.32. */
   zoom?: number;
+  /** Aproximação mínima ao enquadrar lugares com `focus` (fração da largura do mapa). Padrão 0.22; mapas de uma cidade usam um valor bem menor. */
+  focusZoom?: number;
   /** Capítulos relacionados, ex.: "ACT 16". */
   chapters: string[];
   /** false: as etapas não são uma viagem só (não mostra distâncias). */

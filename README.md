@@ -33,6 +33,14 @@ npx ng serve
 
 Abra http://localhost:4200.
 
+### Rascunhos locais
+
+Quando houver conteúdo na pasta privada `rascunhos/`, use `npm run start:rascunhos` para abrir a prévia somente neste computador, em `http://127.0.0.1:4200`. A tela mostra “Rascunhos locais · não publicados”. Essa pasta fica fora do Git; não coloque seus textos em `public/`.
+
+O desenvolvimento padrão e o build de produção usam catálogos vazios de rascunhos. A prévia usa uma configuração própria, sem service worker e com saída em `tmp/rascunhos/`, separada de `dist/`. Em um checkout sem a pasta privada, continue usando `npm start` normalmente.
+
+Depois do build público, `npm run verificar:publicacao` confere se os arquivos de publicação contêm material da coleção em elaboração. Os workflows executam essa verificação antes de publicar.
+
 Para gerar a versão de produção (pasta `dist/`):
 
 ```bash

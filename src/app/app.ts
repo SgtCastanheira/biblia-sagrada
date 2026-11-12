@@ -22,6 +22,7 @@ import { VoicesNewsService } from './core/voices-news.service';
 import { findVersion } from './core/versions';
 import { Sheets } from './shared/sheets';
 import { ListenPlayer } from './shared/listen-player';
+import { DRAFT_PREVIEW } from './core/draft-content';
 
 type NavTab = 'inicio' | 'biblia' | 'estudo' | 'ensino' | 'jornal' | 'eu';
 
@@ -35,6 +36,7 @@ type NavTab = 'inicio' | 'biblia' | 'estudo' | 'ensino' | 'jornal' | 'eu';
   },
 })
 export class App {
+  protected readonly draftPreview = DRAFT_PREVIEW;
   private readonly whatsNew = inject(WhatsNewService);
   protected readonly settings = inject(SettingsService);
   protected readonly ui = inject(UiService);

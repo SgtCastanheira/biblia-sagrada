@@ -1,6 +1,7 @@
 import { Component, input } from '@angular/core';
 import { CalendarArt } from './calendar-art';
 import { TanakhShelf } from './tanakh-shelf';
+import { DraftFigure } from './draft-figure';
 
 /**
  * Ilustrações desenhadas pelo app para os estudos (":::figura id" no texto).
@@ -8,9 +9,10 @@ import { TanakhShelf } from './tanakh-shelf';
  */
 @Component({
   selector: 'app-figure',
-  imports: [TanakhShelf, CalendarArt],
+  imports: [TanakhShelf, CalendarArt, DraftFigure],
   template: `
     @switch (id()) {
+      @default { <app-draft-figure [id]="id()" /> }
       @case ('biblia-judaica') { <app-tanakh-shelf /> }
       @case ('calendario-outubro-1582') { <app-calendar-art kind="outubro-1582" /> }
       @case ('calendario-meses-romanos') { <app-calendar-art kind="meses-romanos" /> }

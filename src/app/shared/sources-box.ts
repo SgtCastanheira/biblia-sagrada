@@ -16,12 +16,14 @@ import { ARTICLE_SOURCES, SourceSet, SourceTopic, TOPIC_SOURCES, WORKS } from '.
           <h3>{{ s.ancientLabel ?? 'Fontes antigas e arqueologia' }}</h3>
           <ul>@for (a of s.ancient; track a) { <li>{{ a }}</li> }</ul>
         }
-        <h3>Para conferir e aprofundar</h3>
-        <ul>
-          @for (w of works(); track w.title) {
-            <li>{{ w.author }}. <cite>{{ w.title }}</cite>. {{ w.publisher }}.</li>
-          }
-        </ul>
+        @if (works().length) {
+          <h3>Para conferir e aprofundar</h3>
+          <ul>
+            @for (w of works(); track w.title) {
+              <li>{{ w.author }}. <cite>{{ w.title }}</cite>. {{ w.publisher }}.</li>
+            }
+          </ul>
+        }
         <a class="all" routerLink="/fontes">Todas as fontes do app</a>
       </details>
     }
@@ -42,7 +44,7 @@ import { ARTICLE_SOURCES, SourceSet, SourceTopic, TOPIC_SOURCES, WORKS } from '.
     .lead { margin: 0 0 10px; font: 400 14px/1.55 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     h3 { margin: 14px 0 6px; font: 600 13px Inter, sans-serif; text-transform: uppercase; letter-spacing: .8px; color: var(--accent-gold); }
     ul { margin: 0; padding-left: 18px; font: 400 15px/1.55 var(--reading-font); }
-    li { margin-bottom: 4px; }
+    li { margin-bottom: 4px; overflow-wrap: anywhere; }
     cite { font-style: italic; }
     .all { display: inline-flex; align-items: center; min-height: 40px; margin-top: 8px; color: var(--mat-sys-primary); font: 600 14px Inter, sans-serif; }
   `,

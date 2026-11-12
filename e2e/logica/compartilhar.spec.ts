@@ -7,7 +7,7 @@ import { ARTICLES, CLASSIC_SERMONS } from '../../src/app/core/library';
 import { MAPS_IN_ORDER } from '../../src/app/core/maps';
 import {
   adStateCard, articleCard, CARD_CREAM, CARD_GOLD, classicSermonCard, curiosityCard, DEFAULT_TONE, dictionaryCard, epochCard, fitTopics,
-  hymnCard, mapCard, pageUrl, personCard, prophecyCard, shareText, SITE_URL, trailCard, tribeCard, type ShareCard,
+  hymnCard, mapCard, pageUrl, personCard, prophecyCard, shareText, shortWhen, SITE_URL, trailCard, tribeCard, type ShareCard,
 } from '../../src/app/core/share-card';
 import { TRAILS } from '../../src/app/core/trails';
 import { TRIBES } from '../../src/app/core/tribes';
@@ -61,6 +61,42 @@ test('compartilhar: a lista de tópicos some com repetições e vazios e limita 
   const out = fitTopics([{ title: ' A ', subs: ['1', '1', '2', '3'] }, { title: 'a' }, { title: '' }, { title: 'B' }]);
   expect(out).toEqual([{ title: 'A', subs: ['1', '2'] }, { title: 'B' }]);
   expect(fitTopics(Array.from({ length: 30 }, (_, i) => ({ title: `T${i}` }))).length).toBeLessThanOrEqual(12);
+});
+
+test('compartilhar: a hora da cena entra no subtópico em forma curta, sem estourar a linha da imagem', () => {
+  // Exemplos de linhas de hora (":::hora …") e a forma curta de cada uma
+  const horas: [string, string][] = [
+    ['Quinta-feira · ao anoitecer, por volta das 18h', 'Quinta, 18h'],
+    ['Quinta-feira · de noite, durante a ceia', 'Quinta, de noite'],
+    ['Quinta para sexta · de noite, antes do canto do galo (entre a meia-noite e as 3h)', 'Quinta para sexta, 0h–3h'],
+    ['Quinta para sexta · de madrugada, até o amanhecer', 'Quinta para sexta, de madrugada'],
+    ['Sexta-feira · de manhã, antes das 9h; João diz cerca da hora sexta', 'Sexta, antes das 9h'],
+    ['Sexta-feira · de manhã, depois das 9h', 'Sexta, depois das 9h'],
+    ['Sexta-feira · hora terceira, por volta das 9h', 'Sexta, 9h'],
+    ['Sexta-feira · das 9h ao meio-dia, antes das trevas', 'Sexta, 9h–12h'],
+    ['Sexta-feira · do meio-dia às 15h, da hora sexta à nona', 'Sexta, 12h–15h'],
+    ['Sexta-feira · à tarde, antes do pôr do sol', 'Sexta, à tarde'],
+    ['Sexta-feira · ao cair da tarde, antes do pôr do sol, por volta das 18h', 'Sexta, 18h'],
+    ['Sábado · de dia', 'Sábado, de dia'],
+    ['De sexta a domingo', 'Sexta a domingo'],
+    ['Domingo · ao anoitecer; e oito dias depois', 'Domingo, ao anoitecer'],
+    ['', ''],
+  ];
+  for (const [entrada, saida] of horas) expect(shortWhen(entrada), entrada).toBe(saida);
+
+  // Dentro do cartão: só o título de cena (###) logo seguido de ":::hora" ganha a hora; os demais ficam como eram
+  const md = [
+    '## Primeiro Tópico', '', '### O Cenáculo', '', ':::hora Quinta-feira · ao anoitecer, por volta das 18h', '', 'Texto.', '',
+    '### Uma Cena Sem Hora', '', 'Texto.', '', '### Terceira Cena', '', 'Texto.',
+  ].join('\n');
+  expect(articleCard(ARTICLES[0].id, md)?.topics[0].subs).toEqual(['Quinta, 18h · O Cenáculo', 'Uma Cena Sem Hora']);
+
+  // Título comprido: a hora vai na frente e fica inteira; é o fim do título que se corta, e a linha cabe
+  const longo = 'Jesus Diante de Caifás e do Sinédrio, o Conselho Reunido na Madrugada da Prisão';
+  const md2 = `## Tópico\n\n### ${longo}\n\n:::hora Quinta para sexta · de noite, antes do canto do galo (entre a meia-noite e as 3h)\n\nTexto.`;
+  const sub = articleCard(ARTICLES[0].id, md2)?.topics[0].subs?.[0] ?? '';
+  expect(sub.length).toBeLessThanOrEqual(67);
+  expect(sub.startsWith('Quinta para sexta, 0h–3h · Jesus Diante de Caifás')).toBe(true);
 });
 
 test('compartilhar: todo estudo gera uma imagem com assunto, tópicos e o endereço dele', () => {

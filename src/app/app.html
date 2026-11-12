@@ -54,6 +54,9 @@
 }
 
 <main class="content" [class.reader]="isReader()" [class.review]="isReview()">
+  @if (draftPreview) {
+    <p class="draft-preview" role="status">Rascunhos locais · não publicados</p>
+  }
   <router-outlet />
 </main>
 

@@ -8,6 +8,24 @@ Regras:
 - **Decisões** dizem o que foi escolhido, por quê e o que ficou de fora. **Pendências** são o que ficou para depois.
 - O hash do commit não entra na entrada (ele ainda não existe ao escrever); `git log -- DIARIO.md` liga cada entrada ao seu commit.
 
+## 2026-11-12 17:18 -0400 — Publicação: apoio a rascunhos privados, blocos novos nos estudos e correções da Almeida
+
+**Autor:** Valter, com Claude. O dono pediu para publicar na `main`. A publicação leva só o que é público; o conteúdo em elaboração continua na pasta privada `rascunhos/` (fora do Git), e o registro detalhado dele também fica fora do repositório, que é público.
+
+**O que sobe:**
+1. **Texto bíblico (Almeida):** 14 correções de digitação e de acento em `tools/gerar-almeida.py` (`VERSE_FIXES`) e nos arquivos de Lucas, João, Mateus, Marcos e 2 Coríntios: Lc 22.46 (“Levantai-vos”), Lc 24.20 (“o entregaram”), Jo 18.3 (vírgula), Jo 18.6 (“caíram”), Jo 19.3 (“e e”), Jo 19.42 (“véspera”), Jo 20.23 e 2Co 5.21 (crase: “Àqueles”, “Àquele”), Jo 20.25 (“os outros discípulos”), Mt 26.24 (“traído”), Mt 26.63 (“o Filho de Deus”, como nas outras versões em português do app), Mt 26.64 (“Respondeu-lhe”), Mc 15.32 (ponto antes de “Também”) e Mc 15.43 (“foi a Pilatos”). São erros evidentes da fonte, e cada um foi conferido contra o próprio verso.
+2. **Blocos novos no Markdown dos estudos** (`core/rich-text-parser.ts`, `shared/rich-text.ts`): `:::dialogo` (falas por pessoa, com “Ouvir” lendo “Nome: fala”), `:::hora` (linha de hora sob o título), `:::leia id continua` e `:::leia id apoio` (rótulos “A história continua” e “Para entender o cenário”), `:::dobra` (linha “Saiba mais”), sanfona por tópico, faixa compacta de figuras e grifo leve de aspas. Só os estudos privados os ligam; nenhum estudo público muda.
+3. **Ouvir e compartilhar:** “Ouvir” não lê mais o nome de ícones nem rótulos marcados com `data-nolisten`, e lê falas e linhas de hora; a imagem de compartilhar põe a hora na frente do subtópico e corta o subtópico pela largura (reticências), em vez de por linhas; `tools/gerar-audio.mjs` acompanha. A caixa de fontes e a página de fontes quebram endereços longos, e a caixa não mostra o título “Para conferir e aprofundar” quando não há obras.
+4. **Apoio à prévia privada:** catálogos vazios no build público (`core/draft-content.ts`, `shared/draft-figure.ts`) e ganchos em `library.ts`, `trails.ts`, `sources.ts` e `figure.ts`; a faixa “Rascunhos locais · não publicados” só aparece na prévia; `npm run start:rascunhos` (configuração `rascunhos` do `angular.json`, que não recarrega a página sozinha); `maps.ts` ganhou `focusZoom`, para mapas de uma cidade só.
+5. **Trava de publicação:** `tools/verificar-publicacao.mjs` (`npm run verificar:publicacao`), rodada pelos dois workflows depois do build, e `e2e/logica/rascunhos.spec.ts` (testa a trava e que a biblioteca pública não inclui a coleção privada). `/rascunhos/` e `/Ciencia explica/` entram no `.gitignore`; o README ganhou a seção “Rascunhos locais”.
+6. **Testes novos:** `e2e/logica/dialogos.spec.ts`, `e2e/logica/sanfona.spec.ts` e casos em `compartilhar.spec.ts`, `ilustracoes.spec.ts` e `e2e/ouvir.spec.ts`.
+
+**Decisões:** (a) o conteúdo privado não sobe: está fora do Git, e a trava barra o build se algum identificador dele aparecer; (b) `DIARIO.md` e `CLAUDE.md` sobem sem as anotações da coleção privada, porque o repositório é público, e as versões completas ficam só no computador do dono; (c) não entram os arquivos soltos da raiz (`Teologos/`, `RECONHECIMENTO-DO-SISTEMA.md`, `.playwright-mcp/`); (d) nas páginas públicas, o que muda é o texto bíblico corrigido e o “Ouvir” e a imagem de compartilhar mais limpos; os blocos novos ficam inertes até algum estudo público usá-los.
+
+**Validação:** num checkout limpo do commit, sem a pasta privada: lint sem problemas; 184 testes de lógica; build de produção e trava de publicação sem achados; bateria do navegador com o app em desenvolvimento, em porta própria: celular, 540 testes ok e 1 ignorado; computador, 538 ok e 3 ignorados. Os 14 versículos alterados na Almeida foram comparados com o commit anterior, um a um, e coincidem com `VERSE_FIXES`.
+
+**Pendências:** o dono dizer se e quando a coleção privada vira pública (exige mover textos e figuras para a parte pública, registrar fontes e créditos e tirar a trava); o “prefeito” nos estudos públicos que ainda usam a palavra.
+
 ## 2026-11-06 17:30 -0400 — Reversão das publicações de hoje
 
 **Autor:** Valtemir Junior (com Copilot)

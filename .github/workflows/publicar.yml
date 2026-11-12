@@ -33,6 +33,7 @@ jobs:
         env:
           SO_LOGICA: 1
       - run: npx ng build --base-href /${{ github.event.repository.name }}/
+      - run: node tools/verificar-publicacao.mjs
       # O GitHub Pages não conhece as rotas do Angular: o 404.html abre o app em qualquer endereço.
       - run: cp dist/biblia-sagrada/browser/index.html dist/biblia-sagrada/browser/404.html
       - uses: actions/upload-pages-artifact@v3

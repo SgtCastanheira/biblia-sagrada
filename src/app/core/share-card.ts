@@ -98,6 +98,47 @@ export function fitTopics(topics: ShareTopic[], max = MAX_TOPICS, maxSubs = MAX_
 
 const SPECIAL_KEYS = new Set(Object.keys(SPECIAL_SECTIONS).map(headingKey));
 
+/** Tamanho máximo, em letras, de um subtópico com a hora da cena (cabe numa linha da imagem). */
+const SUB_CHARS = 67;
+
+/** Como achar a marca de hora numa linha de hora de texto livre, da mais específica para a mais geral. */
+const WHEN_RULES: [RegExp, (m: RegExpExecArray) => string][] = [
+  [/entre a meia-noite e as (\d+h\d*)/, (m) => `0h–${m[1]}`],
+  [/do meio-dia às (\d+h\d*)/, (m) => `12h–${m[1]}`],
+  [/das (\d+h\d*) ao meio-dia/, (m) => `${m[1]}–12h`],
+  [/\b((?:antes|depois) das \d+h\d*)/, (m) => m[1]],
+  [/por volta das (\d+h\d*)/, (m) => m[1]],
+];
+
+/**
+ * Forma curta da linha de hora de uma cena (`:::hora Quinta-feira · ao anoitecer, por volta das 18h` → “Quinta, 18h”), para o
+ * subtópico da imagem de compartilhar. A linha é texto livre: aproveita-se o dia e a primeira marca de hora que aparece
+ * (“por volta das 9h” → “9h”, “antes das 9h”, “entre a meia-noite e as 3h” → “0h–3h”); sem hora marcada, fica o período
+ * (“de noite”, “à tarde”).
+ */
+export function shortWhen(text: string): string {
+  const [dayRaw, ...restParts] = plain(text).split(' · ');
+  const day = plain(dayRaw).replace(/^de\s+/i, '').replace(/-feira/gi, '').toLowerCase();
+  if (!day) return '';
+  const rest = restParts.join(' · ');
+  const found = WHEN_RULES.map(([re, format]) => {
+    const m = re.exec(rest);
+    return m ? format(m) : '';
+  }).find(Boolean);
+  const time = found ?? rest.split(/[,;(]/)[0].trim();
+  const label = day.charAt(0).toUpperCase() + day.slice(1);
+  return time ? `${label}, ${time}` : label;
+}
+
+/**
+ * Junta a hora curta ao título da cena, com a hora na frente (“Quinta, 18h · O Cenáculo”): se a linha da imagem estourar, o que
+ * se corta é o fim do título, nunca a hora.
+ */
+function withHour(sub: string, whenText: string): string {
+  const hour = shortWhen(whenText);
+  return hour ? `${hour} · ${clip(sub, Math.max(20, SUB_CHARS - hour.length - 3))}` : sub;
+}
+
 /**
  * Cartão de um estudo: o assunto é a trilha (ou a coleção), os tópicos são os títulos do texto e os
  * subtópicos são os subtítulos e os títulos das fichas de cada seção. Seções como “Para a Vida” e
@@ -108,8 +149,16 @@ export function articleCard(articleId: string, md: string): ShareCard | null {
   if (!a) return null;
   const trail = trailOfArticle(a.id);
   const topics: ShareTopic[] = [];
+  // Subtópico que acabou de entrar: uma linha de hora (`:::hora`) logo depois do título da cena é dele e vai junto
+  let scene: { topic: ShareTopic; index: number } | null = null;
   for (const b of parseBlocks(md)) {
     const text = plain(b.inlines?.map((x) => x.text).join(''));
+    if (b.type === 'when') {
+      if (scene) scene.topic.subs![scene.index] = withHour(scene.topic.subs![scene.index], text);
+      scene = null;
+      continue;
+    }
+    scene = null;
     if (b.type === 'h2') {
       if (SPECIAL_KEYS.has(headingKey(text))) {
         topics.push({ title: '' });
@@ -119,7 +168,10 @@ export function articleCard(articleId: string, md: string): ShareCard | null {
     } else if ((b.type === 'h3' || b.type === 'facts') && topics.length) {
       const last = topics[topics.length - 1];
       const sub = b.type === 'h3' ? text : plain(b.place);
-      if (last.title && sub) last.subs!.push(sub);
+      if (last.title && sub) {
+        last.subs!.push(sub);
+        if (b.type === 'h3') scene = { topic: last, index: last.subs!.length - 1 };
+      }
     }
   }
   return {

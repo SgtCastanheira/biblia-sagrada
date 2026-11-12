@@ -720,7 +720,7 @@ export class BibleMapView {
           .filter((p) => !!p)
           .map((p) => ({ x: v.x(p.lon), y: v.y(p.lat) }));
         if (!pts.length) return;
-        const target = this.fitBox(pts, size, 0.22);
+        const target = this.fitBox(pts, size, this.map().focusZoom ?? 0.22);
         const start = this.camera();
         this.animate(700, (t) => this.cam.set(this.lerpBox(start, target, ease(t))));
       });

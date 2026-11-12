@@ -90,8 +90,10 @@ function itemsOf(markdown, title, subtitle) {
     if (text) items.push({ text, shown });
   };
   for (const b of app.parseBlocks(markdown)) {
-    if (['h2', 'h3', 'p', 'quote', 'note', 'scene', 'pullquote'].includes(b.type)) add(b.inlines);
+    if (['h2', 'h3', 'p', 'quote', 'note', 'scene', 'pullquote', 'when'].includes(b.type)) add(b.inlines);
     else if (b.type === 'ul' || b.type === 'ol') for (const it of b.items ?? []) add(it);
+    // Diálogo: cada fala é um trecho, com o nome de quem fala ("Pilatos: …"), como na tela (shared/rich-text.ts)
+    else if (b.type === 'dialog') for (const t of b.turns ?? []) add(t.who ? [{ t: 'text', text: `${t.who}: ` }, ...t.text] : t.text);
   }
   return items;
 }

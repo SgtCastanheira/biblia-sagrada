@@ -40,6 +40,14 @@ function clampLines(ctx: CanvasRenderingContext2D, lines: string[], max: number,
   return kept;
 }
 
+/** Uma linha só: corta com reticências quando passa da largura (o `clampLines` de uma linha devolve o texto inteiro). */
+function oneLine(ctx: CanvasRenderingContext2D, text: string, width: number): string {
+  if (ctx.measureText(text).width <= width) return text;
+  let s = text;
+  while (s.length > 2 && ctx.measureText(`${s}…`).width > width) s = s.slice(0, -1).trimEnd();
+  return `${s}…`;
+}
+
 function loadImage(src: string): Promise<HTMLImageElement | null> {
   return new Promise((resolve) => {
     const img = new Image();
@@ -361,7 +369,7 @@ export async function renderShareImage(card: ShareCard, format: ShareFormat): Pr
         ctx.font = topicFont;
         const lines = clampLines(ctx, wrapLines(ctx, t.title, innerW), 2, innerW);
         ctx.font = subFont;
-        const subs = withSubs ? (t.subs ?? []).map((sub) => clampLines(ctx, [`› ${plain(sub)}`], 1, innerW)[0]) : [];
+        const subs = withSubs ? (t.subs ?? []).map((sub) => oneLine(ctx, `› ${plain(sub)}`, innerW)) : [];
         return { lines, subs, h: lines.length * 43 + subs.length * 35 + 22 };
       });
     const total = card.total ?? card.topics.length;
