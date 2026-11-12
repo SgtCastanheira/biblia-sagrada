@@ -69,6 +69,20 @@ li::marker {
   text-underline-offset: 3px;
 }
 
+// Falas e versículos entre aspas (só nos estudos privados): grifado bem leve, sem mudar a cor do texto
+.quoted {
+  background: color-mix(in srgb, var(--accent-gold) 16%, transparent);
+  border-radius: 3px;
+  padding: 0 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+// No painel escuro das cenas, o grifo é um véu creme (o dourado do tema some no fundo escuro)
+.scene .quoted {
+  background: rgba(255, 248, 236, 0.14);
+}
+
 // No toque, a área clicável cresce para cima e para baixo sem mexer nas linhas
 @media (pointer: coarse) {
   .ref,
@@ -102,6 +116,59 @@ li::marker {
     margin: 0;
     font: 400 16px/1.6 var(--reading-font);
   }
+}
+
+// Caixa "A medicina explica" (só nos estudos privados): fundo próprio, para separar o que é ciência do que é relato
+.note.med {
+  display: block;
+  padding: 14px 16px 14px 18px;
+  border-radius: 14px;
+  border-left: 5px solid var(--mat-sys-primary);
+  background: color-mix(in srgb, var(--mat-sys-primary) 13%, var(--mat-sys-surface));
+  color: var(--mat-sys-on-surface);
+
+  .med-label {
+    display: block;
+    margin-bottom: 6px;
+    font: 700 13px/1.2 Inter, sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mat-sys-primary);
+  }
+
+  p {
+    font: 400 16px/1.6 var(--reading-font);
+  }
+}
+
+// Modo compacto: as fotos ficam pequenas, ao lado do texto, também no celular (a foto vem antes do parágrafo de que fala)
+:host(.compact) {
+  .photo:not(.wide) {
+    float: left;
+    width: min(38%, 170px);
+    margin: 4px 14px 8px 0;
+  }
+
+  // O que é título ou cartão começa abaixo da foto, não ao lado dela
+  h2,
+  h3,
+  .scene,
+  .note,
+  .facts,
+  .people,
+  .read,
+  .pullquote,
+  .timeline {
+    clear: both;
+  }
+}
+
+// Hora do título (":::hora Quinta para sexta · de madrugada"): uma linha pequena logo abaixo do título
+.when {
+  margin: -4px 0 12px;
+  font: 600 13px/1.4 Inter, sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--mat-sys-primary);
 }
 
 .table-wrap {
@@ -155,6 +222,11 @@ figcaption {
   border-radius: 16px;
   border: 1px solid var(--mat-sys-outline-variant);
   background: var(--mat-sys-surface-container-low);
+}
+.diagram.inline {
+  padding: 0;
+  border: 0;
+  background: none;
 }
 
 // ---------- Linha do tempo: anos em destaque e cartões ----------

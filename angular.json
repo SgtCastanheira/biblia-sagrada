@@ -87,6 +87,38 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "rascunhos": {
+              "outputPath": "tmp/rascunhos",
+              "serviceWorker": false,
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "styles": [
+                "src/styles.scss",
+                "rascunhos/como-a-ciencia-explica/icons.scss"
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/app/core/draft-content.ts",
+                  "with": "rascunhos/como-a-ciencia-explica/catalog.ts"
+                },
+                {
+                  "replace": "src/app/shared/draft-figure.ts",
+                  "with": "rascunhos/como-a-ciencia-explica/figure.ts"
+                }
+              ],
+              "assets": [
+                {
+                  "glob": "**/*",
+                  "input": "public"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "rascunhos/como-a-ciencia-explica/conteudo",
+                  "output": "conteudo"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -99,6 +131,9 @@
             },
             "development": {
               "buildTarget": "biblia-sagrada:build:development"
+            },
+            "rascunhos": {
+              "buildTarget": "biblia-sagrada:build:development,rascunhos"
             }
           },
           "defaultConfiguration": "development"

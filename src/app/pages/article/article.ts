@@ -1,5 +1,5 @@
 import { BackButton } from '../../shared/back-button';
-import { afterNextRender, Component, computed, DestroyRef, effect, ElementRef, inject, input, signal, untracked } from '@angular/core';
+import { afterNextRender, Component, computed, DestroyRef, effect, ElementRef, inject, input, signal, untracked, viewChild } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
@@ -23,6 +23,7 @@ import { StoryJourney } from '../../shared/story-journey';
 import { findMap } from '../../core/maps';
 import { BibleMapView } from '../../shared/bible-map';
 import { outline } from '../../core/rich-text-parser';
+import { DRAFT_ARTICLES } from '../../core/draft-content';
 import { articleCard } from '../../core/share-card';
 import { RichText } from '../../shared/rich-text';
 import { ShareImageButton } from '../../shared/share-image-button';
@@ -121,7 +122,7 @@ import { SourcesBox } from '../../shared/sources-box';
         @if (body() === undefined) {
           <div class="skeleton"><span></span><span></span><span></span><span class="short"></span></div>
         } @else if (body(); as text) {
-          <app-rich-text [source]="text" [story]="story()" [topics]="article()?.topics ?? []" />
+          <app-rich-text [source]="text" [story]="story()" [markQuotes]="isDraft()" [compactFigures]="isDraft()" [accordion]="accordion()" [foldable]="isDraft()" [keepOpen]="listen.state() !== 'idle'" [topics]="article()?.topics ?? []" />
         } @else {
           <p class="empty">Não foi possível abrir este texto agora.</p>
         }
@@ -271,6 +272,7 @@ export class ArticlePage {
     }
     const a = this.article();
     if (!a) return;
+    await this.rich()?.openAll(); // com a sanfona, o "Ouvir" lê o texto inteiro: abre todos os tópicos antes
     const ok = await this.listen.startStory(a.title, `artigos/${a.id}`, storyItems(`${a.title}. ${a.subtitle}`));
     if (!ok) this.snackBar.open('Este aparelho não tem leitura em voz alta.', undefined, { duration: 3000 });
   }
@@ -300,6 +302,11 @@ export class ArticlePage {
     const a = this.article();
     return !!a && (STORY_COLLECTIONS.includes(a.collection) || !!a.story);
   });
+  /** Estudo privado (só existe na prévia local): grifa de leve as falas e os versículos entre aspas. */
+  protected readonly isDraft = computed(() => DRAFT_ARTICLES.some((d) => d.id === this.id()));
+  /** Sanfona por tópico: só nos estudos privados longos (8 tópicos ou mais), onde a rolagem cansa no celular. */
+  protected readonly accordion = computed(() => this.isDraft() && (this.article()?.topics?.length ?? 0) >= 8);
+  protected readonly rich = viewChild(RichText);
   /** O panorama da coleção (como Atos), para quem quiser ver onde esta história se encaixa. */
   protected readonly overview = computed(() => {
     const a = this.article();
@@ -335,6 +342,10 @@ export class ArticlePage {
     const text = this.host.nativeElement.querySelector('app-rich-text');
     this.resume.set(null);
     if (!text) return;
+    if (this.accordion()) {
+      this.rich()?.reveal(at);
+      return;
+    }
     const r = text.getBoundingClientRect();
     window.scrollTo({ top: scrollY + r.top + at * r.height - innerHeight * 0.5, behavior: 'smooth' });
   }
@@ -346,7 +357,11 @@ export class ArticlePage {
     if (!text || !a || !this.body()) return;
     const r = text.getBoundingClientRect();
     const h = innerHeight;
-    const fraction = r.bottom <= h ? 1 : Math.min(1, Math.max(0, (h * 0.5 - r.top) / r.height));
+    // Enquanto um tópico (sanfona) ou uma linha “Saiba mais” abre ou fecha, a página muda de altura de uma vez e a rolagem ainda não se acertou: não grava
+    if (this.isDraft() && this.rich()?.settling()) return;
+    // Com a sanfona a altura do texto muda quando os tópicos abrem e fecham: o progresso vem das palavras, não da altura
+    const byContent = this.accordion() ? (this.rich()?.progress(h * 0.5, h) ?? null) : null;
+    const fraction = byContent ?? (r.bottom <= h ? 1 : Math.min(1, Math.max(0, (h * 0.5 - r.top) / r.height)));
     this.progress.record(a.id, fraction);
     const at = this.resume();
     if (at !== null && fraction >= at - 0.02) this.resume.set(null);

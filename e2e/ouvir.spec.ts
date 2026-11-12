@@ -51,6 +51,22 @@ test('ouvir uma história: lê o título e os parágrafos, com controle de veloc
   await expect(player).toHaveCount(0);
 });
 
+test('ouvir uma história: não lê o nome de ícones nem os rótulos marcados com data-nolisten', async ({ page }) => {
+  await page.goto('/artigo/igreja-primitiva');
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  // Um título como os da sanfona: o texto, o tempo de leitura (rótulo) e a seta (o nome do ícone aparece no texto do elemento)
+  await page.evaluate(() => {
+    const h = document.createElement('h2');
+    h.innerHTML = '<span>Título de teste</span><span data-nolisten> 8 min</span><mat-icon>expand_more</mat-icon>';
+    document.querySelector('app-rich-text')!.prepend(h);
+  });
+  await page.getByRole('button', { name: 'Ouvir esta história' }).click();
+  await expect.poll(() => page.evaluate(() => (window as unknown as { spoken: string[] }).spoken.join(' | '))).toContain('Título de teste');
+  const falado = await page.evaluate(() => (window as unknown as { spoken: string[] }).spoken);
+  expect(falado.join(' | ')).not.toMatch(/expand_more|8 min/);
+  await page.getByRole('button', { name: 'Parar de ouvir' }).click();
+});
+
 test('ouvir sem voz no aparelho: avisa o que fazer em vez de ficar mudo', async ({ page }) => {
   // Um navegador que aceita a fala e nunca começa (como o Brave no Linux)
   await page.addInitScript(() => {

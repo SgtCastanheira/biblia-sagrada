@@ -13,6 +13,13 @@ function spokenText(el: HTMLElement): string {
   return (clone.textContent ?? '').replace(/\s+/g, ' ').trim();
 }
 
+/** O texto de um trecho como se fala numa história: sem o nome dos ícones (`mat-icon`) nem os rótulos marcados com `data-nolisten` (o tempo e o “Saiba mais” da sanfona). */
+function storyText(el: HTMLElement): string {
+  const clone = el.cloneNode(true) as HTMLElement;
+  clone.querySelectorAll('mat-icon, [data-nolisten]').forEach((n) => n.remove());
+  return (clone.textContent ?? '').replace(/\s+/g, ' ').trim();
+}
+
 /**
  * Os trechos de uma história que o botão "Ouvir" lê, na ordem da tela: títulos, parágrafos, citações e listas
  * do texto (sem cartões de personagens, fontes e atalhos). O mesmo conjunto que tools/gerar-audio.mjs grava.
@@ -28,6 +35,6 @@ export function storyItems(intro: string, options: { root?: string } = {}): List
   const leaves = wanted.filter((el) => !wanted.some((other) => other !== el && el.contains(other)));
   return [
     { text: intro },
-    ...leaves.map((el) => ({ el, text: news ? spokenText(el) : (el.textContent ?? '').replace(/\s+/g, ' ').trim() })).filter((i) => i.text),
+    ...leaves.map((el) => ({ el, text: news ? spokenText(el) : storyText(el) })).filter((i) => i.text),
   ];
 }

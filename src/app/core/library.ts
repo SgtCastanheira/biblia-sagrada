@@ -1,6 +1,7 @@
 /** Biblioteca de estudo: artigos (história, estudos) e sermões históricos. Os textos ficam em public/conteudo. */
 
 import { inBibleOrder, positionOfChapter, positionOfRef } from './bible-order';
+import { DRAFT_ARTICLES } from './draft-content';
 
 export type ArticleCollection = 'estudos' | 'contexto' | 'profecias' | 'igreja' | 'avivamentos' | 'biblia';
 
@@ -70,6 +71,7 @@ export const COLLECTIONS: Record<ArticleCollection, { name: string; description:
 };
 
 export const ARTICLES: Article[] = [
+  ...DRAFT_ARTICLES,
   {
     id: 'ministerios-na-biblia',
     collection: 'estudos',

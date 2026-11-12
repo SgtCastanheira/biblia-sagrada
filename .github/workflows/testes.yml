@@ -31,3 +31,4 @@ jobs:
           SO_LOGICA: 1
       # O build falha se um estilo de componente passar do limite (angular.json) ou se o código não compilar.
       - run: npx ng build
+      - run: node tools/verificar-publicacao.mjs

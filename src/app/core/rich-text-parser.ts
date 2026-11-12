@@ -1,15 +1,17 @@
 /** Leitor do Markdown simples usado nos artigos e sermões (sem dependências do Angular). */
 
-/** Trecho de uma linha: texto, negrito, itálico, referência bíblica ou link. */
+/** Trecho de uma linha: texto, negrito, itálico, referência bíblica, link ou fala entre aspas (`q`, só depois de `markQuotes`). */
 export interface Inline {
-  t: 'text' | 'b' | 'i' | 'ref' | 'link' | 'ext';
+  t: 'text' | 'b' | 'i' | 'ref' | 'link' | 'ext' | 'q';
   text: string;
   href?: string;
 }
 
 export interface Block {
-  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon' | 'sends' | 'eramap' | 'buy' | 'verse';
+  type: 'h2' | 'h3' | 'p' | 'quote' | 'ul' | 'ol' | 'timeline' | 'note' | 'table' | 'image' | 'figure' | 'scene' | 'pullquote' | 'people' | 'read' | 'facts' | 'sermon' | 'sends' | 'eramap' | 'buy' | 'verse' | 'dialog' | 'when' | 'fold';
   inlines?: Inline[];
+  /** Diálogo (":::dialogo Título"): cada fala com o nome de quem fala; sem nome, é uma indicação de cena. */
+  turns?: { who?: string; text: Inline[] }[];
   items?: Inline[][];
   events?: { date: string; title: string; text: Inline[] }[];
   /** Âncora dos títulos de seção (para o índice). */
@@ -33,6 +35,8 @@ export interface Block {
   people?: { name: string; role: string; src?: string }[];
   /** "Leia a história completa": id do artigo ligado. */
   article?: string;
+  /** ":::leia id continua" (a próxima história) ou ":::leia id apoio" (um estudo de apoio ao cenário): muda o rótulo do cartão. */
+  mode?: 'continua' | 'apoio';
   /** Ficha (":::ficha Título"): linhas "- Rótulo | texto". */
   facts?: { label: string; text: Inline[] }[];
   /** Sermão histórico ligado (":::sermao id"): id em CLASSIC_SERMONS. */
@@ -74,13 +78,18 @@ export function parseInline(line: string): Inline[] {
  * com " {larga}" no fim para quadros e paisagens ocuparem toda a largura.
  * Para as histórias: ":::cena Lugar, data" (um quadro que põe o leitor no lugar), ":::destaque" (frase em
  * destaque; a última linha começando com "— " é o autor), ":::pessoas" ("- Nome | papel | imagens/foto.jpg")
- * e ":::leia id-do-artigo" (cartão que leva à história completa; o texto dentro diz por que ela se liga a esta).
+ * e ":::leia id-do-artigo" (cartão que leva à história completa; o texto dentro diz por que ela se liga a esta;
+ * com " continua" depois do id, o cartão é a continuação ("A história continua"); com " apoio", um estudo para entender o cenário).
  * ":::ficha Título" resume um período em linhas "- Rótulo | texto" (como começou, por quê, quem, o fim, o impacto),
  * e ":::sermao id" mostra o cartão de um sermão histórico do app.
  * ":::envio Título" mostra quem enviou quem: linhas "- De | Para | Quem | Ano | observação".
  * ":::mapa-epocas persia,alexandre,…" mostra o mapa do atlas passando de uma época a outra (ids de ERAS).
  * ":::versiculo Tg 1.14-15 | Santiago 1:14-15" (uma linha, sem fechar) cita o texto bíblico por extenso, na versão da língua da página;
  * ":::nota Título" (linhas até ":::") põe título no quadro.
+ * ":::hora Quinta para sexta · de madrugada" (uma linha, sem fechar) põe a hora logo abaixo do título.
+ * ":::dobra" (uma linha, sem fechar), logo abaixo de um título `###`, marca a seção dele como "Saiba mais": na sanfona por tópico
+ * o corpo fica dobrado até a pessoa abrir; fora da sanfona não muda nada.
+ * ":::dialogo Título" separa as falas: uma por linha, "Nome | fala [[ref]]"; a linha sem " | " é uma indicação de cena.
  */
 export function parseBlocks(source: string): Block[] {
   const blocks: Block[] = [];
@@ -111,7 +120,20 @@ export function parseBlocks(source: string): Block[] {
       blocks.push({ type: 'verse', href: ref, label: label || undefined });
       continue;
     }
-    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao|envio|mapa-epocas|comprar)(?:\s+(.+))?$/);
+    // Seção dobrável (sanfona), uma linha só, sem fechar: ":::dobra" logo abaixo de um título ###
+    if (/^:::\s*dobra\s*$/.test(line)) {
+      flush();
+      blocks.push({ type: 'fold' });
+      continue;
+    }
+    // Hora do título, uma linha só, sem fechar: ":::hora Quinta para sexta · de madrugada · antes das 3h"
+    const when = line.match(/^:::\s*hora\s+(.+)$/);
+    if (when) {
+      flush();
+      blocks.push({ type: 'when', inlines: parseInline(when[1].trim()) });
+      continue;
+    }
+    const fence = line.match(/^:::\s*(tempo|nota|figura|cena|destaque|pessoas|leia|ficha|sermao|envio|mapa-epocas|comprar|dialogo)(?:\s+(.+))?$/);
     if (fence) {
       flush();
       const body: string[] = [];
@@ -141,7 +163,15 @@ export function parseBlocks(source: string): Block[] {
         const [href, label] = (fence[2] ?? '').split('|').map((x) => x.trim());
         blocks.push({ type: 'buy', href, label: label || undefined, inlines: text.length ? parseInline(text.join(' ')) : undefined });
       } else if (fence[1] === 'leia') {
-        blocks.push({ type: 'read', article: fence[2]?.trim(), inlines: text.length ? parseInline(text.join(' ')) : undefined });
+        const [id, mode] = (fence[2] ?? '').trim().split(/\s+/);
+        blocks.push({ type: 'read', article: id || undefined, mode: mode === 'continua' || mode === 'apoio' ? mode : undefined, inlines: text.length ? parseInline(text.join(' ')) : undefined });
+      } else if (fence[1] === 'dialogo') {
+        // "Pilatos | És tu o rei dos judeus? [[Jo 18.33]]": nome, barra e fala; a linha sem " | " é indicação de cena
+        const turns = text.map((l) => {
+          const cut = l.indexOf(' | ');
+          return cut < 0 ? { text: parseInline(l) } : { who: l.slice(0, cut).trim(), text: parseInline(l.slice(cut + 3).trim()) };
+        });
+        blocks.push({ type: 'dialog', place: fence[2]?.trim(), turns });
       } else if (fence[1] === 'cena') {
         blocks.push({ type: 'scene', place: fence[2]?.trim(), inlines: parseInline(text.join(' ')) });
       } else if (fence[1] === 'destaque') {
@@ -254,5 +284,49 @@ export function outline(source: string, topics: string[] = []): { anchor: string
     const label = labels[i];
     const chapter = /^Capítulo (\d+)$/.exec(label)?.[1];
     return [{ anchor: b.anchor!, text: b.inlines!.map((x) => x.text).join(''), chapter: chapter ? Number(chapter) : undefined, label }];
+  });
+}
+
+/**
+ * Separa, em cada linha, o que está entre “aspas” em um trecho `q` (as aspas ficam dentro dele),
+ * para a tela poder grifar de leve as falas e os versículos citados. Vale para uma linha só:
+ * uma citação que abre numa linha e fecha em outra não é marcada.
+ */
+export function markQuotes(inlines: Inline[]): Inline[] {
+  const out: Inline[] = [];
+  let open = false;
+  for (const part of inlines) {
+    if (part.t !== 'text') {
+      out.push(part);
+      continue;
+    }
+    let buffer = '';
+    const flush = () => {
+      if (buffer) out.push({ t: open ? 'q' : 'text', text: buffer });
+      buffer = '';
+    };
+    for (const ch of part.text) {
+      if (ch === '\u201C' && !open) {
+        flush();
+        open = true;
+        buffer = ch;
+      } else if (ch === '\u201D' && open) {
+        buffer += ch;
+        flush();
+        open = false;
+      } else buffer += ch;
+    }
+    flush();
+  }
+  // citação que não fechou na linha: devolve o texto sem grifo
+  if (open) return inlines;
+  return out;
+}
+
+/** Aplica `markQuotes` aos parágrafos, às cenas, às notas e às citações de uma lista de blocos. */
+export function markBlockQuotes(blocks: Block[]): Block[] {
+  return blocks.map((b) => {
+    if (!b.inlines || !['p', 'scene', 'note', 'quote', 'pullquote'].includes(b.type)) return b;
+    return { ...b, inlines: markQuotes(b.inlines), items: b.items?.map(markQuotes) };
   });
 }

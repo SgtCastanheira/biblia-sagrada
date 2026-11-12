@@ -151,3 +151,16 @@ test('mapa das épocas: o estudo "Da Volta do Exílio a Jesus" usa só épocas d
   for (const e of eras) expect(e!.powers.some((p) => /Jud|Asmon|Herodes/.test(p.name)), e!.id).toBe(true);
   expect(BRIDGE_ERAS.every((id) => block!.eras!.includes(id))).toBe(true);
 });
+
+test('cartão "leia": " continua" é a continuação, " apoio" é o estudo de apoio ao cenário, e sem nada é a história completa', () => {
+  const [com, apoio, sem, semTexto] = parseBlocks([
+    ':::leia outra-historia continua', 'O que vem depois.', ':::', '',
+    ':::leia outra-historia apoio', 'Quem mandava em cada lugar.', ':::', '',
+    ':::leia outra-historia', 'Como as duas se ligam.', ':::', '',
+    ':::leia terceira-historia', ':::',
+  ].join('\n'));
+  expect([com.type, com.article, com.mode]).toEqual(['read', 'outra-historia', 'continua']);
+  expect([apoio.type, apoio.article, apoio.mode]).toEqual(['read', 'outra-historia', 'apoio']);
+  expect([sem.type, sem.article, sem.mode]).toEqual(['read', 'outra-historia', undefined]);
+  expect([semTexto.type, semTexto.article, semTexto.inlines]).toEqual(['read', 'terceira-historia', undefined]);
+});

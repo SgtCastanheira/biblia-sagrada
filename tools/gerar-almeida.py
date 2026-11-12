@@ -77,6 +77,24 @@ VERSE_FIXES = {
     ("JDG", 11, 40): (" Isso não é", ""),
     ("1SA", 3, 13): ("já lhe fiz: saber", "já lhe fiz saber"),
     ("ISA", 8, 20): ("A Lei e ao Testemunho! se eles", "À Lei e ao Testemunho! Se eles"),
+    # 10/11/2026: erros de digitação achados ao conferir citações (Lucas, João, Mateus, Marcos e 2 Coríntios)
+    ("LUK", 22, 46): ("Lenvantai-vos", "Levantai-vos"),
+    ("JHN", 18, 3): ("com lanternas archotes e armas", "com lanternas, archotes e armas"),
+    ("JHN", 18, 6): ("cairam por terra", "caíram por terra"),
+    ("MAT", 26, 64): ("Repondeu-lhe Jesus", "Respondeu-lhe Jesus"),
+    ("JHN", 19, 3): ("rei dos judeus! e e davam-lhe", "rei dos judeus! e davam-lhe"),
+    ("JHN", 20, 25): ("ou outros discípulos", "os outros discípulos"),
+    ("JHN", 19, 42): ("a vespera do sábado", "a véspera do sábado"),
+    ("MRK", 15, 43): ("foi Pilatos e pediu", "foi a Pilatos e pediu"),
+    ("LUK", 24, 20): ("autoridades e entregaram", "autoridades o entregaram"),
+    ("2CO", 5, 21): ("Âquele que não conheceu", "Àquele que não conheceu"),
+    ("JHN", 20, 23): ("Âqueles a quem perdoardes", "Àqueles a quem perdoardes"),
+    ("MRK", 15, 32): ("e creiamos, Também", "e creiamos. Também"),
+    # 12/11/2026: "do Deus" sem adjetivo é erro isolado da fonte; as outras seis versões em português do app dizem "Filho de Deus"
+    # (o "do Deus" legítimo leva adjetivo: "do Deus vivo", "do Deus Altíssimo", "do Deus bendito", que ficam como estão)
+    ("MAT", 26, 63): ("o Filho do Deus.", "o Filho de Deus."),
+    # 12/11/2026: único "traido" sem acento da Almeida (Mc 14.21 e Lc 22.22 trazem "traído!"); aparece na fala de Jesus à ceia
+    ("MAT", 26, 24): ("é traido!", "é traído!"),
 }
 
 def fix_verse(book, chapter, verse, text):

@@ -4,6 +4,8 @@
  * que ficam indicadas para quem quiser conferir e aprofundar.
  */
 
+import { DRAFT_ARTICLE_SOURCES, DRAFT_WORKS } from './draft-content';
+
 export type WorkKind = 'referencia' | 'historia' | 'biblia' | 'idiomas';
 
 export interface Work {
@@ -24,6 +26,7 @@ export interface SourceSet {
 }
 
 export const WORKS: Record<string, Work> = {
+  ...DRAFT_WORKS,
   // Referência geral
   'walton-at': { author: 'John H. Walton, Victor H. Matthews e Mark W. Chavalas', title: 'Comentário histórico-cultural da Bíblia: Antigo Testamento', publisher: 'Vida Nova', kind: 'referencia' },
   'keener-nt': { author: 'Craig S. Keener', title: 'Comentário histórico-cultural da Bíblia: Novo Testamento', publisher: 'Vida Nova', kind: 'referencia' },
@@ -181,6 +184,7 @@ export const WORK_KINDS: Record<WorkKind, string> = {
 
 /** Fontes de cada estudo (id do artigo em library.ts). */
 export const ARTICLE_SOURCES: Record<string, SourceSet> = {
+  ...DRAFT_ARTICLE_SOURCES,
   'cativeiros-de-israel': {
     ancient: [
       'Inscrições de Sargão II (Khorsabad): a deportação de Samaria',
