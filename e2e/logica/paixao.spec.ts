@@ -41,7 +41,8 @@ test('paixao: os sete livros estão na biblioteca, numa só prateleira da trilha
   const trilha = TRAILS.find((t) => t.id === 'como-a-ciencia-explica');
   expect(trilha, 'a trilha “Como a Ciência Explica”').toBeTruthy();
   expect(trilha!.branches.map((b) => b.title)).toEqual(['Volume 4 · A Paixão, da Ceia à Ressurreição']);
-  expect(trilha!.branches[0].ids).toEqual(IDS);
+  // A ordem da prateleira é a escolhida pelo dono do app, que numera os livros (conferida em logica/estante.spec.ts); aqui, que são os mesmos sete livros
+  expect([...trilha!.branches[0].ids].sort()).toEqual([...IDS].sort());
   expect([...PAIXAO_IDS].sort()).toEqual([...IDS].sort());
   for (const id of IDS) {
     const artigo = ARTICLES.find((a) => a.id === id);

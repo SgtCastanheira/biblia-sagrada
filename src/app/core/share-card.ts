@@ -7,10 +7,11 @@ import { COLLECTIONS, findArticle, type ClassicSermon } from './library';
 import type { Curiosity } from './curiosities';
 import type { BibleMap } from './maps';
 import type { Person } from './memorial';
+import { bookLook } from './book-look';
 import type { Prophecy } from './prophecy';
 import { headingKey, parseBlocks, SPECIAL_SECTIONS } from './rich-text-parser';
 import type { Tribe } from './tribes';
-import { trailOfArticle, type Trail } from './trails';
+import { shelfBooks, trailOfArticle, type Trail, type TrailBranch } from './trails';
 
 /** Endereço público do app: é o que vai no QR code e no texto da imagem compartilhada. */
 export const SITE_URL = 'https://sgtcastanheira.github.io/biblia-sagrada/';
@@ -27,6 +28,20 @@ export const CARD_GOLD = '#f1d9a8';
 export interface ShareTopic {
   title: string;
   subs?: string[];
+}
+
+/** Um livro da estante desenhada na imagem de uma prateleira: a capa, com o número na quina. */
+export interface ShareBook {
+  /** Posição na prateleira (1, 2, 3…); os atalhos para outras telas não têm número. */
+  n?: number;
+  title: string;
+  /** Nome do ícone da capa (Material Symbols), o mesmo que o livro tem na biblioteca. */
+  icon: string;
+  /** Quanto a cor do assunto escurece na capa (%) e se a capa é de creme: o mesmo jeito do livro na estante do app. */
+  dark: number;
+  light: boolean;
+  /** Atalho para outra tela do app, e não uma história: a capa leva o contorno tracejado, como na estante. */
+  shortcut?: boolean;
 }
 
 /** Tudo o que a imagem de compartilhar mostra. As páginas montam um destes e entregam ao painel. */
@@ -58,6 +73,8 @@ export interface ShareCard {
   topicsLabel?: string;
   /** Não desenha o título na imagem (ele continua no texto que acompanha): o compilado de um dia já diz tudo com a data. */
   hideTitle?: boolean;
+  /** Os livros de uma prateleira, desenhados como capas numeradas numa estante (no lugar da lista de tópicos). */
+  books?: ShareBook[];
 }
 
 const MAX_TOPICS = 12;
@@ -74,10 +91,12 @@ export function pageUrl(path: string): string {
 /** O endereço sem "https://", como se escreve numa imagem. */
 export const shortSiteUrl = () => SITE_URL.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
-/** Texto que acompanha a imagem no WhatsApp e no Instagram. */
+/** Texto que acompanha a imagem no WhatsApp e no Instagram; numa estante, leva a lista dos livros, na ordem. */
 export function shareText(card: ShareCard): string {
-  const lines = [card.title, plain(card.subtitle), '', `${card.cta ?? 'Leia no app Bíblia Sagrada'}: ${pageUrl(card.path)}`];
-  return lines.filter((l, i) => l || i === 2).join('\n');
+  const head = [card.title, plain(card.subtitle)].filter(Boolean).join('\n');
+  const books = (card.books ?? []).map((b) => (b.n ? `${b.n}. ${b.title}` : `Atalho: ${b.title}`)).join('\n');
+  const link = `${card.cta ?? 'Leia no app Bíblia Sagrada'}: ${pageUrl(card.path)}`;
+  return [head, books, link].filter(Boolean).join('\n\n');
 }
 
 /** Corta a lista de tópicos para caber na imagem, sem tópicos vazios nem repetidos. */
@@ -352,6 +371,34 @@ export function trailCard(t: Trail): ShareCard {
     subtitle: clip(t.description, 150),
     meta: `${total} histórias e estudos`,
     topics: fitTopics(t.branches.map((b) => topic(b.title, ...b.ids.slice(0, 2).map((id) => findArticle(id)?.title)))),
+    tone: t.tone,
+    cta: 'Abra a biblioteca',
+  };
+}
+
+/**
+ * Cartão da estante de uma prateleira da biblioteca: as histórias, numeradas na ordem da prateleira (1, 2, 3…; com uma só, fica o 1),
+ * desenhadas como capas numeradas, e depois os atalhos, sem número. O rótulo antes do “ · ” do título da prateleira (“Volume 4”) vai
+ * para o assunto; o resto é o título grande. O link abre a biblioteca já na estante do assunto (`?estante=`).
+ */
+export function shelfCard(t: Trail, b: TrailBranch): ShareCard | null {
+  const stories = shelfBooks(b);
+  const shortcuts = b.links ?? [];
+  if (!stories.length && !shortcuts.length) return null;
+  const [label, ...rest] = b.title.split(' · ');
+  const minutes = stories.reduce((sum, x) => sum + x.article.minutes, 0);
+  const count = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+  return {
+    path: `/historia?estante=${t.id}`,
+    theme: rest.length ? `${t.name} · ${label}` : t.name,
+    title: rest.length ? rest.join(' · ') : b.title,
+    subtitle: b.about,
+    meta: [stories.length ? count(stories.length, 'livro', 'livros') : '', minutes ? `${minutes} min de leitura` : '', shortcuts.length ? count(shortcuts.length, 'atalho', 'atalhos') : ''].filter(Boolean).join(' · '),
+    topics: [],
+    books: [
+      ...stories.map(({ n, article }) => ({ n, title: article.title, icon: article.icon, ...bookLook(article.id) })),
+      ...shortcuts.map((l) => ({ title: l.name, icon: l.icon, shortcut: true, ...bookLook(l.link) })),
+    ],
     tone: t.tone,
     cta: 'Abra a biblioteca',
   };

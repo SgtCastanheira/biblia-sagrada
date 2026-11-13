@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { expect, test } from './base';
+import { findArticle } from '../src/app/core/library';
 import { linkedArticles, sameEra, trailStep } from '../src/app/core/story-graph';
 
 const ID = 'constantino-e-os-concilios';
@@ -30,7 +31,9 @@ test('fim da história: a próxima da trilha, o progresso e a mesma época, sem 
   await scrollText(page, 1);
   await expect(journey.locator('.count')).toContainText('1 de');
   await page.goto(`/historia?trilha=${step.trail.id}`);
-  await expect(page.locator('a.card', { hasText: 'Constantino' }).locator('.meta')).toContainText('lida');
+  // O cartão desta história pelo título exato: outros cartões da lista também citam “Constantino” e levam “Livro N de M”
+  const titulo = findArticle(ID)!.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  await expect(page.locator('a.card').filter({ has: page.locator('.name', { hasText: new RegExp(`^${titulo}$`) }) }).locator('.meta')).toContainText('lida');
   await expect(page.locator('.cover .c-over')).toContainText('1 lida');
   // Terminou a 4ª: a trilha continua na 5ª, não volta ao começo
   await expect(page.locator('.go-on')).toContainText('Continuar a trilha');

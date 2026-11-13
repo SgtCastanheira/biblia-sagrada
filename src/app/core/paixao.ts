@@ -156,7 +156,12 @@ export const PAIXAO_TRAILS: Trail[] = [
     icon: 'science',
     tone: '#3e4a3e',
     branches: [
-      { title: 'Volume 4 · A Paixão, da Ceia à Ressurreição', ids: ['paixao-quem-mandava', 'paixao-santa-ceia', 'paixao-getsemani', 'paixao-prisao-e-interrogatorio', 'paixao-acoite-e-condenacao', 'paixao-crucificacao', 'paixao-sepultamento-e-ressurreicao'] },
+      {
+        title: 'Volume 4 · A Paixão, da Ceia à Ressurreição',
+        // Ordem escolhida pelo dono do app em 13 nov 2026: a posição aqui é o número do livro na estante e na imagem de compartilhar
+        ids: ['paixao-getsemani', 'paixao-santa-ceia', 'paixao-prisao-e-interrogatorio', 'paixao-acoite-e-condenacao', 'paixao-crucificacao', 'paixao-sepultamento-e-ressurreicao', 'paixao-quem-mandava'],
+        about: 'O relato dos Evangelhos, o contexto histórico e as ilustrações que acompanham o estudo.',
+      },
     ],
   },
 ];
