@@ -22,6 +22,15 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'estantes-numeradas',
+    date: '13 de novembro de 2026',
+    title: 'Livros numerados e estantes para compartilhar',
+    items: [
+      { icon: 'format_list_numbered', title: 'Cada livro, com o seu número', text: 'Na biblioteca, os estudos de cada prateleira ganharam o número da ordem em que se leem: 1, 2, 3… Com um estudo só, fica o 1. A Paixão, da Ceia à Ressurreição vai do 1, Getsêmani, ao 7, Quem Mandava e Onde Mandava.', link: '/historia?estante=como-a-ciencia-explica', tip: 'Em História, nas capas e nas lombadas.' },
+      { icon: 'ios_share', title: 'Compartilhe a estante inteira', text: 'O botão ao lado do título de cada prateleira faz uma imagem com a estante e os livros numerados, com o endereço e um QR code que abre a biblioteca naquela estante. Escolha Feed ou Stories e mande no WhatsApp ou no Instagram.', link: '/historia', tip: 'Toque no ícone de compartilhar, ao lado do título da prateleira.' },
+    ],
+  },
+  {
     id: 'a-paixao-volume-4',
     date: '12 de novembro de 2026',
     title: 'A Paixão, da Ceia à Ressurreição',

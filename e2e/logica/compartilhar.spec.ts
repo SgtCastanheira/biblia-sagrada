@@ -7,9 +7,9 @@ import { ARTICLES, CLASSIC_SERMONS } from '../../src/app/core/library';
 import { MAPS_IN_ORDER } from '../../src/app/core/maps';
 import {
   adStateCard, articleCard, CARD_CREAM, CARD_GOLD, classicSermonCard, curiosityCard, DEFAULT_TONE, dictionaryCard, epochCard, fitTopics,
-  hymnCard, mapCard, pageUrl, personCard, prophecyCard, shareText, shortWhen, SITE_URL, trailCard, tribeCard, type ShareCard,
+  hymnCard, mapCard, pageUrl, personCard, prophecyCard, shareText, shortWhen, SITE_URL, shelfCard, trailCard, tribeCard, type ShareCard,
 } from '../../src/app/core/share-card';
-import { TRAILS } from '../../src/app/core/trails';
+import { shelfBooks, TRAILS } from '../../src/app/core/trails';
 import { TRIBES } from '../../src/app/core/tribes';
 
 /**
@@ -128,5 +128,79 @@ test('compartilhar: as outras páginas também geram o cartão', () => {
   for (const m of MAPS_IN_ORDER) check(mapCard(m), `mapa ${m.id}`, problems);
   for (const s of CLASSIC_SERMONS) check(classicSermonCard(s), `sermão ${s.id}`, problems);
   for (const t of TRAILS) check(trailCard(t), `trilha ${t.id}`, problems);
+  for (const t of TRAILS) for (const b of t.branches) check(shelfCard(t, b), `estante ${t.id} / ${b.title}`, problems);
   expect(problems).toEqual([]);
+});
+
+const PREFIXO = 'https://sgtcastanheira.github.io/biblia-sagrada/';
+
+test('compartilhar: a estante do Volume 4 vira um cartão com os sete livros numerados, na ordem, e o texto lista todos', () => {
+  const trilha = TRAILS.find((t) => t.id === 'como-a-ciencia-explica')!;
+  const volume = trilha.branches.find((b) => b.title.startsWith('Volume 4'))!;
+  const card = shelfCard(trilha, volume)!;
+  expect(card.title).toBe('A Paixão, da Ceia à Ressurreição');
+  expect(card.theme).toBe('Como a Ciência Explica · Volume 4');
+  expect(card.path).toBe('/historia?estante=como-a-ciencia-explica');
+  expect(card.topics).toEqual([]);
+  expect(card.tone).toBe(trilha.tone);
+  expect(card.meta).toMatch(/^7 livros · \d+ min de leitura$/);
+  expect(card.books!.map((b) => [b.n, b.title])).toEqual([
+    [1, 'Getsêmani'], [2, 'Santa Ceia'], [3, 'Prisão e Interrogatório'], [4, 'Açoite e Condenação'],
+    [5, 'Crucificação'], [6, 'Sepultamento e Ressurreição'], [7, 'Quem Mandava e Onde Mandava'],
+  ]);
+  for (const b of card.books!) expect(b.icon, b.title).toBeTruthy();
+  const texto = shareText(card);
+  expect(texto).toContain('A Paixão, da Ceia à Ressurreição');
+  expect(texto).toContain('1. Getsêmani\n2. Santa Ceia\n3. Prisão e Interrogatório');
+  expect(texto).toContain('7. Quem Mandava e Onde Mandava');
+  expect(texto.endsWith(`Abra a biblioteca: ${PREFIXO}historia?estante=como-a-ciencia-explica`)).toBe(true);
+});
+
+test('compartilhar: toda prateleira de histórias gera a imagem da estante, numerada na ordem e com o link da sua estante', () => {
+  let comUma = 0;
+  for (const t of TRAILS) {
+    for (const b of t.branches) {
+      const card = shelfCard(t, b)!;
+      const quem = `${t.id} / ${b.title}`;
+      expect(card, quem).toBeTruthy();
+      const numerados = card.books!.filter((x) => x.n);
+      expect(numerados.map((x) => x.n), quem).toEqual(shelfBooks(b).map((x) => x.n));
+      // os atalhos vêm depois das histórias, sem número
+      expect(card.books!.slice(numerados.length).every((x) => x.shortcut && !x.n), `${quem}: atalhos`).toBe(true);
+      expect(card.books!.length, quem).toBe(shelfBooks(b).length + (b.links?.length ?? 0));
+      expect(card.path, quem).toBe(`/historia?estante=${t.id}`);
+      expect(card.tone, quem).toBe(t.tone);
+      expect(shareText(card), quem).toContain(`1. ${shelfBooks(b)[0].article.title}`);
+      if (numerados.length === 1) comUma++;
+    }
+  }
+  expect(comUma, 'prateleiras com uma história só').toBeGreaterThan(0);
+});
+
+test('compartilhar: prateleira com um livro só leva o 1; com atalhos, os atalhos ficam sem número; a maior segue a contagem inteira', () => {
+  const achar = (titulo: string) => {
+    for (const t of TRAILS) {
+      const b = t.branches.find((x) => x.title === titulo);
+      if (b) return shelfCard(t, b)!;
+    }
+    throw new Error(titulo);
+  };
+  const uma = achar('Quem É Deus');
+  expect(uma.books).toHaveLength(1);
+  expect(uma.books![0].n).toBe(1);
+  expect(uma.meta).toMatch(/^1 livro · \d+ min de leitura$/);
+  expect(shareText(uma)).toContain('\n\n1. A Trindade');
+
+  const comAtalhos = achar('A Igreja pelo País');
+  expect(comAtalhos.books!.map((b) => b.n)).toEqual([1, undefined, undefined, undefined]);
+  expect(comAtalhos.meta).toMatch(/^1 livro · \d+ min de leitura · 3 atalhos$/);
+  expect(shareText(comAtalhos)).toContain('Atalho: ');
+
+  const maior = achar('Livros de História da Igreja');
+  expect(maior.books!.map((b) => b.n)).toEqual(Array.from({ length: 20 }, (_, i) => i + 1));
+});
+
+test('compartilhar: o texto sem estante continua do mesmo jeito (título, subtítulo e link)', () => {
+  expect(shareText({ path: '/artigo/x', theme: 'T', title: 'Título', subtitle: 'Sub', topics: [], cta: 'Leia' })).toBe('Título\nSub\n\nLeia: https://sgtcastanheira.github.io/biblia-sagrada/artigo/x');
+  expect(shareText({ path: '/artigo/x', theme: 'T', title: 'Título', topics: [] })).toBe('Título\n\nLeia no app Bíblia Sagrada: https://sgtcastanheira.github.io/biblia-sagrada/artigo/x');
 });

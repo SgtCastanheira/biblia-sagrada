@@ -5,7 +5,7 @@ import { CURIOSITIES } from '../src/app/core/curiosities';
 import { EPOCHS } from '../src/app/core/epochs';
 import { CLASSIC_SERMONS } from '../src/app/core/library';
 import { MAPS_IN_ORDER } from '../src/app/core/maps';
-import { TRAILS } from '../src/app/core/trails';
+import { shelfBooks, TRAILS } from '../src/app/core/trails';
 import { TRIBES } from '../src/app/core/tribes';
 
 /**
@@ -162,3 +162,83 @@ test('compartilhar: os quatro botões do painel ficam à vista, sem rolar, até 
     expect(caixa!.height).toBeGreaterThanOrEqual(40);
   }
 });
+
+test('compartilhar: a estante do Volume 4 tem o botão, a imagem sai nos dois tamanhos com as capas desenhadas, e o texto lista os livros em ordem', async ({ page }) => {
+  await page.addInitScript(() => {
+    const w = window as unknown as { __shared: unknown };
+    Object.defineProperty(navigator, 'canShare', { value: () => true, configurable: true });
+    Object.defineProperty(navigator, 'share', {
+      configurable: true,
+      value: async (d: ShareData) => {
+        w.__shared = { title: d.title, text: d.text, files: (d.files ?? []).map((f) => ({ name: f.name, type: f.type })) };
+      },
+    });
+  });
+  await page.goto('/historia');
+  await page.getByRole('button', { name: /^Compartilhar a estante Volume 4/ }).click();
+  const img = page.locator('app-share-sheet .preview img');
+  await expect(img).toBeVisible({ timeout: 15_000 });
+  await expect(img).toHaveAttribute('alt', /A Paixão, da Ceia à Ressurreição/);
+  expect(await img.evaluate((i: HTMLImageElement) => [i.naturalWidth, i.naturalHeight])).toEqual([1080, 1350]);
+
+  // As capas foram desenhadas: o dourado dos números, dos ícones e dos fios aparece de sobra na região da estante
+  // (a conta não depende de coordenadas de cada capa, só de a estante estar lá)
+  const dourado = await img.evaluate((i: HTMLImageElement) => {
+    const c = document.createElement('canvas');
+    c.width = i.naturalWidth;
+    c.height = i.naturalHeight;
+    const ctx = c.getContext('2d')!;
+    ctx.drawImage(i, 0, 0);
+    const { data } = ctx.getImageData(0, 400, 1080, 610);
+    let n = 0;
+    for (let p = 0; p < data.length; p += 4) if (Math.abs(data[p] - 241) < 8 && Math.abs(data[p + 1] - 217) < 8 && Math.abs(data[p + 2] - 168) < 8) n++;
+    return n;
+  });
+  expect(dourado, 'pixels dourados na estante').toBeGreaterThan(3000);
+
+  await page.getByRole('button', { name: /Stories/ }).click();
+  await expect.poll(async () => img.evaluate((i: HTMLImageElement) => i.naturalHeight), { timeout: 15_000 }).toBe(1920);
+
+  await page.getByRole('button', { name: 'Compartilhar imagem' }).click();
+  const shared = await page.evaluate(() => (window as unknown as { __shared: { title: string; text: string; files: { name: string; type: string }[] } }).__shared);
+  expect(shared.title).toBe('A Paixão, da Ceia à Ressurreição');
+  expect(shared.text).toContain('1. Getsêmani\n2. Santa Ceia\n3. Prisão e Interrogatório\n4. Açoite e Condenação\n5. Crucificação\n6. Sepultamento e Ressurreição\n7. Quem Mandava e Onde Mandava');
+  expect(shared.text.endsWith('Abra a biblioteca: https://sgtcastanheira.github.io/biblia-sagrada/historia?estante=como-a-ciencia-explica')).toBe(true);
+  expect(shared.files).toEqual([{ name: 'biblia-sagrada-historia-estante-como-a-ciencia-explica.png', type: 'image/png' }]);
+});
+
+test('compartilhar: toda prateleira de histórias tem o botão da estante, com área de toque de 40px, e as ferramentas não', async ({ page }) => {
+  await page.goto('/historia');
+  const prateleiras = TRAILS.reduce((n, t) => n + t.branches.filter((b) => shelfBooks(b).length || b.links?.length).length, 0);
+  const botoes = page.getByRole('button', { name: /^Compartilhar a estante/ });
+  await expect(botoes).toHaveCount(prateleiras);
+  await expect(page.locator('#bay-mapas').getByRole('button', { name: /^Compartilhar a estante/ })).toHaveCount(0);
+  const caixa = (await botoes.first().boundingBox())!;
+  expect(Math.min(caixa.width, caixa.height)).toBeGreaterThanOrEqual(40);
+});
+
+// Uma com um livro só, uma com atalhos e a maior (20 livros): todas geram a imagem, e o texto lista os livros na ordem
+for (const [titulo, texto] of [
+  ['Quem É Deus', /\n\n1\. A Trindade/],
+  ['A Igreja pelo País', /\n\n1\. .+\nAtalho: /],
+  ['Livros de História da Igreja', /\n\n1\. .+\n2\. .+\n3\. /],
+] as const) {
+  test(`compartilhar: a estante “${titulo}” gera a imagem e o texto com a contagem na ordem`, async ({ page }) => {
+    await page.addInitScript(() => {
+      const w = window as unknown as { __shared: unknown };
+      Object.defineProperty(navigator, 'canShare', { value: () => true, configurable: true });
+      Object.defineProperty(navigator, 'share', { configurable: true, value: async (d: ShareData) => { w.__shared = { text: d.text }; } });
+    });
+    await page.goto('/historia');
+    await page.getByRole('button', { name: `Compartilhar a estante ${titulo}` }).click();
+    const img = page.locator('app-share-sheet .preview img');
+    await expect(img).toBeVisible({ timeout: 15_000 });
+    expect(await img.evaluate((i: HTMLImageElement) => [i.naturalWidth, i.naturalHeight])).toEqual([1080, 1350]);
+    await page.getByRole('button', { name: /Stories/ }).click();
+    await expect.poll(async () => img.evaluate((i: HTMLImageElement) => i.naturalHeight), { timeout: 15_000 }).toBe(1920);
+    await page.getByRole('button', { name: 'Compartilhar imagem' }).click();
+    const compartilhado = await page.evaluate(() => (window as unknown as { __shared: { text: string } }).__shared);
+    expect(compartilhado.text).toMatch(texto);
+    expect(compartilhado.text).toContain('/historia?estante=');
+  });
+}

@@ -1,4 +1,4 @@
-import { ARTICLES, type ArticleCollection } from './library';
+import { ARTICLES, findArticle, type Article, type ArticleCollection } from './library';
 import { DRAFT_TRAILS } from './draft-content';
 import { PAIXAO_TRAILS } from './paixao';
 
@@ -15,6 +15,8 @@ export interface TrailBranch {
   title: string;
   ids: string[];
   links?: TrailLink[];
+  /** Uma frase sobre a prateleira, que vai no texto que acompanha a imagem de compartilhar da estante (opcional). */
+  about?: string;
 }
 
 /**
@@ -206,6 +208,19 @@ export const trailOfCollection = (collection: string | undefined) => TRAILS.find
 export const trailOfArticle = (articleId: string) => TRAILS.find((t) => t.branches.some((b) => b.ids.includes(articleId)));
 
 export const trailArticleIds = (t: Trail) => t.branches.flatMap((b) => b.ids);
+
+/**
+ * Os livros (histórias) de uma prateleira, na ordem de `ids`: o número de cada um é a posição (1, 2, 3…) e não pula quando um id
+ * não existe. Os atalhos para outras telas (`links`) ficam fora da conta.
+ */
+export function shelfBooks(b: TrailBranch): { n: number; article: Article }[] {
+  const books: { n: number; article: Article }[] = [];
+  for (const id of b.ids) {
+    const article = findArticle(id);
+    if (article) books.push({ n: books.length + 1, article });
+  }
+  return books;
+}
 
 /** Artigos que não estão em nenhuma trilha (deve ser vazio: o teste confere). */
 export const articlesWithoutTrail = () => ARTICLES.filter((a) => !trailOfArticle(a.id));

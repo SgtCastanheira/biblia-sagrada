@@ -1,4 +1,6 @@
 import { CARD_CREAM, CARD_GOLD, DEFAULT_TONE, pageUrl, plain, shortSiteUrl, SITE_NAME, type ShareCard } from '../core/share-card';
+import { clampLines, roundRect, wrapLines } from './share-canvas';
+import { drawShelf } from './share-shelf';
 
 export type ShareFormat = 'feed' | 'stories';
 
@@ -11,34 +13,6 @@ export const SHARE_FORMATS: Record<ShareFormat, { width: number; height: number;
 const SERIF = '"Source Serif 4", Georgia, serif';
 const SANS = 'Inter, system-ui, sans-serif';
 const PAD = 84;
-
-/** Quebra o texto em linhas que cabem em `max` pixels (a fonte já precisa estar no contexto). */
-export function wrapLines(ctx: CanvasRenderingContext2D, text: string, max: number): string[] {
-  const words = plain(text).split(' ').filter(Boolean);
-  const lines: string[] = [];
-  let line = '';
-  for (const w of words) {
-    const test = line ? `${line} ${w}` : w;
-    if (line && ctx.measureText(test).width > max) {
-      lines.push(line);
-      line = w;
-    } else {
-      line = test;
-    }
-  }
-  if (line) lines.push(line);
-  return lines;
-}
-
-/** Limita a `max` linhas; a última termina em reticências quando o texto não coube. */
-function clampLines(ctx: CanvasRenderingContext2D, lines: string[], max: number, width: number): string[] {
-  if (lines.length <= max) return lines;
-  const kept = lines.slice(0, max);
-  let last = `${kept[max - 1]}…`;
-  while (last.length > 2 && ctx.measureText(last).width > width) last = `${last.slice(0, -2).trimEnd()}…`;
-  kept[max - 1] = last;
-  return kept;
-}
 
 /** Uma linha só: corta com reticências quando passa da largura (o `clampLines` de uma linha devolve o texto inteiro). */
 function oneLine(ctx: CanvasRenderingContext2D, text: string, width: number): string {
@@ -55,11 +29,6 @@ function loadImage(src: string): Promise<HTMLImageElement | null> {
     img.onerror = () => resolve(null);
     img.src = src;
   });
-}
-
-function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number): void {
-  ctx.beginPath();
-  ctx.roundRect(x, y, w, h, r);
 }
 
 async function ensureFonts(): Promise<void> {
@@ -179,8 +148,9 @@ async function drawPhotoRow(ctx: CanvasRenderingContext2D, photos: NonNullable<S
 }
 
 /**
- * Desenha a imagem de compartilhar: assunto, título, tópicos e subtópicos, e embaixo o nome do app, o endereço
- * e um QR code que abre a própria página. Tudo em um canvas, sem servidor; funciona sem internet.
+ * Desenha a imagem de compartilhar: assunto, título, tópicos e subtópicos (ou, numa prateleira numerada, a estante com as
+ * capas numeradas), e embaixo o nome do app, o endereço e um QR code que abre a própria página. Tudo em um canvas, sem
+ * servidor; funciona sem internet.
  */
 export async function renderShareImage(card: ShareCard, format: ShareFormat): Promise<Blob> {
   await ensureFonts();
@@ -297,17 +267,25 @@ export async function renderShareImage(card: ShareCard, format: ShareFormat): Pr
   }
 
   // título: o maior tamanho que cabe em poucas linhas
-  const titleMax = com ? (stories ? 3 : 2) : stories ? 5 : 3;
-  let size = com ? (stories ? 80 : 62) : stories ? 88 : 76;
+  const shelf = !!card.books?.length;
+  let titleMax = com ? (stories ? 3 : 2) : shelf ? 1 : stories ? 5 : 3;
+  let size = com ? (stories ? 80 : 62) : shelf ? (stories ? 72 : 60) : stories ? 88 : 76;
   let titleLines: string[] = [];
   if (dateText) {
     size = dateText.size;
     titleLines = dateText.titleLines;
   } else {
-    for (; size >= (com ? 44 : 52); size -= 4) {
+    for (; size >= (shelf ? 48 : com ? 44 : 52); size -= 4) {
       ctx.font = `700 ${size}px ${SERIF}`;
       titleLines = wrapLines(ctx, card.title, textW);
       if (titleLines.length <= titleMax) break;
+    }
+    // na estante o título fica numa linha para sobrar espaço às capas; se não couber nem a 48 px, vai para duas linhas menores
+    if (shelf && titleLines.length > titleMax) {
+      titleMax = 2;
+      size = 52;
+      ctx.font = `700 ${size}px ${SERIF}`;
+      titleLines = wrapLines(ctx, card.title, textW);
     }
     ctx.font = `700 ${size}px ${SERIF}`;
     titleLines = clampLines(ctx, titleLines, titleMax, textW);
@@ -320,8 +298,8 @@ export async function renderShareImage(card: ShareCard, format: ShareFormat): Pr
   }
   if (titleLines.length) y += 14;
 
-  // subtítulo
-  if (card.subtitle) {
+  // subtítulo (na estante não se desenha: as capas ficam com o espaço, e a frase segue no texto que acompanha a imagem)
+  if (card.subtitle && !shelf) {
     ctx.font = `400 italic ${com ? 32 : 34}px ${SERIF}`;
     ctx.fillStyle = 'rgba(255, 248, 236, 0.88)';
     for (const line of dateText ? dateText.sub : clampLines(ctx, wrapLines(ctx, card.subtitle, textW), stories ? 4 : 2, textW)) {
@@ -421,6 +399,9 @@ export async function renderShareImage(card: ShareCard, format: ShareFormat): Pr
       ctx.fillText(`+ ${total - shown} ${total - shown === 1 ? 'tópico' : 'tópicos'} no app`, PAD + numW, y + 30);
     }
   }
+
+  // estante: as capas numeradas dos livros de uma prateleira em sequência, no espaço que sobrou até o rodapé
+  if (card.books?.length) await drawShelf(ctx, card.books, { x: PAD, y, w: textW, h: listBottom - y }, tone, stories);
 
   // rodapé: convite, nome, endereço e QR code
   ctx.fillStyle = 'rgba(0, 0, 0, 0.26)';

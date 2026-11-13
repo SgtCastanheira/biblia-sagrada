@@ -1,11 +1,13 @@
-import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
+import { afterNextRender, Component, computed, DestroyRef, inject, input, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
-import { findArticle } from '../core/library';
+import { bookLook, hash } from '../core/book-look';
 import { TOOL_BAYS, ToolBay } from '../core/library-bays';
+import { shelfCard, type ShareCard } from '../core/share-card';
 import { saveLocal } from '../core/storage.service';
 import { StoryProgressService } from '../core/story-progress.service';
-import { Trail, TRAILS } from '../core/trails';
+import { Trail, TRAILS, shelfBooks } from '../core/trails';
+import { ShareImageButton } from './share-image-button';
 
 const MODE_KEY = 'biblia.estante.modo';
 
@@ -36,6 +38,9 @@ export interface Book {
   bay: BayInfo;
   /** Atalho de uma trilha para outra tela do app, e não uma história. */
   shortcut: boolean;
+  /** Posição da história na sua prateleira, de 1 a `of` (com uma só, `of` é 1); os atalhos e as ferramentas não têm número. */
+  n?: number;
+  of?: number;
   /** Lombada: largura e altura (em px) e quanto escurece a cor (%), sempre os mesmos para o mesmo livro. */
   w: number;
   h: number;
@@ -44,20 +49,12 @@ export interface Book {
   light: boolean;
 }
 
-function hash(s: string): number {
-  let h = 0;
-  for (const c of s) h = (h * 31 + c.charCodeAt(0)) >>> 0;
-  return h;
-}
-
 function spine(key: string, minutes: number | undefined) {
-  const h = hash(key);
   return {
     // Mais páginas, lombada mais grossa; nunca menos de 40 px, para o dedo acertar
     w: 46 + Math.min(minutes ?? 6, 14),
-    h: 170 + (h % 5) * 11,
-    dark: [0, 12, 22, 30][(h >>> 3) % 4],
-    light: h % 5 === 0,
+    h: 170 + (hash(key) % 5) * 11,
+    ...bookLook(key),
   };
 }
 
@@ -65,6 +62,8 @@ function spine(key: string, minutes: number | undefined) {
 interface Shelf {
   title: string;
   books: Book[];
+  /** Só nas prateleiras de histórias: a imagem que compartilha a estante inteira. */
+  card?: ShareCard;
 }
 
 /** Uma trilha tem id, name, short, icon e tone, então serve como `BayInfo`. */
@@ -72,15 +71,15 @@ function shelvesOf(t: Trail): Shelf[] {
   return t.branches
     .map((b) => {
       const books: Book[] = [];
-      for (const id of b.ids) {
-        const a = findArticle(id);
-        if (!a) continue;
-        books.push({ key: `a:${a.id}`, title: a.title, subtitle: a.subtitle, icon: a.icon, minutes: a.minutes, period: a.period, url: `/artigo/${a.id}`, bay: t, shortcut: false, ...spine(a.id, a.minutes) });
+      // Cada história leva o número da sua posição na prateleira (1, 2, 3…); os atalhos ficam sem número
+      const numbers = shelfBooks(b);
+      for (const { n, article: a } of numbers) {
+        books.push({ key: `a:${a.id}`, title: a.title, subtitle: a.subtitle, icon: a.icon, minutes: a.minutes, period: a.period, url: `/artigo/${a.id}`, bay: t, shortcut: false, n, of: numbers.length, ...spine(a.id, a.minutes) });
       }
       for (const l of b.links ?? []) {
         books.push({ key: `l:${l.link}`, title: l.name, subtitle: l.description, icon: l.icon, url: l.link, bay: t, shortcut: true, ...spine(l.link, undefined) });
       }
-      return { title: b.title, books };
+      return { title: b.title, books, card: shelfCard(t, b) ?? undefined };
     })
     .filter((sh) => sh.books.length);
 }
@@ -99,7 +98,7 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
 @Component({
   selector: 'app-bookshelf',
   host: { '[class.capas]': "mode() === 'capas'" },
-  imports: [MatIconModule, RouterLink],
+  imports: [MatIconModule, RouterLink, ShareImageButton],
   template: `
     <div class="mode" role="group" aria-label="Como ver os livros">
       <button type="button" [attr.aria-pressed]="mode() === 'capas'" (click)="setMode('capas')"><mat-icon>menu_book</mat-icon> Capas</button>
@@ -119,11 +118,17 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
           </header>
           @for (sh of s.shelves; track sh.title) {
             <div class="shelf">
-              <h3 class="sub-title">{{ sh.title }}</h3>
+              <div class="sub-head">
+                <h3 class="sub-title">{{ sh.title }}</h3>
+                @if (sh.card) {
+                  <app-share-image-button [card]="sh.card" [label]="'Compartilhar a estante ' + sh.title" />
+                }
+              </div>
               <ul class="row">
                 @for (b of sh.books; track b.key) {
                   <li class="cell" [style.width.px]="mode() === 'lombadas' ? b.w : null">
-                    <button type="button" class="spine" [class.light]="b.light" [class.shortcut]="b.shortcut" [style.--tone]="b.bay.tone" [style.--dark]="b.dark + '%'" [style.height.px]="mode() === 'lombadas' ? b.h : null" [attr.aria-label]="label(b)" (click)="pick(b)">
+                    <button type="button" class="spine" [class.light]="b.light" [class.shortcut]="b.shortcut" [class.numbered]="!!b.n" [style.--tone]="b.bay.tone" [style.--dark]="b.dark + '%'" [style.height.px]="mode() === 'lombadas' ? b.h : null" [attr.aria-label]="label(b)" (click)="pick(b)">
+                      @if (b.n) { <span class="num" aria-hidden="true">{{ b.n }}</span> }
                       <mat-icon class="ico" aria-hidden="true">{{ b.icon }}</mat-icon>
                       <span class="t">{{ b.title }}</span>
                       @if (isDone(b)) { <mat-icon class="done" aria-hidden="true">check_circle</mat-icon> }
@@ -172,8 +177,10 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
     .plate h2 { margin: 0; flex: 1; min-width: 0; font: 600 18px/1.25 var(--heading-font); color: var(--mat-sys-on-surface); }
     .plate .n { flex: none; min-width: 24px; padding: 1px 8px; border-radius: 12px; text-align: center; font: 600 13px/1.5 Inter, sans-serif; background: var(--mat-sys-surface-container-highest); color: var(--mat-sys-on-surface-variant); }
     .shelf { margin: 0 0 4px; }
-    .sub-title { display: flex; align-items: center; gap: 10px; margin: 6px 0 4px; font: 600 15px/1.3 var(--heading-font); color: var(--mat-sys-on-surface-variant); }
-    .sub-title::after { content: ''; flex: 1; height: 1px; background: var(--mat-sys-outline-variant); }
+    .sub-head { display: flex; align-items: center; gap: 6px; margin: 2px 0 2px; }
+    .sub-title { display: flex; align-items: center; flex: 1; min-width: 0; gap: 10px; margin: 0; font: 600 15px/1.3 var(--heading-font); color: var(--mat-sys-on-surface-variant); }
+    .sub-title::after { content: ''; flex: 1; height: 1px; min-width: 12px; background: var(--mat-sys-outline-variant); }
+    .sub-head app-share-image-button { flex: none; --mat-icon-button-icon-color: var(--mat-sys-primary); }
     .see { flex: none; display: inline-flex; align-items: center; min-height: 40px; padding: 0 6px; font: 600 13px Inter, sans-serif; color: var(--mat-sys-primary); text-decoration: none; }
 
     /* Prateleiras: todas as linhas têm a mesma altura, então as tábuas caem no lugar certo mesmo quando os livros quebram de linha */
@@ -208,6 +215,10 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
     .spine.light .ico { color: color-mix(in srgb, var(--tone) 85%, #000); }
     .t { flex: 1 1 0; min-height: 0; max-height: 100%; writing-mode: vertical-rl; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; text-align: start; font: 600 13px/1.25 var(--heading-font); }
     .done { flex: none; width: 16px; height: 16px; font-size: 16px; color: #f1d9a8; }
+    /* O número da história na prateleira, dourado sobre a capa escura e escuro sobre a de creme. Na lombada ele ocupa o lugar do ícone (a lombada não ganha altura); na capa, fica na quina e o ícone continua no meio */
+    .num { flex: none; display: grid; place-items: center; width: 22px; height: 22px; box-sizing: border-box; border-radius: 50%; border: 1.5px solid rgba(43, 33, 24, .55); background: #f1d9a8; color: #2b2118; font: 700 13px/1 Inter, sans-serif; box-shadow: 0 1px 3px rgba(0, 0, 0, .45); pointer-events: none; }
+    .spine.light .num { border-color: rgba(255, 248, 236, .65); background: color-mix(in srgb, var(--tone) 85%, #000); color: #fff8ec; }
+    .spine.numbered .ico { display: none; }
     .spine.light .done { color: color-mix(in srgb, var(--tone) 85%, #000); }
     @media (hover: hover) { .spine:hover { transform: translateY(-9px); } }
 
@@ -252,6 +263,8 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
       font: 600 13px/1.2 var(--heading-font); overflow-wrap: anywhere; text-wrap: balance;
     }
     :host(.capas) .done { position: absolute; right: 7px; bottom: 12px; }
+    :host(.capas) .spine.numbered .ico { display: inline-block; }
+    :host(.capas) .num { position: absolute; top: 15px; left: 8px; width: 24px; height: 24px; font-size: 14px; }
 
     @media (min-width: 840px) {
       :host(.capas) { --cols: 4; --cgap: 10px; }
@@ -270,6 +283,8 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
 export class Bookshelf {
   private readonly router = inject(Router);
   private readonly progress = inject(StoryProgressService);
+  /** Id da estante (assunto) a mostrar logo ao abrir: o link da imagem de compartilhar leva direto à prateleira (`?estante=`). */
+  readonly focus = input<string>();
     /** Primeiro as trilhas de histórias; depois as estantes de mapas e ferramentas. */
   protected readonly sections = computed(() => [
     ...TRAILS.map((t) => ({ bay: t as BayInfo, isTrail: true, shelves: shelvesOf(t) })),
@@ -281,9 +296,18 @@ export class Bookshelf {
   /** De frente por padrão: o título se lê de imediato; as lombadas ficam a um toque. */
   protected readonly mode = signal<Mode>(this.savedMode());
   private timer: ReturnType<typeof setTimeout> | undefined;
+  private scrollTimer: ReturnType<typeof setTimeout> | undefined;
 
   constructor() {
-    inject(DestroyRef).onDestroy(() => clearTimeout(this.timer));
+    inject(DestroyRef).onDestroy(() => {
+      clearTimeout(this.timer);
+      clearTimeout(this.scrollTimer);
+    });
+    // O roteador leva a tela ao topo quando a navegação termina; a rolagem até a estante vem um instante depois
+    afterNextRender(() => {
+      const bay = this.focus();
+      if (bay) this.scrollTimer = setTimeout(() => document.getElementById(`bay-${bay}`)?.scrollIntoView({ block: 'start' }), 350);
+    });
   }
 
   private savedMode(): Mode {
@@ -304,7 +328,8 @@ export class Bookshelf {
   }
 
   protected label(b: Book): string {
-    return `${b.shortcut ? 'Atalho' : 'Livro'}: ${b.title}, em ${b.bay.name}${this.isDone(b) ? ', já lida' : ''}`;
+    const place = b.n ? `, número ${b.n}${b.of! > 1 ? ` de ${b.of}` : ''}` : '';
+    return `${b.shortcut ? 'Atalho' : 'Livro'}: ${b.title}${place}, em ${b.bay.name}${this.isDone(b) ? ', já lida' : ''}`;
   }
 
   protected meta(b: Book): string {

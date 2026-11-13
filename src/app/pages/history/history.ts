@@ -61,11 +61,11 @@ import { ShareImageButton } from '../../shared/share-image-button';
       @for (b of t.branches; track b.title) {
         <h2 class="section-title">{{ b.title }}</h2>
         <div class="grid">
-          @for (a of articlesOf(b.ids); track a.id) {
+          @for (a of articlesOf(b.ids); track a.id; let i = $index) {
             <a class="card row" matRipple [routerLink]="['/artigo', a.id]">
               <span class="badge"><mat-icon>{{ a.icon }}</mat-icon></span>
               <span class="texts">
-                @if (meta(a); as m) { <span class="meta">{{ m }}</span> }
+                @if (meta(a, b.ids.length > 1 ? { n: i + 1, of: b.ids.length } : undefined); as m) { <span class="meta">{{ m }}</span> }
                 <span class="name">{{ a.title }}</span>
                 <span class="desc">{{ a.subtitle }}</span>
               </span>
@@ -103,7 +103,7 @@ import { ShareImageButton } from '../../shared/share-image-button';
           <span><strong>Datas de {{ month }}</strong> {{ monthCount }} {{ monthCount === 1 ? 'fato da história da Igreja' : 'fatos da história da Igreja' }} neste mês, com foto e imagem para compartilhar, e o ano inteiro logo ali.</span>
           <mat-icon class="go">chevron_right</mat-icon>
         </a>
-        <app-bookshelf />
+        <app-bookshelf [focus]="estante()" />
 
         <details class="howto card">
           <summary><mat-icon>route</mat-icon> Como estudar pelo leitor<mat-icon class="chevron">expand_more</mat-icon></summary>
@@ -186,6 +186,8 @@ export class HistoryPage {
   readonly colecao = input<string>();
   /** Pesquisa na biblioteca (?q=). */
   readonly q = input<string>();
+  /** Estante (assunto) em que a biblioteca abre (?estante=): é o link da imagem que compartilha uma prateleira. */
+  readonly estante = input<string>();
   protected readonly progress = inject(StoryProgressService);
   protected trailCard = trailCard;
   /** O cartão das datas, no alto da biblioteca: o mês de hoje e quantos fatos ele tem. */
@@ -210,10 +212,10 @@ export class HistoryPage {
     return findArticle(id);
   }
 
-  /** Linha pequena sobre a história: a época (quando há) e se já foi lida. */
-  protected meta(a: { id: string; period?: string }): string {
+  /** Linha pequena sobre a história: o número na prateleira (“Livro 1 de 7”, só quando há mais de um), a época (quando há) e se já foi lida. */
+  protected meta(a: { id: string; period?: string }, place?: { n: number; of: number }): string {
     const status = this.progress.isDone(a.id) ? 'lida' : this.progress.fraction(a.id) >= 0.05 ? `${this.percent(a.id)}% lida` : '';
-    return [a.period, status].filter(Boolean).join(' · ');
+    return [place ? `Livro ${place.n} de ${place.of}` : '', a.period, status].filter(Boolean).join(' · ');
   }
 
   protected percent(id: string): number {
