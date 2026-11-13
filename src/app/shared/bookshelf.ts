@@ -3,6 +3,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
 import { bookLook, hash } from '../core/book-look';
 import { TOOL_BAYS, ToolBay } from '../core/library-bays';
+import { dayTitle, recentDays } from '../core/recent-books';
 import { shelfCard, type ShareCard } from '../core/share-card';
 import { saveLocal } from '../core/storage.service';
 import { StoryProgressService } from '../core/story-progress.service';
@@ -84,6 +85,17 @@ function shelvesOf(t: Trail): Shelf[] {
     .filter((sh) => sh.books.length);
 }
 
+/** A estante “Novidades”: não é um assunto, só reúne os livros mais recentes. Cada um mantém a cor do assunto de onde vem. */
+const NEWS_BAY: BayInfo = { id: 'novidades', name: 'Novidades', short: 'Novidades', icon: 'celebration', tone: '#8a6414' };
+
+/** Uma prateleira por dia, do mais novo ao mais antigo. Sem número: a posição de um livro vale na prateleira dele, e não aqui. */
+function newsShelves(): Shelf[] {
+  return recentDays().map((day) => ({
+    title: dayTitle(day.date),
+    books: day.books.map(({ article: a, trail }) => ({ key: `a:${a.id}`, title: a.title, subtitle: a.subtitle, icon: a.icon, minutes: a.minutes, period: a.period, url: `/artigo/${a.id}`, bay: trail, shortcut: false, ...spine(a.id, a.minutes) })),
+  }));
+}
+
 function toolShelvesOf(bay: ToolBay): Shelf[] {
   return bay.shelves.map((sh) => ({
     title: sh.title,
@@ -107,7 +119,7 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
 
     <div class="case">
       @for (s of sections(); track s.bay.id) {
-        <section class="bay" [id]="'bay-' + s.bay.id" [style.--tone]="s.bay.tone" [attr.aria-labelledby]="'bay-h-' + s.bay.id">
+        <section class="bay" [class.news]="s.news" [id]="'bay-' + s.bay.id" [style.--tone]="s.bay.tone" [attr.aria-labelledby]="'bay-h-' + s.bay.id">
           <header class="plate">
             <mat-icon>{{ s.bay.icon }}</mat-icon>
             <h2 [id]="'bay-h-' + s.bay.id">{{ s.bay.name }}</h2>
@@ -116,6 +128,9 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
               <a class="see" routerLink="/historia" [queryParams]="{ trilha: s.bay.id }" [attr.aria-label]="'Ver o assunto ' + s.bay.name + ' em lista'">Ver em lista</a>
             }
           </header>
+          @if (s.news) {
+            <p class="lead">Os livros que chegaram por último, do mais novo ao mais antigo.</p>
+          }
           @for (sh of s.shelves; track sh.title) {
             <div class="shelf">
               <div class="sub-head">
@@ -176,6 +191,13 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
     .plate mat-icon { flex: none; color: color-mix(in srgb, var(--tone) 80%, var(--mat-sys-on-surface)); }
     .plate h2 { margin: 0; flex: 1; min-width: 0; font: 600 18px/1.25 var(--heading-font); color: var(--mat-sys-on-surface); }
     .plate .n { flex: none; min-width: 24px; padding: 1px 8px; border-radius: 12px; text-align: center; font: 600 13px/1.5 Inter, sans-serif; background: var(--mat-sys-surface-container-highest); color: var(--mat-sys-on-surface-variant); }
+    /* As novidades ocupam a largura toda, com um fundo dourado, para se destacarem de todas as outras estantes */
+    .bay.news {
+      grid-column: 1 / -1; border-color: color-mix(in srgb, var(--tone) 60%, var(--mat-sys-outline-variant));
+      background: linear-gradient(180deg, color-mix(in srgb, var(--tone) 14%, var(--mat-sys-surface-container-low)), var(--mat-sys-surface-container-low) 75%);
+      box-shadow: 0 6px 18px -10px color-mix(in srgb, var(--tone) 70%, transparent);
+    }
+    .lead { margin: -4px 0 8px 12px; font: 400 14px/1.45 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .shelf { margin: 0 0 4px; }
     .sub-head { display: flex; align-items: center; gap: 6px; margin: 2px 0 2px; }
     .sub-title { display: flex; align-items: center; flex: 1; min-width: 0; gap: 10px; margin: 0; font: 600 15px/1.3 var(--heading-font); color: var(--mat-sys-on-surface-variant); }
@@ -273,6 +295,8 @@ function toolShelvesOf(bay: ToolBay): Shelf[] {
       .row { gap: var(--gap) 3px; padding-left: 6px; }
       .t { font-size: 14px; }
     }
+    /* Com as estantes em duas colunas, as novidades ocupam as duas: cabem o dobro de capas, do mesmo tamanho das outras */
+    @media (min-width: 1000px) { :host(.capas) .bay.news { --cols: 8; } }
     @media (prefers-reduced-motion: reduce) {
       .spine, .vol, .cover { transition: none; }
       .spine:hover { transform: none; }
@@ -285,11 +309,12 @@ export class Bookshelf {
   private readonly progress = inject(StoryProgressService);
   /** Id da estante (assunto) a mostrar logo ao abrir: o link da imagem de compartilhar leva direto à prateleira (`?estante=`). */
   readonly focus = input<string>();
-    /** Primeiro as trilhas de histórias; depois as estantes de mapas e ferramentas. */
+  /** No alto, as novidades; depois as trilhas de histórias; por fim as estantes de mapas e ferramentas. */
   protected readonly sections = computed(() => [
-    ...TRAILS.map((t) => ({ bay: t as BayInfo, isTrail: true, shelves: shelvesOf(t) })),
-    ...TOOL_BAYS.map((t) => ({ bay: t as BayInfo, isTrail: false, shelves: toolShelvesOf(t) })),
-  ].map((s) => ({ ...s, total: s.shelves.reduce((n, sh) => n + sh.books.length, 0) })));
+    { bay: NEWS_BAY, isTrail: false, news: true, shelves: newsShelves() },
+    ...TRAILS.map((t) => ({ bay: t as BayInfo, isTrail: true, news: false, shelves: shelvesOf(t) })),
+    ...TOOL_BAYS.map((t) => ({ bay: t as BayInfo, isTrail: false, news: false, shelves: toolShelvesOf(t) })),
+  ].filter((s) => !s.news || s.shelves.length).map((s) => ({ ...s, total: s.shelves.reduce((n, sh) => n + sh.books.length, 0) })));
   protected readonly picked = signal<Book | null>(null);
   /** A capa está abrindo (só durante a animação). */
   protected readonly opening = signal(false);
