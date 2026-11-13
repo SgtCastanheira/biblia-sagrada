@@ -1,6 +1,7 @@
 import { expect, test } from './base';
 import { findArticle } from '../src/app/core/library';
 import { TOOL_BAYS } from '../src/app/core/library-bays';
+import { dayTitle, recentDays } from '../src/app/core/recent-books';
 import { shelfBooks, TRAILS, trailArticleIds } from '../src/app/core/trails';
 
 /** Volume 4, na ordem escolhida pelo dono do app: o número de cada livro é a posição aqui. */
@@ -9,21 +10,25 @@ const VOLUME_4 = [
   'paixao-crucificacao', 'paixao-sepultamento-e-ressurreicao', 'paixao-quem-mandava',
 ];
 
+/** O destaque “Novidades” repete livros que também moram nas suas trilhas: mais uma estante, uma prateleira por dia e uma lombada por livro. */
+const NOVIDADES = recentDays();
+const LIVROS_NOVOS = NOVIDADES.reduce((n, d) => n + d.books.length, 0);
+
 const TOTAL = TOOL_BAYS.reduce((n, b) => n + b.shelves.reduce((m, sh) => m + sh.books.length, 0), 0) + TRAILS.reduce((n, t) => n + trailArticleIds(t).length + t.branches.reduce((m, b) => m + (b.links?.length ?? 0), 0), 0);
 
 test('estante: toda história é uma lombada, agrupada por assunto', async ({ page }) => {
   await page.goto('/historia');
-  await expect(page.locator('app-bookshelf .bay')).toHaveCount(TRAILS.length + TOOL_BAYS.length);
-  await expect(page.locator('app-bookshelf .spine')).toHaveCount(TOTAL);
+  await expect(page.locator('app-bookshelf .bay')).toHaveCount(1 + TRAILS.length + TOOL_BAYS.length);
+  await expect(page.locator('app-bookshelf .spine')).toHaveCount(TOTAL + LIVROS_NOVOS);
   // Cada assunto mostra quantos livros tem
   const primeira = TRAILS[0];
-  await expect(page.locator('.bay').first().locator('.n')).toHaveText(String(trailArticleIds(primeira).length + primeira.branches.reduce((m, b) => m + (b.links?.length ?? 0), 0)));
+  await expect(page.locator(`#bay-${primeira.id} .n`)).toHaveText(String(trailArticleIds(primeira).length + primeira.branches.reduce((m, b) => m + (b.links?.length ?? 0), 0)));
 });
 
 test('biblioteca: cada subtópico é uma prateleira com o seu título', async ({ page }) => {
   await page.goto('/historia');
   const prateleiras = TRAILS.reduce((n, t) => n + t.branches.length, 0) + TOOL_BAYS.reduce((n, b) => n + b.shelves.length, 0);
-  await expect(page.locator('app-bookshelf .shelf')).toHaveCount(prateleiras);
+  await expect(page.locator('app-bookshelf .shelf')).toHaveCount(prateleiras + NOVIDADES.length);
   const contexto = page.locator('#bay-contexto');
   await expect(contexto.getByRole('heading', { level: 3, name: 'Roma e o Poder' })).toBeVisible();
   await expect(contexto.getByRole('heading', { level: 3, name: 'A Fé e a Família' })).toBeVisible();
@@ -168,4 +173,56 @@ test('estante: ?estante= abre a biblioteca já na estante do assunto (o link da 
   await page.goto('/historia');
   await expect(page.locator('#bay-profecias')).toBeVisible();
   expect((await page.locator('#bay-profecias').boundingBox())!.y).toBeGreaterThan(400);
+});
+
+test('novidades: os livros mais recentes ficam em destaque no alto da biblioteca, uma prateleira por dia, do mais novo ao mais antigo', async ({ page }) => {
+  await page.goto('/historia');
+  const novidades = page.locator('#bay-novidades');
+  await expect(novidades).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Novidades' })).toBeVisible();
+  // é a primeira estante, acima de todos os assuntos
+  await expect(page.locator('app-bookshelf .bay').first()).toHaveAttribute('id', 'bay-novidades');
+  const acima = (await novidades.boundingBox())!.y;
+  expect((await page.locator(`#bay-${TRAILS[0].id}`).boundingBox())!.y).toBeGreaterThan(acima);
+  await expect(novidades.locator('.n')).toHaveText(String(LIVROS_NOVOS));
+  await expect(novidades.locator('.lead')).toContainText('do mais novo ao mais antigo');
+  // uma prateleira por dia, com o título do dia, e os livros de cada dia na ordem da prateleira de origem
+  const dias = novidades.locator('.shelf');
+  await expect(dias).toHaveCount(NOVIDADES.length);
+  for (const [i, dia] of NOVIDADES.entries()) {
+    await expect(dias.nth(i).getByRole('heading', { level: 3 })).toHaveText(dayTitle(dia.date));
+    const livros = dias.nth(i).locator('.spine');
+    await expect(livros).toHaveCount(dia.books.length);
+    for (const [j, b] of dia.books.entries()) {
+      await expect(livros.nth(j), `${b.article.title}: nome do botão`).toHaveAccessibleName(new RegExp(`^Livro: ${b.article.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}, em ${b.trail.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`));
+    }
+  }
+  // sem número (ele vale na prateleira de origem) e sem o botão de compartilhar a estante
+  await expect(novidades.locator('.num')).toHaveCount(0);
+  await expect(novidades.getByRole('button', { name: /^Compartilhar a estante/ })).toHaveCount(0);
+});
+
+test('novidades: cada livro mantém a cor do seu assunto, e tocar nele abre a história', async ({ page }) => {
+  await page.goto('/historia');
+  const novo = recentDays()[0].books[0];
+  const livro = page.locator('#bay-novidades .spine').first();
+  await expect(livro).toContainText(novo.article.title);
+  await expect(livro).toHaveCSS('--tone', novo.trail.tone);
+  await livro.click();
+  await expect(page.locator('.stage .vol')).toContainText(novo.article.title);
+  await expect(page).toHaveURL(new RegExp(`/artigo/${novo.article.id}$`));
+});
+
+test('novidades: em tela larga ocupam a largura toda e as capas têm o mesmo tamanho das outras estantes', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/historia');
+  const novidades = page.locator('#bay-novidades');
+  const outra = page.locator(`#bay-${TRAILS[0].id}`);
+  const [a, b] = [(await novidades.boundingBox())!, (await outra.boundingBox())!];
+  expect(a.width, 'as novidades ocupam as duas colunas').toBeGreaterThan(b.width * 1.8);
+  const capaNova = (await novidades.locator('.spine').first().boundingBox())!;
+  const capaOutra = (await outra.locator('.spine').first().boundingBox())!;
+  expect(Math.abs(capaNova.width - capaOutra.width), 'mesma largura de capa').toBeLessThan(capaOutra.width * 0.2);
+  // nada passa da borda da tela
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });

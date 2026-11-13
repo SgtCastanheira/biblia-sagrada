@@ -31,6 +31,7 @@ export const PAIXAO_ARTICLES: Article[] = [
   {
     id: 'paixao-quem-mandava',
     collection: 'estudos',
+    added: '2026-11-12',
     title: 'Quem Mandava e Onde Mandava',
     subtitle: '',
     period: 'séc. I',
@@ -48,6 +49,7 @@ export const PAIXAO_ARTICLES: Article[] = [
   {
     id: 'paixao-santa-ceia',
     collection: 'estudos',
+    added: '2026-11-12',
     title: 'Santa Ceia',
     subtitle: '',
     period: 'séc. I',
@@ -65,6 +67,7 @@ export const PAIXAO_ARTICLES: Article[] = [
   {
     id: 'paixao-getsemani',
     collection: 'estudos',
+    added: '2026-11-12',
     title: 'Getsêmani',
     subtitle: '',
     period: 'séc. I',
@@ -83,6 +86,7 @@ export const PAIXAO_ARTICLES: Article[] = [
   {
     id: 'paixao-prisao-e-interrogatorio',
     collection: 'estudos',
+    added: '2026-11-12',
     title: 'Prisão e Interrogatório',
     subtitle: '',
     period: 'séc. I',
@@ -99,6 +103,7 @@ export const PAIXAO_ARTICLES: Article[] = [
   {
     id: 'paixao-acoite-e-condenacao',
     collection: 'estudos',
+    added: '2026-11-12',
     title: 'Açoite e Condenação',
     subtitle: '',
     period: 'séc. I',
@@ -114,6 +119,7 @@ export const PAIXAO_ARTICLES: Article[] = [
   {
     id: 'paixao-crucificacao',
     collection: 'estudos',
+    added: '2026-11-12',
     title: 'Crucificação',
     subtitle: '',
     period: 'séc. I',
@@ -132,6 +138,7 @@ export const PAIXAO_ARTICLES: Article[] = [
   {
     id: 'paixao-sepultamento-e-ressurreicao',
     collection: 'estudos',
+    added: '2026-11-12',
     title: 'Sepultamento e Ressurreição',
     subtitle: '',
     period: 'séc. I',

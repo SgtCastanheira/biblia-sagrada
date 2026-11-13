@@ -8,6 +8,23 @@ Regras:
 - **Decisões** dizem o que foi escolhido, por quê e o que ficou de fora. **Pendências** são o que ficou para depois.
 - O hash do commit não entra na entrada (ele ainda não existe ao escrever); `git log -- DIARIO.md` liga cada entrada ao seu commit.
 
+## 2026-11-13 18:11 -0400 — Os livros mais recentes, em destaque no alto da biblioteca
+
+**Autor:** Valter, com Claude. O dono pediu para organizar a História com os livros mais recentes sempre em destaque lá em cima, e mandou levar para a `main`.
+
+**O que sobe:**
+1. **Estante “Novidades”** no alto de `/historia`, acima de todos os assuntos (`shared/bookshelf.ts`): dourada, na largura toda em tela larga (com capas do mesmo tamanho das outras estantes) e com uma prateleira por dia (“Hoje · 13 de novembro”, “Ontem · 12 de novembro”, depois só a data), do mais novo ao mais antigo. Cada livro mantém a cor do seu assunto, abre a história com um toque e tem o nome “Livro: Título, em Assunto”. É uma cópia: o livro continua na sua própria prateleira, e a ordem das trilhas, dos ramos e dos números não mudou.
+2. **Data de cada livro:** campo novo `Article.added` (“AAAA-MM-DD”), preenchido nos 108 artigos publicados a partir da data do primeiro commit do texto de cada um (`library.ts` e `paixao.ts`). O teste exige a data em todo artigo e recusa data inexistente ou no futuro, então um livro novo não passa sem ela.
+3. **Regra do destaque** (`core/recent-books.ts`, código puro): dias inteiros, do mais novo para o mais antigo, até juntar pelo menos 6 livros, e no máximo 12; no mesmo dia vale a ordem da prateleira (trilha, ramo, posição); livro sem data conta como antigo. Hoje o destaque traz os 7 livros do Volume 4 (12 de novembro).
+4. **Novidade:** `novidades-na-estante` em `whats-new.ts`.
+5. **Testes:** `logica/novidades.spec.ts` (datas em todos os artigos; o destaque traz o livro mais novo e não deixa de fora nenhum mais novo que o último; a regra com dados inventados; ordem no dia; título do dia, com a virada de mês e de ano) e `estante.spec.ts` (contagens com a estante nova, que é a primeira, uma prateleira por dia, cor do assunto, sem número e sem botão de compartilhar, abre a história, largura em tela larga).
+
+**Decisões:** (a) A data vem do Git, e não de chute: é o dia em que o texto entrou no repositório. (b) Dias inteiros, com mínimo de 6 e máximo de 12: um volume que chegou num dia só não é cortado ao meio, e numa semana calma o destaque ainda mostra os últimos livros, de dias atrás. (c) Sem número nos livros da estante nova, porque o número é o lugar do livro na prateleira dele. (d) Fora desta entrega: ordenar os assuntos pelo livro mais novo (mexeria na ordem de `TRAILS`, que o dono definiu e que a tela inicial também segue), carrossel de rolagem lateral e selo “Novo” nas prateleiras de origem.
+
+**Validação:** num checkout limpo, sem a pasta privada: lint sem problemas; 202 testes de lógica; build de produção com `--base-href` e trava de publicação sem achados (pacote inicial 1,04 MB, sem orçamento estourado); testes de navegador da estante, estudo, histórias ligadas, compartilhar e Paixão no celular e no computador (199 ok; um teste de `historias-ligadas.spec.ts` falhou uma vez no computador, com a máquina carregada, e passou nos dois projetos ao rodar sozinho); acessibilidade, temas, navegação, busca e início no computador (156 ok, 2 ignorados); teste offline com o build de produção (8 ok). A bateria completa do navegador não foi rodada nesta entrega.
+
+**Pendências:** com muitos livros no mesmo dia a estante fica alta no celular (hoje, 12 livros ocupam cerca de uma tela e meia): se incomodar, trocar por uma fileira de rolagem lateral por dia ou baixar o máximo. Ao publicar um livro escrito dias antes, conferir se o `added` dele é o dia em que foi ao ar.
+
 ## 2026-11-13 09:34 -0400 — Livros numerados em toda prateleira de estudos e imagem para compartilhar a estante
 
 **Autor:** Valter, com Claude. O dono numerou de 1 a 7, numa captura da estante do Volume 4, os livros de “Como a Ciência Explica” e pediu para poder compartilhar a biblioteca toda numa imagem que represente tudo; depois pediu que o mesmo valesse para os demais estudos (“se tiver só 1, ok; se não, segue a contagem na ordem”) e mandou subir.

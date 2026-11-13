@@ -22,6 +22,14 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'novidades-na-estante',
+    date: '13 de novembro de 2026',
+    title: 'Os livros mais novos, no alto da biblioteca',
+    items: [
+      { icon: 'celebration', title: 'Uma estante de novidades', text: 'No alto de História, a estante “Novidades” reúne os livros que chegaram por último, uma prateleira para cada dia, do mais novo ao mais antigo. Cada livro mantém a cor do seu assunto e abre com um toque; sempre que um livro novo entrar no app, ele aparece ali primeiro.', link: '/historia', tip: 'Abra a aba História: a estante dourada fica logo abaixo da pesquisa.' },
+    ],
+  },
+  {
     id: 'estantes-numeradas',
     date: '13 de novembro de 2026',
     title: 'Livros numerados e estantes para compartilhar',

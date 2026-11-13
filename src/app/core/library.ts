@@ -9,6 +9,11 @@ export type ArticleCollection = 'estudos' | 'contexto' | 'profecias' | 'igreja' 
 export interface Article {
   id: string;
   collection: ArticleCollection;
+  /**
+   * Dia em que o livro entrou no app (“AAAA-MM-DD”). Os mais recentes ficam em destaque no alto de /historia (`core/recent-books.ts`).
+   * Todo livro novo leva a data de hoje; só os rascunhos privados ficam sem ela (e então contam como antigos).
+   */
+  added?: string;
   title: string;
   /** Uma ou duas frases curtas: aparecem nas listas e nos cartões. */
   subtitle: string;
@@ -76,6 +81,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ministerios-na-biblia',
     collection: 'estudos',
+    added: '2026-10-26',
     passages: ['EPH 4', '1TI 3', 'TIT 1', 'ACT 6', 'ACT 13', 'ACT 14', 'ACT 20', 'ACT 21', '1CO 12', '1CO 14', '2TI 4', 'JAS 5', '1TI 5', '1PE 5'],
     title: 'Os Ministérios na Bíblia',
     subtitle: 'Apóstolos, profetas, evangelistas, pastores, mestres, presbíteros e diáconos: o que cada um fazia, as qualificações e como as igrejas se organizam hoje.',
@@ -86,6 +92,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'da-volta-do-exilio-a-jesus',
     collection: 'estudos',
+    added: '2026-11-05',
     story: true,
     passages: ['EZR 7', 'NEH 2', 'NEH 8', 'HAG 2', 'MAL 4', 'MAT 1', 'MRK 3', 'MRK 7', 'MRK 12', 'MAT 22', 'MAT 23', 'LUK 3', 'LUK 6', 'ACT 5', 'ACT 23', 'PHP 3'],
     title: 'Da Volta do Exílio a Jesus',
@@ -97,6 +104,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'livros-dos-macabeus',
     collection: 'estudos',
+    added: '2026-11-05',
     story: true,
     title: 'Os Livros dos Macabeus',
     subtitle: 'Primeiro e Segundo Macabeus para ler como livros: a revolta, os mártires, a Dedicação do Templo e o que cada um conta que o outro não conta.',
@@ -107,6 +115,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'teologia-sistematico-carismatica',
     collection: 'estudos',
+    added: '2026-10-28',
     story: true,
     title: 'Teologia Sistemático-Carismática',
     subtitle: 'Síntese da introdução geral e dos capítulos 1 e 2: uma teologia que põe o Espírito Santo como fio entre as doutrinas.',
@@ -124,6 +133,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'manual-do-diacono',
     collection: 'estudos',
+    added: '2026-10-29',
     story: true,
     title: 'Manual do Diácono',
     subtitle: 'Síntese de um livro da CPAD: a origem do cargo em Atos 6, as qualificações, a provação, os deveres e a ordenação.',
@@ -133,6 +143,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'manual-do-pastor-pentecostal',
     collection: 'estudos',
+    added: '2026-10-29',
     story: true,
     title: 'Manual do Pastor Pentecostal',
     subtitle: 'Síntese de partes de uma obra coletiva: liderar em equipe, escolher presbíteros e diáconos e prestar contas.',
@@ -142,6 +153,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'manual-da-igreja-e-do-obreiro',
     collection: 'estudos',
+    added: '2026-10-29',
     story: true,
     title: 'Manual da Igreja e do Obreiro',
     subtitle: 'Síntese de um manual: três títulos para um só ofício, o concílio de consagração e o rodízio dos diáconos.',
@@ -151,6 +163,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'diacono-presbitero-e-pastor-nos-manuais',
     collection: 'estudos',
+    added: '2026-10-29',
     story: true,
     title: 'Diácono, Presbítero e Pastor nos Três Manuais',
     subtitle: 'Como cada livro prova, escolhe, ordena e sustenta quem serve, e o que isso permite dizer sobre as convenções.',
@@ -160,6 +173,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'trindade',
     collection: 'estudos',
+    added: '2026-10-27',
     story: true,
     passages: ['GEN 1', 'DEU 6', 'ISA 6', 'MAT 3', 'MAT 28', 'JHN 1', 'JHN 14', 'JHN 16', 'JHN 17', 'ACT 2', 'ACT 5', '2CO 13', 'EPH 2', 'PHP 2', 'COL 2', 'HEB 1'],
     title: 'A Trindade: Um Só Deus, Pai, Filho e Espírito Santo',
@@ -178,6 +192,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'deuses-pagaos',
     collection: 'estudos',
+    added: '2026-10-27',
     story: true,
     passages: ['EXO 12', 'EXO 20', 'EXO 32', 'NUM 25', 'JDG 2', 'JDG 6', 'JDG 16', '1SA 5', '1KI 11', '1KI 18', '2KI 1', '2KI 17', '2KI 23', 'ISA 46', 'JER 7', 'JER 44', 'EZK 8', 'ACT 14', 'ACT 17', 'ACT 19', '1CO 10'],
     title: 'Os Deuses Pagãos na Bíblia',
@@ -195,6 +210,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'natal-e-os-calendarios',
     collection: 'contexto',
+    added: '2026-10-28',
     story: true,
     passages: ['LUK 2', 'MAT 2', 'GAL 4', 'EXO 12', 'ROM 14'],
     title: 'Jesus Nasceu Mesmo em 25 de Dezembro?',
@@ -214,6 +230,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'os-faraos-da-biblia',
     collection: 'estudos',
+    added: '2026-10-27',
     story: true,
     passages: ['GEN 41', 'EXO 5', '1KI 14', '2KI 19', '2KI 23', 'JER 44'],
     title: 'Os Faraós da Bíblia',
@@ -225,6 +242,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'cativeiros-de-israel',
     collection: 'estudos',
+    added: '2026-10-23',
     passages: ['2KI 17', '2KI 24', '2KI 25', 'JER 29', 'PSA 137', 'EZR 1', 'NEH 1', 'DAN 1'],
     title: 'Os Cativeiros de Israel',
     subtitle: 'Egito, Assíria, Babilônia e o retorno: para onde o povo foi levado, por quê e o que Deus fez em cada cativeiro.',
@@ -237,6 +255,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'legiao-e-o-exercito-romano',
     collection: 'contexto',
+    added: '2026-10-23',
     title: 'Legião: O Exército Romano no Novo Testamento',
     subtitle: 'O que era uma legião, como o exército se organizava, a comparação com hoje — e o endemoninhado gadareno.',
     period: 'séc. I',
@@ -247,6 +266,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'crucificacao-romana',
     collection: 'contexto',
+    added: '2026-10-23',
     title: 'A Crucificação Romana',
     subtitle: 'Como era a execução mais temida do Império, o que diz a arqueologia e por que a cruz era escândalo.',
     period: 'séc. I',
@@ -257,6 +277,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'casamento-judaico',
     collection: 'contexto',
+    added: '2026-10-23',
     title: 'O Casamento Judaico',
     subtitle: 'O desposório de Maria e José, as bodas de Caná, as dez virgens e as bodas do Cordeiro.',
     period: 'séc. I',
@@ -267,6 +288,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'a-familia-de-herodes',
     collection: 'contexto',
+    added: '2026-10-23',
     title: 'Quem Eram os Herodes?',
     subtitle: 'Cinco governantes com o mesmo nome: do massacre de Belém ao julgamento de Paulo.',
     period: '37 a.C. – 100 d.C.',
@@ -277,6 +299,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'flavio-josefo',
     collection: 'contexto',
+    added: '2026-11-05',
     story: true,
     title: 'Flávio Josefo: O Historiador do Tempo de Jesus',
     subtitle: 'O general judeu que virou historiador de Roma: quem foi, o que escreveu e o que os seus livros contam sobre Herodes, Pilatos, João Batista, Tiago e a guerra de 66–70.',
@@ -288,6 +311,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'dinheiro-e-salarios',
     collection: 'contexto',
+    added: '2026-10-23',
     title: 'Moedas, Salários e Dívidas',
     subtitle: 'Quanto valiam o denário, o talento e a oferta da viúva — em dias de trabalho.',
     period: 'séc. I',
@@ -298,6 +322,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'o-templo-de-herodes',
     collection: 'contexto',
+    added: '2026-10-23',
     title: 'O Templo que Jesus Conheceu',
     subtitle: 'A esplanada, os pátios, a barreira dos gentios e o véu rasgado.',
     period: '20 a.C. – 70 d.C.',
@@ -308,6 +333,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'pastores-e-ovelhas',
     collection: 'contexto',
+    added: '2026-10-23',
     title: 'Pastores e Ovelhas',
     subtitle: 'O aprisco, a porta, a voz do pastor e o Salmo 23 no dia a dia do Oriente.',
     period: 'Toda a Bíblia',
@@ -318,6 +344,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'agricultura-no-tempo-de-jesus',
     collection: 'contexto',
+    added: '2026-10-23',
     title: 'O Campo nas Parábolas',
     subtitle: 'O calendário das chuvas e das festas, o semeador, o joio, a vinha e a eira.',
     period: 'Toda a Bíblia',
@@ -329,6 +356,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'como-interpretar-profecias',
     collection: 'profecias',
+    added: '2026-10-23',
     title: 'Como Interpretar as Profecias',
     subtitle: 'Princípios de leitura, tipos de cumprimento, as escolas do Apocalipse e as visões do milênio.',
     period: 'Toda a Bíblia',
@@ -338,6 +366,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'profecias-de-daniel',
     collection: 'profecias',
+    added: '2026-10-23',
     title: 'As Profecias de Daniel',
     subtitle: 'A estátua, os quatro animais, o carneiro e o bode, as setenta semanas e os reis do Norte e do Sul.',
     period: '605–536 a.C.',
@@ -348,6 +377,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'setenta-semanas',
     collection: 'profecias',
+    added: '2026-11-03',
     story: true,
     passages: ['DAN 9', 'NEH 2', 'EZR 7', 'MAT 24', 'LUK 19'],
     title: 'As Setenta Semanas de Daniel: A Conta que Chega ao Messias?',
@@ -366,6 +396,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'arrebatamento',
     collection: 'profecias',
+    added: '2026-11-03',
     story: true,
     passages: ['1TH 4', '1TH 5', '1CO 15', 'MAT 24', '2TH 2', 'REV 3'],
     title: 'O Arrebatamento: Antes, durante ou Depois da Tribulação?',
@@ -383,6 +414,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'trindade-satanica',
     collection: 'profecias',
+    added: '2026-11-03',
     story: true,
     passages: ['REV 12', 'REV 13', 'REV 16', 'REV 19', 'REV 20', '1JN 2'],
     title: 'A Trindade Satânica: Existe Mesmo Essa Trindade?',
@@ -400,6 +432,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'juizo-final',
     collection: 'profecias',
+    added: '2026-11-03',
     story: true,
     passages: ['REV 20', 'MAT 25', '2CO 5', 'ACT 17', 'JHN 5', 'ROM 14'],
     title: 'O Juízo Final: Quem Julga e Quem É Julgado?',
@@ -417,6 +450,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'nova-jerusalem',
     collection: 'profecias',
+    added: '2026-11-03',
     story: true,
     passages: ['REV 21', 'REV 22', 'ISA 65', 'HEB 11', 'HEB 12'],
     title: 'A Nova Jerusalém: Uma Cidade ou uma Noiva?',
@@ -434,6 +468,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'selos-trombetas-e-tacas',
     collection: 'profecias',
+    added: '2026-11-03',
     story: true,
     passages: ['REV 5', 'REV 6', 'REV 7', 'REV 8', 'REV 9', 'REV 16'],
     title: 'Selos, Trombetas e Taças: Uma Sequência ou Vários Ciclos?',
@@ -452,6 +487,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'apocalipse',
     collection: 'profecias',
+    added: '2026-10-23',
     title: 'O Apocalipse de João',
     subtitle: 'Patmos, as sete igrejas, os símbolos, as quatro escolas de interpretação e a vitória do Cordeiro.',
     period: 'c. 95 d.C.',
@@ -463,6 +499,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'panorama-da-igreja',
     collection: 'igreja',
+    added: '2026-10-26',
     title: 'A História da Igreja em Resumo',
     subtitle: 'Como o livro de Atos: dois mil anos contados de leve, de Pentecostes às Assembleias de Deus no Brasil — com o caminho para cada história completa.',
     period: '30–hoje',
@@ -473,6 +510,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'historia-da-igreja-andrew-miller',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Andrew Miller, Parte 1: A Pedra, a Igreja e Pentecostes',
     subtitle: 'A História da Igreja, de Andrew Miller: síntese do prefácio, da introdução e dos capítulos 1 e 2, com a linha prateada da graça, as sete cartas como mapa e o nascimento da igreja em Pentecostes.',
     topics: [
@@ -492,6 +530,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'miller-estevao-apostolos-e-paulo',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Andrew Miller, Parte 2: Estêvão, os Apóstolos e Paulo',
     subtitle: 'A História da Igreja, de Andrew Miller: síntese dos capítulos 3 a 6, da perseguição depois de Estêvão ao martírio de Paulo, com cinco pontos conferidos em outro historiador.',
     topics: [
@@ -512,6 +551,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'miller-roma-e-as-perseguicoes',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Andrew Miller, Parte 3: Roma e as Perseguições',
     subtitle: 'A História da Igreja, de Andrew Miller: síntese dos capítulos 7 a 9, de Nero a Diocleciano, com a história interna da igreja e seis pontos conferidos em outro historiador.',
     topics: [
@@ -533,6 +573,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'miller-constantino-e-os-concilios',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Andrew Miller, Parte 4: Constantino e os Concílios',
     subtitle: 'A História da Igreja, de Andrew Miller: síntese dos capítulos 10 a 12, de Constantino a Calcedônia, com batismo, monasticismo, Pelágio e Nestório, e sete pontos conferidos em outro historiador.',
     topics: [
@@ -554,6 +595,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'miller-gregorio-o-islamismo-e-carlos-magno',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Andrew Miller, Parte 5: Gregório, o Islã e Carlos Magno',
     subtitle: 'A História da Igreja, de Andrew Miller: síntese dos capítulos 13 a 16, de Gregório, o Grande, a Carlos Magno, com as Ilhas Britânicas, o Islã, a iconoclastia e os paulicianos, e oito pontos conferidos em outro historiador.',
     topics: [
@@ -576,6 +618,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'miller-gregorio-vii-e-as-cruzadas',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Andrew Miller, Parte 6: Gregório VII e as Cruzadas',
     subtitle: 'A História da Igreja, de Andrew Miller: síntese dos capítulos 17 a 20, do evangelho entre eslavos e nórdicos ao pânico do ano 1000, Gregório VII, Canossa e as Cruzadas, com sete pontos conferidos em outro historiador.',
     topics: [
@@ -595,6 +638,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'miller-bernardo-becket-e-inocencio-iii',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Andrew Miller, Parte 7: Bernardo, Becket e Inocêncio III',
     subtitle: 'A História da Igreja, de Andrew Miller: síntese dos capítulos 21 a 24, da Concordata de Worms e de Bernardo de Claraval a Tomás Becket, a teologia de Roma e o auge do papado com Inocêncio III, com dez pontos conferidos em outro historiador.',
     topics: [
@@ -618,6 +662,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'miller-albigenses-inquisicao-e-frades',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Andrew Miller, Parte 8: Albigenses, Inquisição e Frades',
     subtitle: 'A História da Igreja, de Andrew Miller: síntese dos capítulos 25 e 26, de Pedro Valdo e da cruzada albigense à Inquisição, à Regra de Bento e aos dominicanos e franciscanos, com nove pontos conferidos em outro historiador.',
     topics: [
@@ -641,6 +686,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'miller-declinio-do-papado-e-wycliffe',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Andrew Miller, Parte 9: O Declínio do Papado e Wycliffe',
     subtitle: 'A História da Igreja, de Andrew Miller: síntese dos capítulos 27 a 30, da Irlanda e da Escócia a Frederico II, Bonifácio VIII, Avignon, os escolásticos, os valdenses e John Wycliffe, com os pontos que o Ferguson permite conferir.',
     topics: [
@@ -665,6 +711,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'miller-hus-gutenberg-e-os-ultimos-precursores',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Andrew Miller, Parte 10: Hus, Gutenberg e os Últimos Precursores',
     subtitle: 'A História da Igreja, de Andrew Miller: síntese dos capítulos 31 e 32, de Jan Hus e Jerônimo de Praga, das guerras hussitas e dos Irmãos Unidos à queda de Constantinopla, à imprensa de Gutenberg e aos últimos precursores de Lutero.',
     topics: [
@@ -689,6 +736,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'historia-da-igreja-everett-ferguson',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Everett Ferguson, Parte 1: O Mundo, Jesus e a Era Apostólica',
     subtitle: 'História da Igreja, de Everett Ferguson, volume 1: síntese do prefácio e dos capítulos 1 a 3, do mundo romano, grego e judaico às igrejas de Jerusalém, Antioquia, Roma e Éfeso e aos Pais Apostólicos.',
     topics: [
@@ -713,6 +761,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ferguson-perseguicoes-heresias-e-canon',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Everett Ferguson, Parte 2: Perseguições, Heresias e Cânon',
     subtitle: 'História da Igreja, de Everett Ferguson, volume 1: síntese dos capítulos 4 a 6, das perseguições e dos apologistas a Marcião, ao gnosticismo, ao montanismo, ao episcopado, ao credo e à formação do cânon.',
     topics: [
@@ -738,6 +787,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ferguson-pais-da-igreja-e-terceiro-seculo',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Everett Ferguson, Parte 3: Os Pais da Igreja e o Terceiro Século',
     subtitle: 'História da Igreja, de Everett Ferguson, volume 1: síntese dos capítulos 7 a 9, de Irineu, Tertuliano, Clemente e Orígenes a Cipriano, à vida da igreja, às perseguições de Décio e Valeriano e às razões do crescimento do cristianismo.',
     topics: [
@@ -766,6 +816,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ferguson-constantino-e-o-quarto-seculo',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Everett Ferguson, Parte 4: Constantino, Niceia e o Quarto Século',
     subtitle: 'História da Igreja, de Everett Ferguson, volume 1: síntese dos capítulos 10 e 11, da Grande Perseguição e de Constantino ao cisma donatista, a Ário, Niceia e Constantinopla, à organização da igreja e aos grandes escritores do século IV.',
     topics: [
@@ -789,6 +840,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ferguson-monges-cristologia-e-agostinho',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Everett Ferguson, Parte 5: Monges, Cristo e Agostinho',
     subtitle: 'História da Igreja, de Everett Ferguson, volume 1: síntese dos capítulos 12 a 14, do monasticismo, das missões no Oriente e do culto às controvérsias cristológicas até Calcedônia, a Agostinho, Pelágio e o semipelagianismo.',
     topics: [
@@ -813,6 +865,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ferguson-migracoes-papado-e-igrejas-orientais',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Everett Ferguson, Parte 6: Invasões, Papado e Oriente',
     subtitle: 'História da Igreja, de Everett Ferguson, volume 1: síntese dos capítulos 15 a 17, das migrações germânicas e do papado de Leão a Gregório às igrejas orientais, a Justiniano, a Bento, ao Islã, à iconoclastia e a Fócio.',
     topics: [
@@ -843,6 +896,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ferguson-ocidente-medieval-e-cruzadas',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Everett Ferguson, Parte 7: Carlos Magno, Cluny e Cruzadas',
     subtitle: 'História da Igreja, de Everett Ferguson, volume 1: síntese dos capítulos 18 a 20, dos celtas e Bonifácio a Carlos Magno, Cluny, o cisma de 1054, Gregório VII, Canossa e a Primeira Cruzada.',
     topics: [
@@ -879,6 +933,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ferguson-escolastica-cister-e-seculo-xii',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Everett Ferguson, Parte 8: Escolástica, Cister e o Século XII',
     subtitle: 'História da Igreja, de Everett Ferguson, volume 1: síntese dos capítulos 21 e 22, da Escolástica, de Anselmo e Abelardo a Cister, Bernardo, os mestres do século XII, a arte românica e a Terceira Cruzada.',
     topics: [
@@ -908,6 +963,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ferguson-inocencio-iii-frades-e-aquino',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Everett Ferguson, Parte 9: Inocêncio III, Frades e Aquino',
     subtitle: 'História da Igreja, de Everett Ferguson, volume 1: síntese do capítulo 23, do papa Inocêncio III e a Quarta Cruzada a Domingos, Francisco, as universidades, Tomás de Aquino e o gótico.',
     topics: [
@@ -936,6 +992,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ferguson-presagios-de-declinio-e-fim-da-idade-media',
     collection: 'igreja',
+    added: '2026-11-05',
     title: 'Everett Ferguson, Parte 10: Presságios de Declínio',
     subtitle: 'História da Igreja, de Everett Ferguson, volume 1: síntese do capítulo 24, dos hereges medievais e da Inquisição às mulheres místicas, ao concílio de Lyon, às missões, a Joaquim de Fiore, Bonifácio VIII e Avinhão.',
     topics: [
@@ -962,6 +1019,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'igreja-primitiva',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'A Igreja Nasce',
     subtitle: 'De Pentecostes ao fim do primeiro século: Jerusalém, Antioquia e as viagens de Paulo.',
     period: '30–100 d.C.',
@@ -971,6 +1029,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'perseguicoes',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'O Sangue dos Mártires',
     subtitle: 'De Nero a Diocleciano: como a Igreja cresceu debaixo de perseguição.',
     period: '64–313',
@@ -980,6 +1039,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'coliseu-de-roma',
     collection: 'igreja',
+    added: '2026-10-29',
     passages: ['MAT 24', '1CO 4', 'HEB 10', 'REV 2'],
     title: 'O Coliseu: Os Cristãos Morreram Mesmo Ali?',
     subtitle: 'Levantado com o butim do Templo de Jerusalém e palco de espetáculos por mais de três séculos. O que os documentos mostram, e o que só a tradição conta.',
@@ -998,6 +1058,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'catacumbas-de-roma',
     collection: 'igreja',
+    added: '2026-10-29',
     passages: ['1TH 4', '1CO 15', 'JHN 10', 'JHN 11', 'JON 1', 'HEB 6'],
     title: 'As Catacumbas de Roma: Esconderijo ou Cemitério?',
     subtitle: 'Quilômetros de galerias escavadas na rocha, fora das muralhas de Roma. Não eram esconderijos: eram cemitérios, e guardam a maior parte da arte cristã anterior ao ano 400.',
@@ -1016,6 +1077,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'constantino-e-os-concilios',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'Constantino, Niceia e os Credos',
     subtitle: 'A liberdade de culto, os grandes concílios e a defesa da divindade de Cristo.',
     period: '313–451',
@@ -1025,6 +1087,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'idade-media',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'A Igreja na Idade Média',
     subtitle: 'Mosteiros, papado, o Grande Cisma de 1054 e as Cruzadas.',
     period: '500–1500',
@@ -1034,6 +1097,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'pre-reformadores',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'Antes de Lutero',
     subtitle: 'Valdo, Wycliffe e Hus: as vozes que pediram a Bíblia na língua do povo.',
     period: '1170–1415',
@@ -1043,6 +1107,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'reforma-protestante',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'Lutero e a Reforma Protestante',
     subtitle: 'As 95 teses, a Dieta de Worms e os cinco “solas”.',
     period: '1517–1546',
@@ -1052,6 +1117,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'reformadores',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'Zuínglio, Calvino e os Anabatistas',
     subtitle: 'A Reforma na Suíça, em Genebra e entre os que pediam o batismo de crentes.',
     period: '1519–1564',
@@ -1061,6 +1127,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'reforma-inglesa',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'A Reforma Inglesa e os Puritanos',
     subtitle: 'Tyndale, a Bíblia King James e os peregrinos do Mayflower.',
     period: '1526–1689',
@@ -1070,6 +1137,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'contrarreforma',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'A Contrarreforma',
     subtitle: 'A resposta católica: o Concílio de Trento e os jesuítas.',
     period: '1545–1648',
@@ -1079,6 +1147,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'pietismo-e-moravios',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'Pietismo e Morávios',
     subtitle: 'Uma fé do coração: Spener, Zinzendorf e a reunião de oração que durou cem anos.',
     period: '1675–1760',
@@ -1088,6 +1157,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'grandes-despertamentos',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'Os Grandes Despertamentos',
     subtitle: 'Wesley, Whitefield, Edwards e Finney: avivamentos que mudaram nações.',
     period: '1730–1850',
@@ -1097,6 +1167,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'escola-dominical',
     collection: 'igreja',
+    added: '2026-10-26',
     title: 'A História da Escola Dominical',
     subtitle: 'De Robert Raikes, em Gloucester (1780), a Sarah Kalley, em Petrópolis (1855), e às Lições Bíblicas das Assembleias de Deus.',
     period: '1780–hoje',
@@ -1107,6 +1178,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'missoes-modernas',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'O Século das Missões',
     subtitle: 'Carey, Hudson Taylor, Livingstone — e os primeiros missionários protestantes no Brasil.',
     period: '1792–1900',
@@ -1116,6 +1188,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'igreja-e-estado',
     collection: 'igreja',
+    added: '2026-10-28',
     title: 'A Igreja e o Estado no Brasil',
     subtitle: 'Da primeira missa às cidades novas do interior: como a fé reuniu o povo, o governo levou a estrutura e as cidades nasceram em volta da igreja.',
     period: '1500–hoje',
@@ -1126,6 +1199,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'igreja-na-america-do-sul',
     collection: 'igreja',
+    added: '2026-11-03',
     title: 'A Igreja na América do Sul',
     subtitle: 'Dos jesuítas e dos guaranis aos missionários da Patagônia: como a fé cristã chegou, cresceu e foi provada nos vizinhos do Brasil.',
     topics: [
@@ -1144,6 +1218,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'movimento-pentecostal',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'Azusa Street e o Movimento Pentecostal',
     subtitle: 'Topeka, Los Angeles e o batismo no Espírito Santo que se espalhou pelo mundo.',
     period: '1901–1915',
@@ -1153,6 +1228,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'pentecostes-no-brasil',
     collection: 'igreja',
+    added: '2026-10-23',
     title: 'O Pentecostalismo no Brasil',
     subtitle: 'De Belém do Pará, em 1911, às igrejas de todo o país.',
     period: '1910–hoje',
@@ -1162,6 +1238,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'daniel-berg-e-gunnar-vingren',
     collection: 'igreja',
+    added: '2026-10-26',
     title: 'Daniel Berg e Gunnar Vingren',
     subtitle: 'Os dois suecos que chegaram a Belém em 1910 e deram início à Assembleia de Deus no Brasil: a vida, o chamado, o trabalho e o legado.',
     period: '1879–1963',
@@ -1172,6 +1249,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'frida-vingren',
     collection: 'igreja',
+    added: '2026-10-26',
     title: 'Frida Vingren',
     subtitle: 'Enfermeira, missionária, pregadora, editora e compositora de hinos: a pioneira que ajudou a construir a Assembleia de Deus e foi esquecida por décadas.',
     period: '1891–1940',
@@ -1182,6 +1260,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'nome-assembleia-de-deus',
     collection: 'igreja',
+    added: '2026-11-03',
     title: 'Por que se Chama Assembleia de Deus?',
     subtitle: 'O que a palavra quer dizer na Bíblia, de onde veio o nome e o ponto que as fontes não esclarecem.',
     period: '1911–1918',
@@ -1191,6 +1270,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'estatuto-da-cgadb',
     collection: 'igreja',
+    added: '2026-11-03',
     title: 'O Estatuto da CGADB: O que Diz e o que Mudou',
     subtitle: 'Quem pode ser membro, como a convenção decide, o que mudou de 2023 para 2025, o que as resoluções dizem sobre divórcio e união estável e como é uma assembleia na prática.',
     topics: [
@@ -1210,6 +1290,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'irmaos-perseguidos',
     collection: 'igreja',
+    added: '2026-10-27',
     title: 'Os Irmãos Perseguidos',
     subtitle: 'Quem eram os pioneiros, como viviam, quem se opôs a eles, o que a lei dizia e o que ninguém registrou: Bíblias queimadas, casas apedrejadas, uma prisão e um enterro à noite.',
     period: '1914–1937',
@@ -1219,6 +1300,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'assembleia-de-deus-no-brasil',
     collection: 'igreja',
+    added: '2026-10-26',
     title: 'A História da Assembleia de Deus no Brasil',
     subtitle: 'Dos batistas de Belém e da exclusão de 1911 a todo o país, com o mapa interativo: como os obreiros eram separados em cada época, o casamento dos ministros, os costumes, o ensino e o papel das mulheres.',
     period: '1910–hoje',
@@ -1230,6 +1312,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'madureira-e-a-separacao',
     collection: 'igreja',
+    added: '2026-10-26',
     title: 'As Convenções das Assembleias de Deus',
     subtitle: 'Da Convenção Geral de 1930 ao Ministério de Madureira e à separação de 1989: como as Assembleias de Deus se organizaram — com a árvore das convenções.',
     period: '1922–hoje',
@@ -1239,6 +1322,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'cargos-na-assembleia-de-deus',
     collection: 'igreja',
+    added: '2026-10-27',
     title: 'Cooperador, Diácono, Presbítero, Evangelista e Pastor: Como se Chega a Cada Cargo',
     subtitle: 'O que a Bíblia pede, o que se encontra por escrito e o que só se ouve dizer, convenção por convenção.',
     period: 'hoje',
@@ -1248,6 +1332,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'harpa-crista',
     collection: 'igreja',
+    added: '2026-10-26',
     title: 'A História da Harpa Cristã',
     subtitle: 'Do Cantor Pentecostal de 1921 aos 640 hinos: quem organizou, traduziu e escreveu o hinário das Assembleias de Deus.',
     period: '1921–hoje',
@@ -1258,6 +1343,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamentos-desde-atos',
     collection: 'avivamentos',
+    added: '2026-10-26',
     title: 'Os Avivamentos desde Atos',
     subtitle: 'Como Atos: os grandes avivamentos da história, época por época — como começaram, por quem, o fim, o impacto na sociedade e os sermões de cada tempo.',
     period: '30–hoje',
@@ -1268,6 +1354,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamento-de-oracao-1857',
     collection: 'avivamentos',
+    added: '2026-10-26',
     title: 'O Avivamento de Oração',
     subtitle: 'Uma reunião ao meio-dia em Nova York, uma crise financeira e um milhão de convertidos: de 1857 ao Ulster de 1859.',
     period: '1857–1860',
@@ -1277,6 +1364,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamento-do-pais-de-gales',
     collection: 'avivamentos',
+    added: '2026-10-26',
     title: 'O Avivamento do País de Gales',
     subtitle: 'Evan Roberts, as quatro condições e cem mil convertidos em poucos meses — o fogo que correu o mundo.',
     period: '1904–1906',
@@ -1286,6 +1374,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamento-da-coreia',
     collection: 'avivamentos',
+    added: '2026-10-26',
     title: 'O Grande Avivamento da Coreia',
     subtitle: 'Da confissão de um missionário em Wonsan às orações de madrugada, e o que veio depois: a ocupação japonesa, a divisão em Coreia do Norte e Coreia do Sul, os golpes de Estado e a lei marcial da Coreia do Sul e o paralelo com a Coreia do Norte.',
     period: '1903–hoje',
@@ -1295,6 +1384,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamento-da-africa-oriental',
     collection: 'avivamentos',
+    added: '2026-10-26',
     title: 'O Avivamento da África Oriental',
     subtitle: 'Os balokole, “os salvos”: confissão, perdão e reconciliação de Ruanda a Uganda, ao Quênia e à Tanzânia.',
     period: '1929–1970',
@@ -1304,6 +1394,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamentos-na-america-do-sul',
     collection: 'avivamentos',
+    added: '2026-11-03',
     title: 'Avivamentos na América do Sul',
     subtitle: 'Valparaíso, em 1909, e a Argentina, em 1954 e nos anos 1980 e 1990: o que as fontes registram, e o que não consegui confirmar.',
     topics: [
@@ -1321,6 +1412,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamento-das-hebridas',
     collection: 'avivamentos',
+    added: '2026-10-26',
     title: 'O Avivamento das Hébridas',
     subtitle: 'Duas irmãs idosas oram, e uma ilha da Escócia é visitada por Deus: Lewis, 1949–1952.',
     period: '1949–1952',
@@ -1330,6 +1422,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'avivamentos-na-biblia',
     collection: 'avivamentos',
+    added: '2026-11-05',
     title: 'Os Avivamentos na Bíblia',
     subtitle: 'De Jacó em Betel à Macedônia de Paulo: reis, escribas, Nínive, Atos e as igrejas pobres que deram acima das posses.',
     topics: [
@@ -1349,6 +1442,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'marcas-de-um-avivamento',
     collection: 'avivamentos',
+    added: '2026-11-05',
     title: 'As Marcas de um Avivamento',
     subtitle: 'Dez marcas que se repetem na Bíblia e na história, cinco sinais de Edwards para testar uma obra e o que quase sempre atrapalha.',
     topics: [
@@ -1365,6 +1459,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'a-geracao-que-nao-conheceu-o-senhor',
     collection: 'avivamentos',
+    added: '2026-11-04',
     title: 'A Geração que Não Conheceu o Senhor',
     subtitle: 'Depois de Josué, de Josias e de Wesley: por que o fogo esfria na geração seguinte, o que a casa e a igreja precisam voltar a fazer para passar a fé de pai para filho e como conhecer a própria igreja.',
     topics: [
@@ -1390,6 +1485,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'a-palavra-no-coracao',
     collection: 'avivamentos',
+    added: '2026-11-04',
     title: 'A Bíblia Está no Seu Celular, mas Está em Você?',
     subtitle: 'Ter a Bíblia no celular ou na estante não é tê-la no coração: gente morreu para ela chegar ao povo, o etíope lia Isaías e não entendia, um texto muda sem ninguém ver e o tentador cita a Bíblia pela metade.',
     topics: [
@@ -1409,6 +1505,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'formacao-do-antigo-testamento',
     collection: 'biblia',
+    added: '2026-10-23',
     title: 'Como se Formou o Antigo Testamento',
     subtitle: 'A Lei, os Profetas e os Escritos: os 39 livros da Bíblia hebraica.',
     period: 'c. 1400–400 a.C.',
@@ -1418,6 +1515,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'biblia-judaica',
     collection: 'biblia',
+    added: '2026-10-27',
     title: 'A Bíblia Judaica: Como Era a Bíblia no Tempo de Jesus',
     subtitle: 'Rolos em hebraico, três partes, 24 livros e outra ordem: como os judeus leem a Escritura que Jesus leu em Nazaré.',
     period: 'séc. III a.C. – séc. X d.C.',
@@ -1427,6 +1525,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'septuaginta',
     collection: 'biblia',
+    added: '2026-10-23',
     title: 'A Septuaginta, a Bíblia Grega',
     subtitle: 'A lenda dos 72 sábios, o que se sabe de verdade, a ordem e os nomes dos livros, e a Bíblia que os apóstolos citavam.',
     period: 'séc. III a.C. – hoje',
@@ -1436,6 +1535,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'formacao-do-novo-testamento',
     collection: 'biblia',
+    added: '2026-10-23',
     title: 'Como se Formou o Novo Testamento',
     subtitle: 'Das cartas de Paulo à lista de Atanásio, em 367: os 27 livros.',
     period: '50–397 d.C.',
@@ -1445,6 +1545,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'manuscritos',
     collection: 'biblia',
+    added: '2026-10-23',
     title: 'Os Manuscritos da Bíblia',
     subtitle: 'Dos rolos do Mar Morto ao Códice Sinaítico: como sabemos que o texto foi preservado.',
     period: 'séc. III a.C. – séc. IV d.C.',
@@ -1454,6 +1555,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'apocrifos',
     collection: 'biblia',
+    added: '2026-10-23',
     title: 'Por que a Bíblia Católica Tem Mais Livros?',
     subtitle: 'Os deuterocanônicos (apócrifos), a Septuaginta e o Concílio de Trento.',
     period: 'séc. II a.C. – 1546',
@@ -1463,6 +1565,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'vulgata-e-traducoes',
     collection: 'biblia',
+    added: '2026-10-23',
     title: 'Da Vulgata à King James',
     subtitle: 'Jerônimo, Gutenberg, Lutero e Tyndale: a Bíblia na língua do povo.',
     period: '382–1611',
@@ -1472,6 +1575,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'biblia-em-portugues',
     collection: 'biblia',
+    added: '2026-10-23',
     title: 'A Bíblia em Português',
     subtitle: 'A história de João Ferreira de Almeida e das traduções que vieram depois.',
     period: '1681–hoje',
@@ -1481,6 +1585,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'idiomas-da-biblia',
     collection: 'biblia',
+    added: '2026-10-23',
     title: 'Hebraico, Aramaico e Grego',
     subtitle: 'Como ler as palavras originais: alfabetos, raízes, tempos verbais e o que eles acrescentam ao sentido.',
     period: 'Toda a Bíblia',
@@ -1490,6 +1595,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'capitulos-e-versiculos',
     collection: 'biblia',
+    added: '2026-10-23',
     title: 'Quem Dividiu a Bíblia em Capítulos e Versículos?',
     subtitle: 'Stephen Langton, Robert Estienne — e por que as divisões não são inspiradas.',
     period: '1227–1560',
