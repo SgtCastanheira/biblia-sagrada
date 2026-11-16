@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /**
- * Gera a narração em áudio das histórias do app, com a voz neural do Azure (padrão) ou da ElevenLabs.
+ * Gera a narração das histórias com Azure (padrão), ElevenLabs ou Gemini.
  *
  *   AZURE_SPEECH_KEY=... AZURE_SPEECH_REGION=brazilsouth node tools/gerar-audio.mjs --dry-run
  *   AZURE_SPEECH_KEY=... AZURE_SPEECH_REGION=brazilsouth node tools/gerar-audio.mjs --only igreja-primitiva
  *   ELEVENLABS_API_KEY=... ELEVENLABS_VOICE_ID=... node tools/gerar-audio.mjs --provedor elevenlabs --only igreja-primitiva --amostra
+ *   node --env-file=/tmp/biblia-gemini-tts.env tools/gerar-audio.mjs --provedor gemini --only paixao-quem-mandava --amostra
  *   node tools/gerar-audio.mjs                       (todas as histórias e todos os estados)
  *
  * A chave fica só no seu computador (variável de ambiente): nunca vai para o código nem para o Git.
@@ -18,6 +19,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { GEMINI_TTS_MODEL, GEMINI_TTS_STYLE, GEMINI_TTS_VOICE, synthesizeGemini } from './gemini-tts.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -28,24 +30,27 @@ const option = (name, fallback) => {
 };
 
 const PROVIDER = option('provedor', process.env.AUDIO_PROVEDOR ?? 'azure');
-if (!['azure', 'elevenlabs'].includes(PROVIDER)) {
-  console.error('--provedor deve ser azure ou elevenlabs.');
+if (!['azure', 'elevenlabs', 'gemini'].includes(PROVIDER)) {
+  console.error('--provedor deve ser azure, elevenlabs ou gemini.');
   process.exit(1);
 }
 const ELEVEN = PROVIDER === 'elevenlabs';
+const GEMINI = PROVIDER === 'gemini';
+const SAMPLE = flag('amostra');
 // Azure: nome da voz. ElevenLabs: o ID da voz (copie em "Voices" > Copy voice ID, depois de testá-la em Speech Synthesis).
-const VOICE = ELEVEN ? option('voz', process.env.ELEVENLABS_VOICE_ID ?? '') : option('voice', 'pt-BR-FranciscaNeural');
+const VOICE = GEMINI ? option('voz', option('voice', process.env.GEMINI_TTS_VOICE ?? GEMINI_TTS_VOICE)) : ELEVEN ? option('voz', process.env.ELEVENLABS_VOICE_ID ?? '') : option('voice', 'pt-BR-FranciscaNeural');
 const RATE = option('rate', '-8%'); // Azure: um pouco mais devagar que a fala normal, soa calmo
 const SPEED = Number(option('velocidade', '0.95')); // ElevenLabs: 1 é a velocidade normal (aceita de 0,7 a 1,2)
-const MODEL = option('modelo', process.env.ELEVENLABS_MODEL ?? 'eleven_multilingual_v2');
-const FORMAT = ELEVEN ? 'mp3_44100_128' : 'audio-24khz-48kbitrate-mono-mp3';
+const MODEL = option('modelo', GEMINI ? process.env.GEMINI_TTS_MODEL ?? GEMINI_TTS_MODEL : process.env.ELEVENLABS_MODEL ?? 'eleven_multilingual_v2');
+const STYLE = option('estilo', process.env.GEMINI_TTS_STYLE ?? GEMINI_TTS_STYLE);
+const FORMAT = GEMINI ? 'mp3-mono-source-rate-48k' : ELEVEN ? 'mp3_44100_128' : 'audio-24khz-48kbitrate-mono-mp3';
 const BITRATE = ELEVEN ? 128000 : 48000;
 const BYTES_PER_SECOND = BITRATE / 8; // só para a estimativa; a duração real vem de mp3Seconds
 const PAUSE_MS = 500;
 /** Tudo o que muda o som: entra no cache e na "assinatura" de cada história. */
-const CONFIG = ELEVEN ? `elevenlabs|${VOICE}|${MODEL}|${SPEED}|${FORMAT}|${PAUSE_MS}` : `azure|${VOICE}|${RATE}|${FORMAT}|${PAUSE_MS}`;
+const CONFIG = GEMINI ? JSON.stringify({ provider: PROVIDER, voice: VOICE, model: MODEL, style: STYLE, format: FORMAT, pauseMs: PAUSE_MS }) : ELEVEN ? `elevenlabs|${VOICE}|${MODEL}|${SPEED}|${FORMAT}|${PAUSE_MS}` : `azure|${VOICE}|${RATE}|${FORMAT}|${PAUSE_MS}`;
 // Nome mostrado no player ("Brian (voz neural)"); na ElevenLabs o ID da voz não diz nada a quem ouve
-const VOICE_LABEL = ELEVEN ? option('nome-voz', 'ElevenLabs') : VOICE;
+const VOICE_LABEL = option('nome-voz', GEMINI ? `${VOICE} (Gemini)` : ELEVEN ? 'ElevenLabs' : VOICE);
 const ONLY = option('only', '')?.split(',').filter(Boolean) ?? [];
 const FREE_MONTHLY_CHARS = 500_000;
 
@@ -119,8 +124,14 @@ const indexPath = join(root, 'public/audio/index.json');
 const index = existsSync(indexPath) ? JSON.parse(readFileSync(indexPath, 'utf8')) : { voice: '', files: {} };
 const sourceOf = (job) => createHash('sha1').update(`${CONFIG}|${job.items.map((i) => i.text).join('\n')}`).digest('hex').slice(0, 16);
 const textOf = (job) => createHash('sha1').update(job.items.map((i) => i.text).join('\n')).digest('hex').slice(0, 16);
-const charsOf = (job) => job.items.reduce((m, i) => m + i.text.length, 0);
-let pending = jobs.filter((j) => {
+if (SAMPLE && (!ONLY.length || jobs.length !== 1)) {
+  console.error('Use --amostra com --only e uma só história (ex.: --only paixao-quem-mandava).');
+  process.exit(1);
+}
+const selectedItems = (job) => SAMPLE ? job.items.slice(0, 3) : job.items;
+const sampleText = (job) => selectedItems(job).map(item => item.text).join('\n\n');
+const charsOf = (job) => SAMPLE && GEMINI ? sampleText(job).length : selectedItems(job).reduce((m, i) => m + i.text.length, 0);
+let pending = SAMPLE ? [...jobs] : jobs.filter((j) => {
   if (flag('force')) return true;
   const entry = index.files[j.key];
   // --completar: serve a gravação de qualquer voz; só falta o que não tem áudio ou cujo texto mudou
@@ -139,24 +150,28 @@ if (quota) {
 const chars = pending.reduce((n, j) => n + charsOf(j), 0);
 
 console.log(`${jobs.length} histórias · ${pending.length} para gerar · ${chars.toLocaleString('pt-BR')} caracteres${postponed ? ` · ${postponed} ficam para a próxima rodada (passam da cota de ${quota.toLocaleString('pt-BR')})` : ''}`);
-console.log(`Estimativa: ${Math.round(chars / 900)} minutos de áudio, ${Math.round((chars / 900) * 60 * BYTES_PER_SECOND / 1048576)} MB.`);
-if (ELEVEN) {
+const estimatedMegabytes = (chars / 900) * 60 * BYTES_PER_SECOND / 1048576;
+console.log(`Estimativa: ${Math.round(chars / 900)} minutos de áudio, ${SAMPLE ? estimatedMegabytes.toFixed(1).replace('.', ',') : Math.round(estimatedMegabytes)} MB.`);
+if (GEMINI) {
+  console.log(`Voz ${VOICE}, modelo ${MODEL}, MP3 mono de 48 kbit/s. A cota gratuita depende do projeto no Google AI Studio.`);
+  if (SAMPLE) console.log('Amostra: três trechos iniciais em uma única requisição, sem alterar o índice de áudios do app.');
+} else if (ELEVEN) {
   console.log(`Voz ${VOICE || '(defina ELEVENLABS_VOICE_ID ou --voz)'}, modelo ${MODEL}, velocidade ${SPEED}.`);
   console.log(`Consumo: cerca de ${chars.toLocaleString('pt-BR')} créditos (1 por caractere no modelo multilingual v2; confira a franquia e as regras de uso do seu plano no site da ElevenLabs).`);
 } else {
   console.log(`Voz ${VOICE}, velocidade ${RATE}. Plano gratuito do Azure: ${FREE_MONTHLY_CHARS.toLocaleString('pt-BR')} caracteres por mês (${Math.round((chars / FREE_MONTHLY_CHARS) * 100)}% dele).`);
 }
-if (flag('dry-run') || (!pending.length && !flag('amostra'))) process.exit(0);
-
-const KEY = ELEVEN ? process.env.ELEVENLABS_API_KEY : process.env.AZURE_SPEECH_KEY;
-const REGION = process.env.AZURE_SPEECH_REGION;
-if (ELEVEN ? !KEY || !VOICE : !KEY || !REGION) {
-  console.error(ELEVEN ? 'Defina ELEVENLABS_API_KEY e ELEVENLABS_VOICE_ID (veja tools/LEIA-ME.md).' : 'Defina AZURE_SPEECH_KEY e AZURE_SPEECH_REGION (veja tools/LEIA-ME.md).');
-  process.exit(1);
-}
 const limit = Number(option('limite', '0'));
 if (limit && chars > limit) {
   console.error(`Isso passa do limite de ${limit} caracteres que você pediu (--limite). Use --only para gerar aos poucos.`);
+  process.exit(1);
+}
+if (flag('dry-run') || !pending.length) process.exit(0);
+
+const KEY = GEMINI ? process.env.GEMINI_API_KEY : ELEVEN ? process.env.ELEVENLABS_API_KEY : process.env.AZURE_SPEECH_KEY;
+const REGION = process.env.AZURE_SPEECH_REGION;
+if (GEMINI ? !KEY?.trim() : ELEVEN ? !KEY || !VOICE : !KEY || !REGION) {
+  console.error(GEMINI ? 'Defina GEMINI_API_KEY no ambiente local para gerar a narração.' : ELEVEN ? 'Defina ELEVENLABS_API_KEY e ELEVENLABS_VOICE_ID (veja tools/LEIA-ME.md).' : 'Defina AZURE_SPEECH_KEY e AZURE_SPEECH_REGION (veja tools/LEIA-ME.md).');
   process.exit(1);
 }
 
@@ -253,45 +268,48 @@ async function synthesize(text, before = '', after = '') {
   const id = createHash('sha1').update(`${CONFIG}|${ELEVEN ? `${before.slice(-400)}|${after.slice(0, 400)}|` : ''}${text}`).digest('hex');
   const file = join(cacheDir, `${id}.mp3`);
   if (existsSync(file)) return readFileSync(file);
-  const bytes = ELEVEN ? await synthesizeEleven(text, before, after) : await synthesizeAzure(text);
+  const bytes = GEMINI ? await synthesizeGemini(text, { apiKey: KEY, model: MODEL, voice: VOICE, style: STYLE, pauseMs: PAUSE_MS }) : ELEVEN ? await synthesizeEleven(text, before, after) : await synthesizeAzure(text);
   writeFileSync(file, bytes);
   return bytes;
 }
 
-if (flag('amostra')) {
-  // Para escolher a voz antes de gastar: grava só o começo de uma história, fora do app (tools/amostra-*.mp3)
-  const job = jobs[0];
-  if (!job || jobs.length > 1) {
-    console.error('Use --amostra com --only e uma só história (ex.: --only igreja-primitiva).');
-    process.exit(1);
+try {
+  if (SAMPLE) {
+    // Para escolher a voz antes de gastar: grava só o começo de uma história, fora do app (tools/amostra-*.mp3)
+    const job = jobs[0];
+    const texts = selectedItems(job).map((i) => i.text);
+    const audio = [];
+    if (GEMINI) audio.push(await synthesize(sampleText(job)));
+    else for (const [k, t] of texts.entries()) audio.push(await synthesize(t, texts[k - 1] ?? '', texts[k + 1] ?? ''));
+    const out = join(root, 'tools', `amostra-${PROVIDER}-${VOICE.replace(/[^\w-]+/g, '_') || 'voz'}.mp3`);
+    writeFileSync(out, Buffer.concat(audio));
+    console.log(`Amostra gravada em ${out} (${Math.round(mp3Seconds(Buffer.concat(audio)))} s). Ouça e, se gostar, rode sem --amostra.`);
+    process.exit(0);
   }
-  const texts = job.items.slice(0, 3).map((i) => i.text);
-  const audio = [];
-  for (const [k, t] of texts.entries()) audio.push(await synthesize(t, texts[k - 1] ?? '', texts[k + 1] ?? ''));
-  const out = join(root, 'tools', `amostra-${PROVIDER}-${VOICE.replace(/[^\w-]+/g, '_') || 'voz'}.mp3`);
-  writeFileSync(out, Buffer.concat(audio));
-  console.log(`Amostra gravada em ${out} (${Math.round(mp3Seconds(Buffer.concat(audio)))} s). Ouça e, se gostar, rode sem --amostra.`);
-  process.exit(0);
-}
 
-for (const [n, job] of pending.entries()) {
-  const parts = [];
-  const items = [];
-  let seconds = 0;
-  for (const [k, item] of job.items.entries()) {
-    const audio = await synthesize(item.text, job.items[k - 1]?.text ?? '', job.items[k + 1]?.text ?? '');
-    items.push({ t: Math.round(seconds * 100) / 100, k: app.textKey(item.shown) });
-    parts.push(audio);
-    seconds += mp3Seconds(audio);
+  for (const [n, job] of pending.entries()) {
+    const parts = [];
+    const items = [];
+    let seconds = 0;
+    for (const [k, item] of job.items.entries()) {
+      const audio = await synthesize(item.text, job.items[k - 1]?.text ?? '', job.items[k + 1]?.text ?? '');
+      items.push({ t: Math.round(seconds * 100) / 100, k: app.textKey(item.shown) });
+      parts.push(audio);
+      seconds += mp3Seconds(audio);
+    }
+    const out = join(root, 'public/audio', `${job.key}.mp3`);
+    mkdirSync(dirname(out), { recursive: true });
+    const all = Buffer.concat(parts);
+    writeFileSync(out, all);
+    index.files[job.key] = { source: sourceOf(job), text: textOf(job), voice: VOICE_LABEL, seconds: Math.round(seconds), items };
+    index.voice = VOICE_LABEL;
+    mkdirSync(dirname(indexPath), { recursive: true });
+    writeFileSync(indexPath, JSON.stringify(index));
+    console.log(`[${n + 1}/${pending.length}] ${job.key} · ${Math.round(seconds / 60)} min · ${(all.length / 1048576).toFixed(1)} MB`);
   }
-  const out = join(root, 'public/audio', `${job.key}.mp3`);
-  mkdirSync(dirname(out), { recursive: true });
-  const all = Buffer.concat(parts);
-  writeFileSync(out, all);
-  index.files[job.key] = { source: sourceOf(job), text: textOf(job), voice: VOICE_LABEL, seconds: Math.round(seconds), items };
-  index.voice = VOICE_LABEL;
-  mkdirSync(dirname(indexPath), { recursive: true });
-  writeFileSync(indexPath, JSON.stringify(index));
-  console.log(`[${n + 1}/${pending.length}] ${job.key} · ${Math.round(seconds / 60)} min · ${(all.length / 1048576).toFixed(1)} MB`);
+  console.log('Pronto. Confira com "npx ng serve" e commite public/audio.');
+} catch (error) {
+  const message = (error instanceof Error ? error.message : 'Não foi possível concluir a geração.').replaceAll(KEY, '[chave ocultada]').replace(/\s+/g, ' ').slice(0, 600);
+  console.error(`Falha ao gerar áudio: ${message}`);
+  process.exitCode = 1;
 }
-console.log('Pronto. Confira com "npx ng serve" e commite public/audio.');

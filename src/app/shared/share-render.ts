@@ -171,6 +171,24 @@ export async function renderShareImage(card: ShareCard, format: ShareFormat): Pr
   glow.addColorStop(1, 'rgba(255, 248, 236, 0)');
   ctx.fillStyle = glow;
   ctx.fillRect(0, 0, W, H);
+  // O cartão dos arcos tem arte própria; o alto e o rodapé ficam escuros para a leitura e o QR code.
+  if (card.art) {
+    const background = await loadImage(`conteudo/imagens/conexoes-compartilhar-${stories ? 'stories' : 'feed'}.webp`);
+    if (background) {
+      const scale = Math.max(W / background.naturalWidth, H / background.naturalHeight);
+      const w = background.naturalWidth * scale;
+      const h = background.naturalHeight * scale;
+      ctx.drawImage(background, (W - w) / 2, (H - h) / 2, w, h);
+      const veil = ctx.createLinearGradient(0, 0, 0, H);
+      veil.addColorStop(0, 'rgba(18, 35, 26, .82)');
+      veil.addColorStop(.3, 'rgba(18, 35, 26, .76)');
+      veil.addColorStop(.52, 'rgba(18, 35, 26, .4)');
+      veil.addColorStop(.78, 'rgba(18, 35, 26, .84)');
+      veil.addColorStop(1, 'rgba(18, 35, 26, .94)');
+      ctx.fillStyle = veil;
+      ctx.fillRect(0, 0, W, H);
+    }
+  }
   ctx.strokeStyle = 'rgba(241, 217, 168, 0.45)';
   ctx.lineWidth = 3;
   roundRect(ctx, 30, 30, W - 60, H - 60, 28);
@@ -268,20 +286,22 @@ export async function renderShareImage(card: ShareCard, format: ShareFormat): Pr
 
   // título: o maior tamanho que cabe em poucas linhas
   const shelf = !!card.books?.length;
-  let titleMax = com ? (stories ? 3 : 2) : shelf ? 1 : stories ? 5 : 3;
-  let size = com ? (stories ? 80 : 62) : shelf ? (stories ? 72 : 60) : stories ? 88 : 76;
+  // estante e desenho da página (arcos) ficam com o título numa linha, para sobrar espaço ao desenho
+  const compact = shelf || !!card.art;
+  let titleMax = com ? (stories ? 3 : 2) : compact ? 1 : stories ? 5 : 3;
+  let size = com ? (stories ? 80 : 62) : compact ? (stories ? 72 : 60) : stories ? 88 : 76;
   let titleLines: string[] = [];
   if (dateText) {
     size = dateText.size;
     titleLines = dateText.titleLines;
   } else {
-    for (; size >= (shelf ? 48 : com ? 44 : 52); size -= 4) {
+    for (; size >= (compact ? 48 : com ? 44 : 52); size -= 4) {
       ctx.font = `700 ${size}px ${SERIF}`;
       titleLines = wrapLines(ctx, card.title, textW);
       if (titleLines.length <= titleMax) break;
     }
     // na estante o título fica numa linha para sobrar espaço às capas; se não couber nem a 48 px, vai para duas linhas menores
-    if (shelf && titleLines.length > titleMax) {
+    if (compact && titleLines.length > titleMax) {
       titleMax = 2;
       size = 52;
       ctx.font = `700 ${size}px ${SERIF}`;
@@ -402,6 +422,8 @@ export async function renderShareImage(card: ShareCard, format: ShareFormat): Pr
 
   // estante: as capas numeradas dos livros de uma prateleira em sequência, no espaço que sobrou até o rodapé
   if (card.books?.length) await drawShelf(ctx, card.books, { x: PAD, y, w: textW, h: listBottom - y }, tone, stories);
+  // desenho da própria página (os arcos de A Bíblia Conectada), no espaço que sobrou até o rodapé
+  if (card.art) await card.art.draw(ctx, { x: PAD, y: y + 4, w: textW, h: listBottom - y - 4 }, { stories, tone });
 
   // rodapé: convite, nome, endereço e QR code
   ctx.fillStyle = 'rgba(0, 0, 0, 0.26)';

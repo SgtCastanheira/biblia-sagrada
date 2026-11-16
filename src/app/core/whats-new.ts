@@ -22,6 +22,17 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'biblia-conectada-e-cinco-estudos',
+    date: '16 de novembro de 2026',
+    title: 'A Bíblia Conectada e cinco estudos novos',
+    items: [
+      { icon: 'hub', title: 'A Bíblia Conectada', text: 'Os 1.189 capítulos numa só linha, com um arco para cada ligação entre dois capítulos. Escolha um capítulo ou um livro inteiro e veja para onde ele aponta. Abaixo do desenho, leia os versículos dos dois lados lado a lado, ou abra o mapa mental e vá de ramo em ramo.', link: '/conexoes', tip: 'Em História, na estante “Para Entender a Bíblia”, ou toque num versículo e escolha “Ver as conexões deste capítulo”' },
+      { icon: 'visibility', title: 'Deus de Perto, Deus de Longe', text: 'Por que a Bíblia mostra gente que ouviu falar de Deus e gente que o viu, e o que a diferença custa. Oito perguntas, de Gênesis ao Apocalipse.', link: '/artigo/deus-de-perto-deus-de-longe' },
+      { icon: 'menu_book', title: 'Os Dois Ferros', text: 'Dois estudos sobre Provérbios 27.17: o ferro que fere, o adversário que Deus usa para afiar os seus, e o ferro que levanta, a passagem de alguém maior.', link: '/artigo/o-ferro-que-fere' },
+      { icon: 'menu_book', title: 'Acreditar e Crer', text: 'A mesma jornada de seis cenas, de Gênesis ao Apocalipse, contada em voz pentecostal e em voz presbiteriana: a diferença entre saber que Deus existe e entregar a vida a ele.', link: '/artigo/acreditar-e-crer-pentecostal' },
+    ],
+  },
+  {
     id: 'novidades-na-estante',
     date: '13 de novembro de 2026',
     title: 'Os livros mais novos, no alto da biblioteca',

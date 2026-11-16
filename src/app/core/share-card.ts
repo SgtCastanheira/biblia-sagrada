@@ -30,6 +30,11 @@ export interface ShareTopic {
   subs?: string[];
 }
 
+/** Um desenho próprio da página, que a imagem de compartilhar mostra no lugar da lista de tópicos: `draw` pinta dentro de `box`. */
+export interface ShareArt {
+  draw: (ctx: CanvasRenderingContext2D, box: { x: number; y: number; w: number; h: number }, opts: { stories: boolean; tone: string }) => Promise<void> | void;
+}
+
 /** Um livro da estante desenhada na imagem de uma prateleira: a capa, com o número na quina. */
 export interface ShareBook {
   /** Posição na prateleira (1, 2, 3…); os atalhos para outras telas não têm número. */
@@ -75,6 +80,8 @@ export interface ShareCard {
   hideTitle?: boolean;
   /** Os livros de uma prateleira, desenhados como capas numeradas numa estante (no lugar da lista de tópicos). */
   books?: ShareBook[];
+  /** Um desenho da própria página (os arcos de A Bíblia Conectada), no lugar da lista de tópicos. */
+  art?: ShareArt;
 }
 
 const MAX_TOPICS = 12;
@@ -168,6 +175,8 @@ export function articleCard(articleId: string, md: string): ShareCard | null {
   if (!a) return null;
   const trail = trailOfArticle(a.id);
   const topics: ShareTopic[] = [];
+  // Quando a história tem tópicos na capa, só eles entram na imagem; os outros títulos (a conclusão, a oração) ficam de fora, como na capa
+  const onlyTopics = a.topics?.length ? new Set(a.topics.map(headingKey)) : null;
   // Subtópico que acabou de entrar: uma linha de hora (`:::hora`) logo depois do título da cena é dele e vai junto
   let scene: { topic: ShareTopic; index: number } | null = null;
   for (const b of parseBlocks(md)) {
@@ -179,7 +188,7 @@ export function articleCard(articleId: string, md: string): ShareCard | null {
     }
     scene = null;
     if (b.type === 'h2') {
-      if (SPECIAL_KEYS.has(headingKey(text))) {
+      if (SPECIAL_KEYS.has(headingKey(text)) || (onlyTopics && !onlyTopics.has(headingKey(text)))) {
         topics.push({ title: '' });
         continue;
       }
@@ -402,6 +411,11 @@ export function shelfCard(t: Trail, b: TrailBranch): ShareCard | null {
     tone: t.tone,
     cta: 'Abra a biblioteca',
   };
+}
+
+/** Imagem de A Bíblia Conectada: o título do que está em foco (ou da tela), a contagem e o desenho dos arcos; o link abre a tela no mesmo ponto. */
+export function connectionsCard(c: { path: string; theme: string; title: string; subtitle: string; art: ShareArt }): ShareCard {
+  return { path: c.path, theme: c.theme, title: c.title, subtitle: c.subtitle, topics: [], art: c.art, cta: 'Explore as conexões da Bíblia' };
 }
 
 /** Imagem de uma data da história: o selo com os anos, a data, a foto com o crédito e o título do fato. */

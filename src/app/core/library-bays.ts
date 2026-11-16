@@ -86,6 +86,7 @@ export const TOOL_BAYS: ToolBay[] = [
         title: 'Para Entender a Bíblia',
         books: [
           { title: 'Contexto dos Livros', subtitle: 'Autor, data e cenário de cada livro, de Gênesis a Apocalipse, com tudo o que há para estudar nele.', icon: 'menu_book', url: '/estudo/livros' },
+          { title: 'A Bíblia Conectada', subtitle: 'Os 1.189 capítulos ligados por arcos: escolha um capítulo e veja para onde ele aponta.', icon: 'hub', url: '/conexoes' },
           { title: 'Você Sabia?', subtitle: 'Curiosidades bíblicas, com os versículos.', icon: 'lightbulb', url: '/curiosidades' },
           { title: 'Você Lembra o que Leu?', subtitle: 'Jogo de perguntas com alternativas A, B, C e D sobre um capítulo, um livro inteiro ou uma história.', icon: 'quiz', url: '/quiz' },
         ],

@@ -11,6 +11,7 @@ Scripts que geram os arquivos estáticos do app. Rode a partir da raiz do projet
 | `gerar-versoes.py` | `public/bible/{blivre,nbv,bpm,blt}/*.json` e o índice — as versões em português de licença livre do eBible.org | Baixe e descompacte `https://eBible.org/Scriptures/<id>_vpl.zip` (`porbr2018`, `poronbv`, `porbrbsl`, `porblt`; as línguas indígenas: `gun`, `gubBl`, `kgkNT`, `kyzNT`, `urbNT`, `myu`, `mavNT`, `tcaNT`, `kgpNT`, `terNT`, `xavNT`), cada um na sua pasta, e rode `python3 -I tools/gerar-versoes.py <pasta> public/bible` |
 | `sword-para-vpl.py` | Texto no formato VPL a partir de um módulo SWORD da CrossWire (NVA e Almeida 1911) | Baixe `https://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/<Nome>.zip` e o [pysword](https://pypi.org/project/pysword) (MIT), e rode `python3 -I tools/sword-para-vpl.py <pasta_do_pysword> <Nome>.zip <Nome> <pasta>/<Nome>/<Nome>_vpl.txt`; depois o `gerar-versoes.py` |
 | `gerar-referencias.py` | `public/bible/referencias/*.json` (textos relacionados de cada versículo, da OpenBible.info, CC BY) | Baixe `https://a.openbible.info/data/cross-references.zip` e rode `python3 -I tools/gerar-referencias.py cross-references.zip public/bible/referencias` |
+| `gerar-conexoes.py` | `public/bible/conexoes.json` (as ligações entre os capítulos da Bíblia, para a tela “A Bíblia Conectada”, feitas a partir de `public/bible/referencias`) | Rode `python3 -I tools/gerar-conexoes.py` sempre que `gerar-referencias.py` gerar as referências de novo. O teste `logica/conexoes.spec.ts` avisa quando o arquivo está velho |
 | `gerar-mapas.py` | `public/maps/*.json` (geografia do Natural Earth, domínio público, com as fronteiras atuais); inclui o mapa do atlas (`src/app/core/atlas.ts`) | Baixe `ne_50m_land`, `ne_10m_land`, `ne_10m_lakes`, `ne_10m_rivers_lake_centerlines` e `ne_50m_admin_0_boundary_lines_land` (GeoJSON) em uma pasta e rode `python3 tools/gerar-mapas.py src/app/core/maps.ts <pasta> public/maps` — sempre que criar um mapa ou mudar os limites |
 
 ## Conteúdo de estudo (`public/conteudo/`)
@@ -35,7 +36,29 @@ O veredito é um de três: “já existe estudo dedicado” (complete ou ramifiq
 
 ## gerar-audio.mjs — a narração em voz neural das histórias
 
-Grava, com a voz neural da Microsoft (Francisca, pt-BR) ou, se preferir, da ElevenLabs (veja abaixo), a narração de cada história e de cada estado da Assembleia de Deus. O app toca esses áudios no botão "Ouvir" (em qualquer navegador) e destaca o parágrafo que está sendo falado; onde não há áudio, usa a voz do aparelho.
+Grava, com Gemini TTS, Azure Speech ou ElevenLabs, a narração de cada história e de cada estado da Assembleia de Deus. O app toca esses áudios no botão "Ouvir" (em qualquer navegador) e destaca o parágrafo que está sendo falado; onde não há áudio, usa a voz do aparelho.
+
+### Com Gemini TTS — amostra para testar no celular
+
+A geração acontece no computador; o celular recebe somente o MP3. O modelo padrão é `gemini-2.5-flash-preview-tts`, com voz `Kore` e instrução de leitura fiel em português brasileiro. A [tabela de preços do Google](https://aistudio.google.com/docs/pricing#gemini-2.5-flash-preview-tts) prevê um nível gratuito com limites por projeto. Confira o plano no AI Studio antes de gerar; a ferramenta não ativa faturamento nem troca de modelo automaticamente quando a cota acaba. Nos serviços gratuitos, os termos do Google permitem usar entradas e saídas para melhorar seus produtos.
+
+1. Crie uma chave em [Google AI Studio](https://aistudio.google.com/apikey) e mantenha o projeto no nível gratuito.
+2. Configure `GEMINI_API_KEY` no ambiente. No Linux, pode usar um arquivo **fora do projeto**, como `/tmp/biblia-gemini-tts.env`, com permissão `600` e uma linha `GEMINI_API_KEY=sua-chave`. Esse arquivo é temporário: não o coloque em `public/`, no código ou no Git.
+3. Confira a estimativa e gere apenas uma amostra:
+
+```bash
+node tools/gerar-audio.mjs --provedor gemini --only paixao-quem-mandava --amostra --dry-run
+node --env-file=/tmp/biblia-gemini-tts.env tools/gerar-audio.mjs --provedor gemini --only paixao-quem-mandava --amostra --limite 1500
+```
+
+- `--amostra` reúne os três primeiros trechos em **uma única chamada** e grava `tools/amostra-gemini-Kore.mp3`, fora do Git. Não substitui a narração completa nem altera `public/audio/index.json`.
+- O MP3 é mono de **48 kbit/s**, convertido em JavaScript no gerador, sem exigir FFmpeg no sistema nem processamento de IA no celular.
+- `--voz Charon` escolhe outra voz; `--modelo`, `GEMINI_TTS_MODEL`, `--estilo`, `GEMINI_TTS_STYLE` e `--nome-voz` são configuráveis. Modelo, voz, estilo e formato fazem parte do cache: repetir a mesma geração reutiliza o arquivo local.
+- `--limite` e `--cota` contam somente os caracteres da amostra quando `--amostra` está presente. Essas opções limitam o texto enviado; a cota real do Gemini é controlada pelo Google.
+- Erros `401/403` pedem conferir chave e permissões; `429` pede conferir os limites no AI Studio. A ferramenta encerra sem repetir pedidos Gemini nem migrar para uma opção paga.
+- Depois de aprovar a voz, retire `--amostra` para gerar a história completa e seus tempos por parágrafo. A chave continua somente no gerador; o app recebe os arquivos de áudio.
+
+### Com a voz do Azure (padrão)
 
 **Uma vez só: criar a chave (grátis)**
 

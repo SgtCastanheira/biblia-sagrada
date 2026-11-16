@@ -29,6 +29,9 @@ export interface SourceSet {
 export const WORKS: Record<string, Work> = {
   ...DRAFT_WORKS,
   ...PAIXAO_WORKS,
+  // A Bíblia Conectada (as ligações entre os capítulos)
+  'openbible-cross-references': { author: 'OpenBible.info', title: 'Cross References', publisher: 'https://www.openbible.info/labs/cross-references/ (licença Creative Commons Atribuição). Reúne sobretudo o Treasury of Scripture Knowledge, em domínio público, e votos de leitores; consultado em 13 de novembro de 2026', kind: 'referencia' },
+  'harrison-romhild': { author: 'Chris Harrison e Christoph Römhild', title: 'Bible Cross-References', publisher: 'https://www.chrisharrison.net/index.php/Visualizations/BibleViz, desde 2007. A ideia de ligar os capítulos da Bíblia por arcos vem desta obra; a imagem tem direitos reservados e não é usada no app, e os dados dela não foram usados', kind: 'referencia' },
   // Referência geral
   'walton-at': { author: 'John H. Walton, Victor H. Matthews e Mark W. Chavalas', title: 'Comentário histórico-cultural da Bíblia: Antigo Testamento', publisher: 'Vida Nova', kind: 'referencia' },
   'keener-nt': { author: 'Craig S. Keener', title: 'Comentário histórico-cultural da Bíblia: Novo Testamento', publisher: 'Vida Nova', kind: 'referencia' },
@@ -257,6 +260,56 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'Descrição da obra no Google Livros e na página da editora Thomas Nelson Brasil',
     ],
     works: ['carvalho-tsc'],
+  },
+  'acreditar-e-crer-pentecostal': {
+    ancientLabel: 'Documentos consultados',
+    ancient: [
+      'A Bíblia, na Almeida do app: Gênesis 15 e 21–22; Êxodo 13, 14, 16 e 17; Números 14; Habacuque 2; Mateus 7; Marcos 1, 4, 5 e 9; Lucas 17; João 14 e 16; Romanos 1 e 10; 1 Coríntios 13; Gálatas 5; Efésios 2 e 4; 2 Timóteo 4; Tiago 1 e 2; Hebreus 3, 4 e 11; Apocalipse 2, 6, 13 e 14',
+      'Verbetes H539 (ʾāman), H543 (ʾāmēn), H530 (ʾĕmûnāh), G4100 (pisteúō) e G570 (apistía) do Strong’s Exhaustive Concordance, com as definições de Thayer (grego) e de Brown-Driver-Briggs (hebraico) que o site biblehub.com reproduz, consultados em 13 de novembro de 2026: o verbo pisteúō serve à fé que só reconhece (Tiago 2.19) e à que confia, e ʾĕmûnāh é a palavra de Habacuque 2.4',
+    ],
+    works: ['strong'],
+  },
+  'acreditar-e-crer-presbiteriano': {
+    ancientLabel: 'Documentos consultados',
+    ancient: [
+      'A Bíblia, na Almeida do app: Gênesis 15, 17 e 22; Êxodo 13, 14, 16 e 17; Números 14; Josué 24; Habacuque 2; Mateus 13 e 17; Marcos 4 e 9; Lucas 8 e 17; João 3, 6, 10 e 15; Atos 7; Romanos 1, 3, 8 e 10; 2 Coríntios 13; Efésios 2 e 4; Filipenses 1 e 2; 1 Tessalonicenses 5; Tiago 1 e 2; Hebreus 3, 4 e 11; 1 Pedro 1; Apocalipse 2, 6, 13 e 14',
+      'Catecismo de Heidelberg (1563), pergunta 21 (“O que é a fé verdadeira?”), na tradução inglesa do Christian Classics Ethereal Library (ccel.org), consultada em 13 de novembro de 2026',
+      'Confissão de Fé de Westminster (1646), capítulo 14 (“Da fé salvadora”), parágrafos 1 a 3, em inglês, no site A Puritan’s Mind (apuritansmind.com), consultada em 13 de novembro de 2026',
+      'A. W. Pink, Studies on Saving Faith, parte 2, capítulo 2, em reformedperspectives.org, consultado em 13 de novembro de 2026: a fé histórica como o crer a respeito de Cristo sem crer nele',
+      'Os termos latinos notitia, assensus e fiducia não constam do Catecismo nem da Confissão lidos, e não consegui confirmar em fonte lida a origem exata desse resumo; por isso o texto o apresenta só como o costume da teologia reformada',
+      'Verbetes H539 (ʾāman), H543 (ʾāmēn), H530 (ʾĕmûnāh), G4100 (pisteúō) e G570 (apistía) do Strong’s Exhaustive Concordance, com as definições de Thayer (grego) e de Brown-Driver-Briggs (hebraico) que o site biblehub.com reproduz, consultados em 13 de novembro de 2026: o verbo pisteúō serve à fé que só reconhece (Tiago 2.19) e à que confia, e ʾĕmûnāh é a palavra de Habacuque 2.4',
+    ],
+    works: ['strong'],
+  },
+  'o-ferro-que-fere': {
+    ancientLabel: 'Documentos consultados',
+    ancient: [
+      'A Bíblia, na Almeida do app: Gênesis 12, 16, 21, 22, 32, 37, 39, 41, 45 e 50; Êxodo 1, 2 e 5; Números 12 e 20; Deuteronômio 8; Juízes 3; 1 Samuel 1, 2, 18, 24, 26 e 31; 2 Samuel 12 e 16; 1 Reis 19; Rute 1 e 4; Jó 1, 2, 5 e 23; Salmos 37, 66, 105, 119 e 139; Provérbios 27 e 31; Isaías 1 e 53; Jeremias 20; Oseias 6; Mateus 5, 10 e 26; João 19; Atos 2, 4, 7 e 25; Romanos 5, 8 e 12; 1 e 2 Coríntios; Gálatas 2; Filipenses 1; 2 Timóteo 4; Hebreus 5 e 12; Tiago 1; 1 Pedro 1, 2 e 5; Apocalipse 2, 12, 20 e 21',
+      'Verbetes H1270 (barzel), H2300 (chadad), H6869 (tsarah), H7481 (ra‘am) e H7592 (sha’al), do hebraico, e G2852 (kolaphízō) e G3129 (manthánō), do grego, do Strong’s Exhaustive Concordance, com as definições que o site biblehub.com reproduz, consultados em 13 de novembro de 2026: chadad é “ser agudo”, tsarah vem de tsar (“aperto”) e é a rival, ra‘am é a raiz do trovão e, no sentido figurado, irritar, kolaphízō é bater com o punho',
+      'O texto separa o que a Bíblia diz do que se infere dela e do que se aplica: que o Senhor enviou Penina a Ana é inferência (1 Samuel 1.5-6 diz só que ele fechou a madre), e levar Provérbios 27.17, que fala de amigo, ao adversário é aplicação',
+    ],
+    works: ['strong'],
+  },
+  'o-ferro-que-levanta': {
+    ancientLabel: 'Documentos consultados',
+    ancient: [
+      'A Bíblia, na Almeida do app: Gênesis 12, 14 e 41; Êxodo 3, 18 e 33; Números 27; Deuteronômio 21 e 34; Juízes 6; Rute 1 a 4; 1 Samuel 2, 3, 8, 16, 18, 19, 23 e 25; 1 Reis 12, 19 e 22; 2 Reis 1, 2, 3, 5 e 13; Ester 2 e 4; Provérbios 13 e 27; Mateus 4, 9, 23 e 25; Marcos 3; Lucas 6, 16, 24; João 1, 14, 15, 16 e 21; Atos 1, 4, 7, 9, 11, 13, 15 e 18; 1 Coríntios 3 e 11; Gálatas 1 e 2; Filipenses 2; 1 e 2 Timóteo; Hebreus 7; Apocalipse 1 e 7',
+      'Verbetes H452 (Eliyah) e H477 (Elisha) do Strong’s Exhaustive Concordance, com as definições que o site biblehub.com reproduz, consultados em 13 de novembro de 2026: Elias quer dizer “Yahweh é Deus” e Eliseu, “Deus é salvação”',
+      'A Almeida do app não traz, em Lucas 9, o versículo do pedido de despedida (o 61 das Bíblias impressas) e numera a resposta de Jesus sobre o arado como 61; por isso o texto cita a passagem pelo intervalo 57 a 62 e conta o pedido sem aspas',
+      'O texto separa o que a Bíblia diz do que se infere dela e do que se aplica ou é tipologia: o que não consta de 1 Reis 19 (o azeite, uma palavra de Elias ao lançar a capa, o tempo que Eliseu serviu) fica dito como silêncio do texto, e ligar a capa de Elias ao Espírito prometido por Jesus é leitura',
+    ],
+    works: ['strong'],
+  },
+  'deus-de-perto-deus-de-longe': {
+    ancientLabel: 'Documentos consultados',
+    ancient: [
+      'A Bíblia, na Almeida do app: Gênesis 17, 18, 27, 28 e 32; Êxodo 3 e 33; Números 12; Deuteronômio 4, 29 e 34; Josué 24; 1 Samuel 3, 13, 16 e 17; 2 Samuel 5 e 24; 2 Crônicas 3 e 16; Jó 1, 19, 38 e 42; Salmos 27, 32, 34 e 145; Isaías 6, 29, 53, 55 e 59; Jeremias 23 e 29; Ezequiel 34; Daniel 3; Habacuque 3; Amós 3; Mateus 4, 7, 10, 13, 15, 19, 25 e 26; Marcos 6, 8, 9 e 10; Lucas 4, 9, 10, 11, 14, 15, 16 e 24; João 1, 5, 9, 10, 11, 12, 14, 15, 16, 17, 18, 20 e 21; Atos 1, 4, 5, 7, 8, 9, 11, 12, 17, 19, 20, 21, 22 e 28; Romanos 12; 1 Coríntios 1, 6, 12 e 15; 2 Coríntios 11 e 12; Gálatas 4; Efésios 1 e 2; Filipenses 1, 2 e 3; 1 e 2 Timóteo; Hebreus 2, 10, 11 e 13; Tiago 2 e 4; 1 e 2 Pedro; 1 João 1; Apocalipse 1, 2, 3, 12 e 17',
+      'Verbetes G3144 (mártys), G1097 (ginōskō) e H3045 (yāda‘) do Strong’s Exhaustive Concordance, com as definições de Thayer e de Brown-Driver-Briggs que o site biblehub.com reproduz, consultados em 13 de novembro de 2026: mártys é “testemunha” e, por analogia, “mártir” (o verbete lista Atos 1.8 e 22.20 e Apocalipse 2.13 e 17.6); ginōskō é “vir a conhecer, reconhecer, perceber” e o verbete lista João 10.14 e 17.3, Gálatas 4.9 e Mateus 7.23; yāda‘ é o “conhecer” do hebraico, o verbo de Deuteronômio 34.10',
+      'Clemente de Roma, Primeira Carta aos Coríntios, capítulo 5 (c. 96), na tradução inglesa de Roberts e Donaldson, no site New Advent (newadvent.org/fathers/1010.htm), consultada em 13 de novembro de 2026: diz que Pedro e Paulo foram perseguidos até a morte e que cada um “sofreu o martírio”; a Bíblia não conta a morte de nenhum dos dois (João 21.18-19 só anuncia a de Pedro), e o texto diz isso',
+      'Open Doors, “World Watch List” (opendoors.org/en-US/persecution/countries), consultada em 13 de novembro de 2026: a organização classifica, a cada ano, os 50 países onde os cristãos enfrentam a perseguição mais extrema; o texto cita só essa classificação e nenhum número de vítimas',
+      'O texto separa o que a Bíblia diz do que se infere dela e do que se aplica: Jeremias 23.23 é uma pergunta sobre falsos profetas e sobre o olhar de Deus, e não sobre a intimidade do crente (a aplicação é feita à luz de Jó 42.5, Atos 17.27 e Tiago 4.8); “bode” e “ovelha” são a imagem de pregação, e a Almeida traz “cabritos” em Mateus 25.32-33 e “bodes” em Ezequiel 34.17; morrer por uma convicção prova sinceridade e não verdade, e o texto diz isso; e que a intimidade não explica todo milagre, nem todo uso, é dito com Mateus 7.22-23, 1 Coríntios 12.11, João 9.3 e Hebreus 11.35-39',
+    ],
+    works: ['strong'],
   },
   'miller-estevao-apostolos-e-paulo': {
     ancientLabel: 'Partes lidas',
@@ -779,13 +832,14 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'capitulos-e-versiculos': { ancient: ['Capítulos de Stephen Langton (c. 1227)', 'Novo Testamento grego de Robert Estienne, com versículos (1551)', 'Bíblia de Genebra (1560), a primeira inglesa com versículos em toda a Bíblia'], works: ['metzger-ehrman', 'geisler-nix'] },
 };
 
-export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd' | 'harpa' | 'contexto-ad' | 'epocas';
+export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd' | 'harpa' | 'contexto-ad' | 'epocas' | 'conexoes';
 
 /** Fontes de cada parte do app (o que não é um artigo). */
 export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; note?: string }> = {
   livros: { title: 'Contexto dos livros', note: 'Autor e data seguem a posição tradicional, com as alternativas indicadas quando há debate.', works: ['dillard-longman', 'carson-moo', 'walton-at', 'keener-nt', 'ndb'] },
   notas: { title: 'Notas de estudo nos capítulos', works: ['walton-at', 'keener-nt', 'ndb'] },
   memorial: { title: 'Memorial da Fé', note: 'As datas dos reis seguem a cronologia de Edwin R. Thiele; a avaliação de cada rei é a do próprio texto bíblico.', works: ['thiele', 'ndb', 'kitchen'] },
+  conexoes: { title: 'A Bíblia Conectada', note: 'Cada ligação é uma referência cruzada entre dois capítulos; o desenho junta citações diretas, alusões e assuntos parecidos. As explicações das citações são as do próprio app.', works: ['openbible-cross-references', 'harrison-romhild'] },
   genealogia: { title: 'Genealogia de Jesus', works: ['carson-moo', 'keener-nt', 'ndb'] },
   tribos: { title: 'As doze tribos de Israel', note: 'Fronteiras traçadas a partir de Josué 13–19, com o apoio dos atlas bíblicos.', works: ['rainey-notley', 'aharoni', 'walton-at', 'ndb'] },
   mapas: { title: 'Mapas e atlas', note: 'Geografia do Natural Earth (domínio público); fronteiras antigas e lugares a partir dos atlas bíblicos.', works: ['rainey-notley', 'aharoni', 'kitchen'] },

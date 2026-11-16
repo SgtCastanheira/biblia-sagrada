@@ -135,12 +135,18 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Quadro *Simão, o Cireneu, obrigado a carregar a cruz com Jesus*, de James Tissot (entre 1886 e 1894), Brooklyn Museum | `public/conteudo/imagens/paixao-anatomia-simao-cirene-tissot.jpg`, do Wikimedia Commons | Domínio público |
 | Quadro *As filhas de Jerusalém*, de James Tissot (entre 1886 e 1894), Brooklyn Museum | `public/conteudo/imagens/paixao-anatomia-filhas-de-jerusalem-tissot.jpg`, do Wikimedia Commons | Domínio público |
 | Ilustrações dos livros da Paixão (capas, pranchas de anatomia, cenas e sequências de quadros) | `public/conteudo/imagens/paixao-*`; reconstituições artísticas feitas com inteligência artificial para o app, não fotografias nem documentos da época | Criadas para o app |
+| A Bíblia Conectada: fundo do diagrama | `public/conteudo/imagens/conexoes-fundo.webp`; arte abstrata decorativa | Criada com inteligência artificial para este estudo |
+| A Bíblia Conectada: fundo do diagrama no celular | `public/conteudo/imagens/conexoes-fundo-celular.webp`; arte abstrata decorativa vertical | Criada com inteligência artificial para este estudo |
+| A Bíblia Conectada: tapeçaria de luz | `public/conteudo/imagens/conexoes-capa.webp`; arte abstrata de abertura, com fios de luz sobre pergaminho | Criada com inteligência artificial para este estudo |
+| A Bíblia Conectada: fundo de compartilhar no feed | `public/conteudo/imagens/conexoes-compartilhar-feed.webp`; arte decorativa | Criada com inteligência artificial para este estudo |
+| A Bíblia Conectada: fundo de compartilhar nos Stories | `public/conteudo/imagens/conexoes-compartilhar-stories.webp`; arte decorativa | Criada com inteligência artificial para este estudo |
 
 ## Estudo
 
 | Fonte | Uso no app | Licença |
 |---|---|---|
-| [OpenBible.info — Cross References](https://www.openbible.info/labs/cross-references/) | Referências cruzadas automáticas (`public/bible/referencias`) | [Creative Commons Atribuição (CC BY)](https://creativecommons.org/licenses/by/4.0/) |
+| [OpenBible.info — Cross References](https://www.openbible.info/labs/cross-references/) | Referências cruzadas automáticas (`public/bible/referencias`) e ligações entre capítulos de “A Bíblia Conectada” (`public/bible/conexoes.json`, gerado por `tools/gerar-conexoes.py`) | [Creative Commons Atribuição (CC BY)](https://creativecommons.org/licenses/by/4.0/) |
+| [Bible Cross-References, de Chris Harrison e Christoph Römhild (2007)](https://www.chrisharrison.net/index.php/Visualizations/BibleViz) | Inspiração da tela “A Bíblia Conectada” (arcos que ligam os capítulos). Não usamos a imagem nem os dados deles: o desenho e as ligações são nossos | Ideia citada; obra protegida, não reproduzida |
 | Números de Strong (James Strong, 1890) | Numeração das palavras originais no dicionário | Domínio público |
 | [A História da Igreja, de Andrew Miller (tradução em português)](http://www.stempublishing.com/history/) | Base da síntese `historia-da-igreja-andrew-miller`. O app não reproduz o livro: o texto é próprio, com a obra citada como fonte. Tradução de a-historia-da-igreja.blogspot.com.br, a partir do texto de stempublishing.com | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
 

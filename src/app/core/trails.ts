@@ -50,6 +50,11 @@ export const TRAILS: Trail[] = [
     collections: ['estudos'],
     branches: [
       { title: 'A Ponte entre os Testamentos', ids: ['da-volta-do-exilio-a-jesus', 'livros-dos-macabeus'] },
+      {
+        title: 'Os Dois Ferros',
+        ids: ['o-ferro-que-fere', 'o-ferro-que-levanta'],
+        about: 'Provérbios 27.17 em duas histórias, de Gênesis ao Apocalipse: o ferro que fere, a pressão que Deus permite, e o ferro que levanta, o mentor que passa e transfere.',
+      },
       { title: 'Estudos', ids: ['ministerios-na-biblia', 'cativeiros-de-israel', 'os-faraos-da-biblia'] },
     ],
   },
@@ -185,6 +190,16 @@ export const TRAILS: Trail[] = [
     tone: '#3f4a52',
     branches: [
       { title: 'A Teologia Pentecostal', ids: ['teologia-sistematico-carismatica'] },
+      {
+        title: 'A Fé em Duas Vozes',
+        ids: ['acreditar-e-crer-pentecostal', 'acreditar-e-crer-presbiteriano'],
+        about: 'O mesmo caminho, de Gênesis ao Apocalipse, lido pela voz pentecostal e pela reformada: o que é acreditar, o que é crer e de onde vem a fé.',
+      },
+      {
+        title: 'Conhecer a Deus de Perto',
+        ids: ['deus-de-perto-deus-de-longe'],
+        about: 'De Gênesis ao Apocalipse, a diferença entre ouvir falar de Deus e conhecê-lo, por que o milagre e o uso parecem cair no outro, o que a entrega custa e por que ninguém morre pelo que não acredita.',
+      },
       { title: 'Manuais do Ministério', ids: ['manual-do-diacono', 'manual-do-pastor-pentecostal', 'manual-da-igreja-e-do-obreiro', 'diacono-presbitero-e-pastor-nos-manuais'] },
     ],
   },
