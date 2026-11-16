@@ -14,6 +14,18 @@ Scripts que geram os arquivos estáticos do app. Rode a partir da raiz do projet
 | `gerar-conexoes.py` | `public/bible/conexoes.json` (as ligações entre os capítulos da Bíblia, para a tela “A Bíblia Conectada”, feitas a partir de `public/bible/referencias`) | Rode `python3 -I tools/gerar-conexoes.py` sempre que `gerar-referencias.py` gerar as referências de novo. O teste `logica/conexoes.spec.ts` avisa quando o arquivo está velho |
 | `gerar-mapas.py` | `public/maps/*.json` (geografia do Natural Earth, domínio público, com as fronteiras atuais); inclui o mapa do atlas (`src/app/core/atlas.ts`) | Baixe `ne_50m_land`, `ne_10m_land`, `ne_10m_lakes`, `ne_10m_rivers_lake_centerlines` e `ne_50m_admin_0_boundary_lines_land` (GeoJSON) em uma pasta e rode `python3 tools/gerar-mapas.py src/app/core/maps.ts <pasta> public/maps` — sempre que criar um mapa ou mudar os limites |
 
+## Notícias do Mundo Cristão (tools/noticias)
+
+`tools/noticias/buscar-noticias.mjs` lê os feeds do Mundo Cristão e grava `public/data/noticias.json`, a reserva que a tela `/mundo-cristao` mostra quando a busca ao vivo falha. Usa `rss-parser` (pacote só desta pasta, com `package.json` próprio, para o app não ganhar dependência). A lista de fontes, o filtro por palavras-chave, a limpeza do texto, a remoção de repetidas e o limite de 20 estão em `src/app/core/christian-world.ts`, a mesma lista que o app usa ao vivo (o Node 24 lê o `.ts` direto); para trocar uma fonte ou um proxy, edite só lá.
+
+```bash
+cd tools/noticias
+npm install
+npm run buscar     # lê os feeds e grava public/data/noticias.json (só se houver novidade)
+```
+
+Um feed que falhar não derruba os outros: as matérias dele no arquivo anterior ficam. Se nenhuma fonte responder, o arquivo não é alterado e o comando termina com erro. O GitHub Actions roda isso todo dia (`.github/workflows/noticias.yml`).
+
 ## Conteúdo de estudo (`public/conteudo/`)
 
 Escrito à mão, sem script: `dicionario.json` (com `senses` e `inflections`), `profecias.json`, `citacoes.json` (AT no NT), `livros.json` (contexto dos 66 livros), `notas.json` (notas por capítulo, chave `"JHN 3"`), `memorial.json`, e os textos em Markdown simples de `artigos/` e `sermoes/` (o índice de cada um fica em `src/app/core/library.ts`). Nos textos, `[[Jo 3.16]]` vira um versículo que abre ao tocar; `:::tempo` e `:::nota` criam linha do tempo e destaque.

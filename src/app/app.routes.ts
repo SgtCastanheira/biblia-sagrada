@@ -65,6 +65,8 @@ export const routes: Routes = [
   { path: 'sermoes/:id/pregar', title: 'Púlpito · Bíblia Sagrada', loadComponent: () => import('./pages/pulpit/pulpit').then((m) => m.PulpitPage) },
   // Novas Vozes da Palavra: sermões de novos teólogos, em jornal. /revisao/:token é a prévia exclusiva para o autor aprovar (não listada em lugar nenhum)
   { path: 'vozes', title: 'Novas Vozes da Palavra · Bíblia Sagrada', loadComponent: () => import('./pages/voices/voices').then((m) => m.VoicesPage) },
+  // O Mundo Cristão agora é uma seção do Jornal (as notícias moram em /vozes, abaixo dos sermões)
+  { path: 'mundo-cristao', pathMatch: 'full', redirectTo: 'vozes' },
   { path: 'vozes/:id', loadComponent: () => import('./pages/voices/voice-sermon').then((m) => m.VoiceSermonPage) },
   { path: 'revisao/:token', title: 'Prévia para aprovação · Bíblia Sagrada', loadComponent: () => import('./pages/voices/voice-review').then((m) => m.VoiceReviewPage) },
   { path: 'favoritos', title: 'Favoritos · Bíblia Sagrada', loadComponent: () => import('./pages/favorites/favorites').then((m) => m.FavoritesPage) },
