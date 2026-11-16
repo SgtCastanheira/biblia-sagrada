@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { GUEST_KINDS, GUEST_LANGUAGES, GUEST_STRINGS, GuestKind, GuestSermon, reviewPath, visibleGuestSermons } from '../../core/guest-sermons';
 import { pageUrl } from '../../core/share-card';
 import { VoicesNewsService } from '../../core/voices-news.service';
+import { WorldNews } from '../../shared/world-news';
 
 /**
  * Primeira página do jornal Novas Vozes da Palavra (a aba “Jornal” do menu): as manchetes dos sermões e das pregações das
@@ -11,7 +12,7 @@ import { VoicesNewsService } from '../../core/voices-news.service';
  */
 @Component({
   selector: 'app-voices',
-  imports: [RouterLink, MatIconModule],
+  imports: [RouterLink, MatIconModule, WorldNews],
   template: `
     <header class="masthead">
       <p class="name">{{ s.masthead }}</p>
@@ -45,6 +46,10 @@ import { VoicesNewsService } from '../../core/voices-news.service';
       <p class="empty">Ainda não há matérias nesta edição.</p>
     }
 
+    <h2 class="kind world-title">Mundo Cristão</h2>
+    <p class="world-deck">Missões, igreja perseguida e países onde ser cristão custa caro, direto das fontes, com a matéria original a um toque.</p>
+    <app-world-news />
+
     <p class="note">Sermões e pregações das novas gerações, publicados com a autorização de cada autor, cada um em sua seção. Cada texto pode ser lido em vários idiomas e ouvido em voz alta.</p>
   `,
   styleUrl: '../../shared/study.scss',
@@ -73,6 +78,8 @@ import { VoicesNewsService } from '../../core/voices-news.service';
     .review .link code { display: block; padding: 8px 10px; border-radius: 8px; background: var(--mat-sys-surface-container); font: 500 13px/1.4 ui-monospace, monospace; color: var(--mat-sys-on-surface); overflow-wrap: anywhere; }
     .review button { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px; border: 1px solid var(--mat-sys-primary); border-radius: 22px; background: none; color: var(--mat-sys-primary); font: 600 14px Inter, sans-serif; cursor: pointer; }
     .review button mat-icon { font-size: 20px; width: 20px; height: 20px; }
+    .world-title { margin-top: 40px; }
+    .world-deck { max-width: 34em; margin: 0 0 14px; font: italic 400 clamp(17px, 2.4vw, 20px) / 1.4 var(--reading-font); color: var(--mat-sys-on-surface-variant); }
     .note { margin: 22px 4px 0; font: 400 13px/1.55 Inter, sans-serif; color: var(--mat-sys-on-surface-variant); }
     .empty { color: var(--mat-sys-on-surface-variant); }
   `,

@@ -1,0 +1,14 @@
+{
+  "name": "noticias-mundo-cristao",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Lê os feeds do Mundo Cristão e grava public/data/noticias.json (a reserva da tela /mundo-cristao).",
+  "scripts": {
+    "buscar": "node buscar-noticias.mjs"
+  },
+  "engines": { "node": ">=24" },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}

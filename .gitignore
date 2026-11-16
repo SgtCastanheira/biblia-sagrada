@@ -76,3 +76,6 @@ tools/amostra-*.mp3
 
 # PDFs de consulta da coleção em elaboração
 /Ciencia explica/
+
+# Dependências do script de notícias (tools/noticias)
+/tools/noticias/node_modules

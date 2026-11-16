@@ -22,6 +22,14 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'mundo-cristao',
+    date: '16 de novembro de 2026',
+    title: 'Mundo Cristão: notícias de missões e da igreja perseguida',
+    items: [
+      { icon: 'public', title: 'Mundo Cristão', text: 'Notícias de missões, da igreja perseguida e dos países onde ser cristão custa caro, lidas direto de Portas Abertas, Voz dos Mártires, Gospel Prime e Guiame. A tela se atualiza sozinha a cada 5 minutos, e cada cartão leva à matéria original. Sem internet, mostra o último resumo salvo.', link: '/vozes', tip: 'Na aba Jornal, logo abaixo das Novas Vozes, ou no atalho da tela inicial' },
+    ],
+  },
+  {
     id: 'biblia-conectada-e-cinco-estudos',
     date: '16 de novembro de 2026',
     title: 'A Bíblia Conectada e cinco estudos novos',
