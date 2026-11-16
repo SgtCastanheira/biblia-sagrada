@@ -6,6 +6,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { CrossReferencesService, LINK_TYPES } from '../core/cross-references.service';
 import { FavoritesService, HIGHLIGHT_COLORS } from '../core/favorites.service';
 import { HighlightColor, VerseRef } from '../core/models';
@@ -75,6 +76,8 @@ export interface VerseSheetData {
         }
         <p class="credit">Citações e alusões: seleção do app. Textos relacionados: OpenBible.info (CC BY).</p>
       }
+
+      <button mat-stroked-button class="connections" (click)="openConnections()"><mat-icon>hub</mat-icon> Ver as conexões deste capítulo</button>
     </div>
   `,
   styles: `
@@ -113,6 +116,7 @@ export interface VerseSheetData {
       border: 1px solid var(--mat-sys-outline-variant); color: var(--mat-sys-primary); font: 600 14px Inter, sans-serif; text-decoration: none;
     }
     .actions button { height: 48px; }
+    .connections { width: 100%; min-height: 48px; margin-top: 18px; }
   `,
 })
 export class VerseSheet {
@@ -122,6 +126,7 @@ export class VerseSheet {
     return externalVerseUrl(v, this.data.ref.bookId, this.data.ref.chapter, this.data.ref.verse);
   }
   private readonly ref = inject(MatBottomSheetRef<VerseSheet>);
+  private readonly router = inject(Router);
   private readonly favorites = inject(FavoritesService);
   private readonly clipboard = inject(Clipboard);
   private readonly snackBar = inject(MatSnackBar);
@@ -139,6 +144,12 @@ export class VerseSheet {
     if (this.showAll) return all;
     const curated = all.filter((l) => l.type !== 'relacionado');
     return [...curated, ...all.filter((l) => l.type === 'relacionado').slice(0, 5)];
+  }
+
+  /** Abre A Bíblia Conectada no capítulo deste versículo. */
+  protected openConnections(): void {
+    this.ref.dismiss();
+    void this.router.navigate(['/conexoes', this.data.ref.bookId, this.data.ref.chapter]);
   }
 
   protected openLink(refs: string): void {

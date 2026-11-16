@@ -47,7 +47,8 @@ export const CREDITS: { group: string; items: Credit[] }[] = [
   {
     group: 'Estudo',
     items: [
-      { name: 'OpenBible.info — Cross References', use: 'Textos relacionados de cada versículo (referências cruzadas automáticas).', license: 'Creative Commons Atribuição (CC BY)', url: 'https://www.openbible.info/labs/cross-references/' },
+      { name: 'OpenBible.info — Cross References', use: 'Textos relacionados de cada versículo (referências cruzadas automáticas) e as ligações entre capítulos de “A Bíblia Conectada”.', license: 'Creative Commons Atribuição (CC BY)', url: 'https://www.openbible.info/labs/cross-references/' },
+      { name: 'Bible Cross-References, de Chris Harrison e Christoph Römhild (2007)', use: 'Inspiração da tela “A Bíblia Conectada” (arcos que ligam os capítulos da Bíblia). Não usamos a imagem nem os dados deles: o desenho e as ligações são nossos, feitos com as referências da OpenBible.info.', license: 'Ideia citada; obra protegida, não reproduzida', url: 'https://www.chrisharrison.net/index.php/Visualizations/BibleViz' },
       { name: 'Números de Strong', use: 'Numeração das palavras hebraicas e gregas, de James Strong (1890).', license: 'Domínio público' },
       { name: 'A História da Igreja, de Andrew Miller (tradução em português)', use: 'Base da síntese “A História da Igreja, de Andrew Miller”. O app não reproduz o livro: o texto é próprio, com a obra citada como fonte. Tradução publicada em a-historia-da-igreja.blogspot.com.br, a partir do texto de stempublishing.com.', license: 'Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 (CC BY-NC-SA 4.0)', url: 'http://www.stempublishing.com/history/' },
       { name: 'Dicionário, memorial, notas, aulas, profecias e artigos', use: 'Textos escritos para este aplicativo.', license: 'Conteúdo do app' },
@@ -169,6 +170,11 @@ export const CREDITS: { group: string; items: Credit[] }[] = [
       { name: 'Quadro Simão, o Cireneu, obrigado a carregar a cruz com Jesus, de James Tissot (entre 1886 e 1894), Brooklyn Museum', use: 'Pintura no livro Crucificação (A Paixão, da Ceia à Ressurreição).', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Simon_the_Cyrenian_Compelled_to_Carry_the_Cross_with_Jesus_(Simon_de_Cyr%C3%A8ne_contraint_de_porter_la_Croix_avec_J%C3%A9sus)_-_James_Tissot.jpg' },
       { name: 'Quadro As filhas de Jerusalém, de James Tissot (entre 1886 e 1894), Brooklyn Museum', use: 'Pintura no livro Crucificação (A Paixão, da Ceia à Ressurreição).', license: 'Domínio público', url: 'https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Daughters_of_Jerusalem_(Les_filles_de_J%C3%A9rusalem)_-_James_Tissot.jpg' },
       { name: 'Ilustrações dos livros da Paixão', use: 'Capas, pranchas de anatomia, cenas, sequências de quadros e figuras dos sete livros de A Paixão, da Ceia à Ressurreição. Reconstituições artísticas, não fotografias nem documentos da época.', license: 'Criadas com inteligência artificial para o app' },
+      { name: 'A Bíblia Conectada: fundo do diagrama', use: 'Arte abstrata decorativa em verde-floresta, em conteudo/imagens/conexoes-fundo.webp.', license: 'Criada com inteligência artificial para este estudo' },
+      { name: 'A Bíblia Conectada: fundo do diagrama no celular', use: 'Arte abstrata decorativa vertical, em conteudo/imagens/conexoes-fundo-celular.webp.', license: 'Criada com inteligência artificial para este estudo' },
+      { name: 'A Bíblia Conectada: tapeçaria de luz', use: 'Arte de abertura com fios dourados e rosados sobre pergaminho abstrato, em conteudo/imagens/conexoes-capa.webp.', license: 'Criada com inteligência artificial para este estudo' },
+      { name: 'A Bíblia Conectada: fundo de compartilhar no feed', use: 'Arte decorativa das imagens de compartilhar, em conteudo/imagens/conexoes-compartilhar-feed.webp.', license: 'Criada com inteligência artificial para este estudo' },
+      { name: 'A Bíblia Conectada: fundo de compartilhar nos Stories', use: 'Arte decorativa das imagens de compartilhar, em conteudo/imagens/conexoes-compartilhar-stories.webp.', license: 'Criada com inteligência artificial para este estudo' },
     ],
   },
   {

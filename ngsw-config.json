@@ -24,7 +24,8 @@
       "resources": {
         "files": [
           "/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)",
-          "!/conteudo/imagens/paixao-*"
+          "!/conteudo/imagens/paixao-*",
+          "!/conteudo/imagens/conexoes-*"
         ]
       }
     },
@@ -47,7 +48,8 @@
         "files": [
           "/conteudo/**",
           "!/conteudo/imagens/datas-*.jpg",
-          "!/conteudo/imagens/paixao-*"
+          "!/conteudo/imagens/paixao-*",
+          "!/conteudo/imagens/conexoes-*"
         ]
       }
     },
@@ -68,6 +70,16 @@
       "resources": {
         "files": [
           "/conteudo/imagens/paixao-*"
+        ]
+      }
+    },
+    {
+      "name": "imagens-das-conexoes",
+      "installMode": "lazy",
+      "updateMode": "lazy",
+      "resources": {
+        "files": [
+          "/conteudo/imagens/conexoes-*"
         ]
       }
     },
@@ -114,7 +126,8 @@
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/bible/referencias/*.json"
+          "/bible/referencias/*.json",
+          "/bible/conexoes.json"
         ]
       }
     }

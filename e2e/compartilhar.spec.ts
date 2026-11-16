@@ -32,6 +32,7 @@ const PAGES: [string, string][] = [
   ['mapa', `/mapas/${MAPS_IN_ORDER[0].id}`],
   ['assunto da biblioteca', `/historia?trilha=${TRAILS[0].id}`],
   ['sermão de Novas Vozes da Palavra', '/vozes/a-sanguessuga'],
+  ['A Bíblia Conectada', '/conexoes/ISA/53'],
 ];
 
 for (const [name, url] of PAGES) {

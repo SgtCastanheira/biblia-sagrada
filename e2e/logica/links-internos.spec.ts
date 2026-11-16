@@ -14,6 +14,7 @@ import { parseReferences } from '../../src/app/core/reference-parser';
 import { TRIBES } from '../../src/app/core/tribes';
 import { GUEST_SERMONS } from '../../src/app/core/guest-sermons';
 import { RELEASES } from '../../src/app/core/whats-new';
+import { spanFromParams } from '../../src/app/core/bible-connections';
 
 /**
  * Todo link interno escrito nos textos e nos dados (“[texto](/artigo/x)”, link: '/mapas/y') precisa levar a uma tela
@@ -29,7 +30,7 @@ const hymns = new Set(json<{ hymns: { n: number }[] }>('harpa.json').hymns.map((
 const FIXED = new Set([
   '/', '/estudo', '/estudo/livros', '/ensino', '/meu-espaco', '/historia', '/avivamento', '/profecias', '/dicionario', '/atlas', '/mapas',
   '/busca', '/quiz', '/livros', '/curiosidades', '/vozes', '/devocional', '/ibuc', '/ebd', '/ebd/apoio', '/anotacoes', '/favoritos', '/sermoes', '/novidades',
-  '/fontes', '/creditos', '/ajustes', '/harpa', '/tribos', '/genealogia', '/memorial', '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo', '/epocas', '/datas',
+  '/fontes', '/creditos', '/ajustes', '/harpa', '/tribos', '/genealogia', '/conexoes', '/memorial', '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo', '/epocas', '/datas',
 ]);
 
 /** Devolve o motivo se a rota não existe; texto vazio se existe. */
@@ -50,6 +51,7 @@ function problemWith(route: string): string {
     case 'profecias': return known(prophecies) ? '' : 'profecia não existe';
     case 'harpa': return known(hymns) ? '' : 'hino não existe';
     case 'curiosidades': return known(CURIOSITIES.map((c) => c.id)) ? '' : 'curiosidade não existe';
+    case 'conexoes': return spanFromParams(id, extra) ? '' : 'livro ou capítulo não existe';
     case 'epocas': return known(EPOCHS.map((e) => e.id)) ? '' : 'época não existe';
     case 'ebd':
       // /ebd, /ebd/licao/:n, /ebd/apoio, /ebd/apoio/:turma, /ebd/apoio/aula/:id

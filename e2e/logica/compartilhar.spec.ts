@@ -111,6 +111,15 @@ test('compartilhar: todo estudo gera uma imagem com assunto, tópicos e o endere
   expect(problems).toEqual([]);
 });
 
+test('compartilhar: a história com tópicos na capa lista na imagem só esses tópicos, na ordem (a conclusão e a oração ficam de fora)', () => {
+  for (const id of ['acreditar-e-crer-pentecostal', 'acreditar-e-crer-presbiteriano']) {
+    const a = ARTICLES.find((x) => x.id === id)!;
+    const card = articleCard(id, readFileSync(`public/conteudo/artigos/${id}.md`, 'utf8'))!;
+    expect(card.total, `total de ${id}`).toBe(a.topics!.length);
+    expect(card.topics.map((t) => t.title), `tópicos de ${id}`).toEqual(a.topics!.slice(0, card.topics.length));
+  }
+});
+
 test('compartilhar: as outras páginas também geram o cartão', () => {
   const problems: string[] = [];
   const people = json<Parameters<typeof personCard>[0][]>('memorial.json');
