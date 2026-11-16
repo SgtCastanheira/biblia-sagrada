@@ -83,6 +83,28 @@ Regras:
 
 **Pendências:** o dono ver o resultado ao vivo; seguir editando os livros em `public/conteudo/artigos/`; dividir a Crucificação (26 min), se quiser.
 
+## 2026-11-12 18:45 -0400 — Volume 4 publicado: o que mudou neste computador
+
+**Autor:** Valter, com Claude. Depois do PR #12, arrumação local (nada disto vai ao Git):
+1. Os sete livros agora vivem em `public/conteudo/artigos/paixao-*.md`; a cópia privada foi movida para `rascunhos/como-a-ciencia-explica/analises/copias-12-11-noite/md-publicados/` (backup de como estavam antes de subir). **Daqui em diante, edite os livros em `public/`** e publique por PR.
+2. A prévia (`npm run start:rascunhos`) passou a mostrar o Volume 4 pelo próprio app: `VISIBLE_VOLUMES` do catálogo privado ficou vazio (os volumes 1 a 3 continuam escondidos) e a trilha vazia é filtrada para não duplicar a trilha publicada.
+3. `CLAUDE.md` e `DIARIO.md` locais = versão do repositório + as notas completas de elaboração (parágrafos longos do CLAUDE.md e as entradas privadas daqui); cópias de antes em `rascunhos/como-a-ciencia-explica/analises/copias-12-11-noite/`.
+4. Nada mais mudou fora do Git: `Teologos/`, `RECONHECIMENTO-DO-SISTEMA.md` e `.playwright-mcp/` seguem soltos.
+
+## 2026-11-12 17:42 -0400 — Volumes 1 a 3 escondidos na prévia; só o Volume 4 (A Paixão) fica
+
+**Autor:** Valter, com Claude. O dono pediu para ocultar “Como a Ciência Explica” dos Volumes 1 (Química e Matéria), 2 (Física e Movimento) e 3 (Corpo e Vida) e manter o Volume 4 (A Paixão, da Ceia à Ressurreição).
+
+**O que já estava feito:** às 17:11, uma edição de `rascunhos/como-a-ciencia-explica/catalog.ts` feita fora desta conversa já escondia os volumes: `LOCAL_ARTICLES` e `LOCAL_TRAILS` guardam tudo, e `VISIBLE_VOLUMES` (só o Volume 4) filtra as prateleiras e os estudos; a descrição da trilha passou a falar só da Paixão.
+
+**O que faltava e foi feito:** a página `/fontes` ainda listava as obras que só os volumes guardados usam (*Chemistry 2e*, *College Physics 2e*, *How the Eyes Work*, *What are waves?*, *The Oxford Companion to Wine* e um segundo *Anatomy and Physiology 2e*). Agora `DRAFT_ARTICLE_SOURCES` tem só as fontes dos estudos visíveis e `DRAFT_WORKS` tira as obras usadas só pelos volumes guardados; as obras da Paixão, citadas ou só consultadas, ficam. Cópia do catálogo antes: `analises/copias-12-11-noite/catalog.antes-das-fontes-ocultas.ts`.
+
+**Conferido no navegador (prévia, celular):** biblioteca e página da trilha sem menção aos volumes 1 a 3 (a trilha mostra “7 histórias”); busca por machado, cego de nascença, tempestade, água em vinho e Naim sem resultado; `/artigo/cego-de-nascenca`, `/artigo/o-sinal-de-cana` e `/artigo/jesus-acalma-tempestade` não abrem; `/fontes` sem as cinco obras dos volumes guardados e com uma só *Anatomy and Physiology 2e* (a da Paixão); nenhum erro. Os textos e as figuras dos três volumes continuam na pasta `rascunhos/` e na trava de publicação.
+
+**Como mostrar de novo:** incluir o título do volume em `VISIBLE_VOLUMES`.
+
+**Pendências:** a prévia não recarrega sozinha; F5 para ver.
+
 ## 2026-11-12 17:18 -0400 — Publicação: apoio a rascunhos privados, blocos novos nos estudos e correções da Almeida
 
 **Autor:** Valter, com Claude. O dono pediu para publicar na `main`. A publicação leva só o que é público; o conteúdo em elaboração continua na pasta privada `rascunhos/` (fora do Git), e o registro detalhado dele também fica fora do repositório, que é público.
@@ -100,6 +122,677 @@ Regras:
 **Validação:** num checkout limpo do commit, sem a pasta privada: lint sem problemas; 184 testes de lógica; build de produção e trava de publicação sem achados; bateria do navegador com o app em desenvolvimento, em porta própria: celular, 540 testes ok e 1 ignorado; computador, 538 ok e 3 ignorados. Os 14 versículos alterados na Almeida foram comparados com o commit anterior, um a um, e coincidem com `VERSE_FIXES`.
 
 **Pendências:** o dono dizer se e quando a coleção privada vira pública (exige mover textos e figuras para a parte pública, registrar fontes e créditos e tirar a trava); o “prefeito” nos estudos públicos que ainda usam a palavra.
+
+## 2026-11-12 16:36 -0400 — Estádios de Emaús, nomes dos dois condenados (Evangelho de Nicodemos), Simeão e a altura da cruz
+
+**Autor:** Valter, com Claude. O dono continuou lendo a Crucificação e o Sepultamento e anotou: (1) “a sessenta estádios,? explica isso direito ou muda unidade de medida”; (2) “coloca isso aqui e pesquisa lá e só cita, não precisa baixar a Bíblia católica”, com um trecho que dá a Dimas e Gestas como os nomes dos dois malfeitores, tirados do Evangelho de Nicodemos (cap. 9, v. 5); (3) “Simeão ou Lucas”; (4) “A que altura ficava o lado de Jesus? Seria, na verdade, a que altura ficava a cruz de Jesus”.
+
+**O que foi feito:**
+1. **Estádios (Sepultamento e Ressurreição):** a frase agora cita Lc 24.13 (“distava de Jerusalém sessenta estádios”), diz que o estádio era uma medida da época, de uns 185 metros, e dá a conta: uns 11 quilômetros. Fonte lida por inteiro (Wikipédia em inglês, *Stadion (unit)*): o estádio grego tinha 600 pés gregos, o valor exato não é consensual (as estimativas vão de uns 157 a uns 209 metros) e o ático, de uns 185 m, é o que mais reúne acordo; com isso, sessenta estádios ficam entre 9,4 e 12,5 km, e o texto usa o valor central.
+2. **Nomes dos dois condenados (Crucificação, “Os Dois Condenados”):** parágrafo novo, curto e com a origem dita na frente: Dimas e Gestas vêm de um escrito apócrifo, o *Evangelho de Nicodemos* (também *Atos de Pilatos*), que não faz parte da Bíblia e, na forma atual, é do século IV ou V; no capítulo 9, Pilatos diz a Jesus que será açoitado e crucificado no jardim onde foi preso e que os dois malfeitores serão crucificados com ele. Os Evangelhos seguem sem os nomes. Lido na tradução inglesa de Roberts e Donaldson (*Ante-Nicene Fathers*, vol. 8, em earlychristianwritings.com): o trecho está no capítulo 9, logo antes do 10, com “Dysmas e Gestas”. O texto colado pelo dono dizia “século III”; as fontes lidas (Wikipédia, *Gospel of Nicodemus* e *Penitent thief*) dizem IV ou V, e foi o que entrou. Não baixei nem anexei nenhuma Bíblia: só citei. O “verso 5” veio da edição em português que o dono colou; a tradução inglesa lida não numera versículos, e o estudo diz só “capítulo 9”. Não citei o trecho em português (de tradução de terceiros): contei com minhas palavras.
+3. **Simeão e Lucas:** quem disse que uma espada traspassaria a alma de Maria foi Simeão, e Lucas é o Evangelho que conta (Lc 2.34-35). A frase já dizia Simeão; ficou sem dúvida: “a quem Simeão, no templo, quando ela levou o menino Jesus, disse que uma espada lhe traspassaria a alma”, com a referência ampliada para Lc 2.34-35.
+4. **Altura:** a pergunta agora é “A que altura ficava a cruz de Jesus?” (o parágrafo já falava do poste, dos pés e depois do lado do corpo).
+
+**Fontes novas** (`catalog.ts`): `paixao-nicodemos` (o próprio escrito, com o aviso de que não é Escritura e de que o “v. 5” não foi lido), `paixao-wikipedia-nicodemos` (data e nomes) e `paixao-wikipedia-estadio`; a primeira e a segunda entram na Crucificação, a terceira no Sepultamento.
+
+**Decisões:** (a) os nomes Dimas e Gestas entram porque o dono pediu, abertos no texto (não numa dobra) e com a origem dita antes; é uma exceção à regra de ficar só nos Evangelhos, e vale só para essa informação; (b) a datação é a das fontes lidas (IV ou V), e não a do texto colado (III); (c) sem citar o trecho em português.
+
+**Validação:** teste temporário (apagado): referências, citações com referência, falas, títulos, blocos, imagens e ligações sem problema; tempo de leitura igual ao do catálogo (Crucificação 26 min, Sepultamento 9 min). Capturas dos quatro trechos no celular, sem erro de página (`analises/previas-12-nov-noite/`, de `r-` a `u-`).
+
+**Pendências:** o dono dizer se quer a ficha “Dimas e Gestas” também em outro lugar; a conta de Herodes continua em aberto, como na entrada seguinte.
+
+## 2026-11-12 ~16:30 -0400 — Açoite e coroa sem repetição, espinhos, quilômetros com Herodes, Simão de Cirene, Gólgota, vinho, como se erguia o condenado, os dois condenados e a lança V6
+
+**Autor:** Valter, com Claude. O dono leu Açoite e Condenação e Crucificação na prévia e pediu: **Açoite:** os dois parágrafos do açoite repetiam a mesma cena; quantos centímetros tinham os espinhos, “se tem, eu quero que coloque”. **Crucificação:** fazer a conta aproximada, em km, até o Gólgota e com as idas e vindas (“indo e voltando até fulano”); explicar a diferença entre Gólgota e “o monte chamado Caveira” e por que se chama assim; qual parte da cruz o cireneu leva e quem é esse Simão (“tá bagunçado cirineu, Simão”); uma imagem de Jesus falando com as mulheres de Jerusalém; mais explicação histórica de como a cruz era erguida, “do buraco até lá no alto no madeiro”; trazer os dois bandidos presos com ele; achar na Bíblia uma explicação para a recusa do vinho (“os Evangelhos não explicam”); e o final do livro não tocava (“recarrega sozinho”). O Codex entregou a lança V6 e as instruções de integração.
+
+**O que foi feito:**
+1. **Açoite:** os dois parágrafos viraram um, na ordem em que acontece (o estalo antes da dor, os vergões, a pele cede, o sangue, a conta que se perde). A cena da coroa seguia fora de ordem e repetia o manto, a coroa e a cana; agora segue Mt 27.27-31 (manto, coroa, saudação, golpes na coroa, manto tirado).
+2. **Espinhos:** nenhuma fonte lida dá o comprimento em centímetros (sete páginas sobre as plantas candidatas, nenhuma com medida). O texto diz o que as fontes dizem (o espinheiro-de-cristo tem dois espinhos grandes, afiados e curvos na base de cada folha; o *Paliurus*, espinhos rígidos em pares de comprimento desigual) e que o comprimento “não consegui confirmar”. Não entrou número inventado.
+3. **Quilômetros:** o primeiro tópico da Crucificação ganhou uma tabela com os mesmos números da figura do mapa (pretório na Antônia, 5,87 km; no palácio, 5,03 km) e a ida e volta a Herodes como estimativa: duas vezes 1,114 km (distância a pé entre a Antônia e o palácio, roteador do OpenStreetMap), o que leva o total a 7 ou 8 km. O endereço de Antipas é desconhecido e o texto diz isso. A nota do mapa (`passion-route.ts`) mostra a mesma faixa (7,26 a 8,10 km).
+4. **Simão de Cirene:** o texto agora diz que os Evangelhos falam em “a cruz” e que, pelo costume romano, o condenado levava a trave (*patibulum*, de 30 a 50 kg), que é o que Simão carrega, atrás de Jesus. A ficha o separa dos outros Simões (Pedro, o cananeu, o leproso, Iscariotes), explica *cireneu* (“de Cirene”, também dito *cirineu*), lista onde aparecem cireneus na Bíblia e diz o que o texto não diz. O trecho que ligava Rufo a Rm 16.13 saiu: o texto não diz que é o mesmo Rufo. Dois parágrafos que repetiam a ideia de Lc 9.23 viraram um.
+5. **Mulheres de Jerusalém:** pintura de James Tissot, *As filhas de Jerusalém* (domínio público, Brooklyn Museum, via Wikimedia Commons), `paixao-anatomia-filhas-de-jerusalem-tissot.jpg`, com Lc 23.27-28. O pintor desenhou uma corrente na cintura de Jesus; a legenda diz que ela não está nos Evangelhos.
+6. **Gólgota e Caveira:** é um só lugar; *Gólgota* é o nome em hebraico e *Caveira* o que ele quer dizer (Mt 27.33, Jo 19.17); *Calvário* vem do latim *calvaria* (como já diz o dicionário do app, com link); os Evangelhos dizem “lugar”, e não “monte”; o motivo do nome não está no texto (duas explicações lembradas: o formato e o lugar de execuções).
+7. **Recusa do vinho:** os Evangelhos não dão o motivo, e o texto diz isso. Três pistas da própria Bíblia, marcadas como leitura e não como texto: para que servia a bebida (Pv 31.6-7), a promessa da ceia de não beber do fruto da videira até o reino (Mt 26.29) e o cálice que ele não recusa (Jo 18.11); o fel e o vinagre lembram o Sl 69.21.
+8. **Como o condenado era erguido:** só o que duas fontes lidas por inteiro dizem, em lista numerada (poste já fincado; mãos presas à trave no chão com cordas ou cravos; a trave içada com cordas e fixada ao poste; os pés depois), mais o calço ou a cavilha como assento, o degrau para os pés e a altura “pouco mais que um homem”. As fontes não dizem como o poste era firmado nem falam em buraco ou cunhas, e o texto diz isso. A nota de medicina deixou de afirmar que o cravo entra nos punhos (os Evangelhos dizem “mãos”).
+9. **Os dois condenados:** seção nova “Os Dois Condenados” (Lc 23.32-33, Mt 27.38, Mc 15.27, Jo 19.18; Mateus e Marcos dizem que os dois o insultavam; Lucas guarda a conversa, e o texto não harmoniza) e o diálogo “O Pedido do Malfeitor” (Lc 23.39-43, na Almeida exata) em “Três Palavras de Graça”. Com Lc 22.37 (“E com os malfeitores foi contado”) e Is 53.12.
+10. **Lança V6** na figura `paixao-lanca` (`passion-spear.ts` e `.scss` reescritos): folha de seis quadros, tempos 3/3/3/4/4/4 s no mesmo relógio, pausa exata, ampliação que compartilha o relógio, GIF só para baixar, miniatura e rótulo novos (“Seis imagens-chave”). Proporções em pixels e testes de interface em `analises/lanca-v6-integracao.md`.
+11. **Ouvir até o fim, “recarrega sozinho”:** o aplicativo não recarregava; o servidor de desenvolvimento empurrava um recarregamento a cada arquivo que eu salvava e derrubava a leitura em voz alta. `npm run start:rascunhos` agora roda com `--live-reload=false`: depois de uma mudança, F5.
+12. **Tempo de leitura:** Crucificação 26 min (era 21; 5158 palavras), Açoite e Condenação 9 min. “Quem Mandava e Onde Mandava” passou a 8 min porque alguém editou o texto durante a sessão (notas sobre “prefeito” nas fichas de Pilatos e de Caifás, com a inscrição de Cesareia e Josefo 20 no catálogo); mantive como estava e só atualizei o tempo e a maiúscula do título “Caifás e Anás: O Cargo e a Influência”.
+
+**Decisões:** (a) sem centímetros, porque não há fonte; (b) a cruz que Simão leva é a trave, dito como costume e não como texto; (c) o que o condenado sofria ao ser erguido só entra com fonte lida por inteiro, e o que não está nas fontes (buraco, cunhas) é dito como lacuna; (d) as pistas do vinho ficam como leitura; (e) a Britannica (403) e uma página da Oxford (erro de certificado) não puderam ser lidas e não foram citadas; (f) a Wikipédia entra só como fonte de segunda mão para a ordem das etapas e o peso da trave, e isso está dito na lista de fontes; (g) o nome “Cirineu” aparece só como a forma que muita gente usa.
+
+**Fontes novas** (`catalog.ts`): `paixao-eob-coroa` (Encyclopedia of the Bible, “Crown of Thorns”), `paixao-wikipedia-crucificacao`, `paixao-osm`; `paixao-eob` ganhou o que a página diz sobre a trave, o poste, as cordas e cravos, o assento e a altura; passagens da Crucificação atualizadas e a segunda pintura de Tissot listada.
+
+**Validação:** teste temporário (apagado): 572 referências existem, 257 citações com referência e 96 falas idênticas à Almeida do app; títulos na regra de maiúsculas; blocos fechados; imagens existem; tópicos e minutos do catálogo iguais aos do texto; cartões de continuação no fim de cada livro. Lint limpo (também nos três arquivos privados que mudei); 184 testes de lógica passam; build de produção e trava de publicação sem achados. No navegador (celular de 390 px, movimento reduzido e computador), a lança toca 3/3/3/4/4/4 s, pausa exata, quadros nas posições certas, reinício, ampliação pelo teclado com Escape e foco de volta, sem rolagem horizontal nem erro; o primeiro cabeçalho da tabela de quilômetros estava cortado no celular e foi encurtado. As capturas estão em `analises/previas-12-nov-noite/`; cópias dos textos de antes em `analises/copias-12-11-noite/`.
+
+**Pendências:** o dono dizer se a conta de Herodes (estimativa) fica no texto ou só no mapa; a imagem do monte das Oliveiras (Codex); o “prefeito” nos estudos públicos; a continuidade entre os quadros da lança foi conferida a olho, e a medição final em pixels é aproximada (erro de uns 6%); a Crucificação ficou longa (26 min) e o dono pode querer dividi-la.
+
+## 2026-11-12 14:08 -0400 — Monte das Oliveiras, discípulos e mapa nos livros; “governador”; Campo de Sangue; multidão; fogo de brasas; estudo novo “Quem Mandava e Onde Mandava”
+
+**Autor:** Valter, com Claude. O dono continuou lendo os livros na prévia e pediu, **Getsêmani:** explicar o Monte das Oliveiras e o Getsêmani, com uma imagem, e explicar de novo o que houve com os discípulos depois da prisão. **Prisão e Interrogatório:** apagar “As cordas apertaram-lhe os punhos” (não se sabe se cordas ou correntes); pôr o mapa de um lugar para o outro; a fogueira “é importante para outro momento da história”; confirmar que os guardas são os do templo; explicar melhor o Campo de Sangue; trocar “prefeito” por “governador”; esclarecer quem é a multidão que “os chefes reuniram”; e **um estudo** que explique, ligado a estes, quem mandava e onde, os poderes de cada um, a quem cada um respondia e o que eram (romano, judeu), desenhado, e o que Herodes fazia em Jerusalém. Nada commitado nem publicado. Cópias antes da mexida em `analises/*-copia-antes-das-correcoes-das-17h.md`, `catalog-copia-antes-do-estudo-quem-mandava.ts.txt`, `figure-…` e `passion-route-…`.
+
+**O que foi feito:**
+1. **Getsêmani** (agora com 4 tópicos e 6 min): nova seção “O Monte das Oliveiras e o Getsêmani”, só com o que o texto diz (o monte do outro lado do Cedrom, Lc 21.37, Lc 19.37, At 1.12; o nome em Mateus e Marcos, o jardim em João, o monte em Lucas, que Mateus junta em 26.30 e 26.36; por que Judas sabia onde achá-lo, Jo 18.2 e Lc 22.6) e a figura nova `paixao-oliveiras` (mapa do templo, do vale do Cedrom, do Getsêmani e do monte; o contorno do monte é um esboço, dito na legenda). Seção final “O que Houve com os Discípulos”: ficaram à entrada e dormiram, Jesus os protegeu na prisão (Jo 18.8), todos fugiram (Mt 26.56, Mc 14.51-52), Pedro e outro discípulo seguiram de longe, só um aparece na cruz, e no domingo estavam trancados; aponta para os livros em que cada parte é contada. A frase “a dor viera antes do chicote e das cordas” passou a “antes do açoite e da prisão”.
+2. **Cordas:** sai a frase; a prisão diz só que o “maniataram” (Jo 18.12); a nota de medicina fala de “mãos atadas”, sem corda, corrente nem punho.
+3. **Mapa** (`paixao-mapa`) agora está em “As Idas e Vindas da Ceia ao Gólgota”, que **deixou de ser dobra** para o dono ver a linha do tempo e o mapa sem abrir nada.
+4. **Fogueira:** nota “Guarde Este Fogo” na cena das negações (o braseiro de Jo 18.18 volta como as brasas de Jo 21.9, onde Pedro é perguntado três vezes, Jo 21.15-17) e **cena nova “Pedro e as Brasas”** em Sepultamento e Ressurreição, com a pergunta três vezes em diálogo; “Vou pescar” não se repete.
+5. **Guardas:** os que guardam Jesus são os guardas do templo, a serviço dos sacerdotes (“guardas dos judeus”, Jo 18.12; “oficiais do templo”, Lc 22.52).
+6. **Campo de Sangue:** o parágrafo agora explica o preço de sangue (Mt 27.6), a compra do campo do oleiro para cemitério de estrangeiros (Mt 27.7), o nome (Mt 27.8; At 1.19) e há uma ficha (nome, quem comprou, para que servia, o que lembra com Zc 11.12-13, o que o texto não diz). Não entrou a descrição de como Judas morreu em Atos.
+7. **“Governador”:** trocado em toda a coleção (Prisão e Açoite); a frase que explicava a palavra foi simplificada. O estudo público “Quem Eram os Herodes?” ainda diz “prefeito” e não foi tocado.
+8. **A multidão:** parágrafo novo que diz quem a moveu (Mt 27.20, Mc 15.11), que “subiu” até Pilatos de manhã cedo (Mc 15.8, Jo 18.28), que João põe “os guardas” ao lado (Jo 19.6), o que Mateus quer dizer com “todo o povo respondeu” (Mt 27.25: o povo da cena, diante de Pilatos) e que não era a cidade inteira (Lc 23.27). A afirmação antiga de que “os chefes reuniram” a multidão saiu: os textos dizem “persuadiram” e “incitaram”.
+9. **Estudo novo, `paixao-quem-mandava`** (7 min, abre o Volume 4 como prólogo; Prisão e Interrogatório liga a ele com o cartão “Para entender o cenário”): (a) “Um Versículo Desenha o Mapa” (Lc 3.1-2) com a figura `paixao-regioes`, um mapa das divisões da terra no tempo de Jesus feito com os polígonos da época “O mundo romano” do atlas do app; (b) quatro fichas (Pilatos, Caifás e Anás, o sinédrio e a guarda do templo, Herodes Antipas), cada uma com quem era, onde mandava, o que podia, o que não podia e a quem respondia, mais a figura `paixao-poder`, um esquema em três faixas (Roma, os judeus sob Roma, o tetrarca aliado); (c) “Herodes em Jerusalém” (Lc 23.6-12, Lc 13.31-32, Mc 6.17-27); (d) “Por que Jesus Passou de Mão em Mão”. Termina com cartões para “Quem Eram os Herodes?”, “Flávio Josefo”, “Legião” e para a Santa Ceia.
+10. **Imagem:** a paisagem do monte ficou como pedido para o Codex (`analises/pedidos-de-imagem-para-o-chatgpt.md`, item 8); o mapa já está feito.
+
+**Fontes do estudo novo:** as passagens bíblicas saem das referências do texto; fora da Bíblia, só três fatos de Josefo, lidos no Wikisource (tradução de Whiston, domínio público): Antipas fundou Tiberíades, junto ao lago, com o nome do imperador (cap. 2 §3); o governador Valério Grato tirou Anás do cargo e pôs outros, até José Caifás (cap. 2 §2); Pilatos levou o exército de Cesareia a Jerusalém para o inverno (cap. 3 §1). **Não afirmado por falta de conferência:** que Tiberíades fosse a capital de Antipas (a página não diz isso), que Vitélio tirou Caifás do cargo e que as vestes do sumo sacerdote ficavam sob guarda romana. A sede do governador em Cesareia está em Atos (Félix, “no pretório de Herodes”, At 23.33-35). Obra nova `paixao-josefo-ant18` no catálogo.
+
+**Código:** `:::leia id apoio` (rótulo “Para entender o cenário”) em `rich-text-parser.ts` e `rich-text.ts`, no lugar do campo `next` (agora `mode`: continua ou apoio); teste em `ilustracoes.spec.ts`; componentes novos `passion-contexto.ts` e `.scss` (privados; `passion-route.ts` passou a exportar os auxiliares do mapa); a trava de publicação e o teste dela ganharam os ids novos.
+
+**Validação:** teste temporário (apagado): 546 referências existem, 242 citações com referência e 92 falas idênticas à Almeida do app; títulos na regra de maiúsculas (a regra manda “Por que”, “O que”, “com que” em minúscula); blocos fechados; cartões de continuação no fim dos sete livros e fora de dobra; nenhuma figura sem faixa e sem caso; nenhum “prefeito” nem “cordas”. Lint limpo; 184 testes de lógica; 63 testes de navegador de leitura, voz, histórias ligadas e compartilhar; build de produção (1,01 MB) e trava limpos, nenhum id novo no build. Chrome em 390 e 360 px: sem rolagem lateral nem erro, botões de 44 px, “Ouvir” sem lixo. Capturas em `analises/previas-contexto-12-nov/`.
+
+**Pendências:** o dono dizer se troca “prefeito” também nos estudos públicos (“Quem Eram os Herodes?”, “Flávio Josefo”, “Legião”); a imagem do monte (Codex); juntar livros ou não; os avisos que restam (“tudo indica” no lava-pés etc.); o seletor do pretório no mapa. O contorno do Monte das Oliveiras e as fronteiras das regiões são esboços aproximados.
+
+## 2026-11-12 13:17 -0400 — Santa Ceia depois da leitura do dono: horas das vigílias, quem preparou a páscoa, pão e cálice antes do anúncio, cartão “A história continua”
+
+**Autor:** Valter, com Claude. O dono leu a Santa Ceia na prévia e pediu: (1) especificar as horas de “se à tarde, se à meia-noite, se ao cantar do galo, se pela manhã”; (2) o parágrafo “Os Evangelhos não descrevem a cozinha nem o serviço; dizem só isto, que prepararam a páscoa” estava incorreto: o texto acabava de dizer que Pedro e João (Lc 22.8) prepararam a ceia, e os outros Evangelhos não trazem o mesmo detalhe; (3) dizer que Jesus morre à tarde e cumpre o pedido do cordeiro morto à tardinha (Êx 12.5-9); (4) “última ceia”, e não “última mesa”; (5) “O Pão e o Cálice” deve vir antes de “O Anúncio da Traição”; (6) no fim do livro, uma continuação para o Getsêmani; (7) apagar “Ninguém ali mente: cada um diz o que sente.” Nada commitado nem publicado. Cópias antes da mexida: `analises/paixao-santa-ceia-copia-antes-das-correcoes-do-dono.md` e `analises/catalog-copia-antes-das-correcoes-da-ceia.ts.txt`.
+
+**O que foi feito:**
+1. **Vigílias** (na dobra “Quando Foi Tudo Isso?”): quatro itens, só aproximados: à tarde, 1ª vigília, das 18h às 21h; à meia-noite, 2ª, das 21h à meia-noite; ao cantar do galo, 3ª, da meia-noite às 3h; pela manhã, 4ª, das 3h ao amanhecer. Fonte lida por inteiro: Bratcher e Nida, *A Handbook on the Gospel of Mark* (UBS, 1961), comentário a Mc 13.35, que dá a divisão romana em quatro vigílias de três horas e põe o canto do galo na terceira; uma busca antes mostrou comentários e dicionários bíblicos no mesmo sentido. A fonte dá as horas como fixas; o texto diz “só aproximadas”. Obra nova `paixao-bratcher-nida` no catálogo, nas fontes da Santa Ceia.
+2. **Quem preparou a páscoa:** cada Evangelho com o seu detalhe (Lucas: Pedro e João e “Ide, preparai-nos a páscoa, para que a comamos”; Marcos: “dois dos seus discípulos”; Mateus: “os discípulos”), e os três fecham a cena com “prepararam a páscoa”. O parágrafo seguinte agora começa “Preparar a páscoa era providenciar o que a Lei pedia”: o cordeiro “sem defeito”, morto “à tardinha” (a Almeida do app diz exatamente isso em Êx 12.6), assado, com pães ázimos e ervas amargosas, e o fermento fora de casa. O que os Evangelhos dizem depois da mesa (cálice, água na bacia) segue. Fica uma única imaginação marcada (“segundo se pode imaginar”).
+3. **O cordeiro à tardinha:** “É à tarde que Jesus morrerá, ‘à hora nona’ [Mc 15.34], por volta das 15h: cumpre também esse pedido, o do cordeiro morto à tardinha. ‘Cristo, nossa páscoa, já foi sacrificado’ [1Co 5.7].”
+4. **“Última ceia”** no lugar de “última mesa”.
+5. **Ordem:** A Última Ceia (A Mesa da Páscoa, O Lava-Pés, O Pão e o Cálice) → À Mesa com o Traidor (o anúncio e o diálogo) → Do Cenáculo ao Jardim. Os tópicos do catálogo mudaram para os mesmos nomes. Atenção: essa é a ordem de Lucas (a mão do traidor “à mesa” vem depois do cálice, Lc 22.20-21); Mateus e Marcos põem o anúncio antes do pão. O texto não afirma sequência (“Ainda à mesa…”) e segue citando Mateus.
+6. **Cartão de continuação:** `:::leia paixao-getsemani continua`, com o rótulo novo “A história continua” (em vez de “História completa”), no lugar marcado na captura. Código: `rich-text-parser.ts` (campo `next`) e `rich-text.ts` (o rótulo); teste novo em `e2e/logica/ilustracoes.spec.ts`; `CLAUDE.md` descreve. Fiz o mesmo no fim dos livros 2 a 5, cada um apontando para o seguinte (o 6 não tem). Um cartão dentro de uma seção `:::dobra` ficaria escondido; por isso “Que Horas Eram?” saiu do fim de Açoite e Condenação e foi para o fim do primeiro tópico da Crucificação, onde as horas da cruz (terceira, sexta, nona, pôr do sol) fazem mais sentido. A referência da tabela da Santa Ceia agora leva ao livro Crucificação, e as fontes do sol mudaram de livro junto.
+7. Frase “Ninguém ali mente: cada um diz o que sente.” apagada.
+
+**Tempo de leitura:** Getsêmani 4 min, Açoite e Condenação 9 min, Crucificação 21 min (os outros não mudaram).
+
+**Validação:** teste temporário (apagado) sobre os seis livros: 424 referências existem, 192 citações com referência e 83 falas idênticas à Almeida do app, títulos na regra de maiúsculas, blocos fechados, ordem exata das seções da Santa Ceia, cada livro termina no cartão do próximo e fora de qualquer dobra, “Que Horas Eram?” só na Crucificação. Lint limpo; 184 testes de lógica; 13 testes de navegador (leitura, ouvir, histórias ligadas); build de produção sem aviso (inicial 1,01 MB) e trava limpa. No Chrome em 390 px: as vigílias, o preparo, a ordem das cenas e o cartão, sem erro de console nem rolagem lateral (capturas `analises/previas-livros-12-nov/ceia2-*.png`).
+
+**Pendências:** as da entrada anterior continuam (juntar livros ou não; avisos que restam; seletor do pretório no mapa). Observado: na Santa Ceia ainda há “tudo indica, os de Judas” no lava-pés.
+
+## 2026-11-12 12:48 -0400 — A Paixão vira seis livros; a ceia segue só Mateus 26.20-35 e Judas fica à mesa
+
+**Autor:** Valter, com Claude. Pedidos do dono, a partir de uma captura do diálogo “Quem É o Traidor?”: (1) separar as histórias “como livros” (Santa Ceia, Getsêmani, Prisão e Interrogatório, Crucificação); (2) na linha “Jesus molha um bocado de pão e o dá a Judas” (Jo 13.26), “ser conservador” e pôr “o que põe comigo a mão no prato” (Mt 26.23); (3) apagar a seção “Judas Sai”; (4) arrumar a ceia, “muito bagunçada”: “Judas participa da ceia ou não? Tem ali muita divergência”. Nada commitado nem publicado. Cópias antes da mexida, em `analises/*-copia-antes-de-separar-em-livros.*`: o estudo inteiro, o catálogo, `rich-text.ts`, `article.ts`, a trava de publicação, o teste da trava e o mapa.
+
+**Os seis livros** (prateleira “Volume 4 · A Paixão, da Ceia à Ressurreição”, na trilha Como a Ciência Explica, depois do Volume 3; ids `paixao-…`; textos em `conteudo/artigos/paixao-*.md`; o estudo único `do-getsemani-a-ressurreicao` deixou de existir, e o progresso de leitura que o navegador guardava dele é ignorado sem erro). Minutos pela mesma conta dos tópicos (200 palavras por minuto):
+1. **Santa Ceia** (9 min): Os Preparativos da Páscoa · À Mesa com o Traidor · O Pão e o Cálice · Do Cenáculo ao Jardim.
+2. **Getsêmani** (3 min, com a pintura do olival na capa): A Prensa de Azeite · A Minha Alma Está Triste até a Morte.
+3. **Prisão e Interrogatório** (17 min): O Beijo e a Espada · Vendado, Cuspido, Esbofeteado · Quem Julgou Jesus?
+4. **Açoite e Condenação** (11 min): O Açoite que Abriu as Costas · A Coroa e a Cana.
+5. **Crucificação** (19 min, capa com a pintura das cruzes): Quantos Passos até o Gólgota? · Simão, o Homem que Vinha do Campo · Rei dos Judeus, em Três Línguas · Meu Deus, Meu Deus, por que Me Desamparaste?
+6. **Sepultamento e Ressurreição** (8 min, capa com o sepulcro vazio): Os que Ficaram e os que Fugiram · Ao Raiar do Primeiro Dia.
+Os livros 4 e 6 vão além dos quatro nomes do dono: sem eles, o açoite, a coroa e a sentença, e o sepultamento e a ressurreição, não tinham onde morar, e a Crucificação ficaria com 31 minutos. A prisão (o beijo, Malco) abre o livro 3 e não o Getsêmani, para o nome “Prisão e Interrogatório” fazer sentido; por isso o Getsêmani ficou curto. Juntar dois livros é concatenar os arquivos e ajustar o catálogo. O texto é o mesmo de antes, cortado nas emendas dos tópicos; o Getsêmani e a Santa Ceia ganharam novos títulos de tópico (a sanfona antiga tinha um só para cada), com a linha de hora no lugar. Cada livro tem as suas fontes (as passagens bíblicas saem das referências do próprio livro, e só entram as obras que ele realmente usa; o quadro de fontes não mostra mais o título “Para conferir e aprofundar” quando a lista é vazia, caso do livro 6).
+
+**A ceia, só com Mateus 26.20-35:** (1) o diálogo “Quem É o Traidor?” agora é Mt 26.21-25: um de vós me trairá; “Porventura sou eu, Senhor?”; “O que mete comigo a mão no prato, esse me trairá” (a Almeida do app diz “mete”; a ACF que o dono colou diz “põe”, e a regra do app é citar a Almeida dele); o “ai” de Mt 26.24; Judas pergunta “Porventura sou eu, Rabí?” e Jesus responde “Tu o disseste”. Saíram o pedaço de pão molhado e o “O que fazes, faze-o depressa” (Jo 13.26-27). (2) Apagadas a seção “Judas Sai” e a ficha que comparava os Evangelhos (“A Ordem da Ceia nos Evangelhos”), mais a ordem “depois da ceia” de Lucas e de Paulo no pão e cálice. (3) **Resposta ao “Judas participa da ceia?”:** sim, segundo Mateus: “reclinou-se à mesa com os doze” (Mt 26.20), Judas é um dos doze e já combinara a entrega (Mt 26.14-16), e ele pergunta ali mesmo (Mt 26.25). O texto diz isso numa linha e não conta a saída dele; nada fala de “onze” (o Getsêmani passou a dizer que Jesus deixou “os discípulos” à entrada, Mt 26.36-37) nem de “depois que Judas saiu”. (4) Depois do hino (Mt 26.30), no caminho, vem o aviso de que todos se escandalizarão e a promessa da Galileia (Mt 26.31-35), no lugar do diálogo de Lucas à mesa; de Lucas ficou só “eu roguei por ti” (Lc 22.32). João entra no lava-pés e nas palavras de despedida. (5) O mapa da Paixão (`passion-route.ts`) também deixou de dizer “Judas sai” e “os onze”. (6) Sobra um só aviso sobre o lava-pés, “tudo indica, os de Judas” (Jo 13.2), que o dono pode mandar firmar ou cortar.
+
+**Outros ajustes:** (1) saiu a frase “Alguns comentaristas antigos acrescentaram que o documento cancelado era perfurado com um prego…” (Cl 2.14), que escapou da limpeza de debate das 11h50. (2) Conferido que a Almeida do app tinha um único “traido” sem acento, em Mt 26.24 (Mc 14.21 e Lc 22.22 têm “traído!”); corrigido pela rota oficial (`VERSE_FIXES` em `tools/gerar-almeida.py` e `tools/corrigir-almeida.py`), porque a fala de Jesus no diálogo precisa ser idêntica ao texto do app. (3) A referência “A hora de cada passo está em *Que Horas Eram?*” (Santa Ceia) agora leva ao livro Açoite e Condenação, onde essa seção está.
+
+**Leitor (arquivos públicos, uma mudança pequena):** `RichText` ganhou a entrada `foldable`, ligada pela página do artigo em todo estudo privado: as notas de medicina e as seções `###` + `:::dobra` ficam em linhas “Saiba mais” mesmo sem a sanfona por tópico (que só liga com 8 tópicos ou mais, e nenhum livro chega a isso). Sem ela, o primeiro que o leitor veria em Santa Ceia seria a tabela inteira do calendário. A letra capitular passou a ignorar parágrafos dentro de seções dobradas (antes caía num parágrafo escondido), e o “aguarde assentar” do progresso vale para toda dobra. Os outros estudos privados não têm nota de medicina nem `:::dobra`, então nada muda neles. Trava de publicação e `e2e/logica/rascunhos.spec.ts` ganharam os cinco ids novos (`paixao-getsemani` já estava na lista por causa da imagem da capa). Também nos arquivos públicos: as listas de obras do quadro de fontes (`sources-box.ts` e a página `/fontes`) passaram a quebrar endereços longos (`overflow-wrap: anywhere`), porque obras privadas com URL sem espaço faziam `/fontes` passar de 360 px; vale igualmente para o app público. Teste novo em `e2e/logica/sanfona.spec.ts`: sem tópicos, só a dobra fechada esconde o corpo.
+
+**Validação:** teste temporário (apagado) sobre os seis arquivos: 417 referências existem, 187 citações com referência e 83 falas dos diálogos idênticas à Almeida do app, títulos na regra de maiúsculas, blocos `:::` fechados, imagens e cartões `:::leia` existentes, nenhum termo de debate nem restos de “saiu logo”, “bocado”, “onze homens”, “Jo 13.26”, “Lc 22.21”; tópicos do catálogo iguais aos títulos `##`; fontes e trilha coerentes. No Chrome em 390 px: prateleira e lista da trilha mostram o Volume 4; cada livro abre sem erro de console nem de rede e sem rolagem lateral; “Saiba mais” fechado e abrindo ao toque (a tabela do calendário tem o link para o outro livro e ele navega); fim do livro com “A seguir · Getsêmani”; cartão de compartilhar com os tópicos e as horas; “Ouvir” abre as dobras e lê sem nome de ícone nem rótulo. Capturas em `analises/previas-livros-12-nov/`.
+
+**Testes finais:** lint limpo; 183 testes de lógica passam (um novo); build de produção sem aviso (inicial 1,01 MB, como antes), trava de publicação limpa e nenhum dos ids novos no build. Testes de navegador (leitura, ouvir, histórias ligadas, compartilhar, estante, estudo e navegação, celular e computador): 391 passaram, 2 ignorados e 13 falharam, todos explicados: 6 porque a prévia de rascunhos mostra a coleção privada (48 prateleiras em vez de 44; 12 anéis em vez de 11), e passam num servidor limpo; 6 por erro de arquivo de rastro do próprio Playwright (ENOENT), porque eu havia interrompido uma execução anterior que dividia a mesma pasta de resultados; 1 real, `/fontes` com 395 px de largura num aparelho de 360, corrigido como descrito acima. Num servidor limpo (porta 4201, sem rascunhos) rodei de novo estante, biblioteca, bolinhas, as seis telas de navegação e “celular pequeno (360 px)”: 31 passam, 1 ignorado. Com as fontes abertas, os seis livros cabem em 360 px.
+
+**Decisões:** (1) Seis livros e não quatro, para ficarem entre 3 e 19 minutos; o dono diz se quer juntar. (2) Os livros não usam a sanfona por tópico, mas usam o “Saiba mais”: o dono aprovou dobrar sem cortar. (3) A ceia fica com um Evangelho por cena, como ele pediu; comparar os Evangelhos entre si só volta se ele pedir. (4) Fora de escopo e como estava: a figura da lança, as imagens e os GIFs do Codex, o seletor “Onde ficava o pretório?” do mapa.
+
+**Pendências:** o dono dizer se junta livros; se tira os avisos que restam (“tudo indica” no lava-pés; “ao que tudo indica” no nome de Barrabás; “muitos leitores cristãos veem aí” no bode vivo; “segundo se pode imaginar” nos preparativos e no olival); o seletor do pretório no mapa. Observado e não mexido: o leitor de voz corta uma passagem em “Mc 16.” e “1 e…” (o divisor de frases quebra no ponto de “16.1”), defeito antigo do `splitForSpeech` que atinge toda história com referências. A imagem da lança, a sanfona em estudos públicos e os vídeos continuam como na entrada anterior. Nenhum commit, push ou publicação.
+
+## 2026-11-12 11:50 -0400 — Estudo da Paixão só com os Evangelhos: sem “discutível” nem “fulano disse”, e a ceia separada em cenas
+
+**Autor:** Valter, com Claude. Pedidos do dono: (1) tirar as partes que dizem que algo é discutível ou o que tal autor falou, “quero focar nos Evangelhos”; (2) acrescentar o que os discípulos fizeram para preparar a Páscoa (pães, vinho, quem cuidava da cozinha), “veja nos Evangelhos”, sem inventar; (3) separar bem os assuntos da ceia (“antes da ceia teve comes e bebes? não entendi”); (4) responder se Judas participa da ceia. Tudo no material privado (`rascunhos/`); nada de código público mudou. Cópias antes da mexida: `analises/do-getsemani-copia-antes-de-focar-nos-evangelhos.md` e `analises/catalog-copia-antes-de-focar-nos-evangelhos.ts.txt`.
+
+**O que saiu do estudo (13.924 → 13.188 palavras):** a hipótese do calendário de Jaubert e as “hipóteses discutidas” da data; a Mishná e o Halel; o ossuário de Caifás e Josefo; a “tradição” sobre a morte de Judas; Tácito e a inscrição de Pilatos; a seção inteira “O Testemunho das Fontes Antigas” (Josefo, Fílon, Suetônio, Eusébio, Talmude, Yehohanan/Zias); o flagrum de osso e chumbo como reconstrução (agora “O Instrumento” diz só que os Evangelhos contam que Pilatos mandou açoitar, sem descrever o objeto); a espécie do espinho; “deve ter sido a capa”; o debate das horas em João; a frase do cálculo de Humphreys; o debate sobre onde ficava o pretório (o texto traz só a medida da Fortaleza Antônia: 4,1 km do jardim ao Gólgota e ≈ 5,9 km no total); “segundo os estudiosos/historiadores”, “alguns entendem”, “pela tradição”; o debate sobre o *tetelestai*. Duas notas de medicina foram reescritas sem citar autores. O parágrafo da altura da cruz ficou sem nome de obra e diz que é “conta de ordem de grandeza, feita para este estudo”. Uma busca por 25 termos de debate no texto (debatid, discutid, estudiosos, Josefo, Tácito, Mishná, Talmude, Jaubert, Nicolotti, Zias, Barbet, Humphreys, hipótese, a tradição…) não acha mais nada.
+
+**O que entrou, em cenas separadas (cada uma com a sua linha de hora):** “Os Preparativos da Páscoa” (Mc 14.12-16 e Mt 26.17-19, Lc 22.7-13: o envio de Pedro e João, o homem do cântaro, o cenáculo “mobiliado e pronto”, “prepararam a páscoa”; a Lei diz o que a refeição pedia, Êx 12.5-9 e 12.15; os Evangelhos não descrevem a cozinha e há **uma** imaginação marcada, “segundo se pode imaginar”), “A Mesa da Páscoa”, “O Lava-Pés” (já existia), “O Anúncio da Traição” (o diálogo `Quem É o Traidor?`), “Judas Sai” e “O Pão e o Cálice”, com a ficha **A Ordem da Ceia nos Evangelhos** (Mateus e Marcos / Lucas / João / Paulo / E Judas?). O que a ficha mostra: a refeição da Páscoa é a ceia inteira; o pão e o cálice acontecem **dentro** dela (“enquanto comiam”, Mt 26.26; Mc 14.22), e o cálice é o “depois da ceia” (Lc 22.20; 1Co 11.25).
+
+**Sobre Judas (resposta ao dono):** os Evangelhos não dizem com todas as letras se ele estava na hora do pão e do cálice. João registra que ele recebeu o bocado e “saiu logo” (Jo 13.30), antes do que Jesus diz a seguir; Mateus e Marcos não contam a saída; Lucas põe “a mão do que me trai está comigo à mesa” depois do cálice (Lc 22.21). A ficha e o texto mostram cada Evangelho com as suas palavras, sem harmonizar por conta própria; a ordem das cenas segue Mateus e João.
+
+**Catálogo privado:** saíram as seis linhas de fontes antigas (Josefo, Mishná, Tácito, Fílon, Suetônio/Eusébio/Talmude, achados) e as obras que só elas usavam (de 20 para 10 em `works`; as definições seguem em `DRAFT_WORKS`, sem uso). O título do quadro de fontes dizia “Fontes antigas e arqueologia”, errado para uma lista de passagens bíblicas e uma pintura: passou a “Passagens bíblicas e imagem”, e a lista ganhou Êx 12.15, 1Co 11.23-25 e 15.5-6, Dt 25.3 e Zc 13.7. Tempo de leitura da capa: 58 → 55 min (≈ 11 mil palavras de texto corrido a 200 por minuto). No mapa, saiu de `passion-route.ts` (etapa 1) a frase de que o lugar do cenáculo é debatido.
+
+**Validação:** (1) teste temporário (já apagado) que conferiu 427 referências, 193 citações com referência e 83 falas dos diálogos contra a Almeida do aplicativo, mais 19 citações da ceia e da ficha conferidas à parte: tudo exato; ordem das cenas, ficha com 5 linhas, quatro dobras (`Quando Foi Tudo Isso?`, `As Idas e Vindas da Ceia ao Gólgota`, `A Lei Judaica e o Costume Romano`, `Que Horas Eram?`), blocos `:::` fechados, títulos na regra de maiúsculas, cartões `:::leia` e imagens existentes. (2) Lint limpo; 182 testes de lógica passam (inclui sanfona, rascunhos e fontes); trava de publicação limpa. (3) No Chrome em 390 px, no estudo real: tópico 1 aberto, as cinco cenas e a ficha legíveis, sem rolagem lateral, sem erro de console nem de rede (capturas em `analises/previas-evangelhos-12-nov/`).
+
+**Decisões:** (1) “Discutível” e “fulano disse” saem inteiros em vez de ficarem dobrados em “Saiba mais”: o dono quer o estudo nos Evangelhos, e dobrar manteria o assunto. (2) A Lei (Êx 12) continua, porque é Escritura e é o que explica o que a Páscoa pedia; ficou apenas uma imaginação marcada. (3) Foram mantidos os cálculos do próprio estudo (nascer e pôr do sol, altura da cruz), cada um dito como cálculo; se o dono quiser tirar também, é só pedir. (4) Fora de escopo: nada mudou nas figuras nem na lança.
+
+**Pendências:** o dono decidir se o mapa perde o seletor “Onde ficava o pretório?” (tradição/hipótese), que ainda mostra a Fortaleza Antônia ou o Palácio de Herodes; e se saem também os outros rótulos de “hipótese” (notas de medicina, cálculo do sol, altura da cruz) e o quadro de fontes (hoje com 10 obras). Observado e não mexido: no componente público, um ponto final logo depois de uma passagem pode cair sozinho na linha de baixo quando a passagem termina a linha. Imagem da lança, sanfona em estudos públicos e vídeos continuam como na entrada anterior. Nenhum commit, push ou publicação.
+
+## 2026-11-12 11:22 -0400 — “Ouvir” lia o que não se vê e podia seguir por trechos que sumiam da página
+
+**Autor:** Valter, com Claude. O dono, ouvindo o estudo, disse que havia parte que ele ouvia e não via na tela, e perguntou onde estava. Toca arquivos públicos do leitor (`listen-dom.ts`, `topic-head.ts`, `rich-text.ts`, `article.ts`, `e2e/ouvir.spec.ts`, `CLAUDE.md`).
+
+**Diagnóstico (no navegador, com um sintetizador de voz simulado):** (1) Com tudo aberto pelo “Ouvir”, os 315 trechos lidos estão visíveis; nenhum escondido. (2) **Causa 1, achada e provada:** a narração lia o texto inteiro dos novos cabeçalhos da sanfona, inclusive o tempo e o nome do ícone: “À Mesa com o Traidor, 8 min, expand more” (12 tópicos) e “Saiba mais, Quando Foi Tudo Isso?, expand more” (6 seções). O “expand more” é o nome da seta, que na tela aparece só como desenho, então a pessoa ouvia o que não via. (3) **Causa 2, deduzida do código (não consegui reproduzir o caso exato do dono, que não disse qual trecho):** durante a leitura, tocar no título de um tópico fechava os outros; como a sanfona destrói os blocos fechados, a narração seguia por trechos que já não estavam na página, e o destaque e a rolagem do “Ouvir” não tinham onde acontecer.
+
+**Correções:** (1) `storyText` (em `listen-dom.ts`) tira os nomes de ícones (`mat-icon`) e tudo o que leva `data-nolisten` do texto falado; o tempo de leitura e os rótulos “Saiba mais” e “Próximo tópico” ganharam essa marca. (2) Com o “Ouvir” ligado, `RichText [keepOpen]` impede que qualquer coisa feche: um toque no título só leva até ele, e uma dobra aberta não fecha. (3) Fora da leitura, tocar num tópico aberto agora fecha **só ele** (antes fechava todos, o que surpreendia quando vários estavam abertos).
+
+**Validação:** no estudo real, celular e computador: fala “À Mesa com o Traidor” e “Quando Foi Tudo Isso?” sem ícone, tempo nem rótulo; durante a leitura, tocar em dois títulos e numa dobra deixa os 12 tópicos abertos e a dobra aberta, e o trecho destacado continua na página e visível; depois de parar, fechar o 5º deixa 11 abertos. Teste novo permanente em `e2e/ouvir.spec.ts` (numa história pública: o título com ícone e rótulo marcado é falado sem eles). Lint limpo; 182 testes de lógica e 17 de navegador (ouvir e leitura) passam, 1 ignorado de antes.
+
+**Pendências:** o dono dizer qual trecho ouviu sem ver, se o problema persistir (para eu reproduzir o caso exato); integrar a imagem da lança quando ele decidir; oferecer a sanfona a estudos públicos longos; vídeos em pausa. Nenhum commit, push ou publicação.
+
+## 2026-11-12 10:42 -0400 — Pedido de imagem realista da lança, com a altura correta, para o Codex
+
+**Autor:** Valter, com Claude. O dono avisou que o Codex está fazendo uma imagem e um GIF da lança na cruz com a altura correta e pediu que eu desse recomendações de dados para ele chegar perto do realismo, inclusive o sangue escorrendo depois da lança. Só foi escrito um pedido no arquivo privado `analises/pedidos-de-imagem-para-o-chatgpt.md` (novo item 7, que substitui o item 6); nada de código, imagem ou estudo foi alterado, e a figura da lança atual não foi tocada.
+
+**O que o pedido traz:** a tabela de medidas do parágrafo do estudo em proporção ao soldado (poste de 2,4 m com o topo ≈ 0,7 m acima do capacete; pés a 30–60 cm do chão; lado do corpo a 1,4–1,8 m, ao alcance de um soldado de pé sem escada; lança de cerca de 2 m como escolha artística, sem fonte), o enquadramento (câmera de lado, à altura dos olhos do soldado, do chão ao topo do poste), o realismo de corpo, pele, madeira, pano, armadura e luz (fim de tarde, céu grosso, antes do pôr do sol), as duas outras cruzes uma de cada lado (Jo 19.18), mãos sem cravo visível, e uma sequência de seis quadros para o sangue e a água de Jo 19.34: gota no flanco, filete escuro de 20 a 30 cm descendo por gravidade com um fio claro e aquoso ao lado, e a gota na borda do pano. GIF de 6 quadros, 3 s nos três primeiros e 4 s nos três últimos, com pausa no fim. Inclui um prompt em inglês, o plano B se o gerador recusar (só uma linha fina de sangue, pintura a óleo, proporções acima de tudo) e a lista do que o Claude vai medir em pixels na chegada.
+
+**Decisões:** (1) a regra do projeto foi mantida no pedido: realismo na pele, na madeira, na luz e no escorrer lento, mas sem ferida aberta, tecido à mostra, corte anatômico, trajetória interna, jorro nem diagnóstico. (2) O pedido diz que as proporções importam mais que a quantidade de sangue, para a altura continuar batendo com o texto. (3) O comprimento da lança e a altura de 1,70 m do soldado são parâmetros artísticos e estão marcados assim.
+
+**Pendências:** receber a imagem e o GIF do Codex, integrar na figura da lança com a miniatura, ajustar a legenda (tirar o aviso dos cravos se a imagem não mostrar mais cravo), medir as proporções, refazer os testes da figura e registrar. Vídeos em pausa. Nenhum commit, push ou publicação.
+
+## 2026-11-12 09:58 -0400 — Sanfona, passo 2: “Saiba mais” nas notas de medicina e nas seções de análise
+
+**Autor:** Valter, com Claude, a pedido do dono (“faz ai e me mostra”), continuando a entrada anterior. Cópia do estudo antes das marcas em `analises/do-getsemani-copia-antes-das-dobras.md`. Toca arquivos públicos (`rich-text-parser.ts`, `rich-text.ts`, `topic-sections.ts`, `topic-head.ts`, `article.ts`, `e2e/logica/sanfona.spec.ts`, `CLAUDE.md`), mas só tem efeito na sanfona, que só liga em estudos privados longos.
+
+**O que foi feito:** (1) As 10 notas de medicina viram uma linha “SAIBA MAIS · A medicina explica” no mesmo lugar do texto; ao tocar, a nota abre logo abaixo. (2) Nova linha `:::dobra` (uma linha, sem fechar), logo abaixo de um título `###`, que dobra a seção dele até o próximo título (`foldRanges`); fora da sanfona o bloco não desenha nada. Marquei seis seções de contexto e de fontes: “Quando Foi Tudo Isso?”, “As Idas e Vindas da Ceia ao Gólgota”, “A Lei Judaica e o Costume Romano”, “O Testemunho das Fontes Antigas”, “O Instrumento” e “Que Horas Eram?”. Ficaram à vista “O Relato dos Evangelhos” (é o relato), “A Lei Cumprida na Cruz” (conteúdo que o dono pediu) e “A Razão de Tudo Isso” (o fecho); cada dobra é uma linha, e o dono troca quando quiser. (3) O “Ouvir” abre também as dobras (`openAll`), porque lê tudo.
+
+**Medida no celular:** com um tópico aberto por vez e as dobras fechadas, os tópicos têm de 1,3 a 10,3 telas (soma 62,8; eram 75 com tudo aberto). O ganho maior continua sendo a sanfona dos tópicos (4,2 telas com tudo fechado); as dobras tiram cerca de 12 telas do que a pessoa não abre.
+
+**Defeito achado e corrigido (importante):** abrir o último tópico marcava a história como **lida** sem ninguém ler. O rastro de gravações mostrou a causa: ao tocar no 12º, o 1º (grande) fecha no mesmo instante, a página encolhe uns 7 telas e, por um quadro, a posição de rolagem fica além do fim do texto; nesse quadro a conta concluía “fim alcançado”. Remédio: `RichText.settling` pausa a gravação do progresso por 900 ms a cada abrir ou fechar (tópico, dobra, “Próximo”, retomar, “Ouvir”), e um tópico sem o texto desenhado conta como fechado. Conferido: abrir o 12º deixa o progresso em ≈ 0,95 e sem o banner “Você já leu”, abrir os tópicos de 1 a 11 também, e chegar ao fim do 12º marca como lida. Registrado no CLAUDE.md.
+
+**Validação:** lint limpo; 182 testes de lógica passam (4 da sanfona, incluindo as dobras); 61 testes de navegador (leitura, ouvir, histórias ligadas, compartilhar) passam no celular e no computador, com 1 ignorado de antes; build de produção sem aviso (inicial 1,01 MB) e trava de publicação limpa. No Chrome, no estudo real: 6 dobras de análise e 10 de medicina (16 linhas “Saiba mais”), todas fechadas ao abrir, alvos de 52 px ou mais, letra de 13 px ou mais, “Ouvir” abre os 12 tópicos e as 16 dobras, sem erro e sem rolagem horizontal. Capturas em `analises/previas-sanfona/` (5 a 8).
+
+**Pendências:** oferecer a sanfona a estudos públicos longos; o dono dizer se prefere a variante da lança sem cravo visível; vídeos em pausa. Nenhum commit, push ou publicação.
+
+## 2026-11-12 09:40 -0400 — Sanfona por tópico no estudo da Paixão e a altura da cruz
+
+**Autor:** Valter, com Claude. Dois pedidos do dono: (1) o estudo cansa no celular (“a pessoa rola muito”) e ele sugeriu sanfona por tema, abas ou outra ideia; (2) acrescentar a que altura ficava a cruz e o condenado, para a cena da lança, em metros ou altura média. Esta entrada toca arquivos públicos (`rich-text.ts`, `article.ts`, `topic-sections.ts`, `topic-head.ts`, `e2e/logica/sanfona.spec.ts`, `CLAUDE.md`), mas a sanfona só liga em estudos privados com 8 tópicos ou mais; nenhuma história pública muda.
+
+**Medida que motivou:** no celular (412 × 839 px, letra de 19 px) o estudo tinha 75 telas de rolagem; 71% eram parágrafos corridos, 15% diálogos, 6% notas de medicina. As 35 cenas somavam 43,6 telas e as 12 subseções de análise 18,2. Há 25 parágrafos com mais de 100 palavras.
+
+**Sanfona por tópico:** cada `##` virou um cartão (título, tempo de leitura, seta) que abre e fecha o trecho dele. O primeiro tópico começa aberto; abrir outro fecha o anterior e leva o título a 84 px do alto, abaixo da barra; no fim de cada tópico aberto há “Próximo tópico”. Resultado medido no celular: 13,3 telas com o primeiro aberto, 4,2 telas com tudo fechado (eram 75). Decisões: (1) os blocos fechados não são desenhados (um `@if`, sem caixas em volta), para o CSS do modo história, que seleciona filhos diretos, continuar valendo. (2) O progresso (“Continuar de onde parou”, “faltam N min”, história lida) passou a ser medido pelas **palavras**, e não pela altura da página, que muda quando os tópicos abrem e fecham; com a medida antiga, tudo fechado marcaria a história como lida. Conferido: no 5º tópico de 12 o progresso salvo fica em ≈ 0,42 e a história não fica “lida”. (3) “Ouvir” abre todos os tópicos antes de começar, porque lê o texto inteiro. (4) O estilo do cartão ficou num componente próprio (`topic-head.ts`), porque o `rich-text.scss` já está perto do limite de 16 kB. (5) A sanfona mostra os 12 títulos de uma vez, o que difere da regra da capa de história (“sem índice, o leitor descobre cada tópico”); foi escolha do dono para o estudo longo, e ficou escrito no CLAUDE.md. Não feito ainda: dobrar as notas de medicina e as subseções de análise dentro de cada tópico (“Saiba mais”), e oferecer a sanfona a estudos públicos longos.
+
+**Altura da cruz (texto novo em “A Lança”):** os Evangelhos não dão a altura. Fontes lidas hoje: a *Encyclopedia of the Bible* (Zondervan, verbete “Crucifixion”, no BibleGateway) diz que o poste era em geral pouco mais alto que um homem e estima a cruz de Jesus em sete a nove pés (2,1 a 2,7 m) pelo comprimento da cana de cerca de três pés (Jo 19.29); uma página didática do Boston College fala em cruzes com os pés “um pé ou dois” acima do chão (30 a 60 cm). A Britannica, que a busca apontou com trave a 9–12 pés, bloqueia leitura automática (403) e **não foi lida**; não foi contornado. O parágrafo dá as duas estimativas, a média de 2,4 m para o poste e, supondo um homem de 1,65 m, pés a algumas dezenas de centímetros do chão e o lado do corpo a 1,4 a 1,8 m, ao alcance de um soldado de pé; diz que é conta de ordem de grandeza feita para o estudo, não dado dos textos. As duas fontes entraram no catálogo privado, com o que foi lido e o que não foi.
+
+**Validação:** lint limpo; 181 testes de lógica passam (3 novos, da sanfona); 113 testes de navegador das histórias (leitura, ouvir, histórias ligadas, estudo) passam no celular e no computador; build de produção sem aviso (inicial 1,01 MB) e trava de publicação limpa. No Chrome, no estudo real: 12 cartões, só o 1º aberto, abrir o 4º fecha o 1º, “Próximo tópico” abre o 5º, fechar deixa tudo fechado, “Ouvir” abre os 12, alvos de 56 px e letra de 13 px ou mais, sem erro nem rolagem horizontal. Capturas em `analises/previas-sanfona/`.
+
+**Pendências:** o segundo passo da sanfona (dobras “Saiba mais”) e se ela vale para estudos públicos; o dono dizer se prefere a variante da lança sem cravo visível; vídeos em pausa. Nenhum commit, push ou publicação.
+
+## 2026-11-12 09:05 -0400 — Revisão da figura “A Lança” (de outra mão)
+
+**Autor:** Valter, com Claude, a pedido do dono de revisar a figura `paixao-lanca`, acrescentada hoje de manhã por outro agente (notas em `analises/lanca-ilustracao-gif.md`). Cópia do estilo anterior em `analises/passion-story-copia-antes-do-piso-de-13px.scss.txt`.
+
+**O que está certo:** os quatro momentos seguem João 19.31–37 (Jesus já morto e imóvel desde o primeiro quadro; a lança vem depois; contato discreto; “sangue e água” só como traço mínimo no último), as quatro fases batem com as imagens, o texto de cada fase diz o que o Evangelho diz e declina de dar causa médica, a legenda no estudo e o aviso de “Ilustração gerada por IA” estão corretos, a ordem no estudo (depois do parágrafo de A Lança, antes da nota de medicina) é a pedida. O GIF tem os mesmos quatro quadros da folha (diferença média de 1,6/255, só da paleta), 768 × 512, 4 s por quadro e repete sem parar; o link de baixar responde 200 com `image/gif`. No Chrome a cena avança sozinha, a pausa segura o quadro, “Recomeçar” volta ao primeiro, os botões de fase trocam a explicação e, com movimento reduzido, ela começa pausada.
+
+**Três problemas achados e tratados:** (1) **Acessibilidade:** o componente compartilhado `passion-story` (Malco, Anás, rosto, chicote, coroa e lança) tinha texto de 10 a 12 px e o link “Baixar GIF da cena” com 29 px de altura, abaixo dos pisos do projeto (13 px e 40 px; esses testes só rodam nas páginas públicas, por isso nada acusava). Subi todos os tamanhos para 13 px ou mais e o link passou a 44 px; conferido nas seis figuras, nos dois tamanhos de tela, com contraste de 8,6:1 a 11,8:1. (2) **Trava de publicação:** `paixao-lanca` e `paixao-placa` não estavam na lista de identificadores privados de `tools/verificar-publicacao.mjs`, então o código dessas figuras não seria barrado se vazasse para um build público sem as imagens; entraram na lista, com dois casos novos em `e2e/logica/rascunhos.spec.ts`. (3) **Cravos:** a folha mostra a cabeça do cravo atravessando a palma das duas mãos; o estudo diz que os pregos entravam “nos pulsos (ou antebraços)” e a regra do projeto é não representar posição específica de cravo. Por ora a legenda da figura da lança ganhou o aviso “Os cravos aparecem nas mãos, como na imagem tradicional; a posição exata não é conhecida, e o estudo discute pulsos e antebraços”; a imagem não foi alterada e o pedido de uma variante sem cravo visível ficou pronto, como opcional, em `analises/pedidos-de-imagem-para-o-chatgpt.md` (item 6).
+
+**Observação sem correção:** as duas outras cruzes aparecem juntas ao fundo, à direita, e não uma de cada lado de Jesus (Jo 19.18); é escolha de composição da imagem, coberta pela legenda “reconstituição artística”.
+
+**Validação:** lint limpo; 178 testes de lógica passam; trava de publicação limpa no build recente (sem falso alarme com os ids novos); verificações no Chrome já descritas, sem erro de console nem de rede e sem rolagem horizontal.
+
+**Pendências:** o dono decidir se pede a variante da lança sem cravo visível. Vídeos em pausa. Nenhum commit, push ou publicação.
+
+## 2026-11-12 08:55 -0400 — A hora das cenas entra no cartão de compartilhar
+
+**Autor:** Valter, com Claude, a partir do pedido “linha de hora no cartão” (pendência de 11/11: decidir se a linha de hora aparece no cartão de compartilhar). Esta entrada toca arquivos públicos (`src/app/core/share-card.ts`, `src/app/shared/share-render.ts`, `e2e/logica/compartilhar.spec.ts`, `CLAUDE.md`), mas só o estudo da Paixão usa `:::hora`, então nenhum outro cartão muda.
+
+**O que foi feito:** (1) `shortWhen` (puro, em `share-card.ts`) encurta a linha de hora, que é texto livre, para dia e primeira marca de hora: “Quinta-feira · ao anoitecer, por volta das 18h” → “Quinta, 18h”; “antes das 9h”; “entre a meia-noite e as 3h” → “0h–3h”; “das 9h ao meio-dia” → “9h–12h”; sem hora marcada, fica o período (“de noite”, “à tarde”); “De sexta a domingo” → “Sexta a domingo”. (2) `articleCard`: um subtópico (`###`) logo seguido de `:::hora` ganha a hora **na frente** (“Quinta, 18h · O Cenáculo”); os tópicos (`##`) nunca levam hora, para continuarem sendo as perguntas que despertam curiosidade, e as fichas também não. (3) `share-render.ts`: o desenhista não limitava a largura de um subtópico de uma linha só (`clampLines` devolve a linha inteira quando ela é única), então uma linha longa vazaria da imagem; ganhou `oneLine`, que corta com reticências pela largura medida. (4) Dois testes novos no mesmo arquivo dos outros do cartão: a forma curta de 14 linhas de hora reais e o cartão com hora, com título comprido.
+
+**Decisões:** (1) A hora vai antes do título porque, se a linha estourar, o que se corta é o fim do título e não a hora; foi o que se viu na imagem real: com a hora no fim, o Anás perdia “0h–3h”. (2) O limite de letras por subtópico (`SUB_CHARS = 67`) saiu de medir a imagem de verdade (cabem uns 66 a 69 caracteres na largura de 876 px); o único corte que sobra é o do título de Anás (“…o Sumo Sac…”). (3) Só os dois primeiros subtópicos de cada tópico aparecem (regra antiga do cartão), então nem toda cena aparece. (4) Não houve entrada em `RELEASES`: não há mudança visível no app público.
+
+**Validação:** lint limpo; 178 testes de lógica passam (um novo); os 19 testes do painel de compartilhar no celular passam; build de produção sem aviso (inicial 1,01 MB, abaixo do aviso de 1,05 MB) e trava de publicação limpa. Imagem real do estudo gerada no Chrome, feed 1080 × 1350 e Stories 1080 × 1920, com as horas de 14 cenas; capturas em `analises/previas-cartao/`.
+
+**Pendências:** a figura `paixao-lanca` (de outra mão) sem revisão minha. Vídeos em pausa por decisão do dono. Nenhum commit, push ou publicação.
+
+## 2026-11-12 08:46 -0400 — Vídeos contínuos em pausa por decisão do dono
+
+**Autor:** Valter, com Claude. O dono disse “vamos deixar o vídeo quieto”. Os cinco vídeos contínuos (sistema nervoso, Malco, Anás, rosto coberto, açoites) deixam de ser pendência: nada foi gerado, enviado ou cobrado, e os pedidos prontos ficam guardados em `analises/pedidos-de-video-weave.md`, agora marcado como “em pausa”. Só retomam se o dono pedir; as imagens e animações atuais da coleção seguem como estão. Pendências que continuam abertas: se a linha de hora aparece no cartão de compartilhar; a figura `paixao-lanca` (de outra mão) sem revisão minha. Nenhum commit, push ou publicação.
+
+## 2026-11-12 08:45 -0400 — “Salve, rei dos judeus!” ganha fala e referências próprias
+
+**Autor:** Valter, com Claude, a partir do “sim” do dono à pendência “dar a referência própria a ‘Salve, rei dos judeus!’” (entrada de 11/11 09:10, em que a citação estava certa mas sem referência dela). Só o estudo privado foi tocado.
+
+**O que foi feito:** a saudação dos soldados está nos três Evangelhos que contam a zombaria, com as mesmas palavras na Almeida do app: Mt 27.29, Mc 15.18 e Jo 19.3. Em “A Coroa e a Cana” ela virou uma fala própria, no formato dos outros diálogos do estudo (`:::dialogo A Saudação dos Soldados`, falante “Os soldados”), com as três referências, uma por Evangelho: o parágrafo da visão de Jesus termina em “…e se ajoelha para saudá-lo:”, vem a fala, e o parágrafo continua em “Depois toma a cana de volta…”. O trecho de análise, que citava Mt 27.29 inteiro e repetia a saudação, passou a terminar a citação em “…o escarneciam”, para a saudação ter um lugar só (hoje aparece uma vez no estudo).
+
+**Decisões:** (1) a fala tem as três referências porque as três dizem exatamente isso; Mt 27.29 vem primeiro por ser o relato mais completo da cena. (2) Diálogo de uma fala só já tinha precedente no estudo (Judas, Mt 27.4). (3) O “Ouvir” lê “Os soldados: Salve, rei dos judeus!”.
+
+**Validação:** o estudo passou a ter 18 diálogos e 83 falas, todas trecho exato da Almeida; as citações entre aspas seguidas de referência continuam exatas; 50 blocos `:::` abertos e 50 fechados; lint limpo e 177 testes de lógica passam; no Chrome, a 412 e 1366 px, o bloco aparece com as três referências clicáveis, sem erro de console ou de rede e sem rolagem horizontal. Captura privada em `analises/previas-saudacao/`.
+
+**Pendências:** o dono habilitar um plano de vídeo para os cinco vídeos; se a linha de hora aparece no cartão de compartilhar; a figura `paixao-lanca` (de outra mão) sem revisão minha. Nenhum commit, push ou publicação.
+
+## 2026-11-12 08:35 -0400 — Mt 26.63 corrigido na Almeida; vídeos do Weave continuam bloqueados pelo plano
+
+**Autor:** Valter, com Claude, a partir do pedido do dono de tratar o Mt 26.63 e os vídeos do Weave. Este é o único item do dia que toca arquivos públicos (`public/bible/almeida/MAT.json` e `tools/gerar-almeida.py`), por ser texto bíblico.
+
+**Mt 26.63:** o app dizia “se tu és o Cristo, o Filho do Deus.” Comparei com as outras seis versões em português que o app embute (Almeida 1911, BLivre, NBV, BPM, BLT, NVA): todas dizem “o Filho de Deus”, e “do Deus” só aparece onde Deus leva adjetivo (Mt 16.16 “do Deus vivo”). Os outros seis “Filho(s) do Deus” da Almeida do app (Mc 5.7, Lc 8.28, Mc 14.61, Os 1.10, Rm 9.26 e Mt 16.16) têm adjetivo e ficam como estão; só o Mt 26.63 destoa. Entrou em `VERSE_FIXES` (“o Filho do Deus.” → “o Filho de Deus.”, com o motivo em comentário) e foi aplicado por `tools/corrigir-almeida.py`; a comparação com o último commit mostra uma única diferença nova, em Mt 26.63. No estudo, a fala de Caifás, que estava cortada em “…o Cristo…” por causa do erro, voltou inteira: “Conjuro-te pelo Deus vivo que nos digas se tu és o Cristo, o Filho de Deus.” (trecho exato do versículo). Nenhuma citação da redação antiga em `public/`, `src/` ou `e2e/`.
+
+**Vídeos do Weave:** nada foi gerado, enviado ou cobrado. (1) Nova cotação de Veo 3.1 Image to Video, sem `acknowledgedCost` e com uma imagem pública (Tissot, domínio público) para não enviar nada privado, voltou com o mesmo erro de 10/11: modelos de vídeo só em plano pago. (2) A alternativa avaliada, o vídeo do ElevenLabs (Veo, Kling, Seedance, Runway), também foi recusada por plano; as duas cotações tentadas deixaram dois fluxos vazios na conta dele (ids no relatório) que o dono pode apagar. (3) O registro do envio de 10/11 sumiu do `/tmp` nas quedas de energia: rodar exigirá reenviar a prancha, com nova autorização. (4) Assinar plano é decisão do dono; não foi feito. Ficou pronto `analises/pedidos-de-video-weave.md`: estado, ordem para retomar (cotar, pedir aprovação do custo a cada execução, pedir autorização por arquivo, assistir ao vídeo inteiro), parâmetros comuns, quadros inicial e final de cada um dos cinco vídeos (grade 2 × 2 de 768 × 512) e rascunhos de prompt para Malco, Anás, rosto coberto e açoites, nunca executados.
+
+**Validação:** lint limpo e 177 testes de lógica passam com o texto novo da Almeida; a fala de Caifás é trecho exato de Mt 26.63; 50 blocos `:::` abertos e 50 fechados.
+
+**Pendências:** o dono habilitar um plano de vídeo (Weave ou ElevenLabs) para os cinco vídeos; se a linha de hora aparece no cartão de compartilhar; a referência própria de “Salve, rei dos judeus!”; a figura `paixao-lanca` (de outra mão) sem revisão minha. Nenhum commit, push ou publicação.
+
+## 2026-11-12 08:35 -0400 — Nascer e pôr do sol de Jerusalém calculados, com fonte
+
+**Autor:** Valter, com Claude, a partir do “sim” do dono à pendência “achar uma fonte lida para o nascer e o pôr do sol de Jerusalém”. Nada disto toca `src/` nem `public/`. O relatório completo está em `analises/sol-em-jerusalem.md` e o cálculo em `analises/sol-em-jerusalem.py` (só biblioteca padrão).
+
+**O que foi feito:** o estudo dizia “o sol nasce por volta das seis e se põe por volta das seis”, sem fonte. No século I a hora era solar e o dia ia do nascer ao pôr do sol em 12 partes, então o que importa é a posição do Sol na data, não tabela de relógio de hoje. Calculei com as coordenadas do Sol de Meeus (*Astronomical Algorithms*, caps. 7, 25 e 28), ΔT do polinômio de Espenak e Meeus (NASA) e altura de −50′ no horizonte. Conferi o método numa data de hoje (7/4/2026) com duas fontes abertas lidas hoje, as equações do NOAA e o *Almanac for Computers* do USNO: os três ficam a um minuto uns dos outros (nascer 05h39–05h40, pôr 18h20–18h21). Resultado para as duas sextas-feiras de 14 de nisã possíveis no governo de Pilatos: 7 de abril do ano 30, nascer 05h41, pôr 18h19; 3 de abril do ano 33, nascer 05h45, pôr 18h16; dia de cerca de 12h35, “hora” de 63 minutos, fim da hora terceira por volta das 8h50, sexta ao meio-dia, nona por volta das 15h10. Uma semana de diferença na data muda o horário em cerca de sete minutos; ΔT (2,9 h no ano 30) muda o nascer em 7 segundos.
+
+**No estudo:** (1) “Que Horas Eram?”: o parágrafo agora diz 5h40 e 18h20 em hora solar, as marcas das horas terceira, sexta e nona, que os títulos arredondam, e que o cálculo vale para as duas datas (Humphreys e Waddington, 1983); (2) as linhas da tabela passaram a “cerca das 5h40” e “cerca das 18h20”; (3) a introdução do quadro de dias e a cena “As Trevas ao Meio-Dia” trocaram “seis” por 5h40; (4) o catálogo privado ganhou cinco fontes (Humphreys e Waddington, Meeus, NOAA, USNO, Espenak e Meeus), cada uma dizendo o que foi lido.
+
+**Decisões:** (1) as linhas de hora dos títulos continuam em horas cheias (“por volta das 6h”, “por volta das 9h”…), porque o estudo agora diz que arredondam; “amanhecer” (a luz começa por volta das 5h15) e “manhã cedo” cabem entre 5h15 e 6h. (2) O livro de Meeus não foi lido nesta sessão, só as fórmulas que dele vêm (por isso a conferência com NOAA e USNO) e o artigo de Humphreys e Waddington foi conferido por resumos; as duas coisas estão ditas na ficha da fonte. (3) O estudo não escolhe entre os anos 30 e 33, e o cálculo não prova data nenhuma.
+
+**Validação:** lint limpo e 177 testes de lógica passam; no Chrome, a 412 e 1366 px, o texto novo aparece (5h40 em quatro pontos, 18h20 em dois), as cinco fontes aparecem na lista, nenhum “por volta das seis” sobrou, sem erro de console ou de rede e sem rolagem horizontal; 50 blocos `:::` abertos e 50 fechados.
+
+**Pendências:** decidir se a linha de hora aparece no cartão de compartilhar; Mt 26.63 e a referência própria de “Salve, rei dos judeus!”; vídeos do Weave; a figura `paixao-lanca` (de outra mão) segue sem revisão minha; ler o livro de Meeus ou outra fonte impressa de astronomia se o dono quiser a citação sem a ressalva. Nenhum commit, push ou publicação.
+
+## 2026-11-12 08:20 -0400 — O estudo passa a se chamar “Da Ceia à Ressurreição” e o mapa começa no cenáculo
+
+**Autor:** Valter, com Claude, a partir do “sim” do dono às duas pendências abertas na entrada anterior (título e cenáculo no mapa). Cópias anteriores em `analises/passion-route-copia-antes-do-cenaculo.ts.txt`, `analises/jerusalem-geo-copia-antes-do-cenaculo.ts.txt` e `analises/gerar-jerusalem-copia-antes-do-cenaculo.py`. Nada disto toca `src/` nem `public/`.
+
+**O que foi feito:** (1) Título: “Do Getsêmani à Ressurreição” virou “Da Ceia à Ressurreição” no catálogo, no cabeçalho e na linha de apoio da figura de abertura; o id `do-getsemani-a-ressurreicao` ficou como estava, porque a trava de publicação e os arquivos dependem dele. A faixa do mapa passou a “Do cenáculo ao sepulcro, em Jerusalém”. (2) Mapa: o Cenáculo deixou de ser só ponto de referência e virou a etapa 1 (“A ceia no cenáculo”); o trecho a pé do cenáculo ao Getsêmani veio do roteador do OpenStreetMap (perfil a pé), pedido em 12/11/2026 e guardado em `analises/dados-jerusalem/rota-cenaculo-getsemani.json`; o gerador `gerar-jerusalem.py` ganhou esse caminho e regerou `jerusalem-geo.ts` (a diferença para o arquivo anterior é só a linha nova; os outros cinco trechos saíram idênticos). O mapa tem agora nove etapas, quatro trechos (`LEG_END = [1, 2, 3, 6]`) e cinco linhas na tabela de quilômetros. Números: cenáculo ao jardim, 1,77 km a pé (1,29 em linha reta); do cenáculo ao Gólgota, 5,87 km a pé com o pretório na Fortaleza Antônia (3,90 em linha reta) e 5,03 km com o pretório no palácio de Herodes (3,41); do jardim ao Gólgota continua em 3,3 a 4,1 km, como o texto já dizia. (3) Texto: a legenda do mapa (“nove etapas, do cenáculo ao sepulcro”), o parágrafo dos quilômetros (agora com o trecho do cenáculo e o total de 5,0 a 5,9 km) e a cena “O Hino e o Caminho” (“1,3 km em linha reta e 1,8 km a pé”).
+
+**Erro achado e corrigido no caminho:** a cena “O Cenáculo” dizia que o cenáculo fica no monte Sião “dentro dos muros de hoje”. Pelas coordenadas do próprio mapa, ele fica a cerca de 110 m ao sul da muralha de hoje, ou seja, do lado de fora; o texto agora diz “do lado de fora das muralhas de hoje, ao sul da Cidade Antiga”.
+
+**Decisões:** (1) o cenáculo e a casa de Caifás continuam marcados como localização debatida (“?”). (2) O caminho do cenáculo ao jardim é o das ruas de hoje, como os outros; a tradição de uma escadaria antiga ao lado da igreja de Gallicantu não foi usada, porque o roteador não a conhece. (3) O título de cena “O Getsêmani, de noite” da figura de abertura não mudou: só o rótulo do estudo.
+
+**Validação:** lint limpo e 177 testes de lógica passam; a prévia compilou sem erro; no Chrome a 412 e 1366 px o mapa mostra nove etapas, a etapa 1 com “Começa no cenáculo · até o Gólgota ≈ 5,87 km a pé”, a tabela com cinco linhas nas duas hipóteses do pretório, nenhum erro de console ou de rede e nenhuma rolagem horizontal; 50 blocos `:::` abertos e 50 fechados. Capturas em `analises/previas-cenaculo/`.
+
+**Pendências:** achar uma fonte lida para o nascer e o pôr do sol de Jerusalém; decidir se a linha de hora aparece no cartão de compartilhar; Mt 26.63 e a referência própria de “Salve, rei dos judeus!”; vídeos do Weave. A figura `paixao-lanca` (de outra mão) continua sem revisão minha. Nenhum commit, push ou publicação.
+
+## 2026-11-12 08:12 -0400 — Horas completas, a lei da expiação cumprida, coroa com base, peso em kg e Simão de Cirene em destaque
+
+**Autor:** Valter, com Claude, a partir de seis pedidos do dono sobre o estudo privado da Paixão. Cópia anterior em `analises/do-getsemani-copia-antes-das-correcoes-de-12-nov.md`. Nada disto toca `src/` nem `public/`; tudo está em `rascunhos/` (fora do Git) e neste diário.
+
+**O que foi feito:** (1) “o texto não dá a hora” saiu das três linhas de hora e da frase da introdução do quadro de dias; a linha do tempo “As Idas e Vindas…” deixou de usar “Noite” em quatro marcadores e passou a ter dia e hora iguais aos dos títulos das cenas (“Quinta · por volta das 18h”, “Antes do galo · entre 0h e 3h”… “Sexta · por volta das 9h”); Herodes e Pilatos pela segunda vez ficaram com “de manhã, antes das 9h”. (2) A lei da expiação entrou em cinco pontos: em “Quem Julgou Jesus?”, o rito dos dois bodes do Dia da Expiação ao lado da troca de Barrabás (Lv 16.8-10, 21-22); no fim de “Simão, o Homem que Vinha do Campo”, Jesus crucificado fora da cidade (Jo 19.20; Hb 13.11-12; Lv 16.27); em “O Véu e o Centurião”, o véu e o sangue levado uma vez por ano ao Santo dos Santos (Hb 9.7, 9.12, 10.19-20); em “A Lança”, o osso não quebrado como o cordeiro da páscoa (Êx 12.46; Jo 19.36); e uma subseção nova, “A Lei Cumprida na Cruz”, com um cartão `:::ficha` que lista o que a lei pedia e o que o Novo Testamento diz de Jesus: a páscoa, a oferta do Dia da Expiação, o bode vivo, o corpo levado para fora, a novilha vermelha e o holocausto. (3) Coroa de espinhos: o trecho de Mt 27.29 é a Almeida exata; o parágrafo foi reescrito com a base (Mt 27.29, Mc 15.17, Fílon sobre Carabás em Alexandria, ano 38, com o papiro por diadema e por cetro) e perdeu o que nenhum texto traz (“paródia calculada”, “Ave, Caesar”, “ramos secos e duros”, “trançados por mãos que conhecem o ofício”, a cana “como cetro”, o salmo que “lhe volta à memória”); o manto escarlate ganhou “deve ter sido” a capa do soldado, por ser identificação e não dado. (4) O peso da trave passou a “30 a 50 kg” nas duas menções. (5) Simão de Cirene: pintura de James Tissot (Brooklyn Museum, domínio público, via Wikimedia Commons; arquivo `paixao-anatomia-simao-cirene-tissot.jpg`, moldura cinza do museu cortada) antes do parágrafo que a ilustra, e o cartão “Simão de Cirene” (quem era, onde estava, Cirene em Jerusalém, o que vem depois, o que o texto não diz); os parágrafos que repetiam Cirene e Rufo foram enxugados. (6) O catálogo privado ganhou as passagens novas nas fontes e o crédito da pintura.
+
+**Decisões:** (1) A comparação Barrabás–bode vivo é leitura de leitores cristãos, dita uma vez como tal; o Novo Testamento não cita o bode vivo, e o cartão diz isso. O que tem base direta no texto é o corpo levado para fora (Hb 13.11-12), a páscoa (1Co 5.7), o Dia da Expiação (Hb 9) e a novilha (Hb 9.13-14). (2) O cartão substituiu uma tabela de três colunas: no celular a terceira coluna saía cortada e exigia rolar de lado. (3) Os verbetes do app (Dia da Expiação, expiação, Cordeiro de Deus, páscoa, propiciatório) e a profecia do osso não quebrado entram como ligação, sem recontar, e cada destino é ligado uma vez só. (4) O crédito da pintura vai na legenda e nas fontes privadas; `credits.ts` e `CREDITOS.md` são públicos e só ganham a linha na hora de publicar. (5) “Aqui seria 30 e 50 quilos” foi lido como a unidade do peso da trave (kg); o “tiro de pedra” segue em metros. Se o dono falava de outro ponto, é só dizer.
+
+**Validação:** lint e 177 testes de lógica passam (feitos antes desta etapa, sem mudança em `src/`); verificação provisória, já apagada: 408 referências existem na Almeida, 186 citações e 82 falas são texto exato dela (29 citações a mais que antes), 50 blocos `:::` abertos e 50 fechados, links internos existem e cada um aparece uma vez, títulos e tópicos no padrão, foto e miniaturas existem; Chrome a 412 e 1366 px: 39 linhas de hora, nenhum “o texto não dá a hora” na tela, foto carregada, cartões legíveis, sem rolagem horizontal e sem erro de console ou de rede. Capturas privadas em `analises/previas-pedidos-12-nov/`.
+
+**Pendências:** a figura `paixao-lanca` e a miniatura dela foram acrescentadas por outra mão (provavelmente o Codex) no meio desta sessão; conferi que existem e abrem, mas não revisei a imagem. O título ainda é “Do Getsêmani à Ressurreição”. As demais pendências do dia continuam abertas. Nenhum commit, push ou publicação.
+
+## 2026-11-12 07:35 -0400 — Revisão geral depois das quedas de energia
+
+**Autor:** Valter, com Claude, a pedido do dono: conferir se alguma coisa ficou pela metade nas quedas de energia dos dias 10 e 11.
+
+**O que foi conferido (tudo sem mexer no que já estava certo):** (1) lint limpo, 177 testes de lógica e build de produção sem aviso (feito fora do `dist/`); a trava de publicação não achou nenhum identificador privado no build. (2) As 12 correções de `VERSE_FIXES` estão aplicadas nos cinco livros da Almeida e nada mais mudou: comparação versículo a versículo com o `HEAD`, mesma numeração, JSON válido. (3) No estudo privado, os 47 blocos `:::` que pedem fechamento fecham, nenhum trecho cortado ou parágrafo repetido, as 364 referências existem na Almeida, as 157 citações entre “…” seguidas de referência e as 82 falas dos diálogos são texto exato dela. Figuras, cartões `:::leia`, fotos, capa e miniaturas existem; os 12 títulos de seção batem com os tópicos do catálogo; 39 linhas de hora. (4) No Chrome, a 390 e 1366 px, o estudo abre, rola inteiro, abre as 11 figuras, não tem rolagem horizontal nem texto abaixo de 13 px, e não deu nenhum erro de console ou de rede.
+
+**O que estava fora do lugar e foi corrigido:** (1) dois títulos de tópico fora da regra de maiúsculas (`title-case.ts`), que o teste dos títulos não pega porque só olha o catálogo público: “Quantos Passos Até o Gólgota?” virou “Quantos Passos até o Gólgota?” e “…por que me Desamparaste?” virou “…por que Me Desamparaste?”, no Markdown e no catálogo. (2) O tempo de leitura do catálogo privado estava em 38 minutos; o texto tem cerca de 11,6 mil palavras (≈ 58 min a 200 palavras por minuto), então passou a 58.
+
+**Decisões:** (1) as oito subseções `###` sem linha de hora (o quadro de dias, as idas e vindas, o relato, a lei, as fontes, o instrumento, “Que Horas Eram?” e “A Razão de Tudo Isso”) ficam como estão: não são cenas. (2) A última frase do estudo começa em minúscula (“eis que eu estou convosco…”) porque o versículo continua uma frase (“; e eis que…”); fica fiel à Almeida. (3) Os arquivos provisórios de verificação foram apagados; a checagem das citações do estudo privado não virou teste fixo (o teste público não vê os rascunhos).
+
+**Pendências:** as de antes seguem abertas (título “Da Ceia à Ressurreição”, cenáculo no mapa, fonte do nascer e do pôr do sol, linha de hora no cartão de compartilhar, Mt 26.63, vídeos do Weave). Arquivos não rastreados que não são deste trabalho e não foram tocados: `.playwright-mcp/`, `RECONHECIMENTO-DO-SISTEMA.md` e `Teologos/`. Nenhum commit, push ou publicação.
+
+## 2026-11-11 14:45 -0400 — Horas sob cada título, a saída para o Gólgota, o sol e as três da tarde
+
+**Autor:** Valter, com Claude, a partir de dois pedidos: faltava dizer a que horas Jesus saiu para o Gólgota, como estava o sol, se a saída veio logo depois do julgamento diante da multidão e que Jesus expirou às três da tarde; e cada título de cena deveria trazer o dia, o período e a hora aproximada (por exemplo, “Jesus Diante de Anás, o Sumo Sacerdote: quinta-feira à noite, de madrugada, por volta de tais horas”). Cópia anterior em `analises/do-getsemani-copia-antes-das-horas.md`.
+
+**Código:** novo bloco `:::hora …` (uma linha, sem fechar), que desenha `p.when` logo abaixo do título (`rich-text-parser.ts`, `rich-text.ts`, `rich-text.scss`); o gerador de áudio o inclui. Para o estilo do `rich-text` não passar de 12 kB, os diálogos saíram para um componente próprio (`shared/dialog-turns.ts` e `.scss`), sem mudar o que aparece. Teste novo em `e2e/logica/dialogos.spec.ts`.
+
+**Texto:** (1) 39 títulos de cena ganharam a linha de hora, só com o que o texto permite: ao anoitecer (~18h), o canto do galo (entre a meia-noite e as 3h, pelas vigílias de Mc 13.35), o amanhecer (~6h) e as horas terceira, sexta e nona (≈ 9h, 12h e 15h, contadas do nascer do sol); onde o texto não dá a hora, a linha diz só o período ou “o texto não dá a hora”. (2) O quadro “Quando Foi Tudo Isso?” explica como ler essas horas e a sexta passou a ser uma linha só, que aponta para a nova seção. (3) Nova seção “Que Horas Eram?” depois do veredito: a saída vem logo depois da sentença em João, e em Mateus e Marcos entre elas ficam o açoite e a zombaria; os Evangelhos não dão a hora da saída, mas pela conta de Marcos (crucificação às 9h) foi antes das nove, com o dia já claro; o sol nasce por volta das 6h e se põe por volta das 18h nessa época; tabela do nascer ao pôr do sol. (4) “As Trevas ao Meio-Dia”: o sol nasceu às 6h e o dia foi claro até o meio-dia; o texto não fala em eclipse, que não combinaria com a lua cheia da páscoa. (5) “O Clamor e a Entrega”: “cerca das três da tarde”; seis horas na cruz, da terceira à nona, as três últimas na escuridão; pouco mais de três horas até o pôr do sol, que traria o sábado.
+
+**Decisões:** (1) as horas de ao anoitecer, nascer e pôr do sol são aproximações astronômicas e da contagem judaica, ditas como tais; o canto do galo entre a meia-noite e as 3h é a leitura das vigílias de Mc 13.35, e não um dado dos Evangelhos. (2) Não dei hora à prisão, a Anás nem a Herodes: o texto não dá. (3) A discordância entre João (cerca da hora sexta) e Marcos (hora terceira) segue dita uma vez só, no veredito.
+
+**Validação:** 177 testes de lógica; lint limpo; build de produção sem aviso; trava de publicação limpa; 82 falas e 180 citações conferidas com o Almeida, 0 divergências; Chrome a 390 e 1280 px com 39 linhas de hora, 17 diálogos, texto mínimo de 13 px, sem erros nem rolagem horizontal. Capturas privadas em `analises/previas-horas/`.
+
+**Pendências:** achar uma fonte lida para o nascer e o pôr do sol de Jerusalém nessa época (hoje são aproximações); decidir se a linha de hora também deve aparecer no cartão de compartilhar.
+
+## 2026-11-11 13:30 -0400 — O estudo passa a abrir pela ceia
+
+**Autor:** Valter, com Claude, a partir do pedido de pegar “Jesus na ceia dali em diante” como base; o dono escolheu as duas coisas: uma seção de abertura sobre a ceia e a linha do tempo e o quadro de dias partindo dela. Cópia anterior em `analises/do-getsemani-copia-antes-da-ceia.md`.
+
+**O que foi feito:** (1) Nova primeira seção, “À Mesa com o Traidor” (Tópico 1), com o quadro “Quando Foi Tudo Isso?” (agora com a ceia como ponto de partida: uma linha de tradição para domingo a quarta, depois quinta ao anoitecer, a noite, o amanhecer, a sexta, o sábado e o domingo), e as cenas O Cenáculo, O Lava-Pés (conversa com Pedro, Jo 13.6-10), O Traidor à Mesa (anúncio da traição, Jo 13 e Mt 26), O Pão e o Cálice (Mt 26 e Lc 22), A Negação Anunciada (Lc 22.31-34) e O Hino e o Caminho (Jo 13.34; 14.27; 17.1; Mt 26.30; Jo 18.1). Três diálogos novos, com as falas separadas. (2) O Getsêmani, que era a abertura sem número, virou o Tópico 2, “A Prensa de Azeite”; o estudo passa de 10 para 12 tópicos (o catálogo e `passages` foram atualizados). (3) A linha do tempo ganhou as linhas “A ceia” e “Do cenáculo ao jardim” e se chama “As Idas e Vindas da Ceia ao Gólgota”.
+
+**Decisões:** (1) a ordem das cenas da ceia difere entre os Evangelhos (Mateus e Marcos põem a traição antes do pão e do cálice; Lucas, depois; João não narra o pão e o cálice): o texto diz isso e segue Mateus e João. (2) A seção não tem “A medicina explica” (a ceia não tem o que explicar do corpo sem inventar) nem imagem (as imagens são pedidas ao ChatGPT/Codex). (3) O Halel (salmos 113 a 118) vai como tradição judaica registrada na Mishná, que entrou nas fontes antigas do catálogo; a distância do cenáculo ao jardim (1,3 km em linha reta, entre pontos tradicionais) foi calculada com as coordenadas do mapa. (4) O quadro de dias abre a seção, antes do relato; se o dono preferir o relato primeiro, basta trocá-los de lugar.
+
+**Validação:** 176 testes de lógica; build de produção sem aviso; trava de publicação limpa; 82 falas e 177 citações conferidas com o Almeida, 0 divergências; títulos conferidos por `title-case.ts`; Chrome a 390 e 1280 px sem erros nem rolagem horizontal; “Tópico 1 de 12”. Capturas privadas em `analises/previas-ceia/`.
+
+**Pendências:** o título do estudo ainda é “Do Getsêmani à Ressurreição” (e a figura de abertura e o mapa dizem o mesmo); decidir se passa a “Da Ceia à Ressurreição”. O mapa ainda começa no Getsêmani: incluir o cenáculo como primeira etapa pede o caminho a pé do cenáculo ao jardim.
+
+## 2026-11-11 12:20 -0400 — Quadro “Quando Foi Tudo Isso?” e títulos de cena da cruz à ressurreição
+
+**Autor:** Valter, com Claude, a partir da dúvida do dono: a audiência diante de Caifás foi no dia seguinte à prisão? Dá para saber os dias da semana (segunda, terça)? Cópia anterior em `analises/do-getsemani-copia-antes-do-quadro-quando.md`.
+
+**O que foi feito:** (1) Nova seção “Quando Foi Tudo Isso?” no começo de “Vendado, Cuspido, Esbofeteado”: o que o texto fixa (só o sábado e “o primeiro dia da semana” são nomeados; a morte na “véspera do sábado”, uma sexta; a prisão na noite anterior, que pelo calendário judaico já é a sexta; da prisão à crucificação, uma noite e uma manhã) e uma tabela de dez linhas, domingo a domingo, em que cada linha diz se é **Tradição** (domingo, segunda e terça vêm de “no dia seguinte” e “na manhã seguinte”, Mc 11), **Pouco dito** (quarta, Mc 14.1), ou o texto marca a hora. Depois, as outras semanas propostas (crucificação na quarta ou na quinta, por “três dias e três noites” e “grande aquele dia de sábado”; a ceia na terça, de Annie Jaubert, 1957), ditas como hipóteses discutidas, e a conta dos discípulos de Emaús (Lc 24.21) como apoio da leitura de sexta a domingo. O parágrafo antes da linha do tempo das idas e vindas perdeu o calendário (agora só “entre a noite de quinta e a manhã de sexta”): cada fato fica num lugar. (2) Títulos de cena na cruz (O Lugar da Caveira, A Crucificação, A Placa Acima da Cruz, Despojado e Escarnecido, Três Palavras de Graça), na morte (As Trevas ao Meio-Dia, O Clamor e a Entrega, O Véu e o Centurião, A Lança), no sepultamento (As Mulheres e a Multidão, O Sepultamento, O Sepulcro Selado, E os Discípulos?) e na ressurreição (O Sepulcro Vazio, Jesus e Maria Madalena, Jesus Aparece aos Discípulos e a Tomé, Emaús e as Outras Aparições, A Razão de Tudo Isso). (3) Na seção da morte, a narração do clamor e do “está consumado” passou para antes do véu e do centurião, que vêm depois da morte.
+
+**Decisões:** (1) a obra de Jaubert entrou em `DRAFT_WORKS`/`DRAFT_ARTICLE_SOURCES` do catálogo privado como referência de uma tese discutida; não afirmei proporção de estudiosos a favor de cada semana (não há fonte lida para isso): a leitura de sexta a domingo é apresentada como a que concorda diretamente com os marcos do texto. (2) Uma regra de largura da primeira coluna da tabela foi tentada e retirada: estourava o aviso de 12 kB do `rich-text.scss` por 24 bytes e o ganho era pequeno.
+
+**Validação:** 176 testes de lógica; lint limpo; build de produção sem aviso; trava de publicação limpa; 66 falas e 157 citações conferidas com o Almeida, 0 divergências; títulos conferidos pela regra de `title-case.ts`; Chrome a 390 e 1280 px sem erros nem rolagem horizontal. Capturas privadas em `analises/previas-quando/`.
+
+**Pendências:** achar uma fonte lida (por exemplo, um comentário sobre a cronologia da Paixão) para poder dizer quantos estudiosos seguem cada semana; hoje o texto não afirma isso.
+
+## 2026-11-11 11:30 -0400 — Mapa da Paixão enxuto, contagem das audiências de Pilatos e açoite em partes
+
+**Autor:** Valter, com Claude, a partir de cinco observações do dono: a frase “De Anás, maniatado” soa mal; quantas vezes Jesus foi diante de Pilatos; o mapa ainda não estava bom; os quilômetros estavam bagunçados; a seção do açoite também.
+
+**Texto:** (1) “Na mesma noite, Anás o envia, ainda atado, a Caifás [Jo 18.24], onde os escribas e os anciãos já estão reunidos [Mt 26.57]” (sem “de madrugada”, que os textos não dizem; o “Na mesma noite” veio de uma dúvida do dono: a audiência diante de Caifás não é do dia seguinte à prisão). (2) Jesus comparece **duas vezes** diante de Pilatos (antes e depois de Herodes; Lc 23.1-7 e 23.13); João conta tudo como um só julgamento, com Pilatos entrando e saindo do pretório. Os títulos passaram a “Jesus Diante de Pilatos, pela Primeira Vez” e “…, pela Segunda Vez”, e o mapa a “Pilatos, 1ª vez” e “Pilatos, 2ª vez”. (3) O parágrafo dos quilômetros dizia 1,2 + 1,1 + 0,4 = 2,7 km em linha reta e “3 a 4 km” a pé; o mapa calcula 1,15 + 1,03 + 0,43 = 2,61 km e 4,10 km a pé (Fortaleza Antônia) ou 2,12 e 3,26 km (palácio). Agora o texto traz só a faixa, de 3,3 a 4,1 km a pé e de 2,1 a 2,6 km em linha reta, e manda para a tabela do mapa. Se o mapa ou o GEO mudarem, esse parágrafo precisa ser refeito à mão. (4) “O Açoite que Abriu as Costas” ganhou subtítulos e ordem: O Relato dos Evangelhos, A Lei Judaica e o Costume Romano, O Testemunho das Fontes Antigas (Josefo na ordem do tempo: o caso de uns 30 anos depois de Jesus, depois o cerco), O Instrumento e O Açoite, de Perto. Cópia anterior em `analises/do-getsemani-copia-antes-do-mapa-v3.md`.
+
+**Mapa** (`passion-route.ts`/`.scss`; cópias anteriores em `analises/passion-route-copia-antes-do-mapa-v3.*.txt`): os totais saíram de cima do mapa para uma faixa abaixo dele; os dois grupos de botões viraram dois pares do mesmo tamanho; “Viver a jornada” virou uma opção ao lado das outras; a legenda ficou curta; a conta dos quilômetros ficou só na tabela (saiu a seção repetida) e uma frase compara com a outra hipótese do pretório; Cenáculo, Túmulo do Jardim, portões e igrejas só aparecem com “Igrejas e portões de hoje” (desligado por padrão; a muralha e o Templo ficam sempre); os quilômetros no mapa mostram só o trecho da etapa atual; nomes de região mais curtos; no celular a moldura é mais alta (5:6) e a aproximação é maior (~1,8 km de largura). Altura do componente a 390 px: de 2.311 para 2.211 px; o mapa em si ocupa mais da moldura.
+
+**Validação:** 176 testes de lógica; build de produção sem aviso; trava de publicação limpa; 66 falas e 145 citações conferidas com o Almeida, 0 divergências; sem erros de página nem rolagem horizontal a 390 e 1280 px. Capturas privadas em `analises/previas-mapa/` (`antes` e `depois3`).
+
+**Pendências:** o mapa em si (fundo e rotas) ainda não tem a rota da ida e volta a Herodes, por falta de endereço dele; título de cena para a cruz e a ressurreição.
+
+## 2026-11-11 10:00 -0400 — Paixão reordenada na sequência de João e imagens compactas
+
+**Autor:** Valter, com Claude, a partir do pedido de contextualizar e ajustar a informação de “Pilatos outra vez” para baixo, que estava bagunçada, e de enxugar as imagens, juntando-as ao texto.
+
+**O que estava errado:** a conversa “Donde és tu?” (Jo 19.9-11) vinha antes do açoite, mas em João ela é posterior ao “Eis o homem”; a sentença no Pavimento (Jo 19.13-16) não aparecia como cena; o resumo de Pilatos (Lc 23.13-16) e o costume da festa não eram explicados; um parágrafo repetia Pilatos e Herodes; Judas vinha depois de Pilatos (em Mateus vem antes); o mapa ficava antes do açoite; em Simão, a requisição vinha depois das mulheres de Jerusalém, e a narração do encontro repetia o que já se dissera.
+
+**O que foi feito no texto** (cópia anterior em `analises/do-getsemani-copia-antes-da-reordenacao.md`): Judas passa para depois do conselho; Pilatos outra vez ganha o resumo de Pilatos, o costume da festa e quem era Barrabás (Mt 27.16; Lc 23.19; Jo 18.40), e termina em Mt 27.26. “A Coroa e a Cana” segue a ordem de João, com as cenas “Eis o Homem” (Jo 19.4-8), “O Poder de Crucificar” (Jo 19.9-12, movido para cá) e “O Veredito no Pavimento” (Jo 19.13-16), com a diferença entre as horas de João e Marcos dita uma vez, sem harmonização forçada. O mapa “Quantos Passos Até o Gólgota?” vem depois da sentença (o catálogo acompanha a nova ordem dos tópicos). Simão: peso da trave, requisição, quem era Simão, as mulheres. A linha do tempo diz que tudo cabe numa noite e numa manhã (Mc 14.17; 15.1; 15.25; 15.42) e ganhou a linha das 9h. As falas de silêncio de Herodes e a de Pilatos “como quem escuta uma língua estrangeira” foram para o lugar de cada cena.
+
+**O que foi feito nas imagens:** `<app-rich-text [compactFigures]>` (só estudos privados): cada `:::figura` vira uma faixa de 56 px (`shared/compact-figure.ts`, miniatura de ~5 KB, rótulo e título) que abre a figura inteira ao toque, e só então a carrega; as duas fotos grandes ficam pequenas ao lado do texto, com legenda mais curta que mantém o aviso de IA. Dados das faixas em `DRAFT_FIGURES` (vazio no app público; o catálogo privado o substitui). Medida a 390 px: a página caiu de 63.309 para 48.784 px (as figuras ocupavam 25% dela); a 1280 px, de 42.298 para 30.770 px.
+
+**Validação:** 176 testes de lógica passam; lint limpo; build de produção sem aviso de orçamento (a faixa virou componente próprio para o `rich-text.scss` não passar de 12 kB); `verificar-publicacao.mjs` limpo. O script de citações confere 66 falas e 145 citações com o Almeida, 0 divergências (“Salve, rei dos judeus!” ganhou a referência Mt 27.29). Chrome a 390 e 1280 px sem erros nem rolagem horizontal. Capturas privadas em `analises/previas-compacto/`.
+
+**Decisões:** (1) o texto de Barrabás (“filho do pai”, do aramaico *bar abbá*) vai sem aspas, porque não é fala bíblica; (2) Mt 27.25 segue fora; (3) as cenas da cruz, da morte e da ressurreição não foram reescritas, só conferidas: a ordem delas já segue os Evangelhos; (4) as figuras vêm fechadas por padrão: quem quiser vê-las abre; as faixas não lembram o estado ao recarregar.
+
+**Pendências:** decidir se as faixas devem abrir já para quem chega de um link direto; título de cena para a cruz e a ressurreição; se as figuras mais importantes (mapa, anatomia) merecem miniatura maior.
+
+## 2026-11-11 09:10 -0400 — Diálogos do estudo da Paixão separados por quem fala
+
+**Autor:** Valter, com Claude, a partir do pedido de separar os diálogos e as perguntas, dizendo quem perguntou (modelo: “Pilatos”).
+
+**O que foi feito:** novo bloco `:::dialogo Título` no leitor de Markdown (`rich-text-parser.ts`, `rich-text.ts`, `rich-text.scss`): uma fala por linha, `Nome | fala [[ref]]`; a linha sem nome é indicação de cena. O nome fica em maiúsculas sobre a fala (à esquerda em tela larga), as falas de Jesus levam barra dourada e as indicações de cena vão em itálico. O “Ouvir” lê “Nome: fala” (os dois pontos ficam escondidos na tela) e `tools/gerar-audio.mjs` segue a mesma regra. No estudo privado, 12 trocas viraram diálogo: Anás, Caifás, o conselho ao amanhecer, as negações de Pedro, Pilatos fora e dentro do pretório, a escolha de Barrabás, o poder de crucificar, Judas e os sacerdotes, o pedido de uma guarda, Maria no jardim e Tomé. Cópia anterior em `rascunhos/como-a-ciencia-explica/analises/do-getsemani-copia-antes-dos-dialogos.md`. A pedido do dono, cada passagem também ganhou um título de cena (`###`, no padrão “Jesus Diante de…”): Anás, o Sumo Sacerdote; Caifás e o Sinédrio; Pedro no pátio; os guardas; o Sinédrio ao amanhecer; Pilatos; Herodes Antipas; “As Idas e Vindas do Jardim ao Gólgota” (a linha do tempo); Pilatos outra vez; o remorso de Judas. Quatro rótulos de diálogo que repetiam o título foram trocados (“O Interrogatório”, “A Pergunta Decisiva”, “As Três Negações”, “A Pergunta Repetida”). Os títulos seguem a regra de `title-case.ts`. As cenas da cruz e da ressurreição ainda não têm título de cena.
+
+**Validação:** um script confere 57 falas de diálogo e 137 citações entre aspas com o Almeida empacotado, sem divergência de texto; uma citação (“Salve, rei dos judeus!”, Mt 27.29 e Jo 19.3) está certa, mas sem a referência dela, como já estava antes. Teste novo `e2e/logica/dialogos.spec.ts`; 176 testes de lógica passam, lint limpo, build de produção sem aviso de orçamento de estilo e `verificar-publicacao.mjs` limpo. No Chrome, a 390 e 1280 px: 12 diálogos, 57 falas, texto mínimo de 13 px, sem rolagem horizontal nem erros. Capturas privadas em `analises/previas-dialogos/` e `analises/previas-retomada/`.
+
+**Decisões:** (1) as falas são só do Almeida empacotado, sem palavra acrescentada; as indicações de cena parafraseiam, sem aspas. (2) No texto empacotado, Mt 26.63 diz “o Filho do Deus” (provável erro da fonte): a fala de Caifás termina em “…se tu és o Cristo…” e o texto bíblico não foi mexido. (3) Mt 27.25 segue de fora, como já era escolha do estudo (a multidão que os chefes reuniram, não o povo judeu). (4) Falas de uma pessoa só (as palavras da cruz, Emaús, “Profetiza-nos”) ficaram na prosa, porque não são conversa. (5) Foram incluídas, para completar a troca, falas que o estudo só resumia: Jo 18.29-35, Jo 20.29 e Mt 27.65.
+
+**Registrado nesta retomada (trabalho de ontem à tarde, sem entrada na época; datas pelos arquivos):** reescrita do estudo em terceira pessoa (cópia `do-getsemani-copia-antes-da-reescrita.md`), redução para 10 tópicos (cópia `…com-12-topicos.md`), 10 caixas `:::nota Medicina`, “A medicina explica” (cópia `…antes-das-caixas-de-medicina.md`), a opção `markQuotes` do `RichText` e a rota com a ida a Herodes e a volta a Pilatos em `passion-route.ts`.
+
+**Arquivos:** `src/app/core/rich-text-parser.ts`, `src/app/shared/rich-text.ts`, `src/app/shared/rich-text.scss`, `tools/gerar-audio.mjs`, `e2e/logica/dialogos.spec.ts`, `CLAUDE.md`, estudo `do-getsemani-a-ressurreicao.md` (privado); este diário.
+
+**Pendências:** decidir se se corrige Mt 26.63 pelo `VERSE_FIXES` de `tools/gerar-almeida.py`; dar a referência própria a “Salve, rei dos judeus!”; no mapa da rota, o rótulo “Casa de Caifás (?)” fica parcialmente sob a barra de escala; os vídeos contínuos seguem à espera de plano pago no Weave. Nenhum commit, push ou publicação.
+
+## 2026-11-10 13:21 -0400 — Abertura da Paixão simplificada conforme a marcação do dono
+
+**Autor:** Valter, com Codex, a partir da captura com as áreas a retirar.
+
+**O que foi feito:** removidos “Atravesse Cada Cena”, a contagem “Cena 01/12”, o seletor das doze cenas e o resumo com o botão “Ler esta cena”. Preservada a imagem do Getsêmani na abertura. Retiradas as instruções de escolher cenas; a legenda mantém a identificação da ilustração gerada por IA e a explicação dos painéis do estudo. Excluídos o estado, a navegação e os estilos que só serviam ao seletor.
+
+**Validação:** lint do componente sem problemas; Chrome confirmou a remoção dos controles e o carregamento da imagem. Permanecem as 12 seções do texto e os três painéis anatômicos. Sem erros de página nem rolagem horizontal a 390 e 1280 px. Capturas privadas em `analises/previas-abertura-simples/`.
+
+**Arquivos:** `rascunhos/como-a-ciencia-explica/passion-scene.ts`, `passion-scene.scss`, artigo `do-getsemani-a-ressurreicao.md`; este diário.
+
+**Pendências:** os vídeos contínuos seguem aguardando acesso a vídeo no plano do Weave. Nenhum commit, push ou publicação.
+
+## 2026-11-10 13:15 -0400 — Prancha enviada com autorização; vídeo exige plano pago
+
+**Autor:** Valter, com Codex.
+
+**O que foi feito:** Valter autorizou explicitamente enviar somente `paixao-anatomia-neuro-vascular.png` ao Weave/Figma para cotar o vídeo. Após a autorização, o upload foi concluído com token novo. Solicitada a cotação de Veo 3.1 Image to Video, seis segundos, Fast, 1080p, sem áudio, sem `acknowledgedCost`.
+
+**Resultado:** o serviço recusou a cotação informando que modelos de vídeo só estão disponíveis em planos pagos. O vínculo está funcionando; a pendência de envio da entrada anterior foi resolvida. Não houve orçamento final, geração de vídeo, cobrança ou alteração de assinatura.
+
+**Arquivos:** estado e parâmetros registrados em `rascunhos/como-a-ciencia-explica/analises/video-neuro-weave.md`; este diário. A prancha original e os componentes foram preservados.
+
+**Pendências:** habilitar acesso a vídeo em plano pago do Weave; depois obter cotação e aprovação estruturada do custo de cada geração. Nenhum commit, push ou publicação.
+
+## 2026-11-10 13:13 -0400 — Vínculo Weave funcionando; envio da prancha aguarda autorização
+
+**Autor:** Valter, com Codex.
+
+**O que foi feito:** nova consulta confirmou o vínculo Figma–Weave. Não há workflows publicados na conta, mas a consulta direta encontrou Veo 3.1 Image to Video. Preparado o primeiro pedido: animação contínua de seis segundos da prancha do sistema nervoso, com circulação contida nos vasos e sinais nervosos ilustrativos, sem áudio.
+
+**Decisões:** o catálogo informa estimativa de 90 créditos; ainda falta cotação dos parâmetros finais. Nenhuma execução paga foi iniciada. A autorização de enviar a referência e a aprovação do custo são etapas distintas.
+
+**Bloqueio:** a revisão automática rejeitou transferir `paixao-anatomia-neuro-vascular.png` ao Weave porque é uma imagem do rascunho privado e requer autorização explícita para esse arquivo. O upload não foi concluído; não repetir por outro caminho sem a autorização do dono.
+
+**Arquivos:** pedido e critérios em `rascunhos/como-a-ciencia-explica/analises/video-neuro-weave.md`; este diário. Texto, imagens e componentes do app preservados.
+
+**Pendências:** autorização para enviar somente a prancha ao Weave/Figma; depois obter cotação e aprovação estruturada do custo de cada geração. Nenhum vídeo gerado, cobrança, commit, push ou publicação.
+
+## 2026-11-10 13:09 -0400 — Retomada após queda de energia
+
+**Autor:** Valter, com Codex.
+
+**O que foi feito:** conferidos os arquivos recentes da Paixão e reiniciada a prévia privada em `http://127.0.0.1:4307/artigo/do-getsemani-a-ressurreicao`. As 16 imagens referenciadas estão presentes; os PNGs passaram na verificação de estrutura e CRC. Texto, imagens e componentes preservados.
+
+**Validação:** compilação da prévia concluída; Chrome com 12 seções e 12 etapas, cinco imagens recentes disponíveis, sem erros de página nem rolagem horizontal a 390 e 1280 px. Os seis testes de isolamento e trava de publicação passaram.
+
+**Pendências:** nova consulta ao Weave ainda informa que falta vincular a conta Figma em `https://app.weavy.ai/settings?section=profile`. Depois do vínculo, consultar o orçamento antes de cada geração paga dos vídeos contínuos. Nenhum vídeo gerado, cobrança, commit, push ou publicação nesta retomada.
+
+## 2026-11-10 09:35 -0400 — Chicote com pesos e ossículos; nova visão posterior
+
+**Autor:** Valter, com Codex, a partir das referências de imagens enviadas pelo dono.
+
+**O que foi feito:** substituída a ilustração de tiras vazias por `paixao-anatomia-chicote-v2.png`, com pesos metálicos e ossículos visíveis nas pontas, couro mais fino e materiais distinguíveis. `paixao-anatomia-costas-v2.png` traz hematomas mais extensos, inchaço e vergões irregulares sobre pele fechada; aparece na visão posterior e na ampliação. Originais preservados.
+
+**Limitação:** a primeira solicitação com referências de ferimentos foi rejeitada pelo sistema de segurança do gerador (`violence`). A versão integrada das costas é uma alternativa sem sangue ou feridas abertas; não foi apresentada como a versão bloqueada. O chicote foi gerado como objeto isolado. Nenhuma imagem externa foi copiada diretamente para o app, e a afirmação de 39 golpes de uma referência não foi importada para o estudo.
+
+**Validação:** inspeção visual dos dois arquivos; lint dos componentes limpo. Chrome: novo chicote, costas e diálogo ampliado carregados, Escape funcional, 390/1280 px sem transbordamento nem erro de página. Ambos os PNGs continuam ignorados pelo Git e cobertos pelo prefixo privado `paixao-anatomia-`.
+
+**Arquivos:** `passion-story.ts`, `passion-impact.ts`, dois PNGs; prompts finais e registro do bloqueio em `analises/flagrum-e-costas-v2.md`, capturas em `analises/previas-flagrum-costas-v2/`.
+
+**Pendências:** a representação com feridas abertas não foi produzida; os vídeos contínuos seguem separados destas imagens estáticas. Nada publicado ou enviado ao Git.
+
+## 2026-11-10 09:30 -0400 — Mão direita do guarda na cena de Anás
+
+**Autor:** Valter, com Codex.
+
+**O que foi feito:** editada a folha de quatro poses de Anás para corrigir a mão aparentemente esquerda ligada ao braço direito. A aproximação e o contato agora usam uma mão direita com punho e polegar coerentes. Nova imagem privada `paixao-anatomia-anas-cenas-v2.png`, referenciada em `passion-story.ts`; original preservado.
+
+**Decisões:** a mão usada é uma escolha visual, sem afirmar que o Evangelho especifica o lado. Mantidos os personagens, cenário e recortes das quatro poses. Nenhuma alteração nos textos, mapas ou nas outras cenas.
+
+**Validação:** inspeção visual da imagem e da pose na página; lint limpo. Chrome: nova folha carregada, quatro poses selecionáveis com recorte correto, capturas de aproximação e contato, 390/1280 px sem transbordamento nem erro de página. PNG ignorado pelo Git; continua somente na prévia privada.
+
+**Arquivos:** PNG, `passion-story.ts`, `analises/mao-direita-anas.md` (prompt completo), `analises/previas-mao-anas/`.
+
+**Pendências:** os vídeos contínuos anteriores continuam separados desta correção de imagem. Nada publicado ou enviado ao Git.
+
+## 2026-11-10 09:27 -0400 — Cérebro com circulação e mãos corrigidas na cura de Malco
+
+**Autor:** Valter, com Codex.
+
+**O que foi feito:** nova prancha privada `paixao-anatomia-neuro-vascular.png`, com vasos realistas e uma camada de fluxo sanguíneo animado separada dos sinais nervosos. Pausa e retomada compartilhadas com a ampliação; movimento reduzido inicia pausado. A quarta pose de Malco usa `paixao-anatomia-malco-cura-v2.png`: uma mão de Jesus toca a orelha direita, a outra está ao lado do próprio corpo. Imagens originais e outras poses preservadas.
+
+**Decisões:** circulação normal contida nos vasos, sem sugerir lesão cerebral de Jesus. Fonte OpenStax 13.3 ligada na aula. A primeira correção das mãos ainda mostrou a orelha esquerda; uma segunda edição corrigiu o lado e foi inspecionada. A cena usa a imagem inteira, sem recortar como sprite. Essas alterações não geram os vídeos contínuos solicitados anteriormente.
+
+**Validação:** lint dos quatro componentes limpo; builds privado e público concluídos; trava de publicação aprovada. Chrome: fluxo muda ao reproduzir e fica imóvel ao pausar, ampliação sincronizada, imagem da cura carregada, retorno às poses anteriores, 390/1280 px sem transbordamento nem erro de página. Prévia local reiniciada em 4307 para reconhecer os novos assets. Os dois PNGs estão ignorados pelo Git.
+
+**Arquivos:** `passion-anatomy.ts`, `passion-neuro.ts`, `passion-scene.ts`, `passion-story.ts` e `.scss`, dois PNGs privados; prompts completos em `analises/cerebro-vascular-e-maos-malco.md`, capturas em `analises/previas-neuro-malco/`.
+
+**Pendências:** os vídeos contínuos permanecem no fluxo de vínculo e orçamento do Weave. Nada publicado, enviado ao Git ou cobrado pelo serviço de vídeo.
+
+## 2026-11-10 09:06 -0400 — Imagem repetida retirada e novo retrato cinematográfico da coroa
+
+**Autor:** Valter, com Codex.
+
+**O que foi feito:** retirada a imagem redundante do Getsêmani no corpo da primeira seção, mantendo a abertura. Gerado, inspecionado e integrado o retrato privado `paixao-anatomia-coroa-cinema.png`, com iluminação cinematográfica, suor e marcas superficiais; a imagem anterior foi preservada.
+
+**Decisões:** os vídeos solicitados precisam de movimento contínuo e continuidade dos personagens. Exportar as quatro poses existentes como GIF não atende ao pedido. Malco é ferido na orelha direita; a representação deve mostrar a ausência antes do toque e uma única orelha íntegra depois. Nenhum vídeo foi gerado nem cobrado. Valter escolheu vincular Figma ao Weave; a consulta ainda informa que falta o vínculo. O texto, o mapa e as alterações de Claude foram preservados.
+
+**Validação:** builds privado e público concluídos, lint do componente limpo, trava de publicação aprovada sem identificadores privados. Conferido no Chrome: doze tópicos, duplicata ausente, abertura preservada, nova coroa carregada, sem erros de página nem rolagem horizontal a 390 e 1280 px.
+
+**Arquivos:** artigo privado, `passion-story.ts`, novo PNG e `analises/videos-continuos-e-coroa.md`, com o prompt completo e critérios de continuidade.
+
+**Pendências:** vínculo Weave, orçamento e aprovação de cada execução paga; geração e revisão dos vídeos contínuos de sistema nervoso, Malco, Anás, rosto coberto e açoites/anatomia/costas. Nada foi publicado.
+
+## 2026-11-10 09:51 -0400 — Mapa da Paixão melhorado (moldura, contexto, hipóteses e nomes)
+
+**Autor:** Claude (Sonnet 5.5), a pedido de Valter (“melhora aquele mapa”).
+
+**O que estava fraco:** o mapa ficava vazio e pequeno no celular, a rota não preenchia a moldura, mostrava só um dos dois locais possíveis do pretório e tinha pouca referência de lugar; no computador a moldura larga cortava a Casa de Caifás; e um ponto ficava sem nome porque o visualizador descarta rótulos que não cabem.
+
+**O que foi feito** (`passion-route.ts` / `.scss`):
+- Moldura em **retrato** (4:5), também no computador (centralizada, até 540 px), e aproximação ajustada (cerca de 2,1 km de largura): a rota enche a moldura e nenhum nome é cortado.
+- **Mais contexto:** Cenáculo (tradição), Templo, Cidade de Davi, monte Sião, vale do Cedrom e monte das Oliveiras.
+- **As duas hipóteses do pretório ficam no mapa:** a escolhida é a etapa numerada e a outra aparece como ponto pequeno, com nome (“Fortaleza Antônia” e “Palácio de Herodes”); o cartão da etapa e a tabela continuam dizendo “Pretório”. Nomes curtos, para o rótulo caber.
+- **Legenda** sob o mapa (números, “(?)”, ponto pequeno, como mover e aproximar).
+- **Quilômetros nos botões das etapas** (“Anás e Caifás + 1,2 km”) e **linhas da tabela clicáveis**, que levam à etapa.
+
+**Decisões:** o visualizador do app tem o modo “visão geral” pensado para mapas regionais (enquadra no mínimo 22% da largura do mapa), então não serve para uma cidade; o leitor pode afastar com dois dedos. A rota continua em linhas retas entre pontos tradicionais, dito na legenda e na tabela; o traçado real das ruas não é conhecido. Nada foi alterado em `src/`: o visualizador público ficou igual.
+
+**Validação:** no Chrome, a 390 e 1280 px, as seis etapas, a troca de hipótese (2,7 km e 2,1 km), o clique na tabela e os botões, sem erro de console e sem rolagem horizontal; lint limpo; testes de isolamento aprovados.
+
+**Pendências:** o rótulo “Monte das Oliveiras” aparece cortado na borda em algumas etapas (o monte fica além da moldura); sem imagens novas do ChatGPT ainda; fonte de Rodrigo Silva.
+
+## 2026-11-10 08:57 -0400 — Quilômetros de cada trecho dentro do mapa da Paixão
+
+**Autor:** Claude (Sonnet 5.5), a pedido de Valter (“faltou colocar quantos km foi de cada lugar no mapa e ao todo até o Gólgota”).
+
+**O que foi feito:** os quilômetros já existiam, mas numa seção abaixo dos controles, fora da vista. Agora aparecem **no mapa**: (1) uma etiqueta sobre a moldura, que muda a cada etapa (“Este trecho: 1,2 km · Percorrido: 1,2 km de 2,7 km” e, na chegada, “Chegada ao Gólgota · Total: ≈ 2,7 km em linha reta”, com borda dourada); (2) uma tabela logo abaixo, com cada lugar, o trecho, a soma e o total do Getsêmani ao Gólgota, com a linha da etapa atual destacada; (3) o cartão da etapa também mostra o trecho e o percorrido. A lista de trechos do painel de baixo foi removida para não repetir; ficaram o total e a estimativa pelas ruas.
+
+**Decisões:** os números continuam em linha reta entre pontos tradicionais (1,2 + 1,1 + 0,4 = 2,7 km; 2,1 km se o pretório era o palácio de Herodes) e mudam sozinhos quando o leitor troca a hipótese do pretório. A estimativa de 3 a 4 km pelas ruas continua marcada como estimativa, porque nenhum Evangelho dá o número. Os três servidores da prévia (4200, 4307 e 4308) já serviam o mapa novo.
+
+**Arquivos:** `rascunhos/como-a-ciencia-explica/passion-route.ts` e `passion-route.scss`; `DIARIO.md`.
+
+**Validação:** no Chrome a 390 e 1280 px, as três etiquetas (partida, meio, chegada), a tabela e a hipótese do palácio (2,1 km), sem erro de console e sem rolagem horizontal; lint limpo.
+
+**Pendências:** as mesmas da entrada anterior (imagens do ChatGPT; fonte de Rodrigo Silva).
+
+## 2026-11-10 08:45 -0400 — Dívida cancelada e *tetelestai* com fonte, chicote como reconstrução e “tochas” no lugar de “lanternas”
+
+**Autor:** Claude (Sonnet 5.5), a pedido de Valter.
+
+**O que foi feito:**
+- **“Lanternas” virou “tochas”,** a pedido do dono: título da seção 3 (“Tochas, Espadas e um Beijo”), tópicos do catálogo, `STAGES`, o parágrafo da prisão e a legenda da cena de Malco. Em Jo 18.3 a Almeida lista “lanternas, archotes e armas”; o texto agora diz tochas e armas, sem aspas, e o botão da referência continua abrindo o versículo como está na Almeida.
+- **Dívida cancelada e Colossenses 2.14:** o dono trouxe um resumo de pesquisa (documento de dívida quitado, riscado, pregado no alto no mercado, com a palavra *tetelestai*). Conferi: *cheirógrafo* é a promissória de próprio punho (certo); contratos quitados eram cancelados com traços em X ou com a tinta lavada, e o verbo de Paulo é o de apagar (papiros do Egito; certo, escrito no estudo sem citar um papiro específico, porque a página do registro não abriu); o documento pregado e exposto é uma sugestão de comentaristas antigos, sem fonte primária; *tetelestai* escrito no documento e lido como “pago” é contestado (os recibos conhecidos são de alfândega, séculos II e III, e a sigla pode ser de outra palavra). O estudo ensina o que está comprovado, marca o que é sugestão e liga tudo a Cl 2.14, que diz o que o dono queria dizer. Entrou em `catalog.ts` a obra de Moulton e Milligan.
+- **Chicote:** o dono aceitou “uma representação mais próxima do real, não precisa ser o real”. Legenda e texto agora trazem a reconstrução tradicional com ossículos, chumbo e **ganchos de metal**, dita aproximação; `passion-story.ts` ficou coerente com isso. Pedido de imagem reescrito (ossículos, chumbo, ganchos, ferrugem e marcas de uso).
+- **Retrato da coroa:** o dono pediu algo **parecido** com os fotogramas, sem ser igual. Prompt reescrito com o mesmo nível de realismo e de crueza, mas ângulo, rosto, fundo e cabelo próprios, sem citar o filme nem o ator, e com plano B se o gerador recusar.
+
+**Decisões:** os fotogramas continuam fora do app e fora dos prompts (direitos autorais e retrato de ator); o “parecido” vem do nível de realismo, nunca da cópia. Rodrigo Silva continua sem fonte; o dono não tem material agora.
+
+**Arquivos:** `rascunhos/como-a-ciencia-explica/` (`conteudo/artigos/do-getsemani-a-ressurreicao.md`, `catalog.ts`, `passion-scene.ts`, `passion-story.ts`, `analises/pedidos-de-imagem-para-o-chatgpt.md`) e `DIARIO.md`.
+
+**Validação:** 175 trechos entre aspas conferidos na Almeida, 166 referências existentes; prévia na porta 4308 no Chrome sem erro de console e sem rolagem horizontal; lint limpo.
+
+**Pendências:** imagens do pedido ao ChatGPT (ou geradas aqui, se o dono quiser gastar créditos do ElevenLabs); fonte de Rodrigo Silva; servidor da 4307 ainda com o pacote antigo.
+
+## 2026-11-10 08:38 -0400 — Almeida corrigida, mapa antigo removido e placa de Pilatos em três línguas
+
+**Autor:** Claude (Sonnet 5.5), a pedido de Valter, que aprovou as três pendências da entrada anterior (08:18), que ficam resolvidas aqui.
+
+**O que foi feito:**
+- **Almeida:** 12 erros de digitação corrigidos por `VERSE_FIXES` (`tools/gerar-almeida.py`) e aplicados com `tools/corrigir-almeida.py`, sem editar os JSON à mão. Os três aprovados: Lc 22.46 (“Lenvantai”), Jo 18.3 (vírgula entre lanternas e archotes) e Jo 18.6 (“caíram”). Os outros nove, achados ao conferir as citações do estudo e do mesmo tipo (erros inequívocos de letra, palavra repetida ou acento): Mt 26.64, Jo 19.3, Jo 19.42, Jo 20.23, Jo 20.25, Mc 15.32, Mc 15.43, Lc 24.20 e 2Co 5.21. Conferido versículo a versículo contra o `HEAD`: só esses 12 mudaram, em 5 arquivos (`2CO`, `JHN`, `LUK`, `MAT`, `MRK`). Rodar o corretor de novo não altera nada.
+- `passion-map.ts` e `passion-map.scss` (mapa feito à mão pelo Codex) apagados; nada os referenciava.
+- Nova figura `paixao-placa` (`passion-placa.ts` / `.scss`): a placa de Pilatos em hebraico, latim e grego, na ordem de Jo 19.20, escrita como texto (com `lang` em cada linha, não como imagem), a tradução, a sigla INRI e as quatro redações dos Evangelhos com botão para cada passagem.
+- No estudo, Jo 18.3 e Jo 18.6 voltaram a ser citados literalmente, agora que a Almeida está certa (175 trechos entre aspas conferidos, nenhum fora da Almeida).
+
+**Decisões:**
+- Os nove versículos além dos três aprovados foram incluídos por serem o mesmo tipo de erro e estarem nos trechos lidos para o estudo; ficam listados aqui para o dono poder reverter algum.
+- O hebraico da placa é a forma moderna (*Yeshua ha-Notzri melekh ha-Yehudim*); a figura diz que a forma exata do século I não se conhece. Grego segue Jo 19.19 e o latim, a Vulgata.
+- Erros que ficaram de fora, por serem só de maiúscula ou de pontuação no limite entre versículos (ex.: Mt 27.54 “ora”, Mt 28.3 “o seu aspecto”): não mexi.
+
+**Arquivos:** `tools/gerar-almeida.py`; `public/bible/almeida/{2CO,JHN,LUK,MAT,MRK}.json`; `rascunhos/como-a-ciencia-explica/` (`passion-placa.ts`, `passion-placa.scss`, `figure.ts`, `conteudo/artigos/do-getsemani-a-ressurreicao.md`); `CLAUDE.md`, `DIARIO.md`.
+
+**Validação:** 174 testes de lógica aprovados; lint dos arquivos novos limpo; build avulso da configuração privada compilado; no Chrome (390 e 1280 px), placa renderizada com as três línguas, sem erro de console e sem rolagem horizontal, e cada botão de passagem abrindo a folha. Servidor da prévia na porta 4308. O da 4307 estava com o pacote antigo (o Angular não registra arquivos novos sem reiniciar) e não pude reiniciá-lo: o sistema bloqueou encerrar um processo aberto por outra sessão. Sem commit, push ou deploy.
+
+**Pendências:** reiniciar o servidor da 4307 (ou usar a 4308); a placa em imagem de tábua de madeira é opcional (o ChatGPT só precisaria da textura, sem letras).
+
+## 2026-11-10 08:18 -0400 — Paixão reescrita: voz de Jesus, medicina por etapa e mapa no visualizador do app
+
+**Autor:** Claude (Sonnet 5.5), a pedido de Valter, depois de revisar o que o Codex tinha feito.
+
+**O que foi feito:**
+- Revisei o texto do Codex: cuidadoso com as fontes, mas defensivo. Falava mais *sobre* o texto (“não será apresentado”, “não numeramos cada golpe”) do que contava a cena, e por isso não envolvia nem fazia sentir o sofrimento.
+- Reescrevi `do-getsemani-a-ressurreicao.md` (cerca de 8.700 palavras, antes 3.000), com as mesmas 12 seções (as figuras interativas se ligam a elas pela ordem), em três camadas: prosa realista no presente; onze painéis escuros com Jesus em **primeira pessoa**; oito quadros “O que o corpo sofre” com a medicina de cada etapa. Entraram o suor de sangue, a prisão e a fuga, a violência contra o rosto (“Profetiza”), o açoite, a coroa e a cana, Simão de Cirene e sua família (Mc 15.21; Rm 16.13), a placa de Pilatos em três línguas, o abandono (Sl 22), a sede, a morte, o sepultamento, o panorama dos discípulos e a ressurreição, até o convite final.
+- Troquei o mapa SVG feito à mão por `passion-route.ts` / `.scss`, em cima do `app-bible-map` (mesma geografia, câmera, viajante, marcadores e escala do mapa “A vida de Jesus”), com seis etapas, escolha entre Fortaleza Antônia e palácio de Herodes para o pretório e quilômetros calculados (1,2 + 1,1 + 0,4 = 2,7 km em linha reta; 2,1 km com o palácio).
+- Atualizei `STAGES` (`passion-scene.ts`), tópicos, tempo de leitura (38 min), subtítulo e fontes (`catalog.ts`): Josefo, Tácito, Fílon, Martírio de Policarpo, Suetônio, Eusébio, Sanhedrin 43a, Zias e Sekeles, Barbet e Gray.
+- Escrevi `analises/pedidos-de-imagem-para-o-chatgpt.md` com prompts e regras de nome (prefixo `paixao-anatomia-`) para a divisão: o ChatGPT faz imagens e GIFs; o Claude, texto, mapa e componentes.
+
+**Decisões:**
+- O dono pediu primeira pessoa e mais realismo, e isso substitui, só para esta coleção privada, a regra da voz impessoal. A voz de Jesus fica **dentro dos painéis escuros** e é tecida só com Evangelhos, Salmos e Isaías; toda citação entre aspas é texto exato da Almeida do app (173 trechos conferidos por script, 166 referências existentes). A legenda da primeira figura explica ao leitor o que é cada tipo de quadro.
+- **Chicote:** o dono quer o açoite “com cravos, ossos e pregos”. As fontes não permitem afirmar isso. Nicolotti (2017) conclui que quase nada se sabe do instrumento, e Josefo (Guerra 6.304) e o Martírio de Policarpo (2.2) documentam o *efeito* (ossos à mostra; veias e artérias visíveis). O texto apoia o realismo nos efeitos documentados e apresenta o *flagrum* com ossículos e chumbo como reconstrução tradicional, declarada hipótese.
+- **Placa como “dívida paga”:** não há costume romano documentado de afixar aviso de dívida quitada, e a leitura de *tetelestai* como recibo “pago” é contestada. O texto liga a placa (a causa da condenação, atestada por Suetônio e Eusébio) a Colossenses 2.14, em que Paulo diz que o escrito de dívida foi cravado na cruz.
+- **Artigo de 2025 (PDF de consulta):** não adotei o que contradiz João 19.33-34 (a lança como causa da morte), nem o Sudário como prova, nem a certeza sobre trajetos de cravos. A morte vem antes da lança; as hipóteses sobre a causa aparecem como hipóteses.
+- **Rodrigo Silva:** não citei nada dele de memória. Falta fonte (vídeo, livro ou trecho) para parafrasear com atribuição correta.
+- **Os dois fotogramas do filme enviados como referência** não entram no app (direitos autorais e retrato de um ator); servem de régua de realismo para os pedidos de imagem.
+- O mapa não inclui o Cenáculo (a ~200 m da casa de Caifás, o visualizador os funde num marcador só) nem Herodes Antipas (endereço desconhecido).
+
+**Arquivos:** `rascunhos/como-a-ciencia-explica/` (`conteudo/artigos/do-getsemani-a-ressurreicao.md`, `passion-route.ts`, `passion-route.scss`, `figure.ts`, `passion-scene.ts`, `catalog.ts`, `analises/pedidos-de-imagem-para-o-chatgpt.md`), `CLAUDE.md` e `DIARIO.md`. Nada em `src/` nem em `public/`.
+
+**Validação:** citações e referências por script; prévia privada (porta 4307) no Chrome a 360, 390 e 1280 px sem erro de console, sem rolagem horizontal, com as 12 seções, 11 painéis, 8 quadros, 10 figuras e o mapa percorrendo as etapas; lint dos arquivos tocados; 6 testes de isolamento e trava de publicação aprovados. Sem commit, push ou deploy.
+
+**Pendências:** leitura e ajuste do texto com o dono (sobretudo os painéis em primeira pessoa); imagens do pedido ao ChatGPT; placa em três línguas como figura SVG; `passion-map.ts` do Codex ficou sem uso; Lucas 22.46 da Almeida tem erro de digitação (“Lenvantai”) e Jo 18.3 e Jo 18.6 também (corrigir por `tools/gerar-almeida.py`, `VERSE_FIXES`).
+
+## 2026-11-10 ~07:40 -0400 — Mapa, impulsos nervosos e novas cenas privadas
+
+**Autor:** Codex, a pedido de Valter.
+
+**O que foi feito:** acrescentado mapa animado no tópico das autoridades, com oito etapas do Getsêmani ao sepultamento e ao anúncio da ressurreição, hipóteses oriental/ocidental do pretório, norte, escala e aproximação. Acrescentados impulsos esquemáticos sobre encéfalo e medula, com pausa e ampliação. Esclarecidos os archotes como tochas em João 18.3. Integradas três sequências visuais de quatro momentos: Pedro/Malco e o toque de cura, Jesus diante de Anás e a bofetada, rosto coberto e zombaria. Acrescentadas imagens nítidas de um modelo ilustrativo de açoite e de uma coroa sobre a cabeça, com fontes e legendas. Os cinco novos arquivos foram gerados com a ferramenta integrada imagegen e mantidos privados. Criado relógio comum de reprodução com visibilidade, pausa manual, reinício e movimento reduzido.
+
+**Decisões:** os 2,7 km e 2,1 km do mapa são somas geométricas em linha reta entre marcos aproximados conforme o pretório escolhido, não a distância que Jesus efetivamente caminhou. O endereço de Herodes não foi inventado; sepultamento é transporte do corpo, e a ressurreição não recebe deslocamento fictício. A pesquisa de Andrea Nicolotti impede apresentar forma e materiais do açoite como identificação da arma exata. Lucas descreve toque e cura da orelha, sem cirurgia de recolocação; os episódios de João e dos sinóticos permanecem distintos. A geração da coroa com feridas mais intensas foi bloqueada pelo gerador; foi criada uma alternativa de retrato sem ferimentos novos. A imagem anterior das costas foi preservada e não foi produzida carne exposta.
+
+**Validação:** builds privado e público, lint, seis testes de isolamento e diff conferidos. No Chrome, confirmados impulsos em movimento, pausa e ampliação; três sequências com quatro imagens-chave; mapa com oito etapas, duas medidas, aproximação, pausa e reinício; imagens, limites históricos, movimento reduzido e larguras 360/390/1280. Regressão das nove explicações e seus controles aprovada. Artigo ausente do catálogo público; Markdown e dezesseis imagens retornam 404 na produção. Guard ampliado para os novos identificadores de figuras e aprovado. As doze seções do artigo foram preservadas. Prompts, fontes, caminhos e capturas ficam em `rascunhos/como-a-ciencia-explica/analises/cenas-mapa-e-objetos.md` e `analises/previas-cenas-mapa/`. Nenhum commit, push ou deploy.
+
+## 2026-11-09 ~14:59 -0400 — Circulação, ciclo automático, órgãos em movimento e costas
+
+**Autor:** Codex, a pedido de Valter, com base nas telas marcadas.
+
+**O que foi feito:** circulação visível nas duas pranchas de pele, com maior contraste do fluxo; o suor anima apenas os vasos e os ferimentos também animam o sangramento. Simulação de ação/anatomia agora começa e repete quando está à vista, preservando pausa manual, inspeção pela linha do tempo e movimento reduzido. Acrescentados movimentos ilustrativos de coração, pulmões, diafragma e ar na prancha do tórax e em sua ampliação. A opção A lança mantém a anatomia estática. Acrescentada visão posterior das costas após os açoites, com imagem gerada por imagegen, legenda sobre os limites históricos e ampliação. As doze cenas passaram a uma grade responsiva, sem barra horizontal.
+
+**Decisões:** os movimentos do tórax representam fisiologia normal, com ritmos e amplitudes didáticos, sem reconstruir sinais vitais de Jesus. A visão posterior é uma possibilidade artística, não um mapa comprovado das feridas. O pedido atual autoriza reprodução automática, substituindo a escolha inicial de reprodução apenas manual. Movimento reduzido continua começando pausado, com ativação disponível. Nenhum conteúdo foi publicado.
+
+**Validação:** builds privado e público, lint dos componentes privados e diff conferidos. Chrome: repetição, pausa, retomada por visibilidade, preservação da pausa manual, sangue nos dois painéis, coração/pulmões/diafragma, controles na ampliação, visão posterior e Escape, movimento reduzido e larguras 360/390/1280 aprovados. Regressão das nove explicações e marcadores aprovada. Catálogo público sem o estudo; Markdown e onze imagens retornam 404. Guard de publicação aprovado, componentes e imagem ignorados pelo Git. Notas, prompt e referências em `analises/fisiologia-e-costas.md`; capturas em `analises/previas-fisiologia/`. Sem commit, push ou deploy.
+
+## 2026-11-09 14:24 -0400 — Mais realismo e sangue na simulação privada
+
+**Autor:** Codex, a pedido de Valter.
+
+**O que foi feito:** criadas versões `v2` das imagens de ação e de pele com a ferramenta integrada imagegen. Na cena de contato aparece uma marca com sangue; na resposta aparecem sangue acumulado e escorrimento pelo torso. O corte anatômico tem sangue mais visível e textura úmida na lesão existente. Os primeiros momentos continuam com pele íntegra. A versão nova é usada na simulação, no atlas dos ferimentos e na ampliação; a explicação sobre suor conserva a prancha anterior. Os arquivos originais foram preservados.
+
+**Validação:** builds privado e público, lint dos componentes privados e conferência visual aprovados. Chrome: quatro momentos, imagens, sincronização, pausa, retomada, reinício, velocidades, teclado e larguras 360/390/1280; explicações e marcadores existentes também aprovados. O artigo, Markdown e dez imagens continuam ausentes da versão pública por HTTP. Guard de publicação aprovado e imagens ignoradas pelo Git. Prompts, caminhos e capturas em `analises/realismo-sangue-v2.md` e `analises/previas-impacto-v2/`. Sem commit, push ou deploy.
+
+## 2026-11-09 ~14:14 -0400 — Ação do carrasco e anatomia sincronizadas
+
+**Autor:** Codex, a pedido de Valter.
+
+**O que foi feito:** acrescentada sequência visual privada em quatro momentos: preparação, aproximação, contato e resposta. Uma reconstituição do carrasco com torso de treinamento acompanha um corte da pele, que passa de íntegro para uma lesão ilustrativa, com deformação ampliada, sangue e sinal nervoso esquemático. Criadas duas imagens com imagegen: folha de quatro poses e versão íntegra da prancha de pele, preservando a original. Reprodução, pausa, reinício, linha do tempo por teclado e velocidades normal/lenta. Sem reprodução automática; pausa ao ocultar a aba e limpeza do ciclo de animação ao sair.
+
+**Decisões:** sequência de imagens-chave sincronizadas, sem apresentá-la como vídeo contínuo, simulação biomecânica validada ou reprodução dos ferimentos individuais de Jesus. Tempos e deformação são didáticos, sem fornecer força, profundidade ou um medidor de dor. Material permanece na pasta ignorada `rascunhos/`; nomes das novas imagens já são cobertos pela proteção de publicação existente.
+
+**Validação:** builds privado e público, lint e conferência visual aprovados. Chrome: quatro poses distintas, transição íntegra/lesionada, deformação, sangue, indicação nervosa, pausa estável, retomada, reinício, velocidades, teclado, movimento reduzido e larguras 360/390/1280. Regressão das nove explicações e seus marcadores, ampliação e teclado aprovada. Artigo, Markdown e oito imagens ausentes da versão pública por HTTP; proteção de publicação aprovada. Servidor privado reiniciado em 127.0.0.1:4307 para registrar os novos arquivos. Prompts, fontes e capturas em `analises/simulacao-impacto.md` e `analises/previas-impacto/`. Nenhum commit, push ou deploy.
+
+## 2026-11-09 14:07 -0400 — Sangue animado na prancha privada
+
+**Autor:** Codex, a pedido de Valter.
+
+**O que foi feito:** acrescentado sangue em movimento contínuo sobre a lesão e os vasos da prancha de pele, com reflexos, escorrimento e gotas em SVG/CSS, como um GIF integrado à imagem. Botão de pausa/retomada sincronizado com a ampliação. O efeito aparece no painel dos ferimentos; não foi acrescentado ao painel do suor de Getsêmani. Nenhum novo arquivo de imagem foi necessário.
+
+**Validação:** build privado e lint aprovados. Chrome: avanço real e pausa estável das animações, retomada, ampliação sincronizada, identificadores SVG únicos, pontos clicáveis e larguras 360/390/1280 conferidos. Movimento reduzido inicia pausado e permite ativação voluntária. Proteção de publicação e seus seis testes conferidos; tudo permanece privado e ignorado pelo Git. Captura em `rascunhos/como-a-ciencia-explica/analises/previas-sangue/`. Nenhum commit, push ou deploy.
+
+## 2026-11-09 14:03 -0400 — Realismo anatômico na prévia privada
+
+**Autor:** Codex, a pedido de Valter.
+
+**O que foi feito:** substituídos os desenhos simplificados por três pranchas anatômicas realistas geradas com imagegen: sistema nervoso central, corte da pele com lesão ilustrativa e tórax. Acrescentadas nove explicações sobre estrutura, mecanismo e consequências possíveis, marcadores acessíveis, legendas e ampliação com diálogo nativo. A visão geral das doze cenas passou a usar a arte narrativa. Prompts, fontes e capturas ficaram na pasta privada.
+
+**Decisões:** apresentação de atlas médico, preservando a diferença entre anatomia geral e hipóteses sobre Jesus. O gerador rejeitou o corte de cabeça; foi usada uma ilustração isolada do sistema nervoso central. As imagens não são fotografias clínicas nem passaram por validação médica independente. Nenhum conteúdo foi movido para `public/` ou para o catálogo público.
+
+**Validação:** builds privado e público, lint e seis testes de isolamento aprovados. Chrome: nove explicações, todos os marcadores, imagens, ampliação, Escape, retorno do foco, teclado e larguras 360/390/1280 conferidos. Artigo ausente do catálogo público; Markdown e seis imagens retornam 404 no artefato de produção. Proteção de publicação ampliada para os novos arquivos e aprovada. Nenhum commit, push ou deploy.
+
+**Pendências:** avaliação visual/editorial com o dono. Publicação continua dependente de pedido explícito.
+
+## 2026-11-09 13:39 -0400 — Narrativa privada do Getsêmani à ressurreição
+
+**Autor:** Codex, a pedido de Valter.
+
+**O que foi feito:**
+- Desenvolvi a primeira versão de “Do Getsêmani à Ressurreição”, na coleção privada, cobrindo oração, prisão, interrogatórios, agressões, açoites, zombaria, caminho, cruz, morte, sepultamento e os encontros narrados após a ressurreição.
+- Acrescentei doze cenas navegáveis, três painéis interativos de fisiologia, imagens artísticas de Getsêmani/Gólgota/sepulcro aberto e apresentação própria para celular e computador. As imagens foram geradas com imagegen e seus prompts ficaram registrados na pasta privada.
+- Mantive o conteúdo fora de `public/` e do Git. Ampliei os identificadores bloqueados na verificação de publicação e o teste de exclusão do catálogo padrão. A configuração de rascunhos passou a servir as imagens privadas junto dos Markdown.
+
+**Decisões:**
+- O dono confirmou que o percurso deve ir até a ressurreição. A narrativa distingue detalhes de cada Evangelho, explicações gerais do corpo e reconstituição artística.
+- Preservar João 19: morte constatada antes do golpe de lança; não apresentar hipótese respiratória como fato estabelecido nem criar um mecanismo médico da ressurreição.
+- Não alterar o artigo público “A Crucificação Romana”. A nova narrativa o referencia como contexto histórico.
+- Abrir a prévia privada na porta 4307, pois 4200 e 4201 já estavam ocupadas.
+
+**Arquivos:** conteúdo, catálogo, componentes, estilos, ilustrações, fontes e notas dentro de `rascunhos/como-a-ciencia-explica/`; `angular.json`; `tools/verificar-publicacao.mjs`; `e2e/logica/rascunhos.spec.ts`; `CLAUDE.md` e `DIARIO.md`.
+
+**Validação:** builds da prévia e de produção, lint e 174 testes de lógica aprovados. Conferidas 55 referências e duas citações na Almeida local. No Chrome, conferidos os doze capítulos, três imagens, quatro interativos, botões, teclado e salto entre cenas, sem rolagem horizontal a 360/390/1280 px. O build público não contém o estudo; o Markdown e as três imagens retornaram 404 e o guard de publicação aprovou o artefato. Nenhum commit, push ou deploy foi feito.
+
+**Pendências:** avaliação editorial da primeira versão com o dono; publicação depende de pedido futuro explícito.
+
+## 2026-11-09 08:47 -0400 — Como a Ciência Explica em prévia local privada
+
+**Autor:** Codex, a pedido de Valter.
+
+**O que foi feito:**
+- Recuperei do commit `f62e1e9` somente a coleção “Como a Ciência Explica”: sete artigos, três volumes, fontes e figuras, na pasta local `rascunhos/`, ignorada pelo Git.
+- Acrescentei `npm run start:rascunhos`, restrito a `127.0.0.1`, com substituições de módulos, estilos e arquivos próprios da prévia. O aplicativo padrão usa catálogos vazios, e a prévia mostra “Rascunhos locais · não publicados”.
+- Acrescentei verificação dos artefatos públicos e seis testes para impedir inclusão acidental dos identificadores, textos ou figuras da coleção; os workflows chamam a proteção antes da publicação.
+
+**Decisões:**
+- Trabalhar na coleção sem disponibilizá-la ao público. Os textos ficam fora de `public/` e do Git, e a saída da prévia fica separada de `dist/`.
+- Recuperar somente a coleção, conforme resposta expressa do dono; menu lateral, modo de foco e anotações de trechos não foram recuperados.
+- Restaurar os textos sem revisão científica nesta etapa. A decisão de publicar fica para um pedido futuro.
+
+**Arquivos:** `.gitignore`, `angular.json`, `package.json`, `README.md`, `CLAUDE.md`, `DIARIO.md`; integração de rascunhos em `app.*`, `core/library.ts`, `core/trails.ts`, `core/sources.ts`, `core/draft-content.ts`, `shared/figure.ts`, `shared/draft-figure.ts`; `tools/verificar-publicacao.mjs`, `e2e/logica/rascunhos.spec.ts` e os dois workflows. O conteúdo recuperado fica somente na pasta ignorada `rascunhos/`.
+
+**Validação:** lint aprovado; 174 testes de lógica aprovados; builds da prévia e de produção aprovados; build de produção aprovado também em cópia sem a pasta privada. A proteção aprovou o artefato público. No Chrome, conferi os três volumes, sete artigos, sete figuras, busca e largura de celular na prévia. No artefato público, confirmei ausência na biblioteca/busca, as sete rotas sem conteúdo e os sete Markdown indisponíveis por HTTP. Os subprocessos Node de cinco testes foram bloqueados pelo sandbox na primeira rodada e passaram na execução autorizada fora dessa restrição.
+
+**Pendências:** revisar e desenvolver o conteúdo da coleção com o dono. Nenhum commit, push ou deploy foi feito nesta etapa.
 
 ## 2026-11-06 17:30 -0400 — Reversão das publicações de hoje
 

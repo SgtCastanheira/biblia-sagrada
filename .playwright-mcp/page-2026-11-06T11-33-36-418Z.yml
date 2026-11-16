@@ -1,0 +1,40 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "Bíblia Sagrada" [ref=e4] [cursor=pointer]:
+      - /url: /biblia-sagrada/
+    - button "Trocar versão" [ref=e6] [cursor=pointer]:
+      - generic [ref=e7]: ALM
+      - img [aria-hidden] [ref=e8]: expand_more
+    - link "Buscar na Bíblia" [ref=e9] [cursor=pointer]:
+      - /url: /biblia-sagrada/busca
+      - img [aria-hidden] [ref=e10]: search
+    - link "Curiosidades" [ref=e13] [cursor=pointer]:
+      - /url: /biblia-sagrada/curiosidades
+      - img [aria-hidden] [ref=e14]: notifications
+      - generic "Nova curiosidade" [ref=e15]
+    - link "Ajustes" [ref=e18] [cursor=pointer]:
+      - /url: /biblia-sagrada/ajustes
+      - img [aria-hidden] [ref=e19]: settings
+  - navigation "Navegação principal" [ref=e22]:
+    - link "Início" [ref=e23] [cursor=pointer]:
+      - /url: /biblia-sagrada/
+      - img [aria-hidden] [ref=e24]: menu_book
+    - link "Início" [ref=e25] [cursor=pointer]:
+      - /url: /biblia-sagrada/
+      - img [aria-hidden] [ref=e27]: home
+    - link "Bíblia" [ref=e29] [cursor=pointer]:
+      - /url: /biblia-sagrada/ler/GEN/1
+      - img [aria-hidden] [ref=e31]: import_contacts
+    - link "História" [ref=e33] [cursor=pointer]:
+      - /url: /biblia-sagrada/historia
+      - img [aria-hidden] [ref=e35]: auto_stories
+    - link "Ensino" [ref=e37] [cursor=pointer]:
+      - /url: /biblia-sagrada/ensino
+      - img [aria-hidden] [ref=e39]: school
+    - link "Jornal" [ref=e41] [cursor=pointer]:
+      - /url: /biblia-sagrada/vozes
+      - img [aria-hidden] [ref=e43]: newspaper
+    - link "Meu espaço" [ref=e45] [cursor=pointer]:
+      - /url: /biblia-sagrada/meu-espaco
+      - img [aria-hidden] [ref=e47]: person
+  - main [ref=e49]

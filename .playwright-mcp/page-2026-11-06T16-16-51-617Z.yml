@@ -1,0 +1,64 @@
+- generic [ref=e2]:
+  - navigation "Navegação principal" [ref=e3]:
+    - link "Início" [ref=e4] [cursor=pointer]:
+      - /url: /
+      - img [aria-hidden] [ref=e5]: menu_book
+    - link "Início" [ref=e6] [cursor=pointer]:
+      - /url: /
+      - img [aria-hidden] [ref=e8]: home
+    - link "Bíblia" [ref=e10] [cursor=pointer]:
+      - /url: /ler/GEN/1
+      - img [aria-hidden] [ref=e12]: import_contacts
+    - link "História" [ref=e14] [cursor=pointer]:
+      - /url: /historia
+      - img [aria-hidden] [ref=e16]: auto_stories
+    - link "Ensino" [ref=e18] [cursor=pointer]:
+      - /url: /ensino
+      - img [aria-hidden] [ref=e20]: school
+    - link "Jornal , matéria nova" [ref=e22] [cursor=pointer]:
+      - /url: /vozes
+      - img [aria-hidden] [ref=e24]: newspaper
+      - generic [ref=e26]: Jornal
+      - generic [ref=e27]: ", matéria nova"
+    - link "Meu espaço" [ref=e28] [cursor=pointer]:
+      - /url: /meu-espaco
+      - img [aria-hidden] [ref=e30]: person
+  - main [ref=e32]:
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - button "Escolher livro e capítulo" [ref=e35] [cursor=pointer]:
+          - generic [ref=e36]: Gênesis 1
+          - img [aria-hidden] [ref=e37]: expand_more
+        - button "Trocar versão" [ref=e38] [cursor=pointer]: ALM
+        - button "Comparar versões" [ref=e39] [cursor=pointer]:
+          - img [aria-hidden] [ref=e40]: compare_arrows
+        - button "Ouvir este capítulo" [ref=e43] [cursor=pointer]:
+          - img [aria-hidden] [ref=e44]: headphones
+        - link "Buscar na Bíblia" [ref=e47] [cursor=pointer]:
+          - /url: /busca
+          - img [aria-hidden] [ref=e48]: search
+        - button "Aparência da leitura" [ref=e51] [cursor=pointer]:
+          - img [aria-hidden] [ref=e52]: format_size
+        - button "Ativar modo de foco" [ref=e55] [cursor=pointer]:
+          - img [aria-hidden] [ref=e56]: center_focus_strong
+      - article [ref=e59]:
+        - button "Colocar a fitinha neste capítulo" [ref=e61] [cursor=pointer]
+        - generic [ref=e63]:
+          - text: Pentateuco
+          - heading "Gênesis" [level=1] [ref=e64]
+          - generic [ref=e65]: "1"
+        - button "Estudar este capítulo 1 aula" [ref=e71] [cursor=pointer]:
+          - img [aria-hidden] [ref=e72]: local_library
+          - generic [ref=e73]:
+            - generic [ref=e74]: Estudar este capítulo
+            - text: 1 aula
+          - img [aria-hidden] [ref=e75]: expand_more
+        - generic "Carregando" [ref=e76]:
+          - paragraph [ref=e77]: Aguardando a fonte desta versão — leituras seguidas podem levar alguns segundos…
+        - navigation [ref=e89]:
+          - link "Próximo Gênesis 2" [ref=e91] [cursor=pointer]:
+            - /url: /ler/GEN/2
+            - generic [ref=e92]:
+              - generic [ref=e93]: Próximo
+              - text: Gênesis 2
+            - img [aria-hidden] [ref=e94]: arrow_forward
