@@ -48,9 +48,11 @@ VERSIONS = {
     "kgpNT": "kaingang",     # Kaingang, NT (2011)
     "terNT": "terena",       # Terêna, NT (2012)
     "xavNT": "xavante",      # Xavánte, NT (2004)
+    "bkqNT": "bakairi",      # Bakairí, NT (2011): povo do alto Xingu
+    "txuNT": "kayapo",       # Kayapó (Mebêngôkre), NT (2012): povo da bacia do Xingu
 }
 # Licença sem obras derivadas: o texto e a pontuação ficam exatamente como vieram (só os espaços em branco são juntados)
-KEEP_AS_IS = {"gun", "gubBl", "kgkNT", "kyzNT", "urbNT", "myu", "mavNT", "tcaNT", "kgpNT", "terNT", "xavNT"}
+KEEP_AS_IS = {"gun", "gubBl", "kgkNT", "kyzNT", "urbNT", "myu", "mavNT", "tcaNT", "kgpNT", "terNT", "xavNT", "bkqNT", "txuNT"}
 # Fora de propósito: portft (Tradução para Tradutores) é uma ferramenta de tradução, cheia de colchetes e barras.
 
 BOOKS = ["GEN","EXO","LEV","NUM","DEU","JOS","JDG","RUT","1SA","2SA","1KI","2KI","1CH","2CH","EZR","NEH","EST","JOB","PSA","PRO","ECC","SNG","ISA","JER","LAM","EZK","DAN","HOS","JOL","AMO","OBA","JON","MIC","NAM","HAB","ZEP","HAG","ZEC","MAL",

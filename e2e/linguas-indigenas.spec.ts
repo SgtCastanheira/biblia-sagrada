@@ -58,3 +58,51 @@ test('tradução que pula versículos avisa quais faltam; versão completa não 
   await expect(page.locator('#v1')).toBeVisible();
   await expect(page.locator('.gap-note')).toHaveCount(0);
 });
+
+test('busca na lista de versões: “xingu” acha Kayabí, Bakairí e Kayapó, e o Kayapó abre com o aviso de direitos', async ({ page }) => {
+  await page.goto('/ler/JHN/3');
+  await page.getByRole('button', { name: 'Trocar versão' }).click();
+  const painel = page.locator('app-version-sheet');
+  const busca = painel.getByRole('searchbox', { name: /Buscar versão/ });
+  await expect(painel.locator('button.item').first()).toBeVisible();
+  const todas = await painel.locator('button.item').count();
+  expect(todas).toBeGreaterThan(40);
+
+  await busca.fill('xingu');
+  await expect(painel.locator('.count')).toHaveText('3 versões encontradas');
+  await expect(painel.locator('button.item')).toHaveCount(3);
+  await expect(painel.locator('h3')).toHaveText(['Línguas indígenas do Brasil']);
+  for (const nome of ['Kayabí', 'Bakairí', 'Kayapó']) await expect(painel.locator('button.item', { hasText: nome })).toBeVisible();
+
+  // sem acento e sem maiúsculas também acha; sem resultado, a tela explica o que tentar
+  await busca.fill('KAYAPO');
+  await expect(painel.locator('button.item')).toHaveCount(1);
+  await busca.fill('zzzz');
+  await expect(painel.locator('button.item')).toHaveCount(0);
+  await expect(painel.locator('.empty')).toContainText('Nenhuma versão encontrada para “zzzz”');
+
+  // o botão de limpar traz a lista inteira de volta
+  await painel.getByRole('button', { name: 'Limpar a busca' }).click();
+  await expect(painel.locator('button.item')).toHaveCount(todas);
+  await expect(painel.locator('.count')).toHaveCount(0);
+
+  // Enter escolhe a versão quando só sobrou uma
+  await busca.fill('bakairi');
+  await busca.press('Enter');
+  await expect(painel).toHaveCount(0);
+  await expect(page.locator('#v16')).toContainText('Idânârâ Deus kywynedyly');
+  await expect(page.locator('p.source')).toContainText('Wycliffe Bible Translators');
+  await expect(page.locator('p.source')).toContainText('2011');
+
+  // o Kayapó, escolhido pelo toque
+  await page.getByRole('button', { name: 'Trocar versão' }).click();
+  await painel.getByRole('searchbox', { name: /Buscar versão/ }).fill('xingu');
+  await painel.locator('button.item', { hasText: 'Kayapó' }).click();
+  await expect(page.locator('#v16')).toContainText('Metĩndjwỳnh ne kum pykakam');
+  await expect(page.locator('p.source')).toContainText('2012 Wycliffe Bible Translators');
+  await expect(page.locator('p.source')).toContainText('CC BY-NC-ND');
+
+  // o Antigo Testamento avisa e vem da Almeida
+  await page.goto('/ler/GEN/1');
+  await expect(page.locator('.notice.fallback')).toContainText('só tem o Novo Testamento');
+});
