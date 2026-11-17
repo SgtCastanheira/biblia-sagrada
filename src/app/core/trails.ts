@@ -79,7 +79,7 @@ export const TRAILS: Trail[] = [
     tone: '#5b3a29',
     collections: ['biblia'],
     branches: [
-      { title: 'A Bíblia dos Judeus', ids: ['biblia-judaica'] },
+      { title: 'A Bíblia dos Judeus', ids: ['biblia-judaica', 'tora', 'talmude'] },
       { title: 'Como Foi Escrita e Reunida', ids: ['formacao-do-antigo-testamento', 'septuaginta', 'formacao-do-novo-testamento', 'apocrifos'] },
       { title: 'Os Textos e as Línguas', ids: ['manuscritos', 'idiomas-da-biblia', 'capitulos-e-versiculos'] },
       { title: 'As Traduções', ids: ['vulgata-e-traducoes', 'biblia-em-portugues'] },

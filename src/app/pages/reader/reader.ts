@@ -10,6 +10,7 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { catchError, combineLatest, map, Observable, of, startWith, switchMap } from 'rxjs';
 import { BibleService, isRateLimit, LOCAL_VERSIONS } from '../../core/bible.service';
+import { CHRONO_CHAPTERS, chronoIndex, chronoNeighbour, chronoSectionOf } from '../../core/bible-chronological';
 import { BOOKS, findBook } from '../../core/books';
 import { ListenService } from '../../core/listen.service';
 import { ContentService } from '../../core/content.service';
@@ -63,6 +64,8 @@ interface ChapterLink {
 export class ReaderPage {
   readonly book = input.required<string>();
   readonly chapter = input.required<string>();
+  /** `?ordem=cronologica`: o anterior, o próximo e o deslizar da página seguem a Bíblia em ordem cronológica. */
+  readonly ordem = input<string>();
 
   protected readonly settings = inject(SettingsService);
   protected readonly favorites = inject(FavoritesService);
@@ -81,6 +84,15 @@ export class ReaderPage {
 
   protected readonly maps = computed(() => mapsFor(this.book(), this.chapterNum()));
   protected readonly lessons = computed(() => articlesFor(this.book(), this.chapterNum()));
+  protected readonly chrono = computed(() => this.ordem() === 'cronologica' && chronoIndex(this.book(), this.chapterNum()) >= 0);
+  /** Parâmetro que mantém a ordem escolhida em cada passo da leitura. */
+  protected readonly orderParams = computed(() => (this.chrono() ? { ordem: 'cronologica' } : null));
+  /** Onde o capítulo está na leitura cronológica: a seção e o lugar entre os 1.189. */
+  protected readonly chronoPlace = computed(() => {
+    if (!this.chrono()) return null;
+    const section = chronoSectionOf(this.book(), this.chapterNum());
+    return section ? { section: section.title, n: chronoIndex(this.book(), this.chapterNum()) + 1, total: CHRONO_CHAPTERS.length } : null;
+  });
   protected readonly previous = computed(() => this.neighbour(-1));
   protected readonly next = computed(() => this.neighbour(1));
 
@@ -255,7 +267,7 @@ export class ReaderPage {
     effect(() => {
       const book = this.bookInfo();
       if (!book) return;
-      const position = BOOKS.indexOf(book) * 1000 + this.chapterNum();
+      const position = this.chrono() ? chronoIndex(book.id, this.chapterNum()) : BOOKS.indexOf(book) * 1000 + this.chapterNum();
       const before = this.lastPosition;
       this.lastPosition = position;
       if (before === null || before === position) return;
@@ -336,7 +348,7 @@ export class ReaderPage {
 
   protected goTo(target: ChapterLink | null): void {
     if (target) {
-      this.router.navigate(['/ler', target.bookId, target.chapter]);
+      this.router.navigate(['/ler', target.bookId, target.chapter], { queryParams: this.orderParams() });
     }
   }
 
@@ -447,6 +459,10 @@ export class ReaderPage {
   private neighbour(direction: 1 | -1): ChapterLink | null {
     const book = this.bookInfo();
     if (!book) return null;
+    if (this.chrono()) {
+      const other = chronoNeighbour(book.id, this.chapterNum(), direction);
+      return other ? { bookId: other.bookId, chapter: other.chapter, label: `${findBook(other.bookId)?.name ?? other.bookId} ${other.chapter}` } : null;
+    }
     const chapter = this.chapterNum() + direction;
     if (chapter >= 1 && chapter <= book.chapters) {
       return { bookId: book.id, chapter, label: `${book.name} ${chapter}` };

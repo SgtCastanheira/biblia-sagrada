@@ -32,6 +32,9 @@ export const WORKS: Record<string, Work> = {
   // A Bíblia Conectada (as ligações entre os capítulos)
   'openbible-cross-references': { author: 'OpenBible.info', title: 'Cross References', publisher: 'https://www.openbible.info/labs/cross-references/ (licença Creative Commons Atribuição). Reúne sobretudo o Treasury of Scripture Knowledge, em domínio público, e votos de leitores; consultado em 13 de novembro de 2026', kind: 'referencia' },
   'harrison-romhild': { author: 'Chris Harrison e Christoph Römhild', title: 'Bible Cross-References', publisher: 'https://www.chrisharrison.net/index.php/Visualizations/BibleViz, desde 2007. A ideia de ligar os capítulos da Bíblia por arcos vem desta obra; a imagem tem direitos reservados e não é usada no app, e os dados dela não foram usados', kind: 'referencia' },
+  // A Torá e o Talmude
+  sefaria: { author: 'Sefaria', title: 'Biblioteca digital de textos judaicos (sefaria.org): índice de parashot e do Talmude, textos da Torá, da Mishná e do Talmude', publisher: 'organização sem fins lucrativos; lida em 17 de novembro de 2026. Os textos em inglês (William Davidson) são CC BY-NC e não são republicados no app, só recontados', kind: 'referencia' },
+  'wikipedia-judaismo': { author: 'Wikipédia', title: 'Artigos Torah, Weekly Torah portion, Sefer Torah, Talmud e Mishnah (en.wikipedia.org)', publisher: 'lidos em 17 de novembro de 2026; datas de composição, estrutura, edições impressas, censura e recepção cristã', kind: 'referencia' },
   // Referência geral
   'walton-at': { author: 'John H. Walton, Victor H. Matthews e Mark W. Chavalas', title: 'Comentário histórico-cultural da Bíblia: Antigo Testamento', publisher: 'Vida Nova', kind: 'referencia' },
   'keener-nt': { author: 'Craig S. Keener', title: 'Comentário histórico-cultural da Bíblia: Novo Testamento', publisher: 'Vida Nova', kind: 'referencia' },
@@ -224,6 +227,21 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
       'Grande Rolo de Isaías (1QIsaᵃ), Mar Morto; Códice de Aleppo (c. 930) e Códice de Leningrado (1008)',
     ],
     works: ['beckwith', 'tov', 'dillard-longman', 'bruce-canon'],
+  },
+  tora: {
+    ancientLabel: 'Fontes antigas',
+    ancient: [
+      'Septuaginta: os nomes gregos dos cinco livros (Génesis, Éxodos, Leuitikón, Arithmoí, Deuteronómion)',
+      'Talmude Babilônico, Bava Batra 15a: a atribuição dos últimos versículos de Deuteronômio a Josué, como a cita a Wikipédia (Torah)',
+    ],
+    works: ['sefaria', 'wikipedia-judaismo'],
+  },
+  talmude: {
+    ancientLabel: 'Textos lidos',
+    ancient: [
+      'Talmude Babilônico, Shabbat 31a, Bava Metzia 59b e Sanhedrin 37a; Mishná, Avot 1:1, 1:2 e 1:14 e Sanhedrin 4:5 (lida também no manuscrito Kaufmann, em domínio público, e na edição de Vilna de 1913)',
+    ],
+    works: ['sefaria', 'wikipedia-judaismo'],
   },
   'da-volta-do-exilio-a-jesus': {
     ancient: [
@@ -842,7 +860,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'capitulos-e-versiculos': { ancient: ['Capítulos de Stephen Langton (c. 1227)', 'Novo Testamento grego de Robert Estienne, com versículos (1551)', 'Bíblia de Genebra (1560), a primeira inglesa com versículos em toda a Bíblia'], works: ['metzger-ehrman', 'geisler-nix'] },
 };
 
-export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd' | 'harpa' | 'contexto-ad' | 'epocas' | 'conexoes';
+export type SourceTopic = 'livros' | 'notas' | 'memorial' | 'genealogia' | 'tribos' | 'mapas' | 'profecias' | 'dicionario' | 'curiosidades' | 'ibuc' | 'ebd' | 'harpa' | 'contexto-ad' | 'epocas' | 'conexoes' | 'cronologica' | 'tora' | 'talmude';
 
 /** Fontes de cada parte do app (o que não é um artigo). */
 export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; note?: string }> = {
@@ -850,6 +868,23 @@ export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; not
   notas: { title: 'Notas de estudo nos capítulos', works: ['walton-at', 'keener-nt', 'ndb'] },
   memorial: { title: 'Memorial da Fé', note: 'As datas dos reis seguem a cronologia de Edwin R. Thiele; a avaliação de cada rei é a do próprio texto bíblico.', works: ['thiele', 'ndb', 'kitchen'] },
   conexoes: { title: 'A Bíblia Conectada', note: 'Cada ligação é uma referência cruzada entre dois capítulos; o desenho junta citações diretas, alusões e assuntos parecidos. As explicações das citações são as do próprio app.', works: ['openbible-cross-references', 'harrison-romhild'] },
+  cronologica: {
+    title: 'A Bíblia em ordem cronológica',
+    note: 'A ordem foi montada para o app, a partir do que os próprios livros dizem sobre o tempo em que se passam e do que os estudiosos costumam aceitar; onde há debate, a seção avisa. O texto é o da Almeida, sem nenhuma mudança.',
+    works: ['thiele', 'dillard-longman', 'carson-moo', 'walton-at', 'keener-nt', 'ndb'],
+  },
+  tora: {
+    title: 'A Torá e as porções semanais',
+    note: 'Os limites das 54 porções seguem a divisão tradicional, conferida no índice de parashot da Sefaria, e foram escritos na numeração da nossa Bíblia (a da Almeida). O resumo de cada porção é do app.',
+    works: ['sefaria', 'wikipedia-judaismo'],
+  },
+  talmude: {
+    title: 'O Talmude',
+    note: 'O texto do Talmude não está no app (sem tradução livre em português; a inglesa da Sefaria é CC BY-NC). A estrutura (6 ordens, 63 tratados, 37 com Guemará) vem do índice da Sefaria, e os trechos foram lidos lá e contados com palavras do app.',
+    ancientLabel: 'Textos lidos',
+    ancient: ['Shabbat 31a, Sanhedrin 37a, Bava Metzia 59b e Avot 1 (edição William Davidson e Mishnah Yomit, de Joshua Kulp); Mishná Sanhedrin 4:5 segundo o manuscrito Kaufmann (domínio público) e a edição de Vilna (Romm, 1913)'],
+    works: ['sefaria', 'wikipedia-judaismo'],
+  },
   genealogia: { title: 'Genealogia de Jesus', works: ['carson-moo', 'keener-nt', 'ndb'] },
   tribos: { title: 'As doze tribos de Israel', note: 'Fronteiras traçadas a partir de Josué 13–19, com o apoio dos atlas bíblicos.', works: ['rainey-notley', 'aharoni', 'walton-at', 'ndb'] },
   mapas: { title: 'Mapas e atlas', note: 'Geografia do Natural Earth (domínio público); fronteiras antigas e lugares a partir dos atlas bíblicos.', works: ['rainey-notley', 'aharoni', 'kitchen'] },

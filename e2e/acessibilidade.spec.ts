@@ -2,7 +2,7 @@ import { expect, test } from './base';
 
 const telas = ['/', '/quiz', '/quiz/capitulo/JHN/3', '/devocional', '/ebd', '/anotacoes', '/ajustes', '/ler/JHN/3', '/mapas/exodo',
   '/estudo', '/memorial?grupo=reis-israel', '/memorial/elias', '/artigo/cativeiros-de-israel', '/avivamento/edwards-pecadores', '/dicionario', '/dicionario/aba', '/livro/ROM',
-  '/atlas', '/genealogia', '/profecias/milenio', '/artigo/profecias-de-daniel', '/dicionario/salvar', '/epocas', '/epocas/patriarcas', '/epocas/pentecostes', '/conexoes', '/conexoes/ISA/53', '/vozes', '/vozes/a-sanguessuga', '/vozes/a-sanguessuga?idioma=ru', '/revisao/8f11d02bac34306e'];
+  '/atlas', '/genealogia', '/profecias/milenio', '/artigo/profecias-de-daniel', '/dicionario/salvar', '/epocas', '/epocas/patriarcas', '/epocas/pentecostes', '/conexoes', '/conexoes/ISA/53', '/livros', '/cronologica', '/ler/GEN/11?ordem=cronologica', '/tora', '/talmude', '/vozes', '/vozes/a-sanguessuga', '/vozes/a-sanguessuga?idioma=ru', '/revisao/8f11d02bac34306e'];
 
 for (const tela of telas) {
   test(`${tela}: textos com pelo menos 13px`, async ({ page }) => {

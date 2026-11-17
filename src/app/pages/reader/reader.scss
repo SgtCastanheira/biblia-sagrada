@@ -99,6 +99,27 @@
   padding: 8px 4px 0;
 }
 
+/* Ordem cronológica: faixa discreta no alto do capítulo, que leva à lista das seções */
+.order-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin: 4px 0 8px;
+  padding: 6px 14px;
+  border-radius: 22px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  background: var(--mat-sys-surface-container-low);
+  color: var(--mat-sys-on-surface-variant);
+  font: 400 13px/1.35 Inter, sans-serif;
+  text-decoration: none;
+
+  mat-icon { flex: none; width: 20px; height: 20px; font-size: 20px; color: var(--accent-gold); }
+  span { flex: 1; min-width: 0; }
+  strong { color: var(--mat-sys-on-surface); font-weight: 600; }
+  small { flex: none; font: 500 13px Inter, sans-serif; }
+}
+
 .chapter-head {
   text-align: center;
   padding: 28px 0 8px;

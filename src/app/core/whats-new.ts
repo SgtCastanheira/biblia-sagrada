@@ -22,6 +22,16 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'cronologica-tora-talmude',
+    date: '17 de novembro de 2026',
+    title: 'A Bíblia em ordem cronológica, a Torá e o Talmude',
+    items: [
+      { icon: 'schedule', title: 'A Bíblia em ordem cronológica', text: 'Os mesmos capítulos da Almeida, lidos na ordem em que as coisas aconteceram: Jó junto dos patriarcas, os salmos de Davi na vida de Davi, os profetas no reinado em que viveram e as cartas de Paulo ao lado das viagens. O “anterior”, o “próximo” e o deslizar da página seguem essa ordem.', link: '/cronologica', tip: 'Em Livros, toque em “Bíblia em Ordem Cronológica”' },
+      { icon: 'menu_book', title: 'A Torá e as 54 porções', text: 'Os cinco livros de Moisés como os judeus os leem: uma porção por semana, com o nome em hebraico, o sentido, o trecho e um resumo, e um toque para abrir o capítulo.', link: '/tora', tip: 'Em Livros, toque em “A Torá”' },
+      { icon: 'local_library', title: 'O Talmude', text: 'O que é o Talmude, como ele se forma, o mapa das seis ordens e dos 63 tratados, cinco trechos contados com as palavras do app e o caminho até o texto completo, de graça, na Sefaria. O texto do Talmude em si não está no app.', link: '/talmude', tip: 'Em Livros, toque em “O Talmude”' },
+    ],
+  },
+  {
     id: 'bakairi-kayapo-busca-de-versoes',
     date: '17 de novembro de 2026',
     title: 'Bíblia em Bakairí e Kayapó, e busca na lista de versões',
