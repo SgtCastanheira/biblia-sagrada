@@ -18,6 +18,7 @@ import { outline } from '../../core/rich-text-parser';
 import { BackButton } from '../../shared/back-button';
 import { BibleMapView } from '../../shared/bible-map';
 import { ContextList } from '../../shared/context-list';
+import { MtMindmap } from '../../shared/mt-mindmap';
 import { storyItems } from '../../shared/listen-dom';
 import { PageToc, TocItem } from '../../shared/page-toc';
 import { RichText } from '../../shared/rich-text';
@@ -28,7 +29,7 @@ import { adStateCard } from '../../core/share-card';
 /** História completa da Assembleia de Deus num estado, com o mapa de onde saíram os pioneiros. */
 @Component({
   selector: 'app-ad-state',
-  imports: [MatButtonModule, NgTemplateOutlet, ShareImageButton, RouterLink, MatIconModule, MatRippleModule, BibleMapView, BackButton, RichText, PageToc, ContextList, StateMinistries],
+  imports: [MatButtonModule, NgTemplateOutlet, ShareImageButton, RouterLink, MatIconModule, MatRippleModule, BibleMapView, BackButton, RichText, PageToc, ContextList, StateMinistries, MtMindmap],
   template: `
     @if (state(); as s) {
       <div class="article wide">
@@ -70,6 +71,9 @@ import { adStateCard } from '../../core/share-card';
           </aside>
 
           <div class="main">
+            @if (s.id === 'mt') {
+              <div id="mapa-mental" class="mind"><app-mt-mindmap [initial]="cidade()" [chapters]="chapterAnchors()" /></div>
+            }
             @if (body() === undefined) {
               <div class="skeleton"><span></span><span></span><span></span><span class="short"></span></div>
             } @else if (body(); as text) {
@@ -145,6 +149,7 @@ import { adStateCard } from '../../core/share-card';
     .rail { display: flex; flex-direction: column; gap: 14px; margin-bottom: 18px; }
     .rail .neighbours { display: none; }
     .rail .route { margin: 0; }
+    .mind { scroll-margin-top: 76px; }
     @media (min-width: 1100px) {
       .rail { position: sticky; top: 76px; max-height: calc(100vh - 92px); overflow-y: auto; margin: 0; padding-bottom: 4px; }
       .rail .neighbours { display: grid; margin-top: 0; }
@@ -155,6 +160,8 @@ import { adStateCard } from '../../core/share-card';
 export class AdStatePage {
   protected readonly flag = stateFlag;
   readonly id = input.required<string>();
+  /** Cidade que abre direto no mapa mental de Mato Grosso (?cidade=sinop). */
+  readonly cidade = input<string | undefined>();
   private readonly content = inject(ContentService);
   protected readonly listen = inject(ListenService);
   private readonly snackBar = inject(MatSnackBar);
@@ -194,9 +201,13 @@ export class AdStatePage {
   );
 
   /** Índice: os capítulos da história e, depois, o contexto, os ministérios e as fontes. */
+  /** Título de cada capítulo → âncora dele, para o botão “Ler a história completa” do mapa mental. */
+  protected readonly chapterAnchors = computed<Record<string, string>>(() => (this.body() ? Object.fromEntries(outline(this.body()!).map((o) => [o.text, o.anchor])) : {}));
+
   protected readonly toc = computed<TocItem[]>(() => {
     const chapters = this.body() ? outline(this.body()!).map((o) => ({ anchor: o.anchor, text: o.text, chapter: o.chapter })) : [];
     return [
+      ...(this.id() === 'mt' ? [{ anchor: 'mapa-mental', text: 'Mapa Mental: Cidade por Cidade' }] : []),
       ...chapters,
       { anchor: 'contexto', text: 'O Brasil naquele tempo' },
       { anchor: 'ministerios', text: 'Os ministérios no estado' },

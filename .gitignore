@@ -71,8 +71,14 @@ tools/.audio-cache/
 # Amostras de voz para ouvir antes de gerar (tools/gerar-audio.mjs --amostra)
 tools/amostra-*.mp3
 
+# Bíblia gravada (tools/gerar-audio.mjs --biblia): grande demais para o Git e para o GitHub Pages; vai para um armazém de arquivos
+tools/audio-biblia/
+
 # Rascunhos privados: disponíveis somente na prévia local, fora do Git e do build público
 /rascunhos/
 
 # PDFs de consulta da coleção em elaboração
 /Ciencia explica/
+
+# Dependências do script de notícias (tools/noticias)
+/tools/noticias/node_modules

@@ -8,7 +8,7 @@ const rotas = ['/', '/ensino', '/meu-espaco', '/livros', '/livro/JHN', '/ler/JHN
   '/artigo/apocalipse', '/artigo/trindade', '/artigo/deuses-pagaos', '/artigo/natal-e-os-calendarios', '/artigo/teologia-sistematico-carismatica', '/historia?trilha=um-so-deus', '/memorial?grupo=linha-do-tempo', '/dicionario/salvar', '/historia?colecao=contexto', '/estudo/livros', '/dicionario?ordem=biblia', '/creditos', '/artigo/igreja-e-estado', '/artigo/manual-do-diacono', '/artigo/manual-do-pastor-pentecostal', '/artigo/manual-da-igreja-e-do-obreiro', '/artigo/diacono-presbitero-e-pastor-nos-manuais', '/historia?trilha=teologia', '/historia?trilha=igreja-e-estado',
   '/artigo/igreja-na-america-do-sul', '/artigo/avivamentos-na-america-do-sul', '/epocas', '/datas', '/epocas/patriarcas', '/epocas/pentecostes', '/epocas/idade-media', '/artigo/coliseu-de-roma', '/artigo/catacumbas-de-roma',
   '/conexoes', '/conexoes/ISA/53', '/conexoes/HEB', '/conexoes?mostrar=todas',
-  '/vozes', '/vozes/a-sanguessuga', '/vozes/a-sanguessuga?idioma=ru', '/vozes/a-sanguessuga?idioma=de', '/revisao/8f11d02bac34306e'];
+  '/vozes', '/mundo-cristao', '/vozes/a-sanguessuga', '/vozes/a-sanguessuga?idioma=ru', '/vozes/a-sanguessuga?idioma=de', '/revisao/8f11d02bac34306e'];
 
 for (const rota of rotas) {
   test(`abre ${rota} sem erros e sem rolagem lateral`, async ({ page }) => {
@@ -44,7 +44,7 @@ test('barra de navegação leva às áreas principais', async ({ page }) => {
 
 test('cada tela acende a aba certa do menu', async ({ page }) => {
   const nav = page.getByRole('navigation', { name: 'Navegação principal' });
-  for (const [url, aba] of [['/tribos', 'História'], ['/ebd', 'Ensino'], ['/sermoes', 'Ensino'], ['/vozes', 'Jornal'], ['/vozes/a-sanguessuga', 'Jornal'], ['/ibuc', 'Ensino'], ['/devocional', 'Meu espaço'], ['/favoritos', 'Meu espaço'], ['/livros', 'Bíblia']] as const) {
+  for (const [url, aba] of [['/tribos', 'História'], ['/ebd', 'Ensino'], ['/sermoes', 'Ensino'], ['/vozes', 'Jornal'], ['/mundo-cristao', 'Jornal'], ['/vozes/a-sanguessuga', 'Jornal'], ['/ibuc', 'Ensino'], ['/devocional', 'Meu espaço'], ['/favoritos', 'Meu espaço'], ['/livros', 'Bíblia']] as const) {
     await page.goto(url);
     await expect(nav.locator('.nav-item.active')).toHaveText(new RegExp(aba));
   }

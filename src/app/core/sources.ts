@@ -552,6 +552,16 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
   'juizo-final': { ancient: ['Credo Apostólico e Credo Niceno-Constantinopolitano: “há de vir para julgar os vivos e os mortos”', 'Agostinho, A Cidade de Deus, livro 20 (o juízo final)'], works: ['grudem-ts', 'horton-ts', 'clouse', 'ladd'] },
   'nova-jerusalem': { ancient: ['Agostinho, A Cidade de Deus, livros 19–22 (a cidade de Deus e o fim da história)'], works: ['ladd', 'fee-stuart', 'clouse', 'carson-moo'] },
   'selos-trombetas-e-tacas': { ancient: ['Vitorino de Pettau, Comentário ao Apocalipse (c. 300): a leitura em ciclos mais antiga que se conservou'], works: ['ladd', 'fee-stuart', 'carson-moo', 'clouse'] },
+  'a-mulher-o-dragao-e-miguel': {
+    ancientLabel: 'Documentos consultados',
+    ancient: [
+      'A Bíblia, na Almeida do app: Gênesis 3, 37; Êxodo 19; Jó 1; Salmos 2; Isaías 14 e 66; Daniel 7, 10 e 12; Miqueias 5; Zacarias 3; Mateus 2; Lucas 10; João 12; Romanos 16; 2 Coríntios 11; Gálatas 4; Colossenses 2; 1 Tessalonicenses 4; 2 Pedro 2; Judas 9; Apocalipse 1, 2, 5, 12, 13, 17, 19, 20, 21 e 22',
+      'Verbetes H4317 (Mikha’el), H2332 (Chavvah), G726 (harpázō), G743 (archángelos) e G1404 (drákōn) do Strong’s Exhaustive Concordance, com as definições de Thayer (grego) e de Brown-Driver-Briggs (hebraico) que o site biblehub.com reproduz, consultados em 17 de novembro de 2026: Miguel é “Quem é como Deus?”; Eva é “vida” e “a que dá vida”, e Gênesis 3.20 a liga a “mãe de todos os viventes”; harpázō, em Apocalipse 12.5 e em 1 Tessalonicenses 4.17, é tomar de repente, com força; “arcanjo” aparece duas vezes no Novo Testamento (1 Tessalonicenses 4.16 e Judas 9); Thayer diz que a descrição do diabo como dragão em Apocalipse 12.3-17 vem da serpente de Gênesis 3.1 em diante',
+      'Vatican News, “Word of the day”, 15 de agosto de 2024 (vaticannews.va), consultado em 17 de novembro de 2026: a primeira leitura da missa do dia da Assunção de Maria é Apocalipse 11.19a; 12.1-6a, 10ab; o texto diz só isso da leitura mariana, e não afirma o que a tradição católica pensa de cada versículo',
+      'O texto separa o que o capítulo diz do que se lê nele: a ordem dos fatos (a criança arrebatada, a mulher no deserto, só então a guerra no céu) é a do capítulo, e a cena em que o dragão sobe atrás do filho é a maneira de contar, não está no texto; o nome “Quem é como Deus?” respondendo ao “sereis como Deus” de Gênesis 3.5 é leitura de pregadores, e o texto o diz; as estrelas como anjos, a mulher como o povo de Deus ou como Maria, o dragão como Roma e o momento da queda são leituras, apresentadas como tais. Roma não é nomeada no Apocalipse da Almeida do app (conferido no texto); o livro diz Babilônia',
+    ],
+    works: ['strong'],
+  },
   apocalipse: { ancient: ['Irineu, Contra as Heresias 5.30.3 (data no fim do reinado de Domiciano)', 'Eusébio, História Eclesiástica 3.18 (CPAD)'], works: ['ladd', 'fee-stuart', 'carson-moo', 'clouse'] },
   'igreja-primitiva': { ancient: ['Didaquê (séc. I–II)', 'Eusébio, História Eclesiástica (CPAD)'], works: ['ferguson', 'gonzalez', 'cairns'] },
   perseguicoes: { ancient: ['Tácito, Anais 15.44 (Nero e os cristãos)', 'Plínio, o Jovem, Cartas 10.96–97 (a Trajano)', 'Martírio de Policarpo (séc. II)', 'Eusébio, História Eclesiástica (CPAD)'], works: ['gonzalez', 'cairns', 'ferguson'] },
@@ -675,7 +685,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ancient: [
       'A Bíblia (Almeida), citada ao longo do texto: Gênesis 2 e 3, Êxodo 20, Deuteronômio 4 e 6, Salmos 91 e 119, Provérbios 7, 22 e 30, Isaías 8 e 53, Oseias 4, Mateus 4 e 5, Lucas 23, Atos 8, Gálatas 1, 2 Timóteo 3, Hebreus 5, 2 Pedro 3, Apocalipse 22',
       'Wikipédia (en): Wicked Bible, a edição de 1631 da Bíblia do rei Jaime que omitiu o “não” de Êxodo 20.14; as fontes divergem quanto ao valor da multa, por isso o texto não o cita',
-      'Lista VERSE_FIXES de tools/gerar-almeida.py: as 23 correções de erros de digitação feitas no texto digital da Almeida do app, de onde vêm os exemplos',
+      'Lista VERSE_FIXES de tools/gerar-almeida.py: as correções de erros de digitação feitas no texto digital da Almeida do app (as primeiras 23 são de onde vêm os exemplos)',
       'Os estudos do app Os Manuscritos da Bíblia e A Bíblia em Português, sobre a preservação do texto e as diferenças entre traduções',
     ],
     works: ['carson-moo', 'dillard-longman', 'keener-nt', 'ndb'],

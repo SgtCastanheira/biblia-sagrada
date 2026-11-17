@@ -116,7 +116,9 @@
           "/bible/ticuna/*.json",
           "/bible/kaingang/*.json",
           "/bible/terena/*.json",
-          "/bible/xavante/*.json"
+          "/bible/xavante/*.json",
+          "/bible/bakairi/*.json",
+          "/bible/kayapo/*.json"
         ]
       }
     },
@@ -133,6 +135,18 @@
     }
   ],
   "dataGroups": [
+    {
+      "name": "noticias-reserva",
+      "urls": [
+        "/data/noticias.json"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 1,
+        "maxAge": "7d",
+        "timeout": "5s"
+      }
+    },
     {
       "name": "bible-text",
       "urls": [

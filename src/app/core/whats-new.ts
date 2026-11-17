@@ -22,6 +22,23 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'bakairi-kayapo-busca-de-versoes',
+    date: '17 de novembro de 2026',
+    title: 'Bíblia em Bakairí e Kayapó, e busca na lista de versões',
+    items: [
+      { icon: 'translate', title: 'Novo Testamento em Bakairí e em Kayapó', text: 'Duas línguas indígenas a mais, das traduções da Wycliffe: Bakairí e Kayapó (Mebêngôkre). Junto com o Kayabí, que já estava, são três línguas de povos ligados ao rio Xingu.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão, no alto do capítulo.' },
+      { icon: 'search', title: 'Busca na lista de versões', text: 'A lista de versões ganhou um campo de busca. Digite o nome, a língua, o povo ou a região (“xingu”, “inglês”, “guarani”) e só ficam as versões que combinam. Com uma só na tela, o Enter já a escolhe.', link: '/ler/JHN/3', tip: 'Toque na sigla da versão e comece a digitar.' },
+    ],
+  },
+  {
+    id: 'mundo-cristao',
+    date: '16 de novembro de 2026',
+    title: 'Mundo Cristão: notícias de missões e da igreja perseguida',
+    items: [
+      { icon: 'public', title: 'Mundo Cristão', text: 'Notícias de missões, da igreja perseguida e dos países onde ser cristão custa caro, lidas direto de Portas Abertas, Voz dos Mártires, Gospel Prime e Guiame. A tela se atualiza sozinha a cada 5 minutos, e cada cartão leva à matéria original. Sem internet, mostra o último resumo salvo.', link: '/vozes', tip: 'Na aba Jornal, logo abaixo das Novas Vozes, ou no atalho da tela inicial' },
+    ],
+  },
+  {
     id: 'biblia-conectada-e-cinco-estudos',
     date: '16 de novembro de 2026',
     title: 'A Bíblia Conectada e cinco estudos novos',

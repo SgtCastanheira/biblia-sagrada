@@ -6,7 +6,7 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 
 | Fonte | Uso no app | Licença |
 |---|---|---|
-| Bíblia de João Ferreira de Almeida | Texto embutido (`public/bible/almeida`), com correções de caracteres e ortografia do Acordo de 1990 | Domínio público |
+| Bíblia de João Ferreira de Almeida | Texto embutido (`public/bible/almeida`), com correções de caracteres e ortografia do Acordo de 1990; 16 versículos que vieram cortados ou vazios da fonte foram completados com a Almeida de 1911 | Domínio público |
 | Bíblia Livre (BLIVRE) — © 2018 Diego Santos, Mario Sérgio e Marco Teles | Texto embutido (`public/bible/blivre`), do eBible.org (`porbr2018`) | CC BY 4.0 Brasil |
 | Biblica® Open Nova Bíblia Viva™ — © 2007, 2010 by Biblica, Inc. | Texto embutido sem alterações (`public/bible/nbv`), do eBible.org (`poronbv`). “Biblica” é uma marca registrada na Oficina de Patentes e Marcas dos Estados Unidos por Biblica, Inc. Usado com permissão. Original gratuito em www.biblica.com e open.bible | CC BY-SA 4.0 |
 | Bíblia Portuguesa Mundial (BPM) | Texto embutido (`public/bible/bpm`), do eBible.org (`porbrbsl`), sem os deuterocanônicos | Domínio público |
@@ -22,6 +22,8 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Kaingang: Topẽ vĩ rá (Novo Testamento) | `public/bible/` (kgpNT, do eBible.org), sem nenhuma mudança no texto ou na pontuação. © 2011 Wycliffe Bible Translators, Inc. | CC BY-NC-ND 3.0 (sem fins comerciais) |
 | Terêna: Emo’u Itukó’oviti (Novo Testamento) | `public/bible/` (terNT, do eBible.org), sem nenhuma mudança no texto ou na pontuação. © 2012 Wycliffe Bible Translators, Inc. | CC BY-NC-ND 3.0 (sem fins comerciais) |
 | Xavánte: ’Re ĩhâimana u’âsi mono zadawa wasu’u (Novo Testamento) | `public/bible/` (xavNT, do eBible.org), sem nenhuma mudança no texto ou na pontuação. © 2004 Wycliffe Bible Translators, Inc. | CC BY-NC-ND 3.0 (sem fins comerciais) |
+| Bakairí: Deus Itaumbyry (Novo Testamento) | `public/bible/` (bkqNT, do eBible.org), sem nenhuma mudança no texto ou na pontuação. © 2011 Wycliffe Bible Translators, Inc. | CC BY-NC-ND 3.0 (sem fins comerciais) |
+| Kayapó: Metĩndjwỳnh Kute Memã Kabẽn Ny Jarẽnh (Novo Testamento) | `public/bible/` (txuNT, do eBible.org), sem nenhuma mudança no texto ou na pontuação. © 2012 Wycliffe Bible Translators, Inc. | CC BY-NC-ND 3.0 (sem fins comerciais) |
 | Cronógrafo de 354, o mês de dezembro | `public/conteudo/imagens/calendario-cronografo.jpg`, do Wikimedia Commons | Domínio público |
 | Calendário de Gezer (foto de Ana al’ain) | `public/conteudo/imagens/calendario-gezer.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
 | Fasti Antiates (foto de Juliana Bastos Marques) | `public/conteudo/imagens/calendario-fasti.jpg`, do Wikimedia Commons | CC BY-SA 3.0 |
@@ -38,6 +40,7 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Gravura *Veduta dell’Anfiteatro Flavio detto il Colosseo*, de Giovanni Battista Piranesi (1776), The Metropolitan Museum of Art | `public/conteudo/imagens/coliseu-piranesi.jpg`, do Wikimedia Commons | CC0 |
 | O Bom Pastor, afresco do século III, publicado em *Die Malereien der Katakomben Roms*, de Joseph Wilpert (1903) | `public/conteudo/imagens/catacumbas-bom-pastor.jpg`, do Wikimedia Commons | Domínio público |
 | Ilustração de Eugène Damblans (1923): De Rossi mostra a Cripta dos Papas a Pio IX | `public/conteudo/imagens/catacumbas-de-rossi-pio-ix.jpg`, do Wikimedia Commons | Domínio público |
+| Tinta e aquarela *O Grande Dragão Vermelho e a Mulher Vestida de Sol (Ap 12.1-4)*, de William Blake (entre 1803 e 1805), Brooklyn Museum (recortada na parte pintada, sem a margem do papel e os versos manuscritos) | `public/conteudo/imagens/mulher-dragao-blake.jpg`, do Wikimedia Commons | Domínio público |
 | Slide de 1913 de Edmund F. Arras, Columbus Metropolitan Library (via DPLA): nichos de uma catacumba | `public/conteudo/imagens/catacumbas-nichos.jpg`, do Wikimedia Commons | Domínio público |
 | Kil Sun-ju (Gil Seon-ju) | `public/conteudo/imagens/coreia-kil-sun-ju.jpg`, do Wikimedia Commons | Domínio público |
 | O pastor Chu Ki-chol | `public/conteudo/imagens/coreia-chu-ki-chol.jpg`, do Wikimedia Commons | Domínio público |

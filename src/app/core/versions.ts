@@ -14,7 +14,7 @@ export const VERSIONS: BibleVersion[] = [
   { id: 'mbya', abbrev: 'MBYA', badge: 'MBY', name: 'Guarani Mbyá: Nhanderuete ayvu (Bíblia completa)', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', copyright: '© 2004 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
   { id: 'guajajara', abbrev: 'GUAJ', badge: 'GJ', name: 'Guajajára: Tupàn ze’eg (Bíblia completa)', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', copyright: '© 2007 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
   { id: 'kaiwa', abbrev: 'KAIWA', badge: 'KW', name: 'Kaiwá (Guarani Kaiowá): Nhandejáry Nhe’ẽ', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, copyright: '© 2006 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
-  { id: 'kayabi', abbrev: 'KAYABI', badge: 'KYB', name: 'Kayabí: Janeruwarete ’Ga Je’eg', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, copyright: '© 2012 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
+  { id: 'kayabi', abbrev: 'KAYABI', badge: 'KYB', name: 'Kayabí: Janeruwarete ’Ga Je’eg', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, keywords: 'Xingu Parque Indígena do Xingu Mato Grosso Pará Tupi Kaiabi Caiabi', copyright: '© 2012 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
   { id: 'kaapor', abbrev: 'KAAPOR', badge: 'KAP', name: 'Kaapor: Tupã Je’ẽha', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, copyright: '© 2012 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
   { id: 'munduruku', abbrev: 'MUND', badge: 'MUN', name: 'Mundurukú: Deus ekawẽntup', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, copyright: '© 2010 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
   { id: 'satere', abbrev: 'SATERE', badge: 'SAT', name: 'Sateré-Mawé: Tupana Ehay', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, copyright: '© 2011 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
@@ -22,6 +22,8 @@ export const VERSIONS: BibleVersion[] = [
   { id: 'kaingang', abbrev: 'KAING', badge: 'KGG', name: 'Kaingang: Topẽ vĩ rá', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, copyright: '© 2011 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
   { id: 'terena', abbrev: 'TERENA', badge: 'TER', name: 'Terêna: Emo’u Itukó’oviti', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, copyright: '© 2012 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
   { id: 'xavante', abbrev: 'XAVANTE', badge: 'XAV', name: 'Xavánte: ’Re ĩhâimana u’âsi mono zadawa', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, copyright: '© 2004 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
+  { id: 'bakairi', abbrev: 'BAKAIRI', badge: 'BKQ', name: 'Bakairí: Deus Itaumbyry', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, keywords: 'Xingu Alto Xingu Mato Grosso Karib Bakairi Bacairi', copyright: '© 2011 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
+  { id: 'kayapo', abbrev: 'KAYAPO', badge: 'TXU', name: 'Kayapó: Metĩndjwỳnh Kute Memã Kabẽn Ny Jarẽnh', language: 'Línguas indígenas do Brasil', flag: '🇧🇷', ntOnly: true, keywords: 'Xingu Mebêngôkre Mebengokre Kayapo Caiapó Caiapo Pará', copyright: '© 2012 Wycliffe Bible Translators, Inc. · licença CC BY-NC-ND (uso sem fins comerciais, sem alterar o texto)' },
   { id: 'rv1909', abbrev: 'RV1909', name: 'Reina-Valera 1909', language: 'Espanhol', flag: '🇪🇸' },
   { id: 'vbl', abbrev: 'VBL', name: 'Versión Biblia Libre', language: 'Espanhol', flag: '🌎', copyright: '© 2018–2020 Jonathan Gallagher e Shelly Barrios de Avila · licença CC BY-SA 4.0' },
   { id: 'nbv-es', abbrev: 'NBV', badge: 'NBV·ES', name: 'Nueva Biblia Viva (Biblica® Open)', language: 'Espanhol', flag: '🌎', copyright: 'Biblica® Open Nueva Biblia Viva™ © 2006, 2008 Biblica, Inc. Usado com permissão · licença CC BY-SA 4.0' },
@@ -49,12 +51,35 @@ export const VERSIONS: BibleVersion[] = [
   { id: 'cherokee', abbrev: 'CHR', name: 'Novo Testamento Cherokee', language: 'Cherokee', flag: '🇺🇸', ntOnly: true },
 ];
 
-export const VERSION_GROUPS = Object.entries(
+export const VERSION_GROUPS: VersionGroup[] = Object.entries(
   VERSIONS.reduce<Record<string, BibleVersion[]>>((acc, v) => {
     (acc[v.language] ??= []).push(v);
     return acc;
   }, {}),
 ).map(([language, versions]) => ({ language, versions }));
+
+export interface VersionGroup {
+  language: string;
+  versions: BibleVersion[];
+}
+
+const foldWords = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+/**
+ * Busca na lista de versões: sem acento e sem maiúsculas, e todas as palavras digitadas precisam aparecer
+ * (no nome, na sigla, na língua, nas palavras extras da versão ou em "só Novo Testamento").
+ * Assim "xingu" acha o Kayabí, o Bakairí e o Kayapó, e "novo testamento indígena" acha as que só têm o Novo Testamento.
+ * Sem texto, devolve a lista inteira. Grupos sem nenhuma versão encontrada somem.
+ */
+export function filterVersionGroups(groups: VersionGroup[], query: string): VersionGroup[] {
+  const words = foldWords(query).split(/\s+/).filter(Boolean);
+  if (!words.length) return groups;
+  const matches = (v: BibleVersion) => {
+    const haystack = foldWords([v.name, v.abbrev, v.badge, v.id, v.language, v.keywords, v.ntOnly ? 'so novo testamento' : '', v.partial ? 'antigo testamento incompleto' : ''].filter(Boolean).join(' '));
+    return words.every((w) => haystack.includes(w));
+  };
+  return groups.map((g) => ({ language: g.language, versions: g.versions.filter(matches) })).filter((g) => g.versions.length > 0);
+}
 
 export const findVersion = (id: string): BibleVersion | undefined => VERSIONS.find((v) => v.id === id);
 

@@ -43,6 +43,9 @@
 <!-- Datas da história: o que faz aniversário por perto, com foto -->
 <app-commemorations />
 
+<!-- Mundo Cristão: notícias de missões e da igreja perseguida -->
+<app-world-news-card />
+
 <!-- Devocional -->
 <a class="devotional card" matRipple routerLink="/devocional/hoje" [class.done]="devotional.todayEntry()?.done">
   <span class="dev-icon"><mat-icon>{{ devotional.todayEntry()?.done ? 'check' : 'self_improvement' }}</mat-icon></span>

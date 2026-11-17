@@ -10,6 +10,7 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { catchError, combineLatest, map, Observable, of, startWith, switchMap } from 'rxjs';
 import { BibleService, isRateLimit, LOCAL_VERSIONS } from '../../core/bible.service';
+import { BIBLE_AUDIO_VERSION, chapterIntro } from '../../core/bible-audio';
 import { BOOKS, findBook } from '../../core/books';
 import { ListenService } from '../../core/listen.service';
 import { ContentService } from '../../core/content.service';
@@ -247,7 +248,7 @@ export class ReaderPage {
     effect(() => {
       if (this.state().loading || !this.listenOnLoad) return;
       this.listenOnLoad = false;
-      afterNextRender(() => this.startListening(), { injector: this.injector });
+      afterNextRender(() => void this.startListening(), { injector: this.injector });
     });
     inject(DestroyRef).onDestroy(() => this.listen.stop());
 
@@ -399,31 +400,42 @@ export class ReaderPage {
 
   /** Ouvir o capítulo: lê um versículo por vez, destacando-o, e segue para o capítulo seguinte. */
   protected listenChapter(): void {
+    if (this.listen.state() !== 'idle') this.listen.stop();
+    else void this.startListening();
+  }
+
+  /**
+   * Na Almeida, toca a gravação do capítulo quando existe (core/bible-audio.ts) e o texto da tela é o mesmo que foi gravado;
+   * em qualquer outro caso, lê com a voz do aparelho. No fim, segue para o capítulo seguinte e continua.
+   */
+  private async startListening(): Promise<void> {
+    const book = this.bookInfo();
+    const rows = this.state().rows.filter((r) => r.text);
+    if (!book || !rows.length) return;
+    const chapter = this.chapterNum();
+    const label = `${book.name} ${chapter}`;
+    const items = [
+      { text: chapterIntro(book.name, chapter) },
+      ...rows.map((r) => ({ text: r.text!, el: document.getElementById('v' + r.verse) })),
+    ];
+    const onEnd = () => {
+      const next = this.next();
+      if (!next) return;
+      this.listenOnLoad = true;
+      this.goTo(next);
+    };
+    // Um capítulo mostrado na Almeida por a versão escolhida não ter o livro também vale
+    const shown = this.state().fallback ? 'almeida' : this.settings.version();
+    if (shown === BIBLE_AUDIO_VERSION) {
+      const after = this.next();
+      const recorded = await this.listen.startChapter(label, book.id, chapter, items, { onEnd, next: after ? { bookId: after.bookId, chapter: after.chapter } : null });
+      if (recorded) return;
+    }
     if (!this.listen.supported) {
       this.snackBar.open('Este aparelho não tem leitura em voz alta.', undefined, { duration: 3000 });
       return;
     }
-    if (this.listen.state() !== 'idle') this.listen.stop();
-    else this.startListening();
-  }
-
-  private startListening(): void {
-    const book = this.bookInfo();
-    const rows = this.state().rows.filter((r) => r.text);
-    if (!book || !rows.length) return;
-    const label = `${book.name} ${this.chapterNum()}`;
-    const items = [
-      { text: `${book.name}, capítulo ${this.chapterNum()}` },
-      ...rows.map((r) => ({ text: r.text!, el: document.getElementById('v' + r.verse) })),
-    ];
-    this.listen.start(label, items, {
-      onEnd: () => {
-        const next = this.next();
-        if (!next) return;
-        this.listenOnLoad = true;
-        this.goTo(next);
-      },
-    });
+    this.listen.start(label, items, { onEnd });
   }
 
   /** A fitinha: marca este capítulo; tocando de novo, tira. Em outro capítulo, traz a fitinha para cá. */

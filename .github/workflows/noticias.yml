@@ -1,0 +1,53 @@
+# Reserva diária do Mundo Cristão: lê os feeds das fontes e grava public/data/noticias.json.
+# A tela /mundo-cristao busca as notícias ao vivo; este arquivo só aparece quando a busca ao vivo falha.
+#
+# O agendamento (cron) roda a partir da branch padrão (dev), mas o arquivo é gravado no main, que é o que vai ao ar,
+# e em seguida o workflow de publicação é disparado (um commit feito com o GITHUB_TOKEN não dispara outros workflows).
+name: Atualizar notícias do Mundo Cristão
+
+on:
+  schedule:
+    - cron: '17 9 * * *' # todo dia às 09:17 UTC (06:17 em Brasília)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: noticias
+  cancel-in-progress: false
+
+jobs:
+  noticias:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/noticias/package-lock.json
+      - name: Instalar o rss-parser
+        run: npm ci
+        working-directory: tools/noticias
+      - name: Ler os feeds
+        run: node buscar-noticias.mjs
+        working-directory: tools/noticias
+      - name: Gravar no main e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- public/data/noticias.json && [ -z "$(git ls-files --others --exclude-standard public/data/noticias.json)" ]; then
+            echo "Sem novidade: nada a gravar."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/noticias.json
+          git commit -m "Atualiza a reserva diária do Mundo Cristão"
+          git push origin HEAD:main
+          # O push com o GITHUB_TOKEN não aciona o publicar.yml: dispara-se à mão, no main.
+          gh workflow run publicar.yml --ref main

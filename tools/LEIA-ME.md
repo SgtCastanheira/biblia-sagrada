@@ -7,12 +7,24 @@ Scripts que geram os arquivos estáticos do app. Rode a partir da raiz do projet
 | `baixar-fontes.py` | `public/fonts/` (fontes e só os ícones usados) | `python3 tools/baixar-fontes.py` — rode de novo ao usar um ícone novo |
 | `baixar-almeida.py` | Capítulos brutos da Almeida (bible-api.com, domínio público) | `python3 tools/baixar-almeida.py /tmp/almeida-bruto` (≈ 90 min; respeita o limite da API e retoma de onde parou) |
 | `gerar-almeida.py` | `public/bible/almeida/*.json` + `public/bible/index.json`, com correções de caracteres corrompidos e ortografia do Acordo de 1990 | `python3 tools/gerar-almeida.py /tmp/almeida-bruto public/bible/almeida` |
-| `corrigir-almeida.py` | Aplica a lista `VERSE_FIXES` do `gerar-almeida.py` aos arquivos da Almeida já gerados, sem baixar a fonte de novo | Acrescente a correção em `VERSE_FIXES` e rode `python3 -I tools/corrigir-almeida.py public/bible/almeida` (pode rodar mais de uma vez) |
-| `gerar-versoes.py` | `public/bible/{blivre,nbv,bpm,blt}/*.json` e o índice — as versões em português de licença livre do eBible.org | Baixe e descompacte `https://eBible.org/Scriptures/<id>_vpl.zip` (`porbr2018`, `poronbv`, `porbrbsl`, `porblt`; as línguas indígenas: `gun`, `gubBl`, `kgkNT`, `kyzNT`, `urbNT`, `myu`, `mavNT`, `tcaNT`, `kgpNT`, `terNT`, `xavNT`), cada um na sua pasta, e rode `python3 -I tools/gerar-versoes.py <pasta> public/bible` |
+| `corrigir-almeida.py` | Aplica as listas `VERSE_FIXES` (verso a verso), `VERSE_FILLS` (versículo vazio) e `WORD_FIXES` (palavra inteira com erro de leitura) do `gerar-almeida.py` aos arquivos da Almeida já gerados, sem baixar a fonte de novo | Acrescente a correção na lista certa e rode `python3 -I tools/corrigir-almeida.py public/bible/almeida` (pode rodar mais de uma vez) |
+| `gerar-versoes.py` | `public/bible/{blivre,nbv,bpm,blt}/*.json` e o índice — as versões em português de licença livre do eBible.org | Baixe e descompacte `https://eBible.org/Scriptures/<id>_vpl.zip` (`porbr2018`, `poronbv`, `porbrbsl`, `porblt`; as línguas indígenas: `gun`, `gubBl`, `kgkNT`, `kyzNT`, `urbNT`, `myu`, `mavNT`, `tcaNT`, `kgpNT`, `terNT`, `xavNT`, `bkqNT`, `txuNT`), cada um na sua pasta, e rode `python3 -I tools/gerar-versoes.py <pasta> public/bible` |
 | `sword-para-vpl.py` | Texto no formato VPL a partir de um módulo SWORD da CrossWire (NVA e Almeida 1911) | Baixe `https://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip/<Nome>.zip` e o [pysword](https://pypi.org/project/pysword) (MIT), e rode `python3 -I tools/sword-para-vpl.py <pasta_do_pysword> <Nome>.zip <Nome> <pasta>/<Nome>/<Nome>_vpl.txt`; depois o `gerar-versoes.py` |
 | `gerar-referencias.py` | `public/bible/referencias/*.json` (textos relacionados de cada versículo, da OpenBible.info, CC BY) | Baixe `https://a.openbible.info/data/cross-references.zip` e rode `python3 -I tools/gerar-referencias.py cross-references.zip public/bible/referencias` |
 | `gerar-conexoes.py` | `public/bible/conexoes.json` (as ligações entre os capítulos da Bíblia, para a tela “A Bíblia Conectada”, feitas a partir de `public/bible/referencias`) | Rode `python3 -I tools/gerar-conexoes.py` sempre que `gerar-referencias.py` gerar as referências de novo. O teste `logica/conexoes.spec.ts` avisa quando o arquivo está velho |
 | `gerar-mapas.py` | `public/maps/*.json` (geografia do Natural Earth, domínio público, com as fronteiras atuais); inclui o mapa do atlas (`src/app/core/atlas.ts`) | Baixe `ne_50m_land`, `ne_10m_land`, `ne_10m_lakes`, `ne_10m_rivers_lake_centerlines` e `ne_50m_admin_0_boundary_lines_land` (GeoJSON) em uma pasta e rode `python3 tools/gerar-mapas.py src/app/core/maps.ts <pasta> public/maps` — sempre que criar um mapa ou mudar os limites |
+
+## Notícias do Mundo Cristão (tools/noticias)
+
+`tools/noticias/buscar-noticias.mjs` lê os feeds do Mundo Cristão e grava `public/data/noticias.json`, a reserva que a tela `/mundo-cristao` mostra quando a busca ao vivo falha. Usa `rss-parser` (pacote só desta pasta, com `package.json` próprio, para o app não ganhar dependência). A lista de fontes, o filtro por palavras-chave, a limpeza do texto, a remoção de repetidas e o limite de 20 estão em `src/app/core/christian-world.ts`, a mesma lista que o app usa ao vivo (o Node 24 lê o `.ts` direto); para trocar uma fonte ou um proxy, edite só lá.
+
+```bash
+cd tools/noticias
+npm install
+npm run buscar     # lê os feeds e grava public/data/noticias.json (só se houver novidade)
+```
+
+Um feed que falhar não derruba os outros: as matérias dele no arquivo anterior ficam. Se nenhuma fonte responder, o arquivo não é alterado e o comando termina com erro. O GitHub Actions roda isso todo dia (`.github/workflows/noticias.yml`).
 
 ## Conteúdo de estudo (`public/conteudo/`)
 
@@ -87,33 +99,69 @@ node tools/gerar-audio.mjs                       # todas (cerca de 290 mil carac
 
 A mesma ferramenta grava com a ElevenLabs no lugar do Azure. O app não muda: ele só toca os MP3 e destaca o parágrafo.
 
-1. Em https://elevenlabs.io/app/speech-synthesis/ (a tela de Text to Speech), cole um trecho de uma história e **teste vozes em português do Brasil**. Escolha a que soar melhor.
-2. Copie o **ID da voz** (em *Voices*, no menu da voz: *Copy voice ID*). Se a voz for da Biblioteca de Vozes, adicione-a à sua conta primeiro.
-3. Crie uma **chave de API** (conta → *API Keys*; o nome do botão pode mudar no site).
-4. Rode:
+**A voz é a Leonardo** (pt-BR, grave, voltada a narrativa histórica; ID `4XmhZ74tBbUVCXIYNMMo`), escolhida pelo dono do app em 17/11/2026 depois de ouvir as amostras de Cajó e Leonardo. Ela é o padrão do `--provedor elevenlabs`: não precisa informar o ID, e o player mostra “Leonardo”. Para outra voz, use `--voz <ID>` (ou `ELEVENLABS_VOICE_ID`) e `--nome-voz`.
+
+1. Se quiser **testar outra voz**: em https://elevenlabs.io/app/speech-synthesis/ cole um trecho de uma história, escolha entre as vozes em português do Brasil e copie o **ID da voz** (em *Voices*, no menu da voz: *Copy voice ID*). Se a voz for da Biblioteca de Vozes, adicione-a à sua conta primeiro.
+2. Crie uma **chave de API** (conta → *API Keys*; o nome do botão pode mudar no site). A chave precisa do acesso a *Text to Speech*.
+3. Rode:
 
 ```bash
 export ELEVENLABS_API_KEY="cole-a-chave-aqui"     # só neste terminal; nunca em arquivo do projeto
-export ELEVENLABS_VOICE_ID="id-da-voz"
 
 node tools/gerar-audio.mjs --provedor elevenlabs --only igreja-primitiva --dry-run   # estimativa de créditos, sem gastar
 node tools/gerar-audio.mjs --provedor elevenlabs --only igreja-primitiva --amostra   # grava só o começo em tools/amostra-*.mp3 para ouvir
 node tools/gerar-audio.mjs --provedor elevenlabs --only igreja-primitiva             # a história inteira, dentro do app
 ```
 
-- `--velocidade 0.9` deixa a fala mais lenta (padrão `0.95`; vai de 0,7 a 1,2); `--modelo eleven_multilingual_v2` é o padrão (o `eleven_v3` não aceita a marca de pausa nem o contexto entre parágrafos, que a ferramenta usa para a entonação seguir de um trecho ao outro).
+- `--velocidade 0.9` deixa a fala mais lenta (padrão `1`, a velocidade com que a amostra do Leonardo foi aprovada; vai de 0,7 a 1,2); `--modelo eleven_multilingual_v2` é o padrão (o `eleven_v3` não aceita a marca de pausa nem o contexto entre parágrafos, que a ferramenta usa para a entonação seguir de um trecho ao outro).
+- **Tamanho do arquivo:** o MP3 sai em **64 kbit/s** (`--kbps`, aceita 32, 64, 96, 128 e 192). Com a Leonardo (~770 caracteres por minuto, medido), as 140 histórias somam cerca de 29 horas: ~0,85 GB em 64 e ~1,7 GB em 128. O GitHub Pages recomenda no máximo 1 GB por site (o app já tem ~134 MB), então nem em 64 elas sobram com folga lá dentro. Trocar o `--kbps` muda o cache: regrava e gasta créditos de novo.
 - O consumo é de cerca de **1 crédito por caractere** no modelo padrão; o `--dry-run` mostra o total. Todas as histórias passam de 290 mil caracteres: gere aos poucos com `--only` e `--limite`, e confira no site a franquia do seu plano.
 - **Antes de publicar áudios da ElevenLabs, confira nos termos do plano se o uso comercial e a atribuição estão liberados** (os planos gratuitos costumam ter restrições). O app é gratuito e para igrejas; se os termos pedirem crédito, inclua em `core/credits.ts` e no CREDITOS.md.
 - **Revezar provedores e vozes dentro da franquia grátis** (ElevenLabs tem uns 10 mil créditos por mês; o Azure, 500 mil caracteres). Cada gravação guarda a própria voz no `index.json` e o player mostra quem narra aquela história. Use `--completar` (só gera o que não tem áudio de nenhuma voz ou cujo texto mudou, sem regravar o que outro provedor já fez) e `--cota` (grava até esse tanto de caracteres e deixa o resto para a próxima rodada):
 
 ```bash
-# este mês, com a franquia da ElevenLabs (voz Brian, id nPczCjzI2devNBz1zQrb):
-node tools/gerar-audio.mjs --provedor elevenlabs --voz nPczCjzI2devNBz1zQrb --nome-voz Brian --completar --cota 9000
+# este mês, com a franquia da ElevenLabs (voz Leonardo, o padrão):
+node tools/gerar-audio.mjs --provedor elevenlabs --completar --cota 9000
 # na rodada seguinte, com o Azure, as que faltam:
 node tools/gerar-audio.mjs --completar --cota 450000
 ```
 
-  `--nome-voz` é o nome que aparece no player (padrão "ElevenLabs"). Uma história maior que a cota nunca entra: gere-a sozinha com `--only` e um provedor de franquia maior. Sem `--completar`, trocar de voz regrava tudo, como antes.
+  `--nome-voz` é o nome que aparece no player (padrão “Leonardo” para a voz padrão e “ElevenLabs” para qualquer outro ID). Uma história maior que a cota nunca entra: gere-a sozinha com `--only` e um provedor de franquia maior. Sem `--completar`, trocar de voz regrava tudo, como antes.
 - O texto das histórias vai para o serviço da ElevenLabs só quando você gera o áudio; o app em uso não fala com ela.
 - A chave nunca é gravada em lugar nenhum pela ferramenta. As gravações ficam no mesmo cache (`tools/.audio-cache`), separadas por voz: trocar de voz regrava, trocar de volta não gasta de novo.
 - A duração de cada trecho é medida no próprio MP3 (soma dos quadros), então o destaque do parágrafo acompanha a voz mesmo com outra taxa de bits.
+
+### Gravar a Bíblia (Almeida), um MP3 por capítulo
+
+O botão "Ouvir" do leitor também pode tocar a Bíblia na voz gravada. Só vale para a **Almeida** (as outras versões seguem com a voz do aparelho), e só para os capítulos que já foram gravados: o app consulta uma lista (`cobertura.json`) e, sem gravação, ou se o texto da tela diferir do gravado, lê com a voz do aparelho. Cada capítulo é "Livro, capítulo N" e um trecho por versículo, o mesmo que o leitor lê.
+
+```bash
+export ELEVENLABS_API_KEY="cole-a-chave-aqui"     # só neste terminal
+
+# 1. Quanto gasta (não grava nada): FASE-A = Evangelhos, Salmos e Provérbios
+node tools/gerar-audio.mjs --provedor elevenlabs --biblia --livros FASE-A --paralelo 4 --dry-run
+# 2. Só ouvir um capítulo (3 trechos, em tools/amostra-*.mp3)
+node tools/gerar-audio.mjs --provedor elevenlabs --biblia --livros PSA --capitulos 23 --amostra
+# 3. O piloto: o Salmo 23 e João 1 (poucos milhares de créditos)
+node tools/gerar-audio.mjs --provedor elevenlabs --biblia --livros PSA --capitulos 23 --paralelo 4
+node tools/gerar-audio.mjs --provedor elevenlabs --biblia --livros JHN --capitulos 1 --paralelo 4
+# 4. Uma fase inteira, de uma vez ou aos poucos com --cota (caracteres por rodada)
+node tools/gerar-audio.mjs --provedor elevenlabs --biblia --livros FASE-A --paralelo 4 --completar
+```
+
+- `--livros` aceita códigos (`JHN,PSA`) e os apelidos `NT`, `AT`, `EVANGELHOS`, `FASE-A` (Evangelhos, Salmos e Provérbios), `FASE-B` (Atos e o resto do Novo Testamento) e `FASE-C` (o resto do Antigo). `--capitulos "1-3,7"` vale com um livro só.
+- **Sai em `tools/audio-biblia/`** (`--saida` muda), fora do Git: `biblia/almeida/<LIVRO>-<n>.mp3` e `.json` (de que segundo começa cada trecho) e `biblia/almeida/cobertura.json` (os capítulos gravados, refeita a cada capítulo). Dá para parar com Ctrl+C e continuar: o que já tem arquivo não é refeito, e cada versículo gravado fica em `tools/.audio-cache`, então corrigir uma palavra regrava só 3 versículos.
+- `--paralelo N` (1 a 8) faz N pedidos ao mesmo tempo, dentro do limite do plano; acima dele a API responde 429 e a ferramenta espera e tenta de novo. Um por vez levaria cerca de 20 horas para a Bíblia toda.
+- Cada trecho da ElevenLabs vem com ~17 KB de etiqueta ID3 e um quadro "Info"; a ferramenta os tira (`tools/mp3.mjs`), senão 31 mil versículos jogariam fora ~500 MB e a duração ficaria errada.
+- **Corrija o texto antes de gravar.** Em 17/11/2026 a Almeida embutida passou por uma varredura (cerca de 630 versículos com til, acento ou letra perdidos, pedaços de outros versículos e versículos cortados: ver `VERSE_FIXES`, `VERSE_FILLS` e `WORD_FIXES` em `gerar-almeida.py`); a gravação deve partir desse texto. Um texto corrigido depois da gravação faz o app ler esse capítulo com a voz do aparelho até ele ser regravado (`--completar` regrava só o que mudou). O versículo sem texto, se aparecer algum, é pulado, como no leitor.
+- Medido: ~770 caracteres por minuto com a Leonardo. A Bíblia (3,8 milhões de caracteres) dá ~85 horas: ~2,5 GB a 64 kbps ou ~1,25 GB a 32 (`--kbps 32`).
+
+**Onde guardar (não é no GitHub Pages):** o Pages aceita até 1 GB por site e o app já tem ~134 MB; cada regravação no Git soma outra cópia ao histórico. Os MP3 vão para um armazém de arquivos, por exemplo o Cloudflare R2 (download sem custo; confira os limites atuais no site):
+1. Crie o armazém e envie a pasta `tools/audio-biblia/` inteira (por exemplo com `rclone sync`), de modo que `<endereço>/biblia/almeida/JHN-3.mp3` exista.
+2. Libere **CORS** para o endereço do app (`https://sgtcastanheira.github.io`; para testar, `http://localhost:4200`), método GET: o app lê a cobertura e os tempos com `fetch`, e baixa o capítulo seguinte antes de ele começar, para a leitura não parar.
+3. Dê cache longo aos `.mp3` (um dia ou mais) e curto aos `.json` e à `cobertura.json` (alguns minutos).
+4. Em `src/app/core/bible-audio.ts`, troque `BIBLE_AUDIO_BASE_URL` (hoje `'audio/'`, a pasta do app) pelo endereço do armazém, terminado em `/`, e publique o app.
+
+Enquanto isso não for feito, o app lê `public/audio/biblia/almeida/cobertura.json`, que está vazia: nada muda para quem usa. Para testar no celular antes, copie a saída do piloto (uns 6 MB) para `public/audio/biblia/almeida/` **sem commitar**.
+
+No iPhone, o navegador só deixa tocar áudio que começou num toque: o app toca um instante de silêncio no toque em "Ouvir" e reaproveita o mesmo `<audio>` depois, inclusive na passagem de um capítulo para o outro. Isso foi testado só no Chrome (testes automáticos); **confirme no iPhone** no piloto.

@@ -1,5 +1,6 @@
 import { LATEST_RELEASE } from '../src/app/core/whats-new';
 import { expect, Page, test as base } from '@playwright/test';
+import { mockNews } from './noticias-falsas';
 
 /** Problemas detectados automaticamente durante cada teste. */
 export interface Problems {
@@ -59,6 +60,9 @@ export const test = base.extend<Fixtures>({
           }),
         );
       }
+
+      // As notícias do Mundo Cristão também são de mentira (veja noticias-falsas.ts e mundo-cristao.spec.ts)
+      await mockNews(page);
 
       // Estado limpo + sem avisos automáticos (curiosidade/devocional/EBD) cobrindo a tela
       await page.addInitScript((latest) => {
