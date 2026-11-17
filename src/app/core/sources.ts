@@ -685,7 +685,7 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     ancient: [
       'A Bíblia (Almeida), citada ao longo do texto: Gênesis 2 e 3, Êxodo 20, Deuteronômio 4 e 6, Salmos 91 e 119, Provérbios 7, 22 e 30, Isaías 8 e 53, Oseias 4, Mateus 4 e 5, Lucas 23, Atos 8, Gálatas 1, 2 Timóteo 3, Hebreus 5, 2 Pedro 3, Apocalipse 22',
       'Wikipédia (en): Wicked Bible, a edição de 1631 da Bíblia do rei Jaime que omitiu o “não” de Êxodo 20.14; as fontes divergem quanto ao valor da multa, por isso o texto não o cita',
-      'Lista VERSE_FIXES de tools/gerar-almeida.py: as 23 correções de erros de digitação feitas no texto digital da Almeida do app, de onde vêm os exemplos',
+      'Lista VERSE_FIXES de tools/gerar-almeida.py: as correções de erros de digitação feitas no texto digital da Almeida do app (as primeiras 23 são de onde vêm os exemplos)',
       'Os estudos do app Os Manuscritos da Bíblia e A Bíblia em Português, sobre a preservação do texto e as diferenças entre traduções',
     ],
     works: ['carson-moo', 'dillard-longman', 'keener-nt', 'ndb'],
