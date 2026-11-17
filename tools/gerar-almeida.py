@@ -95,14 +95,206 @@ VERSE_FIXES = {
     ("MAT", 26, 63): ("o Filho do Deus.", "o Filho de Deus."),
     # 12/11/2026: único "traido" sem acento da Almeida (Mc 14.21 e Lc 22.22 trazem "traído!"); aparece na fala de Jesus à ceia
     ("MAT", 26, 24): ("é traido!", "é traído!"),
+    # 17/11/2026: varredura da Almeida inteira antes de gravar a Bíblia em áudio. A fonte digital tem trechos de OUTROS
+    # versículos colados no fim ou no meio (resto da linha da página impressa) e versículos cortados. Onde bastou tirar o
+    # pedaço estranho, só se tirou. Onde faltava texto, completou-se com a Almeida de 1911 (domínio público, a mesma do app em
+    # `alm1911`), na ortografia de hoje: são os versículos marcados "COMPLETADO" abaixo, para o dono conferir na Bíblia impressa.
+    # Um versículo pode ter uma lista de trocas.
+    # --- pedaço estranho tirado (nada foi acrescentado)
+    ("EXO", 39, 9): ("dobrado. f", "dobrado."),
+    ("LEV", 9, 16): ("ordenança. rifício até o terceiro", "ordenança."),
+    ("DEU", 8, 20): ("Deus. rovas, de sinais, de maravilhas, de peleja,", "Deus."),
+    ("DEU", 22, 27): ("livrasse. em juizo, entre sangue", "livrasse."),
+    ("1CH", 7, 19): ("Anião. que", "Anião."),
+    ("1CH", 18, 10): ("de bronze. l", "de bronze."),
+    ("NEH", 5, 9): ("10Também", "Também"),
+    ("NUM", 3, 22): ("foram c contados", "foram contados"),
+    ("ACT", 9, 19): ("disc!pulos", "discípulos"),
+    ("1CH", 12, 7): ("Ged or", "Gedor"),
+    # --- palavra repetida ou letra sobrando
+    ("EXO", 9, 27): ("Moisés e e Arão", "Moisés e Arão"),
+    ("EXO", 23, 31): ("até o o rio", "até o rio"),
+    ("JDG", 3, 4): ("a fim de de por eles", "a fim de por eles"),
+    ("1SA", 31, 2): ("Abinadabe e e a Malquisua", "Abinadabe e a Malquisua"),
+    ("1KI", 11, 4): ("e e seu coração", "e seu coração"),
+    ("1KI", 18, 5): ("todos os os animais", "todos os animais"),
+    ("1CH", 10, 4): ("para que que não venham", "para que não venham"),
+    ("1CH", 19, 19): [("paz cem Davi", "paz com Davi"), ("Davi, e e serviram", "Davi, e o serviram")],
+    ("HAB", 1, 16): ("e e abundante", "e é abundante"),
+    ("MAT", 13, 38): ("o o joio", "o joio"),
+    ("JHN", 12, 25): ("odeia a a sua vida", "odeia a sua vida"),
+    ("PHP", 3, 10): ("e a e a participação", "e a participação"),
+    # --- palavra trocada por outra por falha de leitura (o contexto decide)
+    ("GEN", 32, 18): ("atrás dé nos", "atrás de nós"),
+    ("1KI", 10, 6): ("acerca des teus feitos", "acerca dos teus feitos"),
+    ("ISA", 11, 14): ("ombros des filisteus", "ombros dos filisteus"),
+    ("ISA", 16, 8): ("senhores des nações", "senhores das nações"),
+    ("EXO", 14, 19): ("se pos atrás", "se pôs atrás"),
+    ("1SA", 17, 25): ("Ao homem, pos, que", "Ao homem, pois, que"),
+    ("JER", 40, 9): [("eles e pos seus homens", "eles e os seus homens"), ("bem vos erá", "bem vos será")],
+    ("JER", 38, 2): ("a sa vida", "a sua vida"),
+    ("ACT", 13, 25): ("que su sou", "que sou"),
+    ("2CH", 12, 5): ("profeta, fei ter", "profeta, foi ter"),
+    ("1KI", 20, 18): ("to-mai-os", "tomai-os"),
+    ("JER", 1, 17): ("dem-lhes", "dize-lhes"),
+    ("NUM", 16, 41): ("toda oa congregação", "toda a congregação"),
+    ("1KI", 8, 9): ("fez u pacto", "fez um pacto"),
+    ("2CH", 3, 13): ("para â camara", "para a câmara"),
+    ("EXO", 13, 21): ("numa coluta e os dois para os guiar", "numa coluna de nuvem para os guiar"),
+    ("MIC", 7, 10): ("cobrila-á", "cobri-la-á"),
+    ("ZEC", 10, 10): ("trálos-ei", "trá-los-ei"),
+    ("NUM", 31, 23): ("fálo-eis", "fá-lo-eis"),
+    ("EXO", 17, 6): ("sairá agua", "sairá água"),
+    ("ISA", 66, 19): ("a minba fama", "a minha fama"),
+    ("LUK", 7, 28): ("no re medida com é maior", "no reino de Deus é maior"),
+    ("JOB", 36, 5): ("a ninguém despre grande é", "a ninguém despreza; grande é"),
+    ("ROM", 5, 15): ("abund muitos", "abundou sobre muitos"),
+    ("NUM", 11, 27): ("etenho dado os levitas a Arão e a Eldade e Medade profetizaram",
+                      "e o anunciou a Moisés, dizendo: Eldade e Medade profetizam"),
+    ("MAT", 7, 23): ("claramemnte", "claramente"),
+    # porem ("porém") nos versículos em que a fonte tirou o acento (em "para os porem" é o verbo pôr e fica)
+    ("GEN", 17, 15): ("Sarai, porem Sara", "Sarai, porém Sara"),
+    ("DEU", 28, 38): ("porem colherás", "porém colherás"),
+    ("1SA", 17, 9): ("porem, se eu", "porém, se eu"),
+    ("2SA", 18, 29): ("porem nao sei", "porém não sei"),
+    ("PRO", 13, 9): ("porem a lâmpada", "porém a lâmpada"),
+    ("JER", 38, 4): ("porem o seu mal", "porém o seu mal"),
+    ("1CH", 16, 24): ("a sua gloria", "a sua glória"),
+    # --- COMPLETADO: o texto da fonte estava cortado ou misturado com outro versículo; completado pela Almeida de 1911
+    ("JOS", 13, 18): ("Jaza, Qa espada até serem consumidos, então todo o Israel", "Jaza, Quedemote, Mefaate,"),
+    ("EXO", 26, 27): ("e cinco para as tábuas do outro lado do tabernáculo, bem como c6 azeite para a luz, especiarias para o óleo da unção e para o para o ocidente.",
+                      "e cinco para as tábuas do outro lado do tabernáculo, e cinco para as tábuas do lado do tabernáculo, para o ocidente."),
+    ("JDG", 1, 27): ("e suas virael aos levitas estas cidades e nem os de Ibleão", "e suas vilas, nem os de Dor e suas vilas, nem os de Ibleão"),
+    ("JDG", 9, 4): ("ociosos e le9", "ociosos e levianos, que o seguiram."),
+    ("1SA", 14, 7): ("eis-me aqcaustos e sacrifícios ao Senhor.", "eis-me aqui contigo, conforme o teu coração."),
+    ("2SA", 18, 24): ("ao terraçorém, percebeu que seus servos cochichavam entre si, um homem que corria só.",
+                      "ao terraço da porta, junto ao muro; e levantou os olhos, e olhou, e eis que um homem corria só."),
+    ("1CH", 21, 17): [("E dissemorreram Saul e seus três filhos; morreu toda a sua o povo?", "E disse Davi a Deus: Não sou eu o que disse que se contasse o povo?"),
+                      ("porem não contra", "porém não contra")],
+    ("2CH", 6, 27): ("o b décima quarta a Jesebeabe, envia chuva", "o bom caminho em que andem, e envia chuva"),
+    ("2CH", 33, 18): ("Deus de Israelram os seus altares e as suas imagens, e a Matã, sacerdote de", "Deus de Israel, eis que estão escritos nos atos dos reis de Israel."),
+    ("GEN", 17, 10): ("todo varão dentre vugar para aquele que me", "todo varão dentre vós será circuncidado."),
+    ("NUM", 2, 33): ("Os levicampo consagrado; a possessão dele será do sacerdote. foram contados entre os filhos de Israel.",
+                     "Porém os levitas não foram contados entre os filhos de Israel, como o Senhor ordenara a Moisés."),
+    ("EZK", 8, 17): ("Então me disse: Viste, filho do homem? Acaso é isto coisa le",
+                     "Então me disse: Viste isto, filho do homem? Há porventura coisa mais leviana para a casa de Judá do que fazer tais abominações, que fazem aqui? Havendo enchido a terra de violência, tornam a irritar-me; porque eis que eles chegam o ramo ao nariz."),
+    ("JER", 8, 11): ("filha de meu povo le23", "filha de meu povo levianamente, dizendo: Paz, paz; e não há paz."),
+    ("1TI", 5, 11): ("quando se tornam le5", "quando se tornam lascivas contra Cristo, querem casar-se;"),
+    ("2CO", 3, 13): ("filhos de Isra desvanecia;", "filhos de Israel não fitassem os olhos no fim do que desvanecia;"),
 }
+
+# Versículos que vieram VAZIOS da fonte (erro da fonte), completados pela Almeida de 1911 (domínio público) na ortografia de hoje.
+VERSE_FILLS = {
+    ("EZK", 8, 18): "Pelo que também eu usarei com eles de furor; o meu olho não poupará, nem me apiedarei; e, ainda que me gritem aos ouvidos com grande voz, contudo não os ouvirei.",
+}
+
+# Palavras que a fonte trouxe com erro de leitura (til, acento ou letra trocada) e que só têm uma correção possível. Valem para a
+# palavra inteira, em qualquer versículo (só entrou aqui o que não existe como palavra no contexto: "sera" e "ate" aparecem só
+# como "será" e "até"; "pos", "porem", "gloria" e outros que também são palavras certas ficaram em VERSE_FIXES, versículo a versículo).
+# Palavras antigas que o dicionário de hoje não tem (alparcas, almugue, fressura, pragana, sovela, jarretar, entesar,
+# escornear, ressicados, hóspeda, quebrantosso...) são da própria Almeida e NÃO entram aqui.
+WORD_FIXES = {
+    # til, cedilha e acento perdidos
+    "abominaçao": "abominação", "abominãveis": "abomináveis", "abundancia": "abundância", "adorarãs": "adorarás",
+    "adultéras": "adúlteras", "adversarios": "adversários", "afluiram": "afluíram", "agradavel": "agradável",
+    "amaldiçõe": "amaldiçoe", "amaldições": "amaldiçoes", "aparencia": "aparência", "aquem": "a quem", "arietes": "aríetes",
+    "aromàtico": "aromático", "aspero": "áspero", "assirios": "assírios", "atrio": "átrio", "bençao": "bênção",
+    "cadaveres": "cadáveres", "cairam": "caíram", "caiste": "caíste", "calvicie": "calvície", "camara": "câmara",
+    "cessarao": "cessarão", "ceus": "céus", "ciencia": "ciência", "circunferencia": "circunferência", "comerao": "comerão",
+    "concluido": "concluído", "conduzí": "conduzi", "confusao": "confusão", "congregaçao": "congregação",
+    "constituiram": "constituíram", "contribuido": "contribuído", "coraçao": "coração", "coraçào": "coração",
+    "covados": "côvados", "crueis": "cruéis", "cãmaras": "câmaras", "declaraçoes": "declarações", "descobrí": "descobri",
+    "designio": "desígnio", "destruiçao": "destruição", "diminuira": "diminuirá", "dira": "dirá", "diras": "dirás",
+    "diràs": "dirás", "dissípa": "dissipa", "divisoes": "divisões", "donó": "dono", "dé": "de", "díze": "dize",
+    "egipcio": "egípcio", "egipcios": "egípcios", "escarnio": "escárnio", "especie": "espécie", "esperavamos": "esperávamos",
+    "espírituais": "espirituais", "espíritual": "espiritual", "estara": "estará", "estã": "está", "exercitos": "exércitos",
+    "fara": "fará", "fôra": "fora", "habitarà": "habitará", "hebráica": "hebraica", "hà": "há", "hàbeis": "hábeis",
+    "ignominia": "ignomínia", "impio": "ímpio", "impios": "ímpios", "impossivel": "impossível", "inquiriçao": "inquirição",
+    "inumeraveis": "inumeráveis", "irmao": "irmão", "irmaos": "irmãos", "ja": "já", "juizes": "juízes", "jà": "já",
+    "lascivia": "lascívia", "legivel": "legível", "longinquas": "longínquas", "mae": "mãe", "maos": "mãos",
+    "maritimas": "marítimas", "materias": "matérias", "mes": "mês", "minhá": "minha", "minhã": "minha",
+    "misericordia": "misericórdia", "misterio": "mistério", "miudas": "miúdas", "multiplos": "múltiplos",
+    "murmuraçoes": "murmurações", "naçoes": "nações", "nao": "não", "naõ": "não", "nestê": "neste", "ninguem": "ninguém",
+    "nossó": "nosso", "nào": "não", "nâo": "não", "olhavamos": "olhávamos", "ouvímo": "ouvimo", "paises": "países",
+    "pe": "pé", "penhôres": "penhores", "penuria": "penúria", "peregrinaçoes": "peregrinações", "persuadí": "persuadi",
+    "pes": "pés", "planicie": "planície", "po": "pó", "poras": "porás", "porãs": "porás", "possessao": "possessão",
+    "possuira": "possuirá", "primicias": "primícias", "principe": "príncipe", "principes": "príncipes",
+    "procuravamos": "procurávamos", "proposito": "propósito", "propria": "própria", "proprio": "próprio",
+    "proprios": "próprios", "prostituira": "prostituíra", "prudencia": "prudência", "prudenté": "prudente", "quál": "qual",
+    "raizes": "raízes", "relampagos": "relâmpagos", "repartirã": "repartirá", "ressurreiçao": "ressurreição",
+    "reunam": "reúnam", "revestí": "revesti", "sacerdocio": "sacerdócio", "saido": "saído", "saira": "sairá",
+    "santuario": "santuário", "santíssimá": "santíssima", "sao": "são", "seguí": "segui", "seras": "serás",
+    "sidonios": "sidônios", "sángue": "sangue", "tabuas": "tábuas", "teú": "teu", "traiçõeiramente": "traiçoeiramente",
+    "transgressao": "transgressão", "transgressoes": "transgressões", "travessoes": "travessões", "têrmo": "termo",
+    "usareís": "usareis", "utensilios": "utensílios", "vao": "vão", "ve": "vê", "violencia": "violência", "viuvas": "viúvas",
+    "vossã": "vossa", "vêde": "vede", "vóz": "voz", "àgua": "água", "ãgua": "água", "áteio": "átrio", "ía": "ia",
+    "órfao": "órfão", "firâmo": "firamo", "agua": "água", "aguas": "águas", "arvore": "árvore", "ate": "até", "ceu": "céu",
+    "descendencia": "descendência", "es": "os", "espirito": "espírito", "exercito": "exército", "exilio": "exílio",
+    "familia": "família", "fieis": "fiéis", "fosseis": "fôsseis", "ha": "há", "juizo": "juízo", "juizos": "juízos",
+    "lingua": "língua", "magoa": "mágoa", "mao": "mão", "memoria": "memória", "numero": "número", "perpetua": "perpétua",
+    "refugio": "refúgio", "ruina": "ruína", "sacrificio": "sacrifício", "sacrificios": "sacrifícios", "sera": "será",
+    "sirios": "sírios", "so": "só", "tambem": "também", "tera": "terá", "ultimas": "últimas", "varias": "várias", "vera": "verá",
+    # letras trocadas, trocadas de lugar, sobrando ou faltando
+    "aflingem": "afligem", "amedrontrará": "amedrontará", "aspacto": "aspecto", "arrraial": "arraial", "auro": "ouro",
+    "betões": "botões", "brandavam": "bradavam", "cade": "cada", "caluna": "coluna", "camimho": "caminho",
+    "captão": "capitão", "cemeçara": "começara", "certamnente": "certamente", "claramemnte": "claramente",
+    "concerder": "conceder", "confudam": "confundam", "consfins": "confins", "contristrados": "contristados",
+    "cosolados": "consolados", "cogregado": "congregado", "cogregação": "congregação", "conhececido": "conhecido",
+    "danátema": "anátema", "dc": "de", "deitador": "deitado", "dereras": "deveras", "derruburem": "derrubarem",
+    "derrumado": "derramado", "destrurei": "destruirei", "detráz": "detrás", "diza": "dizia", "duzentes": "duzentos",
+    "elivais": "olivais", "encamado": "encarnado", "esculplda": "esculpida", "estederam": "estenderam",
+    "estivese": "estivesse", "examiará": "examinará", "excuta": "executa", "fihos": "filhos", "filpios": "filhos",
+    "fmatemo": "matemo", "frustar": "frustrar", "fuizeste": "fugiste", "furiram": "fugiram", "gereu": "gerou",
+    "govenador": "governador", "guadardardes": "guardardes", "hbreu": "hebreu", "holocauto": "holocausto",
+    "homems": "homens", "icenso": "incenso", "imimigo": "inimigo", "imimigos": "inimigos", "incedeia": "incendeia",
+    "inclinão": "inclina o", "incurcunciso": "incircunciso", "iniquidode": "iniquidade", "instroções": "instruções",
+    "instruçães": "instruções", "lenvantarás": "levantarás", "lovo": "louvo", "marar": "morar", "mensageem": "mensagem",
+    "minba": "minha", "mulplicaste": "multiplicaste", "mundarás": "mudarás", "naites": "noites", "nibenitas": "rubenitas",
+    "niguém": "ninguém", "nosos": "nossos", "nosssos": "nossos", "ouvigiu": "dirigiu", "ouvur": "ouvir",
+    "paditas": "gaditas", "parcíficas": "pacíficas", "pederão": "poderão", "preperai": "preparai", "pricípio": "princípio",
+    "primeras": "primeiras", "principamente": "principalmente", "profetuar": "profetizar", "prostiruindo": "prostituindo",
+    "prícipe": "príncipe", "quebrantrado": "quebrantado", "razães": "razões", "respondende": "respondendo",
+    "ressucitado": "ressuscitado", "ressucitou": "ressuscitou", "restiruirás": "restituirás", "resuritas": "gesuritas",
+    "reveldada": "revelada", "sacerdete": "sacerdote", "sacerdetes": "sacerdotes", "sacrificdas": "sacrificadas",
+    "sarcerdote": "sacerdote", "sebressaía": "sobressaía", "seginte": "seguinte", "serereos": "seremos", "sopo": "sopro",
+    "tansgressões": "transgressões", "taus": "tais", "tedas": "todas", "temarás": "tomarás", "trezentes": "trezentos",
+    "tsbuas": "tábuas", "ugar": "lugar", "ume": "uma", "vizinbos": "vizinhos", "zomabaria": "zombaria",
+    "apartaivos": "apartai-vos", "apiedarme": "apiedar-me", "congregarvos": "congregar-vos", "deixame": "deixa-me",
+    "devorálo": "devorá-lo", "enfadarte": "enfadar-te", "exaltarte": "exaltar-te", "lembrarte": "lembrar-te",
+    "transformarse": "transformar-se", "apressapara": "apressa para",
+    "cabera": "cabeça", "destrui": "destruí", "introduzí": "introduzi", "abstem": "abstém", "resppondeu": "respondeu",
+    "tando": "tanto", "crêm": "creem", "cenáulo": "cenáculo", "proximo": "próximo", "ne": "no", "provincias": "províncias",
+    "geraçoes": "gerações",
+    # nomes e começos de frase
+    "Altíssinuo": "Altíssimo", "Entao": "Então", "Nao": "Não", "Senhrr": "Senhor", "Senbor": "Senhor",
+    "Jerusulém": "Jerusalém", "Jizrreel": "Jizreel", "Pergutaram": "Perguntaram", "Trambém": "Também",
+    "Guardate": "Guarda-te", "Levantate": "Levanta-te", "Revestí": "Revesti", "Dà": "Dá", "Judà": "Judá", "Sabà": "Sabá",
+    "Cairam": "Caíram", "Voê": "Vê", "Pedí": "Pedi", "Jeovã": "Jeová", "Âquele": "Àquele", "Â": "À", "Âs": "Às",
+    "Acaía": "Acaia", "Acáia": "Acaia", "Cicília": "Cilícia", "Psídia": "Pisídia", "Josue": "Josué", "Isaias": "Isaías",
+    "Libano": "Líbano", "Babilonia": "Babilônia", "Assiria": "Assíria", "Etiopia": "Etiópia", "Belem": "Belém",
+    "Efraím": "Efraim", "Jerusalem": "Jerusalém", "Manasses": "Manassés", "Moises": "Moisés", "Poe": "Põe",
+    "Samaria": "Samária", "Siquem": "Siquém", "Tambem": "Também", "Aquila": "Áquila", "Aquis": "Áquis", "Gibeao": "Gibeão",
+    "Eliu": "Eliú", "Gibea": "Gibeá", "Jedutun": "Jedútun", "Jefone": "Jefoné", "Rabsaque": "Rabsaqué",
+    "Refaias": "Refaías", "Amem": "Amém", "Justificerei": "Justificarei", "lbsão": "Ibsão", "lrã": "Irã", "lnútil": "Inútil",
+    "tsrael": "Israel", "çrfãos": "Órfãos",
+}
+_WORDS = re.compile(r"(?<!\w)(" + "|".join(re.escape(k) for k in sorted(WORD_FIXES, key=len, reverse=True)) + r")(?!\w)")
+
+def fix_words(text):
+    new = _WORDS.sub(lambda m: WORD_FIXES[m.group(1)], text)
+    if new != text:
+        stats["palavra com erro de leitura corrigida"] += len(_WORDS.findall(text))
+    return new
 
 def fix_verse(book, chapter, verse, text):
     fix = VERSE_FIXES.get((book, chapter, verse))
-    if fix and fix[0] in text:
-        stats["erro de digitação corrigido"] += 1
-        return text.replace(*fix)
-    return text
+    for wrong, right in ([fix] if isinstance(fix, tuple) else (fix or [])):
+        if wrong in text:
+            stats["erro de digitação corrigido"] += 1
+            text = text.replace(wrong, right)
+    if not text.strip():
+        text = VERSE_FILLS.get((book, chapter, verse), text)
+    return fix_words(text)
 
 def main(raw, out):
     os.makedirs(out, exist_ok=True)
