@@ -31,6 +31,10 @@ Os três aparecem juntos pela primeira vez em [[Ap 16.13]] e voltam em [[Ap 19.2
 - O que faz | Faz a terra adorar a primeira besta, opera grandes sinais, “até descer fogo do céu”, e manda fazer uma imagem da besta. É quem impõe o sinal e o número ([[Ap 13.16-18]]).
 :::
 
+:::leia a-mulher-o-dragao-e-miguel
+A cena em que o dragão aparece pela primeira vez: a mulher, a criança, a guerra no céu e Miguel, e o que ela tem a ver com a serpente do Éden.
+:::
+
 ## Por que Eles Imitam o Deus Verdadeiro?
 
 Muitos intérpretes veem na cena uma imitação, uma paródia do Deus verdadeiro. O Apocalipse nunca diz isso com todas as letras, mas deixa as semelhanças à vista:

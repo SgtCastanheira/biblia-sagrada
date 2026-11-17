@@ -45,6 +45,7 @@ Um estudo canônico por assunto; os outros apontam para ele com um cartão `:::l
 | Tyndale e a Bíblia em inglês | `reforma-inglesa` | `a-palavra-no-coracao`, `vulgata-e-traducoes` |
 | Avivamentos da Bíblia (reis, Neemias, Nínive, Atos) | `avivamentos-na-biblia` | `avivamentos-desde-atos`, `marcas-de-um-avivamento` |
 | Por que o fogo esfria de uma geração para a outra | `a-geracao-que-nao-conheceu-o-senhor` | `avivamentos-na-biblia`, `marcas-de-um-avivamento` |
+| Apocalipse 12: a mulher, a criança, a guerra no céu, Miguel e a ligação com o Éden | `a-mulher-o-dragao-e-miguel` | `trindade-satanica` (a ficha do dragão e o cartão de volta), `apocalipse` (a tabela dos símbolos) |
 | Pentecostalismo no Brasil: a chegada de Berg e Vingren | `daniel-berg-e-gunnar-vingren` (as pessoas) e `assembleia-de-deus-no-brasil` (a igreja) | `pentecostes-no-brasil`, `nome-assembleia-de-deus`, `madureira-e-a-separacao`, as páginas dos estados |
 
 ## Decisões em aberto

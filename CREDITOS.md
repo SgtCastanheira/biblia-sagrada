@@ -40,6 +40,7 @@ Este aplicativo reúne textos e dados de várias fontes. A licença do código d
 | Gravura *Veduta dell’Anfiteatro Flavio detto il Colosseo*, de Giovanni Battista Piranesi (1776), The Metropolitan Museum of Art | `public/conteudo/imagens/coliseu-piranesi.jpg`, do Wikimedia Commons | CC0 |
 | O Bom Pastor, afresco do século III, publicado em *Die Malereien der Katakomben Roms*, de Joseph Wilpert (1903) | `public/conteudo/imagens/catacumbas-bom-pastor.jpg`, do Wikimedia Commons | Domínio público |
 | Ilustração de Eugène Damblans (1923): De Rossi mostra a Cripta dos Papas a Pio IX | `public/conteudo/imagens/catacumbas-de-rossi-pio-ix.jpg`, do Wikimedia Commons | Domínio público |
+| Tinta e aquarela *O Grande Dragão Vermelho e a Mulher Vestida de Sol (Ap 12.1-4)*, de William Blake (entre 1803 e 1805), Brooklyn Museum (recortada na parte pintada, sem a margem do papel e os versos manuscritos) | `public/conteudo/imagens/mulher-dragao-blake.jpg`, do Wikimedia Commons | Domínio público |
 | Slide de 1913 de Edmund F. Arras, Columbus Metropolitan Library (via DPLA): nichos de uma catacumba | `public/conteudo/imagens/catacumbas-nichos.jpg`, do Wikimedia Commons | Domínio público |
 | Kil Sun-ju (Gil Seon-ju) | `public/conteudo/imagens/coreia-kil-sun-ju.jpg`, do Wikimedia Commons | Domínio público |
 | O pastor Chu Ki-chol | `public/conteudo/imagens/coreia-chu-ki-chol.jpg`, do Wikimedia Commons | Domínio público |
