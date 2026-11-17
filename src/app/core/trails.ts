@@ -112,7 +112,7 @@ export const TRAILS: Trail[] = [
       { title: 'Comece por Aqui', ids: ['como-interpretar-profecias'] },
       { title: 'Daniel e Apocalipse', ids: ['profecias-de-daniel', 'apocalipse'] },
       { title: 'O Fim dos Tempos', ids: ['setenta-semanas', 'arrebatamento', 'trindade-satanica', 'juizo-final', 'nova-jerusalem'] },
-      { title: 'O Apocalipse por Dentro', ids: ['selos-trombetas-e-tacas'] },
+      { title: 'O Apocalipse por Dentro', ids: ['selos-trombetas-e-tacas', 'a-mulher-o-dragao-e-miguel'] },
     ],
   },
   {

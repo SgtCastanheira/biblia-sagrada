@@ -24,6 +24,21 @@ Regras:
 
 **Validação:** `npm run lint` sem problemas; 263 testes de lógica (3 novos); `ng build --base-href /biblia-sagrada/` e a trava `verificar-publicacao.mjs` passaram (o pacote inicial continua 7,85 kB acima do alerta de 1,05 MB, o mesmo da `main`: esta mudança não mexe nele); bateria `celular` + `computador` num checkout limpo, saído da `main`, com 4 trabalhadores: 1.234 aprovados, 4 ignorados e nenhuma falha; testes offline de produção: 8 aprovados (a Bíblia inteira, inclusive capítulos nunca abertos, funciona sem internet).
 
+## 2026-11-17 14:10 -0400 — A Mulher, o Dragão e Miguel (Apocalipse 12), com a pintura de Blake como capa
+
+**Autor:** Valter, com Claude. O dono colou a transcrição de um Short do YouTube sobre Apocalipse 12 (o dragão que quer devorar a criança, a mulher no deserto, Miguel e a guerra no céu, o Éden por trás) e pediu um texto sobre o assunto; depois pediu a pintura de Blake como capa e mandou subir para a `main`.
+
+**O que sobe:**
+1. **Estudo novo `a-mulher-o-dragao-e-miguel`**, na trilha Profecias, prateleira “O Apocalipse por Dentro” (livro 2, depois de “Selos, Trombetas e Taças”): sete tópicos em forma de pergunta (a mulher e o dragão, quem são a mulher e o filho, o dragão no céu, o nome Miguel, o Éden, o dragão e Roma, como se vence), 18 minutos, `added` 2026-11-17. Texto próprio, impessoal, com as quatro fichas de leituras (a mulher, quando o dragão perde o lugar, Miguel na Bíblia, do Éden ao capítulo 12) e duas notas.
+2. **Cartões que ligam os estudos:** o novo aponta para o Apocalipse (apoio) e para a Trindade Satânica (continua); a Trindade Satânica ganhou o cartão de volta.
+3. **Capa e imagem:** a aquarela *O Grande Dragão Vermelho e a Mulher Vestida de Sol (Ap 12.1-4)*, de William Blake (entre 1803 e 1805, Brooklyn Museum, domínio público, do Wikimedia Commons), recortada na parte pintada (sem a margem do papel e os versos manuscritos), 1000 px, 200 KB. É a capa da história e aparece inteira no primeiro tópico, com legenda e crédito; crédito em `credits.ts` e `CREDITOS.md`.
+4. **Fontes e dono do assunto:** entrada em `ARTICLE_SOURCES` (Almeida do app, verbetes Strong/Thayer/BDB lidos em 17/11/2026, Vatican News sobre a leitura da missa da Assunção) e linha em `REVISAO-DE-CONTEUDO.md`.
+5. **Teste:** `logica/mulher-dragao-miguel.spec.ts` (biblioteca, trilha e fontes; toda citação em “…” idêntica à Almeida; blocos, títulos e ligações; frases que não podem voltar e ressalvas que têm de ficar; a capa, a legenda e o crédito).
+
+**Decisões:** (a) o vídeo foi conferido, não transcrito: o dragão não sobe ao céu atrás da criança (a ordem do capítulo é a criança arrebatada, a mulher no deserto e só então a guerra), as citações foram refeitas na Almeida do app (“houve guerra no céu”, “batalhavam”, “sereis como Deus”), o nome é *Mikha’el* e a ligação com o “sereis como Deus” da serpente é dita como leitura de pregadores, o dragão é o Diabo (Ap 12.9) e o Apocalipse nunca escreve “Roma” (ela é o instrumento, Ap 13.2), “Lúcifer” vem de Isaías 14 e não do capítulo 12, e a mulher aparece em duas leituras (povo de Deus e Maria) sem o texto escolher por ninguém; (b) o estudo tem 18 minutos, mais que os outros de Profecias (8 a 10), porque cobre sete perguntas; pode ser enxugado; (c) a capa mostra a pintura inteira no celular, mas no computador a faixa larga corta o meio do corpo do dragão, porque o app não escolhe a posição da capa por história; (d) não há entrada em `RELEASES`: um estudo novo não é funcionalidade, e ele aparece sozinho na estante “Novidades”; (e) subiu num ramo à parte a partir de `origin/main`, só com estes arquivos.
+
+**Pendências:** um campo opcional de posição da capa por história (`models.ts` e `article.ts`), se o dono quiser a cabeça dos dragões no computador; decidir se o estudo deve ser mais curto.
+
 ## 2026-11-17 11:23 -0400 — Bakairí e Kayapó na lista de versões, e busca no seletor
 
 **Autor:** Valter, com Claude. O dono perguntou se dava para achar “a língua do Xingu” na lista de versões e pediu para incluir as duas línguas que faltavam e criar um campo de busca. Depois mandou levar para a `main`.
