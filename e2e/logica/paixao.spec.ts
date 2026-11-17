@@ -134,3 +134,60 @@ test('paixao: cada livro termina no cartão do próximo, fora de qualquer dobra;
   }
   expect(PAIXAO_ARTICLES.map((a) => a.id)).toEqual(IDS);
 });
+
+test('paixao: a prisão conta o “A quem buscais?” de João, e o Talmude vem com a origem dita primeiro, sem aspas de fora da Almeida e sem nome de estudioso', () => {
+  const t = md('paixao-prisao-e-interrogatorio');
+  const ruins: string[] = [];
+
+  // A cena de Jo 18.3-9: a pergunta, o “Sou eu”, a queda dos guardas e o pedido de soltar os discípulos; vem antes da espada
+  const dialogo = t.match(/:::dialogo A Quem Buscais\?\n([\s\S]*?)\n:::/);
+  if (!dialogo) ruins.push('falta o diálogo “A Quem Buscais?”');
+  else {
+    const d = dialogo[1];
+    if (d.split('\n').filter((l) => l.startsWith('Jesus | A quem buscais? [[Jo 18.')).length !== 2) ruins.push('Jesus pergunta “A quem buscais?” duas vezes (Jo 18.4 e 18.7)');
+    for (const trecho of ['Os guardas | A Jesus, o nazareno. [[Jo 18.5]]', 'Jesus | Sou eu. [[Jo 18.5]]', 'Os guardas recuam e caem por terra. [[Jo 18.6]]', 'deixai ir estes. [[Jo 18.8]]']) {
+      if (!d.includes(trecho)) ruins.push(`o diálogo deve ter: ${trecho}`);
+    }
+    if (t.indexOf(dialogo[0]) > t.indexOf('Simão Pedro arranca')) ruins.push('a cena de “A quem buscais?” vem antes da espada de Pedro');
+  }
+  if (!/Os que vinham prendê-lo caem, e é Jesus quem refaz a pergunta/.test(t)) ruins.push('o texto deve dizer que os que vinham prendê-lo caem e que Jesus refaz a pergunta');
+  if (!/sem afirmar o que veio primeiro/.test(t)) ruins.push('o texto não fixa se o beijo ou o “Sou eu” veio primeiro');
+
+  // O Talmude: seção própria, depois de Herodes e antes do resumo das idas e vindas
+  const ini = t.indexOf('### O que o Talmude Diz sobre o Julgamento de Jesus?');
+  const fim = t.indexOf('### As Idas e Vindas da Ceia ao Gólgota');
+  if (ini < 0 || fim < ini) ruins.push('falta a seção do Talmude, entre Herodes e “As Idas e Vindas”');
+  else {
+    const s = t.slice(ini, fim);
+    if (ini < t.indexOf('### Jesus Diante de Herodes Antipas')) ruins.push('a seção do Talmude vem depois de Herodes');
+    // a origem e a data vêm antes do conteúdo
+    const origem = s.indexOf('século II');
+    if (origem < 0 || origem > s.indexOf('Sanhedrin, página 43a')) ruins.push('o texto diz de onde vem o Talmude (a data) antes de contar o trecho');
+    for (const [padrao, motivo] of [
+      [/Nenhum Evangelho o cita/, 'o texto diz que nenhum Evangelho cita o Talmude'],
+      [/Yeshu ha-Notzri/, 'o nome vem do aramaico'],
+      [/Sanhedrin, página 43a/, 'o trecho de 43a'],
+      [/Sanhedrin 41a/, 'o trecho de 41a (o fim da pena de morte pelo Sinédrio)'],
+      [/Sanhedrin 4\.1/, 'a regra da Mishná de julgar de dia'],
+      [/Nem todos os que leem o Talmude aceitam/, 'a ressalva de que nem todos leem Yeshu como Jesus'],
+      [/O Talmude não liga uma coisa à outra/, 'o Talmude não liga o fim da pena de morte a Jesus'],
+    ] as [RegExp, string][]) if (!padrao.test(s)) ruins.push(`a seção do Talmude deve ter: ${motivo}`);
+    // nenhuma aspa “…” de fora da Almeida: toda citação da seção é seguida de [[referência]] (o resto do Talmude é contado em palavras próprias)
+    for (const m of s.matchAll(/“[^”]*”/g)) {
+      if (!/^[\s,.;:)]*\[\[/.test(s.slice(m.index! + m[0].length))) ruins.push(`aspas sem referência na seção do Talmude: ${m[0].slice(0, 50)}`);
+    }
+    // os livros ficam nos Evangelhos: nenhum nome de estudioso
+    for (const nome of ['Schäfer', 'Schafer', 'Ehrman', 'Klausner', 'Herford', 'Maier', 'Lasker', 'Rubenstein', 'Boyarin', 'Powell', 'Neusner', 'Meier', 'Bauckham', 'Levine', 'Dalman', 'Jeremias']) {
+      if (s.includes(nome)) ruins.push(`a seção do Talmude não nomeia estudioso: ${nome}`);
+    }
+    if (/discutível/i.test(s)) ruins.push('o livro não usa “discutível”');
+  }
+
+  // As fontes lidas do Talmude estão registradas no livro
+  const fontes = ARTICLE_SOURCES['paixao-prisao-e-interrogatorio'];
+  for (const w of ['paixao-talmude', 'paixao-wikipedia-talmude']) {
+    if (!fontes?.works?.includes(w)) ruins.push(`o livro lista a obra ${w}`);
+    if (!WORKS[w]) ruins.push(`a obra ${w} existe em WORKS`);
+  }
+  expect(ruins).toEqual([]);
+});

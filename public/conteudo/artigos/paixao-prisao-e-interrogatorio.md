@@ -2,7 +2,25 @@
 
 :::hora Quinta para sexta · de noite, ao fim da oração
 
-A oração mal terminara, e o silêncio da noite é interrompido por um barulho de gente. Jesus ainda falava aos discípulos adormecidos, “Por que estais dormindo? Levantai-vos, e orai, para que não entreis em tentação” [[Lc 22.46]], quando surge Judas, à frente de uma multidão com guardas do templo, e de imediato o beija [[Lc 22.47]]. “Judas, com um beijo trais o Filho do homem?” [[Lc 22.48]]. Mal os guardas lhe põem as mãos, Simão Pedro arranca a espada da cintura e corta a orelha direita de Malco, servo do sumo sacerdote [[Jo 18.10]]. De imediato Jesus lhe diz: “Mete a tua espada no seu lugar; porque todos os que lançarem mão da espada, à espada morrerão. Ou pensas tu que eu não poderia rogar a meu Pai, e que ele não me mandaria agora mesmo mais de doze legiões de anjos?” [[Mt 26.52-53]]. Depois, em vez de fugir aos soldados, volta-se para o ferido: “tocando-lhe a orelha, o curou” [[Lc 22.51]]. É o último milagre contado antes da cruz, e foi para um inimigo.
+A oração mal terminara, e o silêncio da noite é interrompido por um barulho de gente. Jesus ainda falava aos discípulos adormecidos, “Por que estais dormindo? Levantai-vos, e orai, para que não entreis em tentação” [[Lc 22.46]], quando surge Judas, à frente de uma multidão [[Lc 22.47]]. João conta que ele tomou a coorte e uns guardas dos principais sacerdotes e dos fariseus e “chegou ali com lanternas, archotes e armas” [[Jo 18.3]]. Vêm de noite, com luz e armas, para prender um só homem.
+
+João conta também o que Jesus faz antes que lhe ponham a mão. “Sabendo, pois, Jesus tudo o que lhe havia de suceder, adiantou-se” [[Jo 18.4]], e é ele quem pergunta primeiro:
+
+:::dialogo A Quem Buscais?
+Jesus | A quem buscais? [[Jo 18.4]]
+Os guardas | A Jesus, o nazareno. [[Jo 18.5]]
+Jesus | Sou eu. [[Jo 18.5]]
+Os guardas recuam e caem por terra. [[Jo 18.6]]
+Jesus | A quem buscais? [[Jo 18.7]]
+Os guardas | A Jesus, o nazareno. [[Jo 18.7]]
+Jesus | Já vos disse que sou eu; se, pois, é a mim que buscais, deixai ir estes. [[Jo 18.8]]
+:::
+
+“Sou eu” são, em grego, as duas palavras *egō eimi*, as mesmas de “antes que Abraão existisse, eu sou” [[Jo 8.58]]. O texto não diz por que os guardas caíram: diz só que, quando Jesus falou, recuaram e caíram por terra [[Jo 18.6]]. Judas, o que o traía, “também estava com eles” [[Jo 18.5]]. Os que vinham prendê-lo caem, e é Jesus quem refaz a pergunta. Depois a resposta vira pedido: “deixai ir estes” [[Jo 18.8]]. João vê nisso a palavra cumprida: “Dos que me tens dado, nenhum deles perdi” [[Jo 18.9]]. Antes que lhe ponham a mão, Jesus pede a liberdade dos que estão com ele.
+
+Mateus e Lucas contam o beijo. Judas combinara um sinal, “Aquele que eu beijar, esse é: prendei-o” [[Mt 26.48]], e, aproximando-se de Jesus, o beija [[Mt 26.49]] [[Lc 22.47]]. “Judas, com um beijo trais o Filho do homem?” [[Lc 22.48]]. Cada Evangelho conta um lado da mesma noite, e o texto os põe lado a lado sem afirmar o que veio primeiro: o beijo ou o “Sou eu”.
+
+Mal os guardas lhe põem as mãos, Simão Pedro arranca a espada da cintura e corta a orelha direita de Malco, servo do sumo sacerdote [[Jo 18.10]]. De imediato Jesus lhe diz: “Mete a tua espada no seu lugar; porque todos os que lançarem mão da espada, à espada morrerão. Ou pensas tu que eu não poderia rogar a meu Pai, e que ele não me mandaria agora mesmo mais de doze legiões de anjos?” [[Mt 26.52-53]]. Depois, em vez de fugir aos soldados, volta-se para o ferido: “tocando-lhe a orelha, o curou” [[Lc 22.51]]. É o último milagre contado antes da cruz, e foi para um inimigo.
 
 :::figura paixao-malco
 Pedro, Malco e a cura da orelha, segundo João e Lucas. As tochas pertencem à iluminação antiga da cena.
@@ -193,6 +211,26 @@ Ao saber que Jesus é galileu, Pilatos o manda a Herodes, “da jurisdição de 
 :::leia a-familia-de-herodes
 Antipas é o mesmo Herodes que mandou decapitar João Batista. Para saber quem foi ele, de onde vinha o poder da família e como esse nome atravessa os Evangelhos, vá ao estudo sobre a dinastia.
 :::
+
+### O que o Talmude Diz sobre o Julgamento de Jesus?
+
+Os Evangelhos não são o único texto antigo que fala de um julgamento assim. O Talmude, a grande coleção dos ensinos dos rabinos, traz as regras com que os tribunais judeus julgavam e, em um trecho, conta o fim de um homem chamado Yeshu, que muitos leitores entendem como Jesus. É de outro tempo e de outra mão: a Mishná, que é a base do Talmude, foi posta por escrito no século II, mais de cem anos depois de Jesus, e o Talmude da Babilônia, que a comenta, foi reunido do século III ao VI. Nenhum Evangelho o cita, e nada nele vem de quem viu aquela sexta-feira. Serve para ouvir como o outro lado guardou a lembrança.
+
+O trecho está no tratado Sanhedrin, página 43a, e repete um ensino mais antigo, em aramaico. Na véspera da Páscoa penduraram Yeshu, o Nazareno (*Yeshu ha-Notzri*). Um pregoeiro saiu à frente dele durante quarenta dias, anunciando que ele ia ser apedrejado por ter praticado feitiçaria, seduzido e desviado Israel, e que quem soubesse de algum mérito a favor dele viesse dizê-lo. Ninguém veio, e ele foi pendurado na véspera da Páscoa. Logo adiante, um rabino pergunta se a um sedutor assim se procuraria defesa e responde que com Yeshu foi diferente, porque ele era próximo do governo. O mesmo trecho conta ainda de cinco discípulos de Yeshu levados a julgamento.
+
+:::ficha O Talmude e os Evangelhos Lado a Lado
+- O dia | O Talmude diz que foi na véspera da Páscoa. João conta que, quando Jesus foi condenado, “era a preparação da páscoa” [[Jo 19.14]].
+- A acusação | O Talmude: feitiçaria, sedução e desvio de Israel. Os Evangelhos põem na boca dos adversários acusações do mesmo tipo: “Este não expulsa os demônios senão por Belzebu” [[Mt 12.24]]; “antes engana o povo” [[Jo 7.12]]; “Achamos este homem pervertendo a nossa nação” [[Lc 23.2]].
+- Quem pune e como | O Talmude fala de apedrejamento e de um corpo pendurado, por decisão do tribunal judeu. Nos Evangelhos, o governador romano “lho entregou para ser crucificado” [[Jo 19.16]].
+- A defesa | O Talmude conta quarenta dias de pregoeiro chamando quem tivesse algo a favor dele. Nos Evangelhos, os principais sacerdotes e todo o sinédrio “buscavam falso testemunho contra Jesus” [[Mt 26.59]], e a decisão de entregá-lo a Pilatos veio “chegada a manhã” [[Mt 27.1]], na manhã seguinte à prisão.
+- O governo | O Talmude diz que Yeshu era próximo do governo. Nos Evangelhos, quem procura soltá-lo é o governador: “Daí em diante Pilatos procurava soltá-lo” [[Jo 19.12]].
+:::
+
+Os dois lados coincidem em pouco: que houve um julgamento, na véspera da Páscoa, e que Jesus era acusado de enganar o povo. Divergem no resto: apedrejamento e pregoeiro de um lado; noite, Pilatos e cruz do outro. Nem todos os que leem o Talmude aceitam que esse Yeshu seja Jesus de Nazaré, nome que era comum na época. E passagens assim foram cortadas de muitas edições antigas, por censura e por medo de represália, e só voltaram à maioria delas a partir do início do século XX.
+
+A Mishná também traz as regras para julgar casos de pena de morte (Sanhedrin 4.1): o tribunal julga de dia, só pode condenar no dia seguinte e não julga na véspera do sábado nem de festa. Os Evangelhos contam uma prisão à luz de lanternas e archotes [[Jo 18.3]], o interrogatório diante do sumo sacerdote ainda de noite [[Mt 26.57]] [[Mt 26.74]] e a decisão de entregá-lo a Pilatos “chegada a manhã” [[Mt 27.1]], numa sexta-feira que era véspera de sábado [[Jo 19.31]]. Nenhum Evangelho cita essas regras, e a Mishná só foi escrita mais de um século depois: não se sabe se elas valiam assim, em Jerusalém, naquela noite.
+
+Outro trecho (Sanhedrin 41a) lembra que, quarenta anos antes da destruição do Templo, o Sinédrio deixou a Câmara das Pedras Talhadas, onde se reunia, e passou a sentar-se numa loja perto do monte do Templo, e um rabino entende que daí em diante o tribunal deixou de julgar casos de pena de morte. O Templo caiu no ano 70; quarenta anos antes dá cerca do ano 30, a época de Jesus. João conta que os acusadores disseram a Pilatos: “A nós não nos é lícito tirar a vida a ninguém” [[Jo 18.31]]. O Talmude não liga uma coisa à outra e não fala de Jesus nesse ponto.
 
 ### As Idas e Vindas da Ceia ao Gólgota
 

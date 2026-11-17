@@ -8,6 +8,21 @@ Regras:
 - **Decisões** dizem o que foi escolhido, por quê e o que ficou de fora. **Pendências** são o que ficou para depois.
 - O hash do commit não entra na entrada (ele ainda não existe ao escrever); `git log -- DIARIO.md` liga cada entrada ao seu commit.
 
+## 2026-11-17 17:27 -0400 — Prisão e Interrogatório: a cena “A quem buscais?” e o Talmude
+
+**Autor:** Valter, com Claude. O dono pediu para ajustar a história da prisão (Jesus pergunta quem eles procuram, diz que é ele e os guardas caem) e para trazer o assunto do Talmude judaico. Entendi “a história lá” como o livro `paixao-prisao-e-interrogatorio`, onde a prisão é contada.
+
+**O que entra:**
+1. **A cena de João (Jo 18.3-9)** no começo do livro, antes do beijo e da espada: o diálogo `A Quem Buscais?` com as falas exatas da Almeida (a pergunta, “Sou eu”, os guardas que recuam e caem por terra, a segunda pergunta e o pedido “deixai ir estes”), com o texto de ligação (lanternas, archotes e armas; a única ponte com Jo 8.58 é o *egō eimi* grego; Judas “também estava com eles”; Jo 18.9). O beijo (Mt 26.48-49, Lc 22.47-48) vem depois, e o texto diz que os Evangelhos contam lados da mesma noite e que ele não afirma o que veio primeiro.
+2. **A seção “O que o Talmude Diz sobre o Julgamento de Jesus?”**, depois de Herodes e antes de “As Idas e Vindas”: o que é o Talmude e de quando (Mishná do século II, Talmude da Babilônia do III ao VI; nenhum Evangelho o cita); Sanhedrin 43a (Yeshu ha-Notzri, a véspera da Páscoa, o pregoeiro de quarenta dias, a acusação de feitiçaria e de desviar Israel, “próximo do governo”); a ficha `O Talmude e os Evangelhos Lado a Lado` (o dia, a acusação, quem pune e como, a defesa, o governo); a Mishná Sanhedrin 4.1 (causas de morte julgadas de dia, condenação só no dia seguinte, nada na véspera de sábado ou festa); e Sanhedrin 41a (o Sinédrio sem a pena de morte quarenta anos antes do Templo, cruzado com Jo 18.31).
+3. **Fontes:** `paixao-talmude` (os trechos, lidos em aramaico e inglês no sefaria.org, edição William Davidson, em 17/11/2026) e `paixao-wikipedia-talmude` (datas, censura e a divisão dos estudiosos) em `PAIXAO_WORKS`; o livro lista as duas e os versículos novos. O livro passou de 20 para 25 minutos.
+4. **Teste novo** em `logica/paixao.spec.ts`: a cena “A quem buscais?” (as falas, a queda, antes da espada), a seção do Talmude (origem e data antes do conteúdo, as ressalvas, nenhum nome de estudioso, nenhum “…” que não seja Almeida) e as obras registradas.
+5. **CLAUDE.md:** as duas exceções pedidas pelo dono ficaram anotadas no parágrafo da Paixão.
+
+**Decisões:** (a) o Talmude é a segunda exceção à regra “só os Evangelhos” (a primeira foram os nomes Dimas e Gestas): origem e data antes do conteúdo, nenhum nome de estudioso, o Talmude nunca corrige os Evangelhos, e o texto só diz que “muitos leitores” entendem Yeshu como Jesus; (b) a tradução inglesa do Sefaria é CC BY-NC e não foi copiada: tudo do Talmude está em palavras próprias, e nenhuma aspa “…” guarda nada que não seja a Almeida exata (o teste confere); (c) “os guardas” segue a palavra do dono e Jo 18.3 (a coorte e uns guardas), e o texto não dá a causa da queda, só diz que caíram quando Jesus falou; (d) escolhi os três pontos do Talmude que mais se ligam ao julgamento (43a, 4.1 e 41a), porque o pedido não dizia qual; ficou de fora o que o Talmude diz do nascimento de Jesus, por não ser do julgamento; (e) a seção ficou aberta, não numa dobra “Saiba mais”, porque o dono pediu para “trazer o assunto”; basta uma linha `:::dobra` abaixo do título para recolhê-la.
+
+**Pendências:** nada foi publicado; o estudo está só no `dev`. Para subir, usar o roteiro de sempre (ramo à parte saído de `origin/main`, `DIARIO.md` refeito sobre a versão de lá). Se o dono quiser outro ponto do Talmude, é outra seção ou outro livro.
+
 ## 2026-11-16 07:40 -0400 — A Bíblia Conectada e cinco estudos de Teologia e Provérbios vão para a `main`
 
 **Autor:** Valter, com Claude. O dono viu a tela de leitura de A Bíblia Conectada pronta e mandou levar para a `main` o que estava no `dev` desde 13/11, de várias sessões, num só envio.
