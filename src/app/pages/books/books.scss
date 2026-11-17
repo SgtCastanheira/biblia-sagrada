@@ -37,6 +37,40 @@ h1 {
   }
 }
 
+.ways {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin: 16px 0 0;
+
+  a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 64px;
+    padding: 10px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--mat-sys-outline-variant);
+    background: var(--mat-sys-surface-container-low);
+    color: var(--mat-sys-on-surface-variant);
+    font: 400 13px/1.4 Inter, sans-serif;
+    text-decoration: none;
+  }
+
+  mat-icon {
+    flex: none;
+    color: var(--accent-gold);
+  }
+
+  strong {
+    display: block;
+    color: var(--mat-sys-on-surface);
+    font: 600 15px var(--heading-font);
+  }
+}
+
 .segmented {
   position: sticky;
   top: 60px;

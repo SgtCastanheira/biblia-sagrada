@@ -18,6 +18,21 @@
     }
   </div>
 } @else {
+  <nav class="ways" aria-label="Outras maneiras de ler">
+    <a matRipple routerLink="/cronologica">
+      <mat-icon>schedule</mat-icon>
+      <span><strong>Bíblia em Ordem Cronológica</strong>Os mesmos capítulos, na ordem em que as coisas aconteceram.</span>
+    </a>
+    <a matRipple routerLink="/tora">
+      <mat-icon>menu_book</mat-icon>
+      <span><strong>A Torá</strong>Os cinco livros de Moisés e as 54 porções da leitura semanal.</span>
+    </a>
+    <a matRipple routerLink="/talmude">
+      <mat-icon>local_library</mat-icon>
+      <span><strong>O Talmude</strong>Mishná e Guemará: o mapa, trechos e o caminho até o texto.</span>
+    </a>
+  </nav>
+
   <div class="segmented" role="tablist">
     <button role="tab" [class.active]="testament() === 'AT'" (click)="testament.set('AT')">
       Antigo Testamento <span>39</span>

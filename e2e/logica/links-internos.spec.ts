@@ -30,7 +30,7 @@ const hymns = new Set(json<{ hymns: { n: number }[] }>('harpa.json').hymns.map((
 const FIXED = new Set([
   '/', '/estudo', '/estudo/livros', '/ensino', '/meu-espaco', '/historia', '/avivamento', '/profecias', '/dicionario', '/atlas', '/mapas',
   '/busca', '/quiz', '/livros', '/curiosidades', '/vozes', '/devocional', '/ibuc', '/ebd', '/ebd/apoio', '/anotacoes', '/favoritos', '/sermoes', '/novidades',
-  '/fontes', '/creditos', '/ajustes', '/harpa', '/tribos', '/genealogia', '/conexoes', '/memorial', '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo', '/epocas', '/datas',
+  '/fontes', '/creditos', '/ajustes', '/harpa', '/tribos', '/genealogia', '/conexoes', '/memorial', '/assembleia-de-deus', '/assembleia-de-deus/linha-do-tempo', '/epocas', '/datas', '/cronologica', '/tora', '/talmude',
 ]);
 
 /** Devolve o motivo se a rota não existe; texto vazio se existe. */

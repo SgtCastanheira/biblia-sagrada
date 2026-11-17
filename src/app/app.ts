@@ -63,7 +63,7 @@ export class App {
   /** Aba do menu de cada tela: cada coisa mora em um só lugar. */
   protected readonly tab = computed<NavTab | null>(() => {
     const url = this.url();
-    if (/^\/(ler\/|busca|livros)/.test(url)) return 'biblia';
+    if (/^\/(ler\/|busca|livros|cronologica|tora|talmude)/.test(url)) return 'biblia';
     if (/^\/vozes/.test(url)) return 'jornal';
     if (/^\/(ensino|ebd|ibuc|sermoes)/.test(url)) return 'ensino';
     if (/^\/(meu-espaco|devocional|anotacoes|favoritos|ajustes|novidades|creditos)/.test(url)) return 'eu';

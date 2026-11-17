@@ -38,6 +38,13 @@
       <span class="chapter-number">{{ chapterNum() }}</span>
       <span class="ornament" aria-hidden="true"><span></span><i></i><span></span></span>
     </div>
+    @if (chronoPlace(); as place) {
+      <a class="order-bar" routerLink="/cronologica" aria-label="Ordem cronológica: ver todas as seções">
+        <mat-icon>schedule</mat-icon>
+        <span><strong>Ordem cronológica</strong> · {{ place.section }}</span>
+        <small>{{ place.n }}/{{ place.total }}</small>
+      </a>
+    }
 
 
     <!-- Um só painel com tudo o que há para estudar neste capítulo -->
@@ -183,7 +190,7 @@
     <!-- Navegação entre capítulos -->
     <nav class="chapter-nav">
       @if (previous(); as prev) {
-        <a class="nav-card" matRipple [routerLink]="['/ler', prev.bookId, prev.chapter]">
+        <a class="nav-card" matRipple [routerLink]="['/ler', prev.bookId, prev.chapter]" [queryParams]="orderParams()">
           <mat-icon>arrow_back</mat-icon>
           <span><small>Anterior</small>{{ prev.label }}</span>
         </a>
@@ -191,7 +198,7 @@
         <span></span>
       }
       @if (next(); as nxt) {
-        <a class="nav-card next" matRipple [routerLink]="['/ler', nxt.bookId, nxt.chapter]">
+        <a class="nav-card next" matRipple [routerLink]="['/ler', nxt.bookId, nxt.chapter]" [queryParams]="orderParams()">
           <span><small>Próximo</small>{{ nxt.label }}</span>
           <mat-icon>arrow_forward</mat-icon>
         </a>
@@ -202,13 +209,13 @@
   <!-- Botões flutuantes -->
   <div class="fabs" [class.hidden]="ui.barsHidden()">
     @if (previous(); as prev) {
-      <a class="fab" matRipple [routerLink]="['/ler', prev.bookId, prev.chapter]" aria-label="Capítulo anterior">
+      <a class="fab" matRipple [routerLink]="['/ler', prev.bookId, prev.chapter]" [queryParams]="orderParams()" aria-label="Capítulo anterior">
         <mat-icon>chevron_left</mat-icon>
       </a>
     }
     <span class="spacer"></span>
     @if (next(); as nxt) {
-      <a class="fab" matRipple [routerLink]="['/ler', nxt.bookId, nxt.chapter]" aria-label="Próximo capítulo">
+      <a class="fab" matRipple [routerLink]="['/ler', nxt.bookId, nxt.chapter]" [queryParams]="orderParams()" aria-label="Próximo capítulo">
         <mat-icon>chevron_right</mat-icon>
       </a>
     }
