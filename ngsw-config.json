@@ -116,7 +116,9 @@
           "/bible/ticuna/*.json",
           "/bible/kaingang/*.json",
           "/bible/terena/*.json",
-          "/bible/xavante/*.json"
+          "/bible/xavante/*.json",
+          "/bible/bakairi/*.json",
+          "/bible/kayapo/*.json"
         ]
       }
     },

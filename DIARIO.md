@@ -8,6 +8,19 @@ Regras:
 - **Decisões** dizem o que foi escolhido, por quê e o que ficou de fora. **Pendências** são o que ficou para depois.
 - O hash do commit não entra na entrada (ele ainda não existe ao escrever); `git log -- DIARIO.md` liga cada entrada ao seu commit.
 
+## 2026-11-17 11:23 -0400 — Bakairí e Kayapó na lista de versões, e busca no seletor
+
+**Autor:** Valter, com Claude. O dono perguntou se dava para achar “a língua do Xingu” na lista de versões e pediu para incluir as duas línguas que faltavam e criar um campo de busca. Depois mandou levar para a `main`.
+
+**O que sobe:**
+1. **Novo Testamento em Bakairí (`bkqNT`) e em Kayapó/Mebêngôkre (`txuNT`)**, do eBible.org (Wycliffe, CC BY-NC-ND 3.0, texto e pontuação sem nenhuma mudança), embutidos como as outras línguas indígenas: `public/bible/bakairi` e `public/bible/kayapo`, `LOCAL_VERSIONS`/`LOCAL_ONLY`, grupo de cache no `ngsw-config.json`, `credits.ts` e `CREDITOS.md`. A contagem de versículos bate com a do eBible (7.821 e 7.675).
+2. **Busca na lista de versões** (`filterVersionGroups` em `core/versions.ts`, puro; campo no alto de `shared/version-sheet.ts`, que também serve ao seletor da versão de comparação): sem acento e sem maiúsculas; todas as palavras digitadas precisam aparecer no nome, na sigla, na língua, nas palavras extras da versão (`BibleVersion.keywords`, novo) ou em “só Novo Testamento”; mostra quantas achou, explica quando não acha nada, tem botão de limpar e o Enter escolhe a única que sobrou. O “×” nativo do navegador foi escondido para não ficar dois botões.
+3. **Testes:** `logica/versoes.spec.ts` (a busca, o Novo Testamento inteiro das duas línguas, e toda pasta de `public/bible` com entrada em `versions.ts` e no `ngsw-config.json`) e um teste novo em `linguas-indigenas.spec.ts` (digitar “xingu”, sem acento, sem resultado, limpar, Enter e o aviso de direitos). Novidade em `whats-new.ts`.
+
+**Decisões:** (a) “Xingu” é uma região, não uma língua: a busca por “xingu” acha as três línguas de povos ligados ao rio, o Kayabí (que vive no Parque Indígena do Xingu, segundo a Wikipédia em português), o Bakairí e o Kayapó. (b) Os dois últimos têm ligação mais fraca: hoje os Bakairi estão nas terras Bakairi (Paranatinga) e Santana (Nobres), em Mato Grosso, e só o grupo “oriental” ficava no alto Xingu, no passado; as terras dos Mebêngôkre (como a Menkragnoti) ficam na bacia do Xingu e do Iriri, fora do Parque. Por isso o texto do app diz “povos ligados ao rio Xingu” e nunca que moram no Parque; quem quiser que “xingu” ache só o Kayabí tira a palavra de `keywords` das duas versões. (c) Não há no eBible nenhuma tradução em Kamaiurá, Kuikuro, Kalapalo, Juruna/Yudjá, Ikpeng, Kĩsêdjê, Waurá nem Mehinaku (conferido na lista pública de traduções em 17/11/2026). (d) Fica fora deste envio tudo o que está pendente no `dev` de outras sessões (mapa de Mato Grosso, `mt.md`) e o commit `restante`.
+
+**Pendências:** os testes `mt-mapa.spec.ts` do `dev` falham (bandeiras e imagens de Mato Grosso sem crédito em `CREDITOS.md`, e três lugares sem bandeira nem ícone): é trabalho de outra sessão, não entra aqui. O pacote inicial já estava 2,51 kB acima do alerta de 1,05 MB na `main` e esta mudança soma 5,3 kB (medido: 7,85 kB acima; 1,3 kB a mais no que se baixa, comprimido). É só aviso (o limite que quebra o build é 2 MB), mas vale tirar do pacote inicial a folha de versões e a lista de novidades quando alguém for enxugá-lo.
+
 ## 2026-11-16 13:55 -0400 — Mundo Cristão: notícias de missões e da igreja perseguida, dentro do Jornal
 
 **Autor:** Valter, com Claude. O dono trouxe um pedido pronto (escrito para um site HTML estático) para uma seção de notícias sobre missões, igreja perseguida e países onde o evangelho é proibido, atualizada ao vivo, com reserva diária. O pedido foi adaptado ao app Angular, e depois o dono mandou juntar a seção com as Novas Vozes e publicar.

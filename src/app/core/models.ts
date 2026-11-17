@@ -35,6 +35,8 @@ export interface BibleVersion {
   badge?: string;
   /** Aviso de direitos que a licença pede junto do texto (mostrado no fim de cada capítulo). */
   copyright?: string;
+  /** Palavras extras para a busca da lista de versões (região, povo, outros nomes da língua), sem aparecer na tela. */
+  keywords?: string;
 }
 
 export interface Verse {
