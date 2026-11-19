@@ -38,30 +38,120 @@ export interface ChronoGroup {
   name: string;
   period: string;
   icon: string;
+  /** Os anos que a fase cobre (negativo = a.C.), os mesmos do campo `period`. Sem anos, a fase não tem data (a criação). */
+  years?: [from: number, to: number];
   /** Texto que vem ANTES do grupo (os 400 anos sem livros, por exemplo). */
   before?: { title: string; text: string; link: string };
 }
 
 export const CHRONO_GROUPS: ChronoGroup[] = [
   { id: 'comeco', name: 'No Princípio', period: 'Antes de Abraão', icon: 'public' },
-  { id: 'patriarcas', name: 'Jó e os Patriarcas', period: 'c. 2000–1700 a.C.', icon: 'family_history' },
-  { id: 'exodo', name: 'O Êxodo, a Lei e o Deserto', period: 'c. 1700–1400 a.C.', icon: 'hiking' },
-  { id: 'conquista', name: 'A Conquista e os Juízes', period: 'c. 1400–1050 a.C.', icon: 'flag' },
-  { id: 'reino-unido', name: 'Samuel, Saul, Davi e Salomão', period: 'c. 1100–930 a.C.', icon: 'military_tech' },
-  { id: 'reino-dividido', name: 'Israel e Judá: Reis e Profetas', period: '930–586 a.C.', icon: 'compare_arrows' },
-  { id: 'exilio', name: 'A Queda de Jerusalém e o Exílio', period: '605–536 a.C.', icon: 'luggage' },
-  { id: 'retorno', name: 'A Volta do Exílio', period: '538–430 a.C.', icon: 'home_work' },
+  { id: 'patriarcas', name: 'Jó e os Patriarcas', period: 'c. 2000–1700 a.C.', icon: 'family_history', years: [-2000, -1700] },
+  { id: 'exodo', name: 'O Êxodo, a Lei e o Deserto', period: 'c. 1700–1400 a.C.', icon: 'hiking', years: [-1700, -1400] },
+  { id: 'conquista', name: 'A Conquista e os Juízes', period: 'c. 1400–1050 a.C.', icon: 'flag', years: [-1400, -1050] },
+  { id: 'reino-unido', name: 'Samuel, Saul, Davi e Salomão', period: 'c. 1100–930 a.C.', icon: 'military_tech', years: [-1100, -930] },
+  { id: 'reino-dividido', name: 'Israel e Judá: Reis e Profetas', period: '930–586 a.C.', icon: 'compare_arrows', years: [-930, -586] },
+  { id: 'exilio', name: 'A Queda de Jerusalém e o Exílio', period: '605–536 a.C.', icon: 'luggage', years: [-605, -536] },
+  { id: 'retorno', name: 'A Volta do Exílio', period: '538–430 a.C.', icon: 'home_work', years: [-538, -430] },
   {
-    id: 'jesus', name: 'A Vida de Jesus', period: 'c. 6 a.C. – 30 d.C.', icon: 'star',
+    id: 'jesus', name: 'A Vida de Jesus', period: 'c. 6 a.C. – 30 d.C.', icon: 'star', years: [-6, 30],
     before: {
       title: 'Os 400 Anos de Silêncio',
       text: 'Entre Malaquias e o nascimento de Jesus passam-se cerca de quatrocentos anos sem nenhum livro da Bíblia. A história continuou: Persas, Alexandre, os Macabeus e Roma.',
       link: '/epocas/entre-testamentos',
     },
   },
-  { id: 'igreja', name: 'A Igreja Nasce: Atos e as Cartas', period: '30–68', icon: 'local_fire_department' },
-  { id: 'fim', name: 'Os Últimos Escritos', period: 'c. 85–95', icon: 'auto_awesome' },
+  { id: 'igreja', name: 'A Igreja Nasce: Atos e as Cartas', period: '30–68', icon: 'local_fire_department', years: [30, 68] },
+  { id: 'fim', name: 'Os Últimos Escritos', period: 'c. 85–95', icon: 'auto_awesome', years: [85, 95] },
 ];
+
+/**
+ * A linha do tempo. A régua não é uma reta só, porque uma reta deixaria as fases do Novo Testamento (36 anos de Jesus, 38 da Igreja)
+ * finas demais para se ler: de Abraão à volta do exílio os anos seguem a mesma medida; os 400 anos sem livros viram um pequeno
+ * corte; e de Jesus ao Apocalipse a escala é ampliada (`TIMELINE_ZOOM` vezes). A tela diz isso, e a parte de “quanto do tempo”
+ * (`share`) é sempre calculada com os anos de verdade.
+ */
+export const TIMELINE_START = -2000;
+export const TIMELINE_END = 95;
+/** Onde cada trecho da faixa começa e termina, em % da largura (0 a 100). */
+export const TL_CAP_END = 4; // a criação, sem data, ocupa o começo
+export const TL_BC_END = 70; // até a volta do exílio
+export const TL_AD_START = 75; // de Jesus em diante; entre os dois fica o corte dos 400 anos
+/** Largura mínima do desenho, em px: abaixo disso ele desliza para o lado em vez de apertar o texto. */
+export const TL_MIN_WIDTH = 1000;
+/** Largura dos rótulos (px). A tela e o teste usam o mesmo número para que um rótulo nunca cubra o vizinho. */
+export const TL_LABEL_WIDTH = 112;
+
+const yearOf = (id: string, end: 0 | 1): number => CHRONO_GROUPS.find((g) => g.id === id)!.years![end];
+
+/** Posição (%) de um ano na faixa. */
+export function timelinePosition(year: number): number {
+  const bcEnd = yearOf('retorno', 1);
+  const adStart = yearOf('jesus', 0);
+  if (year <= bcEnd) return TL_CAP_END + ((year - TIMELINE_START) / (bcEnd - TIMELINE_START)) * (TL_BC_END - TL_CAP_END);
+  if (year >= adStart) return TL_AD_START + ((year - adStart) / (TIMELINE_END - adStart)) * (100 - TL_AD_START);
+  return TL_BC_END + ((year - bcEnd) / (adStart - bcEnd)) * (TL_AD_START - TL_BC_END);
+}
+
+/** Quantas vezes a escala do Novo Testamento é maior que a do Antigo. */
+export const TIMELINE_ZOOM =
+  ((100 - TL_AD_START) / (TIMELINE_END - yearOf('jesus', 0))) / ((TL_BC_END - TL_CAP_END) / (yearOf('retorno', 1) - TIMELINE_START));
+
+/** A cor de cada fase, a mesma na linha do tempo e nos desenhos de quem viveu na mesma época. */
+export const PHASE_COLORS: Record<string, string> = {
+  comeco: '#4f8f77', patriarcas: '#b0894a', exodo: '#c0753f', conquista: '#a0543f', 'reino-unido': '#c9a23a', 'reino-dividido': '#7a6aa8',
+  exilio: '#5b6b86', retorno: '#6f9a6a', jesus: '#e0b04a', igreja: '#d0603a', fim: '#8a5aa0',
+};
+
+export interface TimelineSegment {
+  id: string;
+  /** Ano em que a faixa começa e termina no desenho (negativo = a.C.). */
+  from: number;
+  to: number;
+  /** Posição e largura na faixa, em %. */
+  left: number;
+  width: number;
+  /** Quanto do tempo (de 2000 a.C. ao ano 95) a fase cobre, em %, com os anos de verdade (sem a ampliação). */
+  share: number;
+}
+
+/**
+ * As fases com data. Onde duas se sobrepõem (a conquista e o reino de Saul, a queda de Jerusalém e o exílio), a faixa termina onde a
+ * próxima começa; os vazios (os 400 anos sem livros, os anos entre Paulo e João) ficam em branco.
+ */
+export function timelineSegments(groups: ChronoGroup[] = CHRONO_GROUPS): TimelineSegment[] {
+  const dated = groups.filter((g) => g.years);
+  return dated.map((g, i) => {
+    const [from, to] = g.years!;
+    const next = dated[i + 1]?.years?.[0];
+    const end = next !== undefined ? Math.min(to, next) : to;
+    const left = timelinePosition(from);
+    return { id: g.id, from, to: end, left, width: timelinePosition(end) - left, share: ((end - from) / (TIMELINE_END - TIMELINE_START)) * 100 };
+  });
+}
+
+export interface TimelinePin {
+  id: string;
+  /** Onde o marcador toca a faixa, em %. */
+  center: number;
+  /** Os marcadores se alternam (em cima, embaixo) para os rótulos terem largura para caber. */
+  side: 'above' | 'below';
+  /** O primeiro rótulo começa na borda da esquerda e o último termina na da direita; os outros ficam centrados no marcador. */
+  anchor: 'start' | 'center' | 'end';
+}
+
+export function timelinePins(groups: ChronoGroup[] = CHRONO_GROUPS): TimelinePin[] {
+  const segments = timelineSegments(groups);
+  return groups.map((g, i) => {
+    const seg = segments.find((x) => x.id === g.id);
+    return {
+      id: g.id,
+      center: seg ? seg.left + seg.width / 2 : TL_CAP_END / 2,
+      side: i % 2 === 0 ? 'above' : 'below',
+      anchor: i === 0 ? 'start' : i === groups.length - 1 ? 'end' : 'center',
+    };
+  });
+}
 
 /** `GEN 1-11; JOB 1-42` → partes. `PSA *` vira o que sobrar do livro (resolvido por `build`). */
 type Source = [group: string, title: string, summary: string, parts: string, note?: string];
@@ -296,6 +386,41 @@ export const CHRONO_CHAPTERS: ChronoChapter[] = (() => {
 })();
 
 const INDEX = new Map(CHRONO_CHAPTERS.map((c) => [`${c.bookId} ${c.chapter}`, c.index]));
+
+export interface ChronoBook {
+  id: string;
+  name: string;
+  abbrev: string;
+  chapters: number;
+  /** Lugar do livro na ordem dos fatos (1 a 66): o do seu primeiro capítulo na leitura cronológica. */
+  position: number;
+  /** O primeiro e o último capítulo do livro na leitura cronológica. */
+  first: ChronoChapter;
+  last: ChronoChapter;
+  /** As fases da história por onde o livro passa, na ordem (um livro como Salmos atravessa várias). */
+  phases: string[];
+}
+
+/**
+ * Os 66 livros na ordem cronológica: cada livro ocupa o lugar do seu PRIMEIRO capítulo na leitura. É uma regra simples e que se confere
+ * (nada é escolhido à mão); os livros que se espalham (Salmos, Provérbios, Crônicas, Isaías…) trazem a lista das fases por onde passam.
+ */
+export function chronoBooks(): ChronoBook[] {
+  const firsts = new Map<string, ChronoChapter>();
+  const lasts = new Map<string, ChronoChapter>();
+  const phases = new Map<string, string[]>();
+  for (const c of CHRONO_CHAPTERS) {
+    if (!firsts.has(c.bookId)) firsts.set(c.bookId, c);
+    lasts.set(c.bookId, c);
+    const group = CHRONO_SECTIONS[c.section - 1].group;
+    const list = phases.get(c.bookId) ?? [];
+    if (!list.includes(group)) list.push(group);
+    phases.set(c.bookId, list);
+  }
+  return BOOKS.filter((b) => firsts.has(b.id))
+    .sort((a, b) => firsts.get(a.id)!.index - firsts.get(b.id)!.index)
+    .map((b, i) => ({ id: b.id, name: b.name, abbrev: b.abbrev, chapters: b.chapters, position: i + 1, first: firsts.get(b.id)!, last: lasts.get(b.id)!, phases: phases.get(b.id)! }));
+}
 
 /** Posição de um capítulo na ordem cronológica (0 a 1.188), ou -1 se o capítulo não existe. */
 export const chronoIndex = (bookId: string, chapter: number): number => INDEX.get(`${bookId} ${chapter}`) ?? -1;

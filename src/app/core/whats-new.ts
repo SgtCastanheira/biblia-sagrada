@@ -22,6 +22,17 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    id: 'maquina-do-tempo',
+    date: '19 de novembro de 2026',
+    title: 'A Máquina do Tempo e a Bíblia em ordem cronológica por dentro',
+    items: [
+      { icon: 'schedule', title: 'A Máquina do Tempo', text: 'Uma faixa de anos de Abraão ao fim do primeiro século: arraste, use as setas ou toque em “Viajar”. O mapa troca para o império daquele tempo, as pessoas que estavam vivas se acendem, e o painel diz em que fase da Bíblia você está, quais livros a contam e o que acontecia no mundo.', link: '/cronologica', tip: 'Em Livros, toque em “Bíblia em Ordem Cronológica” e vá até a Máquina do Tempo' },
+      { icon: 'public', title: 'Fatos do mundo, de qualquer fé', text: 'A faixa mostra também o que a Bíblia não conta, mas que atingiu todo mundo: o vulcão de Santorini, a queda de Nínive, o eclipse de 585 a.C., a peste de Atenas, Alexandre, o calendário juliano. Dois botões separam o que está na Bíblia do que está fora dela. Datas e causas discutidas dizem que são discutidas.', link: '/cronologica' },
+      { icon: 'family_history', title: 'Quem viveu na mesma época', text: 'Escolha um período (o Êxodo, os juízes, o exílio…) e veja as pessoas dele em blocos, com os anos que o Memorial da Fé dá. Viver na mesma época não é ter se conhecido: o que a Bíblia conta sobre encontros vem à parte, com o versículo.', link: '/cronologica' },
+      { icon: 'menu_book', title: 'Os 66 livros em ordem e o tempo em cada livro', text: 'Os livros na ordem dos acontecimentos ou na da escrita; ao trocar, cada livro que mudou de lugar aparece marcado, com quantos lugares subiu ou desceu. Cada livro mostra como conta o tempo (reis, anos, festas, palavras próprias), sempre com o versículo. E uma seção sobre cronos, kairós, aion, hora e as palavras hebraicas para tempo.', link: '/cronologica' },
+    ],
+  },
+  {
     id: 'cronologica-tora-talmude',
     date: '17 de novembro de 2026',
     title: 'A Bíblia em ordem cronológica, a Torá e o Talmude',

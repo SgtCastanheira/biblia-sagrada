@@ -871,7 +871,13 @@ export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; not
   cronologica: {
     title: 'A Bíblia em ordem cronológica',
     note: 'A ordem foi montada para o app, a partir do que os próprios livros dizem sobre o tempo em que se passam e do que os estudiosos costumam aceitar; onde há debate, a seção avisa. O texto é o da Almeida, sem nenhuma mudança.',
-    works: ['thiele', 'dillard-longman', 'carson-moo', 'walton-at', 'keener-nt', 'ndb'],
+    ancientLabel: 'Textos e verbetes lidos',
+    ancient: [
+      'Os anos de quem viveu na mesma época são os do Memorial da Fé (a data dos reis segue Thiele); os dos patriarcas foram calculados com as idades que o próprio Gênesis dá (Gn 17.17; 21.5; 23.1; 25.7 e 25.26; 35.28; 41.46; 47.9 e 47.28; 50.26), a partir do ano que o Memorial dá a Abraão. Cada encontro vem de um trecho da Almeida, conferido pelo nome de quem ele liga',
+      'Verbetes G5550 (chrónos), G2540 (kairós), G165 (aiṓn), G5610 (hṓra), H6256 (ʿēt), H2165 (zĕmān), H4150 (môʿēd) e H5769 (ʿôlām) do Strong’s Exhaustive Concordance, com as definições de Thayer (grego) e de Brown-Driver-Briggs (hebraico) que o site biblehub.com reproduz, e as páginas de interlinear dos versículos citados (Gl 4.4, Mc 1.15, Ef 1.10, At 1.7, 1Ts 5.1, Rm 13.11, 2Co 6.2, Mt 28.20, Hb 1.2, Ef 2.7, Jo 2.4, Jo 17.1, Ap 10.6, Ec 3.1, Gn 1.14, Sl 90.2, Ap 1.3, Ap 12.14, 2Tm 4.6, Tt 1.3, 1Tm 4.1, Jd 18, 1Pe 1.20 e 1Jo 2.18), consultados em 18 de novembro de 2026: o app só diz que um versículo traz uma palavra quando a página mostra essa palavra nele',
+      'A ordem dos 66 livros é a do primeiro capítulo de cada um na leitura cronológica (uma regra que se confere, sem escolha à mão); o ano de escrita de cada livro vem do texto que o app já traz em “Contexto dos livros”. Como cada livro marca o tempo: um versículo do próprio livro, com o trecho exato da Almeida do app, conferido por teste; onde o primeiro versículo não traz rei nem ano, o app diz só isso, e não que o livro inteiro não tenha nenhum marco de tempo',
+    ],
+    works: ['thiele', 'dillard-longman', 'carson-moo', 'walton-at', 'keener-nt', 'ndb', 'strong'],
   },
   tora: {
     title: 'A Torá e as porções semanais',
@@ -909,6 +915,7 @@ export const TOPIC_SOURCES: Record<SourceTopic, SourceSet & { title: string; not
       'Suetônio, Vida de Cláudio 25 (a expulsão dos judeus de Roma) e Tácito, Anais 15.38–44 (o incêndio de Roma, em 64)',
       'Eusébio, História Eclesiástica 3.5 (a igreja de Jerusalém antes do cerco) e 7.22 (a peste e os cristãos de Alexandria)',
       'Procópio, Guerras 2.22–23 (a peste em Constantinopla, em 542) e Agostinho, A Cidade de Deus (resposta ao saque de Roma, em 410)',
+      'Os fatos do mundo todo antes de Cristo (o vulcão de Santorini, o colapso da Idade do Bronze, a queda de Nínive, o eclipse de 585 a.C., as moedas de Creso, a peste de Atenas, Alexandre, as Guerras Púnicas, a China de Qin, o calendário juliano e Augusto) foram lidos em 19 de novembro de 2026 nos verbetes da Wikipédia em inglês “Minoan eruption”, “Late Bronze Age collapse”, “Fall of Nineveh”, “Eclipse of Thales”, “Croeseid”, “Plague of Athens”, “Battle of Gaugamela”, “Punic Wars”, “Qin Shi Huang”, “Julian calendar” e “Augustus”, que resumem os estudos e os autores antigos (Heródoto 1.74, Tucídides 2.47–54): o texto do app só afirma o que esses verbetes dizem e marca como discutida a data de Santorini, a causa do colapso e a previsão de Tales',
       'Decreto nº 847, de 1890, e Constituição de 1824, art. 5 (a religião do Império e o culto doméstico)',
     ],
     works: ['harper-fate', 'ward-perkins', 'kelly-mortality', 'wilson-thirty', 'roberts', 'gonzalez', 'cairns', 'fausto', 'keener-nt', 'walton-at', 'kitchen'],

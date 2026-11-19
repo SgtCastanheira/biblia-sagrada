@@ -9,6 +9,17 @@ import {
   chronoSectionOf,
   sectionRefs,
   sectionSize,
+  TIMELINE_END,
+  TIMELINE_START,
+  TIMELINE_ZOOM,
+  timelinePins,
+  timelinePosition,
+  timelineSegments,
+  TL_AD_START,
+  TL_BC_END,
+  TL_CAP_END,
+  TL_LABEL_WIDTH,
+  TL_MIN_WIDTH,
 } from '../../src/app/core/bible-chronological';
 import { titleCase } from '../../src/app/core/title-case';
 
@@ -184,4 +195,92 @@ test('ordem cronológica: títulos de seção e de grupo seguem o padrão dos t�
     if (g.before && titleCase(g.before.title) !== g.before.title) wrong.push(`${g.before.title} → ${titleCase(g.before.title)}`);
   }
   expect(wrong).toEqual([]);
+});
+
+test('linha do tempo: as fases com data vêm em ordem, sem se sobrepor, dentro da faixa, e a criação fica sem data', () => {
+  const dated = CHRONO_GROUPS.filter((g) => g.years);
+  // só a criação (“Antes de Abraão”) não tem data; as outras dez têm
+  expect(CHRONO_GROUPS.filter((g) => !g.years).map((g) => g.id)).toEqual(['comeco']);
+  expect(dated).toHaveLength(CHRONO_GROUPS.length - 1);
+
+  const segments = timelineSegments();
+  expect(segments.map((s) => s.id)).toEqual(dated.map((g) => g.id));
+  let previousEnd = TIMELINE_START;
+  let previousRight = 0;
+  for (const seg of segments) {
+    expect(seg.left, `${seg.id} sobrepõe a faixa anterior`).toBeGreaterThanOrEqual(previousRight - 1e-9);
+    previousRight = seg.left + seg.width;
+    expect(seg.from, `${seg.id} começa antes de acabar a fase anterior`).toBeGreaterThanOrEqual(previousEnd);
+    expect(seg.to, `${seg.id} acaba antes de começar`).toBeGreaterThan(seg.from);
+    expect(seg.left).toBeGreaterThanOrEqual(0);
+    expect(seg.left + seg.width).toBeLessThanOrEqual(100.0001);
+    previousEnd = seg.to;
+  }
+  expect(segments[0].from).toBe(TIMELINE_START);
+  expect(segments[segments.length - 1].to).toBe(TIMELINE_END);
+
+  // a faixa nunca é mais larga que a fase diz: onde há sobreposição (conquista × reino de Saul, queda de Jerusalém × exílio) ela encurta
+  for (const g of dated) {
+    const seg = segments.find((s) => s.id === g.id)!;
+    expect(seg.to).toBeLessThanOrEqual(g.years![1]);
+  }
+  expect(segments.find((s) => s.id === 'conquista')!.to).toBe(-1100);
+  expect(segments.find((s) => s.id === 'exilio')!.to).toBe(-538);
+
+  // entre a volta do exílio e Jesus fica o vazio dos 400 anos sem livros (cerca de 424 anos no desenho)
+  const gap = segments.find((s) => s.id === 'jesus')!.from - segments.find((s) => s.id === 'retorno')!.to;
+  expect(gap).toBeGreaterThan(400);
+  expect(gap).toBeLessThan(450);
+
+  // os anos do campo `period` e os de `years` falam dos mesmos números
+  for (const g of dated) {
+    const nums = [...g.period.matchAll(/\d+/g)].map((m) => Number(m[0]));
+    const ac = /a\.C\./.test(g.period);
+    const mixed = /d\.C\./.test(g.period);
+    const expected = mixed ? [-nums[0], nums[1]] : ac ? nums.map((n) => -n) : nums;
+    expect(g.years, `${g.id}: ${g.period}`).toEqual(expected);
+  }
+});
+
+test('linha do tempo: a régua tem três trechos (anos antes de Cristo, corte dos 400 anos, Novo Testamento ampliado) e o “quanto do tempo” usa os anos de verdade', () => {
+  const segments = timelineSegments();
+  const byId = (id: string) => segments.find((s) => s.id === id)!;
+  // a criação ocupa o começo; Abraão começa logo depois, e o Apocalipse termina na ponta
+  expect(timelinePosition(TIMELINE_START)).toBeCloseTo(TL_CAP_END, 6);
+  expect(byId('retorno').left + byId('retorno').width).toBeCloseTo(TL_BC_END, 6);
+  expect(byId('jesus').left).toBeCloseTo(TL_AD_START, 6);
+  expect(byId('fim').left + byId('fim').width).toBeCloseTo(100, 6);
+  // a escala do Novo Testamento é ampliada (e a tela diz quantas vezes)
+  expect(TIMELINE_ZOOM).toBeGreaterThan(4);
+  expect(TIMELINE_ZOOM).toBeLessThan(8);
+  // a parte do tempo vem dos anos reais, não da largura ampliada: a vida de Jesus são 36 de 2.095 anos (cerca de 1,7%)
+  expect(byId('jesus').share).toBeCloseTo((36 / (TIMELINE_END - TIMELINE_START)) * 100, 6);
+  expect(byId('jesus').width).toBeGreaterThan(byId('jesus').share * 3); // desenhada bem maior do que é
+  // sem as sobreposições, as partes do tempo somam menos que 100% (os 400 anos e os anos entre Paulo e João ficam de fora)
+  const sum = segments.reduce((a, s) => a + s.share, 0);
+  expect(sum).toBeLessThan(100);
+  expect(sum).toBeGreaterThan(75);
+});
+
+test('linha do tempo: marcadores alternam em cima e embaixo, e nenhum rótulo cobre o vizinho do mesmo lado na largura mínima do desenho', () => {
+  const pins = timelinePins();
+  expect(pins.map((p) => p.id)).toEqual(CHRONO_GROUPS.map((g) => g.id));
+  expect(pins[0].anchor).toBe('start');
+  expect(pins[pins.length - 1].anchor).toBe('end');
+  pins.slice(1, -1).forEach((p) => expect(p.anchor).toBe('center'));
+  pins.forEach((p, i) => expect(p.side).toBe(i % 2 === 0 ? 'above' : 'below'));
+  expect(pins.every((p) => p.center >= 0 && p.center <= 100)).toBe(true);
+
+  // as caixas dos rótulos, em px, com o desenho na largura mínima (mais largo só dá mais folga)
+  const box = (p: (typeof pins)[number]): [number, number] => {
+    const c = (p.center / 100) * TL_MIN_WIDTH;
+    return p.anchor === 'start' ? [0, TL_LABEL_WIDTH] : p.anchor === 'end' ? [TL_MIN_WIDTH - TL_LABEL_WIDTH, TL_MIN_WIDTH] : [c - TL_LABEL_WIDTH / 2, c + TL_LABEL_WIDTH / 2];
+  };
+  for (const side of ['above', 'below'] as const) {
+    const boxes = pins.filter((p) => p.side === side).map((p) => ({ id: p.id, b: box(p) }));
+    for (let i = 1; i < boxes.length; i++) {
+      expect(boxes[i].b[0], `${boxes[i - 1].id} e ${boxes[i].id} (${side}) se cobrem`).toBeGreaterThanOrEqual(boxes[i - 1].b[1]);
+    }
+    boxes.forEach((x) => { expect(x.b[0]).toBeGreaterThanOrEqual(0); expect(x.b[1]).toBeLessThanOrEqual(TL_MIN_WIDTH); });
+  }
 });
