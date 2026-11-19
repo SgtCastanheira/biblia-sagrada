@@ -1,0 +1,82 @@
+    <section class="timeline" aria-labelledby="tl-title">
+      <header class="journey-header">
+        <div>
+          <span class="journey-kicker">Do Gênesis ao Apocalipse</span>
+          <h2 id="tl-title">Linha do tempo</h2>
+          <p>Conheça cada etapa da história e escolha por onde explorar.</p>
+        </div>
+        <span class="journey-total">{{ total }} capítulos · {{ groups().length }} fases</span>
+      </header>
+
+      <nav class="tiles" aria-label="Fases da história">
+        @for (lane of journey(); track lane.id) {
+          @if (lane.id === 'gospel' && interval; as gap) {
+            <a class="tile gap" matRipple [routerLink]="gap.link">
+              <mat-icon aria-hidden="true">hourglass_empty</mat-icon>
+              <span><strong>{{ gap.title }}</strong><span>Entre Malaquias e Jesus</span></span>
+              <span class="gap-action">Conhecer este período</span>
+            </a>
+          }
+          <section class="journey-lane" [attr.aria-labelledby]="lane.id + '-title'">
+            <header class="lane-header">
+              <span class="era-label">{{ lane.testament }}</span>
+              <h3 [id]="lane.id + '-title'">{{ lane.title }}</h3>
+            </header>
+            <ol class="phase-list" [style.--columns]="lane.groups.length">
+              @for (g of lane.groups; track g.id) {
+                <li class="phase-step" [style.--phase]="color(g.id)">
+                  <button type="button" class="tile" [class.on]="g.id === selected()"
+                          [attr.aria-pressed]="g.id === selected()" aria-controls="chrono-section-panel"
+                          [attr.aria-label]="g.name + ', ' + g.period + ', ' + g.read + ' de ' + g.size + ' capítulos lidos' + (g.id === reading() ? ', você parou aqui' : '')"
+                          (click)="phasePicked.emit(g.id)">
+                    <span class="phase-icon" aria-hidden="true"><mat-icon>{{ g.icon }}</mat-icon></span>
+                    <span class="phase-body">
+                      <strong class="t-name">{{ g.name }}</strong>
+                      <span class="t-sub">{{ g.period }}</span>
+                      <span class="phase-meta"><span class="t-count">{{ g.read }}/{{ g.size }} cap.</span>@if (g.id === reading()) { <span class="reading-tag">Sua leitura</span> }</span>
+                      <span class="t-bar" aria-hidden="true"><span [style.width.%]="(g.read / g.size) * 100"></span></span>
+                    </span>
+                  </button>
+                </li>
+              }
+            </ol>
+          </section>
+        }
+      </nav>
+
+      @if (current(); as g) {
+        <div class="phase-detail" aria-live="polite">
+          <span class="detail-icon" aria-hidden="true"><mat-icon>{{ g.icon }}</mat-icon></span>
+          <div><span class="detail-label">Fase selecionada</span><h3>{{ g.name }}</h3><p>{{ g.period }} · {{ g.sections.length }} {{ g.sections.length === 1 ? 'seção' : 'seções' }} · {{ g.size }} capítulos</p></div>
+          <button type="button" class="tl-open" matRipple (click)="sectionsRequested.emit(g.id)">Ver seções</button>
+        </div>
+      }
+
+      <details class="tl-comparison">
+        <summary>Comparar tempo e leitura</summary>
+        <p class="scale-explanation">A jornada acima mostra as fases em sequência. Aqui, as faixas comparam a duração dos períodos e a quantidade de capítulos.</p>
+        <p class="tl-label">Duração dos períodos</p>
+        <div class="band" aria-hidden="true">
+          <span class="cap" [class.on]="selected() === 'comeco'" [style.--c]="color('comeco')"></span>
+          <span class="silence" [style.left.%]="silence.left" [style.width.%]="silence.width"><mat-icon>hourglass_empty</mat-icon></span>
+          @for (seg of segments; track seg.id) {
+            <span class="seg" [class.on]="seg.id === selected()" [style.--c]="color(seg.id)" [style.left.%]="seg.left" [style.width.%]="seg.width"></span>
+          }
+        </div>
+        <p class="tl-legend">O intervalo entre os Testamentos é resumido. A escala do Novo Testamento é ampliada cerca de {{ zoom }} vezes para as fases curtas caberem.</p>
+        <p class="tl-label">Quanto de texto cada fase tem <span>{{ total }} capítulos</span></p>
+        <div class="tl-text" aria-hidden="true">
+          @for (g of groups(); track g.id) {
+            <span class="seg" [class.on]="g.id === selected()" [style.--c]="color(g.id)" [style.--p]="(g.read / g.size) * 100 + '%'" [style.flex-grow]="g.size"></span>
+          }
+        </div>
+        @if (current(); as g) {
+          <p class="tl-caption"><strong>{{ g.name }}</strong>
+            @if (shareOfTime(g.id); as time) { ocupa {{ time }} do tempo e }
+            @else { não tem data certa e }
+            {{ shareOfText(g.size) }} do texto ({{ g.size }} capítulos). O que você já leu aparece na cor forte.
+          </p>
+        }
+      </details>
+    </section>
+

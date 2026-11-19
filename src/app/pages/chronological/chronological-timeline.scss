@@ -1,0 +1,79 @@
+    /* Cada período pertence ao percurso; o comparador preserva as proporções de tempo. */
+    .timeline { margin-top: 22px; padding: 28px; border: 1px solid var(--mat-sys-outline-variant); border-radius: 24px; background: var(--mat-sys-surface-container-low); }
+    .journey-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-bottom: 24px; }
+    .journey-kicker { font: 600 .875rem Inter,sans-serif; color: var(--accent-gold); }
+    .journey-header h2 { margin: 8px 0; font: 600 34px/1.15 var(--heading-font); }
+    .journey-header p { margin: 0; color: var(--mat-sys-on-surface-variant); font: 400 1rem/1.6 Inter,sans-serif; }
+    .journey-total { padding: 10px 14px; border-radius: 20px; background: var(--mat-sys-surface-container); font: 500 .875rem Inter,sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .tiles { display: grid; gap: 32px; }
+    .lane-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; margin-bottom: 22px; }
+    .era-label { color: var(--accent-gold); font: 600 .875rem Inter,sans-serif; }
+    .lane-header h3 { margin: 0; font: 500 23px/1.3 var(--heading-font); }
+    .phase-list { position: relative; display: grid; grid-template-columns: repeat(var(--columns),minmax(0,1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
+    .phase-list::before { content: ''; position: absolute; top: 30px; left: calc(50% / var(--columns)); right: calc(50% / var(--columns)); height: 2px; background: var(--mat-sys-outline-variant); }
+    .phase-step { position: relative; min-width: 0; }
+    .tile { position: relative; display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; height: 100%; padding: 0; border: 0; border-radius: 16px; background: transparent; color: var(--mat-sys-on-surface); font: inherit; text-align: left; cursor: pointer; }
+    .phase-icon { position: relative; z-index: 1; display: grid; place-items: center; flex: none; width: 60px; height: 60px; box-sizing: border-box; border: 2px solid color-mix(in srgb,var(--phase) 65%,var(--mat-sys-outline)); border-radius: 50%; color: color-mix(in srgb,var(--phase) 50%,var(--mat-sys-on-surface)); background: var(--mat-sys-surface-container-low); }
+    .phase-icon::after { content: ''; position: absolute; width: 2px; height: 16px; bottom: -18px; background: var(--mat-sys-outline-variant); }
+    .phase-icon mat-icon { width: 28px; height: 28px; font-size: 28px; }
+    .phase-body { position: relative; display: flex; flex: 1; flex-direction: column; align-self: stretch; gap: 8px; box-sizing: border-box; min-height: 136px; padding: 16px 14px; border: 1px solid var(--mat-sys-outline-variant); border-radius: 16px; background: var(--mat-sys-surface); overflow: hidden; }
+    .t-name { font: 600 18px/1.3 var(--heading-font); }
+    .t-sub { font: 400 .875rem/1.5 Inter,sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .phase-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px; margin-top: auto; padding-top: 5px; }
+    .t-count { font: 500 13px/1.4 Inter,sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .reading-tag { font: 600 13px/1.4 Inter,sans-serif; color: var(--accent-gold); }
+    .t-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--mat-sys-surface-container-highest); }
+    .t-bar > span { display: block; height: 100%; background: var(--mat-sys-primary); }
+    .tile.on .phase-icon { background: var(--mat-sys-primary); color: var(--mat-sys-on-primary); border-color: var(--mat-sys-primary); box-shadow: 0 0 0 5px var(--mat-sys-primary-container); }
+    .tile.on .phase-body { border-color: var(--mat-sys-primary); background: var(--mat-sys-primary-container); color: var(--mat-sys-on-primary-container); }
+    .tile.on .t-sub,.tile.on .t-count { color: var(--mat-sys-on-primary-container); }
+    .tile:hover .phase-body { border-color: var(--mat-sys-primary); }
+    .tile:focus-visible { outline: 3px solid var(--mat-sys-primary); outline-offset: 5px; }
+    .tile.gap { display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 14px; height: auto; box-sizing: border-box; padding: 18px 22px; border: 1px dashed var(--mat-sys-outline); border-radius: 16px; background: var(--mat-sys-surface-container); text-decoration: none; }
+    .gap > mat-icon { color: var(--accent-gold); justify-self: center; }
+    .gap > span { display: grid; gap: 5px; }
+    .gap strong { font: 600 18px/1.3 var(--heading-font); }
+    .gap span span { font: 400 .875rem Inter,sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .gap .gap-action { font: 600 .875rem Inter,sans-serif; color: var(--mat-sys-primary); }
+    .phase-detail { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 28px; padding: 22px; border-radius: 18px; background: var(--mat-sys-primary-container); color: var(--mat-sys-on-primary-container); }
+    .detail-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: var(--mat-sys-surface-container-low); color: var(--mat-sys-primary); }
+    .phase-detail > div { flex: 1 1 260px; }
+    .detail-label { font: 500 .875rem Inter,sans-serif; }
+    .phase-detail h3 { margin: 5px 0; font: 600 23px/1.25 var(--heading-font); }
+    .phase-detail p { margin: 0; font: 400 .875rem/1.5 Inter,sans-serif; }
+    .tl-open { position: relative; overflow: hidden; min-height: 46px; padding: 12px 22px; border: 0; border-radius: 24px; background: var(--mat-sys-primary); color: var(--mat-sys-on-primary); font: 600 .875rem Inter,sans-serif; cursor: pointer; }
+    .tl-comparison { margin-top: 22px; border-top: 1px solid var(--mat-sys-outline-variant); }
+    .tl-comparison summary { padding: 20px 0 4px; min-height: 44px; cursor: pointer; font: 600 .875rem Inter,sans-serif; }
+    .scale-explanation,.tl-legend,.tl-caption { font: 400 .875rem/1.6 Inter,sans-serif; color: var(--mat-sys-on-surface-variant); }
+    .tl-label { margin: 18px 0 8px; font: 600 .875rem Inter,sans-serif; }
+    .tl-label > span { font-weight: 400; color: var(--mat-sys-on-surface-variant); }
+    .band { position: relative; height: 20px; }
+    .band .seg,.cap,.silence { position: absolute; top: 0; bottom: 0; }
+    .band .seg { min-width: 2px; border-radius: 4px; background: var(--c); opacity: .7; }
+    .cap { left: 0; width: 4%; box-sizing: border-box; border: 1px dashed var(--c); border-radius: 4px; }
+    .silence { display: grid; place-items: center; border-block: 1px dashed var(--mat-sys-outline); }
+    .silence mat-icon { font-size: 16px; width: 16px; height: 16px; }
+    .tl-text { display: flex; gap: 3px; height: 24px; }
+    .tl-text .seg { flex: 1 1 0; min-width: 2px; border-radius: 4px; background: linear-gradient(to right,var(--c) var(--p,0%),color-mix(in srgb,var(--c) 30%,transparent) var(--p,0%)); }
+    .seg.on,.cap.on { opacity: 1; outline: 2px solid var(--mat-sys-primary); outline-offset: 2px; }
+    @media(max-width:899px) {
+      .timeline { padding: 22px 18px; }
+      .journey-header h2 { font-size: 30px; }
+      .tiles { gap: 28px; }
+      .lane-header { display: block; margin-bottom: 20px; }
+      .lane-header h3 { margin-top: 6px; font-size: 22px; }
+      .phase-list { display: grid; grid-template-columns: 1fr; gap: 14px; }
+      .phase-list::before { left: 24px; right: auto; top: 24px; bottom: 24px; width: 2px; height: auto; }
+      .phase-step .tile { display: grid; grid-template-columns: 48px minmax(0,1fr); align-items: center; gap: 14px; }
+      .phase-step::before { content: ''; position: absolute; top: 50%; left: 48px; width: 14px; height: 2px; background: var(--mat-sys-outline-variant); }
+      .phase-icon { width: 48px; height: 48px; }
+      .phase-icon::after { display: none; }
+      .phase-icon mat-icon { width: 24px; height: 24px; font-size: 24px; }
+      .phase-body { padding: 14px; min-height: 0; }
+      .tile.gap { grid-template-columns: 28px minmax(0,1fr); padding: 16px; gap: 12px; }
+      .gap .gap-action { grid-column: 2; }
+      .phase-detail { padding: 18px; gap: 13px; }
+      .phase-detail > div { flex-basis: calc(100% - 65px); }
+      .tl-open { width: 100%; }
+    }
+
