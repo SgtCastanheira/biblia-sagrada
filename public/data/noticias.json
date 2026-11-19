@@ -1,6 +1,14 @@
 {
-  "geradoEm": "2026-11-18T18:07:10.061Z",
+  "geradoEm": "2026-11-19T18:19:05.861Z",
   "itens": [
+    {
+      "titulo": "Petição Desperta África alcança um milhão de assinaturas",
+      "resumo": "Cristãos de diversos países se uniram em favor da Igreja Perseguida na África Subsaariana",
+      "data": "2026-11-19T11:00:00.000Z",
+      "fonte": "Portas Abertas",
+      "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/peticao-desperta-africa-alcanca-um-milhao-de-assinaturas/",
+      "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/14125111/4608x2592.avif"
+    },
     {
       "titulo": "Batismo de menina com paralisia cerebral emociona igreja: “Agora vive para Cristo”",
       "resumo": "Uma menina com paralisia cerebral foi batizada nas águas em uma igreja em Barra do Piraí, no Rio de Janeiro, no último domingo (15). O batismo de Luiza, de 8 anos, emocionou a mãe, Natália Pereira, e os presentes na…",
@@ -152,14 +160,6 @@
       "fonte": "Portas Abertas",
       "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/pastor-e-assassinado-em-ataque-brutal-na-republica-centro-africana/",
       "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/12121830/aa810778-5707-4892-a215-0e9302b9ae8e.avif"
-    },
-    {
-      "titulo": "Cristã condenada por sua fé foge do Irã com o marido",
-      "resumo": "Elnaz Ghorbani foi sentenciada a cinco anos de prisão por se converter ao cristianismo",
-      "data": "2026-11-11T11:00:00.000Z",
-      "fonte": "Portas Abertas",
-      "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/cristaos-deixam-o-ira-apos-ameaca-de-prisao-por-sua-fe/",
-      "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/30085709/2761x1554.avif"
     }
   ]
 }
