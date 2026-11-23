@@ -28,6 +28,28 @@ De Jerusalém, o evangelho chegou a Antioquia e, pelas viagens de Paulo, a todo 
 :::leia constantino-e-os-concilios
 :::
 
+## Os Apóstolos e as Igrejas
+
+A Bíblia conta o fim de poucos dos Doze, e Atos acompanha de perto só Pedro e Paulo. O que se sabe dos outros, e de quem pastoreava cada igreja, vem de escritores cristãos dos séculos II a IV, de lendas mais tardias e, para o cenário, de Josefo. Seis histórias separam o que a Escritura afirma, o que a tradição guarda e o que Josefo confirma, e dizem de que século vem cada notícia.
+
+:::leia apostolos-e-igrejas-tres-fontes
+:::
+
+:::leia pedro-de-jerusalem-a-roma
+:::
+
+:::leia paulo-e-as-suas-igrejas
+:::
+
+:::leia joao-e-as-igrejas-da-asia
+:::
+
+:::leia para-onde-foram-os-outros-apostolos
+:::
+
+:::leia quem-liderava-as-primeiras-igrejas
+:::
+
 ## A Idade Média e as Vozes Antes da Reforma
 
 Por mil anos, mosteiros guardaram e copiaram a Bíblia, o papado cresceu em poder e, em 1054, as igrejas do Oriente e do Ocidente se separaram. No fim desse período, homens como Valdo, Wycliffe e Hus pediram uma igreja mais fiel às Escrituras e a Bíblia na língua do povo — e pagaram caro por isso.

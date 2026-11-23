@@ -128,3 +128,7 @@ Os cinco governantes com o nome de Herodes que Josefo e o Novo Testamento descre
 :::leia o-templo-de-herodes
 O Templo que Josefo descreve, com os pátios, as portas e as medidas, e que Jesus conheceu.
 :::
+
+:::leia quem-liderava-as-primeiras-igrejas
+O parágrafo inteiro de *Antiguidades* 20.9.1 sobre a morte de Tiago, traduzido, ao lado de Hegésipo e de Clemente de Alexandria, e quem liderava Jerusalém, Antioquia, Roma e a Ásia.
+:::

@@ -125,6 +125,18 @@ export const TRAILS: Trail[] = [
     collections: ['igreja'],
     branches: [
       { title: 'Os Primeiros Séculos', ids: ['panorama-da-igreja', 'igreja-primitiva', 'perseguicoes', 'coliseu-de-roma', 'catacumbas-de-roma', 'constantino-e-os-concilios'] },
+      {
+        title: 'Os Apóstolos e as Igrejas',
+        ids: [
+          'apostolos-e-igrejas-tres-fontes',
+          'pedro-de-jerusalem-a-roma',
+          'paulo-e-as-suas-igrejas',
+          'joao-e-as-igrejas-da-asia',
+          'para-onde-foram-os-outros-apostolos',
+          'quem-liderava-as-primeiras-igrejas',
+        ],
+        about: 'Onde cada apóstolo pregou e quem pastoreava as igrejas, com o que a Bíblia afirma, o que a tradição guarda, o que Josefo confirma e de que século vem cada notícia.',
+      },
       { title: 'A Idade Média', ids: ['idade-media', 'pre-reformadores'] },
       { title: 'A Reforma', ids: ['reforma-protestante', 'reformadores', 'reforma-inglesa', 'contrarreforma'] },
       { title: 'Despertamentos e Missões', ids: ['pietismo-e-moravios', 'grandes-despertamentos', 'escola-dominical', 'missoes-modernas'] },
