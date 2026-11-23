@@ -35,6 +35,9 @@ export const WORKS: Record<string, Work> = {
   // A Torá e o Talmude
   sefaria: { author: 'Sefaria', title: 'Biblioteca digital de textos judaicos (sefaria.org): índice de parashot e do Talmude, textos da Torá, da Mishná e do Talmude', publisher: 'organização sem fins lucrativos; lida em 17 de novembro de 2026. Os textos em inglês (William Davidson) são CC BY-NC e não são republicados no app, só recontados', kind: 'referencia' },
   'wikipedia-judaismo': { author: 'Wikipédia', title: 'Artigos Torah, Weekly Torah portion, Sefer Torah, Talmud e Mishnah (en.wikipedia.org)', publisher: 'lidos em 17 de novembro de 2026; datas de composição, estrutura, edições impressas, censura e recepção cristã', kind: 'referencia' },
+  // Os apóstolos e as igrejas
+  'eusebio-historia': { author: 'Eusébio de Cesareia', title: 'História Eclesiástica, livros 1 a 5, na tradução inglesa de Arthur C. McGiffert (Nicene and Post-Nicene Fathers, 2ª série, vol. 1, 1890)', publisher: 'domínio público; lida no site New Advent (newadvent.org/fathers/250101.htm a 250105.htm) em 23 de novembro de 2026', kind: 'historia' },
+  'wikipedia-apostolos': { author: 'Wikipédia', title: 'Artigos Andrew the Apostle, Thomas the Apostle, Bartholomew the Apostle, Philip the Apostle, Matthew the Apostle, James, son of Zebedee, James, son of Alphaeus, Jude the Apostle, Simon the Zealot e Saint Matthias (en.wikipedia.org)', publisher: 'lidos em 23 de novembro de 2026; só para dizer de quando é cada tradição tardia (Atos apócrifos, Compostela, Crônica Primária); o que cada artigo atribui a autores antigos não foi conferido nas obras deles', kind: 'referencia' },
   // Referência geral
   'walton-at': { author: 'John H. Walton, Victor H. Matthews e Mark W. Chavalas', title: 'Comentário histórico-cultural da Bíblia: Antigo Testamento', publisher: 'Vida Nova', kind: 'referencia' },
   'keener-nt': { author: 'Craig S. Keener', title: 'Comentário histórico-cultural da Bíblia: Novo Testamento', publisher: 'Vida Nova', kind: 'referencia' },
@@ -581,6 +584,57 @@ export const ARTICLE_SOURCES: Record<string, SourceSet> = {
     works: ['strong'],
   },
   apocalipse: { ancient: ['Irineu, Contra as Heresias 5.30.3 (data no fim do reinado de Domiciano)', 'Eusébio, História Eclesiástica 3.18 (CPAD)'], works: ['ladd', 'fee-stuart', 'carson-moo', 'clouse'] },
+  'apostolos-e-igrejas-tres-fontes': {
+    ancient: [
+      'A Bíblia, na Almeida do app: Mateus 10 e 13; Marcos 3 e 6; Lucas 6; João 14, 19 e 21; Atos 1, 6, 8, 12, 21, 24, 25 e 28; 1 Coríntios 9; Gálatas 1 e 2; 1 Pedro 1',
+      'Eusébio de Cesareia, História Eclesiástica 1.12–13 (os Setenta e o Tadeu de Edessa), 2.1, 2.9 e 2.23, 3.1–4, 3.11, 3.22–24, 3.30–32, 3.36, 3.39, 4.14, 5.8, 5.10 e 5.24 (tradução de McGiffert, no New Advent, lida em 23 de novembro de 2026)',
+      'Flávio Josefo, Antiguidades Judaicas 20.7.2 (Félix e Drusila) e 20.9.1 (Tiago, irmão de Jesus, e o sumo sacerdote Anano), na tradução de Whiston, lida na Wikisource em 23 de novembro de 2026; o fato de que nenhum dos apóstolos é nomeado em Josefo é o consenso dos estudiosos e não foi conferido nas obras inteiras',
+      'Clemente de Roma, Primeira Carta aos Coríntios 5, e Ireneu, Contra as Heresias 3.3, nas traduções de Roberts e Donaldson (New Advent, lidas em 23 de novembro de 2026)',
+    ],
+    works: ['eusebio-historia', 'wikipedia-apostolos'],
+  },
+  'pedro-de-jerusalem-a-roma': {
+    ancient: [
+      'A Bíblia, na Almeida do app: Atos 2, 4, 8, 9, 10, 12, 15 e 28; Romanos 16; 1 Coríntios 1, 3 e 9; Gálatas 2; Colossenses 4; 2 Timóteo 4; 1 Pedro 1 e 5; Marcos 1; João 21',
+      'Eusébio de Cesareia, História Eclesiástica 2.14–15, 2.25, 3.1–2, 3.30, 3.39 e 4.23 (a carta de Dionísio de Corinto, c. 170; Gaio e os “troféus” do Vaticano, c. 200; a lista de Orígenes)',
+      'Clemente de Roma, Primeira Carta aos Coríntios 5 (c. 96), e Ireneu, Contra as Heresias 3.3.2 (c. 180), nas traduções de Roberts e Donaldson (New Advent)',
+      'O que o historiador Everett Ferguson pensa dessas fontes vem do resumo do app (“Everett Ferguson, Parte 1”), e não de uma leitura direta do livro',
+    ],
+    works: ['eusebio-historia'],
+  },
+  'paulo-e-as-suas-igrejas': {
+    ancient: [
+      'A Bíblia, na Almeida do app: Atos 11 a 28; Romanos 1, 15 e 16; 1 e 2 Coríntios; Gálatas 1 e 2; Efésios 3; Filipenses 1 e 2; Colossenses 1, 2 e 4; 1 Tessalonicenses 1 e 2; 1 e 2 Timóteo; Tito 1; Filemom 1',
+      'As datas das cartas são as de cada livro em public/conteudo/livros.json (a mesma base do restante do app); as datas das viagens e das prisões são aproximadas e seguem a cronologia da história “A Igreja Nasce”',
+      'Clemente de Roma, Primeira Carta aos Coríntios 5 (c. 96): Paulo “sete vezes” preso e o “extremo limite do Ocidente”; Eusébio de Cesareia, História Eclesiástica 2.22 e 2.25 (a segunda prisão e o martírio); Ireneu, Contra as Heresias 3.3.2',
+    ],
+    works: ['eusebio-historia'],
+  },
+  'joao-e-as-igrejas-da-asia': {
+    ancient: [
+      'A Bíblia, na Almeida do app: Atos 8, 18, 19 e 20; Gálatas 2; Colossenses 2 e 4; 1 Timóteo 1; 2 e 3 João; Apocalipse 1 a 3; João 21; Marcos 10',
+      'Ireneu, Contra as Heresias 3.3.4 (João em Éfeso até o tempo de Trajano; a cena de Cerinto, ouvida de Policarpo), na tradução de Roberts e Rambaut (New Advent)',
+      'Eusébio de Cesareia, História Eclesiástica 3.17–18, 3.23 (a história do jovem e dos ladrões, de Clemente de Alexandria), 3.28, 3.31, 3.39 (os dois Joões, de Papias), 5.8 e 5.24 (a carta de Polícrates)',
+    ],
+    works: ['eusebio-historia'],
+  },
+  'para-onde-foram-os-outros-apostolos': {
+    ancient: [
+      'A Bíblia, na Almeida do app: Mateus 9 e 10; Lucas 6; João 1, 6, 11, 12, 14 e 20; Atos 1, 8, 12 e 21; Romanos 15 e 16',
+      'Eusébio de Cesareia, História Eclesiástica 1.12–13 (Tadeu de Edessa e os Setenta), 2.1 e 2.9, 3.1 e 3.4 (a lista de Orígenes), 3.11, 3.24, 3.31, 3.39, 5.8, 5.10 (Panteno e a Índia) e 5.24',
+      'Para as tradições tardias (Atos apócrifos, Compostela, a Crônica Primária, Efrém e Egéria, a descoberta de 2011 em Hierápolis, a frase do lexicógrafo Papias), só a Wikipédia foi lida, e as datas e atribuições são as dela',
+    ],
+    works: ['eusebio-historia', 'wikipedia-apostolos'],
+  },
+  'quem-liderava-as-primeiras-igrejas': {
+    ancient: [
+      'A Bíblia, na Almeida do app: Atos 11, 12, 13, 14, 15, 17, 18, 20 e 21; Romanos 16; 1 Coríntios 16; Gálatas 1 e 2; Filipenses 1 e 4; Colossenses 1 e 4; 1 Timóteo 1 e 3; 2 Timóteo 4; Tito 1; Filemom 1; Apocalipse 2',
+      'Clemente de Roma, Primeira Carta aos Coríntios 42 e 44 (c. 96); Inácio de Antioquia, Cartas aos Efésios 1 e 2 e aos Romanos 9 (c. 110); Ireneu, Contra as Heresias 3.3 (c. 180), nas traduções de Roberts e Donaldson (New Advent)',
+      'Eusébio de Cesareia, História Eclesiástica 2.1, 2.16, 2.23–24, 3.2, 3.4, 3.11, 3.13–16, 3.22, 3.32, 3.36, 3.39, 4.23 e 5.24 (Hegésipo, Dionísio de Corinto, Polícrates)',
+      'Flávio Josefo, Antiguidades Judaicas 20.9.1 (a morte de Tiago, em 62): o parágrafo inteiro foi traduzido para o app a partir da versão inglesa de William Whiston (domínio público), lida na Wikisource em 23 de novembro de 2026; os colchetes do texto são esclarecimentos do tradutor inglês',
+    ],
+    works: ['eusebio-historia'],
+  },
   'igreja-primitiva': { ancient: ['Didaquê (séc. I–II)', 'Eusébio, História Eclesiástica (CPAD)'], works: ['ferguson', 'gonzalez', 'cairns'] },
   perseguicoes: { ancient: ['Tácito, Anais 15.44 (Nero e os cristãos)', 'Plínio, o Jovem, Cartas 10.96–97 (a Trajano)', 'Martírio de Policarpo (séc. II)', 'Eusébio, História Eclesiástica (CPAD)'], works: ['gonzalez', 'cairns', 'ferguson'] },
   'coliseu-de-roma': {
