@@ -1,6 +1,14 @@
 {
-  "geradoEm": "2026-11-22T17:11:24.218Z",
+  "geradoEm": "2026-11-23T21:28:08.187Z",
   "itens": [
+    {
+      "titulo": "Duas jovens cristãs são agredidas na Índia",
+      "resumo": "A comunidade acusou as mulheres de tentar converter crianças ao cristianismo",
+      "data": "2026-11-23T11:00:00.000Z",
+      "fonte": "Portas Abertas",
+      "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/duas-jovens-cristas-sao-agredidas-na-india/",
+      "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/18172951/5184x2916.avif"
+    },
     {
       "titulo": "Direito de Crer: por que algumas pessoas perdem tudo ao escolher Jesus?",
       "resumo": "Entenda o tema do Domingo da Igreja Perseguida 2027",
@@ -152,14 +160,6 @@
       "fonte": "Portas Abertas",
       "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/nigeria-cristaos-deslocados-temem-nao-voltar-para-casa/",
       "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/13193205/682d6202-b0ca-43d0-b071-234742cad4ba-1.avif"
-    },
-    {
-      "titulo": "Portas Abertas leva a realidade da Igreja Perseguida à Dunamis Con",
-      "resumo": "A conferência Dunamis Con acontecerá nos dias 20 e 21 de novembro",
-      "data": "2026-11-13T11:00:00.000Z",
-      "fonte": "Portas Abertas",
-      "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/portas-abertas-na-dunamiscon-2026/",
-      "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/09/31132555/4036x2272.avif"
     }
   ]
 }
