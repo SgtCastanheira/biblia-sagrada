@@ -1,6 +1,22 @@
 {
-  "geradoEm": "2026-11-23T21:28:08.187Z",
+  "geradoEm": "2026-11-24T20:11:38.589Z",
   "itens": [
+    {
+      "titulo": "Líderes cristãos discutem efeitos de nova lei em Burkina Faso",
+      "resumo": "Nova legislação pode impactar igrejas domésticas e pastores estrangeiros",
+      "data": "2026-11-24T11:00:00.000Z",
+      "fonte": "Portas Abertas",
+      "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/lideres-cristaos-discutem-efeitos-de-nova-lei-em-burkina-faso/",
+      "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/16191056/Landscape-BF_Christians-unite-in-FoRB-event-2026_0035671-1.avif"
+    },
+    {
+      "titulo": "Ataques contra cristãos na Europa aumentam 44%, aponta relatório",
+      "resumo": "Os ataques contra cristãos na Europa aumentaram 44% em 2025, segundo um novo relatório do Observatório sobre Intolerância e Discriminação contra Cristãos na Europa (OIDAC Europe), divulgado em 16 de novembro. O…",
+      "data": "2026-11-23T14:48:21.000Z",
+      "fonte": "Guiame",
+      "url": "https://guiame.com.br/gospel/noticias/ataques-contra-cristaos-na-europa-aumentam-44-aponta-relatorio.html",
+      "thumbnail": "https://media.guiame.com.br/archives/2026/11/23/19573000-ataques-europa.png"
+    },
     {
       "titulo": "Duas jovens cristãs são agredidas na Índia",
       "resumo": "A comunidade acusou as mulheres de tentar converter crianças ao cristianismo",
@@ -106,36 +122,12 @@
       "thumbnail": "https://media.guiame.com.br/archives/2026/11/17/4175398834-katungu-mbaka-darke.png"
     },
     {
-      "titulo": "Morre aos 90 anos Bob Hoskins, fundador de missão que levou a Bíblia a 2 bilhões de jovens",
-      "resumo": "O evangelista e missionário americano Bob Hoskins , fundador da organização cristã OneHope, morreu no sábado (14), aos 90 anos, nos EUA. A morte foi anunciada pela missão no domingo (15). Hoskins enfrentava um câncer…",
-      "data": "2026-11-17T12:47:04.000Z",
-      "fonte": "Guiame",
-      "url": "https://guiame.com.br/gospel/mundo-cristao/morre-aos-90-anos-bob-hoskins-fundador-de-missao-que-levou-biblia-2-bilhoes-de-jovens.html",
-      "thumbnail": "https://media.guiame.com.br/archives/2026/11/17/986610030-bob-hoskins.png"
-    },
-    {
       "titulo": "Filho de pastor é assassinado após ajudar deslocados no México​‌",
       "resumo": "Reynaldo Pérez defendia direitos de comunidades ameaçadas pelo crime organizado",
       "data": "2026-11-17T11:00:00.000Z",
       "fonte": "Portas Abertas",
       "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/filho-de-pastor-e-assassinado-no-mexico/",
       "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/14104544/Landscape-MX_Children-playing-in-Chiapas-7-2026_0034145.avif"
-    },
-    {
-      "titulo": "Grupo faz roda de oração por candidatos do Enem após fechamento de portões em Manaus",
-      "resumo": "Um grupo de pessoas se uniu em oração por candidatos do Enem (Exame Nacional do Ensino Médio) em frente a um local de prova, em Manaus (AM), no domingo (15). O grupo, formado por jovens e adultos, fez um círculo e, de…",
-      "data": "2026-11-16T20:14:36.000Z",
-      "fonte": "Guiame",
-      "url": "https://guiame.com.br/gospel/missoes-acao-social/grupo-faz-roda-de-oracao-por-candidatos-do-enem-apos-fechamento-de-portoes-em-manaus.html",
-      "thumbnail": "https://media.guiame.com.br/archives/2026/11/16/1786228787-enem.jpeg"
-    },
-    {
-      "titulo": "Will Graham prega para multidão em Salvador e mais de 3 mil se entregam a Jesus",
-      "resumo": "Mais de 35 mil pessoas participaram de um evento evangelístico, realizado na sexta-feira (13) e no sábado (14), no Centro de Convenções de Salvador, na Bahia, com a participação do evangelista Will Graham , neto de…",
-      "data": "2026-11-16T16:42:39.000Z",
-      "fonte": "Guiame",
-      "url": "https://guiame.com.br/gospel/mundo-cristao/will-graham-prega-para-multidao-em-salvador-e-mais-de-3-mil-se-entregam-jesus.html",
-      "thumbnail": "https://media.guiame.com.br/archives/2026/11/16/1162489846-evangelismo-salvador.jpg"
     },
     {
       "titulo": "Dezessete cristãos sequestrados morrem em cativeiro na Nigéria",
@@ -160,6 +152,14 @@
       "fonte": "Portas Abertas",
       "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/nigeria-cristaos-deslocados-temem-nao-voltar-para-casa/",
       "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/13193205/682d6202-b0ca-43d0-b071-234742cad4ba-1.avif"
+    },
+    {
+      "titulo": "Portas Abertas leva a realidade da Igreja Perseguida à Dunamis Con",
+      "resumo": "A conferência Dunamis Con acontecerá nos dias 20 e 21 de novembro",
+      "data": "2026-11-13T11:00:00.000Z",
+      "fonte": "Portas Abertas",
+      "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/portas-abertas-na-dunamiscon-2026/",
+      "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/09/31132555/4036x2272.avif"
     }
   ]
 }
