@@ -1,6 +1,14 @@
 {
-  "geradoEm": "2026-11-27T19:00:40.533Z",
+  "geradoEm": "2026-11-28T17:35:27.880Z",
   "itens": [
+    {
+      "titulo": "Arquiteto que preservou igrejas históricas do Irã morre",
+      "resumo": "Varoujan Arakelyan ajudou a proteger marcos históricos do cristianismo no Irã",
+      "data": "2026-11-28T11:00:00.000Z",
+      "fonte": "Portas Abertas",
+      "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/arquiteto-que-preservou-igrejas-historicas-do-ira-morre/",
+      "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/27185218/1232x693.avif"
+    },
     {
       "titulo": "Jung Jik mostra ao Brasil a realidade dos cristãos norte-coreanos",
       "resumo": "Entre 22 de outubro e 8 de novembro, o cristão norte-coreano visitou igrejas brasileiras",
@@ -16,6 +24,14 @@
       "fonte": "Portas Abertas",
       "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/fe-e-transmitida-de-geracao-em-geracao-na-coreia-do-norte/",
       "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/25135618/6000x3375.avif"
+    },
+    {
+      "titulo": "Igrejas distribuem alimentos a mais de 3 mil famílias no Dia de Ação de Graças",
+      "resumo": "Igrejas de diferentes estados dos EUA estão demonstrando o amor de Cristo por meio de ações solidárias que beneficiaram milhares de famílias em situação de vulnerabilidade às vésperas do Dia de Ação de Graças…",
+      "data": "2026-11-26T10:44:07.000Z",
+      "fonte": "Guiame",
+      "url": "https://guiame.com.br/gospel/missoes-acao-social/igrejas-distribuem-alimentos-mais-de-3-mil-familias-no-dia-de-acao-de-gracas.html",
+      "thumbnail": "https://media.guiame.com.br/archives/2026/11/26/2084950196-acao-de-gracas.png"
     },
     {
       "titulo": "Carreta de missão doa mais de 3 mil refeições em cidade destruída por temporal no RS",
@@ -138,28 +154,12 @@
       "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/15095031/db08aad4-27dd-48b5-80d4-387f1c9168b1.avif"
     },
     {
-      "titulo": "Idoso prega todos os dias nas ruas de Noronha: “Minha missão é fazer a obra do Senhor”",
-      "resumo": "Um idoso, de 68 anos, está anunciando o Evangelho para turistas em Fernando de Noronha. Mesmo com dificuldades para andar, Jubileu caminha por toda a ilha compartilhando Jesus e distribuindo folhetos evangelísticos com…",
-      "data": "2026-11-19T15:27:41.000Z",
-      "fonte": "Guiame",
-      "url": "https://guiame.com.br/gospel/missoes-acao-social/idoso-prega-todos-os-dias-nas-ruas-de-noronha-minha-missao-e-fazer-obra-do-senhor.html",
-      "thumbnail": "https://media.guiame.com.br/archives/2026/11/19/2958342102-jubileu.jpeg"
-    },
-    {
       "titulo": "Petição Desperta África alcança um milhão de assinaturas",
       "resumo": "Cristãos de diversos países se uniram em favor da Igreja Perseguida na África Subsaariana",
       "data": "2026-11-19T11:00:00.000Z",
       "fonte": "Portas Abertas",
       "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/peticao-desperta-africa-alcanca-um-milhao-de-assinaturas/",
       "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/14125111/4608x2592.avif"
-    },
-    {
-      "titulo": "Conflito no Iêmen agrava crise para cristãos locais",
-      "resumo": "Conflitos armados, deslocamentos e falta de medicamentos aumentam os desafios",
-      "data": "2026-11-18T11:00:00.000Z",
-      "fonte": "Portas Abertas",
-      "url": "https://portasabertas.org.br/noticias/cristaos-perseguidos/conflito-no-iemen-agrava-crise-para-cristaos-locais/",
-      "thumbnail": "https://sitepa.s3.amazonaws.com/wp-content/uploads/br/2026/11/13204918/6720x3780.avif"
     }
   ]
 }
